@@ -18,16 +18,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-otl:Beheerobject2 a rdfs:Class ;
+otl:Beheerobject a rdfs:Class ;
     rdfs:label "Beheerobject"@nl-NL ;
     p:dataLabel "Beheerobject"@nl-NL ;
     p:geoStatus otl:GeoStatus_6 ;
-    p:guid <urn:uuid:E060DC30-E4F2-4794-A16E-7207032E2506> ;
     p:informatiemodelstatus otl:InformatiemodelStatus_5 ;
     p:level otlvwl:Objecttype ;
     ns1:available "2017-12-01"^^xsd:date ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
-    rdfs:subClassOf otl:ObjecttypeGroepen_31 ;
+    rdfs:subClassOf bs:PhysicalObject ;
     skos:definition "Verzamelobject - niveau 1"@nl-NL ;
     skos:prefLabel "Beheerobject"@nl-NL .
 
@@ -40106,7 +40105,7 @@ p:Attributen_1000 a rdf:Property ;
     p:guid <urn:uuid:7FAB0454-C56C-4026-8D32-714A1F8A0730> ;
     ns1:available "2018-10-09"^^xsd:date ;
     ns1:modified "2019-04-12"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_6 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Eind van de periode waarop deze instantie van het object geldig is bij de bronhouder. Wanneer deze waarde niet is ingevuld is de instantie nog geldig."@nl-NL ;
@@ -40214,7 +40213,7 @@ p:Attributen_1013 a rdf:Property ;
     ns1:available "2018-10-09"^^xsd:date ;
     ns1:modified "2018-10-09"^^xsd:date,
         "2019-04-12"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_14 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van het betreffende object."@nl-NL ;
@@ -41063,7 +41062,7 @@ p:Attributen_1151 a rdf:Property ;
     p:dataLabel "Inwinning" ;
     p:guid <urn:uuid:1C1D10E1-4822-4ECA-BEF5-19590BFA15DB> ;
     ns1:available "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Het verzamelen van gegevens over de wijze waarop en met welke kwaliteit de gegevens ingewonnen zijn."@nl-NL ;
@@ -41275,7 +41274,7 @@ p:Attributen_1183 a rdf:Property ;
     p:attribuutsorteergroep "Uitwisseling"@nl-NL ;
     p:dataLabel "bgt-Opmerking" ;
     p:guid <urn:uuid:3AE00A87-48ED-4D6B-A867-1FC0E2750334> ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_12 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Opmerking die bij het object ten behoeve van de uitwisseling geplaatst kan worden speciaal voor de BGT-applicatie (Geovoorziening)."@nl-NL ;
@@ -41944,7 +41943,7 @@ p:Attributen_147 a rdf:Property ;
     p:isVerplichtAttr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_788,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
@@ -42113,7 +42112,7 @@ p:Attributen_188 a rdf:Property ;
     p:dataLabel "OpenbareRuimte" ;
     p:guid <urn:uuid:A28D4F93-344F-4F58-AB60-3D2FD2776DCB> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding van de openbare ruimte, zoals gedefinieerd in IMGeo of in de BAG, waarbinnen het beheerobject ligt. 	Overname uit IMGeo-bestand met grenzen openbare ruimtes of uit de Basisregistraties voor Adressen en Gebouwen (zonder begrenzing)."@nl-NL ;
@@ -42156,7 +42155,7 @@ p:Attributen_201 a rdf:Property ;
     p:guid <urn:uuid:5D35537C-7BCC-4E3A-853D-EAAF2C4FA9B8> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:altLabel "Imgeo-id"@nl-NL ;
@@ -42485,7 +42484,7 @@ p:Attributen_277 a rdf:Property ;
     p:dataLabel "Waterschap" ;
     p:guid <urn:uuid:C628D01E-CF18-4A84-8FDD-E1B4E997535E> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding van het waterschap, waarbinnen het beheerobject ligt. 	Overname uit IMGeo-bestand met waterschapsgrenzen."@nl-NL ;
@@ -42498,7 +42497,7 @@ p:Attributen_279 a rdf:Property ;
     p:dataLabel "Postcode" ;
     p:guid <urn:uuid:1EBC513E-A5FF-43F5-8C10-111384839A65> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding van het postcodegebied waarbinnen het beheerobject ligt.	Overname uit 6 positie postcodekaart."@nl-NL ;
@@ -42512,7 +42511,7 @@ p:Attributen_288 a rdf:Property ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_864,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
@@ -42527,7 +42526,7 @@ p:Attributen_290 a rdf:Property ;
     p:dataLabel "JaarVanAanleg" ;
     p:guid <urn:uuid:534F07B8-9243-4848-A3D0-6EBEB321784C> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_417,
         otl:Objecttypes_751 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
@@ -42546,7 +42545,7 @@ p:Attributen_291 a rdf:Property ;
     p:guid <urn:uuid:FA3ED78F-52FA-45FB-89BF-C12AFAD38F5B> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:altLabel "Eindegeldigheid"@nl-NL ;
@@ -42560,7 +42559,7 @@ p:Attributen_292 a rdf:Property ;
     p:guid <urn:uuid:662B5093-40D8-4947-892E-1A33B691EEE6> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Formele historie, tijdstip registratie van het beheerobject."@nl-NL ;
@@ -42574,7 +42573,7 @@ p:Attributen_295 a rdf:Property ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_828 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -42589,7 +42588,7 @@ p:Attributen_296 a rdf:Property ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_828 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -42603,7 +42602,7 @@ p:Attributen_297 a rdf:Property ;
     p:guid <urn:uuid:B634934A-00FF-4445-B76A-44FD04C1E31B> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Medewerker (ID) die het beheerobject in het beheersysteem aangemaakt heeft."@nl-NL ;
@@ -42616,7 +42615,7 @@ p:Attributen_298 a rdf:Property ;
     p:guid <urn:uuid:D524A462-B43A-4410-844E-9AFBFE5EDF9A> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Medewerker (ID) welke het beheerobject in het beheersysteem gewijzigd heeft."@nl-NL ;
@@ -42693,7 +42692,7 @@ p:Attributen_335 a rdf:Property ;
     p:guid <urn:uuid:9F5835A1-8EF7-48A9-BA56-23938B7A0D0C> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Datum waarop de digitale gegevens van het beheerobject voor het laatst gewijzigd zijn."@nl-NL ;
@@ -42706,7 +42705,7 @@ p:Attributen_336 a rdf:Property ;
     p:guid <urn:uuid:E131B17D-2B7F-4647-95DF-CE38EC97A3F2> ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -42720,7 +42719,7 @@ p:Attributen_337 a rdf:Property ;
     p:dataLabel "Woonplaats" ;
     p:guid <urn:uuid:88A81A93-9D80-43C2-897E-7F58DED80ABE> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding van de woonplaats waarbinnen het beheerobject ligt. 	Overname uit IMGeo-bestand met woonplaats- of stadsdeelgrenzen."@nl-NL ;
@@ -42747,7 +42746,7 @@ p:Attributen_349 a rdf:Property ;
     p:dataLabel "Opleverdatum" ;
     p:guid <urn:uuid:2027BBE0-6284-4054-8B5B-2BA1FD3F332C> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Datum waarop het beheerobject daadwerkelijk opgeleverd is. Begin van de garantieperiode."@nl-NL ;
@@ -42759,7 +42758,7 @@ p:Attributen_350 a rdf:Property ;
     p:dataLabel "EindeGarantieperiode" ;
     p:guid <urn:uuid:100992FC-56CD-4895-9AED-042AC3BE81D0> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Jaar (datum) waarin de garantieperiode van het opgeleverde beheerobject eindigt."@nl-NL ;
@@ -42771,7 +42770,7 @@ p:Attributen_351 a rdf:Property ;
     p:dataLabel "TheoretischEindjaar" ;
     p:guid <urn:uuid:F83DA972-D6DD-4D2A-B732-E3825AD5096E> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Jaar dat het beheerobject aan het theoretische einde van haar levensduur is."@nl-NL ;
@@ -42918,7 +42917,7 @@ p:Attributen_374 a rdf:Property ;
     p:dataLabel "ConversieID" ;
     p:guid <urn:uuid:53B695C9-5B86-425E-B65A-537C6D6868E2> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Uniek kenmerk van een beheerobject uit een oude beheerindeling."@nl-NL ;
@@ -43159,7 +43158,7 @@ p:Attributen_415 a rdf:Property ;
     p:dataLabel "BeginGarantieperiode" ;
     p:guid <urn:uuid:5DBC2CEE-32CD-435F-A51A-10A7557F2045> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Jaar waarin de garantieperiode van het opgeleverde beheerobject begint."@nl-NL ;
@@ -43770,7 +43769,7 @@ p:Attributen_525 a rdf:Property ;
     p:guid <urn:uuid:5D4A767A-3C1C-47D5-A608-73E0E5A1D77B> ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -44301,7 +44300,7 @@ p:Attributen_642 a rdf:Property ;
     p:dataLabel "LV-publicatiedatum" ;
     p:guid <urn:uuid:B57D8104-11EF-4C53-B268-ECE8A850B9CF> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Tijdstip waarop deze instantie van het beheerobject is opgenomen in de landelijke voorziening."@nl-NL ;
@@ -44313,7 +44312,7 @@ p:Attributen_643 a rdf:Property ;
     p:dataLabel "relatieveHoogteligging" ;
     p:guid <urn:uuid:2310C895-6920-4CF1-BED5-A6494CB1EDE4> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding voor de relatieve hoogte van het beheerobject."@nl-NL ;
@@ -44644,7 +44643,7 @@ p:Attributen_704 a rdf:Property ;
     p:dataLabel "Beheervak" ;
     p:guid <urn:uuid:10F81445-0540-4592-9520-F24F29385490> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "GUID van één of meerdere beheervakken waartoe het beheerobject behoort of waarbinnen het beheerobject zich bevindt."@nl-NL ;
@@ -44817,7 +44816,7 @@ p:Attributen_746 a rdf:Property ;
     p:dataLabel "Stadsdeel" ;
     p:guid <urn:uuid:EDDF0B00-9121-490C-8D2C-272D1E67D8C3> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding van het stadsdeel waarbinnen het beheerobject ligt. 	Overname uit IMGeo-bestand met woonplaats- of stadsdeelgrenzen."@nl-NL ;
@@ -44830,7 +44829,7 @@ p:Attributen_747 a rdf:Property ;
     p:dataLabel "Memo" ;
     p:guid <urn:uuid:A7DD17A5-856B-43C9-9F17-9F2A3DBA0437> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Mogelijkheid om één of meerdere memovelden te registreren bij een beheerobject."@nl-NL ;
@@ -45006,7 +45005,7 @@ p:Attributen_771 a rdf:Property ;
     p:dataLabel "Geometrie" ;
     p:guid <urn:uuid:888E13AE-214E-471E-839B-79D77D69D46E> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "Aanduiding voor de geometrie van het beheerobject."@nl-NL ;
@@ -46453,7 +46452,7 @@ p:Attributen_988 a rdf:Property ;
     p:guid <urn:uuid:A5117019-1289-4649-AAD0-6C2C65F1C602> ;
     ns1:available "2018-10-09"^^xsd:date ;
     ns1:modified "2019-04-12"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_12 ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
     skos:definition "De bronhoudercode van het object."@nl-NL ;
@@ -80112,7 +80111,7 @@ otlvwl:AttributenDomeinwaarden_9999 a p:Attributen_1166Type ;
     rdfs:isDefinedBy otl:Informatiemodellen_17 ;
     skos:prefLabel "Bovenzijde put"@nl-NL .
 
-<http://linkeddata.crow.nl/otl-bim-pro-imbor/id/groepering/IMBOR> skos:member otl:Beheerobject2,
+<http://linkeddata.crow.nl/otl-bim-pro-imbor/id/groepering/IMBOR> skos:member otl:Beheerobject,
         otl:Objecttypes_1000,
         otl:Objecttypes_1001,
         otl:Objecttypes_1002,
@@ -80564,7 +80563,7 @@ otlvwl:AttributenDomeinwaarden_9999 a p:Attributen_1166Type ;
         otl:Objecttypes_998,
         otl:Objecttypes_999 .
 
-<http://linkeddata.crow.nl/otl-bim-pro-imbor/id/groepering/IMWV> skos:member otl:Beheerobject2,
+<http://linkeddata.crow.nl/otl-bim-pro-imbor/id/groepering/IMWV> skos:member otl:Beheerobject,
         otl:Objecttypes_1000,
         otl:Objecttypes_1001,
         otl:Objecttypes_1002,
@@ -81987,7 +81986,7 @@ p:Attributen_169 a rdf:Property ;
     p:dataLabel "Grondsoort" ;
     p:guid <urn:uuid:4D7708B4-2D1A-418C-8E6D-0811F8EC80E1> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_169Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82030,7 +82029,7 @@ p:Attributen_185 a rdf:Property ;
     p:dataLabel "Onderhoudsplichtige" ;
     p:guid <urn:uuid:7DB23E37-4D12-4AB0-BD69-A525117689CA> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_185Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82109,7 +82108,7 @@ p:Attributen_204 a rdf:Property ;
     p:dataLabel "TypeBeheerder" ;
     p:guid <urn:uuid:9A7155E5-6275-48DE-97AF-E5E4267B639C> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_204Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82125,7 +82124,7 @@ p:Attributen_205 a rdf:Property ;
     p:dataLabel "TypeBeheerderPlus" ;
     p:guid <urn:uuid:440460ED-D075-48FC-895F-E02487BD7176> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_205Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82177,7 +82176,7 @@ p:Attributen_217 a rdf:Property ;
     p:dataLabel "TypeEigenaar" ;
     p:guid <urn:uuid:359BC182-DA82-4ECE-A924-60F71AB10CCD> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_217Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82220,7 +82219,7 @@ p:Attributen_224 a rdf:Property ;
     p:isVerplichtAttr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_788,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
@@ -82375,7 +82374,7 @@ p:Attributen_270 a rdf:Property ;
     p:dataLabel "Beheergebied" ;
     p:guid <urn:uuid:FF44C7E9-2FA3-4314-B4A9-D251EB6EB7B6> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_270Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82390,7 +82389,7 @@ p:Attributen_274 a rdf:Property ;
     p:isVerplichtAttr true ;
     ns1:available "2017-12-01"^^xsd:date,
         "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_788,
         otl:Objecttypes_866 ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
@@ -82406,7 +82405,7 @@ p:Attributen_299 a rdf:Property ;
     p:guid <urn:uuid:4E721262-E6E2-41DF-BB99-0B6693E32435> ;
     p:isSysteemattr true ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_299Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -82614,7 +82613,7 @@ p:Attributen_331 a rdf:Property ;
     p:dataLabel "TypeEigenaarPlus" ;
     p:guid <urn:uuid:39484B75-C7F8-4FEC-9348-B668821A4B1D> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_331Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -83204,7 +83203,7 @@ p:Attributen_506 a rdf:Property ;
     p:dataLabel "GrondsoortPlus" ;
     p:guid <urn:uuid:1A81E6E9-C85D-499F-95F7-2746C4831AB0> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_506Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -83260,7 +83259,7 @@ p:Attributen_523 a rdf:Property ;
     p:dataLabel "Gebruiksfunctie" ;
     p:guid <urn:uuid:A96DB9BB-1835-4B55-AE3C-7D5322E72BF0> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_523Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -83289,7 +83288,7 @@ p:Attributen_527 a rdf:Property ;
     p:dataLabel "Zettingsgevoeligheid" ;
     p:guid <urn:uuid:B8CA4620-629B-40C4-BB25-91239DA3CD93> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_527Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -83980,7 +83979,7 @@ p:Attributen_709 a rdf:Property ;
     p:guid <urn:uuid:6A7B967A-A66E-4D30-9D6C-C7ECA645C45A> ;
     ns1:available "2017-12-01"^^xsd:date ;
     ns1:modified "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_709Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -84077,7 +84076,7 @@ p:Attributen_722 a rdf:Property ;
     p:dataLabel "ZettingsgevoeligheidPlus" ;
     p:guid <urn:uuid:1631F6D1-087F-46AC-83BC-C3E5C5F50DAD> ;
     ns1:available "2017-12-01"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_5 ;
     rdfs:range p:Attributen_722Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
@@ -84885,7 +84884,7 @@ p:Attributen_989 a rdf:Property ;
     p:dataLabel "bgt-type" ;
     p:guid <urn:uuid:3DF47FE1-AD7D-4B7A-8ACD-7FBC8506771B> ;
     ns1:available "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_817,
         otl:Objecttypes_818,
         otl:Objecttypes_822,
@@ -84937,7 +84936,7 @@ p:Attributen_992 a rdf:Property ;
     p:dataLabel "bgt-functie" ;
     p:guid <urn:uuid:AF47067D-01A0-482C-AE3F-C8982837CC4E> ;
     ns1:available "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_826,
         otl:Objecttypes_846 ;
     rdfs:isDefinedBy otl:Informatiemodellen_12 ;
@@ -84952,7 +84951,7 @@ p:Attributen_994 a rdf:Property ;
     p:dataLabel "plus-type" ;
     p:guid <urn:uuid:84B7557A-9EF6-47B6-B855-E7ED469B5B1D> ;
     ns1:available "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_814,
         otl:Objecttypes_816,
         otl:Objecttypes_817,
@@ -84988,7 +84987,7 @@ p:Attributen_995 a rdf:Property ;
     p:dataLabel "plus-functie" ;
     p:guid <urn:uuid:71A01BCA-D903-47D0-AC55-9CE3989E9B84> ;
     ns1:available "2018-10-09"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2,
+    rdfs:domain otl:Beheerobject,
         otl:Objecttypes_826,
         otl:Objecttypes_840,
         otl:Objecttypes_846 ;
@@ -85006,7 +85005,7 @@ p:Attributen_999 a rdf:Property ;
     ns1:available "2018-10-09"^^xsd:date,
         "2019-04-12"^^xsd:date ;
     ns1:modified "2019-04-12"^^xsd:date ;
-    rdfs:domain otl:Beheerobject2 ;
+    rdfs:domain otl:Beheerobject ;
     rdfs:isDefinedBy otl:Informatiemodellen_12 ;
     rdfs:range p:Attributen_999Type ;
     rdfs:subPropertyOf <http://www.w3.org/2002/07/owl#topDataProperty> ;
