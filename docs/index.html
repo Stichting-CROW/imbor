@@ -74,7 +74,15 @@
 			</section>
 			<section>
 			<h2>Regels</h2>
-			<p>ntb 
+			<p>Om het datamodel toe te passen zijn er, naast de expliciete regels in het datamodel zelf, een aantal impliciete regels van toepassing.
+			<ol> <!-- ordered list, opsomming met cijfers -->
+				<li> De <code>rdfs:domain</code> van <code>owl:topObjectProperty</code> en <code>owl:topDataProperty</code> is altijd <code>bs:PhysicalObject</code>.</li>
+				<li> De <code>rdfs:range</code> van <code>owl:topObjectProperty</code> is altijd <code>imbor:domeinwaarde</code>.</li>
+				<li> De <code>rdfs:range</code> van <code>owl:topDataProperty</code> is altijd een <code>xsd:string</code> of een QUDT eenheid.</li>
+				<li> Er worden geen Individuals gemaakt in de OTL bij Objecten en Eigenschappen (uitgezonderd bij domeinwaarden).</li>
+				<li> Een <code>bs:PhysicalObject</code> kan maar één <code>skos:member</code> relatie hebben met een member van de Hierarchie collectie.</li>
+				<li> Alle concepten hebben een <code>rdfs:label</code>, <code>skos:prefLabel</code> en <code>skos:definition</code>. Met daarin respectievelijk de data gerelateerde naam, de IMBOR naam in NL en de definitie in NL. De eerste twee zijn sowieso verplicht.</li>
+			</ol>			
 			</section>
 			<section>
 			<h2>Gemaakte keuzes</h2>
