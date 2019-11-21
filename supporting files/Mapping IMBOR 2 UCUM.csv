@@ -1,25 +1,27 @@
-EenheidID(IMBOR);Eenheid(IMBOR);Definitie(IMBOR);cdt(UCUM);unit(UCUM);;QUDT UNIT;QUDT KIND
-1;m;Meters;cdt:length;m;;unit:M;quantitykind:Length
-2;mm;Millimeters;cdt:length;mm;;unit:MilliM;quantitykind:Length
-3;m2;Vierkante meters;cdt:area;m2;;unit:M2;quantitykind:Area
-4;m3;Kubieke meters;cdt:volume;m3;;unit:M3;quantitykind:Volume
-5;€;Euro;cdt:ucum;{euro};;unit:Euro;quantitykind:Currency
-6;Jaartal;Jaar;cdt:ucum;{jaartal};;xsd:gYear;
-7;kW;Kilowatt;cdt:power;kW;;unit:KiloW;quantitykind:Power
-8;dm;Decimeter;cdt:length;dm;;unit:DeciM;quantitykind:Length
-9;km;Kilometer;cdt:length;km;;unit:KiloM;quantitykind:Length
-10;Aantal;Aantal;xsd:integer;;;xsd:integer;
-11;%;Percentage;cdt:dimensionless;%;;unit:PERCENT;quantitykind:DimensionlessRatio
-12;ddmmyyyy;Korte datumnotitie;xsd:date;YYYY-MM-DD;;xsd:date;YYYY-MM-DD
-13;m NAP;Meters t.o.v. NAP;cdt:ucum;{m.nap];;;
-14;kg;Kilogram;cdt:mass;kg;;unit:KiloGM;quantitykind:Mass
-15;Reeks;Reeks;xsd:integer;;;xsd:integer;
-16;kWH;Kilowatt uur;cdt:energy;kw.h;;unit:KiloW-HR;quantitykind:EnergyAndWork
-17;uur;Aantal uren;cdt:time;h;;unit:HR;quantitykind:Time
-18;dm3/s;Kubieke decimeter per seconde;cdt:ucum;{dm3.s-1};;unit:M3-PER-SEC;quantitykind:VolumePerUnitTime
-19;km/h;Kilometer per uur;cdt:speed;km/h;;unit:KiloM-PER-HR;quantitykind:LinearVelocity
-20;cm;Centimeters;cdt:length;cm;;unit:CentiM;quantitykind:Length
-21;pae;Rekeneenheid waartoe voertuigen worden herleid om een onderlinge vergelijking van de verkeersintensiteit mogelijk te maken.;cdt:ucum;{pae};;;
-22;yyyyww;Weeknummer per jaar;cdt:ucum;{weeknummer.jaartal};;;
-23;cm/jaar;cm per jaar;cdt:ucum;{cm.y-1};;unit:CentiM-PER-SEC;quantitykind:LinearVelocity
-24;PN;Nominale druk;cdt:ucum;{pn};;;
+EenheidID;EenheidGUID;Eenheid;Definitie;cdt(UCUM);unit(UCUM);QUDT UNIT;QUDT KIND;Opmerking
+1;{9BE5AAAC-94A3-4EA4-B727-9B032B9A8A64};m;Meters;cdt:length;m;unit:M;quantitykind:Length;
+2;{C6C889A1-BE9D-4007-A704-62CF119A6801};mm;Millimeters;cdt:length;mm;unit:MilliM;quantitykind:Length;
+3;{4A12C32A-AECF-4AEE-9C2A-0C0F607C8B62};m2;Vierkante meters;cdt:area;m2;unit:M2;quantitykind:Area;
+4;{3A04ED3F-1A4A-462C-A979-0C9A92CC1E42};m3;Kubieke meters;cdt:volume;m3;unit:M3;quantitykind:Volume;
+5;{DA3D4A16-3B92-4378-9C1C-9C1970D0BEB9};€;Euro;cdt:ucum;{euro};unit:Euro;quantitykind:Currency;
+6;{0D0C6AE6-DF02-4568-9C5B-A2ECC0AF03CA};Jaartal;Jaar;cdt:ucum;{jaartal};xsd:gYear;;
+7;{FF8B8D6D-3D02-49DD-8A96-2EA45A032B6D};kW;Kilowatt;cdt:power;kW;unit:KiloW;quantitykind:Power;
+8;{D5BB994D-1D6D-4CB6-AF21-01AD22B7F75E};dm;Decimeter;cdt:length;dm;unit:DeciM;quantitykind:Length;
+9;{D6DEB8EF-25AD-4B7E-9A2A-E088AC5FCE48};km;Kilometer;cdt:length;km;unit:KiloM;quantitykind:Length;
+10;{9683B819-FE3B-4205-A4B2-52C1246FDF2C};Aantal;Aantal;xsd:integer;;xsd:integer;;
+11;{FA3A3516-949D-4853-A7B9-2371718498BE};%;Percentage;cdt:dimensionless;%;unit:PERCENT;quantitykind:DimensionlessRatio;
+12;{81C9C933-70A3-4A87-990C-342782E57423};ddmmyyyy;Korte datumnotitie;xsd:date;YYYY-MM-DD;xsd:date;YYYY-MM-DD;
+13;{B962CA34-D747-4FCB-AD80-3D7D099B53F2};m NAP;Meters t.o.v. NAP;cdt:ucum;{m.nap];xsd:integer;;Omdat in RD-NEW altijd t.o.v. van NAP is, kan hier wellicht verstaan worden met gewoon integer getal
+14;{E5D14F73-4511-42C5-8445-F5DC6C23E157};kg;Kilogram;cdt:mass;kg;unit:KiloGM;quantitykind:Mass;
+15;{F03BA433-65D6-4982-A2A7-286E246621A6};Reeks;Reeks;xsd:integer;;xsd:nonNegativeInteger;;
+16;{3FAEC413-8447-4EC8-8482-E740159C88CC};kWH;Kilowatt uur;cdt:energy;kw.h;unit:KiloW-HR;quantitykind:EnergyAndWork;
+17;{9355ECB9-1116-499B-B4A2-C72B74FA7439};uur;Aantal uren;cdt:time;h;unit:HR;quantitykind:Time;
+18;{5CAA0E61-7EFC-4B48-B38C-44D841A42C6F};dm3/s;Kubieke decimeter per seconde;cdt:ucum;{dm3.s-1};unit:M3-PER-SEC;quantitykind:VolumePerUnitTime;
+19;{2C2710BA-6DCD-4C9C-BF89-BBA1FC73D864};km/h;Kilometer per uur;cdt:speed;km/h;unit:KiloM-PER-HR;quantitykind:LinearVelocity;
+20;{F6827D85-6004-499E-9C68-FCA36EF4CE07};cm;Centimeters;cdt:length;cm;unit:CentiM;quantitykind:Length;
+21;{781A0C41-3C93-4130-93AE-33C1DA610DAE};pae;Rekeneenheid waartoe voertuigen worden herleid om een onderlinge vergelijking van de verkeersintensiteit mogelijk te maken.;cdt:ucum;{pae};xsd:integer;;
+22;{542BF0F1-5972-4A66-A84B-4EF06086BAC2};yyyyww;Weeknummer per jaar;cdt:ucum;{weeknummer.jaartal};xsd:nonNegativeInteger;;
+23;{F8E56161-EB5E-48DC-B04C-2C9BB14DDAE3};cm/jaar;cm per jaar;cdt:ucum;{cm.y-1};unit:CentiM-PER-SEC;quantitykind:LinearVelocity;
+24;{20CDB22A-B58C-42E8-89BB-364992C051DC};PN;Nominale druk;cdt:ucum;{pn};unit:BAR;quantitykind:ForcePerArea;Andere eenheid, maar meer internationaal herkend. Mogelijk?
+25;{574DE819-A137-4432-BA19-2A361B7A7774};A;Ampère;;;unit:A;quantitykind:ElectricCurrent;
+26;{6074D130-D7EA-40E0-99F5-69B9B8354CAE};?;Ohm;;;unit:OHM;quantitykind:Impedance;
