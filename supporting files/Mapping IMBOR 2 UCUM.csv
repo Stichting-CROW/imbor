@@ -3,7 +3,7 @@ EenheidID;EenheidGUID;Eenheid;Definitie;cdt(UCUM);unit(UCUM);QUDT UNIT;QUDT KIND
 2;{C6C889A1-BE9D-4007-A704-62CF119A6801};mm;Millimeters;cdt:length;mm;unit:MilliM;quantitykind:Length;
 3;{4A12C32A-AECF-4AEE-9C2A-0C0F607C8B62};m2;Vierkante meters;cdt:area;m2;unit:M2;quantitykind:Area;
 4;{3A04ED3F-1A4A-462C-A979-0C9A92CC1E42};m3;Kubieke meters;cdt:volume;m3;unit:M3;quantitykind:Volume;
-5;{DA3D4A16-3B92-4378-9C1C-9C1970D0BEB9};€;Euro;cdt:ucum;{euro};unit:Euro;quantitykind:Currency;
+5;{DA3D4A16-3B92-4378-9C1C-9C1970D0BEB9};â‚¬;Euro;cdt:ucum;{euro};unit:Euro;quantitykind:Currency;
 6;{0D0C6AE6-DF02-4568-9C5B-A2ECC0AF03CA};Jaartal;Jaar;cdt:ucum;{jaartal};xsd:gYear;;
 7;{FF8B8D6D-3D02-49DD-8A96-2EA45A032B6D};kW;Kilowatt;cdt:power;kW;unit:KiloW;quantitykind:Power;
 8;{D5BB994D-1D6D-4CB6-AF21-01AD22B7F75E};dm;Decimeter;cdt:length;dm;unit:DeciM;quantitykind:Length;
@@ -23,5 +23,5 @@ EenheidID;EenheidGUID;Eenheid;Definitie;cdt(UCUM);unit(UCUM);QUDT UNIT;QUDT KIND
 22;{542BF0F1-5972-4A66-A84B-4EF06086BAC2};yyyyww;Weeknummer per jaar;cdt:ucum;{weeknummer.jaartal};xsd:nonNegativeInteger;;
 23;{F8E56161-EB5E-48DC-B04C-2C9BB14DDAE3};cm/jaar;cm per jaar;cdt:ucum;{cm.y-1};unit:CentiM-PER-SEC;quantitykind:LinearVelocity;
 24;{20CDB22A-B58C-42E8-89BB-364992C051DC};PN;Nominale druk;cdt:ucum;{pn};unit:BAR;quantitykind:ForcePerArea;Andere eenheid, maar meer internationaal herkend. Mogelijk?
-25;{574DE819-A137-4432-BA19-2A361B7A7774};A;Ampère;;;unit:A;quantitykind:ElectricCurrent;
+25;{574DE819-A137-4432-BA19-2A361B7A7774};A;AmpÃ¨re;;;unit:A;quantitykind:ElectricCurrent;
 26;{6074D130-D7EA-40E0-99F5-69B9B8354CAE};?;Ohm;;;unit:OHM;quantitykind:Impedance;
