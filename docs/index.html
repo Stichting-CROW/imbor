@@ -29,7 +29,7 @@
 			],
 			github: "https://github.com/Stichting-CROW/otl-bim-pro",
 			shortName: "CROW",
-			additionalCopyrightHolders: "Stichting CROW, Ede", <!-- TODO: is dit juist? -->
+			additionalCopyrightHolders: "Stichting CROW, Ede", 
 		};
 	</script>
 </head>
@@ -159,7 +159,38 @@ target="_blank">OTL BIM Pro design decisions</a>.
 <section class=informative>
 # Ontologie | OTL BIM Pro
 
-n.t.b.
+## Objecttypen
+
+_tbd_ 
+
+## Eigenschappen
+
+Eigenschappen in OTL BIM Pro bepalen welke informatie bij een object wordt opgeslagen. 
+Eigenschappen kunnen voorgedefinieerde waardes hebben (zie [Vastewaardelijsten](#vastewaardelijsten))
+of een voorgedefinieerde eenheid ([Eenheden](#eenheden))
+of eindheidloos bepaald zijn.
+In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over de gewenste waardes.
+
+### Eenheden
+
+Sommige objecttype-eigenschappen hebben eenheid en grootheid gedefinieerd. 
+Conform NTA 8035, zijn dit URIs uit de [QUDT](http://qudt.org/) vocabulaire.
+Implementeerders wordt aangeraden die dataset in te laden om de juiste interpretatie te verbinden aan de een- en grootheden. 
+
+1. `bs:hasUnit` verwijst naar een eenheid, zoals 'milimeter'.
+1. `bs:hasUnitKind` verwijst naar een grootheid, zoals 'lengte'.
+
+### Vastewaardelijsten
+
+Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende status. 
+Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden. 
+Voor andere eigenschappen is het eerder een suggestielijst. 
+Conform NTA 8035 zijn vastewaardelijsten geïmplementeerd met behulp van superklasses die geïnstantieerd worden door de individuele waardes.
+
+1. `rdfs:range` kan verwijzen naar een klasse waarvan de URI eindigt op `...Type`.
+1. Instanties van die klasse zijn dan de individuele waardes.
+
+</section>
 
 </section>
 <section class=informative>
