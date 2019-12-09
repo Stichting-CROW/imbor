@@ -163,6 +163,34 @@ target="_blank">OTL BIM Pro design decisions</a>.
 
 _tbd_ 
 
+## Raakvlakken
+
+IMBOR definieert een aantal raakvlakobjecten, zoals beschreven in onderstaande tabel. 
+
+Objecttype                       | ObjecttypeNiveau1
+----------                       | -----------------
+TerreindeelSoortnaam             | Terreindeel
+WegasVerkeersintensiteit         | Wegas
+WegasVerkeerstellingJaar         | Wegas
+WegasVerkeerstelling             | Wegas
+VerhardingsobjectRand            | Verhardingsobject
+GroenobjectConstructielaag       | Groenobject
+GroenobjectSoortnaam             | Groenobject
+GroenobjectRand                  | Groenobject
+SluisDoorvaart                   | Sluis
+KunstwerkOpening                 | Kunstwerk
+VerhardingsobjectConstructielaag | Verhardingsobject
+
+De objecttypen in de rechterkolom relateren aan de raakvlakobjecten uit de linkerkolom doormiddel van een subproperty van `bs:hasPart`. 
+Voor elk objecttype uit de rechterkolom is er zo'n subproperty gedefinieerd: 
+`groenobjectHasPart`, 
+`kunstwerkHasPart`, 
+`sluisHasPart`, 
+`terreindeelHasPart`, 
+`verhardingsobjectHasPart`, 
+`wegasHasPart`.
+Het bijbehoorende objecttype is gespecificeerd in `rdfs:domain` en het raakvlakobject in `rdfs:range`.  
+
 ## Eigenschappen
 
 Eigenschappen in OTL BIM Pro bepalen welke informatie bij een object wordt opgeslagen. 
