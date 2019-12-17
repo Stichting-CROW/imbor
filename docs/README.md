@@ -12,3 +12,14 @@ Deze voorbeelden tonen hoe je (de computer) kunt (laten) zoeken door de OTL-gege
 Bijvoorbeeld door het tonen van alle eigenschappen van een Hefbrug. 
 De voorbeelden kunnen ook gebruikt worden op een aangepaste dataset van bijvoorbeeld een provincie. 
 Dan verifieer je ook of je aan het OTL-datamodel voldoet. 
+
+---
+
+De SPARQL-voorbeelden zijn ook zelf uit te voeren. 
+Dan is ook een SPARQL-endpoint benodigd, die ook lokaal (op de eigen computer) kan draaien.
+
+1. Een SPARQL-endpoint, bijvoorbeeld met [GraphDB](http://ontotext.com/).  
+1. Python en Juypter Notebook geïnstalleerd `$ pip install jupyterlab`. 
+1. Een [SPARQL-kernel voor Jupyter](https://github.com/paulovn/sparql-kernel) `$ pip install sparqlkernel; jupyter sparqlkernel install --user`.
+1. Activeer en open Jupyter `jupyter notebook` en open "SPARQL-voorbeelden.ipynb". 
+1. Vervang de bovenste coderegel met de URL van het gewenste SPARQL-endpoint.
