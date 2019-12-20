@@ -28105,12 +28105,10 @@ p:Attributen_1327Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_1333Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr1333Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_135Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr135Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_156Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28146,15 +28144,13 @@ p:Attributen_204Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_205Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr205Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_206Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_207Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr207Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_216Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28175,8 +28171,7 @@ p:Attributen_232Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_233Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr233Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_235Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28239,8 +28234,7 @@ p:Attributen_330Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_331Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr331Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_332Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28321,8 +28315,7 @@ p:Attributen_478Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_489Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr489Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_494Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28349,8 +28342,7 @@ p:Attributen_505Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_506Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr506Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_516Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28362,8 +28354,7 @@ p:Attributen_519Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_523Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr523Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_526Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28504,8 +28495,7 @@ p:Attributen_717Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_722Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr722Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_723Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28553,8 +28543,7 @@ p:Attributen_778Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_779Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr779Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_780Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28569,8 +28558,7 @@ p:Attributen_814Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_818Type a rdfs:Class ;
-    rdfs:subClassOf otlvwl:Attr818Type,
-        otlvwl:Domeinwaarde .
+    rdfs:subClassOf otlvwl:Domeinwaarde .
 
 p:Attributen_821Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
@@ -28656,209 +28644,13 @@ p:Attributen_964Type a rdfs:Class ;
 p:Attributen_965Type a rdfs:Class ;
     rdfs:subClassOf otlvwl:Domeinwaarde .
 
-otlvwl:Attr1333Type a rdfs:Class ;
-    rdfs:label "Drainagestelsel"@nl-NL,
-        "Infiltratiestelsel"@nl-NL,
-        "Mechanisch rioolstelsel"@nl-NL,
-        "Rioolstelsel"@nl-NL,
-        "Stelsel"@nl-NL,
-        "Transportstelsel"@nl-NL,
-        "Vrijverval drainagestelsel"@nl-NL,
-        "Vrijverval rioolstelsel"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Drainagestelsel"@nl-NL,
-        "Infiltratiestelsel"@nl-NL,
-        "Mechanisch rioolstelsel"@nl-NL,
-        "Rioolstelsel"@nl-NL,
-        "Stelsel"@nl-NL,
-        "Transportstelsel"@nl-NL,
-        "Vrijverval drainagestelsel"@nl-NL,
-        "Vrijverval rioolstelsel"@nl-NL .
-
-otlvwl:Attr135Type a rdfs:Class ;
-    rdfs:label "Rioolput"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Rioolput"@nl-NL .
-
-otlvwl:Attr205Type a rdfs:Class ;
-    rdfs:label "Ministerie van Infrastructuur en Waterstaat"@nl-NL,
-        "Particulier"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Ministerie van Infrastructuur en Waterstaat"@nl-NL,
-        "Particulier"@nl-NL .
-
-otlvwl:Attr207Type a rdfs:Class ;
-    rdfs:label "Bijzondere boom"@nl-NL,
-        "Monumentale boom"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Bijzondere boom"@nl-NL,
-        "Monumentale boom"@nl-NL .
-
-otlvwl:Attr233Type a rdfs:Class ;
-    rdfs:label "Asfaltverharding"@nl-NL,
-        "Betonverharding"@nl-NL,
-        "Bodembedekkers"@nl-NL,
-        "Bosplantsoen"@nl-NL,
-        "Elementenverharding"@nl-NL,
-        "Gras- en kruidachtigen"@nl-NL,
-        "Haag"@nl-NL,
-        "Halfverharding"@nl-NL,
-        "Heesters"@nl-NL,
-        "Kunststofverharding"@nl-NL,
-        "Onverhard"@nl-NL,
-        "Planten"@nl-NL,
-        "Standplaats - Halfverharding"@nl-NL,
-        "Struikrozen"@nl-NL,
-        "Terreindeel"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Asfaltverharding"@nl-NL,
-        "Betonverharding"@nl-NL,
-        "Bodembedekkers"@nl-NL,
-        "Bosplantsoen"@nl-NL,
-        "Elementenverharding"@nl-NL,
-        "Gras- en kruidachtigen"@nl-NL,
-        "Haag"@nl-NL,
-        "Halfverharding"@nl-NL,
-        "Heesters"@nl-NL,
-        "Kunststofverharding"@nl-NL,
-        "Onverhard"@nl-NL,
-        "Planten"@nl-NL,
-        "Standplaats - Halfverharding"@nl-NL,
-        "Struikrozen"@nl-NL,
-        "Terreindeel"@nl-NL .
-
-otlvwl:Attr331Type a rdfs:Class ;
-    rdfs:label "Ministerie van Infrastructuur en Waterstaat"@nl-NL,
-        "Particulier"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Ministerie van Infrastructuur en Waterstaat"@nl-NL,
-        "Particulier"@nl-NL .
-
-otlvwl:Attr489Type a rdfs:Class ;
-    rdfs:label "Afdekking"@nl-NL,
-        "Afdekking-Deksel"@nl-NL,
-        "Afsluiteraandrijving"@nl-NL,
-        "Afvalbak"@nl-NL,
-        "Bak"@nl-NL,
-        "Doorlaat"@nl-NL,
-        "Doorlaat-Afsluiter"@nl-NL,
-        "Doorlaat-Mechanische afsluiter"@nl-NL,
-        "Electronische component"@nl-NL,
-        "Fundering"@nl-NL,
-        "Fundering-Onderheid"@nl-NL,
-        "Hulpstuk"@nl-NL,
-        "Hulpstuk-Inlaat"@nl-NL,
-        "Hulpstuk-Verbindingsstuk"@nl-NL,
-        "Kabel"@nl-NL,
-        "Kast"@nl-NL,
-        "Lining"@nl-NL,
-        "Ontspanningsventiel"@nl-NL,
-        "Overstortconstructie"@nl-NL,
-        "Signaalgevers"@nl-NL,
-        "Slibafscheider"@nl-NL,
-        "Sluis"@nl-NL,
-        "Sluisdeur"@nl-NL,
-        "Stuw"@nl-NL,
-        "Toestelonderdeel"@nl-NL,
-        "Tunnelgang"@nl-NL,
-        "Wand"@nl-NL,
-        "Waterslagvoorziening"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Afdekking"@nl-NL,
-        "Afdekking-Deksel"@nl-NL,
-        "Afsluiteraandrijving"@nl-NL,
-        "Afvalbak"@nl-NL,
-        "Bak"@nl-NL,
-        "Doorlaat"@nl-NL,
-        "Doorlaat-Afsluiter"@nl-NL,
-        "Doorlaat-Mechanische afsluiter"@nl-NL,
-        "Electronische component"@nl-NL,
-        "Fundering"@nl-NL,
-        "Fundering-Onderheid"@nl-NL,
-        "Hulpstuk"@nl-NL,
-        "Hulpstuk-Inlaat"@nl-NL,
-        "Hulpstuk-Verbindingsstuk"@nl-NL,
-        "Kabel"@nl-NL,
-        "Kast"@nl-NL,
-        "Lining"@nl-NL,
-        "Ontspanningsventiel"@nl-NL,
-        "Overstortconstructie"@nl-NL,
-        "Signaalgevers"@nl-NL,
-        "Slibafscheider"@nl-NL,
-        "Sluis"@nl-NL,
-        "Sluisdeur"@nl-NL,
-        "Stuw"@nl-NL,
-        "Toestelonderdeel"@nl-NL,
-        "Tunnelgang"@nl-NL,
-        "Wand"@nl-NL,
-        "Waterslagvoorziening"@nl-NL .
-
-otlvwl:Attr506Type a rdfs:Class ;
-    rdfs:label "Veen"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Veen"@nl-NL .
-
-otlvwl:Attr523Type a rdfs:Class ;
-    rdfs:label "Afscherming"@nl-NL,
-        "Algemeen"@nl-NL,
-        "Groen"@nl-NL,
-        "Inrichting en/of structurering"@nl-NL,
-        "Milieu en klimaat"@nl-NL,
-        "Natuurwaarde"@nl-NL,
-        "Recreatie"@nl-NL,
-        "Sport"@nl-NL,
-        "Stedelijk water"@nl-NL,
-        "Verkeersgeleiding en/of wegondersteuning"@nl-NL,
-        "Water"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Afscherming"@nl-NL,
-        "Algemeen"@nl-NL,
-        "Groen"@nl-NL,
-        "Inrichting en/of structurering"@nl-NL,
-        "Milieu en klimaat"@nl-NL,
-        "Natuurwaarde"@nl-NL,
-        "Recreatie"@nl-NL,
-        "Sport"@nl-NL,
-        "Stedelijk water"@nl-NL,
-        "Verkeersgeleiding en/of wegondersteuning"@nl-NL,
-        "Water"@nl-NL .
-
-otlvwl:Attr722Type a rdfs:Class ;
-    rdfs:label "Zettingsgevoelig"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Zettingsgevoelig"@nl-NL .
-
-otlvwl:Attr779Type a rdfs:Class ;
-    rdfs:label "Erftoegangsweg"@nl-NL,
-        "Gebiedsontsluitingsweg"@nl-NL,
-        "Regionale stroomweg"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Erftoegangsweg"@nl-NL,
-        "Gebiedsontsluitingsweg"@nl-NL,
-        "Regionale stroomweg"@nl-NL .
-
-otlvwl:Attr818Type a rdfs:Class ;
-    rdfs:label "Fietspad"@nl-NL,
-        "OV-baan"@nl-NL,
-        "OV-voorziening"@nl-NL,
-        "Parkeervoorziening"@nl-NL,
-        "Voetpad"@nl-NL,
-        "Wegen"@nl-NL ;
-    rdfs:subClassOf otlvwl:Domeinwaarde ;
-    skos:prefLabel "Fietspad"@nl-NL,
-        "OV-baan"@nl-NL,
-        "OV-voorziening"@nl-NL,
-        "Parkeervoorziening"@nl-NL,
-        "Voetpad"@nl-NL,
-        "Wegen"@nl-NL .
-
 otlvwl:Domeinwaarde a rdfs:Class .
 
 <http://linkeddata.crow.nl/otl-bim-pro-imbor/> a owl:Ontology ;
     rdfs:label "IMBOR (in Linked Data)" ;
     rdfs:comment "Een linked data-publicatie van IMBOR." ;
     rdfs:isDefinedBy <http://crow.nl/> ;
-    owl:versionInfo "1576848237" .
+    owl:versionInfo "Gegenereerd:1576850822" .
 
 p:Attributen_1016 rdfs:label "Actueel kwaliteitsniveau" ;
     p:attribuutsorteergroep "Kwaliteit"@nl-NL ;
@@ -37533,6 +37325,7 @@ otlvwl:AttributenDomeinwaarden_10840 a p:Attributen_312Type ;
 
 otlvwl:AttributenDomeinwaarden_10883 a p:Attributen_523Type ;
     rdfs:label "Waterplein"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Een waterplein is een stadsplein met speciale bassins om overmatig water op te vangen."@nl-NL ;
     skos:prefLabel "Waterplein"@nl-NL .
 
@@ -37550,6 +37343,7 @@ otlvwl:AttributenDomeinwaarden_10915 a p:Attributen_523Type ;
 
 otlvwl:AttributenDomeinwaarden_10916 a p:Attributen_523Type ;
     rdfs:label "Kade"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Kade"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10921 a p:Attributen_135Type ;
@@ -37598,6 +37392,7 @@ otlvwl:AttributenDomeinwaarden_10931 a p:Attributen_135Type ;
 
 otlvwl:AttributenDomeinwaarden_10935 a p:Attributen_523Type ;
     rdfs:label "Decoratief"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:prefLabel "Decoratief"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10955 a p:Attributen_338Type ;
@@ -37612,32 +37407,38 @@ otlvwl:AttributenDomeinwaarden_10956 a p:Attributen_748Type ;
 
 otlvwl:AttributenDomeinwaarden_10957 a p:Attributen_523Type ;
     rdfs:label "Vogeleiland"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:prefLabel "Vogeleiland"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10958 a p:Attributen_523Type ;
     rdfs:label "Keverbank"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:definition "Gebruiksfunctie van een vlak veelal midden in een akkerperceel. Doel is biodiversiteit in de moderne agrarische bedrijfsvoering. Een keverbank is een 40-70 cm verhoogde rug van ongeveer 2 tot 3 meter breed. Aan één van de zijdes ligt een braakstrook van 3 meter breed. De keverbank is ingezaaid met polvormende overblijvende grassen en een variatie aan meerjarige kruiden, en is daarmee een geschikte habitat voor insecten en spinnen. De keverbank hoeft in principe niet beheerd te worden."@nl-NL ;
     skos:prefLabel "Keverbank"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10960 a p:Attributen_523Type ;
     rdfs:label "Bloemblok"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:altLabel "Bloemenblok"@nl-NL ;
     skos:definition "Gebruiksfunctie van een vlak in een akkerperceel. Doel is biodiversiteit in de moderne agrarische bedrijfsvoering. Een bloemenblok bestaat uit een mengsel van streekeigen kruiden en planten van extensieve gewassen. Na het inzaaien wordt het in fases beheerd door opnieuw in te zaaien. Dit betreft een cyclus van 3 jaar. Een bloemenblok is een perfect broedbiotoop voor akkervogels als Patrijs. In najaar en winter is er veel voedsel voor andere vogels. Er is een brede bloeiboog waardoor het een aantrekkelijk biotoop is voor insecten."@nl-NL ;
     skos:prefLabel "Bloemblok"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10961 a p:Attributen_523Type ;
     rdfs:label "Tiny Forest"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:altLabel "Kleine wildernis"@nl-NL ;
     skos:definition "Een dichtbegroeid minibos dat voldoet aan een aantal strikte voorwaarden betreffende aard en hoeveelheid beplanting, betrokkenheid van kinderen en van de buurt. Zie: https://www.ivn.nl/tinyforest/over-tiny-forestr"@nl-NL ;
     skos:prefLabel "Tiny Forest"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10962 a p:Attributen_523Type ;
     rdfs:label "Natuurbos"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:definition "Bos waarvan structuur en samenstelling nog min of meer in overeenstemming zijn met wat er van nature zou voorkomen. In Nederland zijn als natuurbos te beschouwen de bossen die al tenminste 200 jaar oud zijn."@nl-NL ;
     skos:prefLabel "Natuurbos"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10965 a p:Attributen_135Type ;
     rdfs:label "Werkzaamheden op particulier terein"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Rioolput"@nl-NL ;
     skos:prefLabel "Werkzaamheden op particulier terein"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10967 a p:Attributen_419Type ;
@@ -37658,6 +37459,7 @@ otlvwl:AttributenDomeinwaarden_10971 a p:Attributen_417Type ;
 
 otlvwl:AttributenDomeinwaarden_10973 a p:Attributen_818Type ;
     rdfs:label "Oversteekplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:prefLabel "Oversteekplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_10997 a p:Attributen_169Type ;
@@ -37674,55 +37476,67 @@ otlvwl:AttributenDomeinwaarden_110 a p:Attributen_332Type ;
 
 otlvwl:AttributenDomeinwaarden_11006 a p:Attributen_233Type ;
     rdfs:label "Bewerkte houtsnippers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Bewerkte houtsnippers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11007 a p:Attributen_233Type ;
     rdfs:label "Gralux"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Gralux"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11008 a p:Attributen_233Type ;
     rdfs:label "Gravel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Gravel is een ondergrond van gemalen baksteen."@nl-NL ;
     skos:prefLabel "Gravel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11009 a p:Attributen_233Type ;
     rdfs:label "Leemdek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Leemdek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11010 a p:Attributen_233Type ;
     rdfs:label "Boomschors"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Ongebonden verharding met als deklaag boomschors."@nl-NL ;
     skos:prefLabel "Boomschors"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11011 a p:Attributen_233Type ;
     rdfs:label "Grind"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Ongebonden verharding bestaande uit kiezelmateriaal, waarvan de stenen in doorsnede variëren van 1 tot 5 cm."@nl-NL ;
     skos:prefLabel "Grind"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11012 a p:Attributen_233Type ;
     rdfs:label "Houtsnippers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Houtsnippers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11013 a p:Attributen_233Type ;
     rdfs:label "Mijnsteen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Mijnsteen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11014 a p:Attributen_233Type ;
     rdfs:label "Puin"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Puin is afvalmateriaal dat bestaat uit losse brokstukken, grotendeels bestaande uit stenen en beton, van gesloopte of ingestorte gebouwen, viaducten, bruggen en andere objecten."@nl-NL ;
     skos:prefLabel "Puin"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11015 a p:Attributen_233Type ;
     rdfs:label "Rubbersnippers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Rubbersnippers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11016 a p:Attributen_233Type ;
     rdfs:label "Schelpen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Ongebonden verharding bestaande uit schelpenmateriaal."@nl-NL ;
     skos:prefLabel "Schelpen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11017 a p:Attributen_233Type ;
     rdfs:label "Steenslag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Steenslag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11051 a p:Attributen_1124Type ;
@@ -37801,6 +37615,7 @@ otlvwl:AttributenDomeinwaarden_11972 a p:Attributen_417Type ;
 
 otlvwl:AttributenDomeinwaarden_11974 a p:Attributen_523Type ;
     rdfs:label "IJsbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "IJsbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_11977 a p:Attributen_914Type ;
@@ -37888,6 +37703,7 @@ otlvwl:AttributenDomeinwaarden_127 a p:Attributen_320Type ;
 
 otlvwl:AttributenDomeinwaarden_12980 a p:Attributen_523Type ;
     rdfs:label "Verkeersdruppel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Verkeersdruppel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_12982 a p:Attributen_1244Type ;
@@ -38041,6 +37857,7 @@ otlvwl:AttributenDomeinwaarden_13022 a p:Attributen_1254Type ;
 
 otlvwl:AttributenDomeinwaarden_13030 a p:Attributen_523Type ;
     rdfs:label "Uitkijkpunt"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Uitkijkpunt"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13063 a p:Attributen_1201Type ;
@@ -38061,6 +37878,7 @@ otlvwl:AttributenDomeinwaarden_13067 a p:Attributen_1259Type ;
 
 otlvwl:AttributenDomeinwaarden_13068 a p:Attributen_523Type ;
     rdfs:label "Functioneel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Functioneel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13069 a p:Attributen_1260Type ;
@@ -38209,6 +38027,7 @@ otlvwl:AttributenDomeinwaarden_13128 a p:Attributen_1201Type ;
 
 otlvwl:AttributenDomeinwaarden_13152 a p:Attributen_523Type ;
     rdfs:label "Opkuilhoek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:prefLabel "Opkuilhoek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13167 a p:Attributen_915Type ;
@@ -38351,6 +38170,7 @@ otlvwl:AttributenDomeinwaarden_13422 a p:Attributen_1283Type ;
 
 otlvwl:AttributenDomeinwaarden_13423 a p:Attributen_523Type ;
     rdfs:label "Dam"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Dwars op het water opgeworpen waterbouwkundige constructie om water te keren, te beheersen, te leiden of te verdelen."@nl-NL ;
     skos:prefLabel "Dam"@nl-NL .
 
@@ -38366,6 +38186,7 @@ otlvwl:AttributenDomeinwaarden_13439 a p:Attributen_218Type ;
 
 otlvwl:AttributenDomeinwaarden_13440 a p:Attributen_523Type ;
     rdfs:label "Brandgang"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Brandgang"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13441 a p:Attributen_232Type ;
@@ -38374,26 +38195,32 @@ otlvwl:AttributenDomeinwaarden_13441 a p:Attributen_232Type ;
 
 otlvwl:AttributenDomeinwaarden_13442 a p:Attributen_233Type ;
     rdfs:label "Linoleum"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kunststofverharding"@nl-NL ;
     skos:prefLabel "Linoleum"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13443 a p:Attributen_233Type ;
     rdfs:label "Rubber gietvloer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kunststofverharding"@nl-NL ;
     skos:prefLabel "Rubber gietvloer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13444 a p:Attributen_233Type ;
     rdfs:label "Rubber grastegel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:prefLabel "Rubber grastegel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13445 a p:Attributen_233Type ;
     rdfs:label "Rubbertegel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:prefLabel "Rubbertegel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13446 a p:Attributen_233Type ;
     rdfs:label "Rubberen matten"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kunststofverharding"@nl-NL ;
     skos:prefLabel "Rubberen matten"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13447 a p:Attributen_233Type ;
     rdfs:label "Rubbersnippers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:prefLabel "Rubbersnippers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13448 a p:Attributen_218Type ;
@@ -38402,6 +38229,7 @@ otlvwl:AttributenDomeinwaarden_13448 a p:Attributen_218Type ;
 
 otlvwl:AttributenDomeinwaarden_13449 a p:Attributen_523Type ;
     rdfs:label "Uiterwaard"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Uiterwaard"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13451 a p:Attributen_1272Type ;
@@ -38434,6 +38262,7 @@ otlvwl:AttributenDomeinwaarden_13458 a p:Attributen_1286Type ;
 
 otlvwl:AttributenDomeinwaarden_13497 a p:Attributen_523Type ;
     rdfs:label "Bluswater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Bluswater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13503 a p:Attributen_1301Type ;
@@ -38494,38 +38323,47 @@ otlvwl:AttributenDomeinwaarden_13520 a p:Attributen_1309Type ;
 
 otlvwl:AttributenDomeinwaarden_13535 a p:Attributen_523Type ;
     rdfs:label "Water onder duiker"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Water onder duiker"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13536 a p:Attributen_489Type ;
     rdfs:label "160A-aansluiting"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kast"@nl-NL ;
     skos:prefLabel "160A-aansluiting"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13537 a p:Attributen_489Type ;
     rdfs:label "80A-aansluiting"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kast"@nl-NL ;
     skos:prefLabel "80A-aansluiting"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13538 a p:Attributen_489Type ;
     rdfs:label "Afdekplaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking"@nl-NL ;
     skos:prefLabel "Afdekplaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13539 a p:Attributen_489Type ;
     rdfs:label "Afsluiter"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat"@nl-NL ;
     skos:prefLabel "Afsluiter"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13540 a p:Attributen_489Type ;
     rdfs:label "Afsluiter beregeningsleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Afsluiter beregeningsleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13541 a p:Attributen_489Type ;
     rdfs:label "Afsluiter gasleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Afsluiter gasleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13542 a p:Attributen_489Type ;
     rdfs:label "Afsluiter rioolleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Afsluiter rioolleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13543 a p:Attributen_489Type ;
     rdfs:label "Afsluiter waterleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Afsluiter waterleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13544 a p:Attributen_489Type ;
@@ -38534,14 +38372,17 @@ otlvwl:AttributenDomeinwaarden_13544 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13545 a p:Attributen_489Type ;
     rdfs:label "Afsluitklep"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afvalbak"@nl-NL ;
     skos:prefLabel "Afsluitklep"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13546 a p:Attributen_489Type ;
     rdfs:label "Afsluitstuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk"@nl-NL ;
     skos:prefLabel "Afsluitstuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13547 a p:Attributen_489Type ;
     rdfs:label "Balustrade"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "voorziening die bedoeld is om te voorkomen dat de gebruiker valt en/of zich er onderdoor beweegt"@nl-NL ;
     skos:prefLabel "Balustrade"@nl-NL .
 
@@ -38552,35 +38393,43 @@ otlvwl:AttributenDomeinwaarden_13548 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13549 a p:Attributen_489Type ;
     rdfs:label "Beluchtingsventiel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ontspanningsventiel"@nl-NL ;
     skos:definition "Ventiel dat wordt gebruikt om een mechanische leiding te beluchten."@nl-NL ;
     skos:prefLabel "Beluchtingsventiel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13550 a p:Attributen_489Type ;
     rdfs:label "Bijzonder putdeksel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Bijzonder putdeksel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13551 a p:Attributen_489Type ;
     rdfs:label "Bochtglijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Bochtglijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13552 a p:Attributen_489Type ;
     rdfs:label "Bochtstuk  "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Bochtstuk  "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13553 a p:Attributen_489Type ;
     rdfs:label "Boogladder"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Boogladder"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13554 a p:Attributen_489Type ;
     rdfs:label "Boogtrap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Boogtrap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13555 a p:Attributen_489Type ;
     rdfs:label "Boot"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Boot"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13556 a p:Attributen_489Type ;
     rdfs:label "Brandweerpaal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Brandweerpaal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13557 a p:Attributen_489Type ;
@@ -38589,11 +38438,13 @@ otlvwl:AttributenDomeinwaarden_13557 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13558 a p:Attributen_489Type ;
     rdfs:label "Close fit lining"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:definition "Spiraalvormige omwonden lining hernoemen in Wikkelbuis relining."@nl-NL ;
     skos:prefLabel "Close fit lining"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13559 a p:Attributen_489Type ;
     rdfs:label "Cluster"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "twee of meer afzonderlijke speeltoestellen die bedoeld zijn om bij elkaar te worden geïnstalleerd tenbehoeve van continuïteit die door de speelactiviteit wordt vereist, bijvoorbeeld een route van stapstenen"@nl-NL ;
     skos:prefLabel "Cluster"@nl-NL .
 
@@ -38608,10 +38459,12 @@ otlvwl:AttributenDomeinwaarden_13561 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13562 a p:Attributen_489Type ;
     rdfs:label "Dekladder"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Dekladder"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13563 a p:Attributen_489Type ;
     rdfs:label "Deksel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking"@nl-NL ;
     skos:prefLabel "Deksel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13564 a p:Attributen_489Type ;
@@ -38620,6 +38473,7 @@ otlvwl:AttributenDomeinwaarden_13564 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13565 a p:Attributen_489Type ;
     rdfs:label "Dienstgang"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Tunnelgang"@nl-NL ;
     skos:definition "Een gang in de lengterichting van de tunnel, meestal boven en/of onder een vluchtgang."@nl-NL ;
     skos:prefLabel "Dienstgang"@nl-NL .
 
@@ -38630,10 +38484,12 @@ otlvwl:AttributenDomeinwaarden_13566 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13567 a p:Attributen_489Type ;
     rdfs:label "Drainputdeksel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Drainputdeksel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13569 a p:Attributen_489Type ;
     rdfs:label "Dubbelkerende afsluiter"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Dubbelkerende afsluiter"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1357 a p:Attributen_684Type ;
@@ -38642,6 +38498,7 @@ otlvwl:AttributenDomeinwaarden_1357 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13570 a p:Attributen_489Type ;
     rdfs:label "Dubbelkerende spindelschuif"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Mechanische afsluiter"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Dubbelkerende spindelschuif"@nl-NL .
 
@@ -38651,6 +38508,7 @@ otlvwl:AttributenDomeinwaarden_13571 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13572 a p:Attributen_489Type ;
     rdfs:label "Duikelrek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Duikelrek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13573 a p:Attributen_489Type ;
@@ -38664,11 +38522,13 @@ otlvwl:AttributenDomeinwaarden_13574 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13575 a p:Attributen_489Type ;
     rdfs:label "Dwarsgang"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Tunnelgang"@nl-NL ;
     skos:definition "Een gang tussen twee tunnelbuizen in, om van de ene naar de andere buis te komen."@nl-NL ;
     skos:prefLabel "Dwarsgang"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13576 a p:Attributen_489Type ;
     rdfs:label "Eenzijdig kerende afsluiter"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Afsluiter"@nl-NL ;
     skos:prefLabel "Eenzijdig kerende afsluiter"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13577 a p:Attributen_489Type ;
@@ -38677,11 +38537,13 @@ otlvwl:AttributenDomeinwaarden_13577 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13578 a p:Attributen_489Type ;
     rdfs:label "Enkelkerende spindelschuif"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Mechanische afsluiter"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Enkelkerende spindelschuif"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13579 a p:Attributen_489Type ;
     rdfs:label "Enterrek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Enterrek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1358 a p:Attributen_684Type ;
@@ -38690,6 +38552,7 @@ otlvwl:AttributenDomeinwaarden_1358 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13580 a p:Attributen_489Type ;
     rdfs:label "Externe overstortconstructie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Overstortconstructie"@nl-NL ;
     skos:definition "Een overstortconstructie waarbij het overtollig afvalwater uit een rioolstelsel kan stromen."@nl-NL ;
     skos:prefLabel "Externe overstortconstructie"@nl-NL .
 
@@ -38703,11 +38566,13 @@ otlvwl:AttributenDomeinwaarden_13582 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13583 a p:Attributen_489Type ;
     rdfs:label "Frequentie-omvormer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Electronische component"@nl-NL ;
     skos:definition "Een apparaat dat de frequentie van elektrische energie verandert."@nl-NL ;
     skos:prefLabel "Frequentie-omvormer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13584 a p:Attributen_489Type ;
     rdfs:label "Fundatieplaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Fundatieplaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13585 a p:Attributen_489Type ;
@@ -38721,15 +38586,18 @@ otlvwl:AttributenDomeinwaarden_13586 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13587 a p:Attributen_489Type ;
     rdfs:label "Gebogen glijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "In horizontale richting gebogen glijbaan"@nl-NL ;
     skos:prefLabel "Gebogen glijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13588 a p:Attributen_489Type ;
     rdfs:label "Gemengde tunnelglijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Gemengde tunnelglijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13589 a p:Attributen_489Type ;
     rdfs:label "Gesegmenteerde lining"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Gesegmenteerde lining"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1359 a p:Attributen_684Type ;
@@ -38738,15 +38606,18 @@ otlvwl:AttributenDomeinwaarden_1359 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13590 a p:Attributen_489Type ;
     rdfs:label "Grondverbetering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:definition "Het verbeteren van slappe grond, meestal veen of klei, om het draagvermogen te vergroten."@nl-NL ;
     skos:prefLabel "Grondverbetering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13591 a p:Attributen_489Type ;
     rdfs:label "Hefdeur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Hefdeur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13592 a p:Attributen_489Type ;
     rdfs:label "Hellingbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "toegangsmiddel met een hellend oppervlak waarmee de gebruiker het speeltoestel op of af kan klimmen"@nl-NL ;
     skos:prefLabel "Hellingbaan"@nl-NL .
 
@@ -38773,10 +38644,12 @@ otlvwl:AttributenDomeinwaarden_13597 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13598 a p:Attributen_489Type ;
     rdfs:label "Inlaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk"@nl-NL ;
     skos:prefLabel "Inlaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13599 a p:Attributen_489Type ;
     rdfs:label "Inlaat leiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Inlaat"@nl-NL ;
     skos:prefLabel "Inlaat leiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1360 a p:Attributen_684Type ;
@@ -38785,15 +38658,18 @@ otlvwl:AttributenDomeinwaarden_1360 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13600 a p:Attributen_489Type ;
     rdfs:label "Inlaat rioolput"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Inlaat"@nl-NL ;
     skos:prefLabel "Inlaat rioolput"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13601 a p:Attributen_489Type ;
     rdfs:label "Interne overstortconstructie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Overstortconstructie"@nl-NL ;
     skos:definition "Een overstortconstructie die loost op een voorziening binnen hetzelfde rioolstelsel."@nl-NL ;
     skos:prefLabel "Interne overstortconstructie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13602 a p:Attributen_489Type ;
     rdfs:label "Inwerpopening"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bak"@nl-NL ;
     skos:prefLabel "Inwerpopening"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13603 a p:Attributen_489Type ;
@@ -38802,10 +38678,12 @@ otlvwl:AttributenDomeinwaarden_13603 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13604 a p:Attributen_489Type ;
     rdfs:label "Ketelzand fundering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Ketelzand fundering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13605 a p:Attributen_489Type ;
     rdfs:label "kleef en Onderheid"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering-Onderheid"@nl-NL ;
     skos:prefLabel "kleef en Onderheid"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13606 a p:Attributen_489Type ;
@@ -38814,14 +38692,17 @@ otlvwl:AttributenDomeinwaarden_13606 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13607 a p:Attributen_489Type ;
     rdfs:label "Klimladder"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Klimladder"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13608 a p:Attributen_489Type ;
     rdfs:label "Klimnet"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Klimnet"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13609 a p:Attributen_489Type ;
     rdfs:label "Klimrek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Klimrek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1361 a p:Attributen_684Type ;
@@ -38830,10 +38711,12 @@ otlvwl:AttributenDomeinwaarden_1361 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13610 a p:Attributen_489Type ;
     rdfs:label "Klimtoren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Klimtoren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13611 a p:Attributen_489Type ;
     rdfs:label "Klimwand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Klimwand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13612 a p:Attributen_489Type ;
@@ -38842,10 +38725,12 @@ otlvwl:AttributenDomeinwaarden_13612 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13614 a p:Attributen_489Type ;
     rdfs:label "Kruipbuis"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Kruipbuis"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13615 a p:Attributen_489Type ;
     rdfs:label "Kruisstuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Kruisstuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13616 a p:Attributen_489Type ;
@@ -38890,14 +38775,17 @@ otlvwl:AttributenDomeinwaarden_13623 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13624 a p:Attributen_489Type ;
     rdfs:label "Lining aangebracht tijdens fabricage"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Lining aangebracht tijdens fabricage"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13625 a p:Attributen_489Type ;
     rdfs:label "Lining met afzonderlijke buizen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Lining met afzonderlijke buizen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13626 a p:Attributen_489Type ;
     rdfs:label "Lining met een doorlopende buis"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Lining met een doorlopende buis"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13627 a p:Attributen_489Type ;
@@ -38911,6 +38799,7 @@ otlvwl:AttributenDomeinwaarden_13628 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13629 a p:Attributen_489Type ;
     rdfs:label "Mechanische afsluiter"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Mechanische afsluiter"@nl-NL .
 
@@ -38920,6 +38809,7 @@ otlvwl:AttributenDomeinwaarden_1363 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13630 a p:Attributen_489Type ;
     rdfs:label "Net"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Net"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13631 a p:Attributen_489Type ;
@@ -38933,6 +38823,7 @@ otlvwl:AttributenDomeinwaarden_13632 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13633 a p:Attributen_489Type ;
     rdfs:label "Onderheid"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Onderheid"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13634 a p:Attributen_489Type ;
@@ -38946,6 +38837,7 @@ otlvwl:AttributenDomeinwaarden_13635 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13636 a p:Attributen_489Type ;
     rdfs:label "Ontluchtingsventiel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ontspanningsventiel"@nl-NL ;
     skos:definition "Ventiel dat wordt gebruikt om een mechanische leiding te ontluchten."@nl-NL ;
     skos:prefLabel "Ontluchtingsventiel"@nl-NL .
 
@@ -38956,6 +38848,7 @@ otlvwl:AttributenDomeinwaarden_13637 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13638 a p:Attributen_489Type ;
     rdfs:label "Ontstoppingsstuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk"@nl-NL ;
     skos:prefLabel "Ontstoppingsstuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13639 a p:Attributen_489Type ;
@@ -38968,6 +38861,7 @@ otlvwl:AttributenDomeinwaarden_1364 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13640 a p:Attributen_489Type ;
     rdfs:label "Op staal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Op staal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13641 a p:Attributen_489Type ;
@@ -38976,18 +38870,22 @@ otlvwl:AttributenDomeinwaarden_13641 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13642 a p:Attributen_489Type ;
     rdfs:label "Opening in wand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat"@nl-NL ;
     skos:prefLabel "Opening in wand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13643 a p:Attributen_489Type ;
     rdfs:label "Opgespoten lining"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Opgespoten lining"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13644 a p:Attributen_489Type ;
     rdfs:label "Oploop"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Oploop"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13645 a p:Attributen_489Type ;
     rdfs:label "Overgangsstuk  "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Overgangsstuk  "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13646 a p:Attributen_489Type ;
@@ -39002,10 +38900,12 @@ otlvwl:AttributenDomeinwaarden_13647 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13648 a p:Attributen_489Type ;
     rdfs:label "Overstortdrempel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wand"@nl-NL ;
     skos:prefLabel "Overstortdrempel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13649 a p:Attributen_489Type ;
     rdfs:label "Paaljuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Paaljuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1365 a p:Attributen_684Type ;
@@ -39014,6 +38914,7 @@ otlvwl:AttributenDomeinwaarden_1365 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13650 a p:Attributen_489Type ;
     rdfs:label "Peilbuisdeksel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Peilbuisdeksel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13651 a p:Attributen_489Type ;
@@ -39027,24 +38928,29 @@ otlvwl:AttributenDomeinwaarden_13652 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13653 a p:Attributen_489Type ;
     rdfs:label "Plaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bak"@nl-NL ;
     skos:prefLabel "Plaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13654 a p:Attributen_489Type ;
     rdfs:label "Platform "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "verhoogd oppervlak waarop een of meer gebruikers kunnen staan zonder een handondersteuning nodig tehebben"@nl-NL ;
     skos:prefLabel "Platform "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13655 a p:Attributen_489Type ;
     rdfs:label "PLC"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Electronische component"@nl-NL ;
     skos:definition "Een apparaat met een microprocessor die bij de besturing van pompen wordt toegepast."@nl-NL ;
     skos:prefLabel "PLC"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13656 a p:Attributen_489Type ;
     rdfs:label "Polystyreen fundering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Polystyreen fundering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13657 a p:Attributen_489Type ;
     rdfs:label "Puntdeur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Puntdeur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13658 a p:Attributen_489Type ;
@@ -39053,6 +38959,7 @@ otlvwl:AttributenDomeinwaarden_13658 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13659 a p:Attributen_489Type ;
     rdfs:label "Putdeksel - licht verkeer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Putdeksel - licht verkeer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1366 a p:Attributen_684Type ;
@@ -39061,10 +38968,12 @@ otlvwl:AttributenDomeinwaarden_1366 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13660 a p:Attributen_489Type ;
     rdfs:label "Putdeksel - zwaar verkeer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Putdeksel - zwaar verkeer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13661 a p:Attributen_489Type ;
     rdfs:label "Putdeksel met instroomvoorziening"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking-Deksel"@nl-NL ;
     skos:prefLabel "Putdeksel met instroomvoorziening"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13662 a p:Attributen_489Type ;
@@ -39074,10 +38983,12 @@ otlvwl:AttributenDomeinwaarden_13662 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13663 a p:Attributen_489Type ;
     rdfs:label "Raster"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bak"@nl-NL ;
     skos:prefLabel "Raster"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13664 a p:Attributen_489Type ;
     rdfs:label "Rateltikker"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Signaalgevers"@nl-NL ;
     skos:prefLabel "Rateltikker"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13665 a p:Attributen_489Type ;
@@ -39086,18 +38997,22 @@ otlvwl:AttributenDomeinwaarden_13665 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13666 a p:Attributen_489Type ;
     rdfs:label "Rietmatten"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Rietmatten"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13667 a p:Attributen_489Type ;
     rdfs:label "Roldeur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Roldeur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13668 a p:Attributen_489Type ;
     rdfs:label "Rooster"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking"@nl-NL ;
     skos:prefLabel "Rooster"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13669 a p:Attributen_489Type ;
     rdfs:label "Ruimtenet"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Ruimtenet"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1367 a p:Attributen_684Type ;
@@ -39106,10 +39021,12 @@ otlvwl:AttributenDomeinwaarden_1367 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13670 a p:Attributen_489Type ;
     rdfs:label "Schildmuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wand"@nl-NL ;
     skos:prefLabel "Schildmuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13671 a p:Attributen_489Type ;
     rdfs:label "Schotbalk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Schotbalk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13672 a p:Attributen_489Type ;
@@ -39119,6 +39036,7 @@ otlvwl:AttributenDomeinwaarden_13672 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13673 a p:Attributen_489Type ;
     rdfs:label "Slibvangput"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Slibafscheider"@nl-NL ;
     skos:definition "Bezinkbak voor verontreinigd afvalwater waarin door het verschil in dichtheid en het vertragen van de vloeistofstroom, slib en afvalwater wordt gescheiden."@nl-NL ;
     skos:prefLabel "Slibvangput"@nl-NL .
 
@@ -39133,6 +39051,7 @@ otlvwl:AttributenDomeinwaarden_13675 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13676 a p:Attributen_489Type ;
     rdfs:label "Sloofconstructie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fundering"@nl-NL ;
     skos:prefLabel "Sloofconstructie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13677 a p:Attributen_489Type ;
@@ -39142,26 +39061,32 @@ otlvwl:AttributenDomeinwaarden_13677 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13678 a p:Attributen_489Type ;
     rdfs:label "Speeltoren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Speeltoren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13679 a p:Attributen_489Type ;
     rdfs:label "Speelwand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Speelwand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13680 a p:Attributen_489Type ;
     rdfs:label "Spindel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afsluiteraandrijving"@nl-NL ;
     skos:prefLabel "Spindel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13681 a p:Attributen_489Type ;
     rdfs:label "Spiraalglijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Spiraalglijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13682 a p:Attributen_489Type ;
     rdfs:label "Spiraalvormige omwonden lining"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Spiraalvormige omwonden lining"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13683 a p:Attributen_489Type ;
     rdfs:label "Spoelklep"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Mechanische afsluiter"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Spoelklep"@nl-NL .
 
@@ -39185,6 +39110,7 @@ otlvwl:AttributenDomeinwaarden_13687 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13688 a p:Attributen_489Type ;
     rdfs:label "Steil speelelement"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "speelelement dat als toegang/uitgang kan dienen met een hellingshoek van meer dan 45° ten opzichte vanhet horizontale vlak"@nl-NL ;
     skos:prefLabel "Steil speelelement"@nl-NL .
 
@@ -39194,6 +39120,7 @@ otlvwl:AttributenDomeinwaarden_13689 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13690 a p:Attributen_489Type ;
     rdfs:label "Straatpot"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afdekking"@nl-NL ;
     skos:prefLabel "Straatpot"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13691 a p:Attributen_489Type ;
@@ -39208,6 +39135,7 @@ otlvwl:AttributenDomeinwaarden_13692 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13693 a p:Attributen_489Type ;
     rdfs:label "Stuwmuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wand"@nl-NL ;
     skos:prefLabel "Stuwmuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13694 a p:Attributen_489Type ;
@@ -39216,11 +39144,13 @@ otlvwl:AttributenDomeinwaarden_13694 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13695 a p:Attributen_489Type ;
     rdfs:label "Technische gang"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Tunnelgang"@nl-NL ;
     skos:definition "Een gang voor toegang tot de technische ruimten"@nl-NL ;
     skos:prefLabel "Technische gang"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13696 a p:Attributen_489Type ;
     rdfs:label "Ter plaatse uitgeharde lining"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Lining"@nl-NL ;
     skos:prefLabel "Ter plaatse uitgeharde lining"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13697 a p:Attributen_489Type ;
@@ -39229,49 +39159,60 @@ otlvwl:AttributenDomeinwaarden_13697 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13698 a p:Attributen_489Type ;
     rdfs:label "Terugslagklep"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Mechanische afsluiter"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Terugslagklep"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13699 a p:Attributen_489Type ;
     rdfs:label "Toldeur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Toldeur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13700 a p:Attributen_489Type ;
     rdfs:label "Toren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Toren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13701 a p:Attributen_489Type ;
     rdfs:label "Toren met dak"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Toren met dak"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13702 a p:Attributen_489Type ;
     rdfs:label "Touw"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "klimtouw, hangend touw, staalkabel, staalkabel met mantel, vezeltouw"@nl-NL ;
     skos:prefLabel "Touw"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13703 a p:Attributen_489Type ;
     rdfs:label "Touwbrug"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Touwbrug"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13704 a p:Attributen_489Type ;
     rdfs:label "Trapsgewijs platform"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "opeenvolgende platformen van verschillende hoogten waarmee de gebruiker op of in het speeltoestelomhoog of omlaag kan klimmen"@nl-NL ;
     skos:prefLabel "Trapsgewijs platform"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13705 a p:Attributen_489Type ;
     rdfs:label "Trekvaste koppeling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Trekvaste koppeling"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13706 a p:Attributen_489Type ;
     rdfs:label "T-stuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "T-stuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13707 a p:Attributen_489Type ;
     rdfs:label "Tubelure"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Tubelure"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13708 a p:Attributen_489Type ;
     rdfs:label "Tunnel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:definition "omsloten deel van een speeltoestel"@nl-NL ;
     skos:prefLabel "Tunnel"@nl-NL .
 
@@ -39292,6 +39233,7 @@ otlvwl:AttributenDomeinwaarden_13711 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13712 a p:Attributen_489Type ;
     rdfs:label "Tunnelglijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Tunnelglijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13713 a p:Attributen_489Type ;
@@ -39314,10 +39256,12 @@ otlvwl:AttributenDomeinwaarden_13716 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13717 a p:Attributen_489Type ;
     rdfs:label "Verbindingsstuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk"@nl-NL ;
     skos:prefLabel "Verbindingsstuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13718 a p:Attributen_489Type ;
     rdfs:label "Verloopstuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Verloopstuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13719 a p:Attributen_489Type ;
@@ -39331,11 +39275,13 @@ otlvwl:AttributenDomeinwaarden_1372 a p:Attributen_684Type ;
 
 otlvwl:AttributenDomeinwaarden_13720 a p:Attributen_489Type ;
     rdfs:label "Vlinderklep"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat-Mechanische afsluiter"@nl-NL ;
     skos:definition "Een doorlaat met een voorziening om de stroming te regelen."@nl-NL ;
     skos:prefLabel "Vlinderklep"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13721 a p:Attributen_489Type ;
     rdfs:label "Vluchtgang"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Tunnelgang"@nl-NL ;
     skos:definition "Een gang in de lengterichting van de tunnel, achter de vluchtdeuren van de tunnelbuis, die leidt naar een veilige plek."@nl-NL ;
     skos:prefLabel "Vluchtgang"@nl-NL .
 
@@ -39346,6 +39292,7 @@ otlvwl:AttributenDomeinwaarden_13722 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13723 a p:Attributen_489Type ;
     rdfs:label "Waaierdeur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluisdeur"@nl-NL ;
     skos:prefLabel "Waaierdeur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13724 a p:Attributen_489Type ;
@@ -39355,10 +39302,12 @@ otlvwl:AttributenDomeinwaarden_13724 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13725 a p:Attributen_489Type ;
     rdfs:label "Wateremmer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Wateremmer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13726 a p:Attributen_489Type ;
     rdfs:label "Waterpomp"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Waterpomp"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13727 a p:Attributen_489Type ;
@@ -39368,10 +39317,12 @@ otlvwl:AttributenDomeinwaarden_13727 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13728 a p:Attributen_489Type ;
     rdfs:label "Watertappunt"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Watertappunt"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13729 a p:Attributen_489Type ;
     rdfs:label "Wervelventiel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Doorlaat"@nl-NL ;
     skos:definition "Doorlaat die het debiet regelt."@nl-NL ;
     skos:prefLabel "Wervelventiel"@nl-NL .
 
@@ -39381,11 +39332,13 @@ otlvwl:AttributenDomeinwaarden_1373 a p:Attributen_448Type ;
 
 otlvwl:AttributenDomeinwaarden_13730 a p:Attributen_489Type ;
     rdfs:label "Windketel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Waterslagvoorziening"@nl-NL ;
     skos:definition "Een gesloten vat met een hoeveelheid gas die voor opvang van drukvariaties als gevolg van waterslag kan comprimeren of expanderen."@nl-NL ;
     skos:prefLabel "Windketel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13731 a p:Attributen_489Type ;
     rdfs:label "Y-stuk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Hulpstuk-Verbindingsstuk"@nl-NL ;
     skos:prefLabel "Y-stuk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13732 a p:Attributen_489Type ;
@@ -39395,6 +39348,7 @@ otlvwl:AttributenDomeinwaarden_13732 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13733 a p:Attributen_489Type ;
     rdfs:label "Zekering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kabel"@nl-NL ;
     skos:prefLabel "Zekering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13734 a p:Attributen_489Type ;
@@ -39408,6 +39362,7 @@ otlvwl:AttributenDomeinwaarden_13735 a p:Attributen_489Type ;
 
 otlvwl:AttributenDomeinwaarden_13736 a p:Attributen_489Type ;
     rdfs:label "Zware hangende balk"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Toestelonderdeel"@nl-NL ;
     skos:prefLabel "Zware hangende balk"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13817 a p:Attributen_1312Type ;
@@ -39537,14 +39492,17 @@ otlvwl:AttributenDomeinwaarden_13873 a p:Attributen_1325Type ;
 
 otlvwl:AttributenDomeinwaarden_13893 a p:Attributen_489Type ;
     rdfs:label "Stuwbak"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stuw"@nl-NL ;
     skos:prefLabel "Stuwbak"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13894 a p:Attributen_489Type ;
     rdfs:label "Bellenscherm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sluis"@nl-NL ;
     skos:prefLabel "Bellenscherm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13899 a p:Attributen_523Type ;
     rdfs:label "Dijknol"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Zichtbare plaats nabij een wiel waar het water doorheen spoot na een dijkdoorbraak of resterend deel van een door de zee weggeslagen dijk."@nl-NL ;
     skos:prefLabel "Dijknol"@nl-NL .
 
@@ -39554,6 +39512,7 @@ otlvwl:AttributenDomeinwaarden_13901 a p:Attributen_588Type ;
 
 otlvwl:AttributenDomeinwaarden_13926 a p:Attributen_523Type ;
     rdfs:label "Oeververdediging"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Oeververdediging"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13942 a p:Attributen_1327Type ;
@@ -39579,24 +39538,29 @@ otlvwl:AttributenDomeinwaarden_13950 a p:Attributen_748Type ;
 
 otlvwl:AttributenDomeinwaarden_13951 a p:Attributen_523Type ;
     rdfs:label "Inlaag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Een inlaag of inlaagpolder ontstond als in verband met het risico van wegzakken van een dijk een inlaagdijk als reservewaterkering werd aangelegd."@nl-NL ;
     skos:prefLabel "Inlaag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13952 a p:Attributen_523Type ;
     rdfs:label "Karreveld"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Een gebied achter een dijk waar klei is afgegraven voor het vormen van die dijk."@nl-NL ;
     skos:prefLabel "Karreveld"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13953 a p:Attributen_523Type ;
     rdfs:label "Uitmonding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Uitmonding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13954 a p:Attributen_523Type ;
     rdfs:label "Kweekvijver"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Kweekvijver"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13955 a p:Attributen_523Type ;
     rdfs:label "Visvijver"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Visvijver"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_13999 a p:Attributen_338Type ;
@@ -41165,44 +41129,53 @@ otlvwl:AttributenDomeinwaarden_14290 a p:Attributen_919Type ;
 
 otlvwl:AttributenDomeinwaarden_14291 a p:Attributen_1333Type ;
     rdfs:label "Drainagestelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Het op peil houden van het grondwater door exfiltratie."@nl-NL ;
     skos:prefLabel "Drainagestelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14292 a p:Attributen_1333Type ;
     rdfs:label "Duikerstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Een stelsel van onderling verbonden duikers."@nl-NL ;
     skos:prefLabel "Duikerstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14293 a p:Attributen_1333Type ;
     rdfs:label "Grondwatermeetnet"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Grondwatermeetnet"@nl-NL ;
     skos:prefLabel "Grondwatermeetnet"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14294 a p:Attributen_1333Type ;
     rdfs:label "Infiltratiestelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Stelsel of systeem bestaande uit infiltratievoorzieningen"@nl-NL ;
     skos:prefLabel "Infiltratiestelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14295 a p:Attributen_1333Type ;
     rdfs:label "Rioolstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Het geheel aan voorzieningen voor de inzameling en het transport van afvalwater met uitzondering van zuiveringstechnische werken"@nl-NL ;
     skos:prefLabel "Rioolstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14296 a p:Attributen_1333Type ;
     rdfs:label "Transportstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stelsel"@nl-NL ;
     skos:definition "Transportstelsel"@nl-NL ;
     skos:prefLabel "Transportstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14297 a p:Attributen_1333Type ;
     rdfs:label "Mechanisch drainagestelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Drainagestelsel"@nl-NL ;
     skos:prefLabel "Mechanisch drainagestelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14298 a p:Attributen_1333Type ;
     rdfs:label "Vrijverval drainagestelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Drainagestelsel"@nl-NL ;
     skos:prefLabel "Vrijverval drainagestelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14299 a p:Attributen_1333Type ;
     rdfs:label "Mechanisch rioolstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Rioolstelsel"@nl-NL ;
     skos:definition "Een rioolstelsel waarbij het transport door middel van over- of onderdruk plaatsvindt."@nl-NL ;
     skos:prefLabel "Mechanisch rioolstelsel"@nl-NL .
 
@@ -41212,118 +41185,142 @@ otlvwl:AttributenDomeinwaarden_143 a p:Attributen_322Type ;
 
 otlvwl:AttributenDomeinwaarden_14300 a p:Attributen_1333Type ;
     rdfs:label "Terreinriolering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Rioolstelsel"@nl-NL ;
     skos:definition "Rioolstelsel op particulier terrein."@nl-NL ;
     skos:prefLabel "Terreinriolering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14301 a p:Attributen_1333Type ;
     rdfs:label "Vrijverval rioolstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Rioolstelsel"@nl-NL ;
     skos:definition "Een rioolstelsel waarbij het transport door middel van de zwaartekracht plaatsvindt."@nl-NL ;
     skos:prefLabel "Vrijverval rioolstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14302 a p:Attributen_1333Type ;
     rdfs:label "Persleidingsysteem"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Transportstelsel"@nl-NL ;
     skos:definition "Een systeem voor transport van afvalwater met een enkele persleiding of een netwerk van persleidingen."@nl-NL ;
     skos:prefLabel "Persleidingsysteem"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14303 a p:Attributen_1333Type ;
     rdfs:label "Vrijverval transportstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Transportstelsel"@nl-NL ;
     skos:prefLabel "Vrijverval transportstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14304 a p:Attributen_1333Type ;
     rdfs:label "Gecombineerd infiltratiestelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Infiltratiestelsel"@nl-NL ;
     skos:prefLabel "Gecombineerd infiltratiestelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14305 a p:Attributen_1333Type ;
     rdfs:label "Openbaar ontwateringsstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Drainagestelsel"@nl-NL ;
     skos:definition "Voorziening voor de inzameling en verdere verwerking van grondwater, niet zijnde een openbaar vuilwaterriool, in beheer bij een gemeente of een rechtspersoon die door een gemeente met het beheer is belast."@nl-NL ;
     skos:prefLabel "Openbaar ontwateringsstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14306 a p:Attributen_1333Type ;
     rdfs:label "Cunetdrainage"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval drainagestelsel"@nl-NL ;
     skos:prefLabel "Cunetdrainage"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14307 a p:Attributen_1333Type ;
     rdfs:label "Horizontale drainage"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval drainagestelsel"@nl-NL ;
     skos:definition "Drainage ter beheersing van de grondwaterstand en/of ter regulering van de afwatering."@nl-NL ;
     skos:prefLabel "Horizontale drainage"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14308 a p:Attributen_1333Type ;
     rdfs:label "Vertikale drainage"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval drainagestelsel"@nl-NL ;
     skos:definition "Drainage met als doel het versneld afvoeren van overspannen grondwater in de richting van verticaal in de grond geplaatste zand- of kunststofdrains."@nl-NL ;
     skos:prefLabel "Vertikale drainage"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14309 a p:Attributen_1333Type ;
     rdfs:label "Drukriolering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Mechanisch rioolstelsel"@nl-NL ;
     skos:definition "Riolering waarbij het transport plaatsvindt door middel van overdruk"@nl-NL ;
     skos:prefLabel "Drukriolering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14310 a p:Attributen_1333Type ;
     rdfs:label "Luchtpersriolering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Mechanisch rioolstelsel"@nl-NL ;
     skos:definition "Een systeem voor transport van vervuild huishoudelijk afvalwater en bedrijfs- afvalwater waarbij het afvalwater met behulp van lucht onder overdruk in een enkele drukleiding of een netwerk van drukleidingen wordt gebracht."@nl-NL ;
     skos:prefLabel "Luchtpersriolering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14311 a p:Attributen_1333Type ;
     rdfs:label "Vacuümriolering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Mechanisch rioolstelsel"@nl-NL ;
     skos:definition "Een systeem voor transport van vervuild huishoudelijk afvalwater en bedrijfs- afvalwater met een enkele onderdrukleiding of een netwerk van onderdrukleidingen."@nl-NL ;
     skos:prefLabel "Vacuümriolering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14312 a p:Attributen_1333Type ;
     rdfs:label "Gemengd stelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Een vrijverval rioolstelsel bestemd voor de inzameling, het transport en de tijdelijke berging van afvalwater."@nl-NL ;
     skos:prefLabel "Gemengd stelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14313 a p:Attributen_1333Type ;
     rdfs:label "Absoluut rioolstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Een gemengd rioolstelsel zonder overstort, eventueel voorzien van een nooduitlaat"@nl-NL ;
     skos:prefLabel "Absoluut rioolstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14314 a p:Attributen_1333Type ;
     rdfs:label "Verbeterd gemengd rioolstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Gemengd rioolstelsel met (rand)voorzieningen die de vuiluitworp richting oppervlaktewater beperken ten opzichte van de traditionele gemengde rioolstelsels."@nl-NL ;
     skos:prefLabel "Verbeterd gemengd rioolstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14315 a p:Attributen_1333Type ;
     rdfs:label "Hemelwaterstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Een enkelvoudig vrijverval rioolstelsel bestemd voor de inzameling, het transport en de tijdelijke berging van hemelwater."@nl-NL ;
     skos:prefLabel "Hemelwaterstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14316 a p:Attributen_1333Type ;
     rdfs:label "Onderbemaling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Een deel van een rioolstelsel waarvan het ingezamelde afvalwater via een bemaling wordt opgevoerd naar een ander deel van hetzelfde stelsel."@nl-NL ;
     skos:prefLabel "Onderbemaling"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14317 a p:Attributen_1333Type ;
     rdfs:label "Vuilwaterstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Een vrijverval rioolstelsel bestemd voor de inzameling, het transport en de tijdelijke berging van vuilwater."@nl-NL ;
     skos:prefLabel "Vuilwaterstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14318 a p:Attributen_1333Type ;
     rdfs:label "Verbeterd hemelwaterstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:prefLabel "Verbeterd hemelwaterstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14319 a p:Attributen_1333Type ;
     rdfs:label "Openbaar vuilwaterriool"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Voorziening voor de inzameling en het transport van stedelijk afvalwater, in beheer bij een gemeente of een rechtspersoon die door een gemeente met het beheer is belast."@nl-NL ;
     skos:prefLabel "Openbaar vuilwaterriool"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14320 a p:Attributen_1333Type ;
     rdfs:label "Openbaar hemelwaterstelsel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Vrijverval rioolstelsel"@nl-NL ;
     skos:definition "Voorziening voor de inzameling en verdere verwerking van afvloeiend hemelwater, niet zijnde een openbaar vuilwaterriool, in beheer bij een gemeente of een rechtspersoon die door een gemeente met het beheer is belast."@nl-NL ;
     skos:prefLabel "Openbaar hemelwaterstelsel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14350 a p:Attributen_523Type ;
     rdfs:label "Hindernis"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sport"@nl-NL ;
     skos:altLabel "Penalty area"@nl-NL ;
     skos:definition "Alle onderdelen op een golfbaan die geen onderdeel van het spel zijn kunnen als hindernis dienen. Denk aan vijvers, bosplantsoen, etc."@nl-NL ;
     skos:prefLabel "Hindernis"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14351 a p:Attributen_523Type ;
     rdfs:label "Out of bounds"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sport"@nl-NL ;
     skos:definition "Alle onderdelen die buiten de baan (spel) liggen."@nl-NL ;
     skos:prefLabel "Out of bounds"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_14353 a p:Attributen_523Type ;
     rdfs:label "Waste-area"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Sport"@nl-NL ;
     skos:altLabel "Sandy waste"@nl-NL,
         "Transition area"@nl-NL ;
     skos:prefLabel "Waste-area"@nl-NL .
@@ -41484,6 +41481,7 @@ otlvwl:AttributenDomeinwaarden_1698 a p:Attributen_527Type ;
 
 otlvwl:AttributenDomeinwaarden_1699 a p:Attributen_722Type ;
     rdfs:label "Licht zettingsgevoelig"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Zettingsgevoelig"@nl-NL ;
     skos:definition "Klei: minder dan 50 cm veen in de bovenste 5 meter slechte grond"@nl-NL ;
     skos:prefLabel "Licht zettingsgevoelig"@nl-NL .
 
@@ -41493,11 +41491,13 @@ otlvwl:AttributenDomeinwaarden_17 a p:Attributen_169Type ;
 
 otlvwl:AttributenDomeinwaarden_1700 a p:Attributen_722Type ;
     rdfs:label "Matig zettingsgevoelig"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Zettingsgevoelig"@nl-NL ;
     skos:definition "Klei/veen: tussen 50 cm en vier meter veen in de bovenste vijf meter slechte grond"@nl-NL ;
     skos:prefLabel "Matig zettingsgevoelig"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_1701 a p:Attributen_722Type ;
     rdfs:label "Sterk zettingsgevoelig"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Zettingsgevoelig"@nl-NL ;
     skos:definition "Veen: meer dan vier meter veen in de bovenste vijf meter slechte grond."@nl-NL ;
     skos:prefLabel "Sterk zettingsgevoelig"@nl-NL .
 
@@ -41733,6 +41733,7 @@ otlvwl:AttributenDomeinwaarden_1791 a p:Attributen_318Type ;
 
 otlvwl:AttributenDomeinwaarden_18 a p:Attributen_506Type ;
     rdfs:label "Slap veen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Veen"@nl-NL ;
     skos:definition "Is nadere aanduiding van veen."@nl-NL ;
     skos:prefLabel "Slap veen"@nl-NL .
 
@@ -41774,6 +41775,7 @@ otlvwl:AttributenDomeinwaarden_189 a p:Attributen_218Type ;
 
 otlvwl:AttributenDomeinwaarden_19 a p:Attributen_506Type ;
     rdfs:label "Zeer slap veen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Veen"@nl-NL ;
     skos:definition "Is nadere aanduiding van veen."@nl-NL ;
     skos:prefLabel "Zeer slap veen"@nl-NL .
 
@@ -42205,59 +42207,73 @@ otlvwl:AttributenDomeinwaarden_2644 a p:Attributen_135Type ;
 
 otlvwl:AttributenDomeinwaarden_2663 a p:Attributen_207Type ;
     rdfs:label "Beeldbepalende boom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Beeldbepalende boom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2664 a p:Attributen_207Type ;
     rdfs:label "Bijzondere groeivorm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Bijzondere groeivorm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2665 a p:Attributen_207Type ;
     rdfs:label "Bijzondere snoeivorm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Bijzondere snoeivorm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2666 a p:Attributen_207Type ;
     rdfs:label "Bomenlijst boom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Bomenlijst boom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2667 a p:Attributen_207Type ;
     rdfs:label "Bomenstructuur boom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Bomenstructuur boom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2668 a p:Attributen_207Type ;
     rdfs:label "Cultuurhistorisch waardevol"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Cultuurhistorisch waardevol"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2669 a p:Attributen_207Type ;
     rdfs:label "Dendrologisch waardevol"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:definition "Is zeldzame soort of variëteit."@nl-NL ;
     skos:prefLabel "Dendrologisch waardevol"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2670 a p:Attributen_207Type ;
     rdfs:label "Ecologisch waardevol"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Ecologisch waardevol"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2671 a p:Attributen_207Type ;
     rdfs:label "Jaarrond beschermd nest"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Jaarrond beschermd nest"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2672 a p:Attributen_207Type ;
     rdfs:label "Natuurwetenschappelijk waardevol"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Natuurwetenschappelijk waardevol"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2673 a p:Attributen_207Type ;
     rdfs:label "Onderdeel van monumentale boomstructuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:prefLabel "Onderdeel van monumentale boomstructuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2674 a p:Attributen_207Type ;
     rdfs:label "Toekomstboom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Toekomstboom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2675 a p:Attributen_207Type ;
     rdfs:label "Vaste rust- en of verblijfplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Vaste rust- en of verblijfplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_2676 a p:Attributen_207Type ;
     rdfs:label "Verblijfplaats Vleermuizen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Verblijfplaats Vleermuizen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_27 a p:Attributen_204Type ;
@@ -42338,14 +42354,17 @@ otlvwl:AttributenDomeinwaarden_3029 a p:Attributen_338Type ;
 
 otlvwl:AttributenDomeinwaarden_3030 a p:Attributen_207Type ;
     rdfs:label "Veteranenboom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Veteranenboom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3031 a p:Attributen_207Type ;
     rdfs:label "Vliegroute vleermuizen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Vliegroute vleermuizen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3032 a p:Attributen_207Type ;
     rdfs:label "Zeldzaamheidswaarde"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Monumentale boom"@nl-NL ;
     skos:definition "Opvallend in provinciaal of landelijk perspectief"@nl-NL ;
     skos:prefLabel "Zeldzaamheidswaarde"@nl-NL .
 
@@ -42481,164 +42500,201 @@ otlvwl:AttributenDomeinwaarden_3066 a p:Attributen_812Type ;
 
 otlvwl:AttributenDomeinwaarden_3067 a p:Attributen_523Type ;
     rdfs:label "Afscherming"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:definition "Afscherming van ongewenst uitzicht, ongewenst geluid of vervuilde lucht."@nl-NL ;
     skos:prefLabel "Afscherming"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3068 a p:Attributen_523Type ;
     rdfs:label "Afvoeren hemelwater naar de ondergrond "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Afvoeren hemelwater naar de ondergrond "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3069 a p:Attributen_523Type ;
     rdfs:label "Anti-parkeer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Tegengaan van parkeren"@nl-NL ;
     skos:prefLabel "Anti-parkeer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3070 a p:Attributen_523Type ;
     rdfs:label "Begrazingsgebied"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Natuurwaarde"@nl-NL ;
     skos:definition "Rust- en/of verblijfplaats voor grazers en andere diersoorten. Soms ‘begrazingsgebied’ genoemd. Valt hieronder wanneer het gebied bedoeld is om de grazers voedsel, drinkwater, beschutting en soortgenoten te bieden."@nl-NL ;
     skos:prefLabel "Begrazingsgebied"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3071 a p:Attributen_523Type ;
     rdfs:label "Beluchten of ventileren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Beluchten of ventileren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3072 a p:Attributen_523Type ;
     rdfs:label "Bezinken stoffen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Bezinken stoffen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3073 a p:Attributen_523Type ;
     rdfs:label "Boezemkering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Boezemkering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3074 a p:Attributen_523Type ;
     rdfs:label "Cultuurlijk groen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:definition "Groen wat niet ecologisch beheerd wordt."@nl-NL ;
     skos:prefLabel "Cultuurlijk groen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3075 a p:Attributen_523Type ;
     rdfs:label "Dierenweide"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Dierenweide"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3076 a p:Attributen_523Type ;
     rdfs:label "Faunageleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Faunageleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3077 a p:Attributen_523Type ;
     rdfs:label "Geluidswal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Geluidswal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3078 a p:Attributen_523Type ;
     rdfs:label "Helofytenfilter"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Functie van rietland. Bed of veld van planten (helofyten) dat, met behulp van zonlicht, water zuivert. Een helofytenfilter kan onderdeel uitmaken van een waterpartij."@nl-NL ;
     skos:prefLabel "Helofytenfilter"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3079 a p:Attributen_523Type ;
     rdfs:label "Hondenlosloopgebied"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:definition "Gebied waar honden los mogen lopen."@nl-NL ;
     skos:prefLabel "Hondenlosloopgebied"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3080 a p:Attributen_523Type ;
     rdfs:label "Hoogwaterbemaling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Hoogwaterbemaling"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3081 a p:Attributen_523Type ;
     rdfs:label "Hoogwaterkering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Hoogwaterkering"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3082 a p:Attributen_523Type ;
     rdfs:label "Infiltratieveld"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Een verdiept terrein met waterdoorlatende bodem bestemd voor de inzameling van hemelwater, waarbij dit water door middel van infiltratie door de bodem kan worden afgevoerd."@nl-NL ;
     skos:prefLabel "Infiltratieveld"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3083 a p:Attributen_523Type ;
     rdfs:label "Inlaatplaats veegboot"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Inlaatplaats veegboot"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3084 a p:Attributen_523Type ;
     rdfs:label "Inloopkom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Inloopkom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3085 a p:Attributen_523Type ;
     rdfs:label "Inzameling van grondwater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Inzameling van grondwater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3086 a p:Attributen_523Type ;
     rdfs:label "Leidingen aansluiten"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Leidingen aansluiten"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3087 a p:Attributen_523Type ;
     rdfs:label "Natuurvriendelijke oever"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Natuurwaarde"@nl-NL ;
     skos:definition "Een flauw talud op de overgang tussen land en water. Het creëren van een geleidelijke overgangszone tussen land en water als habitat voor flora en fauna die hiervan afhankelijk zijn."@nl-NL ;
     skos:prefLabel "Natuurvriendelijke oever"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3088 a p:Attributen_523Type ;
     rdfs:label "Obstakelbeveiliging (aanrijbescherming) "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Obstakelbeveiliging (aanrijbescherming) "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3089 a p:Attributen_523Type ;
     rdfs:label "Oever"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "De oppervlakte tussen het wateroppervlak en de insteek, begroeid. Indien er geen water aanwezig is in de watergang wordt de gehele oppervlakte tot de insteek van de watergang als oever beschouwd (inclusief de bodem van de watergang)."@nl-NL ;
     skos:prefLabel "Oever"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3090 a p:Attributen_523Type ;
     rdfs:label "Onderdeel ecologische structuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Natuurwaarde"@nl-NL ;
     skos:definition "Groen dat onderdeel is van de ecologische (hoofd)structuur zoals opgenomen in een ecologisch beleidsplan of vergelijkbaar plan. ontwikkeling flora en fauna, biodiversiteit, ecologische verbindingszones en passages, etc."@nl-NL ;
     skos:prefLabel "Onderdeel ecologische structuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3091 a p:Attributen_523Type ;
     rdfs:label "Onderdeel stedelijke groenstructuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:definition "Groen dat onderdeel is van de (hoofd)groenstructuur zoals opgenomen in een groenbeleidsplan of vergelijkbaar plan. Inrichting stedelijke ruimte, geleiding stedelijke ruimte, indeling stedelijke ruimte; vastgelegd in beleid zoals stedenbouwkundig plan."@nl-NL ;
     skos:prefLabel "Onderdeel stedelijke groenstructuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3092 a p:Attributen_523Type ;
     rdfs:label "Opvang van afstromend hemelwater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Opvang van afstromend hemelwater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3093 a p:Attributen_523Type ;
     rdfs:label "Overbruggen groot niveauverschil "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Overbruggen groot niveauverschil "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3094 a p:Attributen_523Type ;
     rdfs:label "Recreatie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:definition "Objecten t.b.v. recreatie-activiteiten. Hier worden niet bedoeld de specifieke sportterreinen."@nl-NL ;
     skos:prefLabel "Recreatie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3095 a p:Attributen_523Type ;
     rdfs:label "Speelaanleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Speelaanleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3096 a p:Attributen_523Type ;
     rdfs:label "Terreinafscheiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Terreinafscheiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3097 a p:Attributen_523Type ;
     rdfs:label "Toegang verschaffen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Toegang verschaffen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3098 a p:Attributen_523Type ;
     rdfs:label "Trapveld"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Trapveld"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3099 a p:Attributen_523Type ;
     rdfs:label "Veldafscheiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Veldafscheiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3100 a p:Attributen_523Type ;
     rdfs:label "Verfraaiing"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:altLabel "Sierwater"@nl-NL ;
     skos:definition "Objecten als verfraaiing en aankleding van de openbare ruimte. Kijkgroen, zichtgroen, esthetische functie; vastgelegd in beleid, zoals groenstructuurplan …."@nl-NL ;
     skos:prefLabel "Verfraaiing"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3101 a p:Attributen_523Type ;
     rdfs:label "Verversing"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Verversing"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3102 a p:Attributen_523Type ;
     rdfs:label "Verwijderen vervuiling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Verwijderen vervuiling"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3103 a p:Attributen_523Type ;
     rdfs:label "Waterafvoer door infiltratie (Wadi)"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:altLabel "Boezems."@nl-NL,
         "Overloopgebieden"@nl-NL,
         "Retentiezones"@nl-NL,
@@ -42650,24 +42706,29 @@ otlvwl:AttributenDomeinwaarden_3103 a p:Attributen_523Type ;
 
 otlvwl:AttributenDomeinwaarden_3104 a p:Attributen_523Type ;
     rdfs:label "Waterafvoer of –berging algemeen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Groen of verharding t t.b.v. waterafvoer of –berging, uitgezonderd de wadi. Deze functie is apart opgenomen, omdat deze gebieden een rol spelen in het rioleringsbeheer (stedelijk waterbeheer)."@nl-NL ;
     skos:prefLabel "Waterafvoer of –berging algemeen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3105 a p:Attributen_523Type ;
     rdfs:label "Windsingel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:definition "Windafscherming"@nl-NL ;
     skos:prefLabel "Windsingel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3106 a p:Attributen_523Type ;
     rdfs:label "Winterverblijf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Natuurwaarde"@nl-NL ;
     skos:prefLabel "Winterverblijf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3107 a p:Attributen_523Type ;
     rdfs:label "Klimboom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Klimboom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3108 a p:Attributen_523Type ;
     rdfs:label "Zichthoek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:altLabel "Uitzichtdriehoek"@nl-NL,
         "Verkeerskop"@nl-NL ;
     skos:definition "Strook water langs de weg die binnen een zichthoek valt en waarvoor gezorgd moet worden dat (water)planten het zicht niet belemmeren en die dus meerdere malen per jaar gemaaid wordt om ervoor te zorgen dat het verkeer voldoende overzicht houdt"@nl-NL ;
@@ -42675,180 +42736,217 @@ otlvwl:AttributenDomeinwaarden_3108 a p:Attributen_523Type ;
 
 otlvwl:AttributenDomeinwaarden_3109 a p:Attributen_523Type ;
     rdfs:label "Tijdelijke opslag afvalwater  "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Een open reservoir waarin het afvalwater tijdelijk wordt opgevangen "@nl-NL ;
     skos:prefLabel "Tijdelijke opslag afvalwater  "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3110 a p:Attributen_523Type ;
     rdfs:label "Transport van oppervlaktewater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:prefLabel "Transport van oppervlaktewater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3111 a p:Attributen_523Type ;
     rdfs:label "Vee weren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Vee weren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3112 a p:Attributen_523Type ;
     rdfs:label "Wild weren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Wild weren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3113 a p:Attributen_523Type ;
     rdfs:label "Speelondergrond"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:altLabel "Valdempende ondergrond"@nl-NL ;
     skos:definition "De ondergrond waarop een speeltoestel geplaatst is of duurzaam mee verbonden is. Dit kan een Verhardingsobject, een Groenobject of een Waterobject zijn. Bij deze ondergrond zijn in veel gevallen sprake van valdempende eigenschappen."@nl-NL ;
     skos:prefLabel "Speelondergrond"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3114 a p:Attributen_523Type ;
     rdfs:label "Sportondergrond"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:altLabel "Valdempende ondergrond"@nl-NL ;
     skos:definition "De ondergrond waarop een sporttoestel geplaatst is of duurzaam mee verbonden is. Dit kan een Verhardingsobject, een Groenobject of een Waterobject zijn. Bij deze ondergrond zijn in veel gevallen sprake van valdempende eigenschappen."@nl-NL ;
     skos:prefLabel "Sportondergrond"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3115 a p:Attributen_523Type ;
     rdfs:label "Open berging"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:altLabel "Groene berging"@nl-NL ;
     skos:definition "Een verlaging in het terrein waarin het afvalwater tijdelijk wordt opgevangen  "@nl-NL ;
     skos:prefLabel "Open berging"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3116 a p:Attributen_523Type ;
     rdfs:label "Gebied met aanlijnplicht honden"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:definition "Gebied waar honden aangelijnd moeten zijn."@nl-NL ;
     skos:prefLabel "Gebied met aanlijnplicht honden"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3117 a p:Attributen_523Type ;
     rdfs:label "Hondenuitlaatplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Hondenuitlaatplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3118 a p:Attributen_523Type ;
     rdfs:label "Opslag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Opslag van materialen"@nl-NL ;
     skos:prefLabel "Opslag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3119 a p:Attributen_523Type ;
     rdfs:label "Bebakeningsstrook"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Bebakeningsstrook: strook in begroeide berm, direct grenzend aan de verharding welke intensiever wordt onderhouden ten einde te zorgen voor een goede afvoer van water van het wegdek en een goed zicht op bebordingen en bewegwijzering."@nl-NL ;
     skos:prefLabel "Bebakeningsstrook"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3120 a p:Attributen_523Type ;
     rdfs:label "Berm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Een horizontale of licht hellende strook grond langs de aardebaan van een weg, spoordijk, sloot of dijk, bedoeld voor het onderhoud en de instandhouding van de weg."@nl-NL ;
     skos:prefLabel "Berm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3121 a p:Attributen_523Type ;
     rdfs:label "Buitenberm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Wegberm tussen de buitenste verkeersbaan en de naastgelegen weggrens. Bij de buitenberm is vrijwel altijd sprake van een onverharde berm of begroeide berm."@nl-NL ;
     skos:prefLabel "Buitenberm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3122 a p:Attributen_523Type ;
     rdfs:label "Middenberm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Wegberm tussen twee hoofdbanen met tegengestelde rijrichtingen"@nl-NL ;
     skos:prefLabel "Middenberm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3123 a p:Attributen_523Type ;
     rdfs:label "Middeneiland"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Middeneiland = Verkeerseiland dat tegengestelde stromen scheidt. Veelal gebruikt voor het middeneiland van een rotonde"@nl-NL ;
     skos:prefLabel "Middeneiland"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3124 a p:Attributen_523Type ;
     rdfs:label "Middengeleider"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Middengeleider = (verkeers)geleider = Langwerpig verkeerseiland dat tegengestelde verkeersstromen scheidt."@nl-NL ;
     skos:prefLabel "Middengeleider"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3125 a p:Attributen_523Type ;
     rdfs:label "Niet bereden dek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Niet bereden dek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3126 a p:Attributen_523Type ;
     rdfs:label "Tussenberm"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Wegberm tussen twee evenwijdig lopende verkeersbanen, niet beide zijnde hoofdbanen"@nl-NL ;
     skos:prefLabel "Tussenberm"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3127 a p:Attributen_523Type ;
     rdfs:label "Verkeerseiland"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Weggedeelte van beperkte omvang, uitgevoerd als een verhoging of wegmarkering, dat wordt omsloten door rijbanen of rijstroken en ten doel heeft verkeersstromen te scheiden."@nl-NL ;
     skos:prefLabel "Verkeerseiland"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3128 a p:Attributen_523Type ;
     rdfs:label "Verkeersgeleiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Verkeersgeleiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3129 a p:Attributen_523Type ;
     rdfs:label "Calamiteitendoorsteek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Doorsteek voor motorvoertuigen van hulpdiensten tussen twee rijbanen van de auto(snel)weg of tussen de auto(snel)weg en het onderliggende wegennet, uitsluitend te gebruiken om calamiteiten en incidenten tijdig te bereiken en af te voeren."@nl-NL ;
     skos:prefLabel "Calamiteitendoorsteek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3130 a p:Attributen_523Type ;
     rdfs:label "Doorsteek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:altLabel "Verkeersdoorsteek"@nl-NL ;
     skos:definition "Doorsteek tussen twee rijbanen van een auto(snel)weg of tussen de auto(snel)weg en het onderliggende wegennet om het verkeer gedurende een langere periode langs een wegvak te leiden waar werkzaamheden worden uitgevoerd in het kader van beheer en onderhoud"@nl-NL ;
     skos:prefLabel "Doorsteek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3131 a p:Attributen_523Type ;
     rdfs:label "Doorsteek op rotonde"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Doorsteek op rotonde"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3132 a p:Attributen_523Type ;
     rdfs:label "Keermogelijkheid"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Keermogelijkheid voor gemotoriseerd verkeer aan het einde van een doodlopende weg."@nl-NL ;
     skos:prefLabel "Keermogelijkheid"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3133 a p:Attributen_523Type ;
     rdfs:label "Rijstrookscheiding "@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Rijstrookscheiding "@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3134 a p:Attributen_523Type ;
     rdfs:label "Perceelscheiding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:altLabel "Kavelscheiding"@nl-NL,
         "Terreinafscheiding"@nl-NL ;
     skos:prefLabel "Perceelscheiding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3135 a p:Attributen_523Type ;
     rdfs:label "Anti-verblinding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:prefLabel "Anti-verblinding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3136 a p:Attributen_523Type ;
     rdfs:label "Fauna weren"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Afscherming"@nl-NL ;
     skos:definition "Wild weren, fauna/wild keren"@nl-NL ;
     skos:prefLabel "Fauna weren"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3137 a p:Attributen_523Type ;
     rdfs:label "Erosiebeperking"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Stedelijk water"@nl-NL ;
     skos:definition "Vastleggen grondlichamen"@nl-NL ;
     skos:prefLabel "Erosiebeperking"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3138 a p:Attributen_523Type ;
     rdfs:label "Educatie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Leren natuurwaarden, onderzoek, etc."@nl-NL ;
     skos:prefLabel "Educatie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3139 a p:Attributen_523Type ;
     rdfs:label "Evenemententerrein"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Evenemententerrein"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3140 a p:Attributen_523Type ;
     rdfs:label "Natuurlijk speelgroen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Natuurlijk speelgroen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3141 a p:Attributen_523Type ;
     rdfs:label "Verbetering luchtkwaliteit"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Milieu en klimaat"@nl-NL ;
     skos:definition "Fijnstofafvang, CO2 opname"@nl-NL ;
     skos:prefLabel "Verbetering luchtkwaliteit"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3142 a p:Attributen_523Type ;
     rdfs:label "Verbetering vochthuishouding"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Milieu en klimaat"@nl-NL ;
     skos:definition "Waterregulering, waterverdamping, water vasthouden"@nl-NL ;
     skos:prefLabel "Verbetering vochthuishouding"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3143 a p:Attributen_523Type ;
     rdfs:label "Verbetering koeling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Milieu en klimaat"@nl-NL ;
     skos:definition "Beschaduwing, koeling"@nl-NL ;
     skos:prefLabel "Verbetering koeling"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3144 a p:Attributen_523Type ;
     rdfs:label "Onderdeel landschappelijke groenstructuur"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:definition "Dijkbeplanting, beekbegeleiding, houtwal, singel, koeienbocht, erfbeplanting; vastgelegd in beleid zoals landschapsbeheerplan"@nl-NL ;
     skos:prefLabel "Onderdeel landschappelijke groenstructuur"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3145 a p:Attributen_523Type ;
     rdfs:label "Kunstuiting aangebracht op object"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Kunstuiting aangebracht op object"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3146 a p:Attributen_392Type ;
@@ -43960,281 +44058,338 @@ otlvwl:AttributenDomeinwaarden_3439 a p:Attributen_232Type ;
 
 otlvwl:AttributenDomeinwaarden_3440 a p:Attributen_233Type ;
     rdfs:label "Betonelement"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Geprepareerde elementen van beton (bijvoorbeeld stelconplaten)."@nl-NL ;
     skos:prefLabel "Betonelement"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3441 a p:Attributen_233Type ;
     rdfs:label "Betonstraatstenen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Verharding gemaakt van betonstraatstenen. Straatsteen die als goedkope vervanging van de gebakken klinkers is ontwikkeld."@nl-NL ;
     skos:prefLabel "Betonstraatstenen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3442 a p:Attributen_233Type ;
     rdfs:label "Bloemrijk gras"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gras- en kruidachtigen"@nl-NL ;
     skos:definition "Verschijningsvorm: grasterrein met gevarieerd grasmengsel met kruidachtige en bloemrijke vegetatie, met een maximale hoogte van 1000 mm, Functie: verschillende functies, bijvoorbeeld verfraaiing, Beheer: gericht op het in stand houden van de bloemrijke ve"@nl-NL ;
     skos:prefLabel "Bloemrijk gras"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3443 a p:Attributen_233Type ;
     rdfs:label "Blokhaag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Haag"@nl-NL ;
     skos:definition "Ook welgeschoren heestervak genoemd. Al of niet gemengde brede heesterbeplanting die aan de bovenkant en de zijkant(en) wordt geschoren. Verschil met geschoren haag is de grotere breedte en de lagere frequentie van scheren."@nl-NL ;
     skos:prefLabel "Blokhaag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3444 a p:Attributen_233Type ;
     rdfs:label "Bodembedekkende heesters"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bodembedekkers"@nl-NL ;
     skos:definition "Heesters met een maximale hoogte van 0,60 meter die door hun natuurlijke groeiwijze en hun plantafstand de bodem volledig bedekken."@nl-NL ;
     skos:prefLabel "Bodembedekkende heesters"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3445 a p:Attributen_233Type ;
     rdfs:label "Bodembedekkende rozen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bodembedekkers"@nl-NL ;
     skos:definition "Bodembedekkende rozen met een maximale hoogte van 0,60 meter die door hun natuurlijke groeiwijze en hun plantafstand de bodem volledig bedekken."@nl-NL ;
     skos:prefLabel "Bodembedekkende rozen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3447 a p:Attributen_233Type ;
     rdfs:label "Bodembedekkende vaste planten"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Planten"@nl-NL ;
     skos:definition "Vaste planten die door hun natuurlijke groeiwijze en plantafstand de bodem volledig bedekken. Hebben een horizontale groeiwijze, kruipen over de grond  en/of maken ondergrondse uitlopers. Deze beplanting heeft een zodenvormend karakter."@nl-NL ;
     skos:prefLabel "Bodembedekkende vaste planten"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3448 a p:Attributen_233Type ;
     rdfs:label "Bomen en struikvormers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bosplantsoen"@nl-NL ;
     skos:definition "Opgaande beplanting van houtige gewassen met struikvormers en boomvormers, die extensief wordt beheerd."@nl-NL ;
     skos:prefLabel "Bomen en struikvormers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3449 a p:Attributen_233Type ;
     rdfs:label "Boomteelt"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Grond in gebruik voor het kweken van jonge siergewassen, bomen enz. ten behoeve van een later gebruik elders. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Boomteelt"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3450 a p:Attributen_233Type ;
     rdfs:label "Boomvormers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bosplantsoen"@nl-NL ;
     skos:definition "Opgaande beplanting van houtige gewassen met boomvormers, die extensief wordt beheerd."@nl-NL ;
     skos:prefLabel "Boomvormers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3451 a p:Attributen_233Type ;
     rdfs:label "Botanische rozen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Heesters"@nl-NL ;
     skos:definition "Type gedetailleerd van groenobject heesters. Botanische rozen zijn wilde, niet gekruiste of geënte rozensoorten. Veelal enkelvoudige bloemen, voorbeeld Rosa canina."@nl-NL ;
     skos:prefLabel "Botanische rozen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3452 a p:Attributen_233Type ;
     rdfs:label "Bouwland"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:altLabel "Tuinbouwgrond"@nl-NL ;
     skos:definition "Terreindeel in gebruik als akker, met gewassen die in een teelt roulatieschema zijn opgenomen. Kan tijdelijk zonder gewas zijn of braak liggen. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Bouwland"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3453 a p:Attributen_233Type ;
     rdfs:label "Cultuurrozen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Struikrozen"@nl-NL ;
     skos:definition "Groenobject, type gedetailleerd van struikrozen: eenvormige rozenvakken bestaande uit theehybriden of polyantharozen. Cultuurrozen zijn houtige gewassen van de rozensoorten die struikvormend zijn en die intensief onderhouden worden. De snoei is gericht op de bloei en vorm van de individu."@nl-NL ;
     skos:prefLabel "Cultuurrozen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3454 a p:Attributen_233Type ;
     rdfs:label "Dichte deklagen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Asfaltverharding"@nl-NL ;
     skos:prefLabel "Dichte deklagen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3455 a p:Attributen_233Type ;
     rdfs:label "Duin"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Verhoging of heuvel van zand of fijne losse aarde en verpulverd gesteente opgeworpen door wind of door stromend water. http://definities.geostandaarden.nl"@nl-NL ;
     skos:prefLabel "Duin"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3456 a p:Attributen_233Type ;
     rdfs:label "Fijne sierheester"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Heesters"@nl-NL ;
     skos:definition "Plantenbak, ingeplant met fijne sierheesters. Opgaande beplanting van houtige gewassen die struikvormend en die zich vanaf de grond vertakken tot een lengte van ongeveer 160 cm."@nl-NL ;
     skos:prefLabel "Fijne sierheester"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3457 a p:Attributen_233Type ;
     rdfs:label "Fruitteelt"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel begroeid met fruitbomen in de vorm van hoogstam en laagstamboomgaard, druiven of kleinfruit. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Fruitteelt"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3458 a p:Attributen_233Type ;
     rdfs:label "Gazon"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gras- en kruidachtigen"@nl-NL ;
     skos:definition "Verschijningsvorm: grasterrein met relatief uniform grasmengsel zonder onkruid *), met een maximale hoogte van 70 mm, Functie: verfraaiing, onderdeel van de groenstructuur zoals vastgelegd in beleid, Beheer: Wordt veelal intensief gemaaid"@nl-NL ;
     skos:prefLabel "Gazon"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3459 a p:Attributen_233Type ;
     rdfs:label "Gemengd bos"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel begroeid met een dusdanige aantal naald- en loofbomen dat deze een min of meer gesloten geheel vormen of, na volgroeiing van de bomen, zullen vormen. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Gemengd bos"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3460 a p:Attributen_233Type ;
     rdfs:label "Gewapend beton"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Betonverharding"@nl-NL ;
     skos:prefLabel "Gewapend beton"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3461 a p:Attributen_233Type ;
     rdfs:label "Glas"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Verharding bestaand uit glaselementen."@nl-NL ;
     skos:prefLabel "Glas"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3462 a p:Attributen_233Type ;
     rdfs:label "Graft"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Steile rand met bos of struikgewas op hellingen voornamelijk gelegen in agrarische terreinen of natuurgebieden. Een knik of mini-terras op een helling, meestal begroeid met struikgewassen. Graften komen voor op ontboste hellingen, die nu als akker of weil"@nl-NL ;
     skos:prefLabel "Graft"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3463 a p:Attributen_233Type ;
     rdfs:label "Grasland agrarisch"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terrein met grasvegetatie, primair in gebruik voor agrarische doeleinden."@nl-NL ;
     skos:prefLabel "Grasland agrarisch"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3464 a p:Attributen_233Type ;
     rdfs:label "Grasland overig"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel met een vegetatie bestaande uit grassen en of grasachtigen, en met de in graslanden voorkomende kruiden, dat niet in gebruik is voor agrarische doeleinden. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Grasland overig"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3465 a p:Attributen_233Type ;
     rdfs:label "Grove sierheester"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Heesters"@nl-NL ;
     skos:definition "Type gedetailleerd van groenobject heesters. Opgaande beplanting van houtige gewassen die struikvormend en die zich vanaf de grond vertakken tot een lengte van ongeveer 160 cm."@nl-NL ;
     skos:prefLabel "Grove sierheester"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3466 a p:Attributen_233Type ;
     rdfs:label "Heesterrozen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Heesters"@nl-NL ;
     skos:definition "Type gedetailleerd van groenobject heesters. Opgaande, hoog en breed uitgroeiende rozen, niet zijnde cultuurrozen of botanische rozen."@nl-NL ;
     skos:prefLabel "Heesterrozen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3467 a p:Attributen_233Type ;
     rdfs:label "Heide"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel overwegend begroeid met heide en heideachtige vegetaties. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Heide"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3468 a p:Attributen_233Type ;
     rdfs:label "Hout"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Verharding bestaand uit houten elementen."@nl-NL ;
     skos:prefLabel "Hout"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3469 a p:Attributen_233Type ;
     rdfs:label "Houtwal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:prefLabel "Houtwal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3470 a p:Attributen_233Type ;
     rdfs:label "Kunstgras"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kunststofverharding"@nl-NL ;
     skos:definition "Kunstgras is een als gras aanziend of aandoend, kunstmatig product van uiteenlopend, synthetisch materiaal."@nl-NL ;
     skos:prefLabel "Kunstgras"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3471 a p:Attributen_233Type ;
     rdfs:label "Kunststof vloer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Kunststofverharding"@nl-NL ;
     skos:prefLabel "Kunststof vloer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3472 a p:Attributen_233Type ;
     rdfs:label "Lijnvormige haag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Haag"@nl-NL ;
     skos:definition "Eén of maximaal twee rijen heesters al dan niet van dezelfde soort die samen een lijnvormig element (haag) vormen."@nl-NL ;
     skos:prefLabel "Lijnvormige haag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3473 a p:Attributen_233Type ;
     rdfs:label "Loofbos"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel begroeid met een dusdanige aantal loofbomen dat deze een min of meer gesloten geheel vormen of, na volgroeiing van de bomen, zullen vormen. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Loofbos"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3474 a p:Attributen_233Type ;
     rdfs:label "Los"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Losgestort materiaal"@nl-NL ;
     skos:prefLabel "Los"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3475 a p:Attributen_233Type ;
     rdfs:label "Metaal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Verharding bestaand uit metalen elementen."@nl-NL ;
     skos:prefLabel "Metaal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3476 a p:Attributen_233Type ;
     rdfs:label "Naaldbos"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Terreindeel begroeid met een dusdanige aantal naaldbomen dat deze een min of meer gesloten geheel vormen of, na volgroeiing van de bomen, zullen vormen. (bron: definities.geostandaarden.nl)"@nl-NL ;
     skos:prefLabel "Naaldbos"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3477 a p:Attributen_233Type ;
     rdfs:label "Natuursteen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Type gedetailleerd van verhardingsobject, elementenverharding, verharding bestaande uit elementen van natuursteen."@nl-NL ;
     skos:prefLabel "Natuursteen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3478 a p:Attributen_233Type ;
     rdfs:label "Ongewapend nietverdeuveld beton"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Betonverharding"@nl-NL ;
     skos:definition "Ongewapend nietverdeuveld beton is de formele benaming. In de CROW Systematiek Wegbeheer wordt dit ‘onverdeuveld’ genoemd."@nl-NL ;
     skos:prefLabel "Ongewapend nietverdeuveld beton"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3479 a p:Attributen_233Type ;
     rdfs:label "Ongewapend verdeuveld beton"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Betonverharding"@nl-NL ;
     skos:definition "Ongewapend verdeuveld beton is de formele benaming. In de CROW Systematiek Wegbeheer wordt dit ‘verdeuveld’ genoemd."@nl-NL ;
     skos:prefLabel "Ongewapend verdeuveld beton"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3480 a p:Attributen_233Type ;
     rdfs:label "Open grond"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Onverhard"@nl-NL ;
     skos:definition "Type gedetailleerd van boomspiegel, onverhard waarvan het oppervlak bestaat uit open grond, niet zijnde zand of zwarte grond."@nl-NL ;
     skos:prefLabel "Open grond"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3481 a p:Attributen_233Type ;
     rdfs:label "Oppervlakbehandelingen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Asfaltverharding"@nl-NL ;
     skos:definition "Verharding bestaand uit op het wegoppervlak aangebrachte laag bindmiddel die wordt afgestrooid met steenslag of fijn grind."@nl-NL ;
     skos:prefLabel "Oppervlakbehandelingen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3482 a p:Attributen_233Type ;
     rdfs:label "Recreatief grasveld"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gras- en kruidachtigen"@nl-NL ;
     skos:prefLabel "Recreatief grasveld"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3483 a p:Attributen_233Type ;
     rdfs:label "Ruigte"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gras- en kruidachtigen"@nl-NL ;
     skos:definition "Verschijningsvorm: gevarieerd grasmengsel met beperkt aantal soorten van hoog opgaande, meerjarige (overblijvende) algemeen voorkomende kruidachtige planten zoals distels, gewone berenklauw, brandnetels, bramen en diverse grassoorten; Functie: verschillende functies, bijvoorbeeld onderdeel ecologische structuur, begrazingsgebied. Ook:  Beheer: zeer extensief, veelal ecologisch."@nl-NL ;
     skos:prefLabel "Ruigte"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3484 a p:Attributen_233Type ;
     rdfs:label "Ruw gras"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gras- en kruidachtigen"@nl-NL ;
     skos:definition "Verschijningsvorm: grasterrein met gevarieerd grasmengsel met kruidachtigen, met een min of meer ruig karakter, met een maximale hoogte van 1000 mm Functie/doel: verschillende functies, Beheer: extensief, de maaifrequentie ligt veelal tussen de 1-2 en 6x"@nl-NL ;
     skos:prefLabel "Ruw gras"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3485 a p:Attributen_233Type ;
     rdfs:label "Samenhangend"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Halfverharding"@nl-NL ;
     skos:definition "Type gedetailleerd van verhardingsobject, halfverharding, waarvan het oppervlak bestaat uit samenhangend materiaal."@nl-NL ;
     skos:prefLabel "Samenhangend"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3486 a p:Attributen_233Type ;
     rdfs:label "Sierbestrating"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Bestrating uitgevoerd in verschillende bestratingsverbanden en -materialen, of in een sierverband, die vooral wordt toegepast uit esthetische overwegingen."@nl-NL ;
     skos:prefLabel "Sierbestrating"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3487 a p:Attributen_233Type ;
     rdfs:label "Steilwand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Helling tussen twee vlakke terreingedeelten."@nl-NL ;
     skos:prefLabel "Steilwand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3488 a p:Attributen_233Type ;
     rdfs:label "Straatbaksteen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Straatbaksteen is de formele benaming uit NEN-EN1344. In de CROW Systematiek Wegbeheer wordt dit ‘gebakken klinkers’ genoemd."@nl-NL ;
     skos:prefLabel "Straatbaksteen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3489 a p:Attributen_233Type ;
     rdfs:label "Struiken"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Terreindeel"@nl-NL ;
     skos:definition "Houtachtige, overblijvende planten gekenmerkt door verschillende vertakkingen dicht bij de wortel en afwezigheid van opvallende stammen."@nl-NL ;
     skos:prefLabel "Struiken"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3490 a p:Attributen_233Type ;
     rdfs:label "Struikvormers"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bosplantsoen"@nl-NL ;
     skos:definition "Opgaande beplanting van houtige gewassen met struikvormers, die extensief wordt beheerd."@nl-NL ;
     skos:prefLabel "Struikvormers"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3491 a p:Attributen_233Type ;
     rdfs:label "Tegels"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Elementenverharding"@nl-NL ;
     skos:definition "Bestrating van tegels, een platte vaak vierkante betonnen steen."@nl-NL ;
     skos:prefLabel "Tegels"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3492 a p:Attributen_233Type ;
     rdfs:label "Vaste planten"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Planten"@nl-NL ;
     skos:definition "Type gedetailleerd van groenobject planten. Planten die langer dan twee jaar leven, in het voorjaar uitlopen, in de regel ’s zomers bloeien, in de herfst afsterven terwijl wortels overblijven om weer in het voorjaar uit te lopen. Kruidachtige (niet houtige), overblijvende zaadplant."@nl-NL ;
     skos:prefLabel "Vaste planten"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3493 a p:Attributen_233Type ;
     rdfs:label "Vormhaag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Haag"@nl-NL ;
     skos:definition "Al of niet gemengde heesterbeplanting die aan de bovenkant en de zijkanten wordt geschoren in meestal ronde of vloeiende vormen, die alof  niet iets voorstellen."@nl-NL ;
     skos:prefLabel "Vormhaag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3494 a p:Attributen_233Type ;
     rdfs:label "Wisselperken"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Planten"@nl-NL ;
     skos:definition "Type gedetailleerd van groenobject planten, beplantingsvak met daarin één- of tweejarigen, bollen en/of knollen."@nl-NL ;
     skos:prefLabel "Wisselperken"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3495 a p:Attributen_233Type ;
     rdfs:label "Zand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Onverhard"@nl-NL ;
     skos:definition "Onverhard met als deklaag zand."@nl-NL ;
     skos:prefLabel "Zand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3496 a p:Attributen_233Type ;
     rdfs:label "Zoab en open deklagen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Asfaltverharding"@nl-NL ;
     skos:prefLabel "Zoab en open deklagen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3497 a p:Attributen_233Type ;
     rdfs:label "Zwarte grond"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Onverhard"@nl-NL ;
     skos:definition "Type gedetailleerd van boomspiegel, waarvan het oppervlak bestaat uit zwarte grond."@nl-NL ;
     skos:prefLabel "Zwarte grond"@nl-NL .
 
@@ -44280,240 +44435,292 @@ otlvwl:AttributenDomeinwaarden_3507 a p:Attributen_754Type ;
 
 otlvwl:AttributenDomeinwaarden_3542 a p:Attributen_818Type ;
     rdfs:label "Fietspad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fietspad"@nl-NL ;
     skos:definition "Weg, verkeersbaan of rijbaan, bestemd voor fietsers, snorfietsers en eventueel bromfietsers. Verplicht fietspad: fietspad, aangeduid door bord G11 (RVV 1990), en toegestaan voor fietsers en snorfietsers. • Onverplicht fietspad: fietspad, aangeduid door bo"@nl-NL ;
     skos:prefLabel "Fietspad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3543 a p:Attributen_818Type ;
     rdfs:label "Onverplicht fietspad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fietspad"@nl-NL ;
     skos:prefLabel "Onverplicht fietspad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3544 a p:Attributen_818Type ;
     rdfs:label "Utilitair fietspad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fietspad"@nl-NL ;
     skos:prefLabel "Utilitair fietspad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3545 a p:Attributen_818Type ;
     rdfs:label "Verplicht fiets-/bromfietspad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fietspad"@nl-NL ;
     skos:prefLabel "Verplicht fiets-/bromfietspad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3546 a p:Attributen_818Type ;
     rdfs:label "Verplicht fietspad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Fietspad"@nl-NL ;
     skos:prefLabel "Verplicht fietspad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3547 a p:Attributen_818Type ;
     rdfs:label "Baan voor vliegverkeer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:definition "Wegdeel uitsluitend bedoeld voor vliegverkeer"@nl-NL ;
     skos:prefLabel "Baan voor vliegverkeer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3548 a p:Attributen_818Type ;
     rdfs:label "Busbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:prefLabel "Busbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3549 a p:Attributen_818Type ;
     rdfs:label "Busstrook"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:definition "Rijstrook aangeduid door de tekst BUS op het verhardingsoppervlak en bestemd voor autobussen, ten behoeve van het openbaar vervoer en andere erop toegelaten motorvoertuigen."@nl-NL ;
     skos:prefLabel "Busstrook"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3550 a p:Attributen_818Type ;
     rdfs:label "Dynamische busbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:prefLabel "Dynamische busbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3551 a p:Attributen_818Type ;
     rdfs:label "Metrobaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:prefLabel "Metrobaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3552 a p:Attributen_818Type ;
     rdfs:label "OV-baan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:definition "Wegdeel dat uitsluitend is bestemd en gemarkeerd voor openbaar vervoer en afgescheiden is van de andere wegdelen niet uitsluitend door markering."@nl-NL ;
     skos:prefLabel "OV-baan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3553 a p:Attributen_818Type ;
     rdfs:label "Spoorbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:definition "Gebaand gedeelte voor het verkeer over rails."@nl-NL ;
     skos:prefLabel "Spoorbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3554 a p:Attributen_818Type ;
     rdfs:label "Trambaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-baan"@nl-NL ;
     skos:definition "Spoorweg die in hoofdzaak is bestemd om door trams te worden bereden."@nl-NL ;
     skos:prefLabel "Trambaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3555 a p:Attributen_818Type ;
     rdfs:label "Busperron"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Busperron"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3556 a p:Attributen_818Type ;
     rdfs:label "Bussluis"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Bussluis"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3557 a p:Attributen_818Type ;
     rdfs:label "Halte eiland"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Halte eiland"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3558 a p:Attributen_818Type ;
     rdfs:label "Halte voetpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Halte voetpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3559 a p:Attributen_818Type ;
     rdfs:label "Haltekom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:definition "Naast de rijbaan gelegen verharde strook van beperkte lengte, waar voertuigen van het openbaar vervoer mogen stoppen om passagiers te laten in- en uitstappen."@nl-NL ;
     skos:prefLabel "Haltekom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3560 a p:Attributen_818Type ;
     rdfs:label "Haltekom informatiehalte"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Haltekom informatiehalte"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3561 a p:Attributen_818Type ;
     rdfs:label "Haltekom OV"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:prefLabel "Haltekom OV"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3562 a p:Attributen_818Type ;
     rdfs:label "Tramheuvel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "OV-voorziening"@nl-NL ;
     skos:definition "Bij de markering voor tramheuvels wordt verschil gemaakt tussen tramheuvels die aan een zijde en aan beide zijden gepasseerd mogen worden. (CROW publicatie ‘Richtlijnen voor de bebakening en markering van wegen 2015’). Het onderscheid blijkt uit de toe t"@nl-NL ;
     skos:prefLabel "Tramheuvel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3563 a p:Attributen_818Type ;
     rdfs:label "Gehandicaptenparkeerplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:prefLabel "Gehandicaptenparkeerplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3564 a p:Attributen_818Type ;
     rdfs:label "Parkeerstrook"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:definition "Verharde strook bestemd voor het parkeren van voertuigen."@nl-NL ;
     skos:prefLabel "Parkeerstrook"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3565 a p:Attributen_818Type ;
     rdfs:label "Parkeerterrein"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:definition "Niet tot de weg behorend terrein bestemd tot het parkeren van voertuigen."@nl-NL ;
     skos:prefLabel "Parkeerterrein"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3566 a p:Attributen_818Type ;
     rdfs:label "Parkeervak"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:definition "1. Tot de weg behorende, maar niet onmiddellijk aan de hoofdrijbaan grenzende parkeergelegenheid, met inbegrip van de bijbehorende verharde en onverharde banen. 2. Ruimte waar één voertuig kan worden geparkeerd."@nl-NL ;
     skos:prefLabel "Parkeervak"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3567 a p:Attributen_818Type ;
     rdfs:label "Parkeervak fietsen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:prefLabel "Parkeervak fietsen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3568 a p:Attributen_818Type ;
     rdfs:label "Parkeervak scooters"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:prefLabel "Parkeervak scooters"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3569 a p:Attributen_818Type ;
     rdfs:label "Parkeervoorziening"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:altLabel "Parkeervlak"@nl-NL ;
     skos:definition "Ruimte, al dan niet gemarkeerd, bestemd voor het parkeren van een personenauto"@nl-NL ;
     skos:prefLabel "Parkeervoorziening"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3570 a p:Attributen_818Type ;
     rdfs:label "Parkeren op rijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:prefLabel "Parkeren op rijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3571 a p:Attributen_818Type ;
     rdfs:label "Woonerfparkeervak"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:definition "Parkeervak in een woonerf, kenbaar aan een ingestrate P of aangeduid met een bord P."@nl-NL ;
     skos:prefLabel "Woonerfparkeervak"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3572 a p:Attributen_818Type ;
     rdfs:label "Achterpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:prefLabel "Achterpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3573 a p:Attributen_818Type ;
     rdfs:label "Recreatief voetpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:altLabel "Park voetpad"@nl-NL ;
     skos:prefLabel "Recreatief voetpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3574 a p:Attributen_818Type ;
     rdfs:label "Utilitair voetpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:prefLabel "Utilitair voetpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3575 a p:Attributen_818Type ;
     rdfs:label "Voetgangersgebied"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:definition "Wegdeel alleen voor het gebruik door voetgangers, waarbij het door voetgangers te gebruiken gebied de volle breedte van de weg beslaat en het gebied een nadrukkelijk openbaar karakter heeft."@nl-NL ;
     skos:prefLabel "Voetgangersgebied"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3576 a p:Attributen_818Type ;
     rdfs:label "Voetpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:definition "Weg of deel van verkeersbaan uitsluitend bestemd voor voetgangers."@nl-NL ;
     skos:prefLabel "Voetpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3577 a p:Attributen_818Type ;
     rdfs:label "Voetpad op trap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:definition "Voetpad op verkeersinfrastructurele voorziening bestaande uit een constructie van treden, waarop men een hoger of lager gelegen plaats kan bereiken"@nl-NL ;
     skos:prefLabel "Voetpad op trap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3578 a p:Attributen_818Type ;
     rdfs:label "Winkelerf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:prefLabel "Winkelerf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3579 a p:Attributen_818Type ;
     rdfs:label "Woonerf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:definition "Wegdeel waar de verblijfsfunctie (lopen, spelen, ontmoeten etc.) prioriteit heeft boven de verkeersfunctie, daartoe aangeduid met de “verplichte” verkeersborden."@nl-NL ;
     skos:prefLabel "Woonerf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3580 a p:Attributen_818Type ;
     rdfs:label "Woonstraat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Voetpad"@nl-NL ;
     skos:prefLabel "Woonstraat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3581 a p:Attributen_818Type ;
     rdfs:label "Verbindingsweg - afrit"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Een afrit is een type verbindingsweg met beperkte lengte waarop bestuurders snelheid kunnen minderen om de"@nl-NL ;
     skos:prefLabel "Verbindingsweg - afrit"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3583 a p:Attributen_818Type ;
     rdfs:label "Kraanbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:prefLabel "Kraanbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3584 a p:Attributen_818Type ;
     rdfs:label "Loswal"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Verharde oeverstrook aan de vaarweg, geschikt en bestemd voor het lossen van schepen. RWS"@nl-NL ;
     skos:prefLabel "Loswal"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3585 a p:Attributen_818Type ;
     rdfs:label "Overweg"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Een gelijkvloerse kruising van een wegdeel en een wegdeel type ov-baan met spoor type trein of sneltram. Gelijkvloerse kruising van een weg met een spoorweg."@nl-NL ;
     skos:prefLabel "Overweg"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3586 a p:Attributen_818Type ;
     rdfs:label "Parallelweg"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Bij een autosnelweg, autoweg, lokale weg en een regionale weg."@nl-NL ;
     skos:prefLabel "Parallelweg"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3587 a p:Attributen_818Type ;
     rdfs:label "Rijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Aaneengesloten deel van de verkeersbaan dat bestemd is voor rijdend verkeer en dat begrensd wordt door twee opeenvolgende begrenzingen in de vorm van kantstreep, overgang verharding of overgang verhard/onverhard. Toelichting: Op één verkeersbaan kunnen di"@nl-NL ;
     skos:prefLabel "Rijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3588 a p:Attributen_818Type ;
     rdfs:label "Ruiterpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Weg of deel van verkeersbaan, uitsluitend bestemd voor bereden paarden."@nl-NL ;
     skos:prefLabel "Ruiterpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3589 a p:Attributen_818Type ;
     rdfs:label "Schouwpad"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:prefLabel "Schouwpad"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3590 a p:Attributen_818Type ;
     rdfs:label "Verbindingsweg - toerit"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:altLabel "Oprit"@nl-NL ;
     skos:definition "Een toerit is een type verbindingsweg; Verbindingsweg heeft 2 typen: Afrit en Toerit"@nl-NL ;
     skos:prefLabel "Verbindingsweg - toerit"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3591 a p:Attributen_818Type ;
     rdfs:label "Verbindingsweg"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Bij een autosnelweg, autoweg, lokale weg en een regionale weg."@nl-NL ;
     skos:prefLabel "Verbindingsweg"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3592 a p:Attributen_818Type ;
     rdfs:label "Verkeersdrempel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:definition "Verhoging in de rijbaan, bedoeld om het gemotoriseerde verkeer met een lage(re) snelheid te laten rijden. Toelichting: Sinds ongeveer 2000 beschikt de Nederlandse wegenbouw over technische mogelijkheden om drempels uit te voeren in een doorlopende asfaltv"@nl-NL ;
     skos:prefLabel "Verkeersdrempel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3593 a p:Attributen_818Type ;
     rdfs:label "Parkeren op rijbaan: langsparkeren op rijbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Parkeervoorziening"@nl-NL ;
     skos:definition "Parkeren evenwijdig aan de as van de rijbaan."@nl-NL ;
     skos:prefLabel "Parkeren op rijbaan: langsparkeren op rijbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3594 a p:Attributen_818Type ;
     rdfs:label "Inrit"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:altLabel "Erfaansluiting"@nl-NL ;
     skos:definition "Aansluiting van bebouwing, erven, kavels en percelen op de openbare weg."@nl-NL ;
     skos:prefLabel "Inrit"@nl-NL .
@@ -44740,56 +44947,67 @@ otlvwl:AttributenDomeinwaarden_3762 a p:Attributen_778Type ;
 
 otlvwl:AttributenDomeinwaarden_3763 a p:Attributen_779Type ;
     rdfs:label "Regionale stroomweg: type I - 1x2"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Regionale stroomweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Regionale stroomweg: type I - 1x2"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3764 a p:Attributen_779Type ;
     rdfs:label "Regionale stroomweg: type I - 2x1"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Regionale stroomweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Regionale stroomweg: type I - 2x1"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3765 a p:Attributen_779Type ;
     rdfs:label "Gebiedsontsluitingsweg: type I"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gebiedsontsluitingsweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Gebiedsontsluitingsweg: type I"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3766 a p:Attributen_779Type ;
     rdfs:label "Gebiedsontsluitingsweg: type II"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gebiedsontsluitingsweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Gebiedsontsluitingsweg: type II"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3767 a p:Attributen_779Type ;
     rdfs:label "Gebiedsontsluitingsweg: 50 km/h"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gebiedsontsluitingsweg"@nl-NL ;
     skos:definition "Altijd bibeko (binnen de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Gebiedsontsluitingsweg: 50 km/h"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3768 a p:Attributen_779Type ;
     rdfs:label "Gebiedsontsluitingsweg: 70 km/h"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Gebiedsontsluitingsweg"@nl-NL ;
     skos:definition "Altijd bibeko (binnen de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Gebiedsontsluitingsweg: 70 km/h"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3769 a p:Attributen_779Type ;
     rdfs:label "Erftoegangsweg: type 1"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Erftoegangsweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Erftoegangsweg: type 1"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3770 a p:Attributen_779Type ;
     rdfs:label "Erftoegangsweg: type 2"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Erftoegangsweg"@nl-NL ;
     skos:definition "Altijd bubeko (buiten de bebouwde kom) altijd 60 km/h"@nl-NL ;
     skos:prefLabel "Erftoegangsweg: type 2"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3771 a p:Attributen_779Type ;
     rdfs:label "Erftoegangsweg: 30 km/h"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Erftoegangsweg"@nl-NL ;
     skos:definition "Altijd bibeko (binnen de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Erftoegangsweg: 30 km/h"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3772 a p:Attributen_779Type ;
     rdfs:label "Erftoegangsweg: erf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Erftoegangsweg"@nl-NL ;
     skos:definition "Altijd bibeko (binnen de bebouwde kom)"@nl-NL ;
     skos:prefLabel "Erftoegangsweg: erf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_3773 a p:Attributen_779Type ;
     rdfs:label "Erftoegangsweg: fietsstraat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Erftoegangsweg"@nl-NL ;
     skos:definition "Zowel binnen als buiten de bebouwde kom."@nl-NL ;
     skos:prefLabel "Erftoegangsweg: fietsstraat"@nl-NL .
 
@@ -45161,6 +45379,7 @@ otlvwl:AttributenDomeinwaarden_5 a p:Attributen_274Type ;
 
 otlvwl:AttributenDomeinwaarden_50 a p:Attributen_331Type ;
     rdfs:label "Rijksvastgoedbedrijf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ministerie van Infrastructuur en Waterstaat"@nl-NL ;
     skos:prefLabel "Rijksvastgoedbedrijf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_500 a p:Attributen_197Type ;
@@ -45202,10 +45421,12 @@ otlvwl:AttributenDomeinwaarden_508 a p:Attributen_328Type ;
 
 otlvwl:AttributenDomeinwaarden_5082 a p:Attributen_523Type ;
     rdfs:label "Erf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Erf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_5083 a p:Attributen_523Type ;
     rdfs:label "Onbegroeid terreindeel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "In het IMBOR is er voor gekozen ‘onbegroeid terreindeel’ op te nemen als gebruiksfunctie. Dit is volgens de uitgangspunten van de scheiding tussen ‘vorm’ en ‘functie’ een oneigenlijke toepassing, omdat in de BGT/IMGeo ‘onbegroeid terreindeel’ de verschijningsvorm van een object aanduidt. Om de uitwisseling mogelijk te maken tussen IMBOR en BGT is deze oplossing gekozen, dit was niet anders mogelijk binnen de huidige opzet van de BGT en het IMBOR. Het gaat daarbij om ‘restgebieden’ binnen de BGT, die niet op een andere manier beschreven konden worden. In de praktijk wordt dit gebruikt voor ‘erf’, voor ‘kunstgrassportveld’, en vergelijkbaar. Dit soort vlakken, die in de BGT als ‘onbegroeid terreindeel’ zijn opgenomen, kunnen met deze oplossing worden uitgewisseld met IMBOR-objecttypen."@nl-NL ;
     skos:prefLabel "Onbegroeid terreindeel"@nl-NL .
 
@@ -45223,6 +45444,7 @@ otlvwl:AttributenDomeinwaarden_5088 a p:Attributen_708Type ;
 
 otlvwl:AttributenDomeinwaarden_5089 a p:Attributen_207Type ;
     rdfs:label "Herdenkingsboom"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Bijzondere boom"@nl-NL ;
     skos:prefLabel "Herdenkingsboom"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_509 a p:Attributen_328Type ;
@@ -45263,6 +45485,7 @@ otlvwl:AttributenDomeinwaarden_5099 a p:Attributen_319Type ;
 
 otlvwl:AttributenDomeinwaarden_51 a p:Attributen_331Type ;
     rdfs:label "Rijkswaterstaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ministerie van Infrastructuur en Waterstaat"@nl-NL ;
     skos:prefLabel "Rijkswaterstaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_510 a p:Attributen_328Type ;
@@ -45617,6 +45840,7 @@ otlvwl:AttributenDomeinwaarden_5198 a p:Attributen_586Type ;
 
 otlvwl:AttributenDomeinwaarden_52 a p:Attributen_331Type ;
     rdfs:label "Natuurorganisatie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Natuurorganisatie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_520 a p:Attributen_575Type ;
@@ -45706,6 +45930,7 @@ otlvwl:AttributenDomeinwaarden_5269 a p:Attributen_224Type ;
 
 otlvwl:AttributenDomeinwaarden_5270 a p:Attributen_523Type ;
     rdfs:label "Verkeersfunctie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Algemene gebruiksfunctie voor objecttypes met een wegfunctie"@nl-NL ;
     skos:prefLabel "Verkeersfunctie"@nl-NL .
 
@@ -46095,6 +46320,7 @@ otlvwl:AttributenDomeinwaarden_5391 a p:Attributen_853Type ;
 
 otlvwl:AttributenDomeinwaarden_54 a p:Attributen_331Type ;
     rdfs:label "Netbeheerder"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Netbeheerder"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_5406 a p:Attributen_833Type ;
@@ -46165,6 +46391,7 @@ otlvwl:AttributenDomeinwaarden_549 a p:Attributen_656Type ;
 
 otlvwl:AttributenDomeinwaarden_55 a p:Attributen_331Type ;
     rdfs:label "Woningcorporatie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Woningcorporatie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_550 a p:Attributen_656Type ;
@@ -46202,6 +46429,7 @@ otlvwl:AttributenDomeinwaarden_559 a p:Attributen_668Type ;
 
 otlvwl:AttributenDomeinwaarden_56 a p:Attributen_331Type ;
     rdfs:label "Havenschap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Havenschap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_560 a p:Attributen_668Type ;
@@ -46275,6 +46503,7 @@ otlvwl:AttributenDomeinwaarden_5695 a p:Attributen_834Type ;
 
 otlvwl:AttributenDomeinwaarden_57 a p:Attributen_331Type ;
     rdfs:label "Recreatieschap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Recreatieschap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_570 a p:Attributen_216Type ;
@@ -46287,6 +46516,7 @@ otlvwl:AttributenDomeinwaarden_571 a p:Attributen_216Type ;
 
 otlvwl:AttributenDomeinwaarden_58 a p:Attributen_331Type ;
     rdfs:label "Stichting"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Stichting"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_582 a p:Attributen_218Type ;
@@ -46304,6 +46534,7 @@ otlvwl:AttributenDomeinwaarden_587 a p:Attributen_218Type ;
 
 otlvwl:AttributenDomeinwaarden_59 a p:Attributen_331Type ;
     rdfs:label "Landgoed"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Landgoed"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_590 a p:Attributen_218Type ;
@@ -46390,30 +46621,37 @@ otlvwl:AttributenDomeinwaarden_610 a p:Attributen_226Type ;
 
 otlvwl:AttributenDomeinwaarden_62 a p:Attributen_205Type ;
     rdfs:label "Rijksvastgoedbedrijf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ministerie van Infrastructuur en Waterstaat"@nl-NL ;
     skos:prefLabel "Rijksvastgoedbedrijf"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_63 a p:Attributen_205Type ;
     rdfs:label "Rijkswaterstaat"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Ministerie van Infrastructuur en Waterstaat"@nl-NL ;
     skos:prefLabel "Rijkswaterstaat"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_64 a p:Attributen_205Type ;
     rdfs:label "Natuurorganisaties"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Natuurorganisaties"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_66 a p:Attributen_205Type ;
     rdfs:label "Netbeheerder"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Netbeheerder"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_67 a p:Attributen_205Type ;
     rdfs:label "Woningcorporatie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Woningcorporatie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_68 a p:Attributen_205Type ;
     rdfs:label "Havenschap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Havenschap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_69 a p:Attributen_205Type ;
     rdfs:label "Recreatieschap"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Recreatieschap"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_6966 a p:Attributen_917Type ;
@@ -46516,6 +46754,7 @@ otlvwl:AttributenDomeinwaarden_7 a p:Attributen_274Type ;
 
 otlvwl:AttributenDomeinwaarden_70 a p:Attributen_205Type ;
     rdfs:label "Stichting"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Stichting"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_7000 a p:Attributen_924Type ;
@@ -46577,14 +46816,17 @@ otlvwl:AttributenDomeinwaarden_7013 a p:Attributen_922Type ;
 
 otlvwl:AttributenDomeinwaarden_71 a p:Attributen_205Type ;
     rdfs:label "Landgoed"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Landgoed"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_72 a p:Attributen_205Type ;
     rdfs:label "Universiteit"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Universiteit"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_73 a p:Attributen_205Type ;
     rdfs:label "Speeltuinvereniging"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Particulier"@nl-NL ;
     skos:prefLabel "Speeltuinvereniging"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_7306 a p:Attributen_915Type ;
@@ -46673,6 +46915,7 @@ otlvwl:AttributenDomeinwaarden_74 a p:Attributen_333Type ;
 
 otlvwl:AttributenDomeinwaarden_7408 a p:Attributen_523Type ;
     rdfs:label "Hotspot"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Gebied met terugkerend sterke vervuiling"@nl-NL ;
     skos:prefLabel "Hotspot"@nl-NL .
 
@@ -46709,27 +46952,33 @@ otlvwl:AttributenDomeinwaarden_8051 a p:Attributen_748Type ;
 
 otlvwl:AttributenDomeinwaarden_8052 a p:Attributen_523Type ;
     rdfs:label "Plein"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Plein"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8053 a p:Attributen_523Type ;
     rdfs:label "Vuurplek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Vuurplek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8054 a p:Attributen_523Type ;
     rdfs:label "Strooiveld"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:prefLabel "Strooiveld"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8071 a p:Attributen_523Type ;
     rdfs:label "Plasdras"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Natuurwaarde"@nl-NL ;
     skos:definition "Plas dras ontstaat door lage delen van april tot augustus of zelfs het hele jaar rond onder water te laten staan of onder water te zetten (0-20 cm)"@nl-NL ;
     skos:prefLabel "Plasdras"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8072 a p:Attributen_523Type ;
     rdfs:label "Kinderboerderij"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Kinderboerderij"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8073 a p:Attributen_523Type ;
     rdfs:label "Dijklichaam"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Dijklichaam"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8099 a p:Attributen_934Type ;
@@ -47084,6 +47333,7 @@ otlvwl:AttributenDomeinwaarden_8203 a p:Attributen_1021Type ;
 
 otlvwl:AttributenDomeinwaarden_8245 a p:Attributen_523Type ;
     rdfs:label "Zitrand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:definition "Randen om plantenbakken en vergelijkbaar objecten worden als zitrand gebruikt."@nl-NL ;
     skos:prefLabel "Zitrand"@nl-NL .
 
@@ -47178,6 +47428,7 @@ otlvwl:AttributenDomeinwaarden_8298 a p:Attributen_327Type ;
 
 otlvwl:AttributenDomeinwaarden_8299 a p:Attributen_523Type ;
     rdfs:label "Graf"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Inrichting en/of structurering"@nl-NL ;
     skos:definition "Registratie van een graf als onderhoud van beplanting op graven"@nl-NL ;
     skos:prefLabel "Graf"@nl-NL .
 
@@ -47653,10 +47904,12 @@ otlvwl:AttributenDomeinwaarden_8448 a p:Attributen_338Type ;
 
 otlvwl:AttributenDomeinwaarden_8449 a p:Attributen_233Type ;
     rdfs:label "Epoxygebonden"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Standplaats - Halfverharding"@nl-NL ;
     skos:prefLabel "Epoxygebonden"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8450 a p:Attributen_233Type ;
     rdfs:label "Mulchlaag"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Standplaats - Halfverharding"@nl-NL ;
     skos:prefLabel "Mulchlaag"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8453 a p:Attributen_197Type ;
@@ -47717,6 +47970,7 @@ otlvwl:AttributenDomeinwaarden_8467 a p:Attributen_338Type ;
 
 otlvwl:AttributenDomeinwaarden_8468 a p:Attributen_523Type ;
     rdfs:label "Waterkering"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Waterkerende kunstmatige of natuurlijke hoogte of hooggelegen gronden."@nl-NL ;
     skos:prefLabel "Waterkering"@nl-NL .
 
@@ -47730,28 +47984,34 @@ otlvwl:AttributenDomeinwaarden_86 a p:Attributen_355Type ;
 
 otlvwl:AttributenDomeinwaarden_8695 a p:Attributen_523Type ;
     rdfs:label "Losloopgebied zonder opruimen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Losloopgebied zonder opruimen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8696 a p:Attributen_523Type ;
     rdfs:label "Verboden voor honden"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Verboden voor honden"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8697 a p:Attributen_523Type ;
     rdfs:label "Standaard: aanlijnen en opruimen"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Standaard: aanlijnen en opruimen"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8699 a p:Attributen_523Type ;
     rdfs:label "Fysieke snelheidsremmer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Snelheidsbeheersing"@nl-NL ;
     skos:prefLabel "Fysieke snelheidsremmer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8700 a p:Attributen_523Type ;
     rdfs:label "Optische snelheidsremmer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Snelheidsbeheersing"@nl-NL ;
     skos:prefLabel "Optische snelheidsremmer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8701 a p:Attributen_523Type ;
     rdfs:label "Dynamische snelheidsremmer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:definition "Snelheidsbeheersing"@nl-NL ;
     skos:prefLabel "Dynamische snelheidsremmer"@nl-NL .
 
@@ -47762,10 +48022,12 @@ otlvwl:AttributenDomeinwaarden_8703 a p:Attributen_748Type ;
 
 otlvwl:AttributenDomeinwaarden_8705 a p:Attributen_523Type ;
     rdfs:label "Tunnel"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Tunnel"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8706 a p:Attributen_818Type ;
     rdfs:label "Rotonde"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:prefLabel "Rotonde"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8707 a p:Attributen_602Type ;
@@ -47782,6 +48044,7 @@ otlvwl:AttributenDomeinwaarden_8709 a p:Attributen_602Type ;
 
 otlvwl:AttributenDomeinwaarden_8710 a p:Attributen_523Type ;
     rdfs:label "Doorgang onder pand"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Doorgang onder pand"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8712 a p:Attributen_812Type ;
@@ -47794,6 +48057,7 @@ otlvwl:AttributenDomeinwaarden_8713 a p:Attributen_812Type ;
 
 otlvwl:AttributenDomeinwaarden_8714 a p:Attributen_523Type ;
     rdfs:label "Loopdek"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Loopdek"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_88 a p:Attributen_355Type ;
@@ -47807,82 +48071,101 @@ otlvwl:AttributenDomeinwaarden_89 a p:Attributen_355Type ;
 
 otlvwl:AttributenDomeinwaarden_8966 a p:Attributen_523Type ;
     rdfs:label "Beroepsvaart"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:altLabel "Scheepvaart"@nl-NL,
         "Transport"@nl-NL ;
     skos:prefLabel "Beroepsvaart"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8967 a p:Attributen_523Type ;
     rdfs:label "Beveiliging"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Beveiliging"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8968 a p:Attributen_523Type ;
     rdfs:label "Bluswater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Bluswater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8969 a p:Attributen_523Type ;
     rdfs:label "Brug"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Brug"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8970 a p:Attributen_523Type ;
     rdfs:label "Hellingbaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Hellingbaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8971 a p:Attributen_523Type ;
     rdfs:label "Overstort"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Overstort"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8972 a p:Attributen_523Type ;
     rdfs:label "Pad door gras"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:prefLabel "Pad door gras"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8973 a p:Attributen_523Type ;
     rdfs:label "Pleziervaart"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Pleziervaart"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8974 a p:Attributen_523Type ;
     rdfs:label "Schaatswater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Schaatswater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8975 a p:Attributen_523Type ;
     rdfs:label "Stijgpunt"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Stijgpunt"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8976 a p:Attributen_523Type ;
     rdfs:label "Viswater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Viswater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8977 a p:Attributen_523Type ;
     rdfs:label "Wateraanvoer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Wateraanvoer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8978 a p:Attributen_523Type ;
     rdfs:label "Waterafvoer"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Waterafvoer"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8979 a p:Attributen_523Type ;
     rdfs:label "Waterberging"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:altLabel "Retentie"@nl-NL ;
     skos:prefLabel "Waterberging"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8980 a p:Attributen_523Type ;
     rdfs:label "Woonfunctie"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Algemeen"@nl-NL ;
     skos:prefLabel "Woonfunctie"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8981 a p:Attributen_523Type ;
     rdfs:label "Zwemwater"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:prefLabel "Zwemwater"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8984 a p:Attributen_523Type ;
     rdfs:label "Vlindertuin"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:definition "Een tuin waar veel bloeiende planten staan om nectar uit te drinken. Ook zijn er in een vlindertuin beschutte plekjes en staan er waardplanten, waar de rupsen van eten."@nl-NL ;
     skos:prefLabel "Vlindertuin"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8993 a p:Attributen_523Type ;
     rdfs:label "Geboortebos"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Groen"@nl-NL ;
     skos:prefLabel "Geboortebos"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_8994 a p:Attributen_523Type ;
     rdfs:label "Fietsenstandplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Fietsenstandplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_9 a p:Attributen_274Type ;
@@ -48303,6 +48586,7 @@ otlvwl:AttributenDomeinwaarden_9317 a p:Attributen_417Type ;
 
 otlvwl:AttributenDomeinwaarden_9318 a p:Attributen_818Type ;
     rdfs:label "Trailerhelling"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Wegen"@nl-NL ;
     skos:altLabel "Slipway"@nl-NL ;
     skos:definition "Een trailerhelling (ook wel slipway genoemd) is een helling aan het water waardoor schepen en boten in en uit het water kunnen worden gelaten."@nl-NL ;
     skos:prefLabel "Trailerhelling"@nl-NL .
@@ -48569,11 +48853,13 @@ otlvwl:AttributenDomeinwaarden_9693 a p:Attributen_714Type ;
 
 otlvwl:AttributenDomeinwaarden_9699 a p:Attributen_523Type ;
     rdfs:label "Opstelpunt open water"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Een plaats waar een brandweervoertuig opgesteld kan worden om open water te tappen."@nl-NL ;
     skos:prefLabel "Opstelpunt open water"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_9822 a p:Attributen_523Type ;
     rdfs:label "Trambaan"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Verkeersgeleiding en/of wegondersteuning"@nl-NL ;
     skos:prefLabel "Trambaan"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_9851 a p:Attributen_1118Type ;
@@ -48699,11 +48985,13 @@ otlvwl:AttributenDomeinwaarden_9881 a p:Attributen_1121Type ;
 
 otlvwl:AttributenDomeinwaarden_9882 a p:Attributen_523Type ;
     rdfs:label "Zwaaiplaats"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Water"@nl-NL ;
     skos:definition "Een plaats waar de vaarweg is verbreed met als doel de schepen de gelegenheid te geven te keren."@nl-NL ;
     skos:prefLabel "Zwaaiplaats"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_9893 a p:Attributen_523Type ;
     rdfs:label "Uitloopstrook"@nl-NL ;
+    p:bovenliggendeDomeinwaarde "Recreatie"@nl-NL ;
     skos:prefLabel "Uitloopstrook"@nl-NL .
 
 otlvwl:AttributenDomeinwaarden_9904 a p:Attributen_1124Type ;
