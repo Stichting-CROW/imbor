@@ -1,4 +1,5 @@
 @prefix : <http://webprotege.stanford.edu/project/WMoG1K93BjNw2ofd7AeiB#> .
+@prefix p: <http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/> .
 @prefix bs: <https://w3id.org/def/basicsemantics-owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,6 +16,36 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/attribuutsorteergroep
+p:attribuutsorteergroep rdf:type owl:AnnotationProperty ;
+                        rdfs:comment "Groepeert in Access de attributen gelang waarde(type). Nu een annotatie om in het oerwoud van eigenschappen wat te vinden."^^xsd:string ;
+                        rdfs:label "attribuutsorteergroep"@nl ;
+                        rdfs:range xsd:string .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/dataLabel
+p:dataLabel rdf:type owl:AnnotationProperty ;
+            rdfs:comment "Weer een alternatieve schrijfwijze van sommige objecten (is het label zonder spatie). Deze werd (optioneel) gebruikt bij de massahernoeming van objecttypes."^^xsd:string ;
+            rdfs:label "dataLabel"@nl ;
+            rdfs:range xsd:string ;
+            rdfs:domain owl:Thing .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/guid
+p:guid rdf:type owl:AnnotationProperty ;
+       rdfs:comment "voor compat. met oude IMBOR Access"^^xsd:string ;
+       rdfs:label "guid"@en ;
+       rdfs:range xsd:string .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/volgorde
+p:volgorde rdf:type owl:AnnotationProperty ;
+           rdfs:comment "Sommige vastewaardelijsten specificeren een volgorde in de verschillende waardes. Wanneer gedefinieerd, wordt dat hierin gezet."^^xsd:string ;
+           rdfs:label "volgorde"@nl ;
+           rdfs:range xsd:positiveInteger ;
+           rdfs:domain imbor-vwl:Domeinwaarde .
+
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
@@ -37,6 +68,42 @@ skos:member rdf:type owl:ObjectProperty ;
 bs:hasPart rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:label "hasPart"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/geometryAsLineString
+p:geometryAsLineString rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain bs:physicalobject ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "geometryAsLineString"@en .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/geometryAsMultiPolygon
+p:geometryAsMultiPolygon rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain bs:physicalobject ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "geometryAsMultiPolygon"@nl .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/geometryAsPoint
+p:geometryAsPoint rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain bs:physicalobject ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "geometryAsPoint"@nl .
+
+
+###  http://linkeddata.crow.nl/otl-bim-pro-imbor/def/prop/geometryAsPolygon
+p:geometryAsPolygon rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain bs:physicalobject ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "geometryAsPolygon"@nl .
 
 
 #################################################################
