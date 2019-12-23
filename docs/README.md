@@ -23,3 +23,13 @@ Dan is ook een SPARQL-endpoint benodigd, die ook lokaal (op de eigen computer) k
 1. Een [SPARQL-kernel voor Jupyter](https://github.com/paulovn/sparql-kernel) `$ pip install sparqlkernel; jupyter sparqlkernel install --user`.
 1. Activeer en open Jupyter `jupyter notebook` en open "SPARQL-voorbeelden.ipynb". 
 1. Vervang de bovenste coderegel met de URL van het gewenste SPARQL-endpoint.
+
+---
+
+Het Voorbeeld_Queries_op_turtle_file notebook werkt direct op de ttl file.
+
+Let op dat de queries in dit geval subtiel anders zijn, namelijk met subClassOf* om te zorgen dat alle subklassen meegenomen worden.
+
+Dit notebook kun je ook 'in de cloud' uitvoeren bij colab bijvoorbeeld. In dat geval hoef je niets op je eigen machine te installeren.
+
+
