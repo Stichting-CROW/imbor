@@ -1,6 +1,6 @@
 # Documentatie
 
-Deze map bevat twee vormen van documentatie van de OTL.
+Deze map bevat documentatie over IMBOR in Linked data-formaat.
 
 - [index.html](https://stichting-crow.github.io/otl-bim-pro/index.html) bevat een proza en normatieve beschrijving van de OTL in ReSpec. 
 Gebruik dit document om te lezen over hoe de OTL is gemodelleerd in de data, wat de betekenis van de gemaakte keuzes is en voor een grafisch overzicht van de OTL. 
@@ -12,6 +12,12 @@ Deze voorbeelden tonen hoe je (de computer) kunt (laten) zoeken door de OTL-gege
 Bijvoorbeeld door het tonen van alle eigenschappen van een Hefbrug. 
 De voorbeelden kunnen ook gebruikt worden op een aangepaste dataset van bijvoorbeeld een provincie. 
 Dan verifieer je ook of je aan het OTL-datamodel voldoet. 
+
+- [`Mapping OTL BIM Pro--BGT-IMGeo.tsv`](Mapping OTL BIM Pro--BGT-IMGeo.tsv) beschrijft het koppelvlak tussen OTL BIM Pro-objecten, attributen en domeinwaardes en BGT|IMGeo-objecten, attributen en domeinwaardes. Gebruik deze tabel om exporten naar BGT (geovoorziening) vanuit beheerssoftware die volgens OTL BIM Pro werkt. Het is gebaseerd op de IMBOR-Access-tabel `X_ObjecttypeRelaties`. 
+
+- [`Mapping IMBOR 2 UCUM.csv`](Mapping IMBOR 2 UCUM.csv) beschrijft de eenheden uit IMBOR (tabel `X_Eenheden`) en koppelt ze aan [UCUM / CDT](https://ci.mines-stetienne.fr/lindt/v2/custom_datatypes.html)- en [QUDT](http://qudt.org/)-Linked data-eenheids-datatypes.  
+
+- [`Datamodel - BIM PRo OTL.drawio`](Datamodel%20-%20BIM%20PRo%20OTL.drawio) toont het datamodel van OTL BIM Pro in het formaat van het online tekenprogramma [draw.io](http://draw.io/).
 
 ---
 
