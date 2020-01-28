@@ -1,0 +1,72 @@
+:X_VakdisciplinesObjecttype
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X_VakdisciplinesObjecttype.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "Windows-1252" ;
+            ]
+        ] ;
+        rml:referenceFormulation ql:CSV ; 
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/groepering/VO{VakdisciplineObjecttypeID}" ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:vakdiscipline ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/groepering/V{VakdisciplineID}";
+            rr:termType rr:IRI ;
+        ] ;
+    ]
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:informatiemodel ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{ObjecttypeID}";
+            rr:termType rr:IRI ;
+        ] ;
+    ]
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:sorteergroep ;
+        rr:objectMap [
+            rml:reference "Sorteergroep" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:inKennisbank ;
+        rr:objectMap [
+            rml:reference "Kennisbank" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ]
+    rr:predicateObjectMap [
+        rr:predicate imborp:heeftDisclaimer ;
+        rr:objectMap [
+            rml:reference "Disclaimer" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ]
+    rr:predicateObjectMap [
+        rr:predicate imborp:isOndersteunend ;
+        rr:objectMap [
+            rml:reference "Ondersteunend" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ]
+    rr:predicateObjectMap [
+        rr:predicate imborp:heeftInformatiemodel ;
+        rr:objectMap [
+            rml:reference "Informatiemodel" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ]
+
+.
