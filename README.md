@@ -1,11 +1,14 @@
 # IMBOR in Linked Data-formaat
 
-> Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’. Het IMBOR sluit volledig aan op de Basisregistratie Grootschalige Topografie (BGT) en op het Informatiemodel Geografie (IMGeo).
+> Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’. 
+> Het IMBOR sluit volledig aan op de Basisregistratie Grootschalige Topografie (BGT) en op het Informatiemodel Geografie (IMGeo).
 > [CROW](https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor)
 
 Deze repo presenteert de documentatie omtrent de ontwikkeling en het gebruik van IMBOR in Linked Data-formaat (voorts: IMBOR). 
 
-IMBOR in Linked data-formaat (IMBOR-LD) zelf wordt niet openbaar gedistribueerd. 
+IMBOR zelf wordt (nog) niet openbaar gedistribueerd, omdat we nog nadenken over het beheer en de wijze van financiering. 
+We willen jullie uiteraard wel toegang geven tot IMBOR in Linked data-formaat om te kunnen leren en experimenteren. 
+Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <linked-data@crow.nl>. 
 
 ## Documentatie
 
@@ -17,4 +20,3 @@ IMBOR in Linked data-formaat (IMBOR-LD) zelf wordt niet openbaar gedistribueerd.
 [2]: blob/master/data/README.md
 [3]: blob/master/data/datamodel.shapes.ttl
 [4]: blob/master/supporting_files/README.md
-
