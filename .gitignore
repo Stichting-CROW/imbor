@@ -1,3 +1,8 @@
-
+# ongewenste mapjes
 .vscode/
 .ipynb_checkpoints/
+__pycache__/
+
+# bronbestanden voor de conversie
+data/externe-bronnen/*.csv
+data/temp/

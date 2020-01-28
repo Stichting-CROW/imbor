@@ -1,0 +1,28 @@
+# Ik krijg geen xsd:boolean waardes uit RML
+# Daarom deze handmatige vervanging
+
+DELETE {
+    ?s ?p ?label .
+}
+
+INSERT {
+    ?s ?p true .
+}
+
+WHERE {
+    ?s ?p ?label .
+    FILTER ( str(?label) = "True" )
+};
+
+DELETE {
+    ?s ?p ?label .
+}
+
+INSERT {
+    ?s ?p false .
+}
+
+WHERE {
+    ?s ?p ?label .
+    FILTER ( str(?label) = "False" )
+}

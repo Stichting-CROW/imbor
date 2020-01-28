@@ -1,0 +1,61 @@
+:X_Vakdisciplines
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X_Vakdisciplines.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "Windows-1252" ;
+            ]
+        ] ;
+        rml:referenceFormulation ql:CSV ; 
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/groepering/V{VakdisciplineID}" ;
+        rr:class skos:Collection ;
+    ] ;
+
+    rr:predicateObjectMap :informatiemodel ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "Vakdiscipline" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap :informatiemodelStatusID ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [
+            rml:reference "Definitie" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:volgorde ;
+        rr:objectMap [
+            rml:reference "Volgorde" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:formuliernaam ;
+        rr:objectMap [
+            rml:reference "Formuliernaam" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:overzicht ;
+        rr:objectMap [
+            rml:reference "RelatieKort" ;
+            rml:datatype xsd:boolean
+        ] ;
+    ] ;
+
+.

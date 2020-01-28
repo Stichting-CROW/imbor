@@ -1,0 +1,98 @@
+@prefix csvw: <http://www.w3.org/ns/csvw#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix : <http://linkeddata.crow.nl/imbor/mapping/>.
+
+@prefix graph: <http://linkeddata.crow.nl/imbor/id/graph/>.
+@prefix imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>.
+@prefix imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>.
+@prefix imborvwl: <http://linkeddata.crow.nl/imbor/id/domeinwaarde/>.
+@prefix shape: <http://linkeddata.crow.nl/imbor/id/shape/>.
+@prefix groep: <http://linkeddata.crow.nl/imbor/id/groepering/>.
+@prefix nta8035: <https://w3id.org/def/basicsemantics-owl#>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#>.
+@prefix qudt: <http://qudt.org/vocab/quantitykind/>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix gwsw: <https://data.gwsw.nl/1.4.1/totaal/>.
+@prefix nen3610: <https://definities.geostandaarden.nl/def/nen3610#>.
+@prefix imgeo: <https://definities.geostandaarden.nl/def/imgeo#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix guid: <urn:uuid:>.
+
+:informatiemodel
+    rr:predicate imborp:informatiemodel ;
+    rr:objectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/INF{InformatiemodelID}";
+        rr:termType rr:IRI ;
+    ] ;
+.
+
+:informatiemodelStatusID
+    rr:predicate imborp:informatiemodelstatus ;
+    rr:objectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/INFSTATUS{InformatiemodelStatusID}";
+        rr:termType rr:IRI ;
+    ] ;
+.
+
+:txtFormuliernaam 
+    rr:predicate imborp:txtFormuliernaam ;
+    rr:objectMap [
+        rml:reference "txtFormuliernaam" ;
+    ] ;
+.
+
+:X_ObjecttypeGroepen
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "data/externe-bronnen/X_ObjecttypeGroepen.csv" ;
+        rml:referenceFormulation ql:CSV ;
+        rml:encoding "utf-8" ;
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBA{ObjecttypeGroepID}" ;
+        rr:class rdfs:Class ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:guid ;
+        rr:objectMap [
+            rr:template "urn:uuid:{ObjecttypeGroepGUID}" ;
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap :informatiemodel ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "ObjecttypeGroep" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:hoofdobject ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{HoofdobjecttypeID}";
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [
+            rml:reference "ObjecttypeGroepToelichting" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap :txtFormuliernaam ;
+.

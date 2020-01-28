@@ -1,0 +1,193 @@
+@prefix csvw: <http://www.w3.org/ns/csvw#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix : <http://linkeddata.crow.nl/imbor/mapping/>.
+
+@prefix graph: <http://linkeddata.crow.nl/imbor/id/graph/>.
+@prefix imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>.
+@prefix imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>.
+@prefix imborvwl: <http://linkeddata.crow.nl/imbor/id/domeinwaarde/>.
+@prefix shape: <http://linkeddata.crow.nl/imbor/id/shape/>.
+@prefix groep: <http://linkeddata.crow.nl/imbor/id/groepering/>.
+@prefix nta8035: <https://w3id.org/def/basicsemantics-owl#>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#>.
+@prefix qudt: <http://qudt.org/vocab/quantitykind/>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix gwsw: <https://data.gwsw.nl/1.4.1/totaal/>.
+@prefix nen3610: <https://definities.geostandaarden.nl/def/nen3610#>.
+@prefix imgeo: <https://definities.geostandaarden.nl/def/imgeo#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix guid: <urn:uuid:>.
+
+:X_Objecttypes 
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X_Objecttypes.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "Windows-1252" ;
+            ]
+        ] ;
+        rml:referenceFormulation ql:CSV ; 
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{ObjecttypeID}" ;
+        rr:class rdfs:Class ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:guid ;
+        rr:objectMap [
+            rr:template "urn:uuid:{ObjecttypeGUID}" ;
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap :informatiemodel ;
+
+    rr:predicateObjectMap :informatiemodelStatusID ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:inIMBOR ;
+        rr:objectMap [
+            rr:reference "IMBOR";
+            rr:datatype xsd:boolean ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:inIMWV ;
+        rr:objectMap [
+            rr:reference "IMWV";
+            rr:datatype xsd:boolean ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:inMELD ;
+        rr:objectMap [
+            rr:reference "MELD";
+            rr:datatype xsd:boolean ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:subClassOf ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBA{ObjecttypeGroepID}";
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "ObjecttypePublicatie" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:isHoofdobject ;
+        rr:objectMap [
+            rml:reference "Hoofdobject" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:isHulpobject ;
+        rr:objectMap [
+            rml:reference "Hulpobject" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;    
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:ObjecttypeNiveau1 ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{ObjecttypeNiveau1}";
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:ObjecttypeNiveau2 ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{ObjecttypeNiveau2}";
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [
+            rml:reference "ObjecttypeDefinitie" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "Objecttype" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+        rr:objectMap [
+            rml:reference "ObjecttypeSynoniemen" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:editorialNote ;
+        rr:objectMap [
+            rml:reference "Toelichting" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:lijngeometrie ;
+        rr:objectMap [
+            rml:reference "Lijn" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;    
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:puntgeometrie ;
+        rr:objectMap [
+            rml:reference "Punt" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;    
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:vlakgeometrie ;
+        rr:objectMap [
+            rml:reference "Vlak" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;    
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:multivlakgeometrie ;
+        rr:objectMap [
+            rml:reference "Multivlak" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap :txtFormuliernaam ;
+.

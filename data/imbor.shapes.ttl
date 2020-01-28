@@ -1,0 +1,69 @@
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
+shape:PhsyicalObject a sh:NodeShape ;
+  sh:targetClass nta8035:PhsyicalObject ;
+
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+  ] ;
+
+  sh:property [
+    sh:path skos:prefLabel ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+  ] ; 
+
+  sh:property [
+    sh:path skos:definition ;
+    sh:datatype xsd:string ;
+  ] ;
+
+  sh:property [
+    sh:path nta8035:hasPart ;
+    sh:class nta8035:PhsyicalObject ;
+  ]
+
+  sh:property [
+    sh:path rdfs:subClassOf ;
+    sh:class nta8035:PhysicalObject ;
+  ]
+.
+
+shape:Lijnobject a sh:PropertyShape ;
+  rdfs:label "lijngeometrie" ;
+  rdfs:comment "Voor een object dat geometrie als lijn kan hebben." ; 
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "LINE" ;
+.
+
+shape:Puntobject a sh:PropertyShape ;
+  rdfs:label "puntgeometrie" ;
+  rdfs:comment "Voor een object dat geometrie als punt kan hebben." ; 
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "POINT" ;
+.
+
+shape:Vlakobject a sh:PropertyShape ;
+  rdfs:label "vlakgeometrie" ;
+  rdfs:comment "Voor een object dat geometrie als vlak kan hebben." ; 
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "POLYGON" ;
+.
+
+shape:Multivlakobject a sh:PropertyShape ;
+  rdfs:label "multivlakgeometrie" ;
+  rdfs:comment "Voor een object dat geometrie als multivlak kan hebben." ; 
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "MULTIPOLYGON" ;
+.
+
