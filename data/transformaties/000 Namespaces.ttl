@@ -1,0 +1,25 @@
+# standaard
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# inhoudelijke doelprefixes
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX imborvwl: <http://linkeddata.crow.nl/imbor/id/domeinwaarde/>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+
+# NTA 8035
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# overig
+PREFIX gwsw: <https://data.gwsw.nl/1.4.1/totaal/>
+PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
+PREFIX imgeo: <https://definities.geostandaarden.nl/def/imgeo#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>

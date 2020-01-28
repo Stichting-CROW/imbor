@@ -1,0 +1,8 @@
+DELETE {
+    ?s ?p ?label .
+}
+
+WHERE {
+    ?s ?p ?label .
+    FILTER ( str(?label) = "" )
+}

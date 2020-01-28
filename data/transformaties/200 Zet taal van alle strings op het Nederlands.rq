@@ -1,0 +1,18 @@
+# In IMBOR staat alleen Nederlandstalige informatie.
+# Deze wordt in deze query allemaal met de Nederlandse taal gematcht.
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+DELETE {
+    ?s ?p ?o .
+}
+
+INSERT {
+    ?s ?p ?taalstr .
+}
+
+WHERE {
+    ?s ?p ?o .
+    FILTER ( !LANGMATCHES( lang(?o), "*") )
+    BIND ( STRLANG(?o, "nl") as ?taalstr )
+}
