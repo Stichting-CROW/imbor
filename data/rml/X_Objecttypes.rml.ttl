@@ -83,7 +83,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate rdfs:subClassOf ;
+        rr:predicate imborp:objecttypegroep ;
         rr:objectMap [
             rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBA{ObjecttypeGroepID}";
             rr:termType rr:IRI ;

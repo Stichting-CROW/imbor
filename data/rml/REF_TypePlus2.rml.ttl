@@ -55,7 +55,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate rdfs:subClassOf ;
+        rr:predicate imborp:typeplus ;
         rr:objectMap [
             rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBD{TypePlusID}";
             rr:termType rr:IRI ;

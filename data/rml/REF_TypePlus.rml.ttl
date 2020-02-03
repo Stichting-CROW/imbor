@@ -55,7 +55,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate rdfs:subClassOf ;
+        rr:predicate imborp:type ;
         rr:objectMap [
             rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBC{TypeID}";
             rr:termType rr:IRI ;
