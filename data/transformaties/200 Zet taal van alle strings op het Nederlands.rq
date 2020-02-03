@@ -1,5 +1,6 @@
+# In de RML regelset wordt geen strings met een taal gelabeled.
 # In IMBOR staat alleen Nederlandstalige informatie.
-# Deze wordt in deze query allemaal met de Nederlandse taal gematcht.
+# Daarom worden alle niet-talige labels in het Nederlands gezet.
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 

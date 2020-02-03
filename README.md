@@ -20,3 +20,8 @@ Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <linked-data@c
 [2]: blob/master/data/README.md
 [3]: blob/master/data/datamodel.shapes.ttl
 [4]: blob/master/supporting_files/README.md
+
+## Versiebeheer
+
+CROW beraadt zich nog op een duurzame beheersstrategie ten aanzien van IMBOR in Linked data-formaat. 
+Daar hoort ook versiebeheer bij. 

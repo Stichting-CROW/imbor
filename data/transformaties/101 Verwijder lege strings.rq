@@ -1,3 +1,6 @@
+# Lege cellen worden in CSVW / RML toch als triples gerenderd
+# Deze query verwijdert ze allemaal
+
 DELETE {
     ?s ?p ?label .
 }

@@ -1,4 +1,4 @@
-# Ik krijg geen xsd:boolean waardes uit RML
+# Ik krijg geen xsd:boolean waardes uit CSVW / RML
 # Daarom deze handmatige vervanging
 
 DELETE {
