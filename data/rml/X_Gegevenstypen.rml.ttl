@@ -32,7 +32,7 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Gegevenstypen.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Gegevenstypen.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;
@@ -58,6 +58,13 @@
         rr:predicate rdfs:label ;
         rr:objectMap [
             rml:reference "Gegevenstype" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [
+            rml:reference "Definitie" ;
         ] ;
     ] ;
 .

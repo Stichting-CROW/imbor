@@ -32,7 +32,7 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Attributen.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Attributen.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ; # bizar dit
@@ -166,7 +166,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:referentietabel ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/REF{ReferentietabelID}" ;
+            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/TAB{ReferentietabelID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;

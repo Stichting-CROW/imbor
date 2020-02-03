@@ -32,7 +32,7 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Eenheden.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Eenheden.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;

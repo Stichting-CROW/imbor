@@ -28,11 +28,11 @@
 
 :X_Attribuutsorteergroep
     a rr:TriplesMap ;
-
+    
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Attribuutsorteergroep.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Attribuutsorteergroep.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;

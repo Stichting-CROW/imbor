@@ -32,10 +32,10 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/REF_Type.csv" ;
+            csvw:url "data/externe-bronnen/REF/REF_Type.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
-                csvw:encoding "UTF-8" ;
+                csvw:encoding "Windows-1252" ;
             ]
         ] ;
         rml:referenceFormulation ql:CSV ; 

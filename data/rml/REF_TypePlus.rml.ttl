@@ -32,10 +32,10 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/REF_TypePlus.csv" ;
+            csvw:url "data/externe-bronnen/REF/REF_TypePlus.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
-                csvw:encoding "UTF-8" ;
+                csvw:encoding "Windows-1252" ;
             ]
         ] ;
         rml:referenceFormulation ql:CSV ; 
@@ -70,16 +70,38 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate skos:definition ;
-        rr:objectMap [
-            rml:reference "Definitie" ;
-        ] ;
-    ] ;
-
-    rr:predicateObjectMap [
         rr:predicate skos:altLabel ;
         rr:objectMap [
             rml:reference "Synoniemen" ;
+        ] ;
+    ] ;
+.
+
+
+:REF_TypePlus_extra
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/REF/REF_TypePlus.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "UTF-8" ;
+            ]
+        ] ;
+        rml:referenceFormulation ql:CSV ; 
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBD{TypePlusID}" ;
+        rr:class rdfs:Class ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [
+            rml:reference "Definitie" ;
         ] ;
     ] ;
 .

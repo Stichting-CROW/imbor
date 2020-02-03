@@ -32,46 +32,10 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_AttributenDomeinwaarden.csv" ;
+            csvw:url "data/externe-bronnen/X/X_AttributenDomeinwaarden.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;  # behalve de definitie ??
-            ]
-        ] ;
-        rml:referenceFormulation ql:CSV ; 
-    ] ;
-
-    rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/QQ{AttribuutDomeinwaardeID}" ;
-        rr:class rdfs:Class ;
-        # TODO: instantie van type
-    ] ;
-
-    rr:predicateObjectMap [
-        rr:predicate imborp:bovenliggendLabel ;
-        rr:objectMap [
-            rml:reference "BovenliggendeDomeinwaarde" ;
-        ] ;
-    ] ;
- 
-    rr:predicateObjectMap [
-        rr:predicate skos:altLabel ;
-        rr:objectMap [
-            rml:reference "Synoniemen" ;
-        ] ;
-    ] ;
-.
-
-:X_AttributenDomeinwaarden1
-    a rr:TriplesMap ;
-
-    rml:logicalSource [
-        rml:source [
-            a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_AttributenDomeinwaarden.csv" ;
-            csvw:dialect [
-                a csvw:Dialect ;
-                csvw:encoding "UTF-8" ;  # behalve de definitie ??
             ]
         ] ;
         rml:referenceFormulation ql:CSV ; 
@@ -91,7 +55,6 @@
         ] ;
     ] ;
 
-
     rr:predicateObjectMap [
         rr:predicate imborp:attribuut ;
         rr:objectMap [
@@ -101,6 +64,44 @@
     ] ;
 
     rr:predicateObjectMap :informatiemodel ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:bovenliggendLabel ;
+        rr:objectMap [
+            rml:reference "BovenliggendeDomeinwaarde" ;
+        ] ;
+    ] ;
+
+    # volgorde
+ 
+    rr:predicateObjectMap [
+        rr:predicate skos:altLabel ;
+        rr:objectMap [
+            rml:reference "Synoniemen" ;
+        ] ;
+    ] ;
+.
+
+:X_AttributenDomeinwaarden1
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X/X_AttributenDomeinwaarden.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "UTF-8" ;  # behalve de definitie ??
+            ]
+        ] ;
+        rml:referenceFormulation ql:CSV ; 
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/Q{AttribuutDomeinwaardeID}" ;
+        rr:class rdfs:Class ;
+        # TODO: instantie van type
+    ] ;
 
     rr:predicateObjectMap [
         rr:predicate rdfs:label ;

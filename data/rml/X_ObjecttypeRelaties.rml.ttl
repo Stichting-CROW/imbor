@@ -31,11 +31,10 @@
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "data/externe-bronnen/X_ObjecttypeRelaties.csv" ;
+        rml:source "data/externe-bronnen/X/X_ObjecttypeRelaties.csv" ;
         rml:referenceFormulation ql:CSV ; 
     ] ;
 
-    rr:graph graph:ExterneRelaties ;
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/groepering/XREL{ObjecttypeRelatieID}" ;

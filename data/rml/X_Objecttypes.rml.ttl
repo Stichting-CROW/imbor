@@ -32,7 +32,7 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Objecttypes.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Objecttypes.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;
@@ -137,13 +137,6 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate rdfs:label ;
-        rr:objectMap [
-            rml:reference "Objecttype" ;
-        ] ;
-    ] ;
-
-    rr:predicateObjectMap [
         rr:predicate skos:altLabel ;
         rr:objectMap [
             rml:reference "ObjecttypeSynoniemen" ;
@@ -156,6 +149,16 @@
             rml:reference "Toelichting" ;
         ] ;
     ] ;
+
+    # afbakening
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:isFysiek ;
+        rr:objectMap [
+            rml:reference "Fysiek" ;
+            rml:datatype xsd:boolean ;
+        ] ;
+    ] ;    
 
     rr:predicateObjectMap [
         rr:predicate imborp:lijngeometrie ;

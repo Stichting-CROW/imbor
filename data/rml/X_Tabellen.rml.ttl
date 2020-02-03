@@ -32,7 +32,7 @@
     rml:logicalSource [
         rml:source [
             a csvw:Table ;
-            csvw:url "data/externe-bronnen/X_Tabellen.csv" ;
+            csvw:url "data/externe-bronnen/X/X_Tabellen.csv" ;
             csvw:dialect [
                 a csvw:Dialect ;
                 csvw:encoding "Windows-1252" ;
@@ -42,7 +42,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/REF{TabelID}" ;
+        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/TAB{TabelID}" ;
         rr:class nta8035:InformationObject ;
     ] ;
 

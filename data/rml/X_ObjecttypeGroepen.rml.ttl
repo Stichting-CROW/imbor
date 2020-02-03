@@ -26,35 +26,20 @@
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix guid: <urn:uuid:>.
 
-:informatiemodel
-    rr:predicate imborp:informatiemodel ;
-    rr:objectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/INF{InformatiemodelID}";
-        rr:termType rr:IRI ;
-    ] ;
-.
-
-:informatiemodelStatusID
-    rr:predicate imborp:informatiemodelstatus ;
-    rr:objectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/INFSTATUS{InformatiemodelStatusID}";
-        rr:termType rr:IRI ;
-    ] ;
-.
-
-:txtFormuliernaam 
-    rr:predicate imborp:txtFormuliernaam ;
-    rr:objectMap [
-        rml:reference "txtFormuliernaam" ;
-    ] ;
-.
 
 :X_ObjecttypeGroepen
     a rr:TriplesMap ;
+
     rml:logicalSource [
-        rml:source "data/externe-bronnen/X_ObjecttypeGroepen.csv" ;
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X/X_ObjecttypeGroepen.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "UTF-8" ;
+            ]
+        ] ;
         rml:referenceFormulation ql:CSV ;
-        rml:encoding "utf-8" ;
     ] ;
     
     rr:subjectMap [

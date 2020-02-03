@@ -30,9 +30,17 @@
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "data/externe-bronnen/X_Attribuutsoorten.csv" ;
+        rml:source [
+            a csvw:Table ;
+            csvw:url "data/externe-bronnen/X/X_Attribuutsoorten.csv" ;
+            csvw:dialect [
+                a csvw:Dialect ;
+                csvw:encoding "UTF-8" ;
+            ]
+        ] ;
         rml:referenceFormulation ql:CSV ; 
     ] ;
+
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/PT{AttribuutsoortID}" ;

@@ -30,7 +30,7 @@
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "data/externe-bronnen/X_AutomatischVia.csv" ;
+        rml:source "data/externe-bronnen/X/X_AutomatischVia.csv" ;
         rml:referenceFormulation ql:CSV ; 
     ] ;
 
