@@ -43,7 +43,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/TAB{TabelID}" ;
-        rr:class nta8035:InformationObject ;
+        rr:graph graph:X_Tabellen ;
     ] ;
 
     rr:predicateObjectMap [

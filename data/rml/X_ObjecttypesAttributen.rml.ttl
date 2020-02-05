@@ -43,7 +43,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/groepering/OA{ObjecttypeAttribuutID}" ;
-        rr:class imbor:ObjecttypeAttribuutToewijzing ;
+        rr:graph graph:X_ObjecttypesAttributen ;
     ] ;
 
     rr:predicateObjectMap [

@@ -15,6 +15,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/groepering/VO{VakdisciplineObjecttypeID}" ;
+        rr:graph graph:X_VakdisciplinesObjecttype ;
     ] ;
 
     rr:predicateObjectMap [

@@ -44,7 +44,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/PT{AttribuutsoortID}" ;
-        rr:class imbor:ExterneRelatie ;
+        rr:graph graph:X_Attribuutsoorten ;
     ] ;
 
     rr:predicateObjectMap [

@@ -43,8 +43,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/Q{AttribuutDomeinwaardeID}" ;
-        rr:class rdfs:Class ;
-        # TODO: instantie van type
+        rr:graph graph:X_AttributenDomeinwaarden ;
     ] ;
 
     rr:predicateObjectMap [
@@ -99,8 +98,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/domeinwaarde/Q{AttribuutDomeinwaardeID}" ;
-        rr:class rdfs:Class ;
-        # TODO: instantie van type
+        rr:graph graph:X_AttributenDomeinwaarden ;
     ] ;
 
     rr:predicateObjectMap [

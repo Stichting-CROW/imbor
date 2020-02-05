@@ -38,7 +38,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/groepering/XREL{ObjecttypeRelatieID}" ;
-        rr:class imbor:ExterneRelatie ;
+        rr:graph graph:X_ObjecttypeRelaties ;
     ] ;
 
     rr:predicateObjectMap :informatiemodelStatusID ;

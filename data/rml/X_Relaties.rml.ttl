@@ -43,7 +43,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/RELTYPE{RelatieID}" ;
-        rr:class imbor:ExterneRelatie ;
+        rr:graph graph:X_Relaties ;
     ] ;
 
     rr:predicateObjectMap [

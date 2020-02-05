@@ -36,7 +36,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/BRON{AutomatischViaID}" ;
-        rr:class imbor:ExterneRelatie ;
+        rr:graph graph:X_AutomatischVia ;
     ] ;
 
     rr:predicateObjectMap [

@@ -43,7 +43,7 @@
 
     rr:subjectMap [
         rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBC{TypeID}" ;
-        rr:class rdfs:Class ;
+        rr:graph graph:REF_Type ;
     ] ;
 
     rr:predicateObjectMap [
