@@ -5,6 +5,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 INSERT DATA {
     <http://linkeddata.crow.nl/imbor/> a owl:Ontology ;
         rdfs:label "IMBOR" ;
-        rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat" ;
+        rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
+        dc:title "IMBOR" ;
+        dc:description "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
+        dc:publisher "CROW" ;
+        dc:language "nl" ;
+        dc:source <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
     .
 }
