@@ -2,8 +2,6 @@
 # In IMBOR staat alleen Nederlandstalige informatie.
 # Daarom worden alle niet-talige labels in het Nederlands gezet.
 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
 DELETE {
     ?s ?p ?o .
 }
@@ -15,5 +13,5 @@ INSERT {
 WHERE {
     ?s ?p ?o .
     FILTER ( !LANGMATCHES( lang(?o), "*") )
-    BIND ( STRLANG(?o, "nl") as ?taalstr )
+    BIND ( STRLANG(?o, "nl-NL") as ?taalstr )
 }
