@@ -14,12 +14,11 @@ Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <linked-data@c
 
 1. Overzicht van [modelleerkeuzes][1].
 1. Overzicht van [de transformatie][2].
-1. Metamodel [in RDF][3], [visueel][4].
+1. Metamodel [in RDF][3], [visueel][2].
 
-[1]: https://stichting-crow.github.io/otl-bim-pro/index.html
-[2]: blob/master/data/README.md
-[3]: blob/master/data/datamodel.shapes.ttl
-[4]: blob/master/supporting_files/README.md
+[1]: https://stichting-crow.github.io/imbor/
+[2]: data/README.md
+[3]: data/datamodel.shapes.ttl
 
 ## Versiebeheer
 
