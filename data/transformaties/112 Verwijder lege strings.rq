@@ -2,10 +2,15 @@
 # Deze query verwijdert ze allemaal
 
 DELETE {
-    ?s ?p ?label .
+    GRAPH ?g {
+        ?s ?p ?label .
+    }
 }
 
 WHERE {
-    ?s ?p ?label .
+    GRAPH ?g {
+        ?s ?p ?label .
+    }
+    
     FILTER ( str(?label) = "" )
 }

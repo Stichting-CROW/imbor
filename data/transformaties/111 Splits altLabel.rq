@@ -4,15 +4,15 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 DELETE {
-    ?s skos:altLabel ?label .
+    GRAPH ?g { ?s skos:altLabel ?label . }
 }
 
 INSERT {
-    ?s skos:altLabel ?label1, ?label2, ?label3, ?label4 .
+    GRAPH ?g { ?s skos:altLabel ?label1, ?label2, ?label3, ?label4 . }
 }
 
 WHERE {
-    ?s skos:altLabel ?label .
+    GRAPH ?g { ?s skos:altLabel ?label . }
 
     BIND ( STRBEFORE(?label, ', ') AS ?label1 )
     BIND ( STRAFTER(?label, ', ') AS ?label2 )
