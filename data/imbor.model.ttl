@@ -1,4 +1,4 @@
-# Het IMBOR meta-model 
+# Het IMBOR meta-model
 # --------------------
 # The IMBOR metamodel, documented in Dutch.
 
@@ -10,8 +10,8 @@ PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 # Ontologie-header
 # ----------------
-# De formele introductie van het gehele model. Deze wordt integraal met de 
-# ontologie meegegeven. 
+# De formele introductie van het gehele model. Deze wordt integraal met de
+# ontologie meegegeven.
 
 <http://linkeddata.crow.nl/def/imbor/>
   a owl:Ontology ;
@@ -23,7 +23,7 @@ PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
   dc:publisher <http://crow.nl> ;
   rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
-  owl:imports 
+  owl:imports
     <https://w3id.org/def/basicsemantics-owl>
   , <http://www.w3.org/2004/02/skos/core>
   , <http://qudt.org/schema/qudt>
@@ -65,8 +65,8 @@ crow:ThematischeCollectie
 # Eigenschappen
 # -------------
 # IMBOR in Linked data maakt zo veel mogelijk gebruik van relaties gedefinieerd
-# in andere ontologieën. Dat maakt het onderhoud aan en het gebruik van IMBOR 
-# eenvoudiger. 
+# in andere ontologieën. Dat maakt het onderhoud aan en het gebruik van IMBOR
+# eenvoudiger.
 
 crow:guid
   a rdfs:Property , owl:ObjectProperty , owl:DeprecatedProperty ;
