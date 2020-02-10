@@ -1,0 +1,136 @@
+# Voor elke classe-shape, voeg een sh:property toe die
+# aangeeft welke geometrie het object zou kunnen hebben.
+
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+
+# PUNT
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?shape sh:or ?list .
+    }
+}
+
+INSERT {
+    GRAPH graph:Shapes {
+        ?shape sh:or [
+            rdf:first shape:PuntGeometriePropertyShape ;
+            rdf:rest ?list ;
+        ]
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:puntgeometrie true ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            sh:targetClass ?ot ;
+            sh:or ?list ;
+            .
+    }
+}
+
+; # LIJN
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?shape sh:or ?list .
+    }
+}
+
+INSERT {
+    GRAPH graph:Shapes {
+        ?shape sh:or [
+            rdf:first shape:LijnGeometriePropertyShape ;
+            rdf:rest ?list ;
+        ]
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:lijngeometrie true ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            sh:targetClass ?ot ;
+            sh:or ?list ;
+            .
+    }
+}
+
+; # VLAK
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?shape sh:or ?list .
+    }
+}
+
+INSERT {
+    GRAPH graph:Shapes {
+        ?shape sh:or [
+            rdf:first shape:VlakGeometriePropertyShape ;
+            rdf:rest ?list ;
+        ]
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:vlakgeometrie true ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            sh:targetClass ?ot ;
+            sh:or ?list ;
+            .
+    }
+}
+
+; # Multivlak
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?shape sh:or ?list .
+    }
+}
+
+INSERT {
+    GRAPH graph:Shapes {
+        ?shape sh:or [
+            rdf:first shape:MultiVlakGeometriePropertyShape ;
+            rdf:rest ?list ;
+        ]
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:multivlakgeometrie true ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            sh:targetClass ?ot ;
+            sh:or ?list ;
+            .
+    }
+}
