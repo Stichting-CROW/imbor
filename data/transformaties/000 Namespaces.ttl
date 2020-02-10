@@ -12,7 +12,7 @@ PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
 PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
 
 # NTA 8035
-PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#> 
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
