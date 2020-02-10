@@ -2,16 +2,26 @@
 # In IMBOR staat alleen Nederlandstalige informatie.
 # Daarom worden alle niet-talige labels in het Nederlands gezet.
 
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+
+
 DELETE {
-    ?s ?p ?o .
+    GRAPH ?g { ?s ?p ?o . }
 }
 
 INSERT {
-    ?s ?p ?taalstr .
+    GRAPH ?g { ?s ?p ?taalstr . }
 }
 
 WHERE {
-    ?s ?p ?o .
+    {
+        ?s ?p ?o .
+    } UNION {
+        GRAPH ?g { ?s ?p ?o } .
+    }
+
+    FILTER ( ?g != graph:Shapes )
+    
     FILTER ( !LANGMATCHES( lang(?o), "*") )
     BIND ( STRLANG(?o, "nl-NL") as ?taalstr )
 }
