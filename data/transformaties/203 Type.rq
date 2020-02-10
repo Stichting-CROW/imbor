@@ -1,0 +1,46 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
+
+INSERT {
+    GRAPH graph:GUID {
+        ?ot imborp:guid ?guid .
+    }
+
+    GRAPH graph:Objecttypen {
+        ?ot a rdfs:Class ;
+            rdfs:label ?label ;
+            skos:altLabel ?altLabel ;
+            skos:definition ?definition ;
+            .
+
+        ?ot rdfs:subClassOf ?supertype .
+    }
+
+    GRAPH graph:Groeperingen {
+        groep:IMBORHierarchieTypes a crow:HierarchischeCollectie ;
+            rdfs:label "IMBOR Objecttypehiërarchie: Types" ;
+            skos:member ?ot ;
+        .
+    }
+}
+
+WHERE {
+    GRAPH graph:REF_Type {
+        ?ot
+            rdfs:label ?label ;
+            imborp:guid ?guid ;
+        .
+
+        OPTIONAL { ?ot imborp:objecttype ?supertype . }
+        OPTIONAL { ?ot skos:altLabel ?altLabel . }
+        OPTIONAL { ?ot skos:definition ?definition . }
+    }
+}

@@ -1,0 +1,66 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
+
+INSERT {
+    GRAPH graph:GUID {
+        ?hoofdobject imborp:guid ?groepGUID .
+    }
+    
+    GRAPH graph:Groeperingen {
+        groep:IMBORHierarchieObjecttypegroepen
+            a crow:HierarchischeCollectie ;
+            rdfs:label "IMBOR Objecttypehiërarchie: Objecttypegroepen" ;
+            skos:member ?hoofdobject ;
+        .
+
+        ?groepCollectie
+            a crow:ThematischeCollectie ;
+            rdfs:label ?objecttypegroepcollectielabel ;
+            skos:definition ?definition ;
+            .
+    }
+
+    GRAPH graph:Objecten {
+        ?groep
+            a rdfs:Class ;
+            rdfs:label ?label ;
+            skos:definition ?definition ;
+            .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_ObjecttypeGroepen {
+        ?groep
+            rdfs:label ?label ;
+            imborp:guid ?groepGUID ;
+            .
+
+        OPTIONAL { ?groep imborp:hoofdobject ?hoofdobject . }
+        OPTIONAL { ?groep skos:definition ?definition . }
+    }
+
+    BIND(
+        CONCAT(
+            "IMBOR Objecttypegroep '",
+            ?label,
+            "'"
+        )
+        AS ?objecttypegroepcollectielabel
+    )
+
+    BIND(
+        URI(
+            REPLACE(
+                STR(?groep), STR(imbor:), STR(groep:)
+            )
+        )
+        AS ?groepCollectie
+    )
+}

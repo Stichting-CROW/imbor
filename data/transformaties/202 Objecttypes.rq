@@ -1,0 +1,83 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
+
+
+INSERT {
+    GRAPH graph:GUID {
+        ?ot imborp:guid ?guid .
+    }
+
+    GRAPH graph:Objecttypen {
+        ?ot a rdfs:Class ;
+            rdfs:label ?label ;
+            skos:altLabel ?altLabel ;
+            skos:definition ?definition ;
+            skos:editorialNote ?editorialNote ;
+            rdfs:isDefinedBy ?informatiemodel ;
+            .
+
+        ?ot rdfs:subClassOf ?on2 .
+        ?on2 rdfs:subClassOf ?on1 .
+        ?ot rdfs:subClassOf ?objecttypegroep .
+    }
+
+    GRAPH graph:Groeperingen {
+        groep:IMBORHierarchieObjecttypes a crow:HierarchischeCollectie ;
+            rdfs:label "IMBOR Objecttypehiërarchie: Objecttypes" ;
+            skos:member ?ot ;
+        .
+
+        ?objecttypegroep skos:member ?ot .
+    }
+}
+
+WHERE {
+    # X_Objecttype ObjecttypeNiveau1 is
+    # 1. 'Beheerobject'
+    # 2. 'Groenobject/Sluis/Wegas' voor de raakvlakobjecten
+    # 3. of leeg.
+
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            rdfs:label ?label ;
+            imborp:guid ?guid ;
+            
+            imborp:informatiemodel ?informatiemodel ;
+        .
+
+        OPTIONAL { ?ot skos:altLabel ?altLabel . }
+        OPTIONAL { ?ot skos:definition ?definition . }
+        OPTIONAL { ?ot skos:editorialNote ?editorialNote . }
+
+        OPTIONAL { ?ot imborp:objecttypegroep ?objecttypegroep . }
+        OPTIONAL { ?ot imborp:ObjecttypeNiveau1 ?on1 . }  # beheerobject
+        OPTIONAL { ?ot imborp:ObjecttypeNiveau2 ?on2 . }  # hoofdobject v/e objecttypegroep
+    }
+
+    # FILTER ( ?on1 != 400 || ?on1 != "400" )  # TODO: Raakvlakobjecten
+}
+
+;
+
+INSERT {
+    GRAPH graph:Objecttypen {
+        ?ot rdfs:subClassOf imbor:Raakvlakobject .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:isRaakvlakobject true ;
+            .
+    }
+}
