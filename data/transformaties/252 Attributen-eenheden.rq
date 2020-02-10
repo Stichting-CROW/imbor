@@ -1,0 +1,70 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
+PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+
+
+INSERT {
+    GRAPH graph:Eigenschappen {
+        ?attr
+            nta8035:unit ?unit ;
+            nta8035:quantityKind ?qkind ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            sh:datatype ?unit ;
+            .
+    }
+
+    GRAPH graph:GUID {
+        ?eenheid imborp:guid ?guid .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Attributen {
+        ?attr imborp:eenheid ?eenheidURI .
+    }
+
+    GRAPH graph:X_Eenheden {
+        ?eenheidURI
+            imborp:guid ?guid ;
+
+            imborp:kind ?grootheid ;
+            imborp:unit ?eenheid ;
+            .
+    }
+
+    BIND(
+        URI(
+            REPLACE(?grootheid, 'quantitykind:', STR(qudt:))
+        )
+        AS ?qkind
+    )
+
+    BIND(
+        URI(
+            REPLACE(?eenheid, 'unit:', STR(unit:))
+        )
+        AS ?unit
+    )
+
+    GRAPH graph:Shapes {
+        ?shape
+            a sh:PropertyShape ;
+            sh:path ?attr ;
+            .
+    }
+}

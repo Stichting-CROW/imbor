@@ -1,0 +1,91 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
+PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX imborvwl: <http://linkeddata.crow.nl/imbor/id/domeinwaarde/>
+
+
+INSERT {    
+    GRAPH graph:Domeinwaarden {
+        # Elke domeinwaarde is een instantie van een type
+        ?domeinwaardeType
+            a rdfs:Class ;
+            rdfs:subClassOf nta8035:EnumerationType ;
+
+            imborp:attribuut ?attr ;
+            rdfs:label ?attrLabelType ;
+            .
+
+        ?domeinwaarde
+            a ?domeinwaardeType ;
+
+            rdfs:label ?label ;
+            skos:altLabel ?altLabel ;
+            imborp:bovenliggendLabel ?bovenliggendLabel ;
+            skos:definition ?definition ;
+
+            rdfs:isDefinedBy ?informatiemodel ;
+    }
+
+    GRAPH graph:GUID {
+        ?domeinwaarde imborp:guid ?guid .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_AttributenDomeinwaarden {
+        ?domeinwaarde
+            rdfs:label ?label ;
+            imborp:guid ?guid ;
+
+            imborp:attribuut ?attr ;
+            imborp:informatiemodel ?informatiemodel ;
+            .
+
+        OPTIONAL { ?domeinwaarde imborp:bovenliggendLabel ?bovenliggendLabel . }
+        OPTIONAL { ?domeinwaarde skos:altLabel ?altLabel . }
+        OPTIONAL { ?domeinwaarde skos:definition ?definition . }
+    }
+
+    # Filter alvast de attributen die in IMBOR-LD als rdfs:subClassOf zijn
+    # gemodelleerd.
+    FILTER ( ?attr != imborp:P256 )  # Type
+    FILTER ( ?attr != imborp:P257 )  # Type gedetailleerd
+    FILTER ( ?attr != imborp:P760 )  # Type extra gedetailleerd
+
+    BIND(
+        URI(
+            CONCAT(
+                REPLACE(
+                    STR(?attr), STR(imborp:), STR(imborvwl:)
+                ),
+                "Type"
+            )
+        )
+        AS ?domeinwaardeType
+    )
+
+    GRAPH graph:X_Attributen {
+        OPTIONAL { ?attr rdfs:label ?attrLabel . }
+    }
+
+    BIND(
+        CONCAT(
+            "Waardes voor '",
+            ?attrLabel,
+            "'"
+        )
+        AS ?attrLabelType
+    )
+}
+

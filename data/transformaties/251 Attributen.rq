@@ -1,0 +1,77 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+
+INSERT {
+    GRAPH graph:Eigenschappen {
+        ?attr
+            a rdf:Property ;
+            rdfs:label ?label ;
+            skos:definition ?definition ;
+            skos:editorialNote ?editorialNote ;
+            skos:altLabel ?altLabel ;
+
+            rdfs:isDefinedBy ?informatiemodel ;  
+            # TODO: crossref met X_ObjecttypesAttributen.informatiemodel
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?shape
+            a sh:PropertyShape ;
+            sh:path ?attr ;
+            sh:group ?attribuutsorteergroep ;
+            .
+
+        ?attribuutsorteergroep
+            # TODO: Benoem dat Attribuutsorteergroepen sh:PropertyGroup's zijn geworden
+            a sh:PropertyGroup ;
+            sh:order ?order ;
+            rdfs:label ?sorteergroepLabel ;
+            .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Attributen {
+        ?attr
+            imborp:guid ?guid ;
+            rdfs:label ?label ;
+            .
+        OPTIONAL { ?attr skos:altLabel ?altLabel . }
+        OPTIONAL { ?attr skos:definition ?definition . }
+        OPTIONAL { ?attr skos:editorialNote ?editorialNote . }
+
+        OPTIONAL { ?attr imborp:attribuutsorteergroep ?attribuutsorteergroep . }
+        OPTIONAL { ?attr imborp:informatiemodel ?informatiemodel . }
+    }
+
+    BIND(
+        URI(
+            CONCAT(
+                REPLACE( STR(?attr), STR(imborp:), STR(shape:) ),
+                "Shape"
+            )
+        )
+        AS ?shape
+    )
+
+    GRAPH graph:X_Attribuutsorteergroep {
+        ?attribuutsorteergroep
+            rdfs:label ?sorteergroepLabel ;
+            imborp:volgorde ?volgorde ;
+            .
+    }
+
+    BIND ( xsd:integer(?volgorde) AS ?order )
+
+}
