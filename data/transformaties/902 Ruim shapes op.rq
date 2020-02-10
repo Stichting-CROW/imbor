@@ -1,0 +1,43 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# Transformeer sh:or ( prop1 ) -> sh:property prop1
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?shape sh:or ?list .
+
+        ?list
+            rdf:first ?property ;
+            rdf:rest rdf:nil ;
+            .
+    }
+}
+
+INSERT {
+    GRAPH graph:Shapes {
+        ?shape sh:property ?property .
+    }
+}
+
+USING graph:Shapes
+WHERE {
+    ?shape sh:or ?list .
+
+    ?list
+        rdf:first ?property ;
+        rdf:rest rdf:nil ;
+        .
+}
+
+;
+
+# Ruim lege sh:or op
+# sh:or () ->
+
+DELETE WHERE {
+    GRAPH graph:Shapes {
+        ?shape sh:or rdf:nil .
+    }
+}

@@ -1,0 +1,26 @@
+# Klaar met alle oude data
+# Verwijder de tabel-grafen
+
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+
+CLEAR GRAPH graph:REF_Type ;
+CLEAR GRAPH graph:REF_TypePlus ;
+CLEAR GRAPH graph:REF_TypePlus2 ;
+CLEAR GRAPH graph:X_Attributen ;
+CLEAR GRAPH graph:X_AttributenDomeinwaarden ;
+CLEAR GRAPH graph:X_Attribuutsoorten ;
+CLEAR GRAPH graph:X_Attribuutsorteergroep ;
+CLEAR GRAPH graph:X_AutomatischVia ;
+CLEAR GRAPH graph:X_Eenheden ;
+CLEAR GRAPH graph:X_Gegevenstypen ;
+CLEAR GRAPH graph:X_Informatiemodellen ;
+CLEAR GRAPH graph:X_InformatiemodelStatus ;
+CLEAR GRAPH graph:X_ObjecttypeGroepen ;
+CLEAR GRAPH graph:X_ObjecttypeRelaties ;
+CLEAR GRAPH graph:X_Objecttypes ;
+CLEAR GRAPH graph:X_ObjecttypesAttributen ;
+CLEAR GRAPH graph:X_Relaties ;
+CLEAR GRAPH graph:X_Tabellen ;
+CLEAR GRAPH graph:X_Tabelsoort ;
+CLEAR GRAPH graph:X_Vakdisciplines ;
+CLEAR GRAPH graph:X_VakdisciplinesObjecttype ;
