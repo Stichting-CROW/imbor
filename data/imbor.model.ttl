@@ -71,8 +71,9 @@ crow:ThematischeCollectie
 crow:guid
   a rdfs:Property , owl:ObjectProperty , owl:DeprecatedProperty ;
   rdfs:subPropertyOf dc:identifier ;
-  rdfs:label "GUID"@nl-NL ;
-  rdfs:comment "Unieke identifier (vervallen)"@nl-NL ;
+  rdfs:label "Unieke identifier"@nl-NL ;
+  skos:altLabel "UUID"@en , "GUID"@en ;
+  rdfs:comment "Vervallen"@nl-NL ;
   skos:editorialNote """Opgenomen vanuit IMBOR in Access-formaat voor
   conversiedoeleinden. In Linked data volstaat de URI van het concept."""@nl-NL ;
   .
