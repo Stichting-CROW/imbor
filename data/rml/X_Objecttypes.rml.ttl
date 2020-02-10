@@ -106,7 +106,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate imborp:isHulpobject ;
+        rr:predicate imborp:isRaakvlakobject ;
         rr:objectMap [
             rml:reference "Hulpobject" ;
             rml:datatype xsd:boolean ;

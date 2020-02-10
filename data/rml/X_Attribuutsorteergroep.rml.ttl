@@ -54,7 +54,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate imbor:volgorde ;
+        rr:predicate imborp:volgorde ;
         rr:objectMap [
             rml:reference "Volgorde" ;
         ] ;

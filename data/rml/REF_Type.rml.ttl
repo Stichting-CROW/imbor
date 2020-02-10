@@ -55,7 +55,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate imbor:objecttype ;
+        rr:predicate imborp:objecttype ;
         rr:objectMap [
             rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBB{ObjecttypeID}";
             rr:termType rr:IRI ;
