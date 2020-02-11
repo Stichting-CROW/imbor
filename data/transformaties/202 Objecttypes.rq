@@ -16,7 +16,7 @@ INSERT {
         ?ot imborp:guid ?guid .
     }
 
-    GRAPH graph:Objecttypen {
+    GRAPH graph:Objecten {
         ?ot a rdfs:Class ;
             rdfs:label ?label ;
             skos:altLabel ?altLabel ;
@@ -69,7 +69,7 @@ WHERE {
 ;
 
 INSERT {
-    GRAPH graph:Objecttypen {
+    GRAPH graph:Objecten {
         ?ot rdfs:subClassOf imbor:Raakvlakobject .
     }
 }
