@@ -9,7 +9,6 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
@@ -70,18 +69,6 @@ shape:PhysicalObject-subClassOf
 
   sh:path rdfs:subClassOf ;
   sh:class nta8035:PhysicalObject ;
-  .
-
-# Property Shapes: guid
-# ---------------
-# De vervallen relatie crow:guid kan met een string of met een
-# <urn:uuid:...> IRI verwijzen naar een UUID identficatie.
-
-shape:GUIDObject
-  a sh:NodeShape ;
-
-  sh:targetsObjectsOf crow:guid ;
-  sh:nodeKind sh:IRIOrLiteral ;
   .
 
 # Property Shapes: geometrie
