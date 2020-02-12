@@ -60,6 +60,8 @@ WHERE {
         OPTIONAL { ?attr imborp:informatiemodel ?informatiemodel . }
     }
 
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
+
     BIND(
         URI(
             CONCAT(

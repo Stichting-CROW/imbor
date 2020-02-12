@@ -44,4 +44,6 @@ WHERE {
             imborp:objecttype ?ot ;
             .
     }
+
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
 }

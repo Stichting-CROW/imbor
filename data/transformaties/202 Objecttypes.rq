@@ -62,7 +62,7 @@ WHERE {
         OPTIONAL { ?ot imborp:ObjecttypeNiveau2 ?on2 . }  # hoofdobject v/e objecttypegroep
     }
 
-    # FILTER ( ?on1 != 400 || ?on1 != "400" )  # TODO: Raakvlakobjecten
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
 }
 
 ;

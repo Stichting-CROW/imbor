@@ -60,6 +60,8 @@ WHERE {
         OPTIONAL { ?domeinwaarde skos:definition ?definition . }
     }
 
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
+
     # Filter alvast de attributen die in IMBOR-LD als rdfs:subClassOf zijn
     # gemodelleerd.
     FILTER ( ?attr != imborp:P256 )  # Type
