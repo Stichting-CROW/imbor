@@ -1,69 +1,114 @@
-PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+# Het IMBOR meta-model: shapes
+# --------------------
+# The IMBOR metamodel, documented in Dutch.
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
-PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#> 
-PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
 
-shape:PhsyicalObject a sh:NodeShape ;
-  sh:targetClass nta8035:PhsyicalObject ;
+# NodeShapes: Physical object
+# ----------
+# Noot: de meeste Shapes zitten in IMBOR zelf.
 
-  sh:property [
-    sh:path rdfs:label ;
-    sh:datatype xsd:string ;
-  ] ;
+shape:PhysicalObject
+  a sh:NodeShape ;
+  sh:name "Physical Object" ;
+  sh:targetClass nta8035:PhysicalObject ;
 
-  sh:property [
-    sh:path skos:prefLabel ;
-    sh:maxCount 1 ;
-    sh:datatype xsd:string ;
-  ] ; 
+  sh:property shape:PhysicalObject-label ;
+  sh:property shape:PhysicalObject-prefLabel ;
+  sh:property shape:PhysicalObject-definition ;
+  sh:property shape:PhysicalObject-hasPart ;
+  sh:property shape:PhysicalObject-subClassOf ;
+  .
 
-  sh:property [
-    sh:path skos:definition ;
-    sh:datatype xsd:string ;
-  ] ;
+# Property Shapes: Physical object
+# ---------------
+# De eigenschappen zijn niet met blanco's gekoppeld, zodat ze met sh:deactivated
+# overruled kunnen worden.
 
-  sh:property [
-    sh:path nta8035:hasPart ;
-    sh:class nta8035:PhsyicalObject ;
-  ]
+shape:PhysicalObject-label
+  a sh:PropertyShape ;
+  sh:message "Elk fysiek object moet tenminste een label hebben"@nl-NL ;
+  sh:path rdfs:label ;
+  sh:datatype rdf:langString ;
+  sh:minCount 1 ;
+  .
 
-  sh:property [
-    sh:path rdfs:subClassOf ;
-    sh:class nta8035:PhysicalObject ;
-  ]
-.
+shape:PhysicalObject-prefLabel
+  a sh:PropertyShape ;
 
-shape:Lijnobject a sh:PropertyShape ;
-  rdfs:label "lijngeometrie" ;
-  rdfs:comment "Voor een object dat geometrie als lijn kan hebben." ; 
-  sh:path (geo:geometry geo:asWKT) ;
-  sh:datatype geo:wktLiteral ;
-  sh:pattern "LINE" ;
-.
+  sh:path skos:prefLabel ;
+  sh:maxCount 1 ;
+  sh:datatype rdf:langString ;
+  .
 
-shape:Puntobject a sh:PropertyShape ;
-  rdfs:label "puntgeometrie" ;
-  rdfs:comment "Voor een object dat geometrie als punt kan hebben." ; 
+shape:PhysicalObject-definition
+  a sh:PropertyShape ;
+
+  sh:path skos:definition ;
+  sh:datatype rdf:langString ;
+  .
+
+shape:PhysicalObject-hasPart
+  a sh:PropertyShape ;
+
+  sh:path nta8035:hasPart ;
+  sh:class nta8035:PhysicalObject ;
+  .
+
+shape:PhysicalObject-subClassOf
+  a sh:PropertyShape ;
+
+  sh:path rdfs:subClassOf ;
+  sh:class nta8035:PhysicalObject ;
+  .
+
+# Property Shapes: geometrie
+# ---------------
+# Mogelijke geometrie-waardes zijn in IMBOR op objecttype-niveau bepaald.
+# Objecttype-shapes worden gegenereerd in de ontologie met deze propertyshapes
+# als waarde bij sh:or of sh:property.
+
+shape:PuntGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "puntgeometrie"@nl-NL ;
+  sh:description "Geometrie kan een punt zijn"@nl-NL ;
   sh:path (geo:geometry geo:asWKT) ;
   sh:datatype geo:wktLiteral ;
   sh:pattern "POINT" ;
 .
 
-shape:Vlakobject a sh:PropertyShape ;
-  rdfs:label "vlakgeometrie" ;
-  rdfs:comment "Voor een object dat geometrie als vlak kan hebben." ; 
+shape:LijnGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "lijngeometrie"@nl-NL ;
+  sh:description "Geometrie kan een lijn zijn"@nl-NL ;
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "LINESTRING" ;
+.
+
+shape:VlakGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "vlakgeometrie"@nl-NL ;
+  sh:description "Geometrie kan een vlak zijn"@nl-NL ;
   sh:path (geo:geometry geo:asWKT) ;
   sh:datatype geo:wktLiteral ;
   sh:pattern "POLYGON" ;
 .
 
-shape:Multivlakobject a sh:PropertyShape ;
-  rdfs:label "multivlakgeometrie" ;
-  rdfs:comment "Voor een object dat geometrie als multivlak kan hebben." ; 
+shape:MultiVlakGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "multivlakgeometrie"@nl-NL ;
+  sh:description "Geometrie kan een multivlak zijn"@nl-NL ;
   sh:path (geo:geometry geo:asWKT) ;
   sh:datatype geo:wktLiteral ;
   sh:pattern "MULTIPOLYGON" ;
 .
-
