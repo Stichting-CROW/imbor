@@ -29,11 +29,6 @@ INSERT {
             skos:member ?hoofdobject ;
         .
 
-        groep:ObjecttypeGroepen
-
-            skos:member ?groep ;
-            .
-
         ?groep
             a skos:Collection ;
             rdfs:label ?objecttypegroepcollectielabel ;
@@ -47,10 +42,13 @@ WHERE {
         ?groep
             rdfs:label ?label ;
             imborp:guid ?groepGUID ;
+            imborp:informatiemodel ?informatiemodel ;
             .
 
         OPTIONAL { ?groep imborp:hoofdobject ?hoofdobject . }
         OPTIONAL { ?groep skos:definition ?definition . }
+
+        FILTER ( ?informatiemodel = groep:INF18 )
     }
 
     BIND(
