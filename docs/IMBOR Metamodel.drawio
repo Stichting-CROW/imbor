@@ -1,20 +1,18 @@
-<mxfile host="www.draw.io" modified="2020-02-12T12:26:36.615Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="4Ib_orVbnYH75bQQ2oZz" version="12.6.7" type="github">
+<mxfile host="www.draw.io" modified="2020-02-12T12:38:02.339Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="MPCeDujxXI2NfIHsWM8p" version="12.6.7" type="github">
   <diagram id="uO4dAVEa6rhhREKeQXkx" name="Page-1">
     <mxGraphModel dx="1662" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-140" value="TypeExtraGedetailleerd" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="1389" width="160" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-139" value="TypeGedetailleerd" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="1365" width="160" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-138" value="Type" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="1340" width="160" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-137" value="ObjectType" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="1315" width="160" height="30" as="geometry"/>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-142" value="rdf:type" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="aZ_iibs6CTDmy4hI5hPu-141" target="aZ_iibs6CTDmy4hI5hPu-5">
+          <mxGeometry x="-0.7573" y="-30" relative="1" as="geometry">
+            <mxPoint x="135" y="1370" as="sourcePoint"/>
+            <mxPoint x="100" y="134" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="90" y="1440"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-120" value="&lt;i&gt;&quot;bij AnnotationProperty, ofwel eigenschappen met tekst waardes&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="930" y="700" width="540" height="273" as="geometry"/>
@@ -370,7 +368,7 @@
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-133" value="skos:member" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="aZ_iibs6CTDmy4hI5hPu-132">
           <mxGeometry x="-0.2714" y="1" relative="1" as="geometry">
-            <mxPoint x="19" y="1" as="offset"/>
+            <mxPoint x="16" y="1" as="offset"/>
           </mxGeometry>
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-52" value="groep:IMBORVakdisciplineCollectie" style="html=1;" vertex="1" parent="1">
@@ -385,16 +383,19 @@
             <mxPoint as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-131" value="Bomen" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="1200" width="160" height="50" as="geometry"/>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-131" value="&lt;div&gt;Basisinrichting; Bomen; Borden; Civiel constructies; Faunavoorzieningen; Groen; Kabels en leidingen; Meubilair; Riolering; Spelen; Sport; Tunnels; Verkeer; Verkeersregelinstallaties; Verlichting; Water; Wegen&lt;br&gt;&lt;/div&gt;" style="html=1;align=center;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1200" width="400" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-134" value="ObjectTypeGroep" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="1290" width="160" height="30" as="geometry"/>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-134" value="ObjectTypeGroep; ObjectType; Type; TypeGedetailleerd; TypeExtraGedetailleerd" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1290" width="400" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-136" value="skos:member" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="280" y="1305" as="geometry">
             <mxPoint x="19" y="1" as="offset"/>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-141" value="groep:IMBORInformatiemodellen" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1440" width="230" height="50" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
