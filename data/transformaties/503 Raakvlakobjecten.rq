@@ -1,0 +1,68 @@
+PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
+
+
+# # #                # # #
+# # Raakvlakobject = TRUE
+# # #                # # #
+
+INSERT {
+    GRAPH graph:Objecten {
+        ?ot rdfs:subClassOf nta8035:PhysicalObject .
+    }
+
+    GRAPH graph:Shapes {
+        ?nodeShape
+            sh:property ?propertyShape ;
+            .
+
+        ?propertyShape 
+            a sh:PropertyShape ;
+            sh:path nta8035:hasPart ;
+            sh:class ?ot ;
+            .
+    }
+}
+
+WHERE {
+    GRAPH graph:X_Objecttypes {
+        ?ot
+            imborp:isRaakvlakobject true ;
+            imborp:informatiemodel ?informatiemodel ;
+            imborp:ObjecttypeNiveau1 ?bijbehorendObjecttype ;
+        .
+    }
+    
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
+
+    GRAPH graph:Shapes {
+        ?nodeShape
+            sh:targetClass ?bijbehorendObjecttype ;
+            .
+    }
+
+    BIND(
+        URI(
+            CONCAT(
+                STR(shape:),
+                "hasPart-",
+                REPLACE(
+                    STR(?ot),
+                    STR(imbor:),
+                    ''
+                ),
+                "-Shape"
+            )
+        )
+        AS ?propertyShape
+    )
+}
