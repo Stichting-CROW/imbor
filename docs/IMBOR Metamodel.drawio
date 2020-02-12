@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-02-12T10:11:06.931Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="iNh3HvfkOEMWT2UBXOMz" version="12.6.7" type="github">
+<mxfile host="www.draw.io" modified="2020-02-12T10:24:40.603Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="lJUhlhZCLuzN-n9hOMy0" version="12.6.7" type="github">
   <diagram id="uO4dAVEa6rhhREKeQXkx" name="Page-1">
     <mxGraphModel dx="1662" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -179,6 +179,45 @@
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-49" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="aZ_iibs6CTDmy4hI5hPu-46">
           <mxGeometry y="78" width="160" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-54" value="imbor:ThematischeCollectie" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-56" value="rdf:type" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="aZ_iibs6CTDmy4hI5hPu-53" target="aZ_iibs6CTDmy4hI5hPu-5">
+          <mxGeometry x="0.25" y="41" relative="1" as="geometry">
+            <mxPoint x="130" y="210" as="sourcePoint"/>
+            <mxPoint x="130" y="154" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="120" y="210"/>
+              <mxPoint x="120" y="210"/>
+            </Array>
+            <mxPoint x="31" y="40" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-57" value="rdf:type" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="aZ_iibs6CTDmy4hI5hPu-54" target="aZ_iibs6CTDmy4hI5hPu-5">
+          <mxGeometry x="0.1111" y="-10" relative="1" as="geometry">
+            <mxPoint x="130" y="290" as="sourcePoint"/>
+            <mxPoint x="130" y="154" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="120" y="250"/>
+              <mxPoint x="120" y="250"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-52" value="imbor:VakdisciplineCollectie" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-53" value="imbor:HierarchischeCollectie" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-55" value="rdf:type" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aZ_iibs6CTDmy4hI5hPu-52" target="aZ_iibs6CTDmy4hI5hPu-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="160"/>
+              <mxPoint x="120" y="160"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
