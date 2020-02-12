@@ -3,6 +3,7 @@
 # Daarom worden alle niet-talige labels in het Nederlands gezet.
 
 PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 DELETE {
@@ -21,7 +22,7 @@ WHERE {
     }
 
     FILTER ( ?g != graph:Shapes )
-    
+    FILTER ( DATATYPE(?o) = xsd:string )
     FILTER ( !LANGMATCHES( lang(?o), "*") )
     BIND ( STRLANG(?o, "nl-NL") as ?taalstr )
 }
