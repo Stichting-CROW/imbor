@@ -9,7 +9,7 @@ PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 INSERT {
     GRAPH graph:GUID {
-        ?hoofdobject imborp:guid ?groepGUID .
+        ?hoofdobject skos:notation ?groepGUID .
     }
     
     GRAPH graph:Groeperingen {

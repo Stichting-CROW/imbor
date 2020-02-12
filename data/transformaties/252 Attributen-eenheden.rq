@@ -29,7 +29,7 @@ INSERT {
     }
 
     GRAPH graph:GUID {
-        ?eenheid imborp:guid ?guid .
+        ?eenheid skos:notation ?guid .
     }
 }
 

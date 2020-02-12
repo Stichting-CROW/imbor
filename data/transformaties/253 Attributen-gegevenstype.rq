@@ -23,7 +23,7 @@ INSERT {
     }
 
     GRAPH graph:GUID {
-        ?unit imborp:guid ?guid .
+        ?unit skos:notation ?guid .
     }
 }
 

@@ -12,6 +12,10 @@ PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 
 
 INSERT {
+    GRAPH graph:GUID {
+        ?attr skos:notation ?guid .
+    }
+    
     GRAPH graph:Eigenschappen {
         ?attr
             a rdf:Property ;

@@ -38,7 +38,7 @@ INSERT {
     }
 
     GRAPH graph:GUID {
-        ?domeinwaarde imborp:guid ?guid .
+        ?domeinwaarde skos:notation ?guid .
     }
 }
 

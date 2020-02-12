@@ -13,7 +13,7 @@ PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 INSERT {
     GRAPH graph:GUID {
-        ?ot imborp:guid ?guid .
+        ?ot skos:notation ?guid .
     }
 
     GRAPH graph:Objecten {
