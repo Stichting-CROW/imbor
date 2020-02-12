@@ -7,7 +7,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
+
 
 INSERT {
     GRAPH graph:GUID {
@@ -25,7 +25,8 @@ INSERT {
     }
 
     GRAPH graph:Groeperingen {
-        groep:IMBORHierarchieTypes a crow:HierarchischeCollectie ;
+        groep:ImborAlleTypes
+            a skos:Collection ;
             rdfs:label "IMBOR Objecttypehiërarchie: Types" ;
             skos:member ?ot ;
         .

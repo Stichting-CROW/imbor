@@ -8,7 +8,6 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 
 INSERT {
@@ -31,12 +30,13 @@ INSERT {
     }
 
     GRAPH graph:Groeperingen {
-        groep:IMBORHierarchieObjecttypes a crow:HierarchischeCollectie ;
+        groep:ImborAlleObjecttypes
+            a skos:Collection ;
             rdfs:label "IMBOR Objecttypehiërarchie: Objecttypes" ;
             skos:member ?ot ;
         .
 
-        ?objecttypegroep skos:member ?ot .
+        ?groepCollectie skos:member ?ot .
     }
 }
 

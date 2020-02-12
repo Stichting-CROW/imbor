@@ -8,13 +8,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 
 INSERT {
     GRAPH graph:Groeperingen {
         ?vakdiscipline
-            a crow:VakdisciplineCollectie ;
+            a skos:Collection ;
             rdfs:label ?label ;
             rdfs:comment ?definitie ;
             rdfs:isDefinedBy ?informatiemodel ;

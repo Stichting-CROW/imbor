@@ -26,13 +26,13 @@ INSERT {
             .
     }
 
-    GRAPH graph:Objecten {
-        ?groep
-            a rdfs:Class ;
-            rdfs:label ?label ;
-            skos:definition ?definition ;
-            .
-    }
+    # GRAPH graph:Objecten {
+    #     ?groep
+    #         a rdfs:Class ;
+    #         rdfs:label ?label ;
+    #         skos:definition ?definition ;
+    #         .
+    # }
 }
 
 WHERE {
