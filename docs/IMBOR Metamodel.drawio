@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-02-12T12:38:02.339Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="MPCeDujxXI2NfIHsWM8p" version="12.6.7" type="github">
+<mxfile host="www.draw.io" modified="2020-02-12T13:16:32.445Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0" etag="_yS5J-_tHtuS0wNCw3PU" version="12.6.7" type="github">
   <diagram id="uO4dAVEa6rhhREKeQXkx" name="Page-1">
     <mxGraphModel dx="1662" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,13 +14,13 @@
             <mxPoint as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-120" value="&lt;i&gt;&quot;bij AnnotationProperty, ofwel eigenschappen met tekst waardes&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;" vertex="1" parent="1">
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-120" value="&lt;i&gt;&quot;bij AnnotationProperty, ofwel eigenschappen met tekst waardes&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;strokeColor=#FF00FF;" vertex="1" parent="1">
           <mxGeometry x="930" y="700" width="540" height="273" as="geometry"/>
         </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-119" value="&lt;i&gt;&quot;bij DataProperty, ofwel eigenschappen met eenheden&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;" vertex="1" parent="1">
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-119" value="&lt;i&gt;&quot;bij DataProperty, ofwel eigenschappen met eenheden&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;strokeColor=#00CC00;" vertex="1" parent="1">
           <mxGeometry x="930" y="350" width="540" height="330" as="geometry"/>
         </mxCell>
-        <mxCell id="aZ_iibs6CTDmy4hI5hPu-118" value="&lt;i&gt;&quot;bij ObjectProperty, ofwel vastewaardenlijstjen&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;" vertex="1" parent="1">
+        <mxCell id="aZ_iibs6CTDmy4hI5hPu-118" value="&lt;i&gt;&quot;bij ObjectProperty, ofwel vastewaardenlijstjen&quot;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=bottom;align=left;spacingTop=-6;dashed=1;strokeColor=#B30E2F;" vertex="1" parent="1">
           <mxGeometry x="930" y="10" width="540" height="320" as="geometry"/>
         </mxCell>
         <mxCell id="aZ_iibs6CTDmy4hI5hPu-1" value="nta8035:PhysicalObject" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
