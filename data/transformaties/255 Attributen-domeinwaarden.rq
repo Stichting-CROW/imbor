@@ -31,7 +31,7 @@ INSERT {
 
             rdfs:label ?label ;
             skos:altLabel ?altLabel ;
-            imborp:bovenliggendLabel ?bovenliggendLabel ;
+            # imborp:bovenliggendLabel ?bovenliggendLabel ;  # #41 bovenliggend label wordt eruit gelaten
             skos:definition ?definition ;
             .
     }
