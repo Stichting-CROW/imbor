@@ -15,28 +15,27 @@ INSERT {
         ?ot skos:notation ?guid .
     }
 
+    GRAPH graph:Groeperingen {
+        ?informatiemodel skos:member ?ot .
+    }
+
     GRAPH graph:Objecten {
         ?ot a rdfs:Class ;
             rdfs:label ?label ;
             skos:altLabel ?altLabel ;
             skos:definition ?definition ;
             skos:editorialNote ?editorialNote ;
-            rdfs:isDefinedBy ?informatiemodel ;
             .
-
-        ?ot rdfs:subClassOf ?on2 .
-        ?on2 rdfs:subClassOf ?on1 .
-        ?ot rdfs:subClassOf ?objecttypegroep .
     }
 
     GRAPH graph:Groeperingen {
-        groep:ImborAlleObjecttypes
+        groep:Objecttype
             a skos:Collection ;
             rdfs:label "IMBOR Objecttypehiërarchie: Objecttypes" ;
             skos:member ?ot ;
         .
 
-        ?groepCollectie skos:member ?ot .
+        ?objecttypegroep skos:member ?ot .
     }
 }
 

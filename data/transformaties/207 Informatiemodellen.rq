@@ -9,39 +9,30 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
-
 INSERT {
     GRAPH graph:Groeperingen {
-        groep:IMBORVakdisciplineCollectie
+        groep:ImborInformatiemodellen
             a skos:Collection ;
-            rdfs:label "IMBOR Vakdisciplines" ;
-            skos:member ?vakdiscipline ;
+            rdfs:label "Informatiemodellen" ;
+            skos:definition "Informatiemodellen gebruikt in IMBOR"@nl-NL ;
+            skos:member ?informatiemodel ;
             .
 
-        ?vakdiscipline
+        ?informatiemodel
             a skos:Collection ;
+            skos:notation ?guid ;
             rdfs:label ?label ;
-            rdfs:comment ?definitie ;
-            skos:member ?ot ;
+            skos:definition ?definition ;
             .
-
-        ?informatiemodel skos:member ?vakdiscipline .
     }
 }
 
 WHERE {
-    GRAPH graph:X_Vakdisciplines {
-        ?vakdiscipline
+    GRAPH graph:X_Informatiemodellen {
+        ?informatiemodel 
+            imborp:guid ?guid ;
             rdfs:label ?label ;
-            skos:definition ?definitie ;
-            imborp:informatiemodel ?informatiemodel ;
-            .
-    }
-
-    GRAPH graph:X_VakdisciplinesObjecttype {
-        ?vo
-            imborp:vakdiscipline ?vakdiscipline ;
-            imborp:objecttype ?ot ;
+            skos:definition ?definition ;
             .
     }
 }

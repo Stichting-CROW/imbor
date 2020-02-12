@@ -125,7 +125,7 @@
         rr:predicateObjectMap [
         rr:predicate imborp:InformatiemodelNaarID ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/INF{InformatiemodelNaarID}" ;
+            rr:template "http://linkeddata.crow.nl/imbor/id/groepering/INF{InformatiemodelNaarID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;

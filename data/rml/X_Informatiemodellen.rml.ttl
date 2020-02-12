@@ -42,7 +42,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/INF{InformatiemodelID}" ;
+        rr:template "http://linkeddata.crow.nl/imbor/id/groepering/INF{InformatiemodelID}" ;
         rr:graph graph:X_Informatiemodellen ;
     ] ;
 

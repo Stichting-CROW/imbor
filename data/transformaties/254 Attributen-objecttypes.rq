@@ -31,7 +31,6 @@ WHERE {
     GRAPH graph:X_ObjecttypesAttributen {
         ?koppeling
             imborp:attribuut ?attr ;
-            imborp:informatiemodel ?informatiemodel ;
             imborp:object ?ot ;
             imborp:relatie ?relatietype ;
             .

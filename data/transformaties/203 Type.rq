@@ -25,7 +25,7 @@ INSERT {
     }
 
     GRAPH graph:Groeperingen {
-        groep:ImborAlleTypes
+        groep:Type
             a skos:Collection ;
             rdfs:label "IMBOR Objecttypehiërarchie: Types" ;
             skos:member ?ot ;

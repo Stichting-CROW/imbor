@@ -29,7 +29,7 @@
 :informatiemodel
     rr:predicate imborp:informatiemodel ;
     rr:objectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/INF{InformatiemodelID}";
+        rr:template "http://linkeddata.crow.nl/imbor/id/groepering/INF{InformatiemodelID}";
         rr:termType rr:IRI ;
     ] ;
 .

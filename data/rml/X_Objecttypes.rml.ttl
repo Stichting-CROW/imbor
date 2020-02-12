@@ -85,7 +85,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:objecttypegroep ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBA{ObjecttypeGroepID}";
+            rr:template "http://linkeddata.crow.nl/imbor/id/groepering/OBA{ObjecttypeGroepID}";
             rr:termType rr:IRI ;
         ] ;
     ] ;

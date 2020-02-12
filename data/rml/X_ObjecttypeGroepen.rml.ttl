@@ -43,7 +43,7 @@
     ] ;
     
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/OBA{ObjecttypeGroepID}" ;
+        rr:template "http://linkeddata.crow.nl/imbor/id/groepering/OBA{ObjecttypeGroepID}" ;
         rr:graph graph:X_ObjecttypeGroepen ;
     ] ;
 

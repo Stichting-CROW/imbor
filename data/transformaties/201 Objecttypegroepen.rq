@@ -5,7 +5,7 @@ PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
+
 
 INSERT {
     GRAPH graph:GUID {
@@ -13,26 +13,33 @@ INSERT {
     }
     
     GRAPH graph:Groeperingen {
-        groep:IMBORHierarchieObjecttypegroepen
-            a crow:HierarchischeCollectie ;
-            rdfs:label "IMBOR Objecttypehiërarchie: Objecttypegroepen" ;
+        groep:IMBORHierarchischeCollectie
+            a skos:Collection ;
+            rdfs:label "IMBOR Objecttypehiërarchieën" ;
+            skos:member groep:Objecttypegroep ;
+            skos:member groep:Objecttype ;
+            skos:member groep:Type ;
+            skos:member groep:TypeGedetailleerd ;
+            skos:member groep:TypeExtraGedetailleerd ;
+            .
+
+        groep:Objecttypegroep
+            a skos:Collection ;
+            rdfs:label "Objecttypegroepen" ;
             skos:member ?hoofdobject ;
         .
 
-        ?groepCollectie
-            a crow:ThematischeCollectie ;
+        groep:ObjecttypeGroepen
+
+            skos:member ?groep ;
+            .
+
+        ?groep
+            a skos:Collection ;
             rdfs:label ?objecttypegroepcollectielabel ;
             skos:definition ?definition ;
             .
     }
-
-    # GRAPH graph:Objecten {
-    #     ?groep
-    #         a rdfs:Class ;
-    #         rdfs:label ?label ;
-    #         skos:definition ?definition ;
-    #         .
-    # }
 }
 
 WHERE {
@@ -53,14 +60,5 @@ WHERE {
             "'"
         )
         AS ?objecttypegroepcollectielabel
-    )
-
-    BIND(
-        URI(
-            REPLACE(
-                STR(?groep), STR(imbor:), STR(groep:)
-            )
-        )
-        AS ?groepCollectie
     )
 }

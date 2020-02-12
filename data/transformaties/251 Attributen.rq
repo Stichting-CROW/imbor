@@ -23,9 +23,6 @@ INSERT {
             skos:definition ?definition ;
             skos:editorialNote ?editorialNote ;
             skos:altLabel ?altLabel ;
-
-            rdfs:isDefinedBy ?informatiemodel ;  
-            # TODO: crossref met X_ObjecttypesAttributen.informatiemodel
             .
     }
 
@@ -42,6 +39,10 @@ INSERT {
             sh:order ?order ;
             rdfs:label ?sorteergroepLabel ;
             .
+    }
+
+    GRAPH graph:Groeperingen {
+        ?informatiemodel skos:member ?attr .
     }
 }
 

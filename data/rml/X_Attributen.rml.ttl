@@ -157,7 +157,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        # TODO: Onduidelijk wat deze kolom nou betekent. 
+        # Onduidelijk wat deze kolom nou betekent. 
         # Niet gecorreleerd met attribuutsoort of met evt. domeinwaarde
         rr:predicate imborp:heeftReferentietabel ;
         rr:objectMap [

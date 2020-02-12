@@ -33,12 +33,15 @@ INSERT {
             skos:altLabel ?altLabel ;
             imborp:bovenliggendLabel ?bovenliggendLabel ;
             skos:definition ?definition ;
-
-            rdfs:isDefinedBy ?informatiemodel ;
+            .
     }
 
     GRAPH graph:GUID {
         ?domeinwaarde skos:notation ?guid .
+    }
+
+    GRAPH graph:Groeperingen {
+        ?informatiemodel skos:member ?domeinwaarde .
     }
 }
 
