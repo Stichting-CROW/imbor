@@ -23,11 +23,11 @@ shape:PhysicalObject
   sh:name "Physical Object" ;
   sh:targetClass nta8035:PhysicalObject ;
 
-  sh:property shape:PhsyicalObject-label ;
-  sh:property shape:PhsyicalObject-prefLabel ;
-  sh:property shape:PhsyicalObject-definition ;
-  sh:property shape:PhsyicalObject-hasPart ;
-  sh:property shape:PhsyicalObject-subClassOf ;
+  sh:property shape:PhysicalObject-label ;
+  sh:property shape:PhysicalObject-prefLabel ;
+  sh:property shape:PhysicalObject-definition ;
+  sh:property shape:PhysicalObject-hasPart ;
+  sh:property shape:PhysicalObject-subClassOf ;
   .
 
 # Property Shapes: Physical object
@@ -35,7 +35,7 @@ shape:PhysicalObject
 # De eigenschappen zijn niet met blanco's gekoppeld, zodat ze met sh:deactivated
 # overruled kunnen worden.
 
-shape:PhsyicalObject-label
+shape:PhysicalObject-label
   a sh:PropertyShape ;
   sh:message "Elk fysiek object moet tenminste een label hebben"@nl-NL ;
   sh:path rdfs:label ;
@@ -43,7 +43,7 @@ shape:PhsyicalObject-label
   sh:minCount 1 ;
   .
 
-shape:PhsyicalObject-prefLabel
+shape:PhysicalObject-prefLabel
   a sh:PropertyShape ;
 
   sh:path skos:prefLabel ;
@@ -51,21 +51,21 @@ shape:PhsyicalObject-prefLabel
   sh:datatype rdf:langString ;
   .
 
-shape:PhsyicalObject-definition
+shape:PhysicalObject-definition
   a sh:PropertyShape ;
 
   sh:path skos:definition ;
   sh:datatype rdf:langString ;
   .
 
-shape:PhsyicalObject-hasPart
+shape:PhysicalObject-hasPart
   a sh:PropertyShape ;
 
   sh:path nta8035:hasPart ;
-  sh:class nta8035:PhsyicalObject ;
+  sh:class nta8035:PhysicalObject ;
   .
 
-shape:PhsyicalObject-subClassOf
+shape:PhysicalObject-subClassOf
   a sh:PropertyShape ;
 
   sh:path rdfs:subClassOf ;
