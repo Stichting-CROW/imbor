@@ -147,27 +147,6 @@ target="_blank">IMBOR LinkedData design decisions</a>.
 
 _tbd_ 
 
-## Raakvlakken
-
-IMBOR definieert een aantal relaties _tussen_ objecten, zoals beschreven in onderstaande tabel. 
-
-Objecttype                       | ObjecttypeNiveau1
-----------                       | -----------------
-TerreindeelSoortnaam             | Terreindeel
-WegasVerkeersintensiteit         | Wegas
-WegasVerkeerstellingJaar         | Wegas
-WegasVerkeerstelling             | Wegas
-VerhardingsobjectRand            | Verhardingsobject
-GroenobjectConstructielaag       | Groenobject
-GroenobjectSoortnaam             | Groenobject
-GroenobjectRand                  | Groenobject
-SluisDoorvaart                   | Sluis
-KunstwerkOpening                 | Kunstwerk
-VerhardingsobjectConstructielaag | Verhardingsobject
-
-De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `bs:hasPart`. 
-Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
-
 ## Eigenschappen
 
 Eigenschappen in IMBOR bepalen welke informatie bij een object wordt opgeslagen. 
@@ -191,6 +170,50 @@ Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende s
 Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden. 
 Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt (zie ook issue <a href="https://github.com/Stichting-CROW/imbor/issues/42" target="_blank">#42</a> in GitHub). 
 Conform NTA 8035 zijn vastewaardelijsten geïmplementeerd met behulp van superclasses die geïnstantieerd worden door de individuele waardes.
+
+## Raakvlakken
+
+IMBOR definieert een aantal relaties _tussen_ objecten, zoals beschreven in onderstaande tabel. 
+
+Objecttype                       | ObjecttypeNiveau1
+----------                       | -----------------
+TerreindeelSoortnaam             | Terreindeel
+WegasVerkeersintensiteit         | Wegas
+WegasVerkeerstellingJaar         | Wegas
+WegasVerkeerstelling             | Wegas
+VerhardingsobjectRand            | Verhardingsobject
+GroenobjectConstructielaag       | Groenobject
+GroenobjectSoortnaam             | Groenobject
+GroenobjectRand                  | Groenobject
+SluisDoorvaart                   | Sluis
+KunstwerkOpening                 | Kunstwerk
+VerhardingsobjectConstructielaag | Verhardingsobject
+
+De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `bs:hasPart`. 
+Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
+
+## URI-strategie
+
+De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat het allemaal (ook de individuals) een TypeLibrary is en geen aanwijsbare dingen in de echte wereld.
+Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
+De NTA8035 schrijft dan voor:
+_http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]_ 
+Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
+_http//:linkeddata.crow.nl/imbor/def/objecttype/Boom_
+
+Verder kiezen we ervoor om 6 verschillende graafen (en daarmee namespaces) te onderscheiden: 
+
+Graaf			| Inhoud																	| Namespace
+----------		| ----------																| ---------
+ObjectTypen		| Objecten en dus ook alle onderdelen van de taxonomie						| <http://linkeddata.crow.nl/imbor/def/objecttype/>
+Eigenschappen	| Eigenschappen (IMBOR:attributen) en hun informatie						| <http://linkeddata.crow.nl/imbor/def/eigenschap/>
+Domeinwaarden	| Vastewaardelijsten en hun mogelijk waarden								| <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>
+Shapes			| SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	| <http://linkeddata.crow.nl/imbor/def/shape/>
+Groeperingen	| De SKOS collecties voor de IMBOR Hierarchie en Vakdisciplines				| <http://linkeddata.crow.nl/imbor/id/groepering/>
+GUID			| Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)| _alle bovenstaande_
+
+Deze splitsing in graafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologien (men kan zo kiezen welke men wil gebruiken en welke niet) 
+en omdat er zo  veel entiteiten zijn (en splitsing enig overzicht geeft).
 
 </section>
 
