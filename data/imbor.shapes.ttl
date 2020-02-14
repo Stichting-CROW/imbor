@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 
 # NodeShapes: Physical object
 # ----------
