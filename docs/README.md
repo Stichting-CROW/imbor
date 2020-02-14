@@ -15,11 +15,11 @@ Dan verifieer je ook of je aan het datamodel voldoet.
 
 _Deze voorbeeld queries zijn bedoeld om te lezen. Ze kunnen uiteraard eenvoudig gekopieerd worden naar een lokale SPARQL engine. Hieronder staat een beschrijving om dit met dit Jupyter notebook te doen. Maar in eerste instantie is deze pagina er voor read-only op Github_
 
-- [`Mapping OTL BIM Pro--BGT-IMGeo.tsv`](Mapping OTL BIM Pro--BGT-IMGeo.tsv) beschrijft het koppelvlak tussen OTL BIM Pro-objecten, attributen en domeinwaardes en BGT|IMGeo-objecten, attributen en domeinwaardes. Gebruik deze tabel om exporten naar BGT (geovoorziening) vanuit beheerssoftware die volgens OTL BIM Pro werkt. Het is gebaseerd op de IMBOR-Access-tabel `X_ObjecttypeRelaties`. 
+- [`Mapping OTL BIM Pro--BGT-IMGeo.tsv`](https://github.com/Stichting-CROW/imbor/blob/master/docs/Mapping%20OTL%20BIM%20Pro--BGT-IMGeo.tsv) beschrijft het koppelvlak tussen OTL BIM Pro-objecten, attributen en domeinwaardes en BGT|IMGeo-objecten, attributen en domeinwaardes. Gebruik deze tabel om exporten naar BGT (geovoorziening) vanuit beheerssoftware die volgens OTL BIM Pro werkt. Het is gebaseerd op de IMBOR-Access-tabel `X_ObjecttypeRelaties`. 
 
-- [`Mapping IMBOR 2 UCUM.csv`](Mapping IMBOR 2 UCUM.csv) beschrijft de eenheden uit IMBOR (tabel `X_Eenheden`) en koppelt ze aan [UCUM / CDT](https://ci.mines-stetienne.fr/lindt/v2/custom_datatypes.html)- en [QUDT](http://qudt.org/)-Linked data-eenheids-datatypes.  
+- [`Mapping IMBOR 2 UCUM.csv`](https://github.com/Stichting-CROW/imbor/blob/master/docs/Mapping%20IMBOR%202%20UCUM.csv) beschrijft de eenheden uit IMBOR (tabel `X_Eenheden`) en koppelt ze aan [UCUM / CDT](https://ci.mines-stetienne.fr/lindt/v2/custom_datatypes.html)- en [QUDT](http://qudt.org/)-Linked data-eenheids-datatypes.  
 
-- [`Datamodel - BIM PRo OTL.drawio`](Datamodel%20-%20BIM%20PRo%20OTL.drawio) toont het datamodel van OTL BIM Pro in het formaat van het online tekenprogramma [draw.io](http://draw.io/).
+- [`IMBOR Metamodel.drawio`](https://github.com/Stichting-CROW/imbor/blob/master/docs/IMBOR%20Metamodel.drawio) toont het meta(data)model van de LinkedData IMBOR in het formaat van het online tekenprogramma [draw.io](http://draw.io/).
 
 ---
 

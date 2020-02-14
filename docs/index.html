@@ -115,16 +115,10 @@ Beiden SKOS indelingen hebben dus geen _expliciete_ waarde/gebruik in de ontolog
 Om het model toe te passen zijn er, naast de expliciete regels in het model zelf, een aantal
 		impliciete regels van toepassing.
 
-1. De `rdfs:domain` van `owl:topObjectProperty` en
-	`owl:topDataProperty` is altijd `bs:PhysicalObject`.
-1. De `rdfs:range` van `owl:topObjectProperty` is altijd
-	`imbor:domeinwaarde`.
-1. De `rdfs:range` van `owl:topDataProperty` is altijd een
-	`xsd:string` of een QUDT eenheid.
-1. Er worden geen Individuals gemaakt in het model bij Objecten en Eigenschappen (uitgezonderd
-	bij domeinwaarden).
-1. Een `bs:PhysicalObject` kan maar één `skos:member` relatie hebben met
-	een member van de Hiërarchie collectie.
+1. De `rdfs:domain` en `rdfs:range` worden niet gebruikt omdat deze te restrictief (met name omdat ze transitief) zijn. In plaats hiervan worden SHACL shapes gebruikt voor het vastleggen van relaties tussen objecten en eigenschappen en objecten onderling.
+1. De `bs:unit` en `bs:quantityKind` properties worden altijd gebruikt i.c.m. met een QUDT resource.
+1. Er worden geen Individuals gemaakt in het model bij Objecten.
+1. Een `bs:PhysicalObject` kan maar één `skos:member` relatie hebben met een member van de Hiërarchie collectie.
 1. Alle concepten hebben een `rdfs:label`, `skos:prefLabel` en
 	`skos:definition`. Met daarin respectievelijk de data gerelateerde naam, de IMBOR
 	naam in NL en de definitie in NL. De eerste twee zijn sowieso verplicht.
@@ -171,15 +165,8 @@ SluisDoorvaart                   | Sluis
 KunstwerkOpening                 | Kunstwerk
 VerhardingsobjectConstructielaag | Verhardingsobject
 
-De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van een subproperty van `bs:hasPart`. 
-Voor elk objecttype uit de rechterkolom is er zo'n subproperty gedefinieerd: 
-`groenobjectHasPart`, 
-`kunstwerkHasPart`, 
-`sluisHasPart`, 
-`terreindeelHasPart`, 
-`verhardingsobjectHasPart`, 
-`wegasHasPart`.
-Het bijbehorende objecttype is gespecificeerd in `rdfs:domain` en het object in `rdfs:range`.  
+De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `bs:hasPart`. 
+Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
 
 ## Eigenschappen
 
@@ -187,7 +174,7 @@ Eigenschappen in IMBOR bepalen welke informatie bij een object wordt opgeslagen.
 Eigenschappen kunnen voorgedefinieerde waardes hebben (zie [Vastewaardelijsten](#vastewaardelijsten))
 of een voorgedefinieerde eenheid ([Eenheden](#eenheden))
 of eenheidloos bepaald zijn.
-In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over de gewenste waardes.
+In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over de gewenste (tekstuele) waardes.
 
 ### Eenheden
 
@@ -202,11 +189,8 @@ Implementeerders wordt aangeraden die dataset in te laden om de juiste interpret
 
 Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende status. 
 Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden. 
-Voor andere eigenschappen is het eerder een suggestielijst. 
+Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt. 
 Conform NTA 8035 zijn vastewaardelijsten geïmplementeerd met behulp van superclasses die geïnstantieerd worden door de individuele waardes.
-
-1. `rdfs:range` kan verwijzen naar een klasse waarvan de URI eindigt op `...Type`.
-1. Instanties van die klasse zijn dan de individuele waardes.
 
 </section>
 
