@@ -197,23 +197,26 @@ Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)
 De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat het allemaal (ook de individuals) een TypeLibrary is en geen aanwijsbare dingen in de echte wereld.
 Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
 De NTA8035 schrijft dan voor:
-_http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]_ 
+
+_`http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]`_
+
 Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
-_http//:linkeddata.crow.nl/imbor/def/objecttype/Boom_
+
+_`http//:linkeddata.crow.nl/imbor/def/objecttype/Boom`_
 
 Verder kiezen we ervoor om 6 verschillende graafen (en daarmee namespaces) te onderscheiden: 
 
-Graaf			| Inhoud																	| Namespace
-----------		| ----------																| ---------
-ObjectTypen		| Objecten en dus ook alle onderdelen van de taxonomie						| <http://linkeddata.crow.nl/imbor/def/objecttype/>
-Eigenschappen	| Eigenschappen (IMBOR:attributen) en hun informatie						| <http://linkeddata.crow.nl/imbor/def/eigenschap/>
-Domeinwaarden	| Vastewaardelijsten en hun mogelijk waarden								| <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>
-Shapes			| SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	| <http://linkeddata.crow.nl/imbor/def/shape/>
-Groeperingen	| De SKOS collecties voor de IMBOR Hierarchie en Vakdisciplines				| <http://linkeddata.crow.nl/imbor/id/groepering/>
-GUID			| Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)| _alle bovenstaande_
+Graaf			| Inhoud																												| Namespace
+----------		| :----------															  						   					   :|: ---------
+<FONT size="1">ObjectTypen</FONT>	| <FONT size="1">Objecten en dus ook alle onderdelen van de taxonomie</FONT>						| <FONT size="1">`http://linkeddata.crow.nl/imbor/def/objecttype/`</FONT>
+<FONT size="1">Eigenschappen</FONT>	| <FONT size="1">Eigenschappen (IMBOR:attributen) en hun informatie</FONT> 							| <FONT size="1">`http://linkeddata.crow.nl/imbor/def/eigenschap/`</FONT>
+<FONT size="1">Domeinwaarden</FONT>	| <FONT size="1">Vastewaardelijsten en hun mogelijk waarden</FONT>									| <FONT size="1">`http://linkeddata.crow.nl/imbor/def/domeinwaarde`</FONT> 
+<FONT size="1">Shapes</FONT>		| <FONT size="1">SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken</FONT>		| <FONT size="1">`http://linkeddata.crow.nl/imbor/def/shape/`</FONT> 
+<FONT size="1">Groeperingen</FONT>	| <FONT size="1">De SKOS collecties voor de IMBOR Hierarchie en Vakdisciplines</FONT>				| <FONT size="1">`http://linkeddata.crow.nl/imbor/id/groepering/`</FONT>
+<FONT size="1">GUID</FONT>			| <FONT size="1">Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)</FONT>	| <FONT size="1">_alle bovenstaande_</FONT> 
 
 Deze splitsing in graafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologien (men kan zo kiezen welke men wil gebruiken en welke niet) 
-en omdat er zo  veel entiteiten zijn (en splitsing enig overzicht geeft).
+en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
 
 </section>
 
