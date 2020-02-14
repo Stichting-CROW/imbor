@@ -24,7 +24,7 @@ Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <linked-data@c
 ## Versiebeheer
 
 CROW beraadt zich nog op een duurzame beheersstrategie ten aanzien van IMBOR in Linked data-formaat. 
-Daar hoort ook versiebeheer bij. 
+Daar hoort ook versiebeheer bij. Zie ook issue #2 (https://github.com/Stichting-CROW/imbor/issues/2)
 
 ## Licentie
 
