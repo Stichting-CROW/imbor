@@ -6,20 +6,21 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX crow: <http://linkeddata.crow.nl/def/imbor#>
 
 # Ontologie-header
 # ----------------
 # De formele introductie van het gehele model. Deze wordt integraal met de
 # ontologie meegegeven.
 
-<http://linkeddata.crow.nl/def/imbor/>
+<http://linkeddata.crow.nl/imbor/>
   a owl:Ontology ;
   rdfs:label "IMBOR" ;
   dc:title "IMBOR" ;
   rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
   dc:description "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
   dc:language "nl" ;
+  # owl:versionInfo NOW() -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
+  # owl:versionInfo "1.0.0" -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
 
   dc:publisher <http://crow.nl> ;
   rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
