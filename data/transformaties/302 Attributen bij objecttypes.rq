@@ -33,11 +33,14 @@ WHERE {
             imborp:attribuut ?attr ;
             imborp:object ?ot ;
             imborp:relatie ?relatietype ;
+            imborp:informatiemodel ?informatiemodel ;
+            # imborp:eenheid is onbetrouwbaar
             .
     }
 
-    # we kunnen hier ook de sh:maxCount van het attribuut bepalen
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
 
+    # sh:maxCount van het attribuut
     GRAPH graph:X_Relaties {
         ?relatietype skos:notation ?relatienotatie .
     }

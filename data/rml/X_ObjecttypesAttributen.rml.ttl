@@ -83,8 +83,17 @@
         rr:objectMap [
             rml:reference "ObjecttypeAttribuutToelichting" ;
         ] ;
-    ] ;
+    ] ;    
 
     rr:predicateObjectMap :informatiemodel ;
+
+    rr:predicateObjectMap [
+        rr:predicate imborp:eenheid ;
+        rr:objectMap [
+            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/U{EenheidID}" ;
+            rr:termType rr:IRI ;
+        ] ;
+    ] ;
+
 .
 

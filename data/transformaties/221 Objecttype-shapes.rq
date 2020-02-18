@@ -5,6 +5,9 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 
 # Maak alle shapes aan
+# --------------------
+# Bij een uitbreiding van eigenschappen die ook op niet-Objecttypeniveau kunnen 
+# worden gedefinieerd, moet deze query aangepast worden.
 
 INSERT {
     GRAPH graph:Shapes {

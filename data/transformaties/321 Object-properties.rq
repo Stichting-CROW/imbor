@@ -13,17 +13,16 @@ PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX imborvwl: <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 
-INSERT {    
+INSERT {
     GRAPH graph:Domeinwaarden {
         # Elke domeinwaarde is een instantie van een type
         ?domeinwaardeType
             a rdfs:Class ;
             rdfs:subClassOf nta8035:EnumerationType ;
-
-            imborp:attribuut ?attr ;
-            rdfs:label ?attrLabelType ;
+            rdfs:label ?classLabel ;
             .
 
         ?domeinwaarde
@@ -36,28 +35,33 @@ INSERT {
             .
     }
 
+    GRAPH graph:Eigenschappen {
+        ?attr
+            a owl:ObjectProperty ;
+            .
+    }
+
+    GRAPH graph:Shapes {
+        ?propertyShape
+            sh:class ?domeinwaardeType
+            .
+    }
+
     GRAPH graph:GUID {
         ?domeinwaarde skos:notation ?guid .
     }
 
-    GRAPH graph:Groeperingen {
-        ?informatiemodel skos:member ?domeinwaarde .
-    }
 }
 
 WHERE {
-    GRAPH graph:X_AttributenDomeinwaarden {
-        ?domeinwaarde
-            rdfs:label ?label ;
-            imborp:guid ?guid ;
-
-            imborp:attribuut ?attr ;
+    # per attribuut (dat een refentietabel heeft => vastewaardelijst)
+    GRAPH graph:X_Attributen {
+        ?attr 
+            imborp:heeftReferentietabel true ;
             imborp:informatiemodel ?informatiemodel ;
             .
 
-        OPTIONAL { ?domeinwaarde imborp:bovenliggendLabel ?bovenliggendLabel . }
-        OPTIONAL { ?domeinwaarde skos:altLabel ?altLabel . }
-        OPTIONAL { ?domeinwaarde skos:definition ?definition . }
+        OPTIONAL { ?attr rdfs:label ?attrLabel . }
     }
 
     FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
@@ -68,6 +72,33 @@ WHERE {
     FILTER ( ?attr != imborp:P257 )  # Type gedetailleerd
     FILTER ( ?attr != imborp:P760 )  # Type extra gedetailleerd
 
+    # vind alle domeinwaardes die bij dat ?attr horen
+    GRAPH graph:X_AttributenDomeinwaarden {
+        ?domeinwaarde
+            rdfs:label ?label ;
+            imborp:guid ?guid ;
+
+            imborp:attribuut ?attr ;
+            imborp:informatiemodel ?informatiemodelAD ;
+            .
+
+        OPTIONAL { ?domeinwaarde imborp:bovenliggendLabel ?bovenliggendLabel . }
+        OPTIONAL { ?domeinwaarde skos:altLabel ?altLabel . }
+        OPTIONAL { ?domeinwaarde skos:definition ?definition . }
+    }
+
+    FILTER ( ?informatiemodelAD = groep:INF18 )  # Alleen IMBOR wordt meegenomen
+
+    # vind de ?propertyShape die bij dat ?attr hoort
+    GRAPH graph:Shapes {
+        ?propertyShape
+            a sh:PropertyShape ;
+            sh:path ?attr ;
+            .
+    }
+
+    # maak een URI
+    # /def/eigenschap/P1234 -> /def/domeinwaarde/P1234Type
     BIND(
         URI(
             CONCAT(
@@ -80,17 +111,14 @@ WHERE {
         AS ?domeinwaardeType
     )
 
-    GRAPH graph:X_Attributen {
-        OPTIONAL { ?attr rdfs:label ?attrLabel . }
-    }
-
+    # evt. nog een leuke leesbare titel voor de klasse
     BIND(
         CONCAT(
             "Waardes voor '",
             ?attrLabel,
             "'"
         )
-        AS ?attrLabelType
+        AS ?classLabel
     )
 }
 

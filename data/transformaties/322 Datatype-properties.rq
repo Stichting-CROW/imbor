@@ -12,6 +12,7 @@ PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 
 INSERT {
@@ -22,9 +23,15 @@ INSERT {
             .
     }
 
+    GRAPH graph:Eigenschappen {
+        ?attr
+            a owl:DatatypeProperty ;
+            .
+    }
+
     GRAPH graph:Shapes {
-        ?shape
-            sh:datatype ?unit ;
+        ?propertyShape
+            sh:datatype ?xsdstring ;
             .
     }
 
@@ -34,9 +41,17 @@ INSERT {
 }
 
 WHERE {
+    # ?attr WHERE 
+    # referentietabel = NULL && eenheid != NULL
     GRAPH graph:X_Attributen {
-        ?attr imborp:eenheid ?eenheidURI .
+        ?attr 
+            imborp:eenheid ?eenheidURI ;
+            imborp:heeftReferentietabel false ;
+            imborp:informatiemodel ?informatiemodel ;
+            .
     }
+
+    FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
 
     GRAPH graph:X_Eenheden {
         ?eenheidURI
@@ -62,9 +77,10 @@ WHERE {
     )
 
     GRAPH graph:Shapes {
-        ?shape
+        ?propertyShape
             a sh:PropertyShape ;
             sh:path ?attr ;
             .
-    }
+    }    
 }
+
