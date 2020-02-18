@@ -14,7 +14,7 @@ PREFIX groep: <http://linkeddata.crow.nl/imbor/def/groepering/>
 # NTA 8035
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
-PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
+PREFIX quantitykind: <http://qudt.org/vocab/quantitykind/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
