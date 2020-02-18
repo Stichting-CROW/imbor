@@ -1,7 +1,7 @@
-PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
-PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
-PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
-PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/def/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>

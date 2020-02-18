@@ -1,14 +1,18 @@
-PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
-PREFIX groep: <http://linkeddata.crow.nl/imbor/id/groepering/>
-PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
-PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/imbor/def/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+# Deze query maakt eigenschappen/relaties/attributen in de Eigenschappen en in de
+# Shapes grafen. Ook bijbehorende Attribuutsorteergroepen, sh:PropertyGroups
+# worden hierbij gemaakt.
 
 
 INSERT {
@@ -18,7 +22,7 @@ INSERT {
     
     GRAPH graph:Eigenschappen {
         ?attr
-            a rdf:Property ;
+            a rdf:Property ;  # niet definitief
             rdfs:label ?label ;
             skos:definition ?definition ;
             skos:editorialNote ?editorialNote ;
@@ -34,7 +38,6 @@ INSERT {
             .
 
         ?attribuutsorteergroep
-            # TODO: Benoem dat Attribuutsorteergroepen sh:PropertyGroup's zijn geworden
             a sh:PropertyGroup ;
             sh:order ?order ;
             rdfs:label ?sorteergroepLabel ;
@@ -51,13 +54,13 @@ WHERE {
         ?attr
             imborp:guid ?guid ;
             rdfs:label ?label ;
+            imborp:attribuutsorteergroep ?attribuutsorteergroep ;
+            imborp:informatiemodel ?informatiemodel ;
             .
+
         OPTIONAL { ?attr skos:altLabel ?altLabel . }
         OPTIONAL { ?attr skos:definition ?definition . }
         OPTIONAL { ?attr skos:editorialNote ?editorialNote . }
-
-        OPTIONAL { ?attr imborp:attribuutsorteergroep ?attribuutsorteergroep . }
-        OPTIONAL { ?attr imborp:informatiemodel ?informatiemodel . }
     }
 
     FILTER ( ?informatiemodel = groep:INF18 )  # Alleen IMBOR wordt meegenomen
@@ -80,5 +83,4 @@ WHERE {
     }
 
     BIND ( xsd:integer(?volgorde) AS ?order )
-
 }

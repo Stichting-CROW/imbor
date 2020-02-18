@@ -1,11 +1,11 @@
 # Voor elke classe-shape, voeg een sh:property toe die
 # aangeeft welke geometrie het object zou kunnen hebben.
 
-PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
-PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>
 
 # PUNT
 

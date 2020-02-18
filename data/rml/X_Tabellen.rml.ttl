@@ -9,12 +9,12 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix : <http://linkeddata.crow.nl/imbor/mapping/>.
 
-@prefix graph: <http://linkeddata.crow.nl/imbor/id/graph/>.
-@prefix imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>.
-@prefix imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>.
-@prefix imborvwl: <http://linkeddata.crow.nl/imbor/id/domeinwaarde/>.
-@prefix shape: <http://linkeddata.crow.nl/imbor/id/shape/>.
-@prefix groep: <http://linkeddata.crow.nl/imbor/id/groepering/>.
+@prefix graph: <http://linkeddata.crow.nl/imbor/def/graph/>.
+@prefix imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>.
+@prefix imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>.
+@prefix imborvwl: <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>.
+@prefix shape: <http://linkeddata.crow.nl/imbor/def/shape/>.
+@prefix groep: <http://linkeddata.crow.nl/imbor/def/groepering/>.
 @prefix nta8035: <https://w3id.org/def/basicsemantics-owl#>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
 @prefix qudt: <http://qudt.org/vocab/quantitykind/>.
@@ -42,7 +42,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/TAB{TabelID}" ;
+        rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/TAB{TabelID}" ;
         rr:graph graph:X_Tabellen ;
     ] ;
 
@@ -64,7 +64,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:tabelsoort ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/id/objecttype/TS{TabelsoortID}";
+            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/TS{TabelsoortID}";
             rr:termType rr:IRI ;
         ] ;
     ] ;

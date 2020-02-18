@@ -1,10 +1,13 @@
-PREFIX graph: <http://linkeddata.crow.nl/imbor/id/graph/>
-PREFIX imbor: <http://linkeddata.crow.nl/imbor/id/objecttype/>
-PREFIX imborp: <http://linkeddata.crow.nl/imbor/id/eigenschap/>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/id/shape/>
+PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 
 # Maak alle shapes aan
+# --------------------
+# Bij een uitbreiding van eigenschappen die ook op niet-Objecttypeniveau kunnen 
+# worden gedefinieerd, moet deze query aangepast worden.
 
 INSERT {
     GRAPH graph:Shapes {
