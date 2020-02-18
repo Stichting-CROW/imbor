@@ -1,11 +1,11 @@
 # Data
 
 IMBOR in Linked data-formaat conformeert zich aan de NEN NTA 8035. 
-In `datamodel.ttl` staan de modelleerkeuzes in Turtle-formaat. 
+In [imbor.shapes.ttl][3] staan de expliciete modelleerkeuzes in Turtle-formaat. Er zijn uiteraard ook impliciete modelleerkeuzes (niet direct uit de data te halen), deze kunnen geraadpleegd worden in de [ReSpec][4].
 
 **IMBOR zelf wordt niet openbaar gedistribueerd.**
 
-De transformatieregels zijn wel gepubliceerd.
+De transformatieregels zijn wel gepubliceerd en terug te vinden in de submap [transformaties][5].
 
 ## Zelf een aangepaste transformatie uitvoeren
 
@@ -46,3 +46,6 @@ $ shacl validate --shapes datamode.shapes.ttl --data imbor-ld.objecten.ttl
 [1]: https://www.crow.nl/online-kennis-tools/kennismodule-imbor-en-imwv-plus
 [2]: https://github.com/RMLio/rmlmapper-java
 [jena]: http://jena.apache.org/
+[3]: https://github.com/Stichting-CROW/imbor/blob/master/data/imbor.shapes.ttl
+[4]: https://stichting-crow.github.io/imbor/
+[5]: https://github.com/Stichting-CROW/imbor/tree/master/data/transformaties
