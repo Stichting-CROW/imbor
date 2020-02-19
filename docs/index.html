@@ -291,6 +291,59 @@ en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
 
 # M0 | Voorbeeld areaaldataset
 
+## Een eigen OTL: M1-laag aanpassen
+
+Tijdens carnaval ondergaan sommige plaatsen een naamverandering: 
+Breda wordt Kielegat, Nijmegen wordt Knotsenburg. 
+In dit voorbeeld heeft de gemeente voorgenomen om bebouwdekomborden tijdelijk te vervangen met deze carnavalsnaam. 
+Ten behoeve van het op tijd plaatsen en weghalen, wordt dit ook geregistreerd in beheersoftware, die met IMBOR werkt.
+
+```turtle
+PREFIX ex: <http://example.com/gemeente/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ex:Carnavalskombord 
+	a rdfs:Class ;
+	rdfs:subClassOf imbor:OBC1436 ;
+	rdfs:label "Carnavalskombord" ;
+	skos:definition "Bebouwdekombord met de carnavalsnaam van de plaats"@nl ;
+	.
+
+ex:inclusiefVersiering
+	a rdf:Property ;
+	rdfs:label "Inclusief carnavalsversiering"@nl-NL ;
+	.
+
+ex:CarnavalskombordShape 
+	a sh:NodeShape ;
+	sh:targetClass ex:Carnavalskombord ;
+	sh:property [
+		sh:path ex:inclusiefVersiering ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;  # verplicht invullen
+	] ;
+	.
+```
+
+Deze nieuwe klasse integreert met IMBOR door middel van een subclassificatie (`rdfs:subClassOf`). 
+Hierdoor overerft het de eigenschappen van het IMBOR-bebouwdekombord.
+Dit is te zien door de zoekvraag ``Query: Eigenschappen van een Fysiek object'' 
+uit te voeren beschreven in [`docs/SPARQL-voorbeelden.ipynb`](SPARQL-voorbeelden.ipynb):
+dan is te zien dat ook de versierings-eigenschap verschijnt bij het carnavalskombord.
+
+Om te controleren of de aangepaste OTL nog voldoet aan het metamodel, voeren we met SHACL een controle uit.
+De stappen in [`data/README.md`](../data/README.md) beschrijven hoe we dat doen.
+
+> `$ shacl validate 
+
+
+
+## Gebruikmaken van de OTL: M0-laag
+
+Gemeente Nijmegen en de Waalbrug. 
+
 n.t.b.
 
 </section>
