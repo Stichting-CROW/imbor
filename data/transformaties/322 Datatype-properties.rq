@@ -71,7 +71,15 @@ WHERE {
 
     BIND(
         URI(
-            REPLACE(?eenheid, 'unit:', STR(unit:))
+            REPLACE(
+                REPLACE(
+                    ?eenheid, 
+                    'xsd:', 
+                    STR(xsd:)
+                ),
+                'unit:', 
+                STR(unit:)
+            )
         )
         AS ?unit
     )
