@@ -12,50 +12,97 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 
 # NodeShapes: Physical object
 # ----------
+# De eigenschappen zijn niet met blanco's gekoppeld, zodat ze met sh:deactivated
+# overruled kunnen worden.
 # Noot: de meeste Shapes zitten in IMBOR zelf.
 
-shape:PhysicalObject
+shape:Nta8035FysiekObject
   a sh:NodeShape ;
   sh:name "Physical Object" ;
   sh:targetClass nta8035:PhysicalObject ;
 
-  sh:property shape:PhysicalObject-label ;
-  sh:property shape:PhysicalObject-prefLabel ;
-  sh:property shape:PhysicalObject-definition ;
+  sh:property shape:label ;
+  sh:property shape:prefLabel ;
+  sh:property shape:definition ;
   sh:property shape:PhysicalObject-hasPart ;
   sh:property shape:PhysicalObject-subClassOf ;
   .
 
-# Property Shapes: Physical object
-# ---------------
-# De eigenschappen zijn niet met blanco's gekoppeld, zodat ze met sh:deactivated
-# overruled kunnen worden.
+shape:ImborEigenschappen
+  a sh:NodeShape ;
+  # sh:targetClass rdf:Property ;
+  # ^^ bovenstaande ^^ richt zich ook op rdf:Property`s die voorkomen via owl:import. 
+  # Daarom is onderstaande SPARQLTarget gericht op de rdf:Property`s die via sh:path
+  # worden gebruikt in de ontologie.
+  sh:target [
+    a sh:SPARQLTarget ;
+		sh:prefixes rdf: , sh: , graph: ;
+		sh:select """
+			SELECT ?this
+			WHERE {
+        # GRAPH graph:Eigenschappen {
+          ?this a rdf:Property .
+        # } GRAPH graph:Shapes {
+          ?propertyShape sh:path ?this .
+        # }
+			}
+			""" ;
 
-shape:PhysicalObject-label
-  a sh:PropertyShape ;
-  sh:message "Elk fysiek object moet tenminste een label hebben"@nl-NL ;
-  sh:path rdfs:label ;
-  sh:datatype rdf:langString ;
-  sh:minCount 1 ;
+  ] ;
+
+  sh:property shape:label ;
+  sh:property shape:prefLabel ;
+  sh:property shape:definition ;
   .
 
-shape:PhysicalObject-prefLabel
+shape:Nta8035EnumeratieTypes
+  a sh:NodeShape ;
+  sh:targetClass nta8035:EnumerationType ;
+
+  sh:property shape:label ;
+  sh:property shape:prefLabel ;
+  sh:property shape:definition ;
+  .
+
+# shape:Nta
+
+# Property Shapes: algemeen
+# ---------------
+
+shape:label
+  a sh:PropertyShape ;
+  sh:message "Elk fysiek object moet tenminste één Nederlands label hebben"@nl-NL ;
+
+  sh:path rdfs:label ;
+  sh:minCount 1 ;
+  sh:datatype rdf:langString ;
+  sh:languageIn ( "nl" ) ;
+  .
+
+shape:prefLabel
   a sh:PropertyShape ;
 
   sh:path skos:prefLabel ;
-  sh:maxCount 1 ;
-  sh:datatype rdf:langString ;
+  sh:minCount 1 ;  # IMBOR: prefLabel moet 1x voorkomen
+  sh:datatype rdf:langString ;  # NTA8035: waarde is per taal uniek
+  sh:languageIn ( "nl" ) ;  # IMBOR: Er moet een Nederlands label bij zitten
+  sh:uniqueLang true ;
   .
 
-shape:PhysicalObject-definition
+shape:definition
   a sh:PropertyShape ;
 
   sh:path skos:definition ;
   sh:datatype rdf:langString ;
+  sh:languageIn ( "nl" ) ;
   .
+
+# Property Shapes: fysieke objecten
+# ---------------
 
 shape:PhysicalObject-hasPart
   a sh:PropertyShape ;
