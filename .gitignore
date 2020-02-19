@@ -6,3 +6,4 @@ __pycache__/
 # bronbestanden voor de conversie
 data/externe-bronnen/**/*.csv
 data/temp/
+data/imbor-ld.trig
