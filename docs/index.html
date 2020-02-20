@@ -172,10 +172,10 @@ Bij het maken van de LinkedData versie van IMBOR zijn bepaalde keuzes gemaakt me
 * Use cases voor de LinkedData versie van IMBOR 
 
 Deze keuzes worden "design decisions" genoemd. Al deze keuzes worden gedocumenteerd en bijgehouden
-op de GitHub bij de Issues, met het label "design decision". Dit is de directe link: <a
+op de GitHub bij de Issues, met het label "design decision". In [Annex A](#issue-summary) staan de issues die in deze ReSpec worden aangehaald.
+Met deze directe link is de _volledige lijst_ te bekijken: <a
 href="https://github.com/Stichting-CROW/imbor/issues?utf8=%E2%9C%93&q=label%3A%22design+decision%22+"
 target="_blank">IMBOR LinkedData design decisions</a>.
-
 
 </section>
 
@@ -192,13 +192,15 @@ _tbd_
 Eigenschappen in IMBOR bepalen welke informatie bij een object wordt opgeslagen. 
 Eigenschappen kunnen voorgedefinieerde waardes hebben (zie [Vastewaardelijsten](#vastewaardelijsten))
 of een voorgedefinieerde eenheid ([Eenheden](#eenheden))
-of eenheidloos bepaald zijn.
+of eenheidloos bepaald zijn. 
 In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over de gewenste (tekstuele) waardes.
+Deze eigenschappen worden respectievelijk ObjectProperty, DatatypeProperty en AnnotationProperty genoemd.
+De daadwerkelijke eigenschappen worden vastgelegd in (SHACL) shapes.
 
 ## Shapes
 
-In IMBOR koppelen Shacl-shapes bepaalde eigenschappen aan bepaalde objecten. 
-[Shacl](https://www.w3.org/TR/shacl) (afgekort met `sh:`) is een W3C aanbeveling voor het valideren van Linked datasets.
+In IMBOR koppelen SHACL-shapes bepaalde eigenschappen aan bepaalde objecten. 
+[SHACL](https://www.w3.org/TR/shacl) (afgekort met `sh:`) is een W3C aanbeveling voor het valideren van Linked datasets.
 De shapes die IMBOR bepaalt, zijn als een vormenstoof. 
 De areaalgegevens zijn als de blokken die erdoor passen (of niet).
 
@@ -206,8 +208,11 @@ Er zijn `sh:NodeShape`s en `sh:PropertyShape`s.
 Een `sh:NodeShape` in IMBOR richt zich op instanties van bepaalde klasses, welke is te zien bij `sh:targetClass`.
 Een `sh:PropertyShape` in IMBOR richt zich op de waardes van bepaalde eigenschappen, welke is te zien bij `sh:path`.
 Een `sh:NodeShape` wordt vervolgens verbonden met de mogelijke `sh:PropertyShape` eigenschappen door de `sh:property` relatie.
+Er mag gesteld worden dat de `sh:NodeShape` altijd een paar vormt met een fysiek object, te weten: `nta8035:PhysicalObject`
+en dat de `sh:PropertyShape` altijd een paar vormt met de eigenschap, te weten: `rdf:property`. 
+De vele combinaties tussen de fysieke objecten en de eigenschappen worden zodoende vastgelegd middels de `sh:property` relatie.
 
-Shacl is bedoeld om Linked datasets te valideren en er bestaan dus programma's die geautomatiseerd een controle doen.
+SHACL is bedoeld om Linked datasets te valideren en er bestaan dus programma's die geautomatiseerd een controle doen.
 Bijvoorbeeld TopQuadrant's [`shaclvalidate`][shaclvalidate] of Apache Jena's [`shacl`][shacl].
 Alle IMBOR klasses, eigenschappen en domeinwaardes voldoen ook aan de shapes die beschreven staat in [`data/imbor.shapes.ttl`](../data/imbor.shapes.ttl).
 
@@ -235,10 +240,13 @@ Implementeerders wordt aangeraden die dataset in te laden om de juiste interpret
 
 Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende status. 
 Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden. 
-Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt (zie ook issue <a href="https://github.com/Stichting-CROW/imbor/issues/42" target="_blank">#42</a> in GitHub). 
+Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt:
+<div class="issue" data-number="42"></div>
+
 Conform NTA 8035 zijn vastewaardelijsten geïmplementeerd met behulp van superclasses die geïnstantieerd worden door de individuele waardes.
 
-## Raakvlakken
+
+## Raakvlakken / onderdelen
 
 IMBOR definieert een aantal relaties _tussen_ objecten, zoals beschreven in onderstaande tabel. 
 
@@ -257,7 +265,10 @@ KunstwerkOpening                 | Kunstwerk
 VerhardingsobjectConstructielaag | Verhardingsobject
 
 De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `nta8035:hasPart`. 
+Binnen IMBOR-LD hanteren we alle raakvlakken voorlopig als 'onderdeel van' (vandaar `nta8035:hasPart`):
+<div class="issue" data-number="16"></div>
 Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
+Voor de combinatie van fysieke objecten en hun onderdelen geldt nagenoeg dezelfde constructie als voor de eigenschappen. Alleen verwijst de `sh:path` naar de `nta8035:hasPart`. 
 
 ## URI-strategie
 
@@ -336,7 +347,7 @@ dan is te zien dat ook de versierings-eigenschap verschijnt bij het carnavalskom
 Om te controleren of de aangepaste OTL nog voldoet aan het metamodel, voeren we met SHACL een controle uit.
 De stappen in [`data/README.md`](../data/README.md) beschrijven hoe we dat doen.
 
-> `$ shacl validate 
+> `$ shacl validate`
 
 
 
@@ -347,3 +358,7 @@ Gemeente Nijmegen en de Waalbrug.
 n.t.b.
 
 </section>
+
+<section class="appendix" id="issue-summary">
+Gerefereerde Github issues:
+  </section>
