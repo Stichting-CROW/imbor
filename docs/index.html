@@ -135,7 +135,7 @@ Het laatste gedeelte van het CM gaat over het 'organiseren' van de concepten in 
 We onderscheiden momenteel twee structuren (of: 'perspectieven'). De ene representeert de hiërarchie
 zoals deze in IMBOR gebruikt wordt, de andere representeert de IMBOR vakdisciplines. Beiden zijn
 `skos:collection` en hebben een 'top member'. Dit zijn respectievelijk
-`imbor:hierarchie` en `imbor:vakdiscipline`. Beiden hebben weer andere members
+`groep:IMBORHierarchischeCollectie` en `groep:IMBORVakdisciplineCollectie`. Beiden hebben weer andere members
 en al deze members kunnen een `nta8035:PhysicalObject` als member hebben. Op deze manier kan
 een IMBOR representatie van de data gepresenteerd worden. 
 Beiden SKOS indelingen hebben dus geen _expliciete_ waarde/gebruik in de ontologie. Het is puur een manier om naar de gebruikers van IMBOR een visualisatie te bieden. Er kunnen geen conclusies uit getrokken worden, of in LinkedData termen: er kan geen reasoning op gedaan worden.
@@ -177,6 +177,33 @@ Met deze directe link is de _volledige lijst_ te bekijken: <a
 href="https://github.com/Stichting-CROW/imbor/issues?utf8=%E2%9C%93&q=label%3A%22design+decision%22+"
 target="_blank">IMBOR LinkedData design decisions</a>.
 
+
+## URI-strategie
+
+De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat, ook de individuals, in een TypeLibrary staan en geen aanwijsbare dingen in de echte wereld representeren.
+Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
+De NTA8035 schrijft dan voor:
+
+> `http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]`
+
+Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
+
+> `http://linkeddata.crow.nl/imbor/def/objecttype/Boom`
+
+Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onderscheiden: 
+
+Graaf         | Inhoud                                                                      | Namespace
+----------    | ----------                                                                  |---------
+ObjectTypen   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
+Eigenschappen | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
+Domeinwaarden | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde`
+Shapes        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
+Groeperingen  | De SKOS collecties voor de IMBOR hiërarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
+GUID          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
+
+Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
+en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
+
 </section>
 
 <section class=informative>
@@ -197,7 +224,7 @@ In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over 
 Deze eigenschappen worden respectievelijk ObjectProperty, DatatypeProperty en AnnotationProperty genoemd.
 De daadwerkelijke eigenschappen worden vastgelegd in (SHACL) shapes.
 
-## Shapes
+### Shapes
 
 In IMBOR koppelen SHACL-shapes bepaalde eigenschappen aan bepaalde objecten. 
 [SHACL](https://www.w3.org/TR/shacl) (afgekort met `sh:`) is een W3C aanbeveling voor het valideren van Linked datasets.
@@ -267,34 +294,38 @@ VerhardingsobjectConstructielaag | Verhardingsobject
 De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `nta8035:hasPart`. 
 Binnen IMBOR-LD hanteren we alle raakvlakken voorlopig als 'onderdeel van' (vandaar `nta8035:hasPart`):
 <div class="issue" data-number="16"></div>
+
 Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
-Voor de combinatie van fysieke objecten en hun onderdelen geldt nagenoeg dezelfde constructie als voor de eigenschappen. Alleen verwijst de `sh:path` naar de `nta8035:hasPart`. 
+Voor de combinatie van fysieke objecten en hun onderdelen geldt nagenoeg dezelfde constructie als voor de [eigenschappen](#shapes). Alleen verwijst de `sh:path` naar de `nta8035:hasPart`. 
 
-## URI-strategie
+## Organiserende elementen
 
-De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat, ook de individuals, in een TypeLibrary staan en geen aanwijsbare dingen in de echte wereld representeren.
-Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
-De NTA8035 schrijft dan voor:
+IMBOR bevat meerdere elementen die er voor zorgen dat de inhoud vanuit een bepaald perspectief geraadpleegd kan worden. Twee van deze zijn overgenomen in de LinkedData versie.
+* Vakdisciplines
+* IMBOR hiërarchie
+Binnen LinkedData wordt veel gebruik gemaakt van de [SKOS ontologie](https://www.w3.org/2004/02/skos/) (een W3C aanbeveling) om simpele organiserende structuren op te zetten.
+De NTA8035 beveelt het ook aan om op deze manier te doen. 
 
-> `http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]`
+### Vakdisciplines
 
-Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
+De IMBOR vakdisciplines zijn allemaal een `skos:collection` en `skos:member` van `groep:IMBORVakdisciplineCollectie`. Zodoende is terug te vinden welke vakdisciplines er zijn.
+Per vakdisciplines is vervolgens weer met `skos:member` aangeven welke fysieke objecten binnen die vakdisciplines vallen. Objecten kunnen overigens in meerder vakdisciplines vallen.
+Hoewel deze vastlegging semantisch weinig waarde heeft, kan het handig zijn om de IMBOR content te raadplegen.
 
-> `http://linkeddata.crow.nl/imbor/def/objecttype/Boom`
+### IMBOR Hiërarchie
 
-Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onderscheiden: 
+Alle objecten binnen IMBOR bestaan binnen een hiërarchie. Deze hiërarchie bestaat binnen IMBOR met name om aan te geven wat objecttypen zijn en
+om eigenschappen van toepassing te verklaren op alle onderliggende objecten. Binnen de LinkedData versie van IMBOR wordt dit automatisch geregeld door `rdfs:subClassOf`.
+Vandaar dat deze hiërarchie niet meer in die hoedanigheid terug te vinden is. Om wel de herkenbaarheid te behouden zijn is de hiërarchie ook opgenomen middels SKOS.
+Er bestaat de collectie: `groep:IMBORHierarchischeCollectie`, deze heeft de `skos:member`:
+* `groep:Objecttypegroep`
+* `groep:Objecttype`
+* `groep:Type`
+* `groep:TypeGedetailleerd`
+* `groep:TypeExtraGedetailleerd`
 
-Graaf         | Inhoud                                                                      | Namespace
-----------    | ----------                                                                  |---------
-ObjectTypen   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
-Eigenschappen | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
-Domeinwaarden | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde`
-Shapes        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
-Groeperingen  | De SKOS collecties voor de IMBOR Hierarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
-GUID          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
-
-Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
-en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
+Deze collecties hebben weer als `skos:member` fysieke objecten.
+Hoewel deze vastlegging semantisch weinig waarde heeft, kan het handig zijn om de IMBOR content te raadplegen.
 
 </section>
 
