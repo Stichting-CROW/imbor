@@ -206,3 +206,44 @@ shape:M0FysiekObject-hasPart
   sh:class nta8035:PhysicalObject ;
   .
 
+# Property Shapes: geometrie
+# ---------------
+# Mogelijke geometrie-waardes zijn in IMBOR op objecttype-niveau bepaald.
+# Objecttype-shapes worden gegenereerd in de ontologie met deze propertyshapes
+# als waarde bij sh:or of sh:property.
+
+shape:PuntGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "Puntgeometrie"@nl-NL ;
+  sh:message "Puntgeometrie verwacht"@nl-NL ;
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "POINT" ;
+.
+
+shape:LijnGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "Lijngeometrie"@nl-NL ;
+  sh:message "Lijngeometrie verwacht"@nl-NL ;
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "LINESTRING" ;
+.
+
+shape:VlakGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "Vlakgeometrie"@nl-NL ;
+  sh:message "Vlakgeometrie verwacht"@nl-NL ;
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "POLYGON" ;
+.
+
+shape:MultiVlakGeometriePropertyShape
+  a sh:PropertyShape ;
+  sh:name "Multivlakgeometrie"@nl-NL ;
+  sh:message "Multivlakgeometrie verwacht"@nl-NL ;
+  sh:path (geo:geometry geo:asWKT) ;
+  sh:datatype geo:wktLiteral ;
+  sh:pattern "MULTIPOLYGON" ;
+.
