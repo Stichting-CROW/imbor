@@ -79,28 +79,33 @@ Er wordt volledig aangesloten bij de NTA8035 omdat het hier ook een uitwisselmod
 De beoogde eindgebruikers van het project zijn  medewerkers van, of in opdracht van, een Provincie, die werken aan asset management van  objecten in de openbare ruimte en infrastructuur in de hele levenscyclus, zoals beschreven
 in <a href=' https://www.iampro-portaal.nl/' target="_blank">iAMPro</a>.
 
+Voor het verkrijgen van de IMBOR LinkedData versie, raadpleeg de <a href='https://github.com/Stichting-CROW/imbor' target="_blank">GitHub</a>
 </section>
 
 <section class="informative">
 
 # M1 generiek | IMBOR CM
 
-Dit hoofdstuk beschrijft de toplaag (M1 generiek) van IMBOR, dit betreft dus het gegevensmodel. Hieronder wordt uitleg gegeven en worden aanvullende regels beschreven. Het is _belangrijk_ om aan te geven dat het IMBOR Conceptueel Top Level Model (IMBOR CM) een selectie is uit het CM van de NTA8035 (en de taalbinding naar de W3C standaarden) + de top van de IMBOR ontologie (gevisualiseerd door de groene scheidingslijn in het diagram hieronder). Dit model is een aparte/view weergave om het overzicht te creëren, maar in principe is het niet nodig om deze te materialiseren. Alle gegevens zitten eigenlijk in de NTA (BasisSemantics) gegevenssets en de IMBOR ontologie (imbor gegevensset).
+Dit hoofdstuk beschrijft de toplaag (M1 generiek) van IMBOR, dit betreft dus het gegevensmodel (soms metamodel genoemd). 
+Hieronder wordt uitleg gegeven en worden aanvullende regels beschreven. 
+Het is _belangrijk_ om aan te geven dat het IMBOR Conceptueel Top Level Model (IMBOR CM) een selectie is uit het CM van de NTA8035 (en de taalbinding naar 
+de W3C standaarden) + de top van de IMBOR ontologie (gevisualiseerd door de groene scheidingslijn in het diagram hieronder). 
+Dit model is een aparte/view weergave om het overzicht te creëren, maar in principe is het niet nodig om deze te materialiseren. 
+Alle gegevens zitten eigenlijk in de NTA (BasisSemantics) gegevenssets en de IMBOR ontologie (IMBOR-LD gegevensset).
 
 ## Relatie met NTA8035
 
 Het CM van de LinkedData versie van IMBOR is gebaseerd op de <a
 	href="https://www.nen.nl/NEN-Shop/ICTnieuwsberichten/Ontwikkeling-NTA-8035-Semantisch-modelleren-in-de-gebouwde-omgeving.htm"
-	target="_blank">NTA8035</a>. Op het moment van schrijven <time datetime="2020-02-14">(14-02-2020)</time> is de
-NTA8035 nog niet gepubliceerd en daarom nog aan
-verandering onderhevig. 
+	target="_blank">NTA8035</a>. Op het moment van schrijven <time datetime="2020-02-20">(20-02-2020)</time> is de
+NTA8035 nog niet gepubliceerd en daarom nog aan verandering onderhevig. 
 Het M1 niveau van IMBOR bevat mede daarom zo min mogelijk eigen semantiek en gebruikt in plaats daarvan:
-RDF, RDFS, SHACL, OWL en het CMM van NTA 8035. 
+RDF, RDFS, SHACL, OWL en het stukjes van het CMM van NTA 8035. 
 
 ## Toelichting CM
 Het conceptueel model bestaat grofweg uit drie belangrijke secties:
 
-* "Objecten"
+* "(Fysieke)Objecten"
 * "Eigenschappen en hun waardes"
 * "Organiserende elementen
 
@@ -111,14 +116,12 @@ Daarnaast hebben objecten
 een onderlinge relatie die binnen de IMBOR ontologie ook overgenomen wordt vanuit de NTA8035. Dit
 betreft `nta8035:hasPart` (uitgevoerd als SHACL shape). 
 Hiermee kan een meronomie geconstrueerd worden. 
-Qua attributes zijn
-minimaal de `rdfs:label`, `skos:prefLabel` en `skos:definiton`
-verplicht. 
+Qua attributes zijn minimaal de `rdfs:label`, `skos:prefLabel` en `skos:definiton` verplicht. 
 Er wordt gebruik gemaakt van `skos:notation` om de originele IMBOR GUID (vanuit Access) mee te geven.
 
-Met betrekking tot eigenschappen en hun waardes wordt er, zoals de NTA8035 dit ook beschrijft,
-gebruik gemaakt van SHACL shapes. 
-Alle eigenschappen in de ontologie zijn een `rdf:Property` en worden via een `sh:PropertyShape` aan de `sh:NodeShape` van een `nta8035:PhysicalObject` gehangen waar dit van toepassing is. 
+Met betrekking tot eigenschappen en hun waardes wordt er, zoals de NTA8035 dit ook beschrijft, gebruik gemaakt van SHACL shapes. 
+Alle eigenschappen in de ontologie zijn een `rdf:Property` en worden via een `sh:PropertyShape` aan 
+de `sh:NodeShape` van een `nta8035:PhysicalObject` gehangen waar dit van toepassing is. 
 
 De SHACL shape 'ObjectProperty' wordt gebruikt wanneer het een eigenschap betreft met
 een voorgedefinieerde waardelijst. Daarom is de `sh:class` de klasse
@@ -127,15 +130,18 @@ keuzelijsten.
 
 De SHACL shape 'DataProperty wordt gebruikt wanneer het een eigenschap betreft met een
 waarde en/of een eenheid. Hier is de `sh:datatype` een waarde van het datatype
-`xsd:...`. Op de eigenschap (de `rdf:property`) worden de properties `nta8035:unit` en `nta8035:quantityKind` vastgelegd. Hiervoor wordt de QUDT ontologie gebruikt zoals de NTA8035 dat voorschrijft. 
+`xsd:...`. Op de eigenschap (de `rdf:property`) worden de properties `nta8035:unit` en `nta8035:quantityKind` vastgelegd. 
+Hiervoor wordt de QUDT ontologie gebruikt zoals de NTA8035 dat voorschrijft. 
 
-De SHACL shape 'AnnotationProperty' wordt gebruikt wanneer het een eigenschap betreft met tekstuele waarden. Deze is nagenoeg hetzelfde als de 'DataProperty' alleen is de enige mogelijke waarde `xsd:string`. Uiteraard worden de properties `nta8035:unit` en `nta8035:quantityKind` _niet_ vastgelegd.
+De SHACL shape 'AnnotationProperty' wordt gebruikt wanneer het een eigenschap betreft met tekstuele waarden. 
+Deze is nagenoeg hetzelfde als de 'DataProperty' alleen is de enige mogelijke waarde `xsd:string`.
+ Uiteraard worden de properties `nta8035:unit` en `nta8035:quantityKind` _niet_ vastgelegd.
 
 Het laatste gedeelte van het CM gaat over het 'organiseren' van de concepten in een structuur.
 We onderscheiden momenteel twee structuren (of: 'perspectieven'). De ene representeert de hiërarchie
 zoals deze in IMBOR gebruikt wordt, de andere representeert de IMBOR vakdisciplines. Beiden zijn
 `skos:collection` en hebben een 'top member'. Dit zijn respectievelijk
-`imbor:hierarchie` en `imbor:vakdiscipline`. Beiden hebben weer andere members
+`groep:IMBORHierarchischeCollectie` en `groep:IMBORVakdisciplineCollectie`. Beiden hebben weer andere members
 en al deze members kunnen een `nta8035:PhysicalObject` als member hebben. Op deze manier kan
 een IMBOR representatie van de data gepresenteerd worden. 
 Beiden SKOS indelingen hebben dus geen _expliciete_ waarde/gebruik in de ontologie. Het is puur een manier om naar de gebruikers van IMBOR een visualisatie te bieden. Er kunnen geen conclusies uit getrokken worden, of in LinkedData termen: er kan geen reasoning op gedaan worden.
@@ -151,15 +157,13 @@ Beiden SKOS indelingen hebben dus geen _expliciete_ waarde/gebruik in de ontolog
 
 ## Regels
 
-Om het model toe te passen zijn er, naast de expliciete regels in het model zelf, een aantal
-		impliciete regels van toepassing.
+Om het model toe te passen zijn er, naast de expliciete regels in het model zelf, een aantal impliciete regels van toepassing.
 
 1. De `rdfs:domain` en `rdfs:range` worden niet gebruikt omdat deze te restrictief (met name omdat ze transitief) zijn. In plaats hiervan worden SHACL shapes gebruikt voor het vastleggen van relaties tussen objecten en eigenschappen en objecten onderling.
 1. De `nta8035:unit` en `nta8035:quantityKind` properties worden altijd gebruikt i.c.m. met een QUDT resource.
 1. Er worden geen Individuals gemaakt in het model bij Objecten.
 1. Een `nta8035:PhysicalObject` kan maar één `skos:member` relatie hebben met een member van de Hiërarchie collectie.
-1. Alle concepten hebben een `rdfs:label`, `skos:prefLabel` en
-	`skos:definition`. Met daarin respectievelijk de data gerelateerde naam, de IMBOR
+1. Alle concepten hebben een `rdfs:label`, `skos:prefLabel` en 	`skos:definition`. Met daarin respectievelijk de data gerelateerde naam, de IMBOR
 	naam in NL en de definitie in NL. De eerste twee zijn sowieso verplicht.
 
 
@@ -172,10 +176,37 @@ Bij het maken van de LinkedData versie van IMBOR zijn bepaalde keuzes gemaakt me
 * Use cases voor de LinkedData versie van IMBOR 
 
 Deze keuzes worden "design decisions" genoemd. Al deze keuzes worden gedocumenteerd en bijgehouden
-op de GitHub bij de Issues, met het label "design decision". Dit is de directe link: <a
+op de GitHub bij de Issues, met het label "design decision". In [Annex A](#issue-summary) staan de issues die in deze ReSpec worden aangehaald.
+Met deze link is de _volledige lijst_ te bekijken: <a
 href="https://github.com/Stichting-CROW/imbor/issues?utf8=%E2%9C%93&q=label%3A%22design+decision%22+"
 target="_blank">IMBOR LinkedData design decisions</a>.
 
+
+## URI-strategie
+
+De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat, ook de individuals, in een TypeLibrary staan en geen aanwijsbare dingen in de echte wereld representeren.
+Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
+De NTA8035 schrijft dan voor:
+
+> `http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]`
+
+Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
+
+> `http://linkeddata.crow.nl/imbor/def/objecttype/Boom`
+
+Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onderscheiden: 
+
+Graaf         | Inhoud                                                                      | Namespace
+----------    | ----------                                                                  |---------
+ObjectTypen   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
+Eigenschappen | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
+Domeinwaarden | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde`
+Shapes        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
+Groeperingen  | De SKOS collecties voor de IMBOR hiërarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
+GUID          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
+
+Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
+en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
 
 </section>
 
@@ -185,20 +216,33 @@ target="_blank">IMBOR LinkedData design decisions</a>.
 
 ## ObjectTypen
 
-_tbd_ 
+IMBOR in LinkedData kent een taxonomie van fysieke objecten, die begint bij `nta8035:PhysicalObject`. Alles is hiermee een fysiek object volgens de NTA definitie:
+> _Een FysiekObject is iets dat bestaat of zou kunnen bestaan in ruimte en tijd, een manifestatie en een afbakening van materie en/of energie vormt en waarneembaar is door de zintuigen.
+> Een fysiek object kan activiteiten uitvoeren en kan ook worden getransformeerd door activiteiten._
+<div class="issue" data-number="5"></div>
+
+Direct onder het `nta8035:PhysicalObject` vinden we het Beheerobject. Dit is een belangrijk object binnen IMBOR, omdat eigenlijk alle 'te beheren' objecten hier onder vallen.
+En daarmee alle eigenschappen van dat object, van toepassing zijn op alle andere objecten.
+Alle andere objecten zijn dan ook `rdfs:subClassOf` dit object. Vanaf daaronder wordt de structuur gevolgd die IMBOR kent als de 'IMBOR Hiërarchie'.
+Naast het Beheerobject staan een aantal losse 'raakvlakobjecten' (of binnen IMBOR: 'hulpobjecten'). Dit zijn de objecten die een rol spelen in de `nta8035:hasPart` relatie.
+
+Een andere uitzondering betreffen een aantal bijzondere IMBOR objecten:
+<div class="issue" data-number="27"></div>
+
 
 ## Eigenschappen
 
 Eigenschappen in IMBOR bepalen welke informatie bij een object wordt opgeslagen. 
 Eigenschappen kunnen voorgedefinieerde waardes hebben (zie [Vastewaardelijsten](#vastewaardelijsten))
-of een voorgedefinieerde eenheid ([Eenheden](#eenheden))
-of eenheidloos bepaald zijn.
+of een voorgedefinieerde eenheid ([Eenheden](#eenheden)) of eenheidloos bepaald zijn. 
 In dat geval zou de definitie van de eigenschap duidelijkheid moeten geven over de gewenste (tekstuele) waardes.
+Deze eigenschappen worden respectievelijk ObjectProperty, DatatypeProperty en AnnotationProperty genoemd.
+De daadwerkelijke eigenschappen worden vastgelegd in (SHACL) shapes.
 
-## Shapes
+### Shapes
 
-In IMBOR koppelen Shacl-shapes bepaalde eigenschappen aan bepaalde objecten. 
-[Shacl](https://www.w3.org/TR/shacl) (afgekort met `sh:`) is een W3C aanbeveling voor het valideren van Linked datasets.
+In IMBOR koppelen SHACL-shapes bepaalde eigenschappen aan bepaalde objecten. 
+[SHACL](https://www.w3.org/TR/shacl) (afgekort met `sh:`) is een W3C aanbeveling voor het valideren van Linked datasets.
 De shapes die IMBOR bepaalt, zijn als een vormenstoof. 
 De areaalgegevens zijn als de blokken die erdoor passen (of niet).
 
@@ -206,8 +250,11 @@ Er zijn `sh:NodeShape`s en `sh:PropertyShape`s.
 Een `sh:NodeShape` in IMBOR richt zich op instanties van bepaalde klasses, welke is te zien bij `sh:targetClass`.
 Een `sh:PropertyShape` in IMBOR richt zich op de waardes van bepaalde eigenschappen, welke is te zien bij `sh:path`.
 Een `sh:NodeShape` wordt vervolgens verbonden met de mogelijke `sh:PropertyShape` eigenschappen door de `sh:property` relatie.
+Er mag gesteld worden dat de `sh:NodeShape` altijd een paar vormt met een fysiek object, te weten: `nta8035:PhysicalObject`
+en dat de `sh:PropertyShape` altijd een paar vormt met de eigenschap, te weten: `rdf:property`. 
+De vele combinaties tussen de fysieke objecten en de eigenschappen worden zodoende vastgelegd middels de `sh:property` relatie.
 
-Shacl is bedoeld om Linked datasets te valideren en er bestaan dus programma's die geautomatiseerd een controle doen.
+SHACL is bedoeld om Linked datasets te valideren en er bestaan dus programma's die geautomatiseerd een controle doen.
 Bijvoorbeeld TopQuadrant's [`shaclvalidate`][shaclvalidate] of Apache Jena's [`shacl`][shacl].
 Alle IMBOR klasses, eigenschappen en domeinwaardes voldoen ook aan de shapes die beschreven staat in [`data/imbor.shapes.ttl`](../data/imbor.shapes.ttl).
 
@@ -240,10 +287,13 @@ Implementeerders wordt aangeraden die dataset in te laden om de juiste interpret
 
 Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende status. 
 Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden. 
-Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt (zie ook issue <a href="https://github.com/Stichting-CROW/imbor/issues/42" target="_blank">#42</a> in GitHub). 
+Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen onderscheidt in gemaakt:
+<div class="issue" data-number="42"></div>
+
 Conform NTA 8035 zijn vastewaardelijsten geïmplementeerd met behulp van superclasses die geïnstantieerd worden door de individuele waardes.
 
-## Raakvlakken
+
+## Raakvlakken / onderdelen
 
 IMBOR definieert een aantal relaties _tussen_ objecten, zoals beschreven in onderstaande tabel. 
 
@@ -262,33 +312,40 @@ KunstwerkOpening                 | Kunstwerk
 VerhardingsobjectConstructielaag | Verhardingsobject
 
 De objecttypen in de rechterkolom relateren aan de objecten (deze worden 'hulpobjecten' genoemd) uit de linkerkolom doormiddel van de `nta8035:hasPart`. 
+Binnen IMBOR-LD hanteren we alle raakvlakken voorlopig als 'onderdeel van' (vandaar `nta8035:hasPart`):
+<div class="issue" data-number="16"></div>
+
 Doormiddel van SHACL shapes worden combinaties gemaakt voor ObjectType en (Hulp)ObjectType. Deze (Hulp)ObjectTypen zijn bij IMBOR geen Beheerobject en staan daarmee voorlopig nog los in de taxonomie.
+Voor de combinatie van fysieke objecten en hun onderdelen geldt nagenoeg dezelfde constructie als voor de [eigenschappen](#shapes). Alleen verwijst de `sh:path` naar de `nta8035:hasPart`. 
 
-## URI-strategie
+## Organiserende elementen
 
-De URI-strategie wordt overgenomen uit de NTA8035. Er is gekozen om alles onder /def/ te zetten omdat, ook de individuals, in een TypeLibrary staan en geen aanwijsbare dingen in de echte wereld representeren.
-Tevens kiezen we voor '/'' ipv '#'' want zo houden we opties open als we het dereferencable willen maken.
-De NTA8035 schrijft dan voor:
+IMBOR bevat meerdere elementen die er voor zorgen dat de inhoud vanuit een bepaald perspectief geraadpleegd kan worden. Twee van deze zijn overgenomen in de LinkedData versie.
+* Vakdisciplines
+* IMBOR hiërarchie
+Binnen LinkedData wordt veel gebruik gemaakt van de [SKOS ontologie](https://www.w3.org/2004/02/skos/) (een W3C aanbeveling) om simpele organiserende structuren op te zetten.
+De NTA8035 beveelt het ook aan om op deze manier te doen. 
 
-> `http[s]://{internet domain}/[path]/def/[data model](/|#)[({concept}|{attribute}|{relation})]`
+### Vakdisciplines
 
-Binnen de LinkedData versie van IMBOR wordt een voorbeeld:
+De IMBOR vakdisciplines zijn allemaal een `skos:collection` en `skos:member` van `groep:IMBORVakdisciplineCollectie`. Zodoende is terug te vinden welke vakdisciplines er zijn.
+Per vakdisciplines is vervolgens weer met `skos:member` aangeven welke fysieke objecten binnen die vakdisciplines vallen. Objecten kunnen overigens in meerder vakdisciplines vallen.
+Hoewel deze vastlegging semantisch weinig waarde heeft, kan het handig zijn om de IMBOR content te raadplegen.
 
-> `http://linkeddata.crow.nl/imbor/def/objecttype/Boom`
+### IMBOR Hiërarchie
 
-Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onderscheiden: 
+Alle objecten binnen IMBOR bestaan binnen een hiërarchie. Deze hiërarchie bestaat binnen IMBOR met name om aan te geven wat objecttypen zijn en
+om eigenschappen van toepassing te verklaren op alle onderliggende objecten. Binnen de LinkedData versie van IMBOR wordt dit automatisch geregeld door `rdfs:subClassOf`.
+Vandaar dat deze hiërarchie niet meer in die hoedanigheid terug te vinden is. Om wel de herkenbaarheid te behouden zijn is de hiërarchie ook opgenomen middels SKOS.
+Er bestaat de collectie: `groep:IMBORHierarchischeCollectie`, deze heeft de `skos:member`:
+* `groep:Objecttypegroep`
+* `groep:Objecttype`
+* `groep:Type`
+* `groep:TypeGedetailleerd`
+* `groep:TypeExtraGedetailleerd`
 
-Graaf         | Inhoud                                                                      | Namespace
-----------    | ----------                                                                  |---------
-ObjectTypen   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
-Eigenschappen | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
-Domeinwaarden | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde`
-Shapes        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
-Groeperingen  | De SKOS collecties voor de IMBOR Hierarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
-GUID          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
-
-Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
-en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
+Deze collecties hebben weer als `skos:member` fysieke objecten.
+Hoewel deze vastlegging semantisch weinig waarde heeft, kan het handig zijn om de IMBOR content te raadplegen.
 
 </section>
 
@@ -341,7 +398,7 @@ dan is te zien dat ook de versierings-eigenschap verschijnt bij het carnavalskom
 Om te controleren of de aangepaste OTL nog voldoet aan het metamodel, voeren we met SHACL een controle uit.
 De stappen in [`data/README.md`](../data/README.md) beschrijven hoe we dat doen.
 
-> `$ shacl validate 
+> `$ shacl validate`
 
 
 
@@ -352,3 +409,7 @@ Gemeente Nijmegen en de Waalbrug.
 n.t.b.
 
 </section>
+
+<section class="appendix" id="issue-summary">
+Gerefereerde GitHub issues:
+  </section>
