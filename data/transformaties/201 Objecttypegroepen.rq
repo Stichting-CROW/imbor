@@ -25,8 +25,8 @@ INSERT {
 
         groep:Objecttypegroep
             a skos:Collection ;
-            rdfs:label "Objecttypegroepen" ;
-            skos:member ?hoofdobject ;
+            rdfs:label "IMBOR Objecttypehiërarchie: Objecttypegroepen" ;
+            skos:member ?groep ;
         .
 
         ?groep
