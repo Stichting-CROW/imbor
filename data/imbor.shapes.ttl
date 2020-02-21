@@ -14,148 +14,195 @@ PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 
-# NodeShapes: Physical object
+# NodeShapes
 # ----------
-# De eigenschappen zijn niet met blanco's gekoppeld, zodat ze met sh:deactivated
-# overruled kunnen worden.
-# Noot: de meeste Shapes zitten in IMBOR zelf.
+# IMBOR bevat zowel een meta-model (M1 generiek) als de bibliotheekdata (M1 specifiek). 
+# Daarom staan hier zowel shapes voor het M1-niveau als voor het M0-niveau: 
+# voor zowel de klasses in een OTL, als voor instanties van die klasses. 
 
-shape:Nta8035FysiekObject
+# sh:declare is benodigd voor sh:SPARQLTarget. Hieronder gezet wanneer benodigd.
+<http://linkeddata.crow.nl/imbor/>
+  sh:declare [
+    sh:prefix "nta8035" ;
+    sh:namespace "https://w3id.org/def/basicsemantics-owl#"^^xsd:anyURI ;
+  ] ;
+  sh:declare [
+    sh:prefix "rdf" ;
+    sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+  ] ;
+  sh:declare [
+    sh:prefix "rdfs" ;
+    sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+  ] ;
+  sh:declare [
+    sh:prefix "sh" ;
+    sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+  ] ;
+  .
+
+# NodeShapes: M1 generiek
+# ----------
+
+shape:M1FysiekObject
   a sh:NodeShape ;
-  sh:name "Physical Object" ;
-  sh:targetClass nta8035:PhysicalObject ;
+  sh:name "NTA 8035-klasses in de OTL"@nl-NL ;
+  sh:target [
+		a sh:SPARQLTarget ;
+    rdfs:comment "SHACL Advanced Features <https://www.w3.org/TR/shacl-af/> noodzakelijk"@nl-NL ;
+		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+		sh:select """
+      SELECT DISTINCT $this
+			WHERE {
+				$this a rdfs:Class ;
+				  rdfs:subClassOf+ nta8035:PhysicalObject ;
+          .
+			}
+			""" ;
+	] ;
 
   sh:property shape:label ;
   sh:property shape:prefLabel ;
   sh:property shape:definition ;
-  sh:property shape:PhysicalObject-hasPart ;
-  sh:property shape:PhysicalObject-subClassOf ;
+  sh:property shape:imborUUID ;
   .
 
-shape:ImborEigenschappen
+shape:M1EigenschapIsGebondenAanShape
   a sh:NodeShape ;
-  # sh:targetClass rdf:Property ;
-  # ^^ bovenstaande ^^ richt zich ook op rdf:Property`s die voorkomen via owl:import. 
-  # Daarom is onderstaande SPARQLTarget gericht op de rdf:Property`s die via sh:path
-  # worden gebruikt in de ontologie.
+  sh:targetClass rdf:Property ;
+  
+  sh:property shape:M1Eigenschap-ProperyShape-path ; 
+  .
+
+shape:M1Eigenschap
+  a sh:NodeShape ;
+  sh:name "Eigenschappen (rdf:Property)"@nl-NL ;
   sh:target [
     a sh:SPARQLTarget ;
-		sh:prefixes rdf: , sh: , graph: ;
+		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+    rdfs:comment "SHACL Advanced Features <https://www.w3.org/TR/shacl-af/> noodzakelijk"@nl-NL ;
 		sh:select """
-			SELECT ?this
+			SELECT DISTINCT $this
 			WHERE {
-        # GRAPH graph:Eigenschappen {
-          ?this a rdf:Property .
-        # } GRAPH graph:Shapes {
-          ?propertyShape sh:path ?this .
-        # }
+          $this a rdf:Property .
+          ?propertyShape sh:path $this .
 			}
 			""" ;
-
   ] ;
 
   sh:property shape:label ;
   sh:property shape:prefLabel ;
   sh:property shape:definition ;
+  sh:property shape:imborUUID ;
   .
 
-shape:Nta8035EnumeratieTypes
+shape:M1EnumerationType
   a sh:NodeShape ;
+  sh:name "NTA 8035-Enumeratieklasses in de OTL"@nl-NL ;
+  sh:target [
+		a sh:SPARQLTarget ;
+		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+		sh:select """
+			SELECT DISTINCT $this
+			WHERE {
+				$this a rdfs:Class ;
+				  rdfs:subClassOf nta8035:EnumerationType ;
+          .
+			}
+			""" ;
+	] ;
+
+  sh:property shape:label ;
+  sh:property shape:prefLabel ;
+  sh:property shape:definition ;
+  sh:property shape:imborUUID ;
+  .
+
+shape:M1EnumerationInstanties
+  a sh:NodeShape ;
+  sh:name "NTA 8035-Enumeratie-instanties in de OTL"@nl-NL ;
   sh:targetClass nta8035:EnumerationType ;
 
   sh:property shape:label ;
   sh:property shape:prefLabel ;
   sh:property shape:definition ;
+  sh:property shape:imborUUID ;
   .
 
-# shape:Nta
+# NodeShapes: M0 instanties
+# ----------
+
+shape:M0FysiekObject
+  a sh:NodeShape ;
+  sh:targetClass nta8035:PhysicalObject ;
+
+  sh:property shape:M0FysiekObject-hasPart ;
+  .
 
 # Property Shapes: algemeen
 # ---------------
 
 shape:label
   a sh:PropertyShape ;
-  sh:message "Elk fysiek object moet tenminste één Nederlands label hebben"@nl-NL ;
+  sh:message "Ontbrekend Nederlands label"@nl-NL ;
+  sh:severity sh:Warning ;
 
   sh:path rdfs:label ;
   sh:minCount 1 ;
-  sh:datatype rdf:langString ;
   sh:languageIn ( "nl" ) ;
   .
 
 shape:prefLabel
   a sh:PropertyShape ;
+  sh:message "Maximaal 1 waarde per taal; Nederlands verplicht"@nl-NL ;
+  sh:severity sh:Warning ;
 
   sh:path skos:prefLabel ;
-  sh:minCount 1 ;  # IMBOR: prefLabel moet 1x voorkomen
-  sh:datatype rdf:langString ;  # NTA8035: waarde is per taal uniek
   sh:languageIn ( "nl" ) ;  # IMBOR: Er moet een Nederlands label bij zitten
-  sh:uniqueLang true ;
+  sh:uniqueLang true ;  # NTA8035: waarde is per taal uniek
   .
 
 shape:definition
   a sh:PropertyShape ;
+  sh:message "Ontbrekende Nederlandse definitie"@nl-NL ;
+  sh:severity sh:Warning ;
 
   sh:path skos:definition ;
-  sh:datatype rdf:langString ;
   sh:languageIn ( "nl" ) ;
   .
 
-# Property Shapes: fysieke objecten
-# ---------------
-
-shape:PhysicalObject-hasPart
+shape:imborUUID
   a sh:PropertyShape ;
+  sh:message "Een IMBOR GUID is een <urn:uuid:...> URI of een string"@nl-NL ;
+  sh:severity sh:Info ;
+
+  sh:path skos:notation ;
+  sh:nodeKind sh:IRIOrLiteral ;
+  sh:or (
+    [
+      sh:nodeKind sh:Literal ;
+      sh:datatype xsd:string ;
+      sh:pattern "(\\{){0,1}[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}(\\}){0,1}" ;
+    ]
+    [
+      sh:nodeKind sh:IRI ;
+      sh:pattern "^urn:uuid:[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}$" ;
+    ]
+  ) ;
+  .
+
+shape:M1Eigenschap-ProperyShape-path
+  a sh:PropertyShape ;
+  sh:message "rdf:Property moet verbonden zijn met een sh:ProperyShape via sh:path"@nl-NL ;
+
+  sh:path [ sh:inversePath sh:path ] ;  # dus die rdf:Property`s als object bij sh:path staan
+  sh:minCount 1 ;
+  .
+
+shape:M0FysiekObject-hasPart
+  a sh:PropertyShape ;
+  sh:message "nta8035:hasPart bevat altijd een instantie van nta8035:PhysicalObject"@nl-NL ;
 
   sh:path nta8035:hasPart ;
   sh:class nta8035:PhysicalObject ;
   .
 
-shape:PhysicalObject-subClassOf
-  a sh:PropertyShape ;
-
-  sh:path rdfs:subClassOf ;
-  sh:class nta8035:PhysicalObject ;
-  .
-
-# Property Shapes: geometrie
-# ---------------
-# Mogelijke geometrie-waardes zijn in IMBOR op objecttype-niveau bepaald.
-# Objecttype-shapes worden gegenereerd in de ontologie met deze propertyshapes
-# als waarde bij sh:or of sh:property.
-
-shape:PuntGeometriePropertyShape
-  a sh:PropertyShape ;
-  sh:name "puntgeometrie"@nl-NL ;
-  sh:description "Geometrie kan een punt zijn"@nl-NL ;
-  sh:path (geo:geometry geo:asWKT) ;
-  sh:datatype geo:wktLiteral ;
-  sh:pattern "POINT" ;
-.
-
-shape:LijnGeometriePropertyShape
-  a sh:PropertyShape ;
-  sh:name "lijngeometrie"@nl-NL ;
-  sh:description "Geometrie kan een lijn zijn"@nl-NL ;
-  sh:path (geo:geometry geo:asWKT) ;
-  sh:datatype geo:wktLiteral ;
-  sh:pattern "LINESTRING" ;
-.
-
-shape:VlakGeometriePropertyShape
-  a sh:PropertyShape ;
-  sh:name "vlakgeometrie"@nl-NL ;
-  sh:description "Geometrie kan een vlak zijn"@nl-NL ;
-  sh:path (geo:geometry geo:asWKT) ;
-  sh:datatype geo:wktLiteral ;
-  sh:pattern "POLYGON" ;
-.
-
-shape:MultiVlakGeometriePropertyShape
-  a sh:PropertyShape ;
-  sh:name "multivlakgeometrie"@nl-NL ;
-  sh:description "Geometrie kan een multivlak zijn"@nl-NL ;
-  sh:path (geo:geometry geo:asWKT) ;
-  sh:datatype geo:wktLiteral ;
-  sh:pattern "MULTIPOLYGON" ;
-.
