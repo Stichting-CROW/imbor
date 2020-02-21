@@ -214,11 +214,16 @@ Alle IMBOR klasses, eigenschappen en domeinwaardes voldoen ook aan de shapes die
 [shaclvalidate]: https://github.com/TopQuadrant/shacl#command-line-usage
 [shacl]: https://jena.apache.org/documentation/shacl/index.html
 
-> Met Apache Jena geïnstalleerd op de commandoregelinterface, kunnen we controleren of IMBOR voldoet aan het gespecificeerde metamodel.
+> Met ShaclValidate geïnstalleerd op de commandoregelinterface, kunnen we controleren of IMBOR voldoet aan het gespecificeerde metamodel.
 >
-> `$ shacl validate --shapes data/imbor.shapes.ttl --data data/imbor-ld.ttl --text`  
-> `Conforms`
->
+> `$ shaclvalidate -datafile data/imbor-ld.ttl -shapesfile data/imbor.shapes.ttl`  
+> ```ttl
+> [
+>   a            sh:ValidationReport ;
+>   sh:conforms  true
+> ] .
+> ```
+> 
 > Het geleverde IMBOR in Linked databestand voldoet dus aan het metamodel.
 
 
