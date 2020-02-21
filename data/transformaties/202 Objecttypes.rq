@@ -39,8 +39,6 @@ INSERT {
         .
 
         ?objecttypegroep skos:member ?ot .
-
-        ?informatiemodel skos:member ?ot .
     }
 }
 
