@@ -14,5 +14,5 @@ INSERT {
 
 WHERE {
     BIND ( NOW() AS ?nu )
-    BIND ( '0.5.1' AS ?versie)
+    BIND ( '0.5.2' AS ?versie)
 }
