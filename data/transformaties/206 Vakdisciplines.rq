@@ -24,8 +24,6 @@ INSERT {
             rdfs:comment ?definitie ;
             skos:member ?ot ;
             .
-
-        ?informatiemodel skos:member ?vakdiscipline .
     }
 }
 

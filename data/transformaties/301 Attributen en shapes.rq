@@ -43,10 +43,6 @@ INSERT {
             rdfs:label ?sorteergroepLabel ;
             .
     }
-
-    GRAPH graph:Groeperingen {
-        ?informatiemodel skos:member ?attr .
-    }
 }
 
 WHERE {
