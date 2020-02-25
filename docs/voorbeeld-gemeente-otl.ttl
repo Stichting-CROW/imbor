@@ -10,8 +10,8 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 ex:Carnavalskombord 
 	a rdfs:Class ;
 	rdfs:subClassOf imbor:OBC1436 , nta8035:PhysicalObject ;
-	rdfs:label "Carnavalskombord" ;
-	skos:definition "Bebouwdekombord met de carnavalsnaam van de plaats" ;
+	rdfs:label "Carnavalskombord" ;  # geen taallabel
+	skos:definition "Bebouwdekombord met de carnavalsnaam van de plaats" ;  # geen taallabel
 	.
 
 ex:inclusiefVersiering
