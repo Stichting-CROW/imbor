@@ -58,7 +58,8 @@ Als laatste wordt de M0 laag beschreven, hierin wordt uitleg gegeven van een (vo
     max-width: 100%;
     overflow-x: scroll;
 ">
-<img src="https://github.com/Stichting-CROW/imbor/blob/master/docs/Figures/M-lagen%20visualisatie%20IMBOR.png?raw=true" alt="IMBOR en NTA8035 'M-lagen'">
+<img src="https://github.com/Stichting-CROW/imbor/blob/master/docs/Figures/M-lagen%20visualisatie%20IMBOR.png?raw=true" 
+alt="Lagen NTA 8035 en IMBOR in piramidevorm. Scope NTA 8035: M2 'Conceptueel metamodel (CMM)', M1 generiek 'Conceptueel toplevelmodel (CM)'. Scope IMBOR: M1 generiek 'Conceptueel topolevelmodel (CM)', M1 specifiek 'Conceptuele domeinmodellen'. M0 bevat gegevens.">
 </div>
 
 </section>
@@ -71,7 +72,7 @@ Als laatste wordt de M0 laag beschreven, hierin wordt uitleg gegeven van een (vo
 # Achtergrond
 	
 Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’.  Het IMBOR sluit volledig aan op de Basisregistratie Grootschalige Topografie (BGT) en op het Informatiemodel Geografie (IMGeo). 
-Zie ook <a href='https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor' target="_blank">over IMBOR</a>
+Zie ook [over IMBOR](https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor).
 
 De LinkedData versie van IMBOR maakt onderdeel uit van het BIM Pro programma, het gezamenlijke ontwikkelingstraject van de Provincies bij CROW. De werktitel was altijd de OTL BIM Pro (Objecttypenbibliotheek), maar op het moment van schrijven dekt de LinkedData versie van IMBOR de lading beter.
 Het doel is om met behulp van een LinkedData ontologie informatie over objecten op een slimme manier op te slaan en hiermee ontstaat de mogelijkheid om informatie gemakkelijker (geautomatiseerd) uit te wisselen tussen applicaties.
@@ -79,7 +80,7 @@ Er wordt volledig aangesloten bij de NTA8035 omdat het hier ook een uitwisselmod
 De beoogde eindgebruikers van het project zijn  medewerkers van, of in opdracht van, een Provincie, die werken aan asset management van  objecten in de openbare ruimte en infrastructuur in de hele levenscyclus, zoals beschreven
 in <a href=' https://www.iampro-portaal.nl/' target="_blank">iAMPro</a>.
 
-Voor het verkrijgen van de IMBOR LinkedData versie, raadpleeg de <a href='https://github.com/Stichting-CROW/imbor' target="_blank">GitHub</a>
+Voor het verkrijgen van de IMBOR LinkedData versie, raadpleeg de <a href='https://github.com/Stichting-CROW/imbor' target="_blank">GitHub</a>.
 </section>
 
 <section class="informative">
@@ -198,12 +199,12 @@ Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onders
 
 Graaf         | Inhoud                                                                      | Namespace
 ----------    | ----------                                                                  |---------
-ObjectTypen   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
-Eigenschappen | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
-Domeinwaarden | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde`
-Shapes        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
-Groeperingen  | De SKOS collecties voor de IMBOR hiërarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
-GUID          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
+`graph:ObjectTypen`   | Objecten en dus ook alle onderdelen van de taxonomie				        | `http://linkeddata.crow.nl/imbor/def/objecttype/`
+`graph:Eigenschappen` | Eigenschappen (IMBOR:attributen) en hun informatie 					        | `http://linkeddata.crow.nl/imbor/def/eigenschap/`
+`graph:Domeinwaarden` | Vastewaardelijsten en hun mogelijk waarden							        | `http://linkeddata.crow.nl/imbor/def/domeinwaarde/`
+`graph:Shapes`        | SHACL shapes om Objecten te matchen met de eigenschappen en raakvlakken	    | `http://linkeddata.crow.nl/imbor/def/shape/`
+`graph:Groeperingen`  | De SKOS collecties voor de IMBOR hiërarchie en Vakdisciplines		        | `http://linkeddata.crow.nl/imbor/def/groepering/`
+`graph:GUID`          | Alle GUID zoals deze gelden in de Access versie van IMBOR (ter referentie)  | _alle bovenstaande_
 
 Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
 en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
@@ -360,17 +361,26 @@ Breda wordt Kielegat, Nijmegen wordt Knotsenburg.
 In dit voorbeeld heeft de gemeente voorgenomen om bebouwdekomborden tijdelijk te vervangen met deze carnavalsnaam. 
 Ten behoeve van het op tijd plaatsen en weghalen, wordt dit ook geregistreerd in beheersoftware, die met IMBOR werkt.
 
-```turtle
-PREFIX ex: <http://example.com/gemeente/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+<div id="gemeente-voorbeeld-otl"
+  data-include="gemeente-voorbeeld-otl.ttl">
+</div>
+
+<pre>
+<code class='turtle'>
+PREFIX ex:      &lt;http://example.com/gemeente/>
+PREFIX skos:    &lt;http://www.w3.org/2004/02/skos/core#>
+PREFIX imbor:   &lt;http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+PREFIX sh:      &lt;http://www.w3.org/ns/shacl#> .
+PREFIX xsd:     &lt;http://www.w3.org/2001/XMLSchema#> .
+PREFIX nta8035: &lt;https://w3id.org/def/basicsemantics-owl#>
 
 ex:Carnavalskombord 
 	a rdfs:Class ;
-	rdfs:subClassOf imbor:OBC1436 ;
+	rdfs:subClassOf imbor:OBC1436 , nta8035:PhysicalObject ;
 	rdfs:label "Carnavalskombord" ;
-	skos:definition "Bebouwdekombord met de carnavalsnaam van de plaats"@nl ;
+	skos:definition "Bebouwdekombord met de carnavalsnaam van de plaats" ;
 	.
 
 ex:inclusiefVersiering
@@ -382,12 +392,14 @@ ex:CarnavalskombordShape
 	a sh:NodeShape ;
 	sh:targetClass ex:Carnavalskombord ;
 	sh:property [
+        a sh:PropertyShape ;
 		sh:path ex:inclusiefVersiering ;
 		sh:datatype xsd:boolean ;
 		sh:minCount 1 ;  # verplicht invullen
 	] ;
 	.
-```
+</code>
+</pre>
 
 Deze nieuwe klasse integreert met IMBOR door middel van een subclassificatie (`rdfs:subClassOf`). 
 Hierdoor overerft het de eigenschappen van het IMBOR-bebouwdekombord.
@@ -397,16 +409,53 @@ dan is te zien dat ook de versierings-eigenschap verschijnt bij het carnavalskom
 
 Om te controleren of de aangepaste OTL nog voldoet aan het metamodel, voeren we met SHACL een controle uit.
 De stappen in [`data/README.md`](../data/README.md) beschrijven hoe we dat doen.
+Het onderstaande resultaat is ingekort omwille van de duidelijkheid. 
 
-> `$ shacl validate`
+> ```shell
+$ shaclvalidate -datafile docs/voorbeeld-gemeente-otl.ttl -shapesfile data/imbor.shapes.ttl
+> ```
+> ```turtle
+[ a            sh:ValidationReport ;
+  sh:conforms  false ;
+  sh:result    [
+                 sh:focusNode                  ex:inclusiefVersiering ;
+                 sh:resultMessage              "Nederlands prefLabel ontbreekt"@nl-NL ;
+                 sh:resultPath                 skos:prefLabel ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+               ] ;
+  sh:result    [
+                 sh:focusNode                  ex:Carnavalskombord ;
+                 sh:resultMessage              "Nederlands label ontbreekt"@nl-NL ;
+                 sh:resultPath                 rdfs:label ;
+                 sh:sourceConstraintComponent  sh:LanguageInConstraintComponent ;
+                 sh:value                      "Carnavalskombord"
+               ] ;
+  sh:result    [
+                 sh:focusNode                  ex:Carnavalskombord ;
+                 sh:resultMessage              "Nederlands prefLabel ontbreekt"@nl-NL ;
+                 sh:resultPath                 skos:prefLabel ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+               ] ;
+  sh:result    [
+                 sh:focusNode                  ex:Carnavalskombord ;
+                 sh:resultMessage              "Nederlandse definitie ontbreekt"@nl-NL ;
+                 sh:resultPath                 skos:definition ;
+                 sh:sourceConstraintComponent  sh:LanguageInConstraintComponent ;
+                 sh:value                      "Bebouwdekombord met de carnavalsnaam van de plaats"
+               ]
+] .
+>```
 
-
+De OTL die we voor de carnavalsgemeentes hebben bedacht, is dus niet conform de IMBOR-specificaties voor een OTL.
+Dat wil zeggen, dat de aansluiting op het conceptuele model van IMBOR (2)
 
 ## Gebruikmaken van de OTL: M0-laag
 
 Gemeente Nijmegen en de Waalbrug. 
 
-n.t.b.
+<div id="gemeente-voorbeeld-data"
+  data-include="gemeente-voorbeeld-data.ttl">
+</div>
 
 </section>
 
