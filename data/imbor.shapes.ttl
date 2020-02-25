@@ -68,6 +68,7 @@ shape:M1FysiekObject
 
 shape:M1EigenschapIsGebondenAanShape
   a sh:NodeShape ;
+  rdfs:comment "Omwille van controle op eigenschappen in IMBOR en aansluitende OTL's, worden PropertyShapes verplichtgesteld. "@nl-NL ;
   sh:targetClass rdf:Property ;
   
   sh:property shape:M1Eigenschap-ProperyShape-path ; 
@@ -143,7 +144,7 @@ shape:M0FysiekObject
 
 shape:label
   a sh:PropertyShape ;
-  sh:message "Ontbrekend Nederlands label"@nl-NL ;
+  sh:message "Nederlands label ontbreekt"@nl-NL ;
   sh:severity sh:Warning ;
 
   sh:path rdfs:label ;
@@ -153,17 +154,18 @@ shape:label
 
 shape:prefLabel
   a sh:PropertyShape ;
-  sh:message "Maximaal 1 waarde per taal; Nederlands verplicht"@nl-NL ;
+  sh:message "Nederlands prefLabel ontbreekt"@nl-NL ;
   sh:severity sh:Warning ;
 
   sh:path skos:prefLabel ;
+  sh:minCount 1 ;  # voor uniformiteit ook verplichten
   sh:languageIn ( "nl" ) ;  # IMBOR: Er moet een Nederlands label bij zitten
   sh:uniqueLang true ;  # NTA8035: waarde is per taal uniek
   .
 
 shape:definition
   a sh:PropertyShape ;
-  sh:message "Ontbrekende Nederlandse definitie"@nl-NL ;
+  sh:message "Nederlandse definitie ontbreekt"@nl-NL ;
   sh:severity sh:Warning ;
 
   sh:path skos:definition ;
