@@ -194,7 +194,7 @@ shape:imborUUID
 
 shape:M1Eigenschap-ProperyShape-path
   a sh:PropertyShape ;
-  sh:message "rdf:Property moet verbonden zijn met een sh:ProperyShape via sh:path"@nl-NL ;
+  sh:message "rdf:Property moet verbonden zijn met een sh:PropertyShape via sh:path"@nl-NL ;
 
   sh:path [ sh:inversePath sh:path ] ;  # dus die rdf:Property`s als object bij sh:path staan
   sh:minCount 1 ;
