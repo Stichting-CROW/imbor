@@ -28,3 +28,4 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
