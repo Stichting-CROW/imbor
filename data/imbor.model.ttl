@@ -5,10 +5,11 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 # Ontologie-header
 # ----------------
@@ -18,14 +19,16 @@ PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 <http://linkeddata.crow.nl/imbor/>
   a owl:Ontology ;
   rdfs:label "IMBOR" ;
-  dc:title "IMBOR" ;
   rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
-  dc:description "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
-  dc:language "nl" ;
+  # Dublin Core metadata t.b.v. DCAT beschrijving metadata
+  dcterms:title "IMBOR" ;
+  dcterms:description "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
+  dcterms:language "nl" ;
   # owl:versionInfo NOW() -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
   # owl:versionInfo "1.0.0" -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
 
-  dc:publisher <http://crow.nl> ;
+  dcterms:publisher <http://crow.nl> ;
+
   rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
   owl:imports
     <https://w3id.org/def/basicsemantics-owl>
@@ -36,3 +39,8 @@ PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
   , <http://www.opengis.net/ont/geosparql>
   .
 
+<http://crow.nl>
+  a foaf:Organization ;
+  foaf:homepage <http://www.crow.nl/> ;
+  foaf:name "CROW"@nl ;
+  .
