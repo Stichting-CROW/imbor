@@ -11,6 +11,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 
 # Ontologie-header
 # ----------------
@@ -36,7 +37,7 @@ PREFIX dcat: <http://www.w3.org/ns/dcat#>
   , graph:Eigenschappen
   , graph:Objecten
   , graph:Groeperingen
-  .
+  ;
 
   rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
   foaf:homepage <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
@@ -65,29 +66,35 @@ graph:GUID
   a dcat:Dataset ;
   dcterms:title "GUID"@nl-NL ;
   dcterms:description "Bevat de CROW Datacatalogus (Access) GUIDs van alle entiteiten in deze Linked data distributie."@nl-NL ;
+  .
 
 graph:Shapes 
   a dcat:Dataset ;
   dcterms:title "Shapes"@nl-NL ;
   dcterms:description "Objecttypen worden aan bepaalde eigenschappen gekoppeld met Shapes. Te gebruiken voor areaaldatavalidatie."@nl-NL ;
+  .
 
 graph:Domeinwaarden 
   a dcat:Dataset ;
   dcterms:title "Domeinwaarden"@nl-NL ;
   dcterms:description "Sommige eigenschappen hebben een vaste, beperkte lijst van toegestane waardes: domeinwaardes."@nl-NL ;
+  .
 
 graph:Eigenschappen 
   a dcat:Dataset ;
   dcterms:title "Eigenschappen"@nl-NL ;
   dcterms:description "Eigenschappen beschrijven niet alleen wat vastgelegd wordt over objecttypen, maar ook hoe en met welke precisie."@nl-NL ;
+  .
 
 graph:Objecten 
   a dcat:Dataset ;
   dcterms:title "Objecten"@nl-NL ;
   dcterms:description "Object(type)n beschrijven beheerbare zaken in de openbare ruimte."@nl-NL ;
+  .
 
 graph:Groeperingen 
   a dcat:Dataset ;
   dcterms:title "Groeperingen"@nl-NL ;
   dcterms:description "Omwille van de bruikbaarheid, zijn er verschillende voorselecties gemaakt waarmee objecten en eigenschappen snel gevonden kunnen worden, zonder te verdwalen in de breedheid van IMBOR."@nl-NL ;
+  .
 
