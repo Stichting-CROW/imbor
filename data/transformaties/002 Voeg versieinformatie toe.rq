@@ -4,15 +4,13 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 
 INSERT {
-    GRAPH graph: {
-        <http://linkeddata.crow.nl/imbor/>
-            owl:versionInfo ?nu ;
-            owl:versionInfo ?versie ;
-            .
-    }
+    <http://linkeddata.crow.nl/imbor/>
+        owl:versionInfo ?nu ;
+        owl:versionInfo ?versie ;
+        .
 }
 
 WHERE {
     BIND ( NOW() AS ?nu )
-    BIND ( '0.6.0' AS ?versie)
+    BIND ( '1.0.0' AS ?versie)
 }
