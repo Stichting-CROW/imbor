@@ -1,9 +1,9 @@
 PREFIX data:     <http://example.com/gemeente/areaaldata/>
 PREFIX ex:       <http://example.com/gemeente/>
 PREFIX geo:      <http://www.opengis.net/ont/geosparql#>
-PREFIX imbor:    <http://linkeddata.crow.nl/imbor/def/objecttype/>
-PREFIX imborp:   <http://linkeddata.crow.nl/imbor/def/eigenschap/>
-PREFIX imborvwl: <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>
+PREFIX imbor:    <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>
+PREFIX imborp:   <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/>
+PREFIX imborvwl: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/domeinwaarde/>
 PREFIX nta8035:  <https://w3id.org/def/basicsemantics-owl#>
 PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>

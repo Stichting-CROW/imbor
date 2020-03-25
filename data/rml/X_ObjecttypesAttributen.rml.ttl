@@ -7,14 +7,14 @@
 @prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
-@prefix : <http://linkeddata.crow.nl/imbor/mapping/>.
+@prefix : <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/mapping/>.
 
-@prefix graph: <http://linkeddata.crow.nl/imbor/def/graph/>.
-@prefix imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>.
-@prefix imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>.
-@prefix imborvwl: <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>.
-@prefix shape: <http://linkeddata.crow.nl/imbor/def/shape/>.
-@prefix groep: <http://linkeddata.crow.nl/imbor/def/groepering/>.
+@prefix graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>.
+@prefix imbor: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>.
+@prefix imborp: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/>.
+@prefix imborvwl: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/domeinwaarde/>.
+@prefix shape: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/shape/>.
+@prefix groep: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/>.
 @prefix nta8035: <https://w3id.org/def/basicsemantics-owl#>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
 @prefix qudt: <http://qudt.org/vocab/quantitykind/>.
@@ -42,7 +42,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/def/groepering/OA{ObjecttypeAttribuutID}" ;
+        rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/OA{ObjecttypeAttribuutID}" ;
         rr:graph graph:X_ObjecttypesAttributen ;
     ] ;
 
@@ -57,7 +57,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:object ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/OBB{ObjecttypeID}" ;
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/OBB{ObjecttypeID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;
@@ -65,7 +65,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:attribuut ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/eigenschap/P{AttribuutID}" ;
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/P{AttribuutID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;
@@ -73,7 +73,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:relatie ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/RELTYPE{RelatieID}" ;
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/RELTYPE{RelatieID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;
@@ -90,7 +90,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:eenheid ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/U{EenheidID}" ;
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/U{EenheidID}" ;
             rr:termType rr:IRI ;
         ] ;
     ] ;

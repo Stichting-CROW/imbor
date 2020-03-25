@@ -1,5 +1,5 @@
 PREFIX ex:      <http://example.com/gemeente/>
-PREFIX imbor:   <http://linkeddata.crow.nl/imbor/def/objecttype/>
+PREFIX imbor:   <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
 PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>

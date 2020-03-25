@@ -4,12 +4,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # inhoudelijke doelprefixes
-PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
-PREFIX imbor: <http://linkeddata.crow.nl/imbor/def/objecttype/>
-PREFIX imborp: <http://linkeddata.crow.nl/imbor/def/eigenschap/>
-PREFIX imborvwl: <http://linkeddata.crow.nl/imbor/def/domeinwaarde/>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
-PREFIX groep: <http://linkeddata.crow.nl/imbor/def/groepering/>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
+PREFIX imbor: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/>
+PREFIX imborvwl: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/domeinwaarde/>
+PREFIX shape: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/shape/>
+PREFIX groep: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/>
 
 # NTA 8035
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>

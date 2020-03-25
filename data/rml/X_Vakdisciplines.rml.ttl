@@ -14,7 +14,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/def/groepering/V{VakdisciplineID}" ;
+        rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/V{VakdisciplineID}" ;
         rr:graph graph:X_Vakdisciplines ;
     ] ;
 

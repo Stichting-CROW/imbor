@@ -11,8 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 PREFIX nen3610: <https://definities.geostandaarden.nl/def/nen3610#>
 PREFIX nta8035: <https://w3id.org/def/basicsemantics-owl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
-PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX shape: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/shape/>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
 
 # NodeShapes
 # ----------
@@ -21,7 +21,7 @@ PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
 # voor zowel de klasses in een OTL, als voor instanties van die klasses. 
 
 # sh:declare is benodigd voor sh:SPARQLTarget. Hieronder gezet wanneer benodigd.
-<http://linkeddata.crow.nl/imbor/>
+<http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/>
   sh:declare [
     sh:prefix "nta8035" ;
     sh:namespace "https://w3id.org/def/basicsemantics-owl#"^^xsd:anyURI ;
@@ -49,7 +49,7 @@ shape:M1FysiekObject
   sh:target [
 		a sh:SPARQLTarget ;
     rdfs:comment "SHACL Advanced Features <https://www.w3.org/TR/shacl-af/> noodzakelijk"@nl-NL ;
-		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+		sh:prefixes <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/> ;
 		sh:select """
       SELECT DISTINCT $this
 			WHERE {
@@ -79,7 +79,7 @@ shape:M1Eigenschap
   sh:name "Eigenschappen (rdf:Property)"@nl-NL ;
   sh:target [
     a sh:SPARQLTarget ;
-		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+		sh:prefixes <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/> ;
     rdfs:comment "SHACL Advanced Features <https://www.w3.org/TR/shacl-af/> noodzakelijk"@nl-NL ;
 		sh:select """
 			SELECT DISTINCT $this
@@ -101,7 +101,7 @@ shape:M1EnumerationType
   sh:name "NTA 8035-Enumeratieklasses in de OTL"@nl-NL ;
   sh:target [
 		a sh:SPARQLTarget ;
-		sh:prefixes <http://linkeddata.crow.nl/imbor/> ;
+		sh:prefixes <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/> ;
 		sh:select """
 			SELECT DISTINCT $this
 			WHERE {

@@ -8,17 +8,17 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX shape: <http://linkeddata.crow.nl/imbor/def/shape/>
+PREFIX shape: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/shape/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
 
 # Ontologie-header
 # ----------------
 # De formele introductie van het gehele model. Deze wordt integraal met de
 # ontologie meegegeven.
 
-<http://linkeddata.crow.nl/imbor/>
+<http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/>
   a owl:Ontology , dcat:Dataset ;
   rdfs:label "IMBOR" ;
   rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;

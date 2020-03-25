@@ -1,7 +1,7 @@
 # Klaar met alle oude data
 # Verwijder de tabel-grafen
 
-PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
 
 CLEAR GRAPH graph:REF_Type ;
 CLEAR GRAPH graph:REF_TypePlus ;

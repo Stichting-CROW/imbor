@@ -2,7 +2,7 @@
 # In IMBOR staat alleen Nederlandstalige informatie.
 # Daarom worden alle niet-talige labels in het Nederlands gezet.
 
-PREFIX graph: <http://linkeddata.crow.nl/imbor/def/graph/>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 

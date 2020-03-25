@@ -14,14 +14,14 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://linkeddata.crow.nl/imbor/def/groepering/VO{VakdisciplineObjecttypeID}" ;
+        rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/VO{VakdisciplineObjecttypeID}" ;
         rr:graph graph:X_VakdisciplinesObjecttype ;
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate imborp:vakdiscipline ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/groepering/V{VakdisciplineID}";
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/V{VakdisciplineID}";
             rr:termType rr:IRI ;
         ] ;
     ] ;
@@ -29,7 +29,7 @@
     rr:predicateObjectMap [
         rr:predicate imborp:objecttype ;
         rr:objectMap [
-            rr:template "http://linkeddata.crow.nl/imbor/def/objecttype/OBB{ObjecttypeID}";
+            rr:template "http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/OBB{ObjecttypeID}";
             rr:termType rr:IRI ;
         ] ;
     ] ;
