@@ -37,7 +37,7 @@ INSERT {
 
     GRAPH graph:Eigenschappen {
         ?attr
-            a owl:ObjectProperty ;
+            a rdf:Property ;
             .
     }
 
