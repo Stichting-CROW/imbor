@@ -19,27 +19,18 @@ PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/
 # ontologie meegegeven.
 
 <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/>
-  a owl:Ontology , dcat:Dataset ;
+  a owl:Ontology , dcat:Catalog ;
   rdfs:label "IMBOR" ;
   rdfs:comment "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
+  rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
   # Dublin Core metadata t.b.v. DCAT beschrijving metadata
   dcterms:title "IMBOR" ;
   dcterms:description "Informatiemodel Beheer Openbare Ruimte: in Linked data-formaat"@nl-NL ;
   dcterms:language "nl" ;
+  dcterms:publisher <http://crow.nl> ;
   # owl:versionInfo NOW() -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
   # owl:versionInfo "1.0.0" -- wordt per query toegevoegd -- data/transformaties/002 Voeg versieinformatie toe.rq
 
-  dcterms:publisher <http://crow.nl> ;
-  dcat:dataset
-    graph:GUID 
-  , graph:Shapes
-  , graph:Domeinwaarden
-  , graph:Eigenschappen
-  , graph:Objecten
-  , graph:Groeperingen
-  ;
-
-  rdfs:seeAlso <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
   foaf:homepage <https://www.crow.nl/thema-s/management-openbare-ruimte/imbor> ;
   owl:imports
     <https://w3id.org/def/basicsemantics-owl>
@@ -56,45 +47,8 @@ PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/
 <http://crow.nl>
   a foaf:Organization ;
   foaf:homepage <http://www.crow.nl/> ;
-  foaf:name "CROW" ;
+  foaf:name "Stichting CROW" ;
   .
 
 # a dcat:Dataset -> dcat:dataset
 # De onderliggende datasets worden als losse grafen aangeboden.
-
-graph:GUID 
-  a dcat:Dataset ;
-  dcterms:title "GUID"@nl-NL ;
-  dcterms:description "Bevat de CROW Datacatalogus (Access) GUIDs van alle entiteiten in deze Linked data distributie."@nl-NL ;
-  .
-
-graph:Shapes 
-  a dcat:Dataset ;
-  dcterms:title "Shapes"@nl-NL ;
-  dcterms:description "Objecttypen worden aan bepaalde eigenschappen gekoppeld met Shapes. Te gebruiken voor areaaldatavalidatie."@nl-NL ;
-  .
-
-graph:Domeinwaarden 
-  a dcat:Dataset ;
-  dcterms:title "Domeinwaarden"@nl-NL ;
-  dcterms:description "Sommige eigenschappen hebben een vaste, beperkte lijst van toegestane waardes: domeinwaardes."@nl-NL ;
-  .
-
-graph:Eigenschappen 
-  a dcat:Dataset ;
-  dcterms:title "Eigenschappen"@nl-NL ;
-  dcterms:description "Eigenschappen beschrijven niet alleen wat vastgelegd wordt over objecttypen, maar ook hoe en met welke precisie."@nl-NL ;
-  .
-
-graph:Objecten 
-  a dcat:Dataset ;
-  dcterms:title "Objecten"@nl-NL ;
-  dcterms:description "Object(type)n beschrijven beheerbare zaken in de openbare ruimte."@nl-NL ;
-  .
-
-graph:Groeperingen 
-  a dcat:Dataset ;
-  dcterms:title "Groeperingen"@nl-NL ;
-  dcterms:description "Omwille van de bruikbaarheid, zijn er verschillende voorselecties gemaakt waarmee objecten en eigenschappen snel gevonden kunnen worden, zonder te verdwalen in de breedheid van IMBOR."@nl-NL ;
-  .
-
