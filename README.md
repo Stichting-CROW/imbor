@@ -8,7 +8,7 @@ Deze repo presenteert de documentatie omtrent de ontwikkeling en het gebruik van
 
 IMBOR zelf wordt (nog) niet openbaar gedistribueerd, omdat er nog nagedacht wordt over het beheer en de wijze van financiering. 
 We willen jullie uiteraard wel toegang geven tot IMBOR in Linked data-formaat om te kunnen leren en experimenteren. 
-Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <linked-data@crow.nl>.  Je kunt dan de TriG file krijgen. Hierin staan alle onderdelen van de ontologie [in verschillende grafen][5], inclusief de te importeren ontologieën.
+Je kunt toegang tot IMBOR aanvragen door een mail te sturen naar: <Helpdesk@crow.nl>.  Je kunt dan de TriG file krijgen. Hierin staan alle onderdelen van de ontologie [in verschillende grafen][5], inclusief de te importeren ontologieën.
 Deze TriG file is een soort Turtle-bestand, welke eenvoudig te openen is in bijvoorbeeld de vrij beschikbare software [Protégé][6] of [GraphDB][7].
 _Let op dat bij het openen in Protégé alle ontologieën worden ingeladen, voor een beter overzicht kies voor de menu optie ***View*** en dan ***Show only the active ontology***_
 
