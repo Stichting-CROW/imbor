@@ -14,26 +14,37 @@ PREFIX qudt: <http://qudt.org/vocab/quantitykind/>
 PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
+# cf. NTA 8035 - pagina 51
+
+DELETE {
+    GRAPH graph:Shapes {
+        ?propertyShape
+            sh:path ?attr ;
+            .
+    }    
+}
 
 INSERT {
     GRAPH graph:Eigenschappen {
         ?attr
-            nta8035:unit ?unit ;
+            rdfs:range nta8035:QuantityValue ;
+            nta8035:unit ?unit ;  # TODO: NTA noemt alleen :unit op de anon waarde
             nta8035:quantityKind ?qkind ;
             .
     }
 
     GRAPH graph:Eigenschappen {
         ?attr
-            a owl:DatatypeProperty ;
+            a rdf:Property ;
             .
     }
 
     GRAPH graph:Shapes {
         ?propertyShape
             sh:datatype ?xsdstring ;
+            sh:path ( ?attr rdf:value ) ;
             .
-    }
+    }    
 
     GRAPH graph:GUID {
         ?eenheid skos:notation ?guid .
