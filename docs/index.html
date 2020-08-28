@@ -133,15 +133,26 @@ waarde en/of een eenheid. Hier is de `sh:datatype` een waarde van het datatype
 `xsd:...`. Op de eigenschap (de `rdf:property`) worden de properties `nta8035:unit` en `nta8035:quantityKind` vastgelegd. Hiervoor wordt de QUDT ontologie gebruikt zoals de NTA8035 dat voorschrijft. 
 Hiernaast wordt ook nog de `rdfs:range` vastgelegd. Dit is altijd een instantie van `nta8035:QuantityValue` vaak in de vorm van een blank node. Dit wordt gedaan zodat ook secundaire meta eigenschappen kunnen worden meegegeven (bijvoorbeeld wie het heeft gemeten). 
 
-#####TODO
-Bij SHACL wordt gebruik gemaakt van `rdf:list` wanneer er een 'combinatie' gemaakt moet worden van de eigenschap en de te controleren waarde van deze eigenschap. 
+Bij SHACL wordt gebruik gemaakt van `rdf:list` wanneer er een 'combinatie' gemaakt moet worden van de eigenschap en de te controleren waarde van deze eigenschap. De eerste waarde van de list is altijd de property waar op gecontroleerd moet worden, de tweede waarde is de daadwerkelijke waarde. 
 
-#########TODO
-:brug imbor:P539 :brugDikte . 
-:brugDikte rdf:value 3 ; 
-  nta8035:unit uom:metre ;
-  # a nta8035:QuantityValue ;
-.
+<aside class='example'>
+Voorbeeld van respectievelijk de SHACL shape die de instantie kan 'voorschrijven'.
+	<pre id="voorbeeld-shaclrdflist">
+		<code class='turtle'>
+&#35;SHACL shape met rdf:list tussen haakjes in IMBOR-LD
+shape:P659Shape  a   sh:PropertyShape ;
+	sh:group     groep:P9 ;
+	sh:maxCount  1 ;
+	sh:path      ( imborp:P659 rdf:value ) .
+
+&#35;SHACL shape met rdf:list als instantie
+:brug imborp:P659 :brugDikte . 
+:brugDikte	a nta8035:QuantityValue ;
+			rdf:value "300" ; 
+			nta8035:unit unit:Millim .
+	</code>
+</pre>
+</aside>
 
 De SHACL shape 'AnnotationProperty' wordt gebruikt wanneer het een eigenschap betreft met tekstuele waarden. 
 Deze is nagenoeg hetzelfde als de 'DataProperty' alleen is de enige mogelijke waarde `xsd:string`. 
@@ -218,7 +229,7 @@ dat we betekenisloze codes aanhouden. Binnen de LinkedData versie van IMBOR word
 			</pre>
 </aside>
 
-Verder kiezen we ervoor om 6 verschillende grafen (evenals namespaces) te onderscheiden: 
+Verder kiezen we ervoor om 5 verschillende grafen (evenals namespaces) te onderscheiden: 
 
 Graaf         | Inhoud                                                                      | Namespace
 ----------    | ----------                                                                  |---------
@@ -231,12 +242,27 @@ Graaf         | Inhoud                                                          
 Deze splitsing in grafen is gedaan op verzoek van gebruikers omdat dit makkelijker is bij het splitsen van de ontologieën (men kan zo kiezen welke men wil gebruiken en welke niet) 
 en omdat er zo veel entiteiten zijn (en splitsing enig overzicht geeft).
 
-## Versie
+## Versiebeheer
 
-Versie
+Versiebeheer is nog steeds onderwerp van discussie in de Semanticweb community. Ook CROW heeft <a
+href="https://stichting-crow.github.io/CROW-LDP/"
+target="_blank">hier over gepubliceerd</a>. 
 
-TODO
+Binnen IMBOR-LD hebben we verschillende opties afgewogen. Dit is na te lezen binnen issue 88 (en de comments) op GitHub:
 <div class="issue" data-number="88"></div>
+
+Grofweg kan gesteld worden dat we een TTL file op GitHub plaatsen en deze ook publiceren op het LDP. Hierin introduceren we één klasse van het type `skos:collection` met daarin alle resources die een URI hebben als `".../imbor/def/.../*"`. Daarnaast is er één `dcat:Distribution` class, hierop zetten we de daadwerkelijke versie info. De `skos:collection` is gewoon een groep met alle Subjecten en Objecten in één versie. Welke versie dat is wordt vermeld met een `rdfs:isDefinedBy` die als waarde de `dcat:Distribution` class heeft. Deze manier is simpel, doeltreffend maar heel banaal. Nadat de TTL file wordt gepubliceerd op het LDP van CROW wordt de juiste versieinformatie pas verkregen, dit voegen we dan wel toe in de TTL op GitHub. Dit is zeker ook geen mooie manier van versiebeheer. Maar it-does-the-job voor de huidige use-cases. Daarnaast is iedereen bekent met SKOS, dus moet het makkelijk te behandelen zijn. Onderstaande SPARQL voorbeeld geeft een manier om de juiste zaken op te vragen. 
+<aside class='example'>
+	<pre id="voorbeeld-namespace">
+		<code class='text'>
+		PREFIX groep:   &lt;http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/&gt;
+		SELECT * WHERE {
+		 ?s ?p ?o . 
+		FILTER ( groep:Versie2020-7 skos:member ?s || groep:Versie2020-7 skos:member ?o )
+		}
+		</code>
+			</pre>
+</aside>
 
 </section>
 
