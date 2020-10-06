@@ -1,0 +1,53 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX graph: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/graph/>
+PREFIX groep: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/groepering/>
+PREFIX imbor: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>
+PREFIX imborp: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+    <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/>
+        owl:versionInfo ?nu ;
+        owl:versionInfo ?versie ;
+        .
+    
+    ?versieCollectieURI a skos:Collection ;
+		rdfs:comment ?collectieComment ;
+		rdfs:label ?versietitel ;
+		rdfs:isDefinedBy <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/version/***> ;
+		skos:member ?s ;
+        .
+
+    <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/version/***>
+        a dcat:Distribution ;
+        dcterms:issued ?nu ;
+        dcterms:issued ?versie ;
+        dcterms:title ?versietitel ;
+		# dcat:accessURL <GENERATED VERSIONED URL BY POSTMAN> ; # TODO: Dit moet via LDP
+		# dcat:downloadURL <LINK TO VERSIONED TTL IN GITHUB> ;  # TODO: Dit moet via LDP
+		dcterms:license "© Stichting CROW. Alle rechten voorbehouden." ;  # TODO: Geen duidelijke licentie
+        .
+}
+
+WHERE {
+    BIND ( NOW() AS ?nu )
+    BIND ( '2020-07' AS ?versie)
+
+    BIND ( CONCAT('IMBOR ', ?versie) AS ?versietitel )
+    BIND ( URI( CONCAT( STR(groep:), 'Versie', ?versie)) AS ?versieCollectieURI )
+    BIND ( CONCAT('Dit is de verzameling van alle resources van IMBOR versie '@nl-NL, ?versie) AS ?collectieComment)
+
+    {
+        ?s ?p ?o .
+        FILTER STRSTARTS(STR(?s), STR(imbor:))
+    } UNION {
+        ?s ?p ?o .
+        FILTER STRSTARTS(STR(?s), STR(imborp:))
+    }
+}
