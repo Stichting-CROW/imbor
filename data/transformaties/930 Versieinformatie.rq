@@ -39,6 +39,7 @@ WHERE {
     BIND ( NOW() AS ?nu )
     BIND ( '2020-08' AS ?versie)
 
+
     BIND ( CONCAT('IMBOR ', ?versie) AS ?versietitel )
     BIND ( URI( CONCAT( STR(groep:), 'Versie', ?versie)) AS ?versieCollectieURI )
     BIND ( CONCAT('Dit is de verzameling van alle resources van IMBOR versie '@nl-NL, ?versie) AS ?collectieComment)
