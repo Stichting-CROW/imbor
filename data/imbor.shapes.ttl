@@ -71,7 +71,7 @@ shape:M1EigenschapIsGebondenAanShape
   rdfs:comment "Omwille van controle op eigenschappen in IMBOR en aansluitende OTL's, worden PropertyShapes verplichtgesteld. "@nl-NL ;
   sh:targetClass rdf:Property ;
   
-  sh:property shape:M1Eigenschap-ProperyShape-path ; 
+  sh:or ( shape:M1Eigenschap-ProperyShape-path shape:M1Eigenschap-PropertyShape-pathlist ) ; 
   .
 
 shape:M1Eigenschap
@@ -199,6 +199,14 @@ shape:M1Eigenschap-ProperyShape-path
   sh:path [ sh:inversePath sh:path ] ;  # dus die rdf:Property`s als object bij sh:path staan
   sh:minCount 1 ;
   .
+
+shape:M1Eigenschap-PropertyShape-pathlist
+  a sh:PropertyShape ;
+  sh:message "rdf:Property met nta8035:QuanitityValue moet verbonden zijn met een sh:PropertyShape via sh:path en een rdf:List"@nl-NL ;
+
+  sh:path ( [ sh:inversePath sh:first ] [ sh:inversePath sh:path ] ) ;  # Property ^rdf:first/^sh:path PropertyShape
+  sh:minCount 1 ;
+.
 
 shape:M0FysiekObject-hasPart
   a sh:PropertyShape ;
