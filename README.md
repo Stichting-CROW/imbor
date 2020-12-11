@@ -21,7 +21,7 @@ _Let op dat bij het openen in Protégé alle ontologieën worden ingeladen, voor
 [1]: https://stichting-crow.github.io/imbor/
 [2]: data/README.md
 [3]: data/imbor.model.ttl
-[4]: docs/Figures/IMBOR%20Metamodel.png
+[4]: https://github.com/Stichting-CROW/imbor/blob/gh-pages/imbor-ld/img/IMBOR%20Metamodel.png
 [5]: https://stichting-crow.github.io/imbor/#uri-strategie
 [6]: https://protege.stanford.edu/
 [7]: http://graphdb.ontotext.com/
