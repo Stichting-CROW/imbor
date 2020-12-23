@@ -1,0 +1,1011 @@
+# Mapping dataset gebaseerd op X_ObjecttypesRelaties uit IMBOR2020-08.
+# Omdat de "Uitwisseling IMBOR-classificaties in Geo-BOR berichtenverkeer Geonovum Praktijkrichtlijn" gebruikt wordt bij de mapping van IMBOR naar IMGeo (t.b.v. het horizontale berichtenverkeer) en deze niet in bij BGT-LD gepubliceerd is, is deze simpele mapping d.m.v. rdfs:subClassOf gemaakt.
+# Zie ook: https://docs.geostandaarden.nl/imgeo/def-pr-IMGeo-20200318/#inleiding
+# Sommige IMBOR objecten (met name leidingen en scheidingen zijn direct een subClassOf gemaakt van bgt:def:GeoObject. Dit omdat er geen specifieker equivalent (meer) is.
+# De uitgebreide mapping d.m.v. SHACL shapes wordt nog onderzocht. Dan zal ook de Geonovum Praktijkrichtlijn van hierboven als LinkedData file mee gepubliceerd worden. 
+
+@prefix rdfs:  	 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix imbor: 	 <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/> .
+@prefix bgt-def: <https://bgt.basisregistraties.overheid.nl/bgt/def/> .
+
+imbor:OBB1027
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB190
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB553
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB771
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB128
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB673
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB96
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB997
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB796
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB202
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB369
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB772
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB349
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB196
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB716
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB317
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB251
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB36
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB876
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB863
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1085
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB305
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB199
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1041
+      rdfs:subClassOf bgt-def:Overbruggingsdeel .
+
+imbor:OBB879
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB775
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1068
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB304
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB1040
+      rdfs:subClassOf bgt-def:Overbruggingsdeel .
+
+imbor:OBB755
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB776
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB878
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1069
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB798
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1010
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB877
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1067
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB872
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1028
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB359
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB990
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB873
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB152
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB1086
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB996
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB79
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB38
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB558
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB794
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB1087
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB154
+      rdfs:subClassOf bgt-def:Scheiding , bgt-def:Kunstwerkdeel  .
+
+imbor:OBB1066
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB493
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB77
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB672
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB1060
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB740
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB795
+      rdfs:subClassOf bgt-def:Straatmeubilair , bgt-def:Pand .
+
+imbor:OBB854
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB986
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB608
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB652
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB91
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB149
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB97
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1083
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB201
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB682
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB797
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB1061
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB583
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB779
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB855
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1026
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB987
+      rdfs:subClassOf bgt-def:Pand .
+
+imbor:OBB1092
+      rdfs:subClassOf bgt-def:RegistratiefGebied .
+
+imbor:OBB1020
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB874
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB9
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1038
+      rdfs:subClassOf bgt-def:Overbruggingsdeel .
+
+imbor:OBB867
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB12
+      rdfs:subClassOf bgt-def:VegetatieObject .
+
+imbor:OBB575
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB1064
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB1006
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1091
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB703
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB875
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB325
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB193
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1065
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB181
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB758
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB802
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1094
+      rdfs:subClassOf bgt-def:RegistratiefGebied .
+
+imbor:OBB988
+      rdfs:subClassOf bgt-def:Pand .
+
+imbor:OBB76
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB1021
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB98
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB989
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB497
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB868
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB1024
+      rdfs:subClassOf bgt-def:Mast .
+
+imbor:OBB295
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1046
+      rdfs:subClassOf bgt-def:Pand .
+
+imbor:OBB318
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB681
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB210
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB99
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB78
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB177
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB500
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB546
+      rdfs:subClassOf bgt-def:Tunneldeel .
+
+imbor:OBB357
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB494
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1047
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1004
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1025
+      rdfs:subClassOf bgt-def:Spoor .
+
+imbor:OBB298
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB345
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1093
+      rdfs:subClassOf bgt-def:RegistratiefGebied .
+
+imbor:OBB632
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB602
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1042
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1084
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB243
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB504
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB64
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB648
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB120
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB982
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB358
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB496
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1045
+      rdfs:subClassOf bgt-def:Pand .
+
+imbor:OBB74
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB737
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB1089
+      rdfs:subClassOf bgt-def:RegistratiefGebied .
+
+imbor:OBB983
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB1044
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB1000
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB765
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB82
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB599
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB195
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB179
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB498
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1043
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB880
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB176
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB778
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB174
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB472
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB178
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB495
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB490
+      rdfs:subClassOf bgt-def:Kast .
+
+imbor:OBB777
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB75
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB581
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB580
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB984
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB1105
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB306
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB323
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB191
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB446
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB623
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB985
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB757
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB121
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1016
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1070
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB473
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB474
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB395
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB123
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1079
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1102
+      rdfs:subClassOf bgt-def:VegetatieObject .
+
+imbor:OBB1106
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1101
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB784
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB71
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB1100
+      rdfs:subClassOf bgt-def:Vegetatieobject .
+
+imbor:OBB1002
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB396
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB140
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB1053
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB161
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB228
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1104
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB499
+      rdfs:subClassOf bgt-def:Waterdeel .
+
+imbor:OBB409
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1017
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB809
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB111
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB1103
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1098
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB380
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB665
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB768
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1015
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB1003
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB262
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB28
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB1054
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB807
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1071
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB112
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB1023
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB780
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB663
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB853
+      rdfs:subClassOf bgt-def:Paal , bgt-def:Mast .
+
+imbor:OBB213
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB353
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB229
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB642
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB1022
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB781
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB435
+      rdfs:subClassOf bgt-def:VegetatieObject .
+
+imbor:OBB1018
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB184
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB132
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB808
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB339
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1072
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB205
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB342
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB124
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB587
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB172
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1063
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB576
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB70
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB270
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB433
+      rdfs:subClassOf bgt-def:BegroeidTerreindeel , bgt-def:OnbegroeidTerreindeel , bgt-def:OndersteunendWaterdeel .
+
+imbor:OBB131
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB341
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB471
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB390
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB1052
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB782
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB477
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB89
+      rdfs:subClassOf bgt-def:Tunneldeel .
+
+imbor:OBB182
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB340
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB1051
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB783
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB212
+      rdfs:subClassOf bgt-def:Weginrichtingselement .
+
+imbor:OBB408
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1090
+      rdfs:subClassOf bgt-def:RegistratiefGebied .
+
+imbor:OBB1062
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1037
+      rdfs:subClassOf bgt-def:Overbruggingsdeel .
+
+imbor:OBB773
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB29
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB640
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1081
+      rdfs:subClassOf bgt-def:Leiding .
+
+imbor:OBB1049
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB265
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB774
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB246
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB268
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB582
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB171
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB635
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB327
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB115
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB592
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB1036
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB810
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB41
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB1031
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB811
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB153
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB622
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB1030
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB434
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1080
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB753
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1039
+      rdfs:subClassOf bgt-def:Overbruggingsdeel .
+
+imbor:OBB163
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1076
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB889
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB4
+      rdfs:subClassOf bgt-def:VegetatieObject .
+
+imbor:OBB234
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB197
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB267
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB164
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1032
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1073
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB287
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB610
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB1048
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1057
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB727
+      rdfs:subClassOf bgt-def:Waterinrichtingselement .
+
+imbor:OBB1078
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1013
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1099
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB113
+      rdfs:subClassOf bgt-def:Scheiding .
+
+imbor:OBB1056
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB382
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB402
+      rdfs:subClassOf bgt-def:BegroeidTerreindeel , bgt-def:OndersteunendWegdeel , bgt-def:VegetatieObject , bgt-def:OndersteunendWaterdeel .
+
+imbor:OBB1012
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB1034
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB157
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB1055
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB189
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1033
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1097
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB1011
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1019
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB233
+      rdfs:subClassOf bgt-def:Put .
+
+imbor:OBB1077
+      rdfs:subClassOf bgt-def:Installatie .
+
+imbor:OBB150
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1014
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB397
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB992
+      rdfs:subClassOf bgt-def:Kunstwerkdeel .
+
+imbor:OBB1095
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB401
+      rdfs:subClassOf bgt-def:OndersteunendWegdeel , bgt-def:Wegdeel , bgt-def:OnbegroeidTerreindeel , bgt-def:OndersteunendWaterdeel .
+
+imbor:OBB638
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB1096
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB206
+      rdfs:subClassOf bgt-def:Straatmeubilair .
+
+imbor:OBB326
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB31
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB726
+      rdfs:subClassOf bgt-def:VegetatieObject .
+
+imbor:OBB870
+      rdfs:subClassOf bgt-def:Bord .
+
+imbor:OBB30
+      rdfs:subClassOf bgt-def:Bak .
+
+imbor:OBB871
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB368
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB991
+      rdfs:subClassOf bgt-def:GebouwInstallatie .
+
+imbor:OBB158
+      rdfs:subClassOf bgt-def:Paal .
+
+imbor:OBB869
+      rdfs:subClassOf bgt-def:OverigBouwwerk .
+
+imbor:OBB634
+      rdfs:subClassOf bgt-def:GeoObject .
+
+imbor:OBB186
+      rdfs:subClassOf bgt-def:Sensor .
+
+imbor:OBB114
+      rdfs:subClassOf bgt-def:FunctioneelGebied .
+
+imbor:OBB367
+      rdfs:subClassOf bgt-def:Straatmeubilair .
