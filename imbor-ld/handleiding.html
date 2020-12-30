@@ -69,11 +69,12 @@ gebruik van IMBOR-LD als basis voor een OTL is het goed om kennis te nemen van d
 
 * <p><a href="https://vimeo.com/451827321">Webinar NTA 8035 workshop | Deel 1: Maak je eigen Object Type Bibliotheek</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
 <iframe src="https://player.vimeo.com/video/451827321" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-* <p><a href="https://vimeo.com/451827120">Webinar NTA 8035 workshop | Deel 2: Wissel informatie uit</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
-<iframe src="https://player.vimeo.com/video/451827120" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-* <p><a href="https://www.youtube.com/embed/6MqfZ2eLLtg">Linked Master Data for Asset Owners (part 2) - OTLs for Asset Data</a> van <a href="https://www.youtube.com/channel/UCgELG6P4ofae7S0QmZG0mXA">Semmtech</a> op <a href="https://YouTube.com">YouTube</a>.</p>
+* <p><a href="https://player.vimeo.com/video/460097583">Webinar NTA 8035 workshop | Deel 2: Wissel informatie uit</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/460097583" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+* <p><a href="https://www.youtube.com/embed/6MqfZ2eLLtg">Linked Master Data for Asset Owners (part 2) - OTL's for Asset Data</a> van <a href="https://www.youtube.com/channel/UCgELG6P4ofae7S0QmZG0mXA">Semmtech</a> op <a href="https://YouTube.com">YouTube</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6MqfZ2eLLtg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+* <p><a href="https://vimeo.com/451827120">Webinar NTA 8035 (algemene introductie)</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/451827120" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 * Stanford University [Ontology Development 101: A Guide to Creating Your First Ontology][4]
 
 [1]: https://vimeo.com/451827321
@@ -313,7 +314,7 @@ Er zijn meerdere manieren om een organisatie specifieke OTL op basis van IMBOR t
 	- Handmatig kopieren van IMBOR-LD concepten in de organisatie OTL
 	- Dit betekent dat alleen de gewenste delen overgehaald worden
 	- _Voordelen_
-		- Volledige flexibilieit en controle
+		- Volledige flexibiliteit en controle
 		- Alleen de benodigde zaken van IMBOR-LD worden gebruikt
 	- _Nadelen_
 		- Inferenties vanuit IMBOR-LD werken misschien niet
@@ -337,7 +338,7 @@ Voor het scenario van de meeste organisatie OTL's zal optie 1 voldoende zijn. Di
 
 ### Eigen OTL configureren	
 
-In [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het filmpje van de eerste NTA8035 webinair exact uitgelegd hoe men een eigen OTL zou kunnen samenstellen op basis van de NTA8035. Een OTL op basis van IMBOR-LD (met dus 'Importeren' en 'subClassOf') is nauwelijks verschillend. Het enige grote verschil is dat de IMBOR-LD ontologie (ook) geïmporteerd moet worden. Het wordt dan ook aangeraden om dat filmpje en/of de bijbehorende sheets te raadplegen. Wanneer we dit in dezelfde software willen doen (in dit geval Topquadrant's Topbraid Composer Free Edition) geeft de NEN uitstekend uitleg over hoe dit te installeren en op te zetten. 
+In [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het filmpje van de eerste NTA8035 Workshop exact uitgelegd hoe men een eigen OTL zou kunnen samenstellen op basis van de NTA8035. Een OTL op basis van IMBOR-LD (met dus 'Importeren' en 'subClassOf') is nauwelijks verschillend. Het enige grote verschil is dat de IMBOR-LD ontologie (ook) geïmporteerd moet worden. Het wordt dan ook aangeraden om dat filmpje en/of de bijbehorende sheets te raadplegen. Wanneer we dit in dezelfde software willen doen (in dit geval Topquadrant's Topbraid Composer Free Edition) geeft de NEN uitstekend uitleg over hoe dit te installeren en op te zetten. 
 
 Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a href="https://stichting-crow.github.io/imbor/imbor-ld/#een-eigen-otl-m1-laag-aanpassen"target="_blank">IMBOR-LD: Een eigen OTL: M1-laag aanpassen</a>.
 
@@ -371,10 +372,9 @@ De lijnen verwijzen hoe de informatie die in Topbraid is gecreëerd is, zich ver
 * De <font color="MediumTurquoise">blauwe </font>lijn geeft de eigenschap aan als ```rdf:property```
 	* Deze eigenschap kan eventueel bij meer shapes horen, daarom is deze apart gedefinieerd
 
+Middels Topbraid is nu een TTL file gecreëerd die de aanvullende zaken beschrijft van de Organisatie specifieke OTL, t.o.v. IMBOR-LD, respectievelijk NTA8035 Basic semantics. Hiermee is een OTL gecreëerd op basis van IMBOR-LD, welke weer op basis is van de NTA8035. Met deze drie ontologieën weet een opdrachtnemer precies wat de informatiebehoefte is van de opdrachtnemer die de OTL heeft gemaakt. En dit is inclusief een woordenboek. 
 
-
-
-
+Voor het uitwisselen van gegevens conform deze OTL wordt verwezen naar [Stap 4: Wissel informatie uit](#stap-4-wissel-informatie-uit).
 
 </section>
 
@@ -382,6 +382,18 @@ De lijnen verwijzen hoe de informatie die in Topbraid is gecreëerd is, zich ver
 
 # Stap 4: Wissel informatie uit
 
+Het uitwisselen van gegevens (de dataset) op basis van de gecreëerde OTL is verschillend voor de spreadsheet en de LinkedData versie. Waar de spreadsheet eenvoudig weg het invullen van de rijen is. Wordt er bij de LinkedData versie een nieuwe bestand (de dataset) aangemaakt welke verwijst en conformeerd aan de ontologie die gecreëerd is door de opdrachtgever. 
+
+De werkwijze in LinkedData ligt helemaal aan de software die hiervoor gebruikt wordt. In de sectie [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het tweede filmpje van de NTA8035 workshop exact uitgelegd hoe dit (wederom) met Topbraid kan. 
+
+## LinkedData dataset maken
+
+Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a href="https://stichting-crow.github.io/imbor/imbor-ld/#gebruikmaken-van-de-eigen-otl-m0-laag"target="_blank">IMBOR-LD: Gebruikmaken van de eigen OTL: M0-laag</a>.
+
+Deze casus gebruiken we ook in dit geval. Onderstaande figuur is een uitwerking van het voorbeeld. Onder het figuur staat de uitleg. 
+
+## Dataset controleren met SHACL
+ 
 <div class="ednote">
 	<div class="ednote-title">
 		<span><i>Deze sectie is in bewerking</i></span>
