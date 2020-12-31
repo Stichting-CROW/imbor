@@ -344,14 +344,11 @@ Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a hr
 
 Deze casus gebruiken we ook in dit geval. Onderstaande figuur is een uitwerking van het voorbeeld. Onder het figuur staat de uitleg. 
 
-<div style="
-    max-width: 100%;
-	max-height: 720px;
-    overflow-x: scroll;
-	overlfow-y: scroll;
-">
-<img src="img\OrganisatieOTL Topbraid Config.PNG?raw=true" alt="Organisatie specifieke OTL op basis van IMBOR-LD">
-</div>
+<figure>
+	<img src="img\1_OrganisatieOTL_TopbraidConfig.PNG?raw=true" alt="Organisatie specifieke OTL op basis van IMBOR-LD">
+	<figcaption><a href="img\1_OrganisatieOTL_TopbraidConfig.PNG" target="_blank">Organisatie specifieke OTL op basis van IMBOR-LD (Groot)</a>
+	</figcaption>
+</figure>
 
 Op de plaat hierboven zijn twee figuren te zien:
 * Een venster met Topbraid waarin de gehele configuratie van de usecase te zien is;
@@ -384,7 +381,8 @@ Voor het uitwisselen van gegevens conform deze OTL wordt verwezen naar [Stap 4: 
 
 # Stap 4: Wissel informatie uit
 
-Het uitwisselen van gegevens (de dataset) op basis van de gecreëerde OTL is verschillend voor de spreadsheet en de LinkedData versie. Waar de spreadsheet eenvoudig weg het invullen van de rijen is. Wordt er bij de LinkedData versie een nieuwe bestand (de dataset) aangemaakt welke verwijst en conformeerd aan de ontologie die gecreëerd is door de opdrachtgever. 
+Het uitwisselen van gegevens (de dataset) op basis van de gecreëerde OTL is verschillend voor de spreadsheet en de LinkedData versie. Bij de spreadsheet versie bestaat het uit het invullen van de juiste waarde (in een nieuwe kolom) in de rijen van spreadsheet A is. Dit moet handmatig worden gecontroleerd m.b.h. sheet B en C, tenzij er uiteraard iemand iets slims op bedenkt. 
+Bij de LinkedData versie wordt een nieuwe bestand (de dataset) aangemaakt welke verwijst en conformeerd aan de ontologie die gecreëerd is door de opdrachtgever. 
 
 De werkwijze in LinkedData ligt helemaal aan de software die hiervoor gebruikt wordt. In de sectie [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het tweede filmpje van de NTA8035 workshop exact uitgelegd hoe dit (wederom) met Topbraid kan. 
 
@@ -394,16 +392,73 @@ Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a hr
 
 Deze casus gebruiken we ook in dit geval. Onderstaande figuur is een uitwerking van het voorbeeld. Onder het figuur staat de uitleg. 
 
+<figure>
+	<img src="img\2_DatasetOrganisatieOTL_TopbraidConfig.PNG?raw=true" alt="Dataset o.b.v. Organisatie specifieke OTL">
+	<figcaption><a href="img\2_DatasetOrganisatieOTL_TopbraidConfig.PNG" target="_blank">Dataset o.b.v. Organisatie specifieke OTL (Groot)</a>
+	</figcaption>
+</figure>
+
+Op de plaat hierboven zijn twee figuren te zien:
+* Een venster met Topbraid waarin de gehele configuratie van de usecase te zien is;
+* Een venster met Notepad++ waarin de TTL file van de Dataset o.b.v. de Organisatie OTL te zien is.
+
+De lijnen verwijzen hoe de informatie die in Topbraid is gecreëerd is, zich vertaald naar een LinkedData file. 
+
+* De <font color="red">rode </font>lijnen gaan over de verschillende betrokken ontologieën
+	* De set die de daadwerkelijke data instantie bevat is de ```dataset_organisatieOTL.ttl``` file en vooralsnog beschikbaar als namespace: ```http://example.org/dataset_organisatieOTL#```
+	* De OrganisatieOTL is de ```organisatieOTL.ttl``` file en vooralsnog beschikbaar als namespace: ```http://example.org/organisatieOTL#```
+	* De IMBOR-LD ontologie wordt geïmporteerd vanuit de ```imbor-ld.ttl``` en is beschikbaar als namespace: ```http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/```
+	* De NTA8035 ontologie wordt geïmporteerd vanuit de ```NTA 8035 basicsemantics-owl.ttl``` en is beschikbaar als namespace: ```https://w3id.org/def/basicsemantics-owl```
+* De <font color="green">groene </font>lijnen gaan over de ```rdf:type``` (instantie) die is aangemaakt.
+	* Er is te zien dat er een nieuw object 'Bord1' is
+	* En dat deze een ```rdf:type``` is van het ObjectType 'Carnavalskombord'
+* De <font color="gold">gele </font>lijnen gaan over de verschillende eigenschappen die ingevuld zijn voor deze instantie
+	* De eigenschap 'inclusiefVersiering' heeft de waarde 'true'
+	* De eigenschap 'Kleur' heeft de waarde 'Oranje' uit een waardelijst
+	* De eigenschap 'Geometrie' heeft een wktLiteral waarde die een punt op de kaart aanwijst
+* De <font color="MediumTurquoise">blauwe </font>lijn geeft aan dat er nog een tweede instantie van een `Carnavalskombord` is
+
+Middels Topbraid is nu een TTL file gecreëerd die instanties beschrijft o.b.v. de Organisatie specifieke OTL. Een opdrachtnemer zou deze file kunnen maken en doet dat dan precies volgens hetgeen dat de opdrachtgever aangegeven heeft. Er is nog de mogelijkheid om de files automatische te controleren.
+
 ## Dataset controleren met SHACL
  
-<div class="ednote">
-	<div class="ednote-title">
-		<span><i>Deze sectie is in bewerking</i></span>
-	<p>
-		Naar voorbeeld van NEN Webinair "Wissel informatie uit"
-	</p>
-  </div>
+Wanneer een OG een dataset ontvangt van een ON is het handig om deze toch even te checken. Doordat de LinkedData file is opgezet in d.m.v. SHACL shapes is dit mogelijk. Het vereist enig technisch inzicht om dit te doen. In dit document wordt dan ook niet uitgelegd hoe dit exact te doen is. Wel is hiervoor een eerste opzet gemaakt in <a href="https://stichting-crow.github.io/imbor/imbor-ld/#gebruikmaken-van-de-eigen-otl-m0-laag"target="_blank">IMBOR-LD: Gebruikmaken van de eigen OTL: M0-laag</a>.
 
+In het specifieke geval wanneer we de dataset controleren tegen de OrganisatieOTL is onderstaande een voorbeeld.
+<aside class='example'>
+
+In onderstaande geval is bij de eigenschap 'inclusiefVersiering' niet 'true' ingevuld maar "JA". Hierop geeft de SHACL validator dus een foutmelding: "Value must be a valid literal of type boolean".
+
+```turtle
+$ shaclvalidate -datafile dataset_organisatieOTL.ttl -shapesfile organisatieOTL.ttl
+
+@prefix :      <http://example.org/dataset_organisatieOTL#> .
+@prefix imborp: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix organisatieOTL: <http://example.org/organisatieOTL#> .
+
+[ a            sh:ValidationReport ;
+  sh:conforms  false ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  :Bord1 ;
+                 sh:resultMessage              "Value must be a valid literal of type boolean" ;
+                 sh:resultPath                 organisatieOTL:inclusiefVersiering ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                []  ;
+                 sh:value                      "JA"
+               ]
+] .
+```
+	
+</aside>
+
+Op deze manier is te valideren of de aangeleverde set voldoet aan de opgezette OTL.
 
 </section>
 
