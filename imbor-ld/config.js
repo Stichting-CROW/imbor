@@ -1,9 +1,10 @@
 var respecConfig = {
-    specStatus: "CROW-BASIS",
+    specType: "DOC",
     format: "markdown",
     github: "https://github.com/Stichting-CROW/imbor",
     pubDomain: "imbor",
     shortName: "imbor-ld",
+    publishDate: "2020-08-28",
     lint: {
         "no-http-props": false
     },
