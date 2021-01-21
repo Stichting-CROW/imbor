@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang='nl'>
+
+<head>
+	<meta charset='utf-8'>
+	<title>Handleiding OTL | IMBOR-LD</title>
+	<script src='https://ghcdn.rawgit.org/Stichting-CROW/respec/stichting-crow/builds/respec-stichting-crow.js'
+	async
+	class='remove'></script>
+	<script class='remove'>
+	// https://respec.org/docs/ beschrijft ReSpec in het algemeen
+	// https://github.com/stichting-crow/respec/wiki beschrijft de CROW-specifieke wijzigingen aan ReSpec
+		var respecConfig = {
+			specType: "DOC",
+			format: "markdown",
+			github: "https://github.com/Stichting-CROW/imbor",
+			lint: {
+				"no-http-props": false
+			},
+			editors: [
+				{
+					name: "Rik",
+					company: "CROW",
+					companyURL: "https://www.crow.nl/",
+					mailto: "linked-data@crow.nl",
+					note: "In opdracht van BIM Pro"
+				},
+							],
+			shortName: "handleiding-otl",
+			pubDomain: "imbor",
+			};
+	</script>
+</head>
+<noscript>Dit bestand werkt alleen in de nieuwste (Chromium based) versie van Microsoft Edge, <a href="https://github.com/w3c/respec/issues/723">zie #723 bij W3C/Respec</a>.</noscript>
+
+<section id='abstract'>
+
+Deze Respec pagina bevat een handleiding die beschrijft hoe er op basis van IMBOR-LD een eigen ontologie gemaakt kan worden ten behoeve van uitwisseling tussen opdrachtnemer en opdrachtgever. De originele vraag komt voor uit het BIM Pro programma van de Provincies. 
+Men wil een 'OTL' (ObjectTypeLibrary) kunnen samenstellen die aan de opdrachtgever gegeven kan worden, die deze vervolgens 'invult' en teruglevert. Waarop de Provincie de gegevens kan valideren en inlezen in hun systemen. 
+Het doel (en daarmee de scope) van deze handleiding is dat hiermee een Provincie in staat moet zijn om een 'OTL' op te zetten in een spreadsheet (conventioneel) of LinkedData (duurzaam) formaat. 
+
+</section>
+
+<!-- <section id='sotd'>
+</section> -->
+
+<section>
+
+# Achtergrond
+	
+Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’.  Het IMBOR sluit volledig aan op de Basisregistratie Grootschalige Topografie (BGT) en op het Informatiemodel Geografie (IMGeo). 
+Zie ook [over IMBOR](https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor).
+
+De totstandkoming van de LinkedData versie van IMBOR maakt onderdeel uit van het BIM Pro programma, het gezamenlijke ontwikkelingstraject van de Provincies bij CROW. De werktitel was altijd de OTL BIM Pro (Objecttypenbibliotheek), maar op het moment van 
+schrijven dekt de LinkedData versie van IMBOR (ofwel "IMBOR-LD") de lading beter.
+Het doel is om met behulp van een LinkedData ontologie informatie over objecten op een slimme manier op te slaan en hiermee ontstaat de mogelijkheid om informatie gemakkelijker (geautomatiseerd) uit te wisselen tussen applicaties.
+Er wordt volledig aangesloten bij de NTA8035 omdat het hier ook een uitwisselmodel betreft. Dit model is niet persé gemaakt om te dienen als een datamodel voor applicaties, maar wel om een _uitwisselmodel_ te zijn tussen applicaties. 
+De beoogde eindgebruikers van het project zijn  medewerkers van, of in opdracht van, een Provincie, die werken aan asset management van  objecten in de openbare ruimte en infrastructuur in de hele levenscyclus, zoals beschreven
+in <a href=' https://www.iampro-portaal.nl/' target="_blank">iAMPro</a>.
+
+Voor alle informatie over de totstandkoming, het gebruik en het verkrijgen van de IMBOR LinkedData versie, raadpleeg de <a href='https://stichting-crow.github.io/imbor/index.html' target="_blank">uitgebreide IMBOR-LD ReSpec</a>.
+</section>
+
+<section>
+
+# Inspiratie en referenties
+
+Er is momenteel veel gaande rondom OTL's en het opstellen en beheren er van. Er zijn verschillende trainingen te volgen, webinairs gegeven en documenten beschikbaar waarmee een organisatie een eigen OTL op kan stellen. Hoewel deze handleiding specifiek gaat over het 
+gebruik van IMBOR-LD als basis voor een OTL is het goed om kennis te nemen van de andere initiatieven. Niet op de minste plaats omdat deze handleiding door deze (niet limitatieve lijst van) initiatieven geïnspireerd is. 
+
+* <p><a href="https://vimeo.com/451827321">Webinar NTA 8035 workshop | Deel 1: Maak je eigen Object Type Bibliotheek</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/451827321" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+* <p><a href="https://player.vimeo.com/video/460097583">Webinar NTA 8035 workshop | Deel 2: Wissel informatie uit</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/460097583" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+* <p><a href="https://www.youtube.com/embed/6MqfZ2eLLtg">Linked Master Data for Asset Owners (part 2) - OTL's for Asset Data</a> van <a href="https://www.youtube.com/channel/UCgELG6P4ofae7S0QmZG0mXA">Semmtech</a> op <a href="https://YouTube.com">YouTube</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6MqfZ2eLLtg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* <p><a href="https://vimeo.com/451827120">Webinar NTA 8035 (algemene introductie)</a> van <a href="https://vimeo.com/nenstandards">NEN</a> op <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/451827120" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+* Stanford University [Ontology Development 101: A Guide to Creating Your First Ontology][4]
+
+[1]: https://vimeo.com/451827321
+[2]: https://vimeo.com/451827120
+[3]: https://youtu.be/6MqfZ2eLLtg
+[4]: http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+[5]: https://duckduckgo.com/?q=vormenstoof&t=h_&iax=images&ia=images
+
+In een aantal onderdelen van de handleiding zullen ook delen van van bovenstaande bronnen gebruikt of gerefereed worden.
+
+</section>
+
+<section>
+
+# Stap 1: Kies het juiste gebruik
+
+Er zijn een aantal manieren te bedenken om een OTL te gaan gebruiken als organisatie. Een OTL wordt doorgaans voor datzelfde doel ontwikkelt. Vandaar dat het goed is om van te voren na te denken welk doel de OTL gaat dienen. Drie van de meeste belangrijkste en meest 
+gebruikte 'use cases' zijn:
+1. Een gezamenlijke taal spreken tussen partij A en B;
+1. Een gezamenlijke '[vormenstoof][5]' afspreken tussen opdrachtnemer en opdrachtgever;
+1. Een datamodel introduceren voor een bepaalde applicatie of een bepaald applicatielandschap. 
+
+## Een 'gezamenlijke taal'
+
+Wanneer we spreken over een OTL die als gezamenlijke taal dient tussen twee partijen hebben we het eigenlijk over een vocabulaire. Deze wordt vaak in rudimentaire vorm (bijvoorbeeld begrippenlijst) wel in een projectplan gestopt, maar er wordt vaak niet meer naar gekeken.
+Door deze vocabulaire een status te geven en bijvoorbeeld centraal beschikbaar te stellen kan hiernaar verwezen worden. Deze is echter alleen geschikt voor menselijke interpretatie. Vaak bevat het ook niet meer dan een term, definitie, toelichting en synoniemen.
+
+## Een 'vormenstoof'
+
+De vormenstoof OTL (a.k.a. informatiebehoefte specificatie)is de meeste bekende en daarmee ook meest toegepaste. Het doel is het expliciet specificeren van de informatiebehoefte van een organisatie. Het gaat hier eigenlijk om een beschrijving van de werkelijkheid (model) waarin we betekenis geven aan de concepten die in een specifiek domein worden gebruikt, inclusief hun onderlinge samenhang.
+We noemen dit ook wel een ontologie of soms informatiemodel. Een opdrachtgever specificeert zijn informatiebehoefte door te beschrijven welke concepten hij erkent (vaak objecttypen), welke informatie hij er bij wilt vastleggen (vaak eigenschappen) en hoe deze concepten zich onderling verhouden (vaak in een taxonomie en/of meronomie). Soms gaat het zelfs om eisen, functies en verificaties.
+Vervolgens wordt deze OTL overgedragen aan een opdrachtnemer en deze kan vervolgens instanties (werkelijke individuele objecten) aanmaken volgens de opgelegde vormenstoof. De data wordt vervolgens teruggelevert en de opdrachtgever kan controleren (door te kijken of alles gaat door de vormenstoof) of alles past in zijn systemen. 
+
+## Een 'datamodel'
+
+Een laatste toepassing van een OTL is het gebruiken als datamodel. Hierbij wordt er vanuit gegaan dat de applicatie waarin de daadwerkelijke objectdata wordt opgeslagen de data opslaat conform de OTL. Dit betreft dan vaak een custom-made applicatie die met name geschikt 
+is voor de OTL van één organisatie. 
+
+## IMBOR-LD gebruik
+
+Bij de ontwikkeling van IMBOR-LD is met name rekening gehouden met het gebruik als vormenstoof. Dit is waarom de <a href="https://github.com/Stichting-CROW/imbor/issues/20"
+target="_blank">SHACL shapes keuze</a> gemaakt is. Het gebruik als gezamenlijke taal is ook goed mogelijk hiervoor is de 'objecttypen' graph binnen IMBOR-LD voldoende. Op termijn zal vanuit de algemene IMBOR ontwikkelingen een vocabulaire gereleased worden in SKOS, specifiek voor dit doeleinde. De laatste (datamodel) manier is mogelijk, maar wordt afgeraden. 
+De wens van de meeste Provincies was met name het vormenstoof model. Hiermee is de gezamenlijke taal ook makkelijk mogelijk. De rest van de handleiding gaat dan ook uit van het gebruik van een OTL als vormenstoof (informatie specificatie).
+
+</section>
+
+<section>
+
+# Stap 2: Kies de juiste techniek
+
+IMBOR-LD wordt in twee formaten aangeboden. Het wordt (uiteraard) in LinkedData aangeboden en daarnaast in spreadsheet formaat. Beide versies zijn beschikbaar op (een vooralsnog afgeschermde) GitHub omgeving van CROW. Er wordt nog niet openbaar gedistribueerd, omdat er nog nagedacht wordt over het beheer en de wijze van financiering. 
+CROW geeft uiteraard wel toegang tot IMBOR-LD om bijvoorbeeld te kunnen leren en experimenteren. Toegang kan aangevraagd worden door een mail te sturen naar: [helpdesk@crow.nl][helpdesk]. Daar kunnen de verschillende wensen aangegeven worden. 
+
+Voor het overzicht is er ook nog een module beschikbaar in de CROW Kennisbank waarin de content van de IMBOR-LD gevisualiseerd is. Hier kan tabulair door de data genavigeerd worden. 
+
+## LinkedData formaat
+
+De LinkedData versie kan op vier manieren benadert worden:
+1. In de vorm van een LinkedData document (TTL file);
+2. als Webapplicatie via het CROW LDP;  
+3. als REST-API op het CROW LDP;
+4. als SPARQL-endpoint, direct op het CROW LDP. 
+
+De opsomming hierboven geeft ook respectievelijk de geavanceerdheid aan. Nummer 1 betreft het statische LinkedData bestand dat lokaal gebruikt kan worden. De webapplicatie geeft de mogelijkheid om dynamisch/live te kijken en koppelen en is bedoeld als menselijke interface. De REST-API geeft dezelfde mogelijkheden maar is bedoeld als machine-to-machine interface. De SPARQL-endpoint is de direct implementatie van de LinkedData principes, waarbij volledige vrijheid is. Maar ook kennis van LinkedData talen en autorisatie mechanismes nodig is. 
+
+## Spreadsheet formaat
+
+IMBOR-LD wordt ook aangeboden in spreadsheet vorm. Deze laatste distributie vorm is gekozen omdat niet alle partijnen op dit moment willen investeren in LinkedData kennis. Maar daarnaast is er ook een groot verschil in technische (IT) kwaliteiten van opdrachtnemers. Met name de kleine opdrachtnemers lijken nog niet bij machte om goed in te spelen op de LinkedData ontwikkelingen. Dit lijkt een kwestie van tijd, maar daarom wordt er in de tussentijd ook een spreadsheet versie aangeboden. 
+
+## Opties
+
+Samenvattend zijn er dus de volgende opties. 
+
+* IMBOR-LD in LinkedData formaat
+	* TTL file (via [imbor-data GitHub](https://github.com/Stichting-CROW/imbor-data))
+	* Webapplicatie (via [https://sparql.crow.nl/ldp/](https://sparql.crow.nl/ldp/))
+	* REST-API (via [https://sparql.crow.nl/ldp/item_redoc](https://sparql.crow.nl/ldp/item_redoc))
+	* SPARQL-endpoint 
+* IMBOR-LD in spreadsheet formaat
+	* CSV (via [imbor-data GitHub](https://github.com/Stichting-CROW/imbor-data))
+* IMBOR-LD 'klikbaar'
+	* Kennisbank module
+
+Een best practice zou zijn om eerst via de Kennisbank module inzicht te krijgen in de content. Vervolgens het volwassenheid niveau van de organisatie en/of de te maken OTL vast te stellen. Op basis daarvan kiezen voor LinkedData of spreadsheet. Wanneer er voor LinkedData gekozen wordt is de laatste keuze degene of er statisch of live informatie nodig is. 
+
+[helpdesk]: mailto:helpdesk@crow.nl
+</section>
+
+<section>
+
+# Stap 3: Begin een OTL
+
+Op dit moment is het nog onduidelijk hoe een OTL gebruikt gaat worden binnen een Provincie, er zijn wel scenario’s te onderscheiden:
+a. Een provincie (of aantal provincies) gebruikt IMBOR-LD als (één van de onderdelen van) hun OTL;
+a. Een provincie maakt een geheel eigen OTL.
+We gaan in deze handleiding uit van scenario 1. Maar de handleiding is ook grotendeels te gebruiken in scenario 2. 
+
+## Scenario
+
+We gaan er hier vanuit dat de provincie in de rol van opdrachtgever (OG) een OTL wil opstellen voor gebruik in een project. Binnen dit project moeten areaalgegevens geleverd worden aan de opdrachtnemer (ON). Vervolgens gaat de ON aanpassingen doen aan de assets en moeten
+gegevens weer teruggeleverd worden aan de OG. Deze gaat de gegevens valideren zodat deze later weer in het areaalbeheerpakket gelezen kunnen worden.
+Binnen dit scenario onderscheiden we dus de volgende stappen:
+1. Ik wil als OG een OTL opstellen om mijn informatiebehoefte per asset duidelijk te maken aan de ON;
+1. Ik wil als OG een de bestaande situatie in areaaldata leveren, volgens de OTL, zodat de ON over de juiste gegevens beschikt;
+1. Ik wil als OG de gereviseerde situatie terug krijgen op dezelfde manier als ik mijn data aanleverde, zodat ik deze tegen de OTL kan valideren.
+De focus van deze handleiding is stap 1, maar aan de andere twee stappen wordt ook aandacht besteed. 
+
+In [stap 2](#stap-2-kies-de-juiste-techniek) is de gewenste techniek gekozen. Ga daarom verder naar de juist sectie:
+* [OTL in LinkedData](#otl-in-linkeddata) 
+* [OTL in Spreadsheet](#otl-in-spreadsheet)
+
+## OTL in Spreadsheet
+
+Er bestaan drie spreadsheets binnen IMBOR-LD. 
+* **IMBOR_Spreadsheet_A_ObjectTypen-Eigenschappen**: 
+De spreadsheet met alle objecttypen en bijbehorende eigenschappen;
+* **IMBOR_Spreadsheet_B_Eigenschappen**: 
+De spreadsheat met alle eigenschappen en bijhorende eenheden, grootheden of verwijzingen naar waardelijsten;
+* **IMBOR_Spreadsheet_C_Vastewaardelijsten**: 
+De spreadsheet met de vastewaardenlijsten en uiteraard de waardes.
+
+<div class="note">
+	<div class="note-title">
+	  <span>Gebruik van CSV bestanden in Excel</span>
+	</div>
+	<p>
+	  IMBOR-LD is in het openstandaard CSV spreadsheet formaat beschikbaar. Omdat dit in essentie een tekst bestand is, is er een extra stap nodig om dit in bijvoorbeeld Microsoft Excel netjes te krijgen. De minimale stappen hiervoor worden door de VNG goed omschreven op deze website:
+	  <a href="https://www.softwarecatalogus.nl/Hoe%20open%20ik%20een%20exportbestand"target="_blank">CSV in Excel</a>
+	</p>
+</div>
+
+### Inhoud spreadsheet
+
+In de spreadsheets staan verschillende kolommen. Hieronder een uitleg per kolom. De schuin gedrukte representeren de koppelvlakken tussen respectievelijk A & B en B & C.
+
+
+| Spreadsheet 	| Kolom                    	| Uitleg                                                              	|
+|-------------	|--------------------------	|---------------------------------------------------------------------	|
+| A           	| FysiekObjectURI          	| Unieke identifier van het ObjectType                                	|
+|             	| FysiekObjectLabel        	| Naam van het ObjectType                                             	|
+|             	| _EigenschapURI_        	| Unieke identifier van de eigenschap                                 	|
+|             	| EigenschapLabel          	| Naam van de eigenschap                                              	|
+|             	| EigenschapVanObjectLabel 	| Naam het ObjectType waar de eigenschap van overgeërfd is            	|
+|             	| Versie                   	| Versie van IMBOR waar de regel komt                                 	|
+| B           	| _EigenschapURI_           | Unieke identifier van de eigenschap                                 	|
+|             	| EigenschapLabel          	| Naam van de eigenschap                                              	|
+|             	| _VastewaardeLijstURI_    	| Unieke identifier van de corresponderende vastewaardelijst (i.v.t.) 	|
+|             	| VastewaardelijstLabel    	| Naam van corresponderende vastewaardelijst (i.v.t.)                 	|
+|             	| Datatype                 	| Hoe de eigenschap waardemoet worden genoteerd (i.v.t.)              	|
+|             	| Eenheid                  	| In welke maat de eigenschap waarde moet worden genoteerd (i.v.t.)   	|
+|             	| Grootheid                	| Welke betekenis de waarde van de eenheid heeft (i.v.t.)             	|
+|             	| MaximaalAantalVoorkomen  	| Hoe vaak de eigenschap mag voorkomen per ObjectType                 	|
+|             	| Versie                   	| Versie van IMBOR waar de regel uit komt                             	|
+| C           	| _VastewaardeLijstURI_    	| Unieke identifier van de corresponderende vastewaardelijst          	|
+|             	| VastewaardelijstLabel    	| Naam van corresponderende vastewaardelijst                          	|
+|             	| VastewaardeURI           	| Unieke identifier van de waarde in de waardelijst                   	|
+|             	| VastewaardeLabel         	| Naam van de waarde in de waardelijst                                	|
+|             	| Versie                   	| Versie van IMBOR waar de regel uit komt                             	|
+
+### Objecten in scope
+
+Er wordt begonnen met het selecteren van de juiste ObjectTypen in spreadsheet A. Niet allen zullen van belang zijn in een organisatie of binnen een project. Degene die niet van belang zijn, kunnen middels het verwijderen van de juiste rijen (op basis van de 2e kolom) er uit gehaald worden. 
+Wanneer er een ObjectType niet in IMBOR staat kan er uiteraard een toevoeging worden gemaakt met dezelfde opzet met een 'nieuw' objecttype. In dit geval is het aan te raden om de regels van ongeveer een zelfde ding te pakken, deze onderaan te plakken en deze te modificeren waar nodig. De kolommen met 'URI' er in moeten vervolgens uniek gemaakt worden. Best practice zou zijn: ```="organisatie afkorting"&"-"&"type"&"volgnummer"```. Bijvoorbeeld: <i>pnh-ot-001</i>.
+IMBOR is ontworpen om volledig dekkend te zijn, wanneer er afgeweken wordt kan dit uiteraard een goede reden hebben. Maar realiseer wel dat het hiermee minder 'standaard' wordt en daarmee meer maatwerk voor de opdrachtnemer.
+
+### Informatiebehoefte als eigenschappen
+
+Als de spreadsheet met alle relevante objecttypen klaar is, is het zaak om te bekijken of de informatiebehoefte van de organisatie gedekt wordt binnen de eigenschappen die in de spreadsheet B staan. 
+Het wordt aangeraden om in deze spreadsheet een extra kolom aan te maken: ```"VERPLICHT"``` per rij kan dan ingevoerd worden of deze attribuut bij het objecttype persé aangeleverd moet worden (met "JA") of niet (met "NEE").
+
+Mochten er organisatiespecifieke eigenschappen zijn, dan kunnen deze toegevoegd worden. De kolommen met 'URI' er in moeten vervolgens uniek gemaakt worden. Best practice zou zijn: ```="organisatie afkorting"&"-"&"type"&"volgnummer"```. Bijvoorbeeld: <i>pnh-es-001</i>. Ook hier geldt dezelfde opmerking over 'minder standaard' als hiervoor. Verder, geldt bij het toevoegen van eigenschappen dat er ook rekening gehouden moet worden met het feit dat de andere kolommen en wellicht ook vastewaardenlijst spreadheet moeten worden aangepast. In de eigenschappen spreadsheet moeten de nieuwe eigenschappen beschreven worden met de juiste metadata (eenheden, grootheden, etc.) en wanneer de nieuwe eigenschappen vastewaardenlijsten hebben, zullen deze opgegeven moeten worden in de spreadsheet C. 
+
+_Uiteraard is het belangrijke om middels de URI kolommen een koppelvlak te realiseren tussen de spreadsheets._
+
+
+## OTL in LinkedData
+
+Zoals in [stap 2](#stap-2-kies-de-juiste-techniek) aangegeven worden er meerdere manieren van LinkedData gebruik ondersteund. In deze handleiding beschrijven we de 'document gebaseerde' vorm op basis van een TTL file. Exact dezelfde graaf is beschikbaar via het CROW LinkedData platform. Het voordeel van het direct bevragen van een endpoint is dat de data altijd up-to-date is en dat er optimaal gebruik gemaakt wordt van de _Linked_Data technieken. Middels de webapplicatie zijn dezelfde tabellen te generen als in de spreadsheets staan en kunnen links gegenereerd worden die door software als Relatics of Postman gebruikt kunnen worden. De TTL file bevat dezelfde informatie maar is 'disconnected' op het moment dat deze lokaal gebruikt wordt. 
+Deze keuze wordt gemaakt omdat het werken met de 'live' versies qua stappen hetzelfde is, maar omdat daar andere/geavanceerdere software voor nodig is. Daarnaast is de uitwerkingen in een tekstueel bestand makkelijker te volgen voor de beginner. 
+  
+De TTL file van IMBOR-LD is een tekstbestand, maar met een bepaalde structurering. Voor gedetailleerde informatie hierover raadpleeg [[turtle]] documentatie.
+Het bevat de totale IMBOR-LD ontologie. Hierdoor is er uiteraard veel meer mogelijk dan bij de spreadsheet versie. Dit zorgt ook voor een wat uitgebreidere opgave om hiermee aan de slag te gaan.
+
+### Inhoud LinkedData file
+
+De IMBOR-LD ontologie in begint met copyright en versie informatie. Daarna is de ontologie opgesplitst in 5 'grafen'. 
+- ```imbor```: ObjectTypen en dus ook alle onderdelen van de taxonomie
+- ```imborp```: Eigenschappen (IMBOR:attributen) en hun informatie
+- ```imborvwl```: Vastewaardelijsten en hun mogelijk waarden 	
+- ```shape```: SHACL shapes om ObjectTypen te matchen met de eigenschappen
+- ```groep```: SKOS collecties voor de IMBOR hiërarchie en Vakdisciplines en versie
+
+Voor meer uitleg hierover en een visualisatie wordt verwezen naar de generieke 
+<a href="https://stichting-crow.github.io/imbor/imbor-ld/#diagram"target="_blank">IMBOR-LD Respec</a>
+	</p>
+	. 
+
+### Techniek van het linken
+
+Er zijn meerdere manieren om een organisatie specifieke OTL op basis van IMBOR te maken. Wanneer IMBOR alle behoeften dekt is het alleen zaak om in IMBOR-LD te schrappen (ofwel: out-of-scope te verklaren). Wanneer er echter zaken toegevoegd moeten worden zijn de stappen niet verschillend als bij een spreadsheet, maar de uitvoering wel. Dit heeft te maken met de manier waarop twee ontologiën aan elkaar gelinkt kunnen worden. Er zijn in deze drie tactieken, met elk hun voor- en nadelen: 
+
+- __Importeren__
+	- Importeert alle content van de IMBOR-LD ontologie in de organisatie OTL
+	- Dit betekent dat alles wat in IMBOR-LD zit, ook in de organisatie OTL zit
+	- _Voordelen_
+		- Sterkte connectie. Organisatie OTL is compleet up-to-date met IMBOR-LD
+	- _Nadelen_
+		- Geen flexibiliteit. Alles wordt geïmporteerd;
+		- Geen controle. Als iets wijzigt in IMBOR-LD dan wijzigt dit ook in de organisatie OTL
+		- Ongewenste gevolgtrekkingen. Wanneer we meer aan elkaar linken, is de kans op 'geinfereerde kennis' groter. Dit is misschien onwenselijk
+- __Refereren__
+	- Concepten uit IMBOR-LD worden gerefereerd. Dit betekent dat wanneer kennis uit IMBOR-LD nodig is, deze op dat moment 'opgehaald' wordt
+	- Dit betekent dat het twee aparte ontologiën zijn die op zichzelf kunnen bestaan. Maar dat erbij het gebruik van de totale set een live bevraging nodig is van de gehele kennis graaf
+	- _Voordelen_
+		- Simpele, maar sterkte connectie met IMBOR-LD, middels SPARQL
+		- Overzichtelijke OTL
+	- _Nadelen_
+		- Er kan lastig naar diepere delen van IMBOR-LD gerefereerd worden
+- __Kopiëren__
+	- Handmatig kopieren van IMBOR-LD concepten in de organisatie OTL
+	- Dit betekent dat alleen de gewenste delen overgehaald worden
+	- _Voordelen_
+		- Volledige flexibiliteit en controle
+		- Alleen de benodigde zaken van IMBOR-LD worden gebruikt
+	- _Nadelen_
+		- Inferenties vanuit IMBOR-LD werken misschien niet
+		- Handmatige menselijke fouten
+		- Disconnected van IMBOR-LD
+
+Deze opsomming is geïnspireerd door een stuk dat geschreven is door <a href="https://www.linkedin.com/in/miltos-gat"target="_blank">Miltos Gatzios</a> van <a href="https://www.bim-connected.com/"target="_blank">BIM-Connected</a>.
+Er wordt naar hem verwezen voor meer informatie en een up-to-date versie, inclusief gedetailleerde pro en cons tabel. 
+
+### Betekenis van de links
+
+Wanneer er gekozen is voor de optimale techniek van het linken is er nog een belangrijke keuze te maken. Het gaat hier om de semantiek van de link. Hier kan worden aangegeven hoe sterk de verschillende ontologieën aan elkaar gerelateerd zijn en op welke manier. Er zijn heel erg veel manieren om dit te doen. Er worden er hier drie beschreven en vervolgens wordt de meest logische voor het gekozen scenario uitgewerkt. 
+
+1. Het linken van ontologieën door in de Organisatie OTL 'verder te specificeren' middels ```rdfs:subClassOf```. 
+2. Het linken van ontologieën door in de Organisatie OTL eigen objecttypen te maken en deze dezelfde te verklaren tussen de verschillende ontologieën, d.m.v. ```owl:equivalentClass```.
+3. Het linken van ontologieën door een Organisatie OTL te maken met die objecttypen en eigenschappen die niet in de andere ontologie voorkomen en dan een SHACL graph maken die precies ‘definieert’ hoe de objecttypen er uit zien door te verwijzen naar de standaard objecttypen en eigenschappen in combinatie met de Organisatie OTL objecttypen en eigenschappen. 
+
+De opsomming is zo opgebouwd dat 1 makkelijker (maar met minder mogelijkheden) is dan 3. Met optie 3 kan heel precies worden aangegeven hoe een machine de link moet interpreteren en is er volledige vrijheid. Bij optie 1 wordt er vanuit gegaan dat IMBOR-LD goed is, en de Organisatie OTL er alleen maar op uitbreidt. Optie 2 zit er logischerwijs tussen in. 
+
+Voor het scenario van de meeste organisatie OTL's zal optie 1 voldoende zijn. Dit gecombineerd met het importeren uit [Techniek van het linken](#techniek-van-het-linken).
+
+### Eigen OTL configureren	
+
+In [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het filmpje van de eerste NTA8035 Workshop exact uitgelegd hoe men een eigen OTL zou kunnen samenstellen op basis van de NTA8035. Een OTL op basis van IMBOR-LD (met dus 'Importeren' en 'subClassOf') is nauwelijks verschillend. Het enige grote verschil is dat de IMBOR-LD ontologie (ook) geïmporteerd moet worden. Het wordt dan ook aangeraden om dat filmpje en/of de bijbehorende sheets te raadplegen. Wanneer we dit in dezelfde software willen doen (in dit geval Topquadrant's Topbraid Composer Free Edition) geeft de NEN uitstekend uitleg over hoe dit te installeren en op te zetten. 
+
+Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a href="https://stichting-crow.github.io/imbor/imbor-ld/#een-eigen-otl-m1-laag-aanpassen"target="_blank">IMBOR-LD: Een eigen OTL: M1-laag aanpassen</a>.
+
+Deze casus gebruiken we ook in dit geval. Onderstaande figuur is een uitwerking van het voorbeeld. Onder het figuur staat de uitleg. 
+
+<figure>
+	<img src="img/1_OrganisatieOTL_TopbraidConfig.PNG?raw=true" alt="Organisatie specifieke OTL op basis van IMBOR-LD">
+	<figcaption><a href="img/1_OrganisatieOTL_TopbraidConfig.PNG" target="_blank">Organisatie specifieke OTL op basis van IMBOR-LD (Groot)</a>
+	</figcaption>
+</figure>
+
+Op de plaat hierboven zijn twee figuren te zien:
+* Een venster met Topbraid waarin de gehele configuratie van de usecase te zien is;
+* Een venster met Notepad++ waarin de TTL file van de Organisatie specifieke OTL te zien is.
+
+De lijnen verwijzen hoe de informatie die in Topbraid is gecreëerd is, zich vertaald naar een LinkedData file. 
+
+* De <font color="red">rode </font>lijnen gaan over de verschillende betrokken ontologieën
+	* De OrganisatieOTL is de ```organisatieOTL.ttl``` file en vooralsnog beschikbaar als namespace: ```http://example.org/organisatieOTL#```
+	* De IMBOR-LD ontologie wordt geïmporteerd vanuit de ```imbor-ld.ttl``` en is beschikbaar als namespace: ```http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/```
+	* De NTA8035 ontologie wordt geïmporteerd vanuit de ```NTA 8035 basicsemantics-owl.ttl``` en is beschikbaar als namespace: ```https://w3id.org/def/basicsemantics-owl```
+* De <font color="green">groene </font>lijnen gaan over de ```rdfs:subClassOf``` die is aangemaakt.
+	* Er is te zien dat er een nieuwe klasse 'Carnavalskombord' is aangemaakt
+	* En dat deze een ```rdfs:subClassOf``` is van het IMBOR object 'Bebouwde kombord'
+* De <font color="gold">gele </font>lijnen gaan over de SHACL shape die is aangemaakt om een extra eigenschap toe te voegen aan een Carnavalskombord. 
+	* Er is een nieuwe klasse aangemaakt, te weten: 'CarnavalskombordShape'
+	* Deze is van het ```rdf:type``` SHACL NodeShape
+	* Vervolgens is aangeven welke 'conditie' er dan op die shape wordt gezet. Hierin is o.a. te zien dat er middels ```sh:path``` verwezen wordt naar de daadwerkelijke eigenschap en dat de in te vullen waarde ```xsd:boolean``` is (te weten: true of false).
+	* En als laatste is aangegeven op welke class/ObjectType) deze van toepassing is: 'Carnavalskombord'. Hiermee is een koppelelement gecreëerd tussen het objecttype en de eigenschap.
+* De <font color="MediumTurquoise">blauwe </font>lijn geeft de eigenschap aan als ```rdf:property```
+	* Deze eigenschap kan eventueel bij meer shapes horen, daarom is deze apart gedefinieerd
+
+Middels Topbraid is nu een TTL file gecreëerd die de aanvullende zaken beschrijft van de Organisatie specifieke OTL, t.o.v. IMBOR-LD, respectievelijk NTA8035 Basic semantics. Hiermee is een OTL gecreëerd op basis van IMBOR-LD, welke weer op basis is van de NTA8035. Met deze drie ontologieën weet een opdrachtnemer precies wat de informatiebehoefte is van de opdrachtnemer die de OTL heeft gemaakt. En dit is inclusief een woordenboek. 
+
+Voor het uitwisselen van gegevens conform deze OTL wordt verwezen naar [Stap 4: Wissel informatie uit](#stap-4-wissel-informatie-uit).
+
+</section>
+
+<section>
+
+# Stap 4: Wissel informatie uit
+
+Het uitwisselen van gegevens (de dataset) op basis van de gecreëerde OTL is verschillend voor de spreadsheet en de LinkedData versie. Bij de spreadsheet versie bestaat het uit het invullen van de juiste waarde (in een nieuwe kolom) in de rijen van spreadsheet A is. Dit moet handmatig worden gecontroleerd m.b.h. sheet B en C, tenzij er uiteraard iemand iets slims op bedenkt. 
+Bij de LinkedData versie wordt een nieuwe bestand (de dataset) aangemaakt welke verwijst en conformeerd aan de ontologie die gecreëerd is door de opdrachtgever. 
+
+De werkwijze in LinkedData ligt helemaal aan de software die hiervoor gebruikt wordt. In de sectie [Inspiratie en referenties](#inspiratie-en-referenties) wordt in het tweede filmpje van de NTA8035 workshop exact uitgelegd hoe dit (wederom) met Topbraid kan. 
+
+## LinkedData dataset maken
+
+Een voorbeeld casus voor een OTL op basis van IMBOR is reeds uitgewerkt op <a href="https://stichting-crow.github.io/imbor/imbor-ld/#gebruikmaken-van-de-eigen-otl-m0-laag"target="_blank">IMBOR-LD: Gebruikmaken van de eigen OTL: M0-laag</a>.
+
+Deze casus gebruiken we ook in dit geval. Onderstaande figuur is een uitwerking van het voorbeeld. Onder het figuur staat de uitleg. 
+
+<figure>
+	<img src="img/2_DatasetOrganisatieOTL_TopbraidConfig.PNG?raw=true" alt="Dataset o.b.v. Organisatie specifieke OTL">
+	<figcaption><a href="img/2_DatasetOrganisatieOTL_TopbraidConfig.PNG" target="_blank">Dataset o.b.v. Organisatie specifieke OTL (Groot)</a>
+	</figcaption>
+</figure>
+
+Op de plaat hierboven zijn twee figuren te zien:
+* Een venster met Topbraid waarin de gehele configuratie van de usecase te zien is;
+* Een venster met Notepad++ waarin de TTL file van de Dataset o.b.v. de Organisatie OTL te zien is.
+
+De lijnen verwijzen hoe de informatie die in Topbraid is gecreëerd is, zich vertaald naar een LinkedData file. 
+
+* De <font color="red">rode </font>lijnen gaan over de verschillende betrokken ontologieën
+	* De set die de daadwerkelijke data instantie bevat is de ```dataset_organisatieOTL.ttl``` file en vooralsnog beschikbaar als namespace: ```http://example.org/dataset_organisatieOTL#```
+	* De OrganisatieOTL is de ```organisatieOTL.ttl``` file en vooralsnog beschikbaar als namespace: ```http://example.org/organisatieOTL#```
+	* De IMBOR-LD ontologie wordt geïmporteerd vanuit de ```imbor-ld.ttl``` en is beschikbaar als namespace: ```http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/```
+	* De NTA8035 ontologie wordt geïmporteerd vanuit de ```NTA 8035 basicsemantics-owl.ttl``` en is beschikbaar als namespace: ```https://w3id.org/def/basicsemantics-owl```
+* De <font color="green">groene </font>lijnen gaan over de ```rdf:type``` (instantie) die is aangemaakt.
+	* Er is te zien dat er een nieuw object 'Bord1' is
+	* En dat deze een ```rdf:type``` is van het ObjectType 'Carnavalskombord'
+* De <font color="gold">gele </font>lijnen gaan over de verschillende eigenschappen die ingevuld zijn voor deze instantie
+	* De eigenschap 'inclusiefVersiering' heeft de waarde 'true'
+	* De eigenschap 'Kleur' heeft de waarde 'Oranje' uit een waardelijst
+	* De eigenschap 'Geometrie' heeft een wktLiteral waarde die een punt op de kaart aanwijst
+* De <font color="MediumTurquoise">blauwe </font>lijn geeft aan dat er nog een tweede instantie van een `Carnavalskombord` is
+
+Middels Topbraid is nu een TTL file gecreëerd die instanties beschrijft o.b.v. de Organisatie specifieke OTL. Een opdrachtnemer zou deze file kunnen maken en doet dat dan precies volgens hetgeen dat de opdrachtgever aangegeven heeft. Er is nog de mogelijkheid om de files automatische te controleren.
+
+## Dataset controleren met SHACL
+ 
+Wanneer een OG een dataset ontvangt van een ON is het handig om deze toch even te checken. Doordat de LinkedData file is opgezet in d.m.v. SHACL shapes is dit mogelijk. Het vereist enig technisch inzicht om dit te doen. In dit document wordt dan ook niet uitgelegd hoe dit exact te doen is. Wel is hiervoor een eerste opzet gemaakt in <a href="https://stichting-crow.github.io/imbor/imbor-ld/#gebruikmaken-van-de-eigen-otl-m0-laag"target="_blank">IMBOR-LD: Gebruikmaken van de eigen OTL: M0-laag</a>.
+
+In het specifieke geval wanneer we de dataset controleren tegen de OrganisatieOTL is onderstaande een voorbeeld.
+<aside class='example'>
+
+In onderstaande geval is bij de eigenschap 'inclusiefVersiering' niet 'true' ingevuld maar "JA". Hierop geeft de SHACL validator dus een foutmelding: "Value must be a valid literal of type boolean".
+
+```turtle
+$ shaclvalidate -datafile dataset_organisatieOTL.ttl -shapesfile organisatieOTL.ttl
+
+@prefix :      <http://example.org/dataset_organisatieOTL#> .
+@prefix imborp: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix organisatieOTL: <http://example.org/organisatieOTL#> .
+
+[ a            sh:ValidationReport ;
+  sh:conforms  false ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  :Bord1 ;
+                 sh:resultMessage              "Value must be a valid literal of type boolean" ;
+                 sh:resultPath                 organisatieOTL:inclusiefVersiering ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                []  ;
+                 sh:value                      "JA"
+               ]
+] .
+```
+	
+</aside>
+
+Op deze manier is te valideren of de aangeleverde set voldoet aan de opgezette OTL.
+
+</section>
+
+<section>
+	<h2>GitHub Contributors</h2>
+	<ul id="gh-contributors">
+	  <!-- list of contributors will appear here,
+		   along with link to their GitHub profiles -->
+	</ul>
+</section>
