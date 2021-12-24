@@ -1,8 +1,8 @@
 ---
-name: Opmerking op consultatie versie IMBOR2021-10
+name: Opmerking t.b.v. Consultatie IMBOR2022
 about: Vragen/opmerkingen/verbeteringen/aanvullingen op de consultatie versie mogen op deze manier gesteld worden.
 title: ''
-labels: 'Consultatie IMBOR2021'
+labels: 'Consultatie IMBOR2022'
 assignees: ''
 
 ---
