@@ -1,0 +1,34 @@
+PREFIX data:     <http://example.com/gemeente/areaaldata/>
+PREFIX ex:       <http://example.com/gemeente/>
+PREFIX geo:      <http://www.opengis.net/ont/geosparql#>
+PREFIX imbor:    <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/objecttype/>
+PREFIX imborp:   <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/eigenschap/>
+PREFIX imborvwl: <http://linkeddata.crow.nl/publication-v2/ns/crow/imbor/def/domeinwaarde/>
+PREFIX nta8035:  <https://w3id.org/def/basicsemantics-owl#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh:       <http://www.w3.org/ns/shacl#> 
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#> 
+
+data:Bord1
+	a ex:Carnavalskombord ;
+	rdfs:label "Kielegat" ;
+	ex:inclusiefVersiering true ;
+	geo:geometry [
+		geo:asWKT "POINT (51.628349 4.767803)"^^geo:wktLiteral ;
+		<http://data.pdok.nl/def/pdok#asWKT-RD> "POINT (112113 404570)" ;
+	] ;
+	imborp:P414 imborvwl:Q1768 ;  # oranje kleur
+	.
+
+data:Bord2
+	a ex:Carnavalskombord ;
+	rdfs:label "Knotsenburg" ;
+	ex:inclusiefVersiering false ;
+	geo:geometry [
+		geo:asWKT "POINT (51.823444 5.777150)"^^geo:wktLiteral ;
+		<http://data.pdok.nl/def/pdok#asWKT-RD> "POINT (181884 426165)" ;
+	] ;
+	imborp:P414 imborvwl:Q1771 ; # roze kleur
+	.
