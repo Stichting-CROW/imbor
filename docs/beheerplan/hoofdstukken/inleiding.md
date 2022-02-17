@@ -5,9 +5,9 @@
 Het IMBOR is ontstaan vanuit de behoefte van beheerders bij gemeenten en provincies om uniforme benamingen te gebruiken voor beheergegevens van de objecten in de openbare ruimte. Met het IMBOR wil CROW het werkveld beheer openbare ruimte een standaard ontologie bieden om de dataregistratie van gegevens voor het beheer van de openbare ruimte te uniformeren en verbeteren als basis voor een beter assetmanagement.
 
 Het doel van de ontologie IMBOR is in het BIM Pro programma geformuleerd als:
-•	beheerde areaalgegevens op orde te houden: BIM kan zorgdragen om via standaarden de data vanuit de projecten (de bron) soepel terug te laten stromen naar de beheerssystemen. 
-•	professioneel opdrachtgever te zijn: met een integrale OTL en ILS  kan het contractmanagement en datacontractering worden verbeterd door uniform en herkenbaar de markt te benaderen die daar met eigen systemen op kan anticiperen. 
-•	één taal te spreken: het gebruik van standaarden (zoals open BIM-standaarden) te intensiveren met het oog op ontwikkelingen als de Omgevingswet, de DigiDealGO in de Bouwagenda en de verplichte basisregistraties (BGT en WIBON). 
+*	beheerde areaalgegevens op orde te houden: BIM kan zorgdragen om via standaarden de data vanuit de projecten (de bron) soepel terug te laten stromen naar de beheerssystemen. 
+*	professioneel opdrachtgever te zijn: met een integrale OTL en ILS  kan het contractmanagement en datacontractering worden verbeterd door uniform en herkenbaar de markt te benaderen die daar met eigen systemen op kan anticiperen. 
+*	één taal te spreken: het gebruik van standaarden (zoals open BIM-standaarden) te intensiveren met het oog op ontwikkelingen als de Omgevingswet, de DigiDealGO in de Bouwagenda en de verplichte basisregistraties (BGT en WIBON). 
 
 CROW is de ontwikkelaar en beheerder van het Informatie Model Beheer Openbare ruimte (IMBOR). Het IMBOR is ontwikkeld onder begeleiding van een Projectgroep IMBOR, een IMBOR Klankbordgroep softwareleveranciers en een groot aantal inhoudelijke werkgroepen per vakgebied. 
 
@@ -39,11 +39,11 @@ Voor digitale en informatiestandaarden gelden daarnaast de criteria van [Ken Kre
 
 ## Procedure vaststelling beheerplan
 Bij de vaststelling van het Beheerplan IMBOR worden de volgende stappen doorlopen:
--	Opstellen door het IMBOR-team van CROW
--	Bespreken in Begeleidingscommissie BIMPro
--	Bespreken in de IMBOR Klankbordgroep Softwareleveranciers
--	Vaststelling in de Stuurgroep IMBOR
--	Afronding, vaststelling en publicatie door CROW
+* Opstellen door het IMBOR-team van CROW
+* Bespreken in Begeleidingscommissie BIMPro
+* Bespreken in de IMBOR Klankbordgroep Softwareleveranciers
+* Vaststelling in de Stuurgroep IMBOR
+* Afronding, vaststelling en publicatie door CROW
 
 
 
