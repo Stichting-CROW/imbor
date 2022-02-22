@@ -10,9 +10,6 @@ Deze repository wordt gebruikt voor de actieve ontwikkeling van IMBOR.
 
 Middels de GitHub Issues kunnen bug/features/aanbevelingen worden gegeven op IMBOR en de documentatie.
 
-## Sitemap
-
-TODO
 ## Versiebeheer
 
 CROW beraadt zich nog op een duurzame beheersstrategie ten aanzien van IMBOR in Linked data-formaat. 
@@ -24,3 +21,17 @@ Deze repository wordt beschikbaar gesteld onder een Creative Commons Attribution
 
 You should have received a copy of the license along with this
 work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
+
+## Benodigdheden transformatie
+
+- Een beschikbaar SPARQL-endpoint dat werkt volgens de RDF4J-API, zoals bijv. GraphDB
+- Pas de endpoints beschreven in [./sparql-query-runner.json] aan
+- Zorg ervoor dat `npm` en `npx` beschikbaar zijn in `$PATH`
+- Zorg ervoor dat de inputbestanden (sc. `IMBOR-2022*.accdb`)
+- Voer uit: 
+
+```sh
+$ npx @rdmr-eu/sparql-query-runner
+```
+
+- Met Apache Jena's `riot` beschikbaar op `$PATH` worden ook de resulterende bestanden ge-pretty-format.
