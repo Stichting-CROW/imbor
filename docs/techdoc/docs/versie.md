@@ -11,3 +11,4 @@
 | 26-10-2021   	| 0.7     	| Consultatie versie (typo's)                	|
 | 08-11-2021   	| 0.8     	| Aanpassing van IMBOR2021 naar IMBOR2022                	|
 | 24-12-2021   	| 0.9     	| Eerste aanpassingen na consultatie ronde                	|
+| 22-02-2022   	| 0.91     	| Transfer naar /imbor/techdoc/                	|
