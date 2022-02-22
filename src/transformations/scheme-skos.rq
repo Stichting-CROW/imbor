@@ -1,0 +1,34 @@
+# Target-Graph: <https://data.crow.nl/imbor/term>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix imbor-term: <https://data.crow.nl/imbor/term/>
+prefix imbor: <https://data.crow.nl/imbor/def/>
+
+prefix dct: <http://purl.org/dc/terms/>
+prefix geo: <http://www.opengis.net/ont/geosparql#>
+prefix sh:	<http://www.w3.org/ns/shacl#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix csv: <csv:>
+
+INSERT {
+    graph imbor-term: {
+        imbor-term:term-schema a skos:ConceptScheme;
+            skos:prefLabel "Conceptkader voor IMBOR"@nl ;
+            skos:hasTopConcept ?broader .
+
+        ?termURI a skos:Concept ;
+            skos:inScheme imbor-term:term-schema ;
+            .
+
+        }
+}
+WHERE {
+    ?termURI a skos:Concept .
+    OPTIONAL {
+        ?termURI skos:broader ?broader .
+        filter not exists { ?broader skos:broader ?parent }
+    }
+}
