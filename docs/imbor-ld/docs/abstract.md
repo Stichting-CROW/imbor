@@ -1,1 +1,1 @@
-Deze documentatie beschrijft de onderdelen van de LinkedData versie van IMBOR (IMBOR-LD).
+Deze documentatie beschrijft de onderdelen van de verkenning van een LinkedData versie van IMBOR (IMBOR-LD). Dit is onder de vlag van het BIM Pro programma gedaan. Resultante was een IMBOR-LD versie welke op de NTA8035 gebaseerd was en zo veel mogelijk informatie uit IMBOR2020-08 bevatte. Deze documentatie is dan ook onderdeel van IMBOR2020-08. In IMBOR2022 gelden andere regels en vertalingen. Daar is deze documentatie niet op van toepassing.
