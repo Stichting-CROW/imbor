@@ -20,6 +20,7 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 
 * __Aanschaf-informatie__: Verzameling van gegevens die te maken hebben met de monetaire waarde van een object.
 * __Activiteit__: Iets dat mogelijk of daadwerkelijke gebeurt in ruimte en tijd.
+* __Apparaat__: Een (vaak compact) mechanisch of elektronisch ding dat is gemaakt of toegepast voor een specifieke toepassing en doorgaans in één behuizing gevat is.
 * __Bak__: Object met een permanent karakter dat dient om iets in te bergen of te verzamelen.
 * __Begroeiing__: Planten die op natuurlijke wijze zijn ontstaan of door mensen zijn aangeplant.
 * __Beheerd object__: Object welke door een organisatie beheerd wordt in de beheerfase van zijn levenscyclus.
