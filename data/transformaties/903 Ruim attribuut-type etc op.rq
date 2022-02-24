@@ -1,9 +1,0 @@
-DELETE {
-
-}
-
-WHERE {
-    # FILTER ( ?attr != imborp:P256 )  # Type
-    # FILTER ( ?attr != imborp:P257 )  # Type gedetailleerd
-    # FILTER ( ?attr != imborp:P760 )  # Type extra gedetailleerd
-}

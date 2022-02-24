@@ -1,0 +1,86 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix imbor-term: <https://data.crow.nl/imbor/term/>
+prefix imbor: <https://data.crow.nl/imbor/def/>
+prefix imbor-refmodels: <https://data.crow.nl/imbor-ref/def/>
+prefix mapping: <https://data.crow.nl/imbor-ref/id/>
+
+prefix dct: <http://purl.org/dc/terms/>
+prefix geo: <http://www.opengis.net/ont/geosparql#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix csv: <csv:>
+prefix dash: <http://datashapes.org/dash#>
+
+prefix mim: <http://bp4mc2.org/def/mim#>
+prefix nen3610: <http://definities.geostandaarden.nl/def/nen3610#>
+prefix nen2660: <https://w3id.org/nen2660/def#>
+
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/mim> {
+        ?Klasse a mim:Objecttype ;
+            mim:naam ?KlasseNaam ;
+            mim:definitie ?KlasseDef ;
+            mim:begrip ?Begrip ;
+            mim:begripsterm ?BegripsTerm ;
+            mim:herkomst "Stichting CROW"@nl ;
+            mim:datumOpname "2022-03-01"^^xsd:date ;
+            mim:indicatieAbstractObject ?abstract ;
+            .
+    }
+} where {
+    GRAPH <https://data.crow.nl/imbor/def/> {
+        ?Klasse a rdfs:Class , sh:NodeShape ;
+            skos:prefLabel ?KlasseNaam ;
+            skos:definition ?KlasseDef ;
+            rdfs:seeAlso ?Begrip ;
+            dash:abstract ?abstract ;
+            .
+
+     }
+
+    ?Begrip skos:prefLabel ?BegripsTerm .
+}
+
+;
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/mim> {
+        ?Klasse mim:herkomstDefinitie "Stichting CROW"@nl .
+    }
+} where {
+    GRAPH <https://data.crow.nl/imbor/def/> {
+        ?Klasse a rdfs:Class , sh:NodeShape .
+        filter contains(str(?Klasse), str(imbor:))
+    }
+}
+
+;
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/mim> {
+        ?Klasse mim:herkomstDefinitie "Geonovum"@nl .
+    }
+} where {
+    GRAPH <https://data.crow.nl/imbor/def/> {
+        ?Klasse a rdfs:Class , sh:NodeShape .
+        filter contains(str(?Klasse), str(nen3610:))
+    }
+}
+
+;
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/mim> {
+        ?Klasse mim:herkomstDefinitie "NEN2660-2"@nl .
+    }
+} where {
+    GRAPH <https://data.crow.nl/imbor/def/> {
+        ?Klasse a rdfs:Class , sh:NodeShape .
+        filter contains(str(?Klasse), str(nen2660:))
+    }
+}

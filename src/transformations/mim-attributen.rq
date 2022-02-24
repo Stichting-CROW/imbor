@@ -1,0 +1,68 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix imbor-term: <https://data.crow.nl/imbor/term/>
+prefix imbor: <https://data.crow.nl/imbor/def/>
+prefix imbor-refmodels: <https://data.crow.nl/imbor-ref/def/>
+prefix mapping: <https://data.crow.nl/imbor-ref/id/>
+
+prefix dct: <http://purl.org/dc/terms/>
+prefix geo: <http://www.opengis.net/ont/geosparql#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix csv: <csv:>
+
+prefix mim: <http://bp4mc2.org/def/mim#>
+prefix nen3610: <http://definities.geostandaarden.nl/def/nen3610#>
+prefix nen2660: <https://w3id.org/nen2660/def#>
+
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/mim> {
+        ?AttribuutSoort a mim:Attribuutsoort ;
+            mim:naam ?AttribuutNaam ;
+            mim:definitie ?AttribuutDef ;
+            mim:begrip ?Begrip ;
+            mim:begripsterm ?BegripsTerm ;
+            mim:herkomst "Stichting CROW"@nl ;
+            mim:herkomstDefinitie "Stichting CROW"@nl ;
+            mim:datumOpname "2022-03-01"^^xsd:date ;
+            mim:indicatieClassificerend ?identificerend ;
+            mim:kardinaliteit ?Kardinaliteit ;
+            .
+            
+            ?AttributeShape mim:equivalent ?AttribuutSoort 
+            .
+    }
+} where {
+    GRAPH <https://data.crow.nl/imbor/def/> {
+        ?AttribuutSoort a rdf:Property ;
+            skos:prefLabel ?AttribuutNaam ;
+            skos:definition ?AttribuutDef ;
+            rdfs:seeAlso ?Begrip ;
+               
+            .
+        OPTIONAL {?AttributeShape sh:path ?AttribuutSoort .
+        bind(
+            if (
+                ?AttribuutSoort = imbor:c28b4e70-ea04-4ec2-875b-caf6c3521908, 
+                true,
+                if(?AttribuutSoort = imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1,
+                true,
+                if(?AttribuutSoort = imbor:703dcaf1-98c7-4511-bf73-1a081538179c, 
+                    true, 
+                    false))) AS ?identificerend)
+                   }
+        OPTIONAL {?AttributeShape sh:minCount ?min}.
+        OPTIONAL {?AttributeShape sh:maxCount ?max}.
+
+        BIND(IF(?min = 1 && ?max = 1, "1", 
+                    IF(?min = 0 && ?max = 1, "0..1", 
+                            IF(?min = 0, "0..*", 
+                                IF(?min= 1, "1..*", "?"))))  as ?Kardinaliteit)
+        }
+
+    ?Begrip skos:prefLabel ?BegripsTerm .
+}
