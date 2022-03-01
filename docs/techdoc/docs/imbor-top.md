@@ -150,6 +150,7 @@ Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een gro
 1. `bevat`([NEN2660-2:contains](https://w3id.org/nen2660/def#contains))
 1. `heeftBegrenzing` ([NEN2660-2:hasBoundary](https://w3id.org/nen2660/def#hasBoundary))
 1. `voertUit` ([NEN2660-2:executes](https://w3id.org/nen2660/def#executes))
+1. `bestaatUit` ([NEN2660-2:consistsOf](https://w3id.org/nen2660/def#consistsOf))
 
 <div class='advisement'>
 In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype` niveau te leggen. 
@@ -229,3 +230,8 @@ De klasse _Sluisdeur_ of _Schutkolk_ is namelijk één van de kwalificerende waa
 #### Topologische elementen
 
 Binnen IMBOR2022 zijn topologische elementen (als `TopologischElement`) toegevoegd als speciaal soort `GeometrischeRepresentatie`. Het betreffen namelijk schematische representaties van een daadwerkelijke (`FysiekObject`), net zoals de geometrie. Middels de `heeftBegrenzing` relatie zijn meerdere geometrische representaties vast te leggen (bijvoorbeeld: 2D, 3D of schematisch). In IMBOR is er vooralsnog echter _geen_ aandacht gegeven aan topologie. De enige topologie die momenteel onder `TopologischElement` in IMBOR zit betreft hetgeen GWSW specificeert. Dit is gedaan om de relatie tussen GWSW en IMBOR zo overzichtelijk en compleet mogelijk te maken. Zie ook [GWSW als referentiemodel](#gwsw-als-referentiemodel). Er wordt niet uitgesloten dat IMBOR in de toekomst zelf ook specificaties van topologie gaat maken. 
+
+#### Materie
+
+Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de NEN2660-2 is hiervoor een modelleerconstructie gegeven die IMBOR2022 toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de NEN2660-2 en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt aangesloten bij een bestaand(e) lijst/initiatief. De gesprekken hiervoor worden in 2022 gepland. 
+
