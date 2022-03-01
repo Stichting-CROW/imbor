@@ -14,7 +14,7 @@ prefix mim: <http://bp4mc2.org/def/mim#>
 insert data {
     graph <https://data.crow.nl/imbor/term/> {
         <https://data.crow.nl/imbor/term/> a owl:Ontology ;
-            owl:imports skos: , nen2660: , nen2660-term: ;
+            owl:imports skos: , nen2660-term: ;
             rdfs:comment "Dit normatieve gedeelte betreft de vocabulair van IMBOR"@nl ;
             rdfs:label "IMBOR Vocabulaire"@nl .
     }
