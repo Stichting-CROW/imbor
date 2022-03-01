@@ -49,11 +49,13 @@ IMBOR is begonnen als verrijking van het BGT|IMGeo, als specifiek informatiemode
 Dit zegt ook iets over de beoogde implementatie van IMBOR in software pakketten. Vanuit IMBOR en CROW worden software leveranciers dan ook geadviseerd om zich in te stellen op de principes van de NEN2660-2. Zodat zij hun software kunnen gaan 'vullen' met ontologiën zoals IMBOR en [andere modellen](#referentiemodellen-1) die op de NEN2660-2 gebaseerd zijn of gaan worden. Het toepassen van IMBOR betekent dan dat de klassen in softwarepakket worden 'gevuld' met de IMBOR-ontologie. Dit betekent ook dat toekomstige wijzigingen in nieuwe versies van het IMBOR relatief eenvoudig kunnen worden 'geconfigureerd' en dat geen herprogrammaring nodig is. 
 
 #### Regie op standaarden
-Met de modellering van IMBOR op basis van de NEN2660-2 wordt het voor standaardisatieorganisaties zoals CROW, Rioned en Geonovum ook gemakkelijker om hun standaarden op elkaar te 'mappen' of aan elkaar te relateren zodat dit dan niet meer bij de software leveranciers of opdrachtgevers komt te liggen. Voorwaarden om dit te laten werken zijn dat standaardisatie organisaties onderling afspreken om:
-* de modellering van hun ontologie te baseren op de NEN2660-2 en waar mogelijk aanvullend de NEN3610 en het MIM,
-* de relaties met andere standaarden wederzijds te bewaken,
+Met de modellering van IMBOR op basis van de NEN2660-2 wordt het voor organisaties die standaarden proberen te ontwikkelen zoals CROW, Rioned en Geonovum ook gemakkelijker om hun standaarden op elkaar af te stemmen en aan elkaar te relateren zodat dit dan niet meer bij de software leveranciers of opdrachtgevers komt te liggen. Deze kunnen de standaarden dan beter in samenhang gebruiken. Om dit te laten werken moeten deze organisaties onderling afspreken om:
+* hun ontologie te baseren op de NEN2660-2 en de NEN3610,
+* de modellering waar mogelijk te beschrijven volgens het MIM,
+* de relaties met andere standaarden wederzijds te beschrijven en continue te bewaken,
 * de ontologie (ook) als LinkedData te publiceren, en
-* via dezelfde technieken te ontsluiten.
+* zo veel mogelijk via dezelfde technieken te ontsluiten.
+Dit vraagt zodoende niet alleen technische inspanning, maar zeker ook proces en organisatie afstemming. 
 
 ### Doelgroep
 
