@@ -15,9 +15,10 @@ Leden stuurgroep - (op 02-03-2022)
 <li> G.E. Oosterom (Stichting Rioned)
 <li> E.W.J. van Zuilen (Sweco Nederland B.V.) 
 <li> M. Rietdijk (VNG Realisatie) 
-<li> R.W.J. van Lanen (Waterschap Rivierenland)   
+<li> R.W.J. van Lanen (Waterschap Rivierenland) <li>  
 
 Leden klankbordgroep sofwareleveranciers - (op 02-03-2022) 
+
 <li> F.A. Zwiers (Antea Group)
 <li> M. van Zwol (Antea Nederland B.V.)
 <li> J.W. Jans (BeheerVisie B.V.)
