@@ -1,6 +1,6 @@
 # Bijlage 2 Overzicht van actieve groepen beheerorganisatie IMBOR
 
-Leden stuurgroep 
+Leden stuurgroep - (op 02-03-2022) 
 <li> J.M. Zijlstra (Gemeente Amsterdam)
 <li> A.C. den Heijer (Gemeente den Haag)
 <li> A. van Sante (Gemeente den Haag) 
@@ -17,7 +17,7 @@ Leden stuurgroep
 <li> M. Rietdijk (VNG Realisatie) 
 <li> R.W.J. van Lanen (Waterschap Rivierenland)   
 
-Leden klankbordgroep sofwareleveranciers 
+Leden klankbordgroep sofwareleveranciers - (op 02-03-2022) 
 <li> F.A. Zwiers (Antea Group)
 <li> M. van Zwol (Antea Nederland B.V.)
 <li> J.W. Jans (BeheerVisie B.V.)
