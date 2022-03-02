@@ -1,7 +1,7 @@
 # Bijlage 2 Overzicht van actieve groepen beheerorganisatie IMBOR
 
 Leden stuurgroep 
-<ol><li> J.M. Zijlstra (Gemeente Amsterdam)
+<li> J.M. Zijlstra (Gemeente Amsterdam)
 <li> A.C. den Heijer (Gemeente den Haag)
 <li> A. van Sante (Gemeente den Haag) 
 <li> B. Schoonbrood (Gemeente den Haag) 
