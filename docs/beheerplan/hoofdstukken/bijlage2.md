@@ -16,3 +16,17 @@ Leden stuurgroep
 <li> E.W.J. van Zuilen (Sweco Nederland B.V.) 
 <li> M. Rietdijk (VNG Realisatie) 
 <li> R.W.J. van Lanen (Waterschap Rivierenland)   
+
+Leden klankbordgroep sofwareleveranciers 
+<li> F.A. Zwiers (Antea Group)
+<li> M. van Zwol (Antea Nederland B.V.)
+<li> J.W. Jans (BeheerVisie B.V.)
+<li> S. Soet (DataQuint B.V.)
+<li> F.J. Uittenbogaart (DG GROEP B.V.)
+<li> C.B. Sneller (ESRI)
+<li> T. Borst (Greenpoint Advies)
+<li> J.M. Groenestein (Groenestein Beheersofware)
+<li> R. Bloksma (IT-Firm B.V.)
+<li> M.E. Stoter - de Gunst (NedGraphics B.V.)
+<li> M. van de Berg (Sweco Nederland B.V.)
+<li> E.W.J. van Zuilen (Sweco Nederland B.V.)   
