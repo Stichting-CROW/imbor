@@ -5,11 +5,13 @@ Voor de gebruiker van IMBOR wordt een inkijkmogelijkheid (publicatie) van IMBOR 
 * Middels voorgedefinieerde queries op de CROW SPARQL webapplicatie
 * De vocabulair van IMBOR is te raadplegen via het thesaurus platform van CROW [begrippen.crow.nl](https://begrippen.crow.nl/)
 * In de loop van 2022 wordt een ontologie viewer ter beschikking gestelt
+
 Al deze vormen van publicatie zijn zonder kosten te raadplegen. Voor de CROW SPARQL webapplicatie is wel een [MijnCROW account][mijncrow] nodig. 
 
 Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele content beschikbaar. Hiervoor zijn ook twee distributiekanalen:
 * IMBOR tabellen in Access
 * IMBOR in LinkedData (TTL file en SPARQL-Endpoint)
+
 Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Namelijk voor de SPARQL-Endpoint geldt dat we deze voorlopig onder de noemer van 'pilot' verstrekken. Bij veel gebruik/op termijn wordt gekeken hoe we hier met de kosten gaan omgaan. 
 
 <figure>
