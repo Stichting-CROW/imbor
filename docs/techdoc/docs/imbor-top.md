@@ -74,6 +74,7 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 * __Materie__: Zuivere stof, chemische verbinding of mengsel
 * __Memo__: Informatieobject voor het gebruik en de registratie van memo's bij een objecttype.
 * __Monument-informatie__: Registratie van gegevens van monumentale objecten.
+* __Object__: Superklasse van het model. Ouder van de kinderen FysiekObject en Informatieobject. Enititeit die bestaat of kan bestaan binnen ruimte of tijd. Een object voert een activiteit uit en verandert door een activiteit.
 * __Onbepaald terrein__: Fysiek begrensd en zichtbaar terrein dat bij een gebouw hoort, dat niet verder wordt gedetailleerd in andere reële objecten en dat bestaat uit een mengvorm van verharding, water, begroeiing en/of constructies.
 * __Onderhoud-informatie__: Gegevens die nodig zijn voor het plannen en registreren van het onderhoud van objecten.
 * __Ondertunneling__: Ondergrondse of onder water gelegen verbinding tussen twee punten, aan beide einden voorzien van een open bakconstructie.
