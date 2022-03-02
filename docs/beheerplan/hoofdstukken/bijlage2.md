@@ -17,6 +17,7 @@ Leden stuurgroep - (op 02-03-2022)
 <li> M. Rietdijk (VNG Realisatie) 
 <li> R.W.J. van Lanen (Waterschap Rivierenland) 
 
+
 Leden klankbordgroep sofwareleveranciers - (op 02-03-2022) 
 
 <li> F.A. Zwiers (Antea Group)
