@@ -19,7 +19,7 @@ insert {
             sh:path ?attribuutUri ;
             ?QminCount ?minCount ;
             ?QmaxCount ?maxCount ;
-            skos:prefLabel ?propDesc ;
+            skos:prefLabel ?propDescNL ;
             sh:datatype ?shDatatype ;
             .
         
@@ -88,4 +88,5 @@ WHERE {
     BIND (STRLANG(?Term, "nl") as ?TermNL)
     BIND (STRLANG(?Definitie, "nl") as ?DefinitieNL)
     BIND (STRLANG(?AttribuutTypeTerm, "nl") as ?AttribuutTypeTermNL)
+    BIND (STRLANG(?propDesc, "nl") as ?propDescNL)
 }

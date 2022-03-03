@@ -23,6 +23,13 @@ insert {
             .
 
         ?vakdisciplineUri rdfs:member ?objecttypeUri .
+
+        imbor:Vakdiscipline 
+            a rdfs:Container ;
+            skos:prefLabel "Vakdisciplines"@nl ;
+            skos:definition "Verzamelgroep van alle vakdisciplines"@nl ;
+            rdfs:member ?vakdisciplineUri ;
+            .
    }
 }
 WHERE {

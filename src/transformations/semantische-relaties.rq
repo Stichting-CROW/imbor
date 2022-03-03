@@ -21,7 +21,7 @@ insert {
         
         ?propShapeUri 
             a sh:PropertyShape ;
-            skos:prefLabel ?propDesc ;
+            skos:prefLabel ?propDescNL ;
             sh:path ?nen2660Rela ;
             sh:qualifiedValueShape [ sh:class ?Objecttype2Uri ] ;
             sh:qualifiedMinCount ?minCount ;
@@ -68,6 +68,7 @@ WHERE {
     
     BIND (URI(CONCAT(STR(imbor:), ?IMBORGUID)) AS ?propShapeUri)
     BIND (CONCAT(?Objecttype1Naam, " ", ?nen2660RelaNL, " ", ?Objecttype2Naam) as ?propDesc)
+    BIND (STRLANG(?propDesc, "nl") as ?propDescNL)
     BIND (URI(CONCAT(STR(imbor:), ?Objecttype1GUID)) AS ?Objecttype1Uri)
     BIND (URI(CONCAT(STR(imbor:), ?Objecttype2GUID)) AS ?Objecttype2Uri)
 }
