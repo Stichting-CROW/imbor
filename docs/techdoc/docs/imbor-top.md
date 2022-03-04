@@ -141,7 +141,7 @@ De uitgangspunten voor de totstandkoming van deze hiërarchie waren:
 1. Alle ObjectTypen moeten een plek krijgen;
 1. Termen en definities uit te standaarden hergebruiken (boven eigen gemaakte);
 1. Type relaties alleen degene uit toegestaan uit NEN2660-2;
-1. Vooralsnog alleen `FysiekObject`, `Activiteit`, `GeometrischeRepresentatie` en `InformatieObject` gebruiken uit de NEN2660-2 (en in IMBOR2022 daar verder op in gaan);
+1. Vooralsnog alleen `Object`, `FysiekObject`, `Activiteit`, `GeometrischeRepresentatie` en `InformatieObject` gebruiken uit de NEN2660-2 (en in IMBOR2022 daar verder op in gaan);
 1. Verdeling van attributen over `Objecttype`n moet zo veel mogelijk gelijk blijven t.o.v. IMBOR2020-08 (afgezien van waar de koppeling al niet goed was);
 
 #### Semantische relaties
