@@ -1,3 +1,4 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
 # Target-Graph: <https://data.crow.nl/imbor/def>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -47,7 +48,6 @@ WHERE {
             csv:IMBORGUID ?IMBORGUID ;
             csv:Term ?Term ;
             csv:Collectie ?Collectie ;
-            csv:Definitie ?Definitie ;
             csv:KlasseType ?KlasseType ;
             .
         

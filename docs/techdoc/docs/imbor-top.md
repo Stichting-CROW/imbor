@@ -60,7 +60,7 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 * __Installatie-informatie__: Gegevens die betrekking hebben op de installatie van een object.
 * __Installatie__: Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient
 * __Inwinning-informatie__: Informatieobject voor het vastleggen van informatie m.b.t. de inwinning van een objecttype.
-* __Jaarverkeerstelling__: Het vastleggen van het resultaat van alle verkeerstellingen op een wegas per jaar.
+* __Resultaat verkeerstelling__: Het vastleggen van het resultaat van alle verkeerstellingen op een wegas per jaar.
 * __Juridische ruimte__: Ruimte waar een juridisch instrument beleid of regelgeving toepast.
 * __Kabel__: Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van energie of data.
 * __Kast__: Constructie met een permanent karakter dat dient om iets in te bergen en te beschermen
@@ -78,6 +78,7 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 * __Onbepaald terrein__: Fysiek begrensd en zichtbaar terrein dat bij een gebouw hoort, dat niet verder wordt gedetailleerd in andere reële objecten en dat bestaat uit een mengvorm van verharding, water, begroeiing en/of constructies.
 * __Onderhoud-informatie__: Gegevens die nodig zijn voor het plannen en registreren van het onderhoud van objecten.
 * __Ondertunneling__: Ondergrondse of onder water gelegen verbinding tussen twee punten, aan beide einden voorzien van een open bakconstructie.
+* __Open leiding__: Een rioolleiding waarvan de bovenzijde niet is afgesloten.
 * __Opening kunstwerk__: Gegevens die betrekking hebben op de oplevering van een object.
 * __Oplever-informatie__: Gegevens die betrekking hebben op de oplevering van een object.
 * __Overbrugging__: Kunstwerk dat een beweegbare of vaste verbinding tussen twee punten betreft, die door water, een weg of anderszins gescheiden zijn, bestaande uit een brugdek/-bak met landhoofden en veelal gesteund door pijlers
@@ -101,13 +102,15 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 * __Software__: Informatieobject voor de registratie van basisgegevens van het programma (software) die binnen of die in directe relatie met het objecttype gebruikt wordt.
 * __Soortnaamgroenobject__: Gegevens die betrekking hebben op de oplevering van een object.
 * __Spoorverkeerruimte__: Transportruimte voor voertuigen die zich over rails verplaatsen.
-* __Spoorzone__: Functionele ruimte die in gebruik is voor spoorwegen
+* __Spoorzone__: Functionele ruimte die in gebruik is voor spoorwegen.
+* __Stadsverwarming__: Stadsverwarming of warmtedistributie is een verwarmingssysteem, waarbij de woningen worden verwarmd via een ondergronds netwerk van warmwaterleidingen.
 * __Straatmeubilair__: Een ruimtelijk object ter inrichting van de openbare ruimte.
 * __TechnischEntiteit__: Entiteit waarbij het gaat om de technische eigenschappen die nul of meerdere functionele entiteiten implementeert of speelt.
 * __TopologischElement__: Een topologisch element is een configuratie waarin vastgelegd wordt hoe objecten verbonden zijn of hoe ze relatief tot elkaar gepositioneerd zijn.
 * __Transportruimte__: Natuurlijke of aangelegde transportlijnen of verbindingen met knooppunten waarlangs stromen zich verplaatsen.
 * __Tunneldeel__: Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang dat essentieel is voor de constructie.
 * __Urbane beheerzone__: Een afgebakend gebied voor generieke beheerdoeleinden binnen het stedelijk gebied.
+* __Utiliteitsnet__: Een verzameling van netwerkelementen die tot één type nutsvoorzieningennet behoren.
 * __Valruimte-informatie__: Gegevens die de valruimte van een speel- of sporttoestel vastleggen.
 * __Vegetatieobject__:   Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang.
 * __Verharding__: Een door egaliseren, verstevigen en/of verruwen voor het beoogde gebruik geschikt gemaakte oppervlak, bestaande uit in één of meer lagen over een ondergrond of onderliggende constructie aangelegd materiaal
