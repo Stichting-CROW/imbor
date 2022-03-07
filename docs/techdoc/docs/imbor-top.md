@@ -63,6 +63,7 @@ Al deze concepten kennen definities. Omdat er geen semantische discussies gevoer
 * __Resultaat verkeerstelling__: Het vastleggen van het resultaat van alle verkeerstellingen op een wegas per jaar.
 * __Juridische ruimte__: Ruimte waar een juridisch instrument beleid of regelgeving toepast.
 * __Kabel__: Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van energie of data.
+* __Kabelgeul__: Ruimtebeslag dat door een gemeenschappelijk tracé van één of meer kabels, buizen, HDPE- en/of mantelbuizen - die toebehoren aan één netwerkbeheerder - wordt gevormd.
 * __Kast__: Constructie met een permanent karakter dat dient om iets in te bergen en te beschermen
 * __Kering__: Voorziening met een kerende functie
 * __Kunstwerk__: Civieltechnisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen.
