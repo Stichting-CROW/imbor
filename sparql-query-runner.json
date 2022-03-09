@@ -83,7 +83,8 @@
           "src/transformations/hernoemen-refurls.rq",
           "src/transformations/hernoemen-refurls.rq",
           "src/transformations/vocab-hierarchie-1.rq",
-          "src/transformations/vocab-hierarchie-2.rq"
+          "src/transformations/vocab-hierarchie-2.rq",
+          "src/transformations/vocab-hierarchie-3.rq"
         ]
       },
       {
