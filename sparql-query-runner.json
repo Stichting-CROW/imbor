@@ -142,7 +142,10 @@
       },
       {
         "type": "sparql",
-        "url": "src/transformations/load-ext-ontologieen.rq"
+        "url": [
+          "src/transformations/load-ext-ontologieen.rq",
+          "src/transformations/clean-up-qudt-mess.rq"
+        ]
       },
       {
         "type": "download-file",

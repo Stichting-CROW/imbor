@@ -21,7 +21,7 @@ insert {
             skos:prefLabel ?TermNL ;
             skos:definition ?DefinitieNL ;
             rdfs:seeAlso ?termUri ;
-            imbor:bovenliggendeWaarde ?bovenliggendeTermNL .
+            imbor-domeinwaarde:bovenliggendeWaarde ?bovenliggendeTermNL .
     }
 }
 WHERE {
