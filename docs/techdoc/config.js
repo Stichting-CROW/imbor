@@ -1,6 +1,6 @@
 var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
     specType: "CROW-DOC",
-    specStatus: "WD",
+    specStatus: "DOC",
     pubDomain: "imbor",
     shortName: "techdoc",
     prevRecURI: "https://docs.crow.nl/imbor/techdoc/cv-20211101/",
