@@ -53,7 +53,7 @@ De [RDF vertaling](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-linked-d
 
 #### GWSW
 
-De relatie met GWSW is al lange tijd binnen IMBOR aanwezig. Riolering wordt als één van de belangrijke 'zuilen' binnen het beheer van de openbare ruimte gezien. Vandaar dat er ook al [vele gesprekken tussen Stichting RIONED en CROW][1] geweest zijn om deze twee sectorstandaarden zo nauw mogelijk op elkaar aan te laten sluiten. GWSW is vanaf het begin al gedistribueerd volgens de LinkedData principes. IMBOR is dit pas vanaf 2021, vandaar dat de relatie altijd relatief impliciet is geweest. Sinds 2021 is de NEN2660-2 beschikbaar, juist om de samenhang tussen zulke standaarden meer te stroomlijnen. Na de release van IMBOR2022 wordt verwacht dat ook GWSW de NEN2660-2 gaat toepassen (in navolging van IMBOR). Wanneer dit het geval is zullen Stichting RIONED en CROW trachten de standaarden op een zuivere manier exact op elkaar af te stemmen. Tot die tijd moet dit 'handmatig' gedaan worden. GWSW is dan ook één van de standaarden waar een relatie is opgenomen in de IMBOR distributies. 
+De relatie met GWSW is al lange tijd binnen IMBOR aanwezig. Riolering wordt als één van de belangrijke 'zuilen' binnen het beheer van de openbare ruimte gezien. Vandaar dat er ook al vele gesprekken tussen Stichting RIONED en CROW geweest zijn om deze twee sectorstandaarden zo nauw mogelijk op elkaar aan te laten sluiten. GWSW is vanaf het begin al gedistribueerd volgens de LinkedData principes. IMBOR is dit pas vanaf 2021, vandaar dat de relatie altijd relatief impliciet is geweest. Sinds 2021 is de NEN2660-2 beschikbaar, juist om de samenhang tussen zulke standaarden meer te stroomlijnen. Na de release van IMBOR2022 wordt verwacht dat ook GWSW de NEN2660-2 gaat toepassen (in navolging van IMBOR). Wanneer dit het geval is zullen Stichting RIONED en CROW trachten de standaarden op een zuivere manier exact op elkaar af te stemmen. Tot die tijd moet dit 'handmatig' gedaan worden. GWSW is dan ook één van de standaarden waar een relatie is opgenomen in de IMBOR distributies. 
 
 ##### GWSW als referentiemodel
 
@@ -238,11 +238,6 @@ Dit betreffen de 'Domeinwaarden' die in de referentiemodellen onderscheiden word
 
 
 
-
-
-
-
-[1]: https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/de-relatie-tussen-imbor-en-gwsw
 [2]: https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang/objectenregistratie
 [3]: https://www.nen.nl/nieuws/conditiemeting/eerste-stap-eenduidige-aansluiting-tussen-imbor-en-nen-2767-gezet/
 [4]: https://www.crow.nl/thema-s/wegontwerp/imwv-informatiemodel-wegen-en-verkeer
