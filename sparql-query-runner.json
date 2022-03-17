@@ -110,7 +110,7 @@
       },
       {
         "type": "download-file",
-        "url": "data/imbor-ontologie.ttl",
+        "url": "data/imbor-kern.ttl",
         "graphs": [
           "https://data.crow.nl/imbor/def/"
         ]
