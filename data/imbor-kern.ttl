@@ -430,14 +430,6 @@ imbor:2969c45a-731d-4ab7-9988-c64ab58a19cd
         sh:minCount     0 ;
         sh:path         imbor:d92894c0-0539-4a08-acd8-303b76aec4c4 .
 
-imbor:cdabd500-5118-4e54-a6c9-b022a40e988a
-        rdf:type         sh:NodeShape , rdfs:Class ;
-        rdfs:seeAlso     imbor-term:0f3e3022-dcbb-4168-8e4f-ceab723ed0ba ;
-        rdfs:subClassOf  nen2660:Matter ;
-        dash:abstract    false ;
-        skos:definition  "De waterloten (takken) van wilgen die samengevlochten worden en bijvoorbeeld gebruikt kunnen worden om afscheidingen uit op te bouwen."@nl ;
-        skos:prefLabel   "Wilgentenen"@nl .
-
 imbor:889c0fd4-cfbb-4cd5-bf22-b0aa2309ebb6
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Beheervak bevat Beschoeiing"@nl ;
@@ -445,6 +437,14 @@ imbor:889c0fd4-cfbb-4cd5-bf22-b0aa2309ebb6
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ] .
+
+imbor:cdabd500-5118-4e54-a6c9-b022a40e988a
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:0f3e3022-dcbb-4168-8e4f-ceab723ed0ba ;
+        rdfs:subClassOf  nen2660:Matter ;
+        dash:abstract    false ;
+        skos:definition  "De waterloten (takken) van wilgen die samengevlochten worden en bijvoorbeeld gebruikt kunnen worden om afscheidingen uit op te bouwen."@nl ;
+        skos:prefLabel   "Wilgentenen"@nl .
 
 imbor:3f2b39db-0d75-4568-a81a-c54141a1a11c
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -840,6 +840,14 @@ imbor:02d737d9-1a6d-49a8-9d03-e31697a42a6a
         skos:definition  "Het extern aan een bepaald netwerk laten wegstromen van de materie die binnen dat netwerk wordt voortgeleid."@nl ;
         skos:prefLabel   "Lozen buiten het stelsel"@nl .
 
+imbor:1b7947b3-18f4-4cf4-acad-58da4b8ad7ba
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Weg bevat Parkeervoorziening"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:e52b26cc-4489-42ae-be39-a14afbed1c21 ] .
+
 imbor:ff46c18c-874d-4b5d-b43d-94ecdf235478
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "omgevingsrisicoklasse vastgezet op Bosplantsoen"@nl ;
@@ -855,14 +863,6 @@ imbor:617d0cec-7948-4f48-988b-d964478ada44
         skos:definition  "Het enumeratietype VerkeerstellingMeeteenheid is de naam voor de domeinwaardenlijst van de klasse Verkeerstelling en het attribuut meeteenheid."@nl ;
         skos:prefLabel   "VerkeerstellingMeeteenheid"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
-
-imbor:1b7947b3-18f4-4cf4-acad-58da4b8ad7ba
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Weg bevat Parkeervoorziening"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:e52b26cc-4489-42ae-be39-a14afbed1c21 ] .
 
 imbor:a513c650-6e37-4eff-9c78-3107d96166de
         rdf:type        sh:PropertyShape ;
@@ -3969,19 +3969,19 @@ imbor:e4aa983f-7934-493f-9382-63bc869cb1c8
         skos:note        "Vrij invoerveld"@nl ;
         skos:prefLabel   "y-coördinaat"@nl .
 
-imbor:bff2d4c2-d2c3-4f6a-b363-ed362c590256
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "standplaats vastgezet op Solitaire plant"@nl ;
-        sh:path               imbor:785319ce-c818-447c-8406-fb80effa91b3 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
-
 imbor:c937450e-2a40-4696-8633-ff39c4d0a47a
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Moeras is beschreven door Soortnaam groenobject"@nl ;
         sh:path                 nen2660:isDescribedBy ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:3e3f7d57-bed7-4b4e-afa7-7f017e71ba37 ] .
+
+imbor:bff2d4c2-d2c3-4f6a-b363-ed362c590256
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "standplaats vastgezet op Solitaire plant"@nl ;
+        sh:path               imbor:785319ce-c818-447c-8406-fb80effa91b3 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
 
 imbor:5c7a2361-66fe-4996-8357-dcb1627c0a67
         rdf:type        sh:PropertyShape ;
@@ -6162,14 +6162,6 @@ imbor:c25736fe-cb1e-4881-9bd6-7517e48f69af
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:91faabc2-3ed6-462b-bd68-e65719eeccfd ] .
 
-imbor:4e23a321-764a-4cf8-bae3-dbca856f0712
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Molgoot heeft deel Fundering"@nl ;
-        sh:path                 nen2660:hasPart ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
-
 nen2660:DiscreteObject
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     nen2660-term:DiscreteObject ;
@@ -6178,6 +6170,14 @@ nen2660:DiscreteObject
         skos:definition  "Reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)."@nl ;
         skos:note        "NEN2660"@nl ;
         skos:prefLabel   "DiscreetObject"@nl .
+
+imbor:4e23a321-764a-4cf8-bae3-dbca856f0712
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Molgoot heeft deel Fundering"@nl ;
+        sh:path                 nen2660:hasPart ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
 
 imbor:07dfe908-3dec-451b-82d0-c64a7dda850c
         rdf:type         rdfs:Class ;
@@ -6299,14 +6299,6 @@ imbor:83bd1a29-f1bf-4355-949b-fc8004a8f0db
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09 ] .
 
-imbor:21c8ac5f-3d57-4c23-a0c7-de6abadb1d0c
-        rdf:type         sh:NodeShape , rdfs:Class ;
-        rdfs:seeAlso     imbor-term:8c836d7c-76e5-4761-a0d9-4282f33cd03f ;
-        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
-        dash:abstract    false ;
-        skos:definition  "Het object wordt gebruikt om grondwater te verzamelen."@nl ;
-        skos:prefLabel   "Inzamelen van grondwater"@nl .
-
 imbor:40ecf62c-5d56-4ad7-a388-a50d46bffb85
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "verdiepte put vastgezet op Put"@nl ;
@@ -6314,6 +6306,14 @@ imbor:40ecf62c-5d56-4ad7-a388-a50d46bffb85
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:1cf6db5d-903f-4b80-96a4-72a8c3e095ba .
+
+imbor:21c8ac5f-3d57-4c23-a0c7-de6abadb1d0c
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:8c836d7c-76e5-4761-a0d9-4282f33cd03f ;
+        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
+        dash:abstract    false ;
+        skos:definition  "Het object wordt gebruikt om grondwater te verzamelen."@nl ;
+        skos:prefLabel   "Inzamelen van grondwater"@nl .
 
 imbor:08752592-0585-4974-bd57-cfc8dd5149e5
         rdf:type                sh:PropertyShape ;
@@ -10312,13 +10312,6 @@ imbor:6f7956bb-d0da-4bd3-9fd5-9352f7a47d2f
         skos:note        "Enumeratie"@nl ;
         skos:prefLabel   "bereikbaarheid"@nl .
 
-imbor:e4916e42-0b54-4f3c-8f79-dcf26e06e94d
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:a0d406ad-341c-451d-81f9-4b4f6a361745 ;
-        skos:definition  "Aanduiding of bijzonder transport wel of niet over of naast een object mag rijden."@nl ;
-        skos:note        "Ja/nee"@nl ;
-        skos:prefLabel   "bijzonder transport"@nl .
-
 imbor:2e3a65c7-5ba7-4abf-8af6-3ce946d7d689
         rdf:type                 rdf:Property ;
         rdfs:seeAlso             imbor-term:8072b2aa-1cd6-49bd-98c9-56ccf02d9b9b ;
@@ -10326,6 +10319,13 @@ imbor:2e3a65c7-5ba7-4abf-8af6-3ce946d7d689
         skos:note                "Vrij invoerveld"@nl ;
         skos:prefLabel           "pompcapaciteit"@nl ;
         nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/VolumePerUnitTime> .
+
+imbor:e4916e42-0b54-4f3c-8f79-dcf26e06e94d
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:a0d406ad-341c-451d-81f9-4b4f6a361745 ;
+        skos:definition  "Aanduiding of bijzonder transport wel of niet over of naast een object mag rijden."@nl ;
+        skos:note        "Ja/nee"@nl ;
+        skos:prefLabel   "bijzonder transport"@nl .
 
 imbor:7def4e64-acea-4f8d-bafa-f58dbc9ea584
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -12017,14 +12017,6 @@ imbor:fd121a97-bd50-4009-a3f7-59e4b8238681
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:0e9ce1f0-6b08-4dff-ad95-96909c002b04 ] .
 
-imbor:62de9740-f141-4d11-88c4-f3968e789e0e
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "type vastgezet op Grafvoorziening"@nl ;
-        sh:path                 imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:72cdfb3e-e5db-4f6b-b2d9-cc684a395390 ] .
-
 imbor:ddde2b64-1301-42c7-a65d-ea56f7fe69fa
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Constructielaag verhardingsobject bestaat uit Staalslakmix"@nl ;
@@ -12032,6 +12024,14 @@ imbor:ddde2b64-1301-42c7-a65d-ea56f7fe69fa
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:b890be07-1e27-415b-9a05-831d65c93f50 ] .
+
+imbor:62de9740-f141-4d11-88c4-f3968e789e0e
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "type vastgezet op Grafvoorziening"@nl ;
+        sh:path                 imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:72cdfb3e-e5db-4f6b-b2d9-cc684a395390 ] .
 
 imbor:4c2c5d7e-9542-487a-8272-476cc42b94cc
         rdf:type                sh:PropertyShape ;
@@ -14575,16 +14575,6 @@ imbor:d5947255-8c5e-418a-bff2-8e446a2ee54e
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:7b9bb602-f1e8-400d-bcf3-643ec058c090 ] .
 
-imbor:5a51924a-f797-424c-a206-fd1a5664bd55
-        rdf:type            sh:PropertyShape ;
-        skos:prefLabel      "lengte vastgezet op Verharding"@nl ;
-        sh:datatype         xsd:decimal ;
-        sh:maxCount         1 ;
-        sh:minCount         0 ;
-        sh:path             imbor:2b1b2ffa-6cdd-4c54-b8c3-475757e347ff ;
-        imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
-        nen2660:hasUnit     unit:M .
-
 imbor:d43ee4a3-859d-4ff9-ae5f-297e2721046e
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "maximale hoogte voertuig vastgezet op Strook"@nl ;
@@ -14592,6 +14582,16 @@ imbor:d43ee4a3-859d-4ff9-ae5f-297e2721046e
         sh:maxCount         1 ;
         sh:minCount         0 ;
         sh:path             imbor:32971970-7784-4378-aa80-7300b12c4cd6 ;
+        imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
+        nen2660:hasUnit     unit:M .
+
+imbor:5a51924a-f797-424c-a206-fd1a5664bd55
+        rdf:type            sh:PropertyShape ;
+        skos:prefLabel      "lengte vastgezet op Verharding"@nl ;
+        sh:datatype         xsd:decimal ;
+        sh:maxCount         1 ;
+        sh:minCount         0 ;
+        sh:path             imbor:2b1b2ffa-6cdd-4c54-b8c3-475757e347ff ;
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
 
@@ -14932,13 +14932,6 @@ imbor:a6482382-af5c-4e18-a2db-a353004051f0
         skos:prefLabel           "inhoud"@nl ;
         nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Volume> .
 
-imbor:8d08bcea-e394-462c-8e63-37795733cac0
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:b630617c-d9a4-4aa0-8f7a-fee889196884 ;
-        skos:definition  "Aanduiding voor een toegankelijkheid van een object."@nl ;
-        skos:note        "Ja/nee"@nl ;
-        skos:prefLabel   "gemakkelijk toegankelijk"@nl .
-
 imbor:53929f41-9240-4a61-9abe-5ade04a679b8
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:eadabdc1-8af7-4cc1-808a-fd7dd97cc4ee ;
@@ -14948,6 +14941,13 @@ imbor:53929f41-9240-4a61-9abe-5ade04a679b8
         skos:prefLabel   "Lichtbron"@nl ;
         sh:property      imbor:1a54346f-bf3f-422d-adba-23cbee51b1e5 , imbor:ff9f7e19-cbc8-42e1-b713-aa05f6851eb8 , imbor:83550189-cbe6-43d4-aa99-fc29f668b9fa , imbor:b3f4daea-258a-4dba-bd5a-42f11bf36bde , imbor:52b8a58e-7767-4939-898b-920810bbac97 , imbor:de56de83-8fce-4d9e-b5a5-f37525961299 , imbor:13ede61f-0972-4664-9129-a779e70f2053 , imbor:053aa7e2-baaf-4a48-a88b-3c83849f69df , imbor:aed84de0-612f-41f2-bbf7-a1a01e75fa30 , imbor:21291ec4-86c5-465a-a96f-050c6a396f2c , imbor:4a94143b-ad3e-458f-86a8-707ccb826821 , imbor:e847ef1d-1ff2-4a4d-a1dd-8f884f0be2dc , imbor:21c39ff6-a9b8-48b6-b082-aa05c06a0505 , imbor:23fa0267-230c-4759-97e3-fe57074cd2b5 , imbor:7194a3c2-8721-48b3-b831-76a74e297847 , imbor:5c43e7bf-849a-461d-872f-9f04b30699f0 , imbor:724bc68d-fb1b-406b-bd3e-665c2c13924e , imbor:7993f8af-798e-4586-81e5-6585c632767f , imbor:d342563c-ad35-452a-9843-3c19aa047f94 , imbor:533f531b-aa07-496b-a2a0-3f95bb3e5781 , imbor:45f57ea0-2515-4085-9327-3579c55eff0f , imbor:6b021804-07fc-4a9f-b45f-820a3f8383e0 , imbor:ef8fa067-b832-436b-af17-ce5968fc652a , imbor:be435e2b-4ccc-4fda-8449-6f8e9f307286 .
 
+imbor:8d08bcea-e394-462c-8e63-37795733cac0
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:b630617c-d9a4-4aa0-8f7a-fee889196884 ;
+        skos:definition  "Aanduiding voor een toegankelijkheid van een object."@nl ;
+        skos:note        "Ja/nee"@nl ;
+        skos:prefLabel   "gemakkelijk toegankelijk"@nl .
+
 imbor:5b1f70e8-9a5a-458a-a68f-b53aa72b142d
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "type extra gedetailleerd vastgezet op Wegmarkering"@nl ;
@@ -14956,14 +14956,6 @@ imbor:5b1f70e8-9a5a-458a-a68f-b53aa72b142d
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:b98e7e0b-7dae-4884-9c6a-a907e097b6e4 ] .
 
-imbor:b1acaec1-1895-47b6-82d5-a8248d72c8ad
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beerput voert uit Zuiveren afvalwater"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:e6d47036-e80d-47ed-9edd-e993a9aae8d2 ] .
-
 imbor:92583f9b-fa55-41e6-a4db-6a394786f984
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Drain voert uit Inzamelen van grondwater"@nl ;
@@ -14971,6 +14963,14 @@ imbor:92583f9b-fa55-41e6-a4db-6a394786f984
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:21c8ac5f-3d57-4c23-a0c7-de6abadb1d0c ] .
+
+imbor:b1acaec1-1895-47b6-82d5-a8248d72c8ad
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beerput voert uit Zuiveren afvalwater"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:e6d47036-e80d-47ed-9edd-e993a9aae8d2 ] .
 
 imbor:d38c2eef-9cae-4147-9f31-75cb319924fb
         rdf:type                sh:PropertyShape ;
@@ -15049,14 +15049,6 @@ imbor:f6f6c34a-540b-46c5-8b49-9681056a1261
         skos:definition  "Wiskundige term (Engels) voor knoop, top, knooppunt."@nl ;
         skos:prefLabel   "Vertex"@nl .
 
-imbor:f6bc119f-89e3-4ccf-98fa-bda27c841120
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Contact"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:08cb9eca-c778-443a-965d-bbbc61c50305 ] .
-
 imbor:f1d1498f-aa93-41cc-b584-256b8d847835
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "verplaatsbaar vastgezet op Faunameubilair"@nl ;
@@ -15064,6 +15056,14 @@ imbor:f1d1498f-aa93-41cc-b584-256b8d847835
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:1b21b51b-ba59-4a4e-80de-4953c26e56f2 .
+
+imbor:f6bc119f-89e3-4ccf-98fa-bda27c841120
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Contact"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:08cb9eca-c778-443a-965d-bbbc61c50305 ] .
 
 imbor:c9534707-8f00-44c9-bfe9-c6b8c21ff35e
         rdf:type        sh:PropertyShape ;
@@ -19052,6 +19052,14 @@ imbor:925b9372-1e2a-4fe5-a4ff-926a8cc26e93
         sh:qualifiedMaxCount  1 ;
         sh:qualifiedMinCount  0 .
 
+imbor:189e80cc-321d-4ffd-8e23-dad7e96a4ccd
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Weg bevat Rijbaan"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:48f6fa03-08be-4db7-bc2f-a0d6e3b68f14 ] .
+
 imbor:04ceacf1-76ea-4e58-8831-6bb125b7d184
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "lengte vastgezet op Vegetatiedak"@nl ;
@@ -19061,14 +19069,6 @@ imbor:04ceacf1-76ea-4e58-8831-6bb125b7d184
         sh:path             imbor:2b1b2ffa-6cdd-4c54-b8c3-475757e347ff ;
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
-
-imbor:189e80cc-321d-4ffd-8e23-dad7e96a4ccd
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Weg bevat Rijbaan"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:48f6fa03-08be-4db7-bc2f-a0d6e3b68f14 ] .
 
 imbor:532a87ff-55d3-4aeb-8924-8593af82faea
         rdf:type                sh:PropertyShape ;
@@ -20765,14 +20765,6 @@ imbor:dc8e47b0-b427-4ed9-a523-ee1883bec4fa
         sh:path             imbor:d28f3b70-ecaa-4feb-b7af-9f4e2176be2b ;
         imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
 
-imbor:41dd99a2-22a4-4218-ae5e-96690b0e8b04
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Luchtkwaliteitssensor is verbonden met Hoofdpost"@nl ;
-        sh:path                 nen2660:isConnectedTo ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:40b39db2-3f4d-4dc9-a145-35b53fd5b5ee ] .
-
 imbor:65e46c09-c9cf-4e1b-b819-447429ff6f18
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Aansluitvoorziening bestaat uit Glasvezel"@nl ;
@@ -20780,6 +20772,14 @@ imbor:65e46c09-c9cf-4e1b-b819-447429ff6f18
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:83911a33-e8df-47da-a95d-b499b1f7f547 ] .
+
+imbor:41dd99a2-22a4-4218-ae5e-96690b0e8b04
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Luchtkwaliteitssensor is verbonden met Hoofdpost"@nl ;
+        sh:path                 nen2660:isConnectedTo ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:40b39db2-3f4d-4dc9-a145-35b53fd5b5ee ] .
 
 imbor:41c7c465-b0ab-4c9d-8e40-3ac09fbede61
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -21481,6 +21481,14 @@ imbor:e2d7057a-0fa9-45c2-8f20-7d41d92dae72
         skos:definition  "Betonzand is een grove zandsoort wat gebruikt kan worden in vloeren. Betonzand voldoet aan hoge eisen, zo bevat betonzand geen schelpen of andere materialen."@nl ;
         skos:prefLabel   "Betonzand"@nl .
 
+imbor:44f0a2c5-e342-4cb2-8111-9cb0e6aad4b8
+        rdf:type        sh:PropertyShape ;
+        skos:prefLabel  "alternatieve naam vastgezet op Streek"@nl ;
+        sh:datatype     xsd:string ;
+        sh:maxCount     1 ;
+        sh:minCount     0 ;
+        sh:path         imbor:25aa99de-4e65-42f4-a297-fe2ac7c6c1b8 .
+
 imbor:84a9afb9-fdb0-4306-880f-f55512f9d21a
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:d0bfa68b-d124-4a69-a580-7184bdd3498e ;
@@ -21489,14 +21497,6 @@ imbor:84a9afb9-fdb0-4306-880f-f55512f9d21a
         skos:definition  "Leiding voor het afvoeren van gezuiverd water van de rioolwaterzuiveringsinstallatie."@nl ;
         skos:prefLabel   "Effluentleiding"@nl ;
         sh:property      imbor:791f7b13-c416-41e1-9f81-2802379565b3 , imbor:2c137c15-159f-441b-bc7a-61bdff341660 .
-
-imbor:44f0a2c5-e342-4cb2-8111-9cb0e6aad4b8
-        rdf:type        sh:PropertyShape ;
-        skos:prefLabel  "alternatieve naam vastgezet op Streek"@nl ;
-        sh:datatype     xsd:string ;
-        sh:maxCount     1 ;
-        sh:minCount     0 ;
-        sh:path         imbor:25aa99de-4e65-42f4-a297-fe2ac7c6c1b8 .
 
 imbor:19514662-b72e-42b8-9aad-4b598186831a
         rdf:type         rdfs:Class ;
@@ -21547,13 +21547,6 @@ imbor:829cf561-f151-4e51-8f8d-b4d2b36a1e9c
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:5387fb60-8cbc-4e84-98ab-7ef95f1e04c0 ] .
 
-imbor:5201196c-3abe-4855-8a80-fe1377b322ec
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "bor-type vastgezet op Multifunctioneel gebied"@nl ;
-        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
-
 imbor:a75608f2-9fd8-4991-95b3-7f6648183a6b
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:92e46c50-ca83-4aaf-a14f-f71642981691 ;
@@ -21561,6 +21554,13 @@ imbor:a75608f2-9fd8-4991-95b3-7f6648183a6b
         skos:definition  "Het enumeratietype InformatiebordTypeGedetailleerd is de naam voor de domeinwaardenlijst van de klasse Informatiebord en het attribuut type gedetailleerd."@nl ;
         skos:prefLabel   "InformatiebordTypeGedetailleerd"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:5201196c-3abe-4855-8a80-fe1377b322ec
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "bor-type vastgezet op Multifunctioneel gebied"@nl ;
+        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
 
 imbor:cbfc49a6-eb35-4fc5-a19d-a87f5399b8f8
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -22224,13 +22224,6 @@ imbor:28305109-c454-45f0-bc1e-29f88ee7537a
         skos:note        "Referentie"@nl ;
         skos:prefLabel   "meetfrequentie"@nl .
 
-imbor:e34cbeb3-ebda-41ed-9e23-01e6725b3f30
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "modaliteit vastgezet op Fietspad"@nl ;
-        sh:path                 imbor:962110b3-46ad-46b8-85c6-f40539a21ee3 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:97f16653-f30b-48ef-9aff-68e0056b29bd ] .
-
 imbor:01343ef1-ef8e-4fb1-9a58-8e885304d558
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:2419ba55-6944-46d8-81dc-7502d20fd848 ;
@@ -22239,6 +22232,13 @@ imbor:01343ef1-ef8e-4fb1-9a58-8e885304d558
         skos:definition  "Put welke toegang geeft tot een poreuze of geperforeerde buisleiding, aangebracht onder de grond om de afwatering van de grond te verbeteren."@nl ;
         skos:prefLabel   "Drainageput"@nl ;
         sh:property      imbor:70eff11a-76c6-41af-838d-e25385f0bd35 , imbor:5966503c-ff3d-4495-9fe3-bafbfba410cf , imbor:ee93ea82-1485-4573-8ca2-8a744ae932d5 , imbor:65ede1fb-d746-4325-a230-abb9b1ff3598 , imbor:5a35a121-82ca-4beb-a2fc-fc3b986361dd .
+
+imbor:e34cbeb3-ebda-41ed-9e23-01e6725b3f30
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "modaliteit vastgezet op Fietspad"@nl ;
+        sh:path                 imbor:962110b3-46ad-46b8-85c6-f40539a21ee3 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:97f16653-f30b-48ef-9aff-68e0056b29bd ] .
 
 imbor:d3bf7f42-b972-4aa3-ba33-732755e997db
         rdf:type         rdfs:Class , sh:NodeShape ;
@@ -22834,6 +22834,14 @@ imbor:e874938c-4086-48a9-8553-916d13687900
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 ] .
 
+imbor:c1dd6eb8-58b0-4f4c-8c3f-0a7248bbfdce
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:4bcd8fd9-2e2e-43ca-b791-0f1414ce737f ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype LaadpuntType is de naam voor de domeinwaardenlijst van de klasse Laadpunt en het attribuut type."@nl ;
+        skos:prefLabel   "LaadpuntType"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
+
 imbor:fe04c0b1-71cc-42f9-a404-fdbfee830d3b
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Rioolput voert uit Overbruggen groot niveauverschil "@nl ;
@@ -22849,14 +22857,6 @@ imbor:7ee33d99-82ae-4ea1-9ef8-88d3ecad00de
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:84b7557a-9ef6-47b6-b855-e7ed469b5b1d .
-
-imbor:c1dd6eb8-58b0-4f4c-8c3f-0a7248bbfdce
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:4bcd8fd9-2e2e-43ca-b791-0f1414ce737f ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype LaadpuntType is de naam voor de domeinwaardenlijst van de klasse Laadpunt en het attribuut type."@nl ;
-        skos:prefLabel   "LaadpuntType"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:beaf80a2-2eb9-4b97-b3c5-3b3b5fad1cbc
         rdf:type                sh:PropertyShape ;
@@ -23564,13 +23564,6 @@ imbor:4cf9ab0a-9a4a-40d7-8c1e-e079c3367023
         skos:prefLabel   "PaalconstructieComponent"@nl ;
         imbor:typeLijst  "Suggestielijst"@nl .
 
-imbor:423fcb62-f525-4ebc-9f1f-f6d7f0bfa862
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:423fcb62-f525-4ebc-9f1f-f6d7f0bfa862 ;
-        skos:definition  "Jaar waarin de boom herplant is."@nl ;
-        skos:note        "Vrij invoerveld"@nl ;
-        skos:prefLabel   "jaar herplant"@nl .
-
 imbor:9ffc5a1e-88fa-44ce-b96d-9ad890207b8e
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Bouwwerk bestaat uit Metselwerk (bepleisterd)"@nl ;
@@ -23578,6 +23571,13 @@ imbor:9ffc5a1e-88fa-44ce-b96d-9ad890207b8e
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:37768910-2e06-4c69-bf5b-45b7b4f40375 ] .
+
+imbor:423fcb62-f525-4ebc-9f1f-f6d7f0bfa862
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:423fcb62-f525-4ebc-9f1f-f6d7f0bfa862 ;
+        skos:definition  "Jaar waarin de boom herplant is."@nl ;
+        skos:note        "Vrij invoerveld"@nl ;
+        skos:prefLabel   "jaar herplant"@nl .
 
 imbor:492c701c-7abe-49b0-b2c8-92bf799d5490
         rdf:type                sh:PropertyShape ;
@@ -23697,15 +23697,6 @@ imbor:9f787113-e913-4518-9457-155dcfc44845
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:27555c8f-511b-4d8f-b5f7-27dec3bd4157 ] .
 
-imbor:424e3b6a-5c0a-43bf-b9ac-1f6b4184816d
-        rdf:type         rdfs:Class , sh:NodeShape ;
-        rdfs:seeAlso     imbor-term:aa7c8def-f960-4738-bac6-1973f9ba4c60 ;
-        rdfs:subClassOf  imbor:b4935e75-46ca-414d-949d-30a8b801fd5b ;
-        dash:abstract    false ;
-        skos:definition  "Terreindeel overwegend begroeid met rietvegetatie. (Bron: definities.geostandaarden.nl)"@nl ;
-        skos:prefLabel   "Rietland"@nl ;
-        sh:property      imbor:d8a542d2-d83a-4647-b204-7c176353f457 , imbor:f41609ff-6607-4184-9e8f-0c0dddf4f468 , imbor:5cf310f9-0699-45df-960f-546f70662b15 , imbor:a82cd017-c7b8-454a-801c-63e447e9d5d4 .
-
 imbor:80c44d52-4a8d-475e-8612-4ca54d9c7880
         rdf:type         rdfs:Class , sh:NodeShape ;
         rdfs:seeAlso     imbor-term:56542b2f-fda1-4387-95f8-b62bd9b0d09f ;
@@ -23714,6 +23705,15 @@ imbor:80c44d52-4a8d-475e-8612-4ca54d9c7880
         skos:definition  "Een kast met daarin een installatie bedoeld om water van een laag peil naar een hoog peil te brengen."@nl ;
         skos:prefLabel   "Pompkast"@nl ;
         sh:property      imbor:f873a1c5-984e-430c-81b7-afa702b4977e , imbor:d273d465-2dd2-4d24-8aca-469d1474496a , imbor:94b59333-9e97-4583-97b3-2ededb1ec72d , imbor:f2ea42b0-604c-4448-a508-37b5066dfd38 , imbor:993d8583-c711-41a6-b860-32b21840f09d .
+
+imbor:424e3b6a-5c0a-43bf-b9ac-1f6b4184816d
+        rdf:type         rdfs:Class , sh:NodeShape ;
+        rdfs:seeAlso     imbor-term:aa7c8def-f960-4738-bac6-1973f9ba4c60 ;
+        rdfs:subClassOf  imbor:b4935e75-46ca-414d-949d-30a8b801fd5b ;
+        dash:abstract    false ;
+        skos:definition  "Terreindeel overwegend begroeid met rietvegetatie. (Bron: definities.geostandaarden.nl)"@nl ;
+        skos:prefLabel   "Rietland"@nl ;
+        sh:property      imbor:d8a542d2-d83a-4647-b204-7c176353f457 , imbor:f41609ff-6607-4184-9e8f-0c0dddf4f468 , imbor:5cf310f9-0699-45df-960f-546f70662b15 , imbor:a82cd017-c7b8-454a-801c-63e447e9d5d4 .
 
 imbor:1f744125-d137-4892-bafd-32b3eb0a4353
         rdf:type                sh:PropertyShape ;
@@ -26722,13 +26722,6 @@ imbor:65ede1fb-d746-4325-a230-abb9b1ff3598
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:c81abe53-9c62-4b8b-986c-566449feacca ] .
 
-imbor:6be745b7-dcf0-4b89-845e-3b79f102c215
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:afdb9bd2-f55b-4d52-b4f2-d001feb80cf7 ;
-        skos:definition  "Datum waarop op het object vervangen is."@nl ;
-        skos:note        "Vrij invoerveld"@nl ;
-        skos:prefLabel   "vervangingsdatum"@nl .
-
 imbor:07076568-b05a-4d8c-a073-40dab5b7c4b3
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "streefpeil vastgezet op Sluis"@nl ;
@@ -26737,6 +26730,13 @@ imbor:07076568-b05a-4d8c-a073-40dab5b7c4b3
         sh:minCount         0 ;
         sh:path             imbor:9e4eadf7-1ef6-4970-8dba-7b7d9c9d81e7 ;
         imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
+
+imbor:6be745b7-dcf0-4b89-845e-3b79f102c215
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:afdb9bd2-f55b-4d52-b4f2-d001feb80cf7 ;
+        skos:definition  "Datum waarop op het object vervangen is."@nl ;
+        skos:note        "Vrij invoerveld"@nl ;
+        skos:prefLabel   "vervangingsdatum"@nl .
 
 imbor:f97ef12f-167f-466f-b152-ab7633e82f27
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -27252,14 +27252,6 @@ imbor:513316f1-adee-4abc-8853-104cb3cb6f79
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
 
-imbor:18ab0266-28fd-4442-89f3-b42aee766ddb
-        rdf:type         sh:NodeShape , rdfs:Class ;
-        rdfs:seeAlso     imbor-term:6c941188-b1eb-438a-abff-e9ba47569be0 ;
-        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
-        dash:abstract    false ;
-        skos:definition  "Het voor een korte periode opslaan van vervuild water waarvan de houder zich heeft ontdaan."@nl ;
-        skos:prefLabel   "Tijdelijke berging van afvalwater"@nl .
-
 imbor:06ae71ae-56dc-4f63-8d17-663506bd54e5
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "type gedetailleerd vastgezet op Gras- en kruidachtigen"@nl ;
@@ -27267,6 +27259,14 @@ imbor:06ae71ae-56dc-4f63-8d17-663506bd54e5
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:b40e98e9-58f7-43a7-8472-d1079444f211 ] .
+
+imbor:18ab0266-28fd-4442-89f3-b42aee766ddb
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:6c941188-b1eb-438a-abff-e9ba47569be0 ;
+        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
+        dash:abstract    false ;
+        skos:definition  "Het voor een korte periode opslaan van vervuild water waarvan de houder zich heeft ontdaan."@nl ;
+        skos:prefLabel   "Tijdelijke berging van afvalwater"@nl .
 
 imbor:caca0238-81ac-40c9-b9a0-4cec5822168f
         rdf:type                sh:PropertyShape ;
@@ -28693,14 +28693,6 @@ nen3610:WegverkeerRuimte
         skos:prefLabel   "Wegverkeerruimte"@nl ;
         sh:property      imbor:63e111e8-8c7f-4390-b486-f3082d1e4ced .
 
-imbor:ad796c44-c295-4d39-a871-103a11be9c6e
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Lichtsensor"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:14cfc2d7-24b7-4de8-8304-04c561573eb8 ] .
-
 imbor:c57789c7-577a-4be4-9c6e-a1e9d7a04384
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:4e7bd4dc-1bcc-466a-8698-fda1dad3e5b8 ;
@@ -28708,6 +28700,14 @@ imbor:c57789c7-577a-4be4-9c6e-a1e9d7a04384
         dash:abstract    false ;
         skos:definition  "Het weghalen van materie die op de voortgeleide vloeistof drijft."@nl ;
         skos:prefLabel   "Verwijderen opgedreven delen"@nl .
+
+imbor:ad796c44-c295-4d39-a871-103a11be9c6e
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Lichtsensor"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:14cfc2d7-24b7-4de8-8304-04c561573eb8 ] .
 
 imbor:6c5be022-dd99-43f8-8fe8-81ae5ef9c22d
         rdf:type                sh:PropertyShape ;
@@ -31533,14 +31533,6 @@ imbor:cde1cdd0-22c2-4035-9f84-5158a61ba80f
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:337656a4-d3ad-4df1-bb11-0dadb07afa86 ] .
 
-imbor:9be8d0f5-5c49-4ec4-bf99-fcd75124677a
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:9be8d0f5-5c49-4ec4-bf99-fcd75124677a ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype ActieveWegmarkeringType is de naam voor de domeinwaardenlijst van de klasse Actieve wegmarkering en het attribuut type."@nl ;
-        skos:prefLabel   "ActieveWegmarkeringType"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:8266ab68-e154-4dda-97a8-f59f30942658
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:587004ff-83f0-4d15-817d-762fbf64ff1c ;
@@ -31549,6 +31541,14 @@ imbor:8266ab68-e154-4dda-97a8-f59f30942658
         skos:definition  "Terrein tussen een winterdijk en een waterloop die in geval van hoogwater gedeeltelijk onderwater komt te staan en als waterberging dient tijdens piekafvoer."@nl ;
         skos:prefLabel   "Uiterwaard"@nl ;
         sh:property      imbor:40232160-6461-4c62-b4ca-b1d08972e3e8 , imbor:da7bfb4e-d57a-4f7e-8261-968d19952932 .
+
+imbor:9be8d0f5-5c49-4ec4-bf99-fcd75124677a
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:9be8d0f5-5c49-4ec4-bf99-fcd75124677a ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype ActieveWegmarkeringType is de naam voor de domeinwaardenlijst van de klasse Actieve wegmarkering en het attribuut type."@nl ;
+        skos:prefLabel   "ActieveWegmarkeringType"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:07365134-5600-4166-9564-fa54d5ec787c
         rdf:type         rdfs:Class ;
@@ -31647,6 +31647,13 @@ imbor:e39ef0fc-a8ad-413a-9b77-50fcd46c7355
         skos:prefLabel   "SportveldFabrikant"@nl ;
         imbor:typeLijst  "Suggestielijst"@nl .
 
+imbor:658ad942-04eb-4406-b9ed-6605bb4d9c49
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "bor-type vastgezet op Routepaal"@nl ;
+        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
+
 imbor:1c5abbe6-a4b4-4b29-a137-c5f7cd2accf5
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "parallel vastgezet op Vrijverval rioolleiding"@nl ;
@@ -31654,13 +31661,6 @@ imbor:1c5abbe6-a4b4-4b29-a137-c5f7cd2accf5
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:d23b66f8-4e36-48d7-80a7-093aae2c660c .
-
-imbor:658ad942-04eb-4406-b9ed-6605bb4d9c49
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "bor-type vastgezet op Routepaal"@nl ;
-        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
 
 imbor:637ab25c-23ed-4105-8ad4-fea3697069a8
         rdf:type         rdf:Property ;
@@ -31679,14 +31679,6 @@ imbor:5212d053-dee3-4f8d-96a0-04b6dac95f26
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
 
-imbor:61db1c52-62f0-4bf0-8496-f2b5514566ec
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Vegetatiedak voert uit Verfraaien"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:81986499-e9c7-4a61-80e5-4abcf55ac911 ] .
-
 imbor:b57b77b4-7a27-431c-aff6-ef5bd0c8e241
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "draagkrachtig vastgezet op Verharding"@nl ;
@@ -31694,6 +31686,14 @@ imbor:b57b77b4-7a27-431c-aff6-ef5bd0c8e241
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:387834db-ae6a-4a26-8187-0f8bc330edfc .
+
+imbor:61db1c52-62f0-4bf0-8496-f2b5514566ec
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Vegetatiedak voert uit Verfraaien"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:81986499-e9c7-4a61-80e5-4abcf55ac911 ] .
 
 imbor:6cb4cf3b-b079-44ae-b717-8d97faf12afe
         rdf:type                sh:PropertyShape ;
@@ -32068,6 +32068,14 @@ imbor:f6bba38f-60c4-42ec-839f-4b05f0434a00
         skos:note        "Waarde wordt automatisch bepaald"@nl ;
         skos:prefLabel   "veiligheidsregiocode"@nl .
 
+imbor:f23e672a-7d94-44d7-a31a-79b3cb9f29e6
+        rdf:type                 rdf:Property ;
+        rdfs:seeAlso             imbor-term:8e7bc2de-9798-499e-81be-2710d910acc5 ;
+        skos:definition          "Omvang van de valruimte. Afstand tussen grondvlak speeltoestel en de rand van de opvangzone."@nl ;
+        skos:note                "Vrij invoerveld"@nl ;
+        skos:prefLabel           "omvang valruimte"@nl ;
+        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
+
 imbor:19b12fff-c2ab-4603-b612-c108c411629d
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "lengte vastgezet op Gevelgroen"@nl ;
@@ -32077,14 +32085,6 @@ imbor:19b12fff-c2ab-4603-b612-c108c411629d
         sh:path             imbor:2b1b2ffa-6cdd-4c54-b8c3-475757e347ff ;
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
-
-imbor:f23e672a-7d94-44d7-a31a-79b3cb9f29e6
-        rdf:type                 rdf:Property ;
-        rdfs:seeAlso             imbor-term:8e7bc2de-9798-499e-81be-2710d910acc5 ;
-        skos:definition          "Omvang van de valruimte. Afstand tussen grondvlak speeltoestel en de rand van de opvangzone."@nl ;
-        skos:note                "Vrij invoerveld"@nl ;
-        skos:prefLabel           "omvang valruimte"@nl ;
-        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
 
 imbor:08f958c6-463c-432a-9a55-43b18b4ffd00
         rdf:type                 rdf:Property ;
@@ -32199,15 +32199,6 @@ imbor:47b65cd4-cb70-458b-bdd9-48694d09c284
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:b36745f4-eb66-4f04-b41d-cc712c087ec9 ] .
 
-imbor:f2760101-af9b-44b3-8452-cc862247378c
-        rdf:type         sh:NodeShape , rdfs:Class ;
-        rdfs:seeAlso     imbor-term:ff38a0c2-6b68-4aa8-87e3-b650453d4030 ;
-        rdfs:subClassOf  imbor:7f573337-00f1-41a0-98e0-1936837802fa ;
-        dash:abstract    false ;
-        skos:definition  "Een valluik, een soort poort of deur ter bescherming van een raam of als onderdeel van een kunstwerk of constructie."@nl ;
-        skos:prefLabel   "Luik"@nl ;
-        sh:property      imbor:4e97e8f4-b57d-42d2-b547-209b9c2eda12 , imbor:071dc906-c46d-4111-b3c6-5697f1706e05 , imbor:4381bdb0-86ab-4910-ab98-a001425dc9bc , imbor:f67a06f1-f4ab-489d-b3cb-a6d785fd2864 , imbor:e3774ea4-bfc8-4c9e-93fe-8928812a45f0 .
-
 imbor:5e9f2360-11df-47e1-b5b0-3d731b0299c7
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:5e9f2360-11df-47e1-b5b0-3d731b0299c7 ;
@@ -32222,6 +32213,15 @@ imbor:560faa7d-937c-4099-ba3e-c9d2a2cd0b61
         sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
         sh:qualifiedMaxCount  1 ;
         sh:qualifiedMinCount  0 .
+
+imbor:f2760101-af9b-44b3-8452-cc862247378c
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:ff38a0c2-6b68-4aa8-87e3-b650453d4030 ;
+        rdfs:subClassOf  imbor:7f573337-00f1-41a0-98e0-1936837802fa ;
+        dash:abstract    false ;
+        skos:definition  "Een valluik, een soort poort of deur ter bescherming van een raam of als onderdeel van een kunstwerk of constructie."@nl ;
+        skos:prefLabel   "Luik"@nl ;
+        sh:property      imbor:4e97e8f4-b57d-42d2-b547-209b9c2eda12 , imbor:071dc906-c46d-4111-b3c6-5697f1706e05 , imbor:4381bdb0-86ab-4910-ab98-a001425dc9bc , imbor:f67a06f1-f4ab-489d-b3cb-a6d785fd2864 , imbor:e3774ea4-bfc8-4c9e-93fe-8928812a45f0 .
 
 imbor:65c51ac8-3ee1-4a44-b847-005d456df0f5
         rdf:type         rdf:Property ;
@@ -33005,13 +33005,6 @@ imbor:120566c5-d0cf-4bc5-b445-4e442ccac518
         sh:minCount     0 ;
         sh:path         imbor:44376a9d-3274-4418-a144-3c05de3a3fee .
 
-imbor:f65dd67b-8c4c-47f6-9ed2-4ab87763bbac
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:b401b40e-ef0c-4f37-8c82-db65f29bb3bf ;
-        skos:definition  "Datum waarop het object geïnstalleerd is."@nl ;
-        skos:note        "Vrij invoerveld"@nl ;
-        skos:prefLabel   "installatiedatum"@nl .
-
 imbor:5d3b9831-d817-49bc-848a-4833ae559b9b
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:71d027e2-6d8e-4e05-b679-783d5d7bec66 ;
@@ -33019,6 +33012,13 @@ imbor:5d3b9831-d817-49bc-848a-4833ae559b9b
         skos:definition  "Het enumeratietype HekTypeGedetailleerd is de naam voor de domeinwaardenlijst van de klasse Hek en het attribuut type gedetailleerd."@nl ;
         skos:prefLabel   "HekTypeGedetailleerd"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:f65dd67b-8c4c-47f6-9ed2-4ab87763bbac
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:b401b40e-ef0c-4f37-8c82-db65f29bb3bf ;
+        skos:definition  "Datum waarop het object geïnstalleerd is."@nl ;
+        skos:note        "Vrij invoerveld"@nl ;
+        skos:prefLabel   "installatiedatum"@nl .
 
 imbor:5b8b9964-0afe-4abd-a887-bf1eb3690dc2
         rdf:type         rdfs:Class ;
@@ -33107,14 +33107,6 @@ imbor:05c2af2f-627b-4ed1-b73b-c2d9e9ba3090
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:200b3154-fc70-484f-ae60-34601232db13 ] .
 
-imbor:87218732-22b3-43b4-af43-960bdf33c6d0
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:60bb3bdf-a4da-4d8c-b1b3-e49b9bd895b8 ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype PortaalType is de naam voor de domeinwaardenlijst van de klasse Portaal en het attribuut type."@nl ;
-        skos:prefLabel   "PortaalType"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:8b297a90-eb6e-43cc-b410-c509e729a8d8
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Beheervak bevat Luchtkwaliteitssensor"@nl ;
@@ -33122,6 +33114,14 @@ imbor:8b297a90-eb6e-43cc-b410-c509e729a8d8
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:379c2bc2-c6e7-46ea-a6d2-85f670cd1723 ] .
+
+imbor:87218732-22b3-43b4-af43-960bdf33c6d0
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:60bb3bdf-a4da-4d8c-b1b3-e49b9bd895b8 ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype PortaalType is de naam voor de domeinwaardenlijst van de klasse Portaal en het attribuut type."@nl ;
+        skos:prefLabel   "PortaalType"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:37bc2956-d8dc-43c2-bf59-1aa68d2dd00d
         rdf:type                sh:PropertyShape ;
@@ -33266,13 +33266,6 @@ imbor:06d5a7ff-e7d0-4c38-867a-a1749133048e
         skos:prefLabel   "ViaductType"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
 
-imbor:a582df3b-9d42-48c9-b870-3bbea2b8a82b
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "bor-type vastgezet op Beregeningsput"@nl ;
-        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
-
 imbor:375602f8-a3b6-4070-9d90-1043fb8b4857
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Kolk heeft deel Uitklimvoorziening"@nl ;
@@ -33280,6 +33273,13 @@ imbor:375602f8-a3b6-4070-9d90-1043fb8b4857
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:05a53914-bfc5-4d02-8424-a1af69502c55 ] .
+
+imbor:a582df3b-9d42-48c9-b870-3bbea2b8a82b
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "bor-type vastgezet op Beregeningsput"@nl ;
+        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
 
 imbor:a6827add-5633-41b7-b067-980e553ab758
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -35165,6 +35165,14 @@ imbor:ff8b8d6d-3d02-49dd-8a96-2ea45a032b6d
         skos:definition  "Kilowatt."@nl ;
         skos:prefLabel   "kW"@nl .
 
+imbor:0b1d9513-a625-49ba-ae45-7281ab749848
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Gemaal heeft deel Fundering"@nl ;
+        sh:path                 nen2660:hasPart ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
+
 imbor:cf90a4fe-fd9c-43d5-9fe3-84d671995c25
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "landcode vastgezet op Rijk"@nl ;
@@ -35182,14 +35190,6 @@ imbor:d30bb7b5-aaa9-4b4f-b7da-9c5034082b6c
         sh:path             imbor:2b1b2ffa-6cdd-4c54-b8c3-475757e347ff ;
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
-
-imbor:0b1d9513-a625-49ba-ae45-7281ab749848
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Gemaal heeft deel Fundering"@nl ;
-        sh:path                 nen2660:hasPart ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
 
 imbor:1329bb1e-8c8d-4c94-b898-f00998b6af5c
         rdf:type         rdf:Property ;
@@ -36065,13 +36065,6 @@ imbor:25517193-09fd-4e86-a522-1bab7794077b
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:a6e86ee0-cbad-41d4-a816-71fac56cac3f ] .
 
-imbor:022e5574-85b6-4df3-86e3-97abf5c0cf45
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:ba129f20-e704-44a0-a383-5a1bded2dc8a ;
-        skos:definition  "Aanduiding of het object wel of niet ingegraven is."@nl ;
-        skos:note        "Ja/nee"@nl ;
-        skos:prefLabel   "ingegraven"@nl .
-
 imbor:399b2534-8172-4423-9132-afb23c8a6680
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "niveau buitenwater vastgezet op Overstortconstructie"@nl ;
@@ -36080,6 +36073,13 @@ imbor:399b2534-8172-4423-9132-afb23c8a6680
         sh:minCount         0 ;
         sh:path             imbor:5a329bf8-97ef-4f17-a252-8e4cfbc6ef01 ;
         imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
+
+imbor:022e5574-85b6-4df3-86e3-97abf5c0cf45
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:ba129f20-e704-44a0-a383-5a1bded2dc8a ;
+        skos:definition  "Aanduiding of het object wel of niet ingegraven is."@nl ;
+        skos:note        "Ja/nee"@nl ;
+        skos:prefLabel   "ingegraven"@nl .
 
 imbor:2539cfc3-c110-4099-8bb0-de081dead05d
         rdf:type                sh:PropertyShape ;
@@ -38286,14 +38286,6 @@ imbor:7a61b0bf-c959-4547-9a7a-a29a96790d40
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
 
-imbor:a6e86ee0-cbad-41d4-a816-71fac56cac3f
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:0158641b-5824-4900-aaaf-69748b218262 ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype BoomTakvrijeZonePrimair is de naam voor de domeinwaardenlijst van de klasse Boom en het attribuut takvrije zone primair."@nl ;
-        skos:prefLabel   "BoomTakvrijeZonePrimair"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:237960df-a5c5-40a0-90aa-339ab88a1d87
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "richtingnummer vastgezet op Strook"@nl ;
@@ -38301,6 +38293,14 @@ imbor:237960df-a5c5-40a0-90aa-339ab88a1d87
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:f6b9ca23-26e0-4dd6-b532-77777e3d50eb .
+
+imbor:a6e86ee0-cbad-41d4-a816-71fac56cac3f
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:0158641b-5824-4900-aaaf-69748b218262 ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype BoomTakvrijeZonePrimair is de naam voor de domeinwaardenlijst van de klasse Boom en het attribuut takvrije zone primair."@nl ;
+        skos:prefLabel   "BoomTakvrijeZonePrimair"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:edbfbc48-8d1c-4ad4-b7d0-570fa800ffd2
         rdf:type            sh:PropertyShape ;
@@ -38717,6 +38717,14 @@ imbor:ddfdbfc8-30bd-4a80-9f22-79e77deba7c1
         skos:prefLabel   "Steenwolkoffer"@nl ;
         sh:property      imbor:a381bb70-9c7a-49b5-ad4c-2dbb83423546 , imbor:f884bff6-cf18-40df-b5fe-e2221517f8a7 , imbor:f0d03783-50ac-4655-bbca-7e86115c1548 , imbor:83fc7448-ec2c-4cc7-9a80-df1707d71de3 , imbor:9280c2f8-acd8-4bf0-9055-c05a0bd96249 , imbor:45fc69e8-a267-4a5d-a8b2-05e99d314c4e , imbor:91fab5a4-408e-47a0-9037-e2ecee072f49 , imbor:b68771c1-66b1-4a02-92e2-d6ad633cc35b , imbor:f3e56145-c77e-4c4f-af50-4c9d21e3db87 , imbor:8ee75bd2-dd8d-49ff-9b57-4cc5af063d6e , imbor:47bef3f6-3acd-4896-a2f0-7ddfbf5d7495 , imbor:170847a6-170b-4d40-a3da-17397321eaea .
 
+imbor:c01b9353-4c3f-474f-b64c-3ce65778ae84
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:12adc607-0b1c-4024-8c1a-d551f82ff8d7 ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype GroenobjectBiotoopsubtype is de naam voor de domeinwaardenlijst van de klasse Groenobject en het attribuut biotoopsubtype."@nl ;
+        skos:prefLabel   "GroenobjectBiotoopsubtype"@nl ;
+        imbor:typeLijst  "Suggestielijst"@nl .
+
 imbor:06102eb2-42a0-443e-8a94-fceda5215246
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:06102eb2-42a0-443e-8a94-fceda5215246 ;
@@ -38725,14 +38733,6 @@ imbor:06102eb2-42a0-443e-8a94-fceda5215246
         skos:definition  "Een apparaat dat een signaal omzet in een signaal met een andere transmissiedefinitie."@nl ;
         skos:prefLabel   "Converter"@nl ;
         sh:property      imbor:f8338e38-3dff-4a2a-ab73-ce061298de13 .
-
-imbor:c01b9353-4c3f-474f-b64c-3ce65778ae84
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:12adc607-0b1c-4024-8c1a-d551f82ff8d7 ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype GroenobjectBiotoopsubtype is de naam voor de domeinwaardenlijst van de klasse Groenobject en het attribuut biotoopsubtype."@nl ;
-        skos:prefLabel   "GroenobjectBiotoopsubtype"@nl ;
-        imbor:typeLijst  "Suggestielijst"@nl .
 
 imbor:7e943250-ceae-4c85-8d77-97de8c79245a
         rdf:type                sh:PropertyShape ;
@@ -38850,6 +38850,13 @@ imbor:819e5386-4123-48dd-bcd4-f126a80203a6
         skos:note        "Vrij invoerveld"@nl ;
         skos:prefLabel   "prognose van de middagintensiteit"@nl .
 
+imbor:e63640bb-6b67-4e83-a51d-ee91c6da677b
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "bor-type vastgezet op Verkeersspiegel"@nl ;
+        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
+
 imbor:758ba8ef-6ad6-4129-936f-bbeccb9aa1cc
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Beheervak bevat Filterput"@nl ;
@@ -38857,13 +38864,6 @@ imbor:758ba8ef-6ad6-4129-936f-bbeccb9aa1cc
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:6e949d6f-0a40-4bb7-b655-5ef4b8bba4d6 ] .
-
-imbor:e63640bb-6b67-4e83-a51d-ee91c6da677b
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "bor-type vastgezet op Verkeersspiegel"@nl ;
-        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
 
 imbor:7df57d73-505e-4389-875c-14ba1b0f8b6e
         rdf:type                sh:PropertyShape ;
@@ -39118,14 +39118,6 @@ imbor:414d2db7-145f-43d8-8fe7-7e42f00d406d
         sh:minCount     0 ;
         sh:path         imbor:84b7557a-9ef6-47b6-b855-e7ed469b5b1d .
 
-imbor:d665a076-59ef-4aaf-850b-0d3ea8a39d6f
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:d665a076-59ef-4aaf-850b-0d3ea8a39d6f ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype UithouderUithouderconstructie is de naam voor de domeinwaardenlijst van de klasse Uithouder en het attribuut uithouderconstructie."@nl ;
-        skos:prefLabel   "UithouderUithouderconstructie"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:20cb1675-78bb-4430-88ce-3ffa36ff8f4b
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Constructielaag verhardingsobject bestaat uit Hydraulisch betongranulaat"@nl ;
@@ -39133,6 +39125,14 @@ imbor:20cb1675-78bb-4430-88ce-3ffa36ff8f4b
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:f962169d-587e-40cd-bff8-2717b4b26278 ] .
+
+imbor:d665a076-59ef-4aaf-850b-0d3ea8a39d6f
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:d665a076-59ef-4aaf-850b-0d3ea8a39d6f ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype UithouderUithouderconstructie is de naam voor de domeinwaardenlijst van de klasse Uithouder en het attribuut uithouderconstructie."@nl ;
+        skos:prefLabel   "UithouderUithouderconstructie"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:c3c876d9-8b35-4836-9986-e087d4ebdb77
         rdf:type            sh:PropertyShape ;
@@ -41591,14 +41591,6 @@ imbor:5a329bf8-97ef-4f17-a252-8e4cfbc6ef01
         skos:note        "Vrij invoerveld"@nl ;
         skos:prefLabel   "niveau buitenwater"@nl .
 
-imbor:13c4ffb5-580f-49c9-9623-d2603feed574
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:4cac5360-ef8e-43e8-aaf0-dd0a3ce9f7ee ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype PompTypeBesturing is de naam voor de domeinwaardenlijst van de klasse Pomp en het attribuut type besturing."@nl ;
-        skos:prefLabel   "PompTypeBesturing"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:7b9ead75-bf04-4bec-b4ae-b3ad8b6a4560
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Kunststofverharding bestaat uit BioBased HDPE"@nl ;
@@ -41606,6 +41598,14 @@ imbor:7b9ead75-bf04-4bec-b4ae-b3ad8b6a4560
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:5a60b993-5ff3-4b04-af83-c81bcb330d8d ] .
+
+imbor:13c4ffb5-580f-49c9-9623-d2603feed574
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:4cac5360-ef8e-43e8-aaf0-dd0a3ce9f7ee ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype PompTypeBesturing is de naam voor de domeinwaardenlijst van de klasse Pomp en het attribuut type besturing."@nl ;
+        skos:prefLabel   "PompTypeBesturing"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:4c78d58e-8344-4696-baa8-7f8ebe91ef31
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -42691,6 +42691,14 @@ imbor:c6b56554-0374-4e8e-8a45-d50f484da594
         sh:minCount     0 ;
         sh:path         imbor:5d80d795-c1aa-4bc2-953e-7bce768446b3 .
 
+imbor:58708bda-3f7a-416e-aa1a-c5515c746ecc
+        rdf:type         sh:NodeShape , rdfs:Class ;
+        rdfs:seeAlso     imbor-term:58708bda-3f7a-416e-aa1a-c5515c746ecc ;
+        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
+        dash:abstract    false ;
+        skos:definition  "Voorziening die als functie heeft het weren van verkeer."@nl ;
+        skos:prefLabel   "Weren van verkeer"@nl .
+
 imbor:5ee5b65c-7a39-4a6e-b273-d77f3327ac4d
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "inbelgegevens vastgezet op Nutsaansluiting"@nl ;
@@ -42705,14 +42713,6 @@ imbor:40d8264e-fcc1-4b34-ba89-702ed9045a93
         sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
         sh:qualifiedMaxCount  1 ;
         sh:qualifiedMinCount  0 .
-
-imbor:58708bda-3f7a-416e-aa1a-c5515c746ecc
-        rdf:type         sh:NodeShape , rdfs:Class ;
-        rdfs:seeAlso     imbor-term:58708bda-3f7a-416e-aa1a-c5515c746ecc ;
-        rdfs:subClassOf  imbor:d115bf9e-495e-4857-9516-2d0512563fd3 ;
-        dash:abstract    false ;
-        skos:definition  "Voorziening die als functie heeft het weren van verkeer."@nl ;
-        skos:prefLabel   "Weren van verkeer"@nl .
 
 imbor:1f1ac5fd-a761-49ac-98dc-229a356cce94
         rdf:type         rdfs:Class ;
@@ -43336,19 +43336,19 @@ imbor:a6a4112c-4890-4739-afa1-17ea8f085c8c
         skos:note        "Enumeratie"@nl ;
         skos:prefLabel   "type uitvoering"@nl .
 
-imbor:a65dcb19-f59b-44d2-8cf2-3516db66935d
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:18a83052-3e36-49c7-8eff-a858f2704960 ;
-        skos:definition  "Aanduiding dat een object (pal) boven of onder een object ligt."@nl ;
-        skos:note        "Ja/nee"@nl ;
-        skos:prefLabel   "tandem"@nl .
-
 imbor:5980ebe0-d3b4-41f8-8f8c-85ced7e6485f
         rdf:type         rdf:Property ;
         rdfs:seeAlso     imbor-term:bd9b1e3f-ae70-4c5b-b00d-ce99a6755253 ;
         skos:definition  "Datum waarop de memo aan het object toegevoegd is."@nl ;
         skos:note        "Waarde wordt automatisch bepaald"@nl ;
         skos:prefLabel   "datum memo"@nl .
+
+imbor:a65dcb19-f59b-44d2-8cf2-3516db66935d
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:18a83052-3e36-49c7-8eff-a858f2704960 ;
+        skos:definition  "Aanduiding dat een object (pal) boven of onder een object ligt."@nl ;
+        skos:note        "Ja/nee"@nl ;
+        skos:prefLabel   "tandem"@nl .
 
 imbor:7e719cb4-75f6-4611-9017-635d1b0e5479
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -44779,14 +44779,6 @@ imbor:dcc84cf6-0aed-4199-872a-17c4fb734970
         skos:definition  "Het object wordt gebruikt om een ander object of een bepaalde locatie te beschermen of om gevaarlijke situaties te beperken."@nl ;
         skos:prefLabel   "Beveiligen"@nl .
 
-imbor:77fb3615-ae1e-451c-8685-f8fb47cc8429
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Regenwaterbuffer voert uit Opvang hemelwater"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:27d41dd0-48ea-488c-80d6-736db2064a3b ] .
-
 imbor:27d41dd0-48ea-488c-80d6-736db2064a3b
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:57656992-8e98-4923-8170-ba0cc732b6ec ;
@@ -44794,6 +44786,14 @@ imbor:27d41dd0-48ea-488c-80d6-736db2064a3b
         dash:abstract    false ;
         skos:definition  "Het inzamelen van neerslag."@nl ;
         skos:prefLabel   "Opvang hemelwater"@nl .
+
+imbor:77fb3615-ae1e-451c-8685-f8fb47cc8429
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Regenwaterbuffer voert uit Opvang hemelwater"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:27d41dd0-48ea-488c-80d6-736db2064a3b ] .
 
 imbor:35e4acd9-0816-4425-b057-5a10aabbc959
         rdf:type            sh:PropertyShape ;
@@ -45363,14 +45363,6 @@ imbor:63e53466-ce68-40a5-be0c-b6cbf54c9306
         skos:prefLabel           "insteekbreedte"@nl ;
         nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
 
-imbor:47bff4c9-00f8-467f-b614-3f6d442d306b
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Inlaatplaats voert uit Toegang verschaffen"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:fe6bcab0-c245-410d-a68e-a4d700c942df ] .
-
 imbor:d678aa8b-456a-4d8b-9b3a-30d0cf93933f
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:77d3dc1d-be62-4c94-8f63-6c903c4f95a8 ;
@@ -45379,6 +45371,14 @@ imbor:d678aa8b-456a-4d8b-9b3a-30d0cf93933f
         skos:definition  "Een luifel is een element uit de architectuur bestaande uit een dak, dat met de ene horizontale kant aan de buitenzijde van een gebouw is bevestigd, terwijl de daar tegenoverliggende zijde vrij dragend is."@nl ;
         skos:prefLabel   "Luifel"@nl ;
         sh:property      imbor:0fd9bd6f-b841-4e9d-aab5-fc2cec86c2fe , imbor:21f54bcf-bd00-4168-bc85-e2bdd511e421 .
+
+imbor:47bff4c9-00f8-467f-b614-3f6d442d306b
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Inlaatplaats voert uit Toegang verschaffen"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:fe6bcab0-c245-410d-a68e-a4d700c942df ] .
 
 imbor:468cc40a-253a-424d-a95d-539686bbbd34
         rdf:type                sh:PropertyShape ;
@@ -46079,14 +46079,6 @@ imbor:d7f0a585-96ec-4ee1-978a-5811164c9afc
         skos:prefLabel           "porositeit"@nl ;
         nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/DimensionlessRatio> .
 
-imbor:32971970-7784-4378-aa80-7300b12c4cd6
-        rdf:type                 rdf:Property ;
-        rdfs:seeAlso             imbor-term:c1e241e6-ee81-4bc8-b090-76e83d3f7650 ;
-        skos:definition          "Maximale hoogte van het voertuig welke van de rijstrook gebruik kan maken."@nl ;
-        skos:note                "Vrij invoerveld"@nl ;
-        skos:prefLabel           "maximale hoogte voertuig"@nl ;
-        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
-
 imbor:bc6f8c37-6121-49db-af4d-7d805f1e82f6
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:e7cc54e4-9a47-42ac-950c-c3cbe02cf77b ;
@@ -46095,6 +46087,14 @@ imbor:bc6f8c37-6121-49db-af4d-7d805f1e82f6
         skos:definition  "Kabel voor de voortgeleiding van een signaal."@nl ;
         skos:prefLabel   "Datakabel"@nl ;
         sh:property      imbor:827f90d6-d5c9-4f7a-86b0-5e61fa762920 , imbor:e87f4906-31f7-47b5-a95e-039c1887475e , imbor:220d00f6-2a54-4d8a-89f9-03f19559bfc7 , imbor:9d84a7d2-4206-416d-bc8e-ad77b97b4235 .
+
+imbor:32971970-7784-4378-aa80-7300b12c4cd6
+        rdf:type                 rdf:Property ;
+        rdfs:seeAlso             imbor-term:c1e241e6-ee81-4bc8-b090-76e83d3f7650 ;
+        skos:definition          "Maximale hoogte van het voertuig welke van de rijstrook gebruik kan maken."@nl ;
+        skos:note                "Vrij invoerveld"@nl ;
+        skos:prefLabel           "maximale hoogte voertuig"@nl ;
+        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
 
 imbor:dad7fa2c-32c1-43d6-89f6-677b1ddb0a5e
         rdf:type                sh:PropertyShape ;
@@ -46145,6 +46145,14 @@ imbor:65067927-3b48-4cae-b2de-62e42df469c7
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
 
+imbor:e5fbf3a4-1020-42b3-b726-481d04d913c4
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Speeltoestel voert uit Zitgelegenheid faciliteren"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:4b63997d-267e-4577-9fcb-8be6533eb9d1 ] .
+
 imbor:06542721-7b9d-4423-8353-019e474238db
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Schoolterrein voert uit Aanleiden tot spelen"@nl ;
@@ -46161,14 +46169,6 @@ imbor:57345c69-f9b0-4c13-bf45-7b678c00ba91
         sh:minCount         0 ;
         sh:path             imbor:22d4229f-4ad2-41c4-8c96-4d881af25f05 ;
         imbor:imborEenheid  imbor:9683b819-fe3b-4205-a4b2-52c1246fdf2c .
-
-imbor:e5fbf3a4-1020-42b3-b726-481d04d913c4
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Speeltoestel voert uit Zitgelegenheid faciliteren"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:4b63997d-267e-4577-9fcb-8be6533eb9d1 ] .
 
 imbor:e4e1148b-e8e8-403b-8de0-7ac1fb81d36e
         rdf:type         rdfs:Class ;
@@ -47132,6 +47132,13 @@ imbor:b5ee81c4-a900-4a5f-9986-9cc3b51fd0c2
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:8cb4ac09-1e8f-47d9-a058-2961481fc928 ] .
 
+imbor:89c9d410-c6d2-4711-b3b0-f183ca41b71d
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Vaste brug heeft deel Armatuur"@nl ;
+        sh:path                 nen2660:hasPart ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:38a36b34-a593-499d-b210-0c48fb40ca3b ] .
+
 imbor:7195dadb-a8b3-4169-bcad-761a945b0893
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "gewicht vastgezet op Straatmeubilair"@nl ;
@@ -47149,13 +47156,6 @@ imbor:b40f12a2-c72e-4d8a-a4d0-a35cd1e6f95a
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:606568bb-450c-4347-bc74-99796df0ddc0 ] .
-
-imbor:89c9d410-c6d2-4711-b3b0-f183ca41b71d
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Vaste brug heeft deel Armatuur"@nl ;
-        sh:path                 nen2660:hasPart ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:38a36b34-a593-499d-b210-0c48fb40ca3b ] .
 
 imbor:2f4a60a2-9f9c-44eb-a971-8288df1a44c4
         rdf:type        sh:PropertyShape ;
@@ -48449,14 +48449,6 @@ imbor:2102f563-baab-4662-a2ee-083648604766
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
 
-imbor:8bd2fdae-644e-482f-aaf5-23f51ba80f79
-        rdf:type        sh:PropertyShape ;
-        skos:prefLabel  "objectnummer vastgezet op ReëelObject"@nl ;
-        sh:datatype     xsd:string ;
-        sh:maxCount     1 ;
-        sh:minCount     0 ;
-        sh:path         imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 .
-
 imbor:e47a035d-894d-46c8-be9e-b83b1d25bd9c
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "type overspanningsbeveiliging vastgezet op Aansluitvoorziening"@nl ;
@@ -48480,6 +48472,14 @@ imbor:1e22446a-123a-476e-8b79-6918365b2fe2
         skos:definition  "Het enumeratietype SpoorasTypeSpoor is de naam voor de domeinwaardenlijst van de klasse Spooras en het attribuut type spoor."@nl ;
         skos:prefLabel   "SpoorasTypeSpoor"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:8bd2fdae-644e-482f-aaf5-23f51ba80f79
+        rdf:type        sh:PropertyShape ;
+        skos:prefLabel  "objectnummer vastgezet op ReëelObject"@nl ;
+        sh:datatype     xsd:string ;
+        sh:maxCount     1 ;
+        sh:minCount     0 ;
+        sh:path         imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 .
 
 imbor:e68481e2-f470-44c0-b697-99a37bb7b96d
         rdf:type                sh:PropertyShape ;
@@ -49423,13 +49423,6 @@ imbor:86d3ce94-4b88-43c6-90e0-43c0af05537e
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:14fc8f51-b602-4e83-875b-f0d052864a7b ] .
 
-imbor:f5d862ca-de5e-454b-8101-2aa94d67eb02
-        rdf:type              sh:PropertyShape ;
-        skos:prefLabel        "bor-type vastgezet op Infiltratiebassin"@nl ;
-        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
-        sh:qualifiedMaxCount  1 ;
-        sh:qualifiedMinCount  0 .
-
 imbor:374d6554-9b39-44fe-b92e-b54b2b45e83f
         rdf:type         rdfs:Class , sh:NodeShape ;
         rdfs:seeAlso     imbor-term:4cb3defb-ad95-40c2-bc19-40ed587920fc ;
@@ -49438,6 +49431,13 @@ imbor:374d6554-9b39-44fe-b92e-b54b2b45e83f
         skos:definition  "Een op zichzelf staande groenvoorziening, dienend ter verfraaiing en/of verlevendiging van één of meerdere wijken, zonder hiervan direct deel uit te maken."@nl ;
         skos:prefLabel   "Park"@nl ;
         sh:property      imbor:6c138fbe-b1d1-4fba-8b97-bd4d484882a7 , imbor:d7e5d0fd-e8d8-4f53-bda2-fe5204a2f30c , imbor:741fc2f0-736a-42f7-a91d-89ea069f9a5a , imbor:928f6ad1-0887-4f52-9727-f1a4df73748c .
+
+imbor:f5d862ca-de5e-454b-8101-2aa94d67eb02
+        rdf:type              sh:PropertyShape ;
+        skos:prefLabel        "bor-type vastgezet op Infiltratiebassin"@nl ;
+        sh:path               imbor:d5dca132-d135-4ac3-99d5-2f65355b1693 ;
+        sh:qualifiedMaxCount  1 ;
+        sh:qualifiedMinCount  0 .
 
 imbor:69001cbc-c807-4d47-a3d2-4001599bc84c
         rdf:type                sh:PropertyShape ;
@@ -50026,6 +50026,15 @@ imbor:412abf19-9b04-4c6a-b201-b8808edd7409
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:a9f7b4fa-a905-49cc-8b9d-cffe0924db32 ] .
 
+imbor:52509800-537b-41bf-a9b9-c5cd19a8d1c7
+        rdf:type            sh:PropertyShape ;
+        skos:prefLabel      "maaiveldhoogte vastgezet op Constructieonderdeel"@nl ;
+        sh:datatype         xsd:decimal ;
+        sh:maxCount         1 ;
+        sh:minCount         0 ;
+        sh:path             imbor:092c0fd0-cb1c-4161-9d52-2a182bcae7a9 ;
+        imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
+
 imbor:1d5691f0-e94a-473f-88d8-7986ff8e3223
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:cf0ce326-7b26-4a89-b4be-57101161212e ;
@@ -50035,15 +50044,6 @@ imbor:1d5691f0-e94a-473f-88d8-7986ff8e3223
         skos:note        "Bermbeveiligingsconstructie ter afscherming van een solitair obtakel die de botsenergie kan absorberen en het voertuig van richting doet veranderen of tot stilstand brengt."@nl ;
         skos:prefLabel   "Obstakelbeveiliger"@nl ;
         sh:property      imbor:7aef6852-6a54-48e8-8444-f5957c766eff , imbor:77b12664-3388-40dd-8259-b210117f7a46 , imbor:87d14344-ab30-453d-8ec0-5ba2b206f2fd , imbor:143f2edc-7e5f-4956-8fb7-392717fb13b0 .
-
-imbor:52509800-537b-41bf-a9b9-c5cd19a8d1c7
-        rdf:type            sh:PropertyShape ;
-        skos:prefLabel      "maaiveldhoogte vastgezet op Constructieonderdeel"@nl ;
-        sh:datatype         xsd:decimal ;
-        sh:maxCount         1 ;
-        sh:minCount         0 ;
-        sh:path             imbor:092c0fd0-cb1c-4161-9d52-2a182bcae7a9 ;
-        imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
 
 imbor:8471d28e-2156-4744-93b5-7bbf59aba5cb
         rdf:type                sh:PropertyShape ;
@@ -50782,14 +50782,6 @@ imbor:9b9bdc66-afeb-4767-bbb9-55f316932dbd
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:eb77cf32-23f4-451e-978c-37bb85c3db1f ] .
 
-imbor:d5f55895-200b-42a5-9cac-927e94d9f7fa
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Klok"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:a3a10c80-4b70-42ef-a81f-786c3ac2245f ] .
-
 imbor:f99d714a-9022-4ba6-890d-534351c5fd86
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Beheervak bevat Bierleiding"@nl ;
@@ -50797,6 +50789,14 @@ imbor:f99d714a-9022-4ba6-890d-534351c5fd86
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:04424005-7cd6-45b3-babb-1b15cb0aff82 ] .
+
+imbor:d5f55895-200b-42a5-9cac-927e94d9f7fa
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Klok"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:a3a10c80-4b70-42ef-a81f-786c3ac2245f ] .
 
 imbor:22c76a86-d969-464e-87cd-53466bd75fc4
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -50907,14 +50907,6 @@ imbor:7b543376-8d06-4005-b5be-68a26127eb0d
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:a5b255ba-8d86-45d7-97e1-f2ff432ca978 ] .
 
-imbor:1e68d164-c84a-45a0-9d6b-a3af1d0f3951
-        rdf:type                 rdf:Property ;
-        rdfs:seeAlso             imbor-term:8c5a6504-cd64-4595-9279-e5a03374e338 ;
-        skos:definition          "Breedte van de insteek van het waterobject."@nl ;
-        skos:note                "Vrij invoerveld"@nl ;
-        skos:prefLabel           "breedte insteek"@nl ;
-        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
-
 imbor:ad3ae80e-77af-4684-8181-6bd88505c26a
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "hoek aansluiting vastgezet op Faunavoorziening"@nl ;
@@ -50946,6 +50938,14 @@ imbor:149d8068-bfe3-47c5-b6f9-3d6a7a6e714f
         skos:definition  "Code en naam van het symbool welke op het verkeersbord getoond wordt die vrij te definiëren is."@nl ;
         skos:note        "Referentie"@nl ;
         skos:prefLabel   "symbool"@nl .
+
+imbor:1e68d164-c84a-45a0-9d6b-a3af1d0f3951
+        rdf:type                 rdf:Property ;
+        rdfs:seeAlso             imbor-term:8c5a6504-cd64-4595-9279-e5a03374e338 ;
+        skos:definition          "Breedte van de insteek van het waterobject."@nl ;
+        skos:note                "Vrij invoerveld"@nl ;
+        skos:prefLabel           "breedte insteek"@nl ;
+        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Length> .
 
 imbor:1a731398-155a-4ac4-a99b-78532b53718d
         rdf:type                sh:PropertyShape ;
@@ -51588,14 +51588,6 @@ imbor:546970e1-8e0d-4b40-83e3-b05336cc6d48
         skos:prefLabel           "monetaire boomwaarde"@nl ;
         nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Currency> .
 
-imbor:4b950823-a203-42de-8cb2-7557b3baf1d8
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Regenmeter is verbonden met Elektriciteitskast"@nl ;
-        sh:path                 nen2660:isConnectedTo ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:ce738f23-2622-45f9-82fd-259e62bf4daf ] .
-
 imbor:04424005-7cd6-45b3-babb-1b15cb0aff82
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:c8c971b9-9fbb-4f83-8496-9c279d285438 ;
@@ -51604,6 +51596,14 @@ imbor:04424005-7cd6-45b3-babb-1b15cb0aff82
         skos:definition  "Leiding voor het transport van bier."@nl ;
         skos:prefLabel   "Bierleiding"@nl ;
         sh:property      imbor:fc1c7628-7d1f-41d9-8139-f806894bdae0 , imbor:c0215d00-f076-42dd-b0c6-d3afcc11c7a5 .
+
+imbor:4b950823-a203-42de-8cb2-7557b3baf1d8
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Regenmeter is verbonden met Elektriciteitskast"@nl ;
+        sh:path                 nen2660:isConnectedTo ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:ce738f23-2622-45f9-82fd-259e62bf4daf ] .
 
 imbor:f591bb58-2761-4568-b8b3-9dea37a076c7
         rdf:type                sh:PropertyShape ;
@@ -52787,14 +52787,6 @@ imbor:1e8399fe-8c6c-4058-8b36-fcf9c262c897
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:095ecf95-3717-43ec-bc36-8e23e692def9 ] .
 
-imbor:f0bb3db3-bf61-4580-a666-4c8247abc7c1
-        rdf:type                 rdf:Property ;
-        rdfs:seeAlso             imbor-term:e51ae003-fe3e-4606-b553-6c1d249fb5b9 ;
-        skos:definition          "Aanduiding voor de snelheid (in millimeters per uur) waarin regenwater kan infiltreren."@nl ;
-        skos:note                "Vrij invoerveld"@nl ;
-        skos:prefLabel           "infiltrerend vermogen"@nl ;
-        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Volume> .
-
 imbor:6a2e91d6-e387-4699-b8dd-080396cfa08f
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:d8e0048b-e428-4bfd-92a2-72388d7368d8 ;
@@ -52802,6 +52794,14 @@ imbor:6a2e91d6-e387-4699-b8dd-080396cfa08f
         skos:definition  "Het enumeratietype VeerType is de naam voor de domeinwaardenlijst van de klasse Veerverbinding en het attribuut type."@nl ;
         skos:prefLabel   "VeerType"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:f0bb3db3-bf61-4580-a666-4c8247abc7c1
+        rdf:type                 rdf:Property ;
+        rdfs:seeAlso             imbor-term:e51ae003-fe3e-4606-b553-6c1d249fb5b9 ;
+        skos:definition          "Aanduiding voor de snelheid (in millimeters per uur) waarin regenwater kan infiltreren."@nl ;
+        skos:note                "Vrij invoerveld"@nl ;
+        skos:prefLabel           "infiltrerend vermogen"@nl ;
+        nen2660:hasQuantityKind  <http://qudt.org/2.1/vocab/quantitykind/Volume> .
 
 imbor:e9ea1b6c-c891-48d0-af52-bba67668bf7f
         rdf:type        sh:PropertyShape ;
@@ -52905,14 +52905,6 @@ imbor:fc277f5a-a26a-45c8-a663-62e4f250093a
         skos:note        "Vrij invoerveld"@nl ;
         skos:prefLabel   "profiel open leiding"@nl .
 
-imbor:f235003b-e3b7-4b1a-9543-11c0f7eeeb11
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Slagboominstallatie"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:d62f423b-292c-4b1d-bd02-ecb74f11d4fd ] .
-
 imbor:f8875bca-ea70-42f3-aec9-67e7de543216
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "anti-graffiti voorziening vastgezet op Gebouw"@nl ;
@@ -52930,6 +52922,14 @@ imbor:3f7818c0-9752-4298-a396-7de6b893ff7a
         sh:path             imbor:d3276217-b818-4838-81db-75922a1c8cbe ;
         imbor:imborEenheid  imbor:9be5aaac-94a3-4ea4-b727-9b032b9a8a64 ;
         nen2660:hasUnit     unit:M .
+
+imbor:f235003b-e3b7-4b1a-9543-11c0f7eeeb11
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Slagboominstallatie"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:d62f423b-292c-4b1d-bd02-ecb74f11d4fd ] .
 
 imbor:2a0deec6-eeb0-40df-b35b-441cc5c38d7d
         rdf:type                sh:PropertyShape ;
@@ -53623,14 +53623,6 @@ imbor:c88331cf-c1fb-4b00-89b2-d7b2463ed7b1
         sh:minCount     0 ;
         sh:path         imbor:5d1cea06-4141-4a45-bf9e-89dc0a8e5a9f .
 
-imbor:fc67d4c1-3554-43f7-b477-caf8e33d441b
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "type vastgezet op Infiltratiestelsel"@nl ;
-        sh:path                 imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:7eb82fef-2ebc-47be-ac7b-fa8d340c933e ] .
-
 imbor:47e7f3c9-c02c-4e2e-8c1d-b24341a9cbba
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "afstand tot wegas vastgezet op Faunavoorziening"@nl ;
@@ -53649,6 +53641,14 @@ imbor:79f8e2a6-5e92-41a9-8527-0359d152b574
         sh:minCount         0 ;
         sh:path             imbor:47fe7bb3-88a9-4654-b275-e39d807a7e9e ;
         imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
+
+imbor:fc67d4c1-3554-43f7-b477-caf8e33d441b
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "type vastgezet op Infiltratiestelsel"@nl ;
+        sh:path                 imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:7eb82fef-2ebc-47be-ac7b-fa8d340c933e ] .
 
 imbor:a0e3d06b-d4d1-49df-afbc-3e7ff2458f94
         rdf:type                sh:PropertyShape ;
@@ -53674,14 +53674,6 @@ imbor:e3be84d2-0753-40e7-ba94-50d663af12e9
         skos:prefLabel   "Certificering-InformatieCertificeringsinstantie"@nl ;
         imbor:typeLijst  "Suggestielijst"@nl .
 
-imbor:8981a100-ca89-496a-9f0d-c493dcf3d3d1
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:ff6cecc3-3cc3-4fb4-b235-32b4c5fe2623 ;
-        rdfs:subClassOf  nen2660:EnumerationType ;
-        skos:definition  "Het enumeratietype DispenserType is de naam voor de domeinwaardenlijst van de klasse Dispenser en het attribuut type."@nl ;
-        skos:prefLabel   "DispenserType"@nl ;
-        imbor:typeLijst  "Enumeratielijst"@nl .
-
 imbor:4f262cb7-0485-445b-b524-766242ed5306
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:c27c731d-2394-425d-896f-aaaba2394660 ;
@@ -53690,13 +53682,13 @@ imbor:4f262cb7-0485-445b-b524-766242ed5306
         skos:prefLabel   "PlantenGewenstSluitingspercentage"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
 
-imbor:ab5937ed-610f-454c-b749-ad4a9baa4c81
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Ontspanningsventiel"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:7b5e8958-b4c1-4b73-9aca-0cd93df4a076 ] .
+imbor:8981a100-ca89-496a-9f0d-c493dcf3d3d1
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:ff6cecc3-3cc3-4fb4-b235-32b4c5fe2623 ;
+        rdfs:subClassOf  nen2660:EnumerationType ;
+        skos:definition  "Het enumeratietype DispenserType is de naam voor de domeinwaardenlijst van de klasse Dispenser en het attribuut type."@nl ;
+        skos:prefLabel   "DispenserType"@nl ;
+        imbor:typeLijst  "Enumeratielijst"@nl .
 
 imbor:042921d4-237c-42ca-8671-3267129fa8c2
         rdf:type                sh:PropertyShape ;
@@ -53705,6 +53697,14 @@ imbor:042921d4-237c-42ca-8671-3267129fa8c2
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:a5a71e46-4799-4805-b996-19771df6be70 ] .
+
+imbor:ab5937ed-610f-454c-b749-ad4a9baa4c81
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Ontspanningsventiel"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:7b5e8958-b4c1-4b73-9aca-0cd93df4a076 ] .
 
 imbor:ba4844c7-e311-4a5e-a9ab-d6af8f7a080e
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -54025,14 +54025,6 @@ imbor:f4cb84cf-bab5-41bc-bfde-60c820e18ab6
         skos:prefLabel   "ArmatuurType"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
 
-imbor:0804bb79-9f5e-445f-afb9-ddf97dc95996
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Trap"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:67c67760-c630-483e-b19b-0cacd881d226 ] .
-
 imbor:3cfa9af5-2388-425b-9e69-e0a70114ac5a
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "diameter vastgezet op Markeringspaal"@nl ;
@@ -54042,6 +54034,14 @@ imbor:3cfa9af5-2388-425b-9e69-e0a70114ac5a
         sh:path             imbor:638eff22-a320-43ae-889a-0a0b5f83dceb ;
         imbor:imborEenheid  imbor:c6c889a1-be9d-4007-a704-62cf119a6801 ;
         nen2660:hasUnit     unit:MilliM .
+
+imbor:0804bb79-9f5e-445f-afb9-ddf97dc95996
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Trap"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:67c67760-c630-483e-b19b-0cacd881d226 ] .
 
 imbor:47b3af2a-f7b4-43c4-8a40-adeb493a98b3
         rdf:type                sh:PropertyShape ;
@@ -54801,6 +54801,14 @@ imbor:bbf573d2-f020-470d-9f65-4a0b45e81646
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:e48546c4-ee2e-4073-9648-cdf2b180cca4 ] .
 
+imbor:281f3810-7c6f-43e0-872f-d59ffc5fae53
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Constructielaag verhardingsobject bestaat uit Zandgrindasfalt"@nl ;
+        sh:path                 nen2660:consistsOf ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:0216a4db-9128-4be3-983d-8dad0b4f8859 ] .
+
 imbor:9e026bb2-3153-4e89-93c8-b08867329b3e
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:ff780434-7a95-45f9-a59f-81a7bba4bb69 ;
@@ -54809,14 +54817,6 @@ imbor:9e026bb2-3153-4e89-93c8-b08867329b3e
         skos:definition  "Een gasleiding is een buis (uit metaal of kunststof) die gebruikt wordt om diverse stoffen in gasvorm te vervoeren."@nl ;
         skos:prefLabel   "Gasleiding"@nl ;
         sh:property      imbor:41fcd3ee-878e-4d42-9c6d-f194c8f65570 , imbor:36146eeb-7f4c-4b72-850e-d7c815baca91 .
-
-imbor:281f3810-7c6f-43e0-872f-d59ffc5fae53
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Constructielaag verhardingsobject bestaat uit Zandgrindasfalt"@nl ;
-        sh:path                 nen2660:consistsOf ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:0216a4db-9128-4be3-983d-8dad0b4f8859 ] .
 
 imbor:bf25a878-0737-44e8-8b80-038dee9574c1
         rdf:type                sh:PropertyShape ;
@@ -55049,6 +55049,13 @@ imbor:ebe5e432-e7fe-4888-b59b-a9ef66eef099
         sh:path             imbor:faa7561c-1e8d-467d-bd4c-6f996ebe7d14 ;
         imbor:imborEenheid  imbor:9683b819-fe3b-4205-a4b2-52c1246fdf2c .
 
+imbor:47fe7bb3-88a9-4654-b275-e39d807a7e9e
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:3c75736c-c09d-4cfa-86fb-629827e30158 ;
+        skos:definition  "Gemeten bodempeil van het waterobject in het peiljaar."@nl ;
+        skos:note        "Vrij invoerveld"@nl ;
+        skos:prefLabel   "gemeten bodempeil"@nl .
+
 imbor:447c32d0-fad3-48c8-86e5-aabf1d0b2bd7
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:2d3fcc64-e300-44bd-a297-4430480be29e ;
@@ -55056,13 +55063,6 @@ imbor:447c32d0-fad3-48c8-86e5-aabf1d0b2bd7
         dash:abstract    false ;
         skos:definition  "Een natuursteen die ter afwerking behandeld is met vlammen die een thermische schok veroorzaken aan het materiaaloppervlak."@nl ;
         skos:prefLabel   "Natuursteen gevlamd"@nl .
-
-imbor:47fe7bb3-88a9-4654-b275-e39d807a7e9e
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:3c75736c-c09d-4cfa-86fb-629827e30158 ;
-        skos:definition  "Gemeten bodempeil van het waterobject in het peiljaar."@nl ;
-        skos:note        "Vrij invoerveld"@nl ;
-        skos:prefLabel   "gemeten bodempeil"@nl .
 
 imbor:1c4a6429-0af0-406f-8ddb-07cfda1fbe75
         rdf:type            sh:PropertyShape ;
@@ -56184,6 +56184,13 @@ imbor:8ac7ee82-30e7-42dd-8e1b-8e5a6febcee3
         skos:definition  "De buitengrens van de ruimte of de bovenkant van de constructie."@nl ;
         skos:prefLabel   "Buitengrens"@nl .
 
+imbor:cf13e952-c597-4eb3-b871-6a4394b60b1e
+        rdf:type         rdf:Property ;
+        rdfs:seeAlso     imbor-term:ef81e321-21eb-47f9-ad1e-db0769aea062 ;
+        skos:definition  "Mogelijkheid om de ondertekst op een verkeersbord in te vullen, bijvoorbeeld bij straatnaamborden."@nl ;
+        skos:note        "Vrij invoerveld"@nl ;
+        skos:prefLabel   "ondertekst"@nl .
+
 nen2660:FunctionalEntity
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     nen2660-term:FunctionalEntity ;
@@ -56191,13 +56198,6 @@ nen2660:FunctionalEntity
         skos:definition  "Entiteit waarbij het gaat om het externe gedrag waarbij de uitvoer bijdraagt aan doelstellingen van belanghebbenden geïmplementeerd/gespeeld door een of meer technische entiteiten."@nl ;
         skos:note        "NEN2660"@nl ;
         skos:prefLabel   "FunctioneleEntiteit"@nl .
-
-imbor:cf13e952-c597-4eb3-b871-6a4394b60b1e
-        rdf:type         rdf:Property ;
-        rdfs:seeAlso     imbor-term:ef81e321-21eb-47f9-ad1e-db0769aea062 ;
-        skos:definition  "Mogelijkheid om de ondertekst op een verkeersbord in te vullen, bijvoorbeeld bij straatnaamborden."@nl ;
-        skos:note        "Vrij invoerveld"@nl ;
-        skos:prefLabel   "ondertekst"@nl .
 
 imbor:23dd7e27-a614-4ac0-8bc3-92261729c9a0
         rdf:type                sh:PropertyShape ;
@@ -58086,14 +58086,6 @@ imbor:ccd581be-b8f8-4fa3-b347-2d29248f64f7
         skos:prefLabel   "Rioolaansluiting"@nl ;
         sh:property      imbor:eecfdb5f-df14-43e1-845a-2927b7b74cf1 , imbor:e15935ea-d4fc-454c-b987-0574c0ecfb05 , imbor:47371507-8812-4e31-a9c0-cbe3fed1af67 , imbor:a638e99b-53cc-48a9-858b-69e14102b79f .
 
-imbor:2bdae949-74fe-44da-94ca-bc9a57265c64
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "bedienaar vastgezet op Sluis"@nl ;
-        sh:path                 imbor:e4ac4ba1-db4b-4b15-aa16-e3775cf35e19 ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:82668007-bf9b-45d1-b1f8-7bbd7dd59573 ] .
-
 imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31
         rdf:type         sh:NodeShape , rdfs:Class ;
         rdfs:seeAlso     imbor-term:4ce84096-1f66-4093-b852-1082e8bcf875 ;
@@ -58102,6 +58094,14 @@ imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31
         skos:definition  "Een abri is een kleine, niet afgesloten wachtruimte voor het openbaar vervoer, zoals bij een bushalte, bus-, metro- of treinstation."@nl ;
         skos:prefLabel   "Abri"@nl ;
         sh:property      imbor:68c9e928-155b-404a-a036-8eb3e149b546 , imbor:5d56971b-9eef-40a0-954b-f1acaca61c46 , imbor:640e11cd-8413-4538-9a64-ef9dcafd70c9 , imbor:9969c7ef-ac72-4198-945f-2dc558d23a93 , imbor:2e1a579f-c817-45ce-9b96-8c6cfdc17d46 .
+
+imbor:2bdae949-74fe-44da-94ca-bc9a57265c64
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "bedienaar vastgezet op Sluis"@nl ;
+        sh:path                 imbor:e4ac4ba1-db4b-4b15-aa16-e3775cf35e19 ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:82668007-bf9b-45d1-b1f8-7bbd7dd59573 ] .
 
 imbor:4f478eb2-8a7e-44dd-814b-1428973f5bce
         rdf:type            sh:PropertyShape ;
@@ -58446,14 +58446,6 @@ imbor:5a8af1c0-7e62-41a7-bba3-e54852376cd8
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:9ee5bd00-c5a8-4d8b-871a-cd3b4eddd9df ] .
 
-imbor:569ab7b8-92f7-49fb-b5a8-2d799e038245
-        rdf:type        sh:PropertyShape ;
-        skos:prefLabel  "plus-type vastgezet op Toegangstrap"@nl ;
-        sh:datatype     xsd:string ;
-        sh:maxCount     1 ;
-        sh:minCount     0 ;
-        sh:path         imbor:84b7557a-9ef6-47b6-b855-e7ed469b5b1d .
-
 imbor:ed34a383-e289-429c-a26f-49ea89411026
         rdf:type         rdfs:Class , sh:NodeShape ;
         rdfs:seeAlso     imbor-term:a4dc5942-cf9f-4532-a5a3-ea669de312c9 ;
@@ -58470,6 +58462,14 @@ imbor:d5d01a1d-7508-47cb-9366-7fce13ef6b7e
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:d39f5797-b67b-4303-9f65-58c7c98200c5 ] .
+
+imbor:569ab7b8-92f7-49fb-b5a8-2d799e038245
+        rdf:type        sh:PropertyShape ;
+        skos:prefLabel  "plus-type vastgezet op Toegangstrap"@nl ;
+        sh:datatype     xsd:string ;
+        sh:maxCount     1 ;
+        sh:minCount     0 ;
+        sh:path         imbor:84b7557a-9ef6-47b6-b855-e7ed469b5b1d .
 
 imbor:2c098551-cd4c-4ecc-9beb-23bb5a78a908
         rdf:type         sh:NodeShape , rdfs:Class ;
@@ -59303,14 +59303,6 @@ imbor:1aced85d-cf29-4aa2-b6d0-a75a69be4868
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:d39f5797-b67b-4303-9f65-58c7c98200c5 ] .
 
-imbor:f61fabba-f492-46d0-bb6d-501176155a2a
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Paalconstructie bestaat uit Staal"@nl ;
-        sh:path                 nen2660:consistsOf ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:ce8aa2ed-1ec2-4ba9-adda-2fdb57dd39d9 ] .
-
 imbor:d8886cf7-5d46-4134-9d53-47af5e762353
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:c4bc90bd-4ef9-4292-b7d5-547ce610a595 ;
@@ -59318,6 +59310,14 @@ imbor:d8886cf7-5d46-4134-9d53-47af5e762353
         skos:definition  "Het enumeratietype SensorTypeCommunicatieprotocol is de naam voor de domeinwaardenlijst van de klasse Sensor en het attribuut type communicatieprotocol."@nl ;
         skos:prefLabel   "SensorCommunicatieprotocol"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:f61fabba-f492-46d0-bb6d-501176155a2a
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Paalconstructie bestaat uit Staal"@nl ;
+        sh:path                 nen2660:consistsOf ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:ce8aa2ed-1ec2-4ba9-adda-2fdb57dd39d9 ] .
 
 imbor:f2060016-42e5-4b79-92f3-59212227fb2d
         rdf:type                sh:PropertyShape ;
@@ -59327,14 +59327,6 @@ imbor:f2060016-42e5-4b79-92f3-59212227fb2d
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:81986499-e9c7-4a61-80e5-4abcf55ac911 ] .
 
-imbor:b2ea5e04-ad85-4c79-82a7-39cc653238b3
-        rdf:type        sh:PropertyShape ;
-        skos:prefLabel  "type overbrugging vastgezet op Aquaduct"@nl ;
-        sh:datatype     xsd:string ;
-        sh:maxCount     1 ;
-        sh:minCount     0 ;
-        sh:path         imbor:a182240b-ef07-4cfb-a919-3d7bd64eb28d .
-
 imbor:d0e07974-27b6-4142-b783-a7f3796a28a0
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:f7c4bf82-2550-47b0-aa43-590da3666983 ;
@@ -59342,6 +59334,14 @@ imbor:d0e07974-27b6-4142-b783-a7f3796a28a0
         skos:definition  "Het enumeratietype FaunavoorzieningTaludsteilte is de naam voor de domeinwaardenlijst van de klasse Faunavoorziening en het attribuut taludsteilte."@nl ;
         skos:prefLabel   "FaunavoorzieningTaludsteilte"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
+
+imbor:b2ea5e04-ad85-4c79-82a7-39cc653238b3
+        rdf:type        sh:PropertyShape ;
+        skos:prefLabel  "type overbrugging vastgezet op Aquaduct"@nl ;
+        sh:datatype     xsd:string ;
+        sh:maxCount     1 ;
+        sh:minCount     0 ;
+        sh:path         imbor:a182240b-ef07-4cfb-a919-3d7bd64eb28d .
 
 imbor:e0f2521f-27fb-4850-adcd-97d379a9d345
         rdf:type                sh:PropertyShape ;
@@ -59422,6 +59422,14 @@ imbor:923cd726-cf19-45ca-aec5-2f415f1bf0af
         skos:note        "Referentie"@nl ;
         skos:prefLabel   "biotoopsubtype"@nl .
 
+imbor:5b68cabc-9552-456e-aba1-8a8f19b079ca
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "type zekering vastgezet op Groep"@nl ;
+        sh:path                 imbor:a8bc35d0-fcf7-4b63-9d57-2181c4036f81 ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:b5c553b4-2b10-4321-ad06-8fea30a55f78 ] .
+
 imbor:cee05c2e-6db8-4d75-8817-feef91a8f3b4
         rdf:type            sh:PropertyShape ;
         skos:prefLabel      "streefdiepte vastgezet op Watervlakte"@nl ;
@@ -59430,14 +59438,6 @@ imbor:cee05c2e-6db8-4d75-8817-feef91a8f3b4
         sh:minCount         0 ;
         sh:path             imbor:547be48d-f575-4ad1-91eb-5093b3ac3ed0 ;
         imbor:imborEenheid  imbor:b962ca34-d747-4fcb-ad80-3d7d099b53f2 .
-
-imbor:5b68cabc-9552-456e-aba1-8a8f19b079ca
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "type zekering vastgezet op Groep"@nl ;
-        sh:path                 imbor:a8bc35d0-fcf7-4b63-9d57-2181c4036f81 ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:b5c553b4-2b10-4321-ad06-8fea30a55f78 ] .
 
 imbor:d9c75ed3-0607-4821-a7fd-dc502acc9d9b
         rdf:type                sh:PropertyShape ;
@@ -59962,14 +59962,6 @@ imbor:0d647069-f241-4479-862b-80242f4ad4e4
         skos:note        "Referentie"@nl ;
         skos:prefLabel   "baggerplichtige"@nl .
 
-imbor:ed1ee43e-46d8-40c9-b596-22b9387a006d
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Paddenstoel"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:89045a4e-8c09-40c5-8521-b4ca45bab064 ] .
-
 imbor:51241abc-b70f-4310-bf25-05ab3239cc57
         rdf:type                 rdf:Property ;
         rdfs:seeAlso             imbor-term:ebe9c5da-3ad4-4dc8-85fa-27b3798ce8e3 ;
@@ -59985,6 +59977,14 @@ imbor:38af5189-4125-4c2a-9b61-b2dfac72b742
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:606568bb-450c-4347-bc74-99796df0ddc0 ] .
+
+imbor:ed1ee43e-46d8-40c9-b596-22b9387a006d
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Paddenstoel"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:89045a4e-8c09-40c5-8521-b4ca45bab064 ] .
 
 imbor:d0a3ff60-c761-4e0a-8686-02b4bd09fabd
         rdf:type                sh:PropertyShape ;
@@ -60017,14 +60017,6 @@ imbor:fa72c759-7699-4290-8c3d-397a20c8d0e5
         skos:note        "Enumeratie"@nl ;
         skos:prefLabel   "type afwerking"@nl .
 
-imbor:2924feaf-0f22-4e15-83bc-a50a33a04094
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Sportterrein voert uit Faciliteren van recreatie"@nl ;
-        sh:path                 nen2660:executes ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:38ec236f-210f-4d3a-85e2-95931d8ea468 ] .
-
 imbor:2743bd03-e044-4081-9d2b-0614c1f6db11
         rdf:type        sh:PropertyShape ;
         skos:prefLabel  "plus-type vastgezet op Bodemval"@nl ;
@@ -60032,6 +60024,14 @@ imbor:2743bd03-e044-4081-9d2b-0614c1f6db11
         sh:maxCount     1 ;
         sh:minCount     0 ;
         sh:path         imbor:84b7557a-9ef6-47b6-b855-e7ed469b5b1d .
+
+imbor:2924feaf-0f22-4e15-83bc-a50a33a04094
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Sportterrein voert uit Faciliteren van recreatie"@nl ;
+        sh:path                 nen2660:executes ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:38ec236f-210f-4d3a-85e2-95931d8ea468 ] .
 
 imbor:604c62f5-7644-4642-8374-c4e650e60314
         rdf:type         rdfs:Class ;
@@ -60692,14 +60692,6 @@ imbor:d496d5cf-e8bc-4992-af53-1345031cdd10
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:182484aa-51e1-4ac3-a411-188faa86063e ] .
 
-imbor:1dfc3a63-9ea1-4b79-b559-6cf75fc10a51
-        rdf:type                sh:PropertyShape ;
-        skos:prefLabel          "Beheervak bevat Fijnstofsensor"@nl ;
-        sh:path                 nen2660:contains ;
-        sh:qualifiedMaxCount    1 ;
-        sh:qualifiedMinCount    0 ;
-        sh:qualifiedValueShape  [ sh:class  imbor:710cc1cc-f02b-4613-b57e-5e43447c47b8 ] .
-
 imbor:4db8ad13-b430-4079-9561-20c27f3e6a6f
         rdf:type                sh:PropertyShape ;
         skos:prefLabel          "Weesleiding voert uit Afvoeren van water"@nl ;
@@ -60707,6 +60699,14 @@ imbor:4db8ad13-b430-4079-9561-20c27f3e6a6f
         sh:qualifiedMaxCount    1 ;
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:456d7650-d2db-46de-8e88-9872caa23851 ] .
+
+imbor:1dfc3a63-9ea1-4b79-b559-6cf75fc10a51
+        rdf:type                sh:PropertyShape ;
+        skos:prefLabel          "Beheervak bevat Fijnstofsensor"@nl ;
+        sh:path                 nen2660:contains ;
+        sh:qualifiedMaxCount    1 ;
+        sh:qualifiedMinCount    0 ;
+        sh:qualifiedValueShape  [ sh:class  imbor:710cc1cc-f02b-4613-b57e-5e43447c47b8 ] .
 
 imbor:2ab14432-d7ee-45db-9f85-5df45d45f4c9
         rdf:type        sh:PropertyShape ;
@@ -60780,6 +60780,12 @@ imbor:ff1544a3-9686-4683-b15a-f9eeedc2edcd
         sh:qualifiedMinCount    0 ;
         sh:qualifiedValueShape  [ sh:class  imbor:fe6bcab0-c245-410d-a68e-a4d700c942df ] .
 
+imbor:2f0e34bd-f549-47be-b45b-5c93228e2174
+        rdf:type         rdfs:Class ;
+        rdfs:seeAlso     imbor-term:1d7bc1b8-cb8b-4251-9b9d-f17ac12e4176 ;
+        skos:definition  "Afvoercoëfficiënt."@nl ;
+        skos:prefLabel   "m1/2/s"@nl .
+
 imbor:3055ff73-2be3-4d46-876d-cba62b3e69f7
         rdf:type         rdfs:Class ;
         rdfs:seeAlso     imbor-term:67913565-22f4-4dfc-a98d-481bc5f21928 ;
@@ -60787,12 +60793,6 @@ imbor:3055ff73-2be3-4d46-876d-cba62b3e69f7
         skos:definition  "Het enumeratietype VerkeersdrempelOntwerpsnelheidsklasse is de naam voor de domeinwaardenlijst van de klasse Verkeersdrempel en het attribuut ontwerpsnelheidsklasse."@nl ;
         skos:prefLabel   "VerkeersdrempelOntwerpsnelheidsklasse"@nl ;
         imbor:typeLijst  "Enumeratielijst"@nl .
-
-imbor:2f0e34bd-f549-47be-b45b-5c93228e2174
-        rdf:type         rdfs:Class ;
-        rdfs:seeAlso     imbor-term:1d7bc1b8-cb8b-4251-9b9d-f17ac12e4176 ;
-        skos:definition  "Afvoercoëfficiënt."@nl ;
-        skos:prefLabel   "m1/2/s"@nl .
 
 imbor:8cfcc665-742e-45ad-a974-7672630f7015
         rdf:type         rdf:Property ;
