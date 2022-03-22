@@ -24,7 +24,9 @@
       "geo": "http://www.opengis.net/ont/geosparql#",
       "sh": "http://www.w3.org/ns/shacl#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "dash": "http://datashapes.org/dash#"
+      "dash": "http://datashapes.org/dash#",
+      "coll": "https://data.crow.nl/rest-api/id#",
+      "restapi": "https://data.crow.nl/rest-api/def#"
     },
     "steps": [
       {
@@ -90,17 +92,17 @@
       {
         "type": "sparql",
         "url": [
-          "src/transformations/versie-publicatie-graaf-info.rq"
-        ]
-      },
-      {
-        "type": "sparql",
-        "url": [
           "src/transformations/mim-klasses.rq",
           "src/transformations/mim-attributen.rq",
           "src/transformations/mim-relaties.rq",
           "src/transformations/mim-enumeraties.rq",
           "src/transformations/mim-domeinwaarden.rq"
+        ]
+      },
+      {
+        "type": "sparql",
+        "url": [
+          "src/transformations/versie-publicatie-graaf-info.rq"
         ]
       },
       {
