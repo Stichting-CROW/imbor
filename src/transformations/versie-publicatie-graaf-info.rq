@@ -1,0 +1,31 @@
+# Omdat het hostingplatform van het SPARQL-endpoint geen grafen onderscheidt, 
+# maar die voor sommige queries toch handig zijn, wordt dergelijk herkomst-info
+# bewaard in een graaf/los bestand 'imbor/addendum/rest-api'.
+
+prefix restapi: <https://data.crow.nl/rest-api/def#>
+prefix coll: <https://data.crow.nl/rest-api/id/>
+
+insert {
+    graph <https://data.crow.nl/imbor/addendum/rest-api> {
+        coll:IMBOR a restapi:Collectie ;
+            restapi:hasMember ?s .
+
+        coll:IMBORv2022 a restapi:Collectie ;
+            restapi:hasMember ?s .
+
+        ?g a restapi:Collectie ;
+            restapi:hasMember ?s .
+    }
+}
+WHERE {
+    graph ?g {
+        filter (!CONTAINS(STR(?g), "csv:table/"))
+        ?s ?p ?o
+    }
+}
+
+# select * where {
+#     ?termUri a skos:Concept .
+#     coll:IMBOR restapi:hasMember ?termUri .  # wel in IMBOR
+#     FILTER NOT EXISTS { <https://data.crow.nl/imbor/id/domeinwaarden/> restapi:hasMember ?termUri }  # niet 
+# }

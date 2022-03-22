@@ -90,6 +90,12 @@
       {
         "type": "sparql",
         "url": [
+          "src/transformations/versie-publicatie-graaf-info.rq"
+        ]
+      },
+      {
+        "type": "sparql",
+        "url": [
           "src/transformations/mim-klasses.rq",
           "src/transformations/mim-attributen.rq",
           "src/transformations/mim-relaties.rq",
@@ -103,7 +109,7 @@
       },
       {
         "type": "download-file",
-        "url": "data/imbor-vocabulair.ttl",
+        "url": "data/imbor-vocabulaire.ttl",
         "graphs": [
           "https://data.crow.nl/imbor/term/"
         ]
@@ -138,6 +144,13 @@
           "https://data.crow.nl/imbor/addendum/minimale-dataset",
           "https://data.crow.nl/imbor/addendum/referentiemodellen",
           "https://data.crow.nl/imbor/addendum/mim"
+        ]
+      },
+      {
+        "type": "download-file",
+        "url": "data/imbor-rest-api-linkset.ttl",
+        "graphs": [
+          "https://data.crow.nl/imbor/addendum/rest-api"
         ]
       },
       {
