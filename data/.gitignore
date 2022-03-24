@@ -1,3 +1,6 @@
 *.laccdb
-imbor-volledig-onto-verkenner.ttl
+*.accdb
+*.trig
+*.ttl
+!imbor-rest-api-linkset.ttl
 
