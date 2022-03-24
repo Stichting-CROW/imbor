@@ -1,6 +1,8 @@
+# Aparte bestanden worden niet los geupload. De twee ZIPs bevatten de te distriburen bestanden
 *.laccdb
 *.accdb
 *.trig
 *.ttl
-!imbor-rest-api-linkset.ttl
 
+# TTL ten behoeve van de REST-API is een uitzondering.
+!imbor-rest-api-linkset.ttl
