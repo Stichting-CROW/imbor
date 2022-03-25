@@ -1,10 +1,10 @@
 ## Licenties
 
-Is IMBOR sinds 2022 een open standaard die door CROW kosteloos beschikbaar wordt gesteld. De vorige versies van het IMBOR waren alleen toegankelijk met een betaald abonnement op de CROW-kennismodule IMBOR en IMWV. CROW beheert het IMBOR volgens de richtlijnen van het Forum voor Standaardisatie (BOMOS). Voorwaarde om het IMBOR ook in de toekomst kosteloos te kunnen publiceren is dat CROW voldoende structurele financiering krijgt voor een zorgvuldig beheer van het IMBOR.
+IMBOR is sinds 2022 een open standaard die door CROW kosteloos beschikbaar wordt gesteld. De vorige versies van het IMBOR waren alleen toegankelijk met een betaald abonnement op de CROW-kennismodule IMBOR en IMWV. CROW beheert het IMBOR volgens de richtlijnen van het Forum voor Standaardisatie (BOMOS). Voorwaarde om het IMBOR ook in de toekomst kosteloos te kunnen publiceren is dat CROW voldoende structurele financiering krijgt voor een zorgvuldig beheer van het IMBOR.
 
 Meer informatie over de voorwaarden waaronder het IMBOR als open standaard wordt gepubliceerd is te vinden in de specifieke secties hieronder en in het [Beheerplan IMBOR][1]. 
 
-### IMBOR Dataset CC BY 4.0
+### IMBOR gegevens
 
 Alle data in de gehele IMBOR Ontologie (IMBOR Vocabulaire, IMBOR Kern, IMBOR Domeinwaarde, etc.) wordt uitgegeven onder de [CC BY 4.0][CC4] licentie.
 
