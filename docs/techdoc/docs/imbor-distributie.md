@@ -14,6 +14,8 @@ Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele co
 
 Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Namelijk voor de SPARQL-Endpoint geldt dat we deze voorlopig onder de noemer van 'pilot' verstrekken. Bij veel gebruik/op termijn wordt gekeken hoe we hier met de kosten gaan omgaan. 
 
+Wat betreft het gebruik van IMBOR, raadplegen de sectie over [licenties](#licenties)
+
 <figure>
 
 ![IMBOR Beheer Distributie Publicatie](img/IMBOR_Beheer_Distributie_Publicatie.drawio.png?raw=true)

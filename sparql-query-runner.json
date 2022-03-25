@@ -39,7 +39,7 @@
       },
       {
         "type": "import-msaccess",
-        "url": "data/IMBOR-2022.accdb"
+        "url": "data/IMBOR-2022-01.accdb"
       },
       {
         "type": "delay"
@@ -140,6 +140,17 @@
       {
         "type": "download-file",
         "url": "data/imbor-informatief.trig",
+        "graphs": [
+          "https://data.crow.nl/imbor/addendum/oagbd",
+          "https://data.crow.nl/imbor/addendum/geometrie",
+          "https://data.crow.nl/imbor/addendum/minimale-dataset",
+          "https://data.crow.nl/imbor/addendum/referentiemodellen",
+          "https://data.crow.nl/imbor/addendum/mim"
+        ]
+      },
+      {
+        "type": "download-file",
+        "url": "data/imbor-informatief_LacesUpload.ttl",
         "graphs": [
           "https://data.crow.nl/imbor/addendum/oagbd",
           "https://data.crow.nl/imbor/addendum/geometrie",

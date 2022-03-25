@@ -17,10 +17,7 @@ Daar hoort ook versiebeheer bij. Zie ook issue [#2](https://github.com/Stichting
 
 ## Licentie
 
-Deze repository wordt beschikbaar gesteld onder een Creative Commons Attribution 4.0 International License.
-
-You should have received a copy of the license along with this
-work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
+Deze repository en IMBOR worden beschikbaar gesteld onder verschillende licenties. Zie hiervoor: [Technische documentatie](https://docs.crow.nl/imbor/techdoc/licenties).
 
 ## Benodigdheden transformatie
 

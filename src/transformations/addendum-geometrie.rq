@@ -43,6 +43,8 @@ WHERE {
             (15168 0 UNDEF)
             (14518 1 1)
             (14519 1 UNDEF)
+            (16750 0 2)
+            (16912 2 UNDEF)
         }
         
         graph <csv:table/imborVoc_Termen> {

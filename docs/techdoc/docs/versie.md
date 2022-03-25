@@ -13,3 +13,4 @@
 | 24-12-2021   	| 0.9     	| Eerste aanpassingen na consultatie ronde                	|
 | 22-02-2022   	| 0.91     	| Transfer naar /imbor/techdoc/                	|
 | 10-03-2022   	| 1.0     	| IMBOR 2022 release              	|
+| 25-03-2022   	| 1.1     	| IMBOR 2022.01 release en licentie informatie            	|
