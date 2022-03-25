@@ -17,7 +17,7 @@ Daar hoort ook versiebeheer bij. Zie ook issue [#2](https://github.com/Stichting
 
 ## Licentie
 
-Deze repository en IMBOR worden beschikbaar gesteld onder verschillende licenties. Zie hiervoor: [Technische documentatie](https://docs.crow.nl/imbor/techdoc/licenties).
+Deze repository en IMBOR worden beschikbaar gesteld onder verschillende licenties. Zie hiervoor: [Technische documentatie, sectie Licenties](https://docs.crow.nl/imbor/techdoc/#licenties).
 
 ## Benodigdheden transformatie
 
