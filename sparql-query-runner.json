@@ -102,7 +102,8 @@
       {
         "type": "sparql",
         "url": [
-          "src/transformations/versie-publicatie-graaf-info.rq"
+          "src/transformations/versie-publicatie-graaf-info.rq",
+          "src/transformations/shacl-messages.rq"
         ]
       },
       {
