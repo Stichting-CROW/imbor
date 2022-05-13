@@ -1,10 +1,11 @@
 var respecConfig = {
-    specType: "Handleiding",
-    specStatus: "RQR",
+    specType: "Document",
+    specStatus: "DOC",
     format: "markdown",
     github: "https://github.com/Stichting-CROW/imbor",
-    shortName: "imbor/handleiding-otl",
+    shortName: "imbor/imbor-ld-2020-08",
     publishDate: "2020-08-28",
+    license: "CC-BY",
     lint: {
         "no-http-props": false
     },
