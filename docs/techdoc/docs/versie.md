@@ -1,7 +1,7 @@
 ## Versie historie
 
 |    Datum   	| Versie 	| Toelichting     	|
-|:----------:	|--------	|-----------------	|
+|:-------------:|-----------|-------------------|
 | 16-04-2021 	| 0.1    	| Initiële versie Respec publicatie n.a.v. major release 'Herstructurering IMBOR 2022' 	|
 | 30-06-2021  	| 0.2     	| Update van diagrammen en LD informatie                	|
 | 23-07-2021   	| 0.3     	| Toevoeging Top hiërarchie + release concept AccessDB                	|
@@ -14,3 +14,5 @@
 | 22-02-2022   	| 0.91     	| Transfer naar /imbor/techdoc/                	|
 | 10-03-2022   	| 1.0     	| IMBOR 2022 release              	|
 | 25-03-2022   	| 1.1     	| IMBOR 2022.01 release en licentie informatie            	|
+| 13-05-2022    | 1.11      | Update naar nieuwe ReSpec template CROW |
+| { .data }     |           |               |
