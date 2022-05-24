@@ -1,0 +1,21 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+prefix bif: <http://www.openlinksw.com/schemas/bif#>
+
+PREFIX imbor: <https://data.crow.nl/imbor/def/>
+PREFIX nen2660: <https://w3id.org/nen2660/def#> 
+
+SELECT ?ObjectURI ?Type ?Objectnaam ?Coordinaten 
+WHERE {
+  		
+?ObjectURI nen2660:hasBoundary/geo:asWKT  ?rd ;
+   rdf:type ?Type ;
+   imbor:ee97b257-d3b8-4d0c-9a42-c07d88b36d9f ?objectnaam .
+
+#Nodig om RD_NEW naar WGS84 te transformeren (daar werkt kaartviewer "Leaflet" mee)
+BIND(bif:ST_Transform(?rd, 4326) as ?Coordinaten)
+
+} 
