@@ -24,10 +24,12 @@ insert {
             a sh:PropertyShape ;
             skos:prefLabel ?propDesc ;
             sh:path nen2660:hasBoundary ;
-            sh:qualifiedValueShape [ sh:class ?Objecttype2Uri ] ;
+            sh:qualifiedValueShape ?valueShape ;
             sh:qualifiedMinCount ?minCount ;
             sh:qualifiedMaxCount ?maxCount ;
             .
+
+         ?valueShape sh:class ?Objecttype2Uri
     }
 }
 WHERE {
@@ -63,4 +65,5 @@ WHERE {
     BIND (CONCAT(?Objecttype1Naam, " heeft begrenzing ", ?Objecttype2Naam) as ?propDesc)
     BIND (URI(CONCAT(STR(imbor:), ?Objecttype1GUID)) AS ?Objecttype1Uri)
     BIND (URI(CONCAT(STR(imbor:), ?Objecttype2GUID)) AS ?Objecttype2Uri)
+    BIND (UUID() AS ?valueShape)
 }

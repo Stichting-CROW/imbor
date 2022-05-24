@@ -23,7 +23,8 @@ insert {
             imbor:typeLijst ?LijstType ;
             rdfs:seeAlso ?termUri .
 
-        ?propShapeUri sh:qualifiedValueShape [ ?AttribuutShapeWijze ?enumTypeUri ] .
+        ?propShapeUri sh:qualifiedValueShape ?valueShape .
+        ?valueShape ?AttribuutShapeWijze ?enumTypeUri .
     }
 }
 WHERE {
@@ -60,4 +61,6 @@ WHERE {
         }
             
     }
+
+    BIND (UUID() AS ?valueShape)
 }
