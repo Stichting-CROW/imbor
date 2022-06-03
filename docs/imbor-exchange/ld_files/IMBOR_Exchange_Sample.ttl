@@ -1,9 +1,12 @@
 PREFIX imbor:              <https://data.crow.nl/imbor/def/>
 PREFIX imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> 
 PREFIX nen2660:            <https://w3id.org/nen2660/def#> 
+
+PREFIX rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX geo:                <http://www.opengis.net/ont/geosparql#>
 PREFIX xsd:                <http://www.w3.org/2001/XMLSchema#>
 PREFIX sh:                 <http://www.w3.org/ns/shacl#> 
+
 PREFIX data:               <http://example.com/gemeente/areaaldata/>
 
 data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63 a imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ; #'Boom'
@@ -28,7 +31,7 @@ data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63 a imbor:83a942f7-5291-42f0-afb1-9a57d0
     nen2660:isConnectedTo data:a946356a-21ec-4be0-9c14-631786921d3a ;  #'Boom is verbonden met Groeiplaatsinrichting'
     .
 
-data:6daaff3c-abf4-49e2-9904-a7a11b57d878 a imbor:d61e45b1-3651-4c01-9c63-b9bfadf25a16 ; #'Speelterrein'
+data:6daaff3c-abf4-49e2-9904-a7a11b57d878 a imbor:d61e45b1-3651-4c01-9c63-b9bfadf25a16 ; #'Hek'
     nen2660:hasBoundary 
     #  geo:hasGeometry
     [
@@ -48,7 +51,7 @@ data:6daaff3c-abf4-49e2-9904-a7a11b57d878 a imbor:d61e45b1-3651-4c01-9c63-b9bfad
     imbor:9c9347bf-7d12-40de-83e7-7ca020007747 imbor-domeinwaarde:e5df77f1-a3e8-4f03-9967-3f76e42475ed ; #'hoogteklasse hek' (1 tot 1,5 m.)
     .
 
-data:4db2734b-2295-4030-a349-9b5b2804c20 a imbor:941a17c1-a2b2-4cd1-8991-08b0ebcf0c2a ; #'Hek'
+data:4db2734b-2295-4030-a349-9b5b2804c20 a imbor:941a17c1-a2b2-4cd1-8991-08b0ebcf0c2a ; #'Speelterrein'
     nen2660:hasBoundary 
     #  geo:hasGeometry
     [
