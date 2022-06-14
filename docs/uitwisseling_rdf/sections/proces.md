@@ -11,9 +11,6 @@ Proces IMBOR data in RDF
 </figcaption>
 </figure>
 
->NOTE "TODO"
->Aanpassen figuur naar laatste inzichten
-
 De processtappen worden hierna in detail toegelicht.
 
 ### Data maken
