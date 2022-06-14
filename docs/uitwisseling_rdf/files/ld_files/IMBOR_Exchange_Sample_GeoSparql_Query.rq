@@ -1,0 +1,28 @@
+# SPARQL query om IMBOR objecten op te vragen met coördinaten
+# Alles met een hashtag ervoor is commentaar voor de leesbaarheid en heeft geen invloed op de query
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+prefix bif: <http://www.openlinksw.com/schemas/bif#>
+
+PREFIX imbor: <https://data.crow.nl/imbor/def/>
+PREFIX nen2660: <https://w3id.org/nen2660/def#> 
+
+# Presenteer de IMBOR URI (ter identificatie), het IMBOR type (de URI van het ObjectType), de Objectnaam (ter referentie) en de beschikbare coördinaten.
+SELECT ?ObjectURI ?ObjectType ?objectnaam ?geometrie 
+WHERE {
+
+# Selecteer alles wat een NEN2660 relatie 'hasBoundary' heeft en waar de geometrie als 'geo:asWKT' is vastgelegd ...
+?ObjectURI nen2660:hasBoundary/geo:asWKT  ?rd ;
+# ... laat ook de URI van het 'ObjectType' zien ...
+   rdf:type ?ObjectType ;
+# ... bekijk vervolgens de waarde van het IMBOR attribuut 'objectnaam' .
+   imbor:ee97b257-d3b8-4d0c-9a42-c07d88b36d9f ?objectnaam .
+
+# Neem deze stap die nodig is om RD_NEW naar WGS84 te transformeren (daar werkt kaartviewer "Leaflet" mee)
+BIND(bif:ST_Transform(?rd, 4326) as ?geometrie)
+
+} 
