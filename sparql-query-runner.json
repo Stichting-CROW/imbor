@@ -103,7 +103,9 @@
         "type": "sparql",
         "url": [
           "src/transformations/versie-publicatie-graaf-info.rq",
-          "src/transformations/shacl-messages.rq"
+          "src/transformations/shacl-messages.rq",
+          "src/transformations/qualifiedValueShape-replace-qualifiedMaxMin-991.rq",
+          "src/transformations/qualifiedValueShape-min-constraint.rq"
         ]
       },
       {
@@ -188,7 +190,16 @@
           "https://data.crow.nl/imbor/addendum/minimale-dataset",
           "https://data.crow.nl/imbor/addendum/referentiemodellen",
           "https://data.crow.nl/imbor/addendum/mim"
-        ]}
+        ]},
+        {
+          "type": "download-file",
+          "url": "data/imbor-gecombineerd-tbv-shaclvalidatie.ttl",
+          "graphs": [
+            "https://data.crow.nl/imbor/def/",
+            "https://data.crow.nl/imbor/id/domeinwaarden/",
+            "https://data.crow.nl/imbor/aanvullende-modellen",
+            "https://data.crow.nl/imbor/aanvullend-metamodel"
+          ]}
       ]
     }
   }
