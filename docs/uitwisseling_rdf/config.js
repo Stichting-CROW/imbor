@@ -5,6 +5,7 @@ var respecConfig = {
   imprint: "crow", // Kies uit http://docs.crow.nl/respec-design/stichting-crow/#logos
   shortName: "imbor/uitwisseling_rdf",
   license: "CC-BY", 
+  hypothesisComments: true ,
   editors: [
     {
       name: "Rik | CROW", // verplicht, de rest is optioneel
@@ -36,6 +37,5 @@ var respecConfig = {
       status: "Published standard",
       publisher: "ISO",
     },
-    hypothesisComments: "true",
-  },
+    }
 };
