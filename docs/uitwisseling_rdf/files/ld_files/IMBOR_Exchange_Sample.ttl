@@ -1,13 +1,13 @@
-PREFIX imbor:              <https://data.crow.nl/imbor/def/>
-PREFIX imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> 
-PREFIX nen2660:            <https://w3id.org/nen2660/def#> 
+@prefix imbor:              <https://data.crow.nl/imbor/def/> .
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> .
+@prefix nen2660:            <https://w3id.org/nen2660/def#> .
 
-PREFIX rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX geo:                <http://www.opengis.net/ont/geosparql#>
-PREFIX xsd:                <http://www.w3.org/2001/XMLSchema#>
-PREFIX sh:                 <http://www.w3.org/ns/shacl#> 
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix geo:                <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
 
-PREFIX data:               <http://example.com/gemeente/areaaldata/id/>
+@prefix data:               <http://example.com/gemeente/areaaldata/id/> .
 
 data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63 a imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ; #'Boom'
     nen2660:hasBoundary 
