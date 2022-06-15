@@ -5,6 +5,7 @@ In deze sectie wordt de "CROW Best practice - IMBOR gegevens delen middels RDF" 
 ### Uitgangspunten
 
 1. De gegevens in de gegevenset worden middels [[rdf11-primer]] (lees: RDF) in triples opgeslagen
+    * De dataset is een [[owl2-primer]] `owl:Ontology` en importeert [[shacl]] middels `owl:imports`
     * De serialisatie maakt niet uit. Voorkeur heeft [[turtle]] of [[json-ld]]
 1. Gegevens worden geclassificeerd naar de [IMBOR ontologie][4], die een extensie is van de [NEN2660-2 ontologie][3]
     * Deze zijn daarmee het 'gegevensmodel'

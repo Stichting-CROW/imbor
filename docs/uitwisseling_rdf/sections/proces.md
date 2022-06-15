@@ -104,6 +104,7 @@ Om zeker te weten dat de geëxporteerde en getransformeerde gegevens conform IMB
 >| QUDT Units          | QUDT eenheden (wordt vanuit IMBOR ontologie naar verwezen)   | http://qudt.org/vocab/unit/                                                                       |
 >| QUDT Quantitykinds  | QUDT grootheden (wordt vanuit IMBOR ontologie naar verwezen) | http://qudt.org/vocab/quantitykind/                                                               |
 >| SHACL               | SHACL ontologie met de SHACL regels                          | https://www.w3.org/ns/shacl.ttl                                                                   |
+>| DASH                | DASH ontologie met de aanvullende SHACL regels               | https://datashapes.org/dash.ttl                                                                   |
 >| {.index}            |                                                              |                                                                                                   |
 
 De SHACL validatie kan met meerdere opensource software uitgevoerd worden. Binnen dit document is de Python implementatie [PySHACL][pys] gebruikt. Het installeren en bedienen van deze Python Library is buiten de scope van dit document. De command die gebruikt wordt voor de validatie binnen de Best practice is:

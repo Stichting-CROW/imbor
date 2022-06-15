@@ -19,6 +19,13 @@
     },
     "@graph": [
       {
+        "@id": "http://example.com/gemeente/areaaldata/id/",
+        "@type": "http://www.w3.org/2002/07/owl#Ontology",
+        "http://www.w3.org/2002/07/owl#imports": {
+        "@id": "http://www.w3.org/ns/shacl#"
+        }
+      },
+      {
         "@id": "data:4db2734b-2295-4030-a349-9b5b2804c20",
         "@type": "imbor:941a17c1-a2b2-4cd1-8991-08b0ebcf0c2a",
         "imbor:359bc182-da82-4ece-a924-60f71ab10ccd": {
