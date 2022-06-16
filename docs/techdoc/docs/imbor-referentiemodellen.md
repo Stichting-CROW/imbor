@@ -23,10 +23,10 @@ IMBOR maakt gebruik van deze twee keuzes en probeert daarom zo goed mogelijk aan
 <figcaption><figcaption>NEN2660-2 scope in grijs grijze vlakken (bron: TNO)</figcaption></figcaption>
 </figure>
 
-In de sectie [IMBOR samenhang en hiërarchie](#imbor-samenhang-en-hierarchie) wordt de keuze en de interpretatie van het praktisch toplevelmodel toegelicht in detail. In de sectie [IMBOR in LinkedData](#imbor-in-linkeddata) wordt de toepassing van de LinkedData principes in detail toegelicht. 
+In de sectie [IMBOR samenhang en hiërarchie](#imbor-samenhang-en-hierarchie) wordt de keuze en de interpretatie van het praktisch toplevelmodel toegelicht in detail. In de sectie [IMBOR in LinkedData](#imbor-in-linkeddata) wordt de toepassing van de LinkedData principes in detail toegelicht.
 
 <div class='note'>
-Er is nog geen definitieve versie van de nieuwe NEN2660 verschenen. Deze wordt in de loop van 2022 verwacht. Wanneer deze gepubliceerd wordt zal IMBOR zo goed als dat kan nog aangepast worden op deze principes. De verwachting is dat er weinig tot niets veranderd hoeft te worden. 
+In 2022 is de nieuwe versie van de <a href="https://www.w3schools.com](https://www.nen.nl/nen-2660-2-2022-nl-291667">NEN2660-2</a> vrijgegeven waaraan IMBOR zich commiteert. 
 </div>
 
 #### NEN3610
