@@ -16,7 +16,8 @@ prefix geo: <http://www.opengis.net/ont/geosparql#>
 prefix sh:	<http://www.w3.org/ns/shacl#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix prov: <http://www.w3.org/ns/prov#>
-prefix csv: <csv:>
+prefix owl:  <http://www.w3.org/2002/07/owl#> 
+prefix csv:  <csv:>
 
 INSERT DATA { 
     graph <https://data.crow.nl/imbor/def/> {
@@ -24,6 +25,9 @@ INSERT DATA {
             sh:severity sh:Warning .
         imbor:be58f6d4-593e-49e2-b5c6-22c4d5793125 sh:message "Omdat technische gezien de klasse 'Geometrische Representatie' ook een subklasse is van nen2660:Object moeten deze allemaal ook de property 'identificatie' hebben. Dit is niet persé nodig als het hier een zogenaamde 'blanknode' betreft.";
             sh:severity sh:Warning .
+        imbor:  a owl:Ontology ;
+                  owl:imports sh: ;
+	              sh:entailment sh:Rules .
     }
 }
 

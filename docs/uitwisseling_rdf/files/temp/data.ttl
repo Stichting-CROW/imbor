@@ -1,0 +1,19 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix def:   <http://example.org/def/> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix id:   <http://example.org/id/> .
+
+id: a owl:Ontology .
+
+id:Car_1 rdf:type def:Car ;
+	nen2660:hasPart id:Wheel_1 ;
+	nen2660:hasPart id:Wheel_2 ;
+	nen2660:hasPart id:Door_1 ;
+.
+	
+id:Wheel_1 rdf:type def:Wheel .
+
+id:Wheel_2 rdf:type def:Wheel .
+
+id:Door_1 rdf:type def:Door .
