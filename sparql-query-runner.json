@@ -103,7 +103,7 @@
         "type": "sparql",
         "url": [
           "src/transformations/versie-publicatie-graaf-info.rq",
-          "src/transformations/shacl-messages.rq",
+          "src/transformations/shacl-messages&rules.rq",
           "src/transformations/qualifiedValueShape-replace-qualifiedMaxMin-991.rq",
           "src/transformations/qualifiedValueShape-min-constraint.rq"
         ]

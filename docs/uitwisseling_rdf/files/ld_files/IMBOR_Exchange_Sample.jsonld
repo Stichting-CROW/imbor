@@ -16,7 +16,7 @@
         "@id": "http://example.com/gemeente/areaaldata/id/",
         "@type": "http://www.w3.org/2002/07/owl#Ontology",
         "http://www.w3.org/2002/07/owl#imports": {
-        "@id": "http://www.w3.org/ns/shacl#"
+        "@id": "C:/GitHub/imbor/data/imbor-gecombineerd-tbv-shaclvalidatie.ttl"
         }
       },
       {

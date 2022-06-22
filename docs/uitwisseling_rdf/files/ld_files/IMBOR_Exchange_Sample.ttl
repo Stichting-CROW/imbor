@@ -10,8 +10,9 @@
 
 @prefix data:               <http://example.com/gemeente/areaaldata/id/> .
 
+
 data: a owl:Ontology ;
-        owl:imports <C:/GitHub/imbor/data/imbor-gecombineerd-tbv-shaclvalidatie.ttl> ;
+        owl:imports <C:/GitHub/imbor/data/imbor-gecombineerd-tbv-shaclvalidatie.ttl> ; # Hier wordt de IMBOR ontologie + alle afhankelijkheden aangeduidt. Dit pad zal dus verschillen. 
         .
 
 data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63 a imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ; #'Boom'
