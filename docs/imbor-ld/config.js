@@ -3,7 +3,7 @@ var respecConfig = {
     specStatus: "DOC",
     format: "markdown",
     github: "https://github.com/Stichting-CROW/imbor",
-    shortName: "imbor/imbor-ld-2020-08",
+    shortName: "imbor/imbor-ld",
     publishDate: "2020-08-28",
     license: "CC-BY",
     lint: {
