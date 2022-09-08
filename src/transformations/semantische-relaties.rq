@@ -27,6 +27,9 @@ insert {
             sh:qualifiedMinCount ?minCount ;
             sh:qualifiedMaxCount ?maxCount ;
             .
+
+        nen2660:hasBoundary rdfs:subPropertyOf geo:hasGeometry 
+        .
     }
 }
 WHERE {

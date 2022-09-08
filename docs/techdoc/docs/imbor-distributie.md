@@ -167,6 +167,11 @@ Ook de LinkedData versie van IMBOR (IMBOR-LD) is volgt de modulaire indeling. In
 - `imbor-refmodels:*` zijn de concepten waarin externe ontologien aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.
 
 Omdat IMBOR een extensie is van de NEN2660-2 is de IMBOR kern direct 'gesubclassed' aan de NEN2660-2 concepten. Vandaar dat de concepten die we gebruiken uit de NEN2660-2 afgebeeld zijn met de prefix `nen2660:*`. 
+
+<div class='note'>
+In de NEN2660-2 zit een kleine inconsistentie met GeoSPARQL. Er wordt namelijk niet verteld hoe deze toegepast moet worden. Om dit praktisch op te lossen wordt in de IMBOR Kern gesteld dat: `nen2660:hasBoundary rdfs:subPropertyOf geo:hasGeometry`. Dit kan gezien worden als een verduidelijking van de NEN2660 voor de IMBOR context.
+</div>
+
 #### Begrippenkader
 
 Dit zijn alle classes (concepten) die tezamen het vocabulaire vormen (e.g. de thesaurus).
