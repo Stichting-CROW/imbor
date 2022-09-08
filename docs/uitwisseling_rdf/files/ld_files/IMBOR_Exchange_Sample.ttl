@@ -7,12 +7,21 @@
 @prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh:                 <http://www.w3.org/ns/shacl#> .
 @prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
 
 @prefix data:               <http://example.com/gemeente/areaaldata/id/> .
 
 
+
 data: a owl:Ontology ;
-        owl:imports <C:/GitHub/imbor/data/imbor-gecombineerd-tbv-shaclvalidatie.ttl> ; # Hier wordt de IMBOR ontologie + alle afhankelijkheden aangeduidt. Dit pad zal dus verschillen. 
+        # owl:imports <C:/GitHub/imbor/data/imbor-gecombineerd-tbv-shaclvalidatie.ttl> ; # Hier wordt de IMBOR ontologie + alle afhankelijkheden aangeduidt. Dit pad zal dus verschillen. 
+        # owl:imports <https://hub.laces.tech/crow/imbor/2022/p/kern/> ;
+     #   owl:imports <C:/GitHub/imbor/data/imbor-kern.ttl> ;
+        # owl:imports <C:/GitHub/imbor/data/imbor-domeinwaarden.ttl> ;
+     #   owl:imports <https://entvmg21zqn5.x.pipedream.net>;
+        owl:imports <https://w3id.org/nen2660/> ;
+        owl:imports <https://data.crow.nl/imbor/def/> ;
+        owl:imports <https://data.crow.nl/imbor/id/domeinwaarden/> ;
         .
 
 data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63 a imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ; #'Boom'
