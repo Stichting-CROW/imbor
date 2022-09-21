@@ -43,10 +43,10 @@ Mocht er toch dringende behoefte zijn, wordt er aanbevolen om deze minimale meta
 | Attribuut | URI | Datatype | 
 | -------- | --- |------- | 
 | identifier | dct:identifier | xsd:anyURI | 
-| title | dct:title | xml:string |
-| description | dct:description | xml:string | 
+| title | dct:title | xsd:string |
+| description | dct:description | xsd:string | 
 | modify | dct:modified | xsd:date | 
-| publisher | dct:publisher | xml:string |
+| publisher | dct:publisher | xsd:string |
 | {.data} | | |
 
 #### Revisies

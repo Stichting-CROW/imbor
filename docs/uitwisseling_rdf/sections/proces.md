@@ -116,7 +116,7 @@ Om zeker te weten dat de geëxporteerde en getransformeerde gegevens conform IMB
 
 De SHACL-validatie kan met meerdere opensource software uitgevoerd worden. Binnen dit document is de Python-implementatie [PySHACL][pys] gebruikt. Het installeren en bedienen van deze Python Library is buiten de scope van dit document. De command die gebruikt wordt voor de validatie binnen de best practice is:
 
-```$ pyshacl -s "...\imbor-gecombineerd-tbv-shaclvalidatie.ttl" -e "...\imbor-gecombineerd-tbv-shaclvalidatie.ttl" -i rdfs -a -f human "...\IMBOR_Exchange_Sample.ttl" ```
+```$ pyshacl -s "...\imbor-gecombineerd-tbv-shaclvalidatie.ttl" -e "...\imbor-gecombineerd-tbv-shaclvalidatie.ttl" -i rdfs -a -f table "...\IMBOR_Exchange_Sample.ttl" ```
 
 De resultaten van deze validatie zijn `conforms:False`, met 10 `Warnings` en 1 `Violation`:
 
