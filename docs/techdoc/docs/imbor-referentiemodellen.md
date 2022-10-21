@@ -11,7 +11,7 @@ Vanwege de positie van IMBOR worden er veel relaties naar andere standaarden gel
 
 #### NEN2660-2
 
-De NEN2660-2 is in 2021 uitgekomen en vormt de belangrijkste leidraad voor IMBOR2022 door twee belangrijke dingen te specificeren:
+De NEN2660-2 vormt de belangrijkste leidraad voor IMBOR2022 door twee belangrijke dingen te specificeren:
 1. Een praktisch toplevelmodel waarin genoeg semantiek aangegeven wordt om IMBOR in uit te drukken
 1. Een taalbinding (en daarmee de keuze voor) de LinkedData W3C standaarden. 
 IMBOR maakt gebruik van deze twee keuzes en probeert daarom zo goed mogelijk aan te sluiten. In onderstaande figuur is ook te zien waar de NEN2660-2 zich op focust. IMBOR neemt plaats in de "M1: Informatie model" laag. 
@@ -26,18 +26,13 @@ IMBOR maakt gebruik van deze twee keuzes en probeert daarom zo goed mogelijk aan
 In de sectie [IMBOR samenhang en hiërarchie](#imbor-samenhang-en-hierarchie) wordt de keuze en de interpretatie van het praktisch toplevelmodel toegelicht in detail. In de sectie [IMBOR in LinkedData](#imbor-in-linkeddata) wordt de toepassing van de LinkedData principes in detail toegelicht.
 
 <div class='note'>
-In 2022 is de nieuwe versie van de <a href="https://www.w3schools.com](https://www.nen.nl/nen-2660-2-2022-nl-291667">NEN2660-2</a> vrijgegeven waaraan IMBOR zich commiteert. 
+In 2022 is de nieuwe versie van de <a href="https://www.w3schools.com](https://www.nen.nl/nen-2660-2-2022-nl-291667">NEN2660-2</a> vrijgegeven waaraan IMBOR zich committeert. 
 </div>
 
 #### NEN3610
 
-De NEN3610 is in 2021 herzien (t.o.v. 2011) en vormt de basis van de Samenhangende objecten registratie (SOR) die binnen het DiSGeo programma wordt opgetuigd. Binnen de NEN2660-2 is reeds een relatie tussen de NEN2660-2 en de NEN3610 aangegeven. Het gaat hier alleen om een afstemming tussen de begrippenkaders. IMBOR heeft deze afstemming overgenomen in de [tophiërarchie](#imbor-top-hierarchie). Binnen IMBOR wordt daarmee zo veel mogelijk aangesloten op de semantiek van de NEN3610 (en daarmee de NEN2660-2), maar wordt (nog) geen volledige sterke relatie met de rest van de norm NEN3610 beschreven. Er wordt zodoende ook niet beweerd dat er volledige compatibiliteit met de NEN3610 is (wel met de NEN2660-2), maar dat puur de begrippenkaders voor nu met elkaar afgestemd zijn. Dit is gedaan vanwege de te verwachten sterke relatie met de SOR die ongeveer hetzelfde doet. De NEN3610 hiërarchie wordt tevens gebruikt om de verdeling van attributen binnen IMBOR te regelen. 
-
-<div class='note'>
-Er is nog geen definitieve versie van de nieuwe NEN3610 verschenen. Deze wordt in de loop van 2021 verwacht. Wanneer deze gepubliceerd wordt zal IMBOR zo goed als dat kan nog aangepast worden op deze principes. De verwachting is dat er weinig tot niets veranderd hoeft te worden. 
-De consultatie versie van de nieuwe NEN3610 is <a href="https://www.geonovum.nl/over-geonovum/actueel/nieuwe-versie-van-nen-3610-in-consultatieonsultatie">hier</a> te bekijken. 
-</div>
-
+De NEN3610 is in 2022 herzien (t.o.v. 2011) en vormt de basis van de Samenhangende objecten registratie (SOR) die binnen het DiSGeo programma wordt opgetuigd. Binnen de NEN2660-2 is reeds een relatie tussen de NEN2660-2 en de NEN3610 aangegeven. Het gaat hier alleen om een afstemming tussen de begrippenkaders. IMBOR heeft deze afstemming overgenomen in de [tophiërarchie](#imbor-top-hierarchie). Binnen IMBOR wordt daarmee zo veel mogelijk aangesloten op de semantiek van de NEN3610 (en daarmee de NEN2660-2), maar wordt (nog) geen volledige sterke relatie met de rest van de norm NEN3610 beschreven. Er wordt zodoende ook niet beweerd dat er volledige compatibiliteit met de NEN3610 is (wel met de NEN2660-2), maar dat puur de begrippenkaders voor nu met elkaar afgestemd zijn. Dit is gedaan vanwege de te verwachten sterke relatie met de SOR die ongeveer hetzelfde doet. De NEN3610 hiërarchie wordt tevens gebruikt om de verdeling van attributen binnen IMBOR te regelen. 
+Wel worden de attributen `identificatie` en `domein` (als verplicht vanuit de NEN43610) volledige toegepast in IMBOR als identificerende attributen.
 
 #### MIM
 
@@ -50,6 +45,10 @@ Het MIM gaat uit van een begrippenkader en een explicietere modellering van een 
 Het tweede hoofdprincipe van het MIM betreft het modelleren van het IMBOR binnen het metamodel dat het MIM specificeert. Dit is in detail te zien in de sectie [IMBOR in modellen](#imbor-in-modellen). Iedereen die het MIM kent kan zodoende lezen hoe het IMBOR gemodelleerd is. Tevens kunnen informatiemodellen die volgens het MIM worden gemodelleerd (bijvoorbeeld de SOR) makkelijker met elkaar vergeleken worden. 
 
 De [RDF vertaling](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-linked-data-ld) zoals gebruikt in het MIM wordt niet gebruikt. Mede omdat de MIM metaclasses binnen IMBOR de ontologie niet direct gebruikt worden, maar alleen in het metamodel. Er wordt bijvoorbeeld gesteld dat een `imbor:Objecttype` van de metaclass `mim:Objecttype` is, daardoor is de `imbor:Boom` (welke `rdf:type` is van `imbor:Objecttype`) wel (indirect) gerelateerd aan het MIM, maar geen voorkomen van. 
+
+<div class='note'>
+In 2022/2023 zijn er gesprekken gaande tussen CROW, Geonovum en NEN om het in samenhang gebruiken van de NEN3610, NEN2660 en het MIM beter te faciliteren. IMBOR2022 vormt hierbij de eerste praktijkproef. Te verwachten valt dat IMBOR2023 zodoende nog meer principes uit het MIM toepast.
+</div>
 
 #### GWSW
 

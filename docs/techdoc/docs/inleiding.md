@@ -5,6 +5,7 @@ Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’.
 In 2021 is besloten om IMBOR te herzien n.a.v. een aantal ontwikkelingen:
 * IMBOR wordt in beheer genomen, i.p.v. in ontwikkeling te zijn
 * Het beschikbaar komen van de [NEN2660-2][2]
+* Het beschikbaar komen van de herziende [NEN3610][10]
 * De vraag om LinkedData versies van sectorstandaarden
 * De bredere adoptie van het [MIM][8]
 * De adaptatie van het werken met ontologieën (vaak onder de noemer 'OTL's)
@@ -70,3 +71,4 @@ Dit document is bedoeld als 'technische documentatie' rondom IMBOR. Het is dan o
 [7]: https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/de-relatie-tussen-imbor-en-gwsw
 [8]: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim
 [9]: https://www.nen.nl/elasticsearch/?search=2660-2&sortmode=asc&viewmode=list
+[10]: https://www.nen.nl/nen-3610-2022-nl-296137
