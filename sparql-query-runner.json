@@ -11,6 +11,7 @@
       "imbor-term": "https://data.crow.nl/imbor/term/",
       "imbor-refmodels": "https://data.crow.nl/imbor-ref/def/",
       "imbor-meta": "https://data.crow.nl/imbor/aanvullend-metamodel/",
+      "imbor-refmodels-id": "https://data.crow.nl/imbor-ref/id/",
       "quantitykind": "http://qudt.org/vocab/quantitykind/",
       "nen2660": "https://w3id.org/nen2660/def#",
       "nen2660-term": "https://w3id.org/nen2660/term#",

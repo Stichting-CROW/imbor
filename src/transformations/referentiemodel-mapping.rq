@@ -7,7 +7,7 @@ prefix imbor-term: <https://data.crow.nl/imbor/term/>
 prefix imbor: <https://data.crow.nl/imbor/def/>
 prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>
 prefix imbor-refmodels: <https://data.crow.nl/imbor-ref/def/>
-prefix mapping: <https://data.crow.nl/imbor-ref/id/>
+prefix imbor-refmodels-id: <https://data.crow.nl/imbor-ref/id/>
 
 prefix dct: <http://purl.org/dc/terms/>
 prefix geo: <http://www.opengis.net/ont/geosparql#>
@@ -54,7 +54,7 @@ insert {
 
         optional { ?mapping csv:Toelichting ?Toelichting . }
         BIND ( STRLANG(?Toelichting, "nl") as ?ToelichtingNL )
-        BIND (URI(CONCAT(STR(mapping:), ?MappingGUID)) AS ?mappingUri)
+        BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?MappingGUID)) AS ?mappingUri)
 
         # Attributen en domeinwaarden komen altijd samen voor (x3): beide zijn een VocabulairID. 
         optional { 
@@ -94,33 +94,33 @@ insert {
             ?mapping csv:refAttribuut1 ?refAttribuut1 ; csv:refDomeinwaarde1 ?refDomeinwaarde1 . 
             graph <csv:table/refModel_Attributen> {
                 [] csv:refAttribuutID ?refAttribuut1 ; csv:refAttribuutGUID ?refAttribuut1GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refAttribuut1GUID)) AS ?refAttribuut1Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refAttribuut1GUID)) AS ?refAttribuut1Uri)
             }
             graph <csv:table/refModel_Domeinwaarden> {
                 [] csv:refDomeinwaardeID ?refDomeinwaarde1 ; csv:refDomeinwaardeGUID ?refDomeinwaarde1GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refDomeinwaarde1GUID)) AS ?refDomeinwaarde1Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refDomeinwaarde1GUID)) AS ?refDomeinwaarde1Uri)
             }
         }
         optional { 
             ?mapping csv:refAttribuut2 ?refAttribuut2 ; csv:refDomeinwaarde2 ?refDomeinwaarde2 . 
             graph <csv:table/refModel_Attributen> {
                 [] csv:refAttribuutID ?refAttribuut2 ; csv:refAttribuutGUID ?refAttribuut2GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refAttribuut2GUID)) AS ?refAttribuut2Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refAttribuut2GUID)) AS ?refAttribuut2Uri)
             }
             graph <csv:table/refModel_Domeinwaarden> {
                 [] csv:refDomeinwaardeID ?refDomeinwaarde2 ; csv:refDomeinwaardeGUID ?refDomeinwaarde2GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refDomeinwaarde2GUID)) AS ?refDomeinwaarde2Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refDomeinwaarde2GUID)) AS ?refDomeinwaarde2Uri)
             }
         }
         optional { 
             ?mapping csv:refAttribuut3 ?refAttribuut3 ; csv:refDomeinwaarde3 ?refDomeinwaarde3 . 
             graph <csv:table/refModel_Attributen> {
                 [] csv:refAttribuutID ?refAttribuut3 ; csv:refAttribuutGUID ?refAttribuut3GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refAttribuut3GUID)) AS ?refAttribuut3Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refAttribuut3GUID)) AS ?refAttribuut3Uri)
             }
             graph <csv:table/refModel_Domeinwaarden> {
                 [] csv:refDomeinwaardeID ?refDomeinwaarde3 ; csv:refDomeinwaardeGUID ?refDomeinwaarde3GUID .
-                BIND (URI(CONCAT(STR(mapping:), ?refDomeinwaarde3GUID)) AS ?refDomeinwaarde3Uri)
+                BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refDomeinwaarde3GUID)) AS ?refDomeinwaarde3Uri)
             }
         }
     }
@@ -137,13 +137,13 @@ insert {
     graph <csv:table/refModel_Objecttypen> {
         [] csv:refObjecttypeID ?refObjecttype ; csv:refObjecttypeGUID ?refObjecttypeGUID .
 
-        BIND (URI(CONCAT(STR(mapping:), ?refObjecttypeGUID)) AS ?refObjecttypeUri)
+        BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refObjecttypeGUID)) AS ?refObjecttypeUri)
     }
 
     graph <csv:table/refModel_Informatiemodellen> {
         [] csv:refInformatiemodelID ?refInformatiemodel ; csv:refInformatiemodelGUID ?refInformatiemodelGUID .
 
-        BIND (URI(CONCAT(STR(mapping:), ?refInformatiemodelGUID)) AS ?imUri)
+        BIND (URI(CONCAT(STR(imbor-refmodels-id:), ?refInformatiemodelGUID)) AS ?imUri)
     }
 
 }
