@@ -72,11 +72,8 @@ WHERE {
     BIND (URI(CONCAT(STR(imbor:), ?EenheidIMBORGUID)) AS ?eenheidUri)
     BIND (URI(CONCAT(STR(imbor-term:), ?EenheidVocabulairGUID)) AS ?eenheidVocabUri)
     BIND (URI(?refDomeinwaardeURI) as ?qudtUnit)
-    BIND (URI(STRAFTER(?grootheidURI, " ")) as ?qudtQK)
+    BIND (URI(?grootheidURI) as ?qudtQK)
 
-    BIND (STRLANG(?Term, "nl") as ?TermNL)
     BIND (STRLANG(?EenheidNaam, "nl") as ?EenheidNaamNL)
-    BIND (STRLANG(?Definitie, "nl") as ?DefinitieNL)
     BIND (STRLANG(?EenheidDefinitie, "nl") as ?EenheidDefinitieNL)
-    BIND (STRLANG(?AttribuutTypeTerm, "nl") as ?AttribuutTypeTermNL)
 }
