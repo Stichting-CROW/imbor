@@ -81,7 +81,7 @@ Binnen IMBOR is een 'mapping' opgenomen naar IMGeo die de 'uitdrukking in' seman
 De SOR is een relatief nieuwe ontwikkeling die het landschap van standaarden en basisregistraties waarschijnlijk redelijk op zijn kop gaat zetten, hoewel de echte implicaties nog ongewis zijn. Binnen IMBOR is de verwachting dat IMBOR een 'uitklapmodel' van de SOR gaat worden. In objecttypen hiërarchie is daarom getracht om waar mogelijk de SOR begrippen te hanteren. Ook hier gaat het weer om het gebruik maken van het begrippenkader en nog niet persé de overig modelleerconstructies. Omdat de SOR praktisch een extensie van de NEN3610 is, is IMBOR voor zover mogelijk in lijn met de consultatieversie van de SOR gemaakt. Er is geen expliciete relatie gelegd. 
 
 <div class='note'>
-Er is nog geen definitieve versie van de SOR verschenen. Er is begin 2021 een <a href="https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang/objectenregistratie">tweede consultatie</a> gedaan. De verwachting is dat de SOR nog wel een tijdje op zich laat wachten en dat de huidige registraties tot die tijd gewoon blijven gelden. IMBOR zal t.z.t. zich waar nodig aanpassen om aan te sluiten. 
+Er is nog geen definitieve versie van de SOR verschenen. Er is begin 2021 een <a href="https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang/objectenregistratie">tweede consultatie</a> gedaan. De verwachting is dat de SOR nog wel een tijdje op zich laat wachten en dat de huidige registraties tot die tijd gewoon blijven gelden. IMBOR zal t.z.t. zich waar nodig aanpassen om aan te sluiten. Meer informatie over de  ontwikkeling van de SOR is ook de vinden bij de VNG via https://vng.nl/projecten/samenhangende-objectenregistratie-sor.
 </div>
 
 #### IMKL
