@@ -53,6 +53,11 @@ Mocht er toch dringende behoefte zijn, wordt er aanbevolen om deze minimale meta
 
 Een belangrijke use case bij het delen van IMBOR-gegevens betreffen revisies. Daarmee wordt bedoeld dat de opdrachtgever een deel van zijn gegevensset van het areaal overdraagt aan een opdrachtnemer, die deze muteert en vervolgens teruglevert. Dit heeft te maken met versionering van gegevens en geldigheid. Dit valt vooralsnog buiten het domein van deze best practice. Deze overweging is gemaakt omdat deze best practice dan minder toegankelijk zou zijn, er gefocust is op de essentie en omdat de verschillende versionering nog niet goed genoeg onderzocht zijn. Voor achtergrond informatie hierover heeft CROW een [whitepaper][13] geschreven. 
 
+#### Complexiteit van voorbeeld
+
+In deze best practice wordt het IMBOR als voorbeeld van ontologie gebruikt. IMBOR is een relatief eenvoudige ontologie die in principe alleen vaste gegevens van objecttypen specificeert. Wanneer de materie (en daarmee de ontologie) complexer wordt is het uiteraard logisch dat de transformatie van gegevens naar RDF ingewikkelder wordt. De gegevensbehoefte voor het uitvoeren van bijvoorbeeld operationele planningen en netwerkberekeningen ligt anders. Er komt dan meer kijken bij het transformeren van gegevens uit (traditionele) GIS databases naar een RDF. Desalniettemin zijn de principes zoals hier beschreven herbruikbaar en toepasbaar. 
+
+
 [1]: https://geonovum.github.io/NEN3610-Linkeddata/#nen3610id
 [2]: https://www.nen.nl/nen-2660-2-2022-nl-291667
 [3]: https://w3id.org/nen2660/def/

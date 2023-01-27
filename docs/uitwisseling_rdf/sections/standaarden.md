@@ -28,7 +28,7 @@ De ‘Shapes Constraint Language’ (<abbr title="Shapes Constraint Language">SH
 
 >ADVISEMENT "Keuze voor serialisatie"
 > 
->Het maakt absoluut niet uit welke serialisatie er gekozen wordt. Het voordeel van RDF is dat de data (de statements, of de triples) altijd helemaal hetzelfde zijn. 
+>Het is absoluut arbitrair voor welke serialisatie er gekozen wordt. Het voordeel van RDF is dat de data (de statements, of de triples) altijd helemaal hetzelfde zijn. 
 
 ### NEN2660-2
 <abbr title="Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1  ">NEN2660-2</abbr> [[NEN2660_2]] is een praktische invulling van [[NEN2660_1]]. In deel 1 zijn meer theoretische/conceptuele en bouw- en taalonafhankelijke modelleerpatronen vastgelegd. Deze norm is vrij beschikbaar bij de NEN en is ontwikkeld in een samenwerking tussen overheden, adviesbureau's en kennisinstituten. Het heeft als doel de standaard te zijn voor de ontwikkeling van ontologieën in de gebouwde omgeving. Het bevat drie belangrijke (hoofd)onderdelen:
