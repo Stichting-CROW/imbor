@@ -16,6 +16,20 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | {.index} | | 
 
 
+### Discriminator semantiek gaat voor attributen indeling (R0043)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
+
+| | |
+| ----- | ---- | 
+| *Regel* | Bij het indelen van (nieuwe) Objecttypen wordt eerst gekeken naar de semantiek (waar in de klassestructuur deze ingedeeld zouden moeten worden. Pas daarna moet gekeken worden of de juiste attributen erbij horen.  | 
+| *ID* | R0043 *(f5a17556-2d50-432d-a091-d7c7c80d8fc0)* |
+| *Categorie* | Model consistentie
+ |*Gerelateerd issue* |  |
+ |*Controle query* |  |
+| {.index} | | 
+
+
 ### Elke GUID is uniek (R0014)
 
 Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
@@ -27,6 +41,34 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
  |*Controle query* | checkDubbeleGUIDsTermen; checkDubbeleIMBORGUIDs; checkIMBORGUIDTermen; checkVocabulairGUIDTermen |
+| {.index} | | 
+
+
+### Enumeratietypen moeten hergebruik faciliteren (R0046)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
+
+| | |
+| ----- | ---- | 
+| *Regel* | Waar mogelijk moeten Enumeratietypen hergebruikt worden. Waardelijsten moeten dus zo veel mogelijk samengesteld worden zodat ze zo veel mogelijk herbruikbaar zijn. Namen voor Enumeratietypen hoeven dus ook niet aan een conventie te voldoen. | 
+| *ID* | R0046 *(a020d7d9-64be-517a-0ff9-6e4103bc060f)* |
+| *Categorie* | Model consistentie
+ |*Gerelateerd issue* |  |
+ |*Controle query* |  |
+| {.index} | | 
+
+
+### Relatie tussen datatype en eenheid moet consistent zijn (R0029)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
+
+| | |
+| ----- | ---- | 
+| *Regel* | Als een attribuut het datatype xsd:decimal heeft, dan moet het attribuut ook een gedefinieerde eenheid hebben. | 
+| *ID* | R0029 *(0b62bb2a-21d5-631a-634c-0330d6112258)* |
+| *Categorie* | Model consistentie
+ |*Gerelateerd issue* |  |
+ |*Controle query* | checkAttributenEnEenheden |
 | {.index} | | 
 
 
@@ -68,7 +110,7 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | *ID* | R0017 *(302cccc9-98d0-3049-0d8d-cf4deafe627b)* |
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
- |*Controle query* | checkDomeinwaardenZonderEnumeratie |
+ |*Controle query* | checkDomeinwaardenZonderEnumeratie; checkEnumeratietypesZonderDomeinwaarden; checkEnumeratietypesMetDomeinwaarden |
 | {.index} | | 
 
 
@@ -176,11 +218,25 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 
 | | |
 | ----- | ---- | 
-| *Regel* | Elke semantische relatie van de vorm aRb wordt maar één keer opgenomen, waarbij het omgekeerde, d.w.z. bRa niet als equivalent wordt beschouwd. (Semiotisch anders interpretabel vs. machineleesbaar equivalent) | 
+| *Regel* | Elke semantische relatie van de vorm aRb wordt maar één keer opgenomen, waarbij het omgekeerde, d.w.z. bRa niet als equivalent wordt beschouwd. (Semiotisch anders interpretabel vs. machineleesbaar equivalent). Vandaar dat de inverse dus ook expliciet opgenomen mag worden, als het nuttig is. | 
 | *ID* | R0025 *(e976d9a8-2f8c-60ea-2463-764cc4587ecd)* |
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
  |*Controle query* | checkDubbeleSemantischeRelaties |
+| {.index} | | 
+
+
+### Temporele aspecten worden gemodelleerd volgens de NEN3610 (R0045)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
+
+| | |
+| ----- | ---- | 
+| *Regel* | Alles met betrekking tot datums en tijdstippen zou volgens de NEN3610 temporele aspecten gemodelleerd moeten worden, tenzij. | 
+| *ID* | R0045 *(b586e279-9956-8a52-0745-a336bdd8958f)* |
+| *Categorie* | Model consistentie
+ |*Gerelateerd issue* |  |
+ |*Controle query* |  |
 | {.index} | | 
 
 
@@ -223,20 +279,6 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
  |*Controle query* | checkObjecttypenMetType |
-| {.index} | | 
-
-
-###  (R0029)
-
-Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
-
-| | |
-| ----- | ---- | 
-| *Regel* | Als een attribuut het datatype xsd:decimal heeft, dan moet het attribuut ook een gedefinieerde eenheid hebben. | 
-| *ID* | R0029 *(0b62bb2a-21d5-631a-634c-0330d6112258)* |
-| *Categorie* | Model consistentie
- |*Gerelateerd issue* |  |
- |*Controle query* | chekcAttributenEnEenheden |
 | {.index} | | 
 
 

@@ -62,6 +62,8 @@ Dit vraagt zodoende niet alleen technische inspanning, maar zeker ook proces en 
 
 Dit document is bedoeld als 'technische documentatie' rondom IMBOR. Het is dan ook primair bestemd voor informatiearchitecten, gegevensbeheerders of softwareleveranciers die IMBOR willen toepassen en er implementaties van maken. Enige kennis van informatiemodellering is daarom benodigd. IMBOR richt zich in het bijzonder op de informatievoorziening binnen het (overheidsdomein) beheer van de openbare ruimte.
 
+>Er worden door de IMBOR modelleurs ook modelleerregels gehanteerd. Deze kunnen ook handig zijn voor diegene die IMBOR gebruiken en/of implementeren. Dit levende document is te vinden bij de IMBOR documentatie onder de noemer: [IMBOR Modelleerregels][11].
+
 [1]: https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor
 [2]: https://www.nen.nl/nieuws/normontwerp-informatiemodellering-van-gebouwde-omgeving-ter-commentaar/
 [3]: https://docs.geostandaarden.nl/disgeo/hiso/
@@ -72,3 +74,4 @@ Dit document is bedoeld als 'technische documentatie' rondom IMBOR. Het is dan o
 [8]: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim
 [9]: https://www.nen.nl/elasticsearch/?search=2660-2&sortmode=asc&viewmode=list
 [10]: https://www.nen.nl/nen-3610-2022-nl-296137
+[11]: https://docs.crow.nl/imbor/modelleerregels

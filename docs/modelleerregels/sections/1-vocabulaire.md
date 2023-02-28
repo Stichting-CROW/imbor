@@ -44,7 +44,7 @@ Van toepassing op de `Vocabulaire`, en valt binnen de categorie: `Semantiek`
 | {.index} | | 
 
 
-### Naamgeving Attributen (R0037)
+### Naamgeving Attributen 1 (R0037)
 
 Van toepassing op de `Vocabulaire`, en valt binnen de categorie: `Semantiek`
 
@@ -54,6 +54,20 @@ Van toepassing op de `Vocabulaire`, en valt binnen de categorie: `Semantiek`
 | *ID* | R0037 *(c86545f1-25f4-9264-6ce5-fbca43af1308)* |
 | *Categorie* | Semantiek
  |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/962 |
+ |*Controle query* |  |
+| {.index} | | 
+
+
+### Naamgeving Attributen 2 (R0044)
+
+Van toepassing op de `Vocabulaire`, en valt binnen de categorie: `Semantiek`
+
+| | |
+| ----- | ---- | 
+| *Regel* | Termen (vooral met betrekking tot attributen) moeten aansluiten bij de definitie en daarmee dus niet te algemeen zijn | 
+| *ID* | R0044 *(db35e4f5-5c31-020c-8596-8d31a35f4f1b)* |
+| *Categorie* | Semantiek
+ |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/1006  |
  |*Controle query* |  |
 | {.index} | | 
 
