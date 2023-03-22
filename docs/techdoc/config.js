@@ -10,6 +10,9 @@ var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
         {
             name: "Rik",
             company: "CROW",
+        },
+        {
+            name: "Thomas Mollema"
         }
     ],
     github: "https://github.com/Stichting-CROW/imbor",

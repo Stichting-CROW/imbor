@@ -15,4 +15,5 @@
 | 10-03-2022   	| 1.0     	| IMBOR 2022 release              	|
 | 25-03-2022   	| 1.1     	| IMBOR 2022.01 release en licentie informatie            	|
 | 13-05-2022    | 1.11      | Update naar nieuwe ReSpec template CROW |
+| 22-03-2023    | 1.12      | Update OAGDB en redacteurs |
 | { .data }     |           |               |
