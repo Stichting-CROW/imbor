@@ -9,7 +9,6 @@ var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
     editors: [
         {
             name: "Rik",
-            company: "CROW",
         },
         {
             name: "Thomas Mollema"
