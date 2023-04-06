@@ -20,30 +20,38 @@ prefix nen2660: <https://w3id.org/nen2660/def#>
 
 
 insert {
-    graph <https://data.crow.nl/imbor/addendum/mim> {
-        ?Waarde a ?TypeWaarde ;
+    graph <https://data.crow.nl/imbor/mim> {
+        ?MIMWaarde a ?TypeWaarde ;
             mim:naam ?WaardeNaam ;
             mim:definitie ?WaardeDef ;
             mim:begrip ?Begrip ;
             mim:begripsterm ?BegripsTerm ;
-            mim:herkomst "Stichting CROW"@nl ;
-            mim:herkomstDefinitie "Stichting CROW"@nl;
-            mim:datumOpname "2022-03-01"^^xsd:date ;
+            mim:herkomst "IMBOR - Stichting CROW"@nl ;
+            mim:herkomstDefinitie "IMBOR - Stichting CROW"@nl;
+            mim:datumOpname "2023-01-01"^^xsd:date ;
+            mim:locatie ?TypeLocatie ;
             .
+
+        ?Waarde mim:equivalent  ?MIMWaarde .
+        
+        ?MIMEnumeratieType  ?Type  ?MIMWaarde .  # Relatie tussen Lijst en Waarde
+        
     }
 } where {
     GRAPH <https://data.crow.nl/imbor/id/domeinwaarden/> {
-        ?Waarde a ?EnumType ;
+        ?Waarde a ?EnumeratieType ;
             skos:prefLabel ?WaardeNaam ;
             skos:definition ?WaardeDef ;
             rdfs:seeAlso ?Begrip ;
             .
+        BIND(IRI(REPLACE(STR(?Waarde),"https://data.crow.nl/imbor/id/domeinwaarden/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMWaarde)  
+        BIND(IRI(REPLACE(STR(?EnumeratieType),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMEnumeratieType)  
     }  
 
     ?Begrip skos:prefLabel ?BegripsTerm .
 
     GRAPH <https://data.crow.nl/imbor/def/> {
-        ?EnumType a rdfs:Class ;
+        ?EnumeratieType a rdfs:Class ;
             rdfs:subClassOf nen2660:EnumerationType ;
             imbor:typeLijst ?TypeLijst ;
             .
@@ -52,6 +60,13 @@ insert {
                     IF(?TypeLijst = "Enumeratielijst"@nl, mim:Enumeratiewaarde, 
                         ""))  as ?TypeWaarde)
 
+    BIND(IF(?TypeLijst = "Suggestielijst"@nl, mim:referentieElement, 
+                    IF(?TypeLijst = "Enumeratielijst"@nl, mim:waarde, 
+                        ""))  as ?Type)
+
+    BIND(IF(?TypeLijst = "Suggestielijst"@nl, "Voorlopig gedefinieerd binnen IMBOR op https://data.crow.nl/imbor/id/domeinwaarden"@nl, 
+                    IF(?TypeLijst = "Enumeratielijst"@nl, "https://data.crow.nl/imbor/id/domeinwaarden", 
+                        ""))  as ?TypeLocatie)
     }
 
      

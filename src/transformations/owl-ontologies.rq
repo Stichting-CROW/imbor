@@ -68,8 +68,8 @@ insert data {
             rdfs:label "IMBOR addendum Referentiemodellen"@nl .
     }
     
-    graph <https://data.crow.nl/imbor/addendum/mim> {
-        <https://data.crow.nl/imbor/addendum/mim> a owl:Ontology , mim:Informatiemodel ;
+    graph <https://data.crow.nl/imbor/mim> {
+        <https://data.crow.nl/imbor/mim> a owl:Ontology , mim:Informatiemodel ;
             owl:imports imbor: , mim: ;
             rdfs:comment "Dit informatieve gedeelte van IMBOR verrijkt de IMBOR Kern met MIM classificaties en properties. Het is geenszins een volledige MIM 'mapping'. Bijvoorbeeld de relaties tussen MIM metaClass's zijn niet opgenomen."@nl ;
             rdfs:label "IMBOR addendum MIM"@nl ;

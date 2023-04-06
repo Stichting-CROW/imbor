@@ -20,16 +20,19 @@ prefix nen2660: <https://w3id.org/nen2660/def#>
 
 
 insert {
-    graph <https://data.crow.nl/imbor/addendum/mim> {
-        ?EnumeratieType a ?Type ;
+    graph <https://data.crow.nl/imbor/mim> {
+        ?MIMEnumeratieType a ?Type ;
             mim:naam ?EnumNaam ;
             mim:definitie ?EnumDef ;
             mim:begrip ?Begrip ;
             mim:begripsterm ?BegripsTerm ;
-            mim:herkomst "Stichting CROW"@nl ;
-            mim:herkomstDefinitie "Stichting CROW"@nl;
-            mim:datumOpname "2022-03-01"^^xsd:date ;
+            mim:herkomst "IMBOR - Stichting CROW"@nl ;
+            mim:herkomstDefinitie "IMBOR - Stichting CROW"@nl;
+            mim:datumOpname "2023-01-01"^^xsd:date ;
+            mim:locatie ?TypeLocatie ;
             .
+
+        ?EnumeratieType mim:equivalent  ?MIMEnumeratieType .
     }
 } where {
     GRAPH <https://data.crow.nl/imbor/def/> {
@@ -40,26 +43,16 @@ insert {
             imbor:typeLijst ?TypeLijst ;
             rdfs:seeAlso ?Begrip ;
             .
+        BIND(IRI(REPLACE(STR(?EnumeratieType),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMEnumeratieType)  
 
         BIND(IF(?TypeLijst = "Suggestielijst"@nl, mim:Referentielijst, 
                     IF(?TypeLijst = "Enumeratielijst"@nl, mim:Enumeratie, 
                         ""))  as ?Type)
+        
+        BIND(IF(?TypeLijst = "Suggestielijst"@nl, "Voorlopig gedefinieerd binnen IMBOR op https://data.crow.nl/imbor/def"@nl, 
+                    IF(?TypeLijst = "Enumeratielijst"@nl, "https://data.crow.nl/imbor/def", 
+                        ""))  as ?TypeLocatie)
      }
 
      ?Begrip skos:prefLabel ?BegripsTerm .
-}
-
-;
-
-insert {
-    graph <https://data.crow.nl/imbor/addendum/mim> {
-        ?EnumeratieType mim:locatie "Voorlopig gedefinieerd binnen IMBOR"@nl .
-    }
-} where {
-    GRAPH <https://data.crow.nl/imbor/def/> {
-        ?EnumeratieType a rdfs:Class ;
-        imbor:typeLijst "Suggestielijst"@nl ; 
-        .
-        
-    }
 }

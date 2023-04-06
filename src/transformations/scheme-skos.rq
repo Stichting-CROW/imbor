@@ -19,7 +19,7 @@ INSERT {
         imbor-term:term-schema a skos:ConceptScheme;
             skos:prefLabel "IMBOR Vocabulaire (Begrippenkader voor IMBOR)"@nl ;
             skos:hasTopConcept ?broader ;
-            dc:creator "Stichting CROW"@nl ;
+            dc:creator "IMBOR - Stichting CROW"@nl ;
             dc:format "SKOS"@nl ;
             dc:language "Nederlands"@nl ;
             dc:description "Vanaf IMBOR2022 is IMBOR gesplitst in een aantal modules. De IMBOR Vocabulaire is er daar eentje van en dit betreft het begrippenkader (of model van begrippen). De vocabulaire bevat 1) de begrippen (concepten), 2) de termen (geprefereerde en alternatieve), 3) de definities, 4) eventuele toelichtingen en 5) een indeling van de begrippen in groepen. Deze afsplitsing is gemaakt zodat de vocabulaire op zichzelf gebruikt kan worden (zonder de uitgebreidere ontologie) en omdat de aanpassingsfrequentie van de ontologie en de vocabulaire kan verschillen. Zo kan er apart van elkaar gewerkt worden. Vanuit de IMBOR Ontologie wordt met rdfs:seeAlso verwezen naar het begrip in deze vocabulaire. Voor meer informatie zie de IMBOR technische documentatie" ;

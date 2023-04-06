@@ -7,6 +7,7 @@ prefix imbor-term: <https://data.crow.nl/imbor/term/>
 prefix imbor: <https://data.crow.nl/imbor/def/>
 prefix imbor-refmodels: <https://data.crow.nl/imbor-ref/def/>
 prefix imbor-refmodels-id: <https://data.crow.nl/imbor-ref/id/>
+prefix imbor-mim: <https://data.crow.nl/imbor/mim/>
 
 prefix dct: <http://purl.org/dc/terms/>
 prefix geo: <http://www.opengis.net/ont/geosparql#>
@@ -20,15 +21,22 @@ prefix nen2660: <https://w3id.org/nen2660/def#>
 
 
 insert {
-    graph <https://data.crow.nl/imbor/addendum/mim> {
-        ?RelatieSoort a mim:Relatiesoort ;
+    graph <https://data.crow.nl/imbor/mim> {
+        ?MIMRelatieSoort a mim:Relatiesoort ;
             mim:naam ?relatiesoortNaam ;
-            mim:herkomst "Stichting CROW"@nl ;
-            mim:herkomstDefinitie "Stichting CROW"@nl;
-            mim:datumOpname "2022-03-01"^^xsd:date ;
+            mim:herkomst "IMBOR - Stichting CROW"@nl ;
+            mim:herkomstDefinitie "IMBOR - Stichting CROW"@nl;
+            mim:datumOpname "2023-01-01"^^xsd:date ;
             mim:kardinaliteit ?Kardinaliteit ;
             mim:unidirectioneel true ;
+            mim:locatie "https://data.crow.nl/imbor/def" ;
+            mim:bron  ?MIMVan ;
+            mim:doel   ?MIMNaar ;
             .
+
+        ?RelatieSoort     mim:equivalent  ?MIMRelatieSoort . 
+
+        
     }
 } where {
     GRAPH <https://data.crow.nl/imbor/def/> {
@@ -36,14 +44,23 @@ insert {
             skos:prefLabel ?relatiesoortNaam ;
             sh:path ?path ;
             FILTER CONTAINS(str(?path),"nen2660") 
-            .
+                        .
+        
+        BIND(IRI(REPLACE(STR(?RelatieSoort),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMRelatieSoort)  
 
-        OPTIONAL {?RelatieSoort sh:minCount ?min}.
-        OPTIONAL {?RelatieSoort sh:maxCount ?max}.
+        OPTIONAL {?RelatieSoort sh:minCount ?shmin}.
+        OPTIONAL {?RelatieSoort sh:maxCount ?shmax}.
+        OPTIONAL {?RelatieSoort sh:qualifiedMinCount ?shqmin}.
+        OPTIONAL {?RelatieSoort sh:qualifiedMaxCount ?shqmax}.
+        BIND(COALESCE(?shmin,?shqmin,0) AS ?min)
+        BIND(COALESCE(?shmax,?shqmax,"*") AS ?max)
+        BIND(CONCAT(STR(?min),"..",STR(?max)) AS ?Kardinaliteit)
 
-        BIND(IF(?min = 1 && ?max = 1, "1", 
-                    IF(?min = 0 && ?max = 1, "0..1", 
-                            IF(?min = 0, "0..*", 
-                                IF(?min= 1, "1..*", "?"))))  as ?Kardinaliteit)
+        ?RelatieSoort   sh:qualifiedValueShape/sh:class ?Naar .
+        ?Van            sh:property                     ?RelatieSoort .
+
+        BIND(IRI(REPLACE(STR(?Naar),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMNaar)  
+        BIND(IRI(REPLACE(STR(?Van),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMVan)  
+     
      }
 }

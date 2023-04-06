@@ -1,8 +1,8 @@
 {
   "$schema": "https://rdmr.eu/ns/sparql-query-runner/schema.json",
   "pipeline": {
-    "name": "IMBOR 2021",
-    "endpoint": "http://localhost:7200/repositories/imbor-2021/statements",
+    "name": "IMBOR DEV",
+    "endpoint": "http://localhost:7200/repositories/imbor-dev/statements",
     "prefixes": {
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "owl": "http://www.w3.org/2002/07/owl#",
@@ -12,6 +12,7 @@
       "imbor-refmodels": "https://data.crow.nl/imbor-ref/def/",
       "imbor-meta": "https://data.crow.nl/imbor/aanvullend-metamodel/",
       "imbor-refmodels-id": "https://data.crow.nl/imbor-ref/id/",
+      "imbor-mim": "https://data.crow.nl/imbor/mim/",
       "quantitykind": "http://qudt.org/vocab/quantitykind/",
       "nen2660": "https://w3id.org/nen2660/def#",
       "nen2660-term": "https://w3id.org/nen2660/term#",
@@ -36,7 +37,7 @@
       },
       {
         "type": "set-prefixes",
-        "url": "http://localhost:7200/repositories/imbor-2021"
+        "url": "http://localhost:7200/repositories/imbor-dev"
       },
       {
         "type": "import-msaccess",
@@ -97,7 +98,9 @@
           "src/transformations/mim-attributen.rq",
           "src/transformations/mim-relaties.rq",
           "src/transformations/mim-enumeraties.rq",
-          "src/transformations/mim-domeinwaarden.rq"
+          "src/transformations/mim-domeinwaarden.rq",
+          "src/transformations/mim-datatype.rq",
+          "src/transformations/mim-generalisaties.rq"
         ]
       },
       {
@@ -111,7 +114,7 @@
       },
       {
         "type": "set-prefixes",
-        "url": "http://localhost:7200/repositories/imbor-2021"
+        "url": "http://localhost:7200/repositories/imbor-dev"
       },
       {
         "type": "download-file",
@@ -149,7 +152,7 @@
           "https://data.crow.nl/imbor/addendum/geometrie",
           "https://data.crow.nl/imbor/addendum/minimale-dataset",
           "https://data.crow.nl/imbor/addendum/referentiemodellen",
-          "https://data.crow.nl/imbor/addendum/mim"
+          "https://data.crow.nl/imbor/mim"
         ]
       },
       {
@@ -160,7 +163,7 @@
           "https://data.crow.nl/imbor/addendum/geometrie",
           "https://data.crow.nl/imbor/addendum/minimale-dataset",
           "https://data.crow.nl/imbor/addendum/referentiemodellen",
-          "https://data.crow.nl/imbor/addendum/mim"
+          "https://data.crow.nl/imbor/mim"
         ]
       },
       {
@@ -190,7 +193,7 @@
           "https://data.crow.nl/imbor/addendum/geometrie",
           "https://data.crow.nl/imbor/addendum/minimale-dataset",
           "https://data.crow.nl/imbor/addendum/referentiemodellen",
-          "https://data.crow.nl/imbor/addendum/mim"
+          "https://data.crow.nl/imbor/mim"
         ]},
         {
           "type": "download-file",

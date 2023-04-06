@@ -58,6 +58,7 @@ WHERE {
             (16750  UNDEF  2     )
             (16912  2      UNDEF )
         }
+### TODO: Gaat dit wel helemaal goed?
         
         graph <csv:table/imborVoc_Termen> {
             [] csv:VocabulairID ?Objecttype1 ;
