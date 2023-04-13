@@ -125,7 +125,7 @@ insert {
         ?Klasse a rdfs:Class , sh:NodeShape ;
                 sh:property ?PropertyShape .
         ?PropertyShape  sh:path ?AttribuutSoort .
-        FILTER NOT EXISTS { ?PropertyShape sh:qualifiedValueShape [] }
+		FILTER (!CONTAINS(str(?AttribuutSoort),"nen2660"))
         # Om alleen attributen er uit te halen (geen relaties)
 
         BIND(IRI(REPLACE(STR(?Klasse),"https://data.crow.nl/imbor/def/","https://data.crow.nl/imbor/mim/mim-")) AS ?MIMKlasse) 

@@ -32,7 +32,7 @@ In 2022 is de nieuwe versie van de <a href="https://www.w3schools.com](https://w
 #### NEN3610
 
 De NEN3610 is in 2022 herzien (t.o.v. 2011) en vormt de basis van de Samenhangende objecten registratie (SOR) die binnen het DiSGeo programma wordt opgetuigd. Binnen de NEN2660-2 is reeds een relatie tussen de NEN2660-2 en de NEN3610 aangegeven. Het gaat hier alleen om een afstemming tussen de begrippenkaders. IMBOR heeft deze afstemming overgenomen in de [tophiërarchie](#imbor-top-hierarchie). Binnen IMBOR wordt daarmee zo veel mogelijk aangesloten op de semantiek van de NEN3610 (en daarmee de NEN2660-2), maar wordt (nog) geen volledige sterke relatie met de rest van de norm NEN3610 beschreven. Er wordt zodoende ook niet beweerd dat er volledige compatibiliteit met de NEN3610 is (wel met de NEN2660-2), maar dat puur de begrippenkaders voor nu met elkaar afgestemd zijn. Dit is gedaan vanwege de te verwachten sterke relatie met de SOR die ongeveer hetzelfde doet. De NEN3610 hiërarchie wordt tevens gebruikt om de verdeling van attributen binnen IMBOR te regelen. 
-Wel worden de attributen `identificatie` en `domein` (als verplicht vanuit de NEN43610) volledige toegepast in IMBOR als identificerende attributen.
+Wel worden de attributen `identificatie` en `domein` (als verplicht vanuit de NEN3610) volledige toegepast in IMBOR als identificerende attributen.
 
 #### MIM
 
