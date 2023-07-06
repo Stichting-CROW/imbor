@@ -9,6 +9,7 @@ IMBOR wordt beheerd door een samenwerkingsverband van gemeenten, provincies, sof
 | 0.3 |	 9-2-2021 |	Visienotitie omgezet naar Concept Beheerplan IMBOR	| Harro Verhoeven |
 | 0.4	|  15-6-2021 |	 Definitief concept Beheerplan IMBOR |	 Harro Verhoeven
 | 0.5 |	11-10-2021 | 	Prioritering issues en verwijzigingen ReSpec en GitHub toegevoegd	| Harro Verhoeven |
+| 0.5 |	06-07-2023 | 	Uitwerken beheerplan naar inrichting beheerorganisatie	| John Joosten |
 
 <div class="issue" data-number="939"></div>
 
