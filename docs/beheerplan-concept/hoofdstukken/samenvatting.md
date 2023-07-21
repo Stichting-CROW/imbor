@@ -1,4 +1,4 @@
-IMBOR wordt beheerd door een samenwerkingsverband van gemeenten, provincies, softwareleveranciers en CROW. Dit document beschrijft alle aspecten van het beheer van IMBOR conform het [BOMOS model](https://www.logius.nl/diensten/bomos), het Beheer- en OntwikkelModel voor Open Standaarden van Logius.
+IMBOR is ontwikkeld door het CROW in samenwerking met gemeenten, provincies, softwareleveranciers en experts op het gebied van gegevensbeheer openbare ruimte. Dit document beschrijft alle aspecten rondom het beheer van IMBOR conform het [BOMOS model](https://www.logius.nl/diensten/bomos), het Beheer- en OntwikkelModel voor Open Standaarden van Logius.
 
 # Revisie historie 
 
@@ -9,7 +9,6 @@ IMBOR wordt beheerd door een samenwerkingsverband van gemeenten, provincies, sof
 | 0.3 |	 9-2-2021 |	Visienotitie omgezet naar Concept Beheerplan IMBOR	| Harro Verhoeven |
 | 0.4	|  15-6-2021 |	 Definitief concept Beheerplan IMBOR |	 Harro Verhoeven
 | 0.5 |	11-10-2021 | 	Prioritering issues en verwijzigingen ReSpec en GitHub toegevoegd	| Harro Verhoeven |
-| 0.6 |	06-07-2023 | 	Uitwerken beheerplan naar inrichting beheerorganisatie	| John Joosten |
+| 0.6 |	19-07-2023 | 	Uitwerken beheerplan naar inrichting concet beheerorganisatie	| John Joosten |
 
 <div class="issue" data-number="939"></div>
-

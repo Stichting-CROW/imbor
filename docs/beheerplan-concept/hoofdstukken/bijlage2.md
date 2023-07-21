@@ -1,5 +1,8 @@
 # Bijlage 2 Overzicht van actieve groepen beheerorganisatie IMBOR
 
+<aside class="note" title="groepen aanpassen naar wat we weten">
+</aside>
+
 Leden stuurgroep - (op 23-03-2022)
 * J.M. Zijlstra (Gemeente Amsterdam)
 * A. de Boer (Geonovum)
