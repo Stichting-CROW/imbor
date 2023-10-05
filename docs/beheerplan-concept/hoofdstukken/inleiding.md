@@ -18,7 +18,7 @@ Het IMBOR wordt de eerste jaren verder beproefd en verbeterd, en wordt als stand
 
 CROW heeft dit beheerplan opgesteld om de kaders vast te leggen voor een zorgvuldig en transparant beheerproces van het IMBOR zodat het als een volwaardige open standaard kan worden beheerd.
 
-<aside class="note" title="Ik ken het BIM pro programma niet Speelt dit nog? Anders moet de inleiding wat andere context krijgen">
+<aside class="note" title="Ik ken het BIM pro  valjnkjdbvjkd programma niet Speelt dit nog? Anders moet de inleiding wat andere context krijgen">
 </aside>
 
 ## Doel document
