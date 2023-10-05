@@ -18,7 +18,9 @@ Het IMBOR wordt de eerste jaren verder beproefd en verbeterd, en wordt als stand
 
 CROW heeft dit beheerplan opgesteld om de kaders vast te leggen voor een zorgvuldig en transparant beheerproces van het IMBOR zodat het als een volwaardige open standaard kan worden beheerd.
 
-<aside class="note" title="Ik ken het BIM pro  valjnkjdbvjkd programma niet Speelt dit nog? Anders moet de inleiding wat andere context krijgen">
+<aside class="note" title="Ik ken het BIM pro programma niet Speelt dit nog? Anders moet de inleiding wat andere context krijgen.
+Na overleg 13-9-2023: BIM pro progrAMMA BESTAAT NIET MEER. iNLEIDING DUS AANPASSEN. mOET OOK DE GEBRUIKERS OMSCHRIJVEN. wIE ZIJN DAT NU?
+oOK VERWERKEN DAT ER lINKED dATA IS NU HTTPS://www.crow.nl/thema-s/management-openbare-ruimte/imbor/imbor-linkeddata">
 </aside>
 
 ## Doel document
