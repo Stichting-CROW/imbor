@@ -4,7 +4,7 @@ var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
     shortName: "imbor/techdoc",
     license: "CC-BY",
     // emailComments: "rik",
-    hypothesisComments: "true",
+    hypothesisComments: "false",
     prevVersion: "https://docs.crow.nl/imbor/techdoc/versies/Publicatie-IMBOR2022-20231017/",
     editors: [
         {
