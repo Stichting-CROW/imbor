@@ -1,6 +1,6 @@
 # Inleiding
 
-<aside class="note" title="Ik weet niet waar ik dit in het document hoofdstuk 1 moet aanpassen. Maar wat willen we hier mee zeggen eigenlijk? De tekst hierboven is voor mij ook niet aan te passen.">
+<aside class="note" title="Ik weet niet waar ik dit in het document  hoofdstuk 1 moet aanpasen aanpassen. Maar wat willen we hier mee zeggen eigenlijk? De tekst hierboven is voor mij ook niet aan te passen.">
 </aside>
 
 ## IMBOR
@@ -24,7 +24,10 @@ Beheer volgens BOMOS heeft de volgende belangrijke voordelen:
 *	Het beheer gebeurt transparant.
 *	Informatie is voor iedereen toegankelijk met heldere voorwaarden voor gebruik.
 
-![Activiteitendiagram van BOMOS van Forum voor standaardisatie](hoofdstukken/media/BOMOS.png "Activiteitendiagram van Beheermodel voor Open Standaarden van Forum voor standaardisatie")
+![Activiteitendiagram van BOMOS van Forum voor standaardisatie](./media/BOMOS.png "Activiteitendiagram van Beheermodel voor Open Standaarden van Forum voor standaardisatie")
+
+<aside class="note" title="Hoe kan ik de afbeelding schalen?">
+</aside>
 
 ### Criteria Ken Krechmer
 Om ervoor te zorgen dat IMBOR een open standaard blijft gelden de 10 criteria van [Ken Krechmer](https://www.csrstds.com/OpnStdsCallforAction.pdf). Dit beheerplan sluit aan bij die kenmerken.

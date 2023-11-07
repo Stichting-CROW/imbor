@@ -240,3 +240,8 @@ Binnen IMBOR2022 zijn topologische elementen (als `TopologischElement`) toegevoe
 
 Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de NEN2660-2 is hiervoor een modelleerconstructie gegeven die IMBOR2022 toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de NEN2660-2 en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt aangesloten bij een bestaand(e) lijst/initiatief. De gesprekken hiervoor worden in 2022 gepland. 
 
+<div class='advisement'>
+Ter verduidelijkingL IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden. We geven alleen 'voorstellen'.
+</div>
+
+

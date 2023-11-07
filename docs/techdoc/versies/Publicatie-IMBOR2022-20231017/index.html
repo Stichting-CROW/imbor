@@ -1,0 +1,1477 @@
+<!DOCTYPE html><html lang="nl"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 32.1.2">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;font-size:small;font-family:MuseoSans,"Museo Sans",Museo,sans-serif;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+<link rel="stylesheet" href="https://docs.crow.nl/webfonts/webfonts.css">
+<link rel="stylesheet" href="https://docs.crow.nl/respec-design/stichting-crow/base.min.css">
+<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://docs.crow.nl/respec-design/stichting-crow/dark.min.css">
+  
+  
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+  
+  
+  
+<title>IMBOR Technische documentatie</title>
+  
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000;color:var(--toclink-text)}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<style>
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in-animation 0.15s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+</style>
+<meta name="description" content="Deze pagina beschrijft de technische documentatie rondom IMBOR. Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’ en voorziet in een ontologie die geschikt is voor zowel mens en machine.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specType": "Informatiemodel Beheer Openbare Ruimte",
+  "specStatus": "LD",
+  "shortName": "imbor/techdoc",
+  "license": "CC-BY",
+  "hypothesisComments": "true",
+  "prevRecURI": "https://docs.crow.nl/imbor/techdoc/cv-20211101/",
+  "editors": [
+    {
+      "name": "Rik"
+    },
+    {
+      "name": "Thomas Mollema"
+    }
+  ],
+  "github": "https://github.com/Stichting-CROW/imbor",
+  "publishISODate": "2023-10-26T00:00:00.000Z",
+  "generatedSubtitle": "CROW Informatiemodel Beheer Openbare Ruimte,  TechDoc IMBOR2022 Publicatie"
+}</script></head>
+
+<body style="background-image: url(&quot;https://docs.crow.nl/respec-design/stichting-crow/status-nl/LD.svg&quot;);" class="h-entry informative"><div class="head">
+    <p class="logos"><a class="logo" href="https://www.crow.nl/"><img crossorigin="" alt="CROW" height="75" src="https://docs.crow.nl/respec-design/stichting-crow/logo/crow.svg" width="150">
+  </a></p>
+    <h1 id="title" class="title">IMBOR Technische documentatie</h1> 
+    <p id="w3c-state">CROW Informatiemodel Beheer Openbare Ruimte,
+  TechDoc IMBOR2022 Publicatie <time style="white-space: pre;" class="dt-published" datetime="2023-10-26">26 oktober 2023</time></p>
+    <details open="">
+      <summary>Meer informatie over dit document</summary>
+      <dl>
+        
+        
+        
+        <dt>Laatste werkversie:</dt><dd><a href="https://docs.crow.nl/imbor/techdoc">https://docs.crow.nl/imbor/techdoc</a></dd>
+        <dt>Geschiedenis:</dt><dd>
+                    <a href="https://github.com/Stichting-CROW/imbor/commits/">Wijzigingsgeschiedenis</a>
+                  </dd>
+        
+        
+        
+        <dt>Redacteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Rik</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Thomas Mollema</span>
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/Stichting-CROW/imbor/">GitHub Stichting-CROW/imbor</a>
+        (<a href="https://github.com/Stichting-CROW/imbor/pulls/">wijzigingsverzoeken</a>,
+        <a href="https://github.com/Stichting-CROW/imbor/issues/new/choose">nieuw issue</a>,
+        <a href="https://github.com/Stichting-CROW/imbor/issues/">openstaande issues</a>)
+      </dd><dd id="annotation-service-placeholder">
+        <button type="button" data-load-annotation-service="">
+          Laad annotaties
+        </button>
+        <span><small>Annotaties door <a href="https://web.hypothes.is">Hypothes.is</a> (<a href="https://web.hypothes.is/privacy">privacybeleid</a>).</small></span>
+      </dd><dd hidden="" id="annotation-service-loaded">
+        <span data-hypothesis-annotation-count="">...</span> annotatie(s) met <em>Hypothes.is</em>
+        <button type="button" data-hypothesis-trigger="">
+          Toon annotatiebalk
+        </button>
+        <button type="button" data-unload-annotation-service="">
+          Verberg
+        </button>
+      </dd>
+        
+        
+      </dl>
+    </details>
+    
+    <p class="copyright">
+    Copyright ©
+    2023
+    
+    <a href="https://www.crow.nl/">CROW</a>.
+    CROW
+    <a href="https://www.crow.nl/disclaimer">disclaimer</a>
+      van toepassing en gedistribueerd onder
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" title="Creative Commons Naamsvermelding">CC BY 4.0</a>
+  </p>
+    <hr title="Separator for header">
+  </div>
+  
+  <section id="abstract" data-format="markdown" class="introductory"><h2>Samenvatting</h2><p>Deze pagina beschrijft de <em>technische documentatie</em> rondom IMBOR. Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’ en voorziet in een ontologie die geschikt is voor zowel mens en machine. </p>
+<p>IMBOR bestaat uit drie delen:</p>
+<ul>
+<li>IMBOR Vocabulaire is het begrippenkader van IMBOR. Het beschrijft de universe of discourse van beheer van de openbare ruimte. De vocabulaire is een invulling van het 'model van begrippen' zoals dat gehanteerd wordt in het MIM. Het is tevens de invulling van het 'Toepassingstype 1' vanuit de NEN2660-2 (afstemming van termen en definities). De uitdrukking is volledig in [<cite><a class="bibref" data-link-type="biblio" href="#bib-skos-primer" title="SKOS Simple Knowledge Organization System Primer">skos-primer</a></cite>].</li>
+<li>IMBOR Kern, ofwel de ontologie is het daadwerkelijke informatiemodel. Het betreft hier het logische informatiemodel zoals MIM dat erkend. De aansluiting met MIM is nog niet goed genoeg en is nog in ontwikkeling. De NEN2660-2 is wel volledig toegepast en daarmee is het de invulling van het 'Toepassingstype 3 (gegevensintegratie en innovatie). Vandaar dat de LinkedData expressie ook met [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-schema" title="RDF Schema 1.1">rdf-schema</a></cite>] en [<cite><a class="bibref" data-link-type="biblio" href="#bib-shacl" title="Shapes Constraint Language (SHACL)">shacl</a></cite>] gedaan wordt. De relatie tussen de vocabulaire en de ontologie ligt middels een <code>rdfs:seeAlso</code> systematiek zoals de NEN2660-2 dat voorschrijft. Elke concept in de ontologie heeft zodoende een definiëring in de vocabulaire. </li>
+<li>IMBOR addenda zijn <em>informatieve</em> delen van IMBOR. In tegenstelling tot de voorgaande twee onderdelen kan elke organisaties deze van toepassing verklaren of niet. De addenda zijn (nog) niet in MIM uitgedrukt, wel in LinkedData maar op een minder strikte wijze dan de normatieve delen.</li>
+</ul>
+<p>IMBOR wordt gepositioneerd als sectormodel. De focus ligt op de vaste gegevens van objecten die herkend worden voor het beheer van de openbare ruimte. Kijkend naar het landschap waarin IMBOR wordt gebruikt zijn er veel raakvlakken met landelijke, maar ook andere sectorale modellen. Om deze afstemming zo optimaal te laten verlopen is getracht om de top van de IMBOR hiërarchie (ofwel de klassenindeling) zo veel mogelijk aan te laten sluiten op andere modellen. </p>
+<p>IMBOR wordt op twee manieren gedistribueerd, te weten in een Access database en in LinkedData. Van beiden distributiewijze worden detail uitleg gegeven en verschillende schema's gepresenteerd.</p>
+</section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#versie-historie"><bdi class="secno">1. </bdi>Versie historie</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">2. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatief-informatief"><bdi class="secno">2.1 </bdi>Normatief &amp; informatief</a></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2.2 </bdi>Toepassingsgebied</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-door-ontwikkeling-in-software"><bdi class="secno">2.2.1 </bdi>IMBOR (door)ontwikkeling in software</a></li><li class="tocline"><a class="tocxref" href="#regie-op-standaarden"><bdi class="secno">2.2.2 </bdi>Regie op standaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#doelgroep"><bdi class="secno">2.3 </bdi>Doelgroep</a></li></ol></li><li class="tocline"><a class="tocxref" href="#imbor-in-modellen"><bdi class="secno">3. </bdi>IMBOR in modellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#model-van-begrippen"><bdi class="secno">3.1 </bdi>Model van begrippen</a></li><li class="tocline"><a class="tocxref" href="#logisch-informatiemodel"><bdi class="secno">3.2 </bdi>Logisch informatiemodel</a></li><li class="tocline"><a class="tocxref" href="#fysiek-datamodel"><bdi class="secno">3.3 </bdi>Fysiek datamodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#imbor-samenhang-en-hierarchie"><bdi class="secno">4. </bdi>IMBOR samenhang en hiërarchie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-top-hierarchie"><bdi class="secno">4.1 </bdi>IMBOR Top hiërarchie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities-in-hierarchie"><bdi class="secno">4.1.1 </bdi>Definities in hiërarchie</a></li><li class="tocline"><a class="tocxref" href="#totstandkoming"><bdi class="secno">4.1.2 </bdi>Totstandkoming</a></li><li class="tocline"><a class="tocxref" href="#semantische-relaties"><bdi class="secno">4.1.3 </bdi>Semantische relaties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#imbor-bouwstenen"><bdi class="secno">4.2 </bdi>IMBOR Bouwstenen</a></li><li class="tocline"><a class="tocxref" href="#speciale-modelleerconstructies"><bdi class="secno">4.3 </bdi>Speciale modelleerconstructies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#objecttypen"><bdi class="secno">4.3.1 </bdi>Objecttypen</a></li><li class="tocline"><a class="tocxref" href="#informatieobjecten"><bdi class="secno">4.3.2 </bdi>InformatieObjecten</a></li><li class="tocline"><a class="tocxref" href="#gebiedsindeling"><bdi class="secno">4.3.3 </bdi>Gebiedsindeling</a></li><li class="tocline"><a class="tocxref" href="#automatische-waarden"><bdi class="secno">4.3.4 </bdi>Automatische waarden</a></li><li class="tocline"><a class="tocxref" href="#classificerende-attributen"><bdi class="secno">4.3.5 </bdi>Classificerende attributen</a></li><li class="tocline"><a class="tocxref" href="#vakdisciplines"><bdi class="secno">4.3.6 </bdi>Vakdisciplines</a></li><li class="tocline"><a class="tocxref" href="#gekwalificeerde-waardeshapes"><bdi class="secno">4.3.7 </bdi>Gekwalificeerde waardeshapes</a></li><li class="tocline"><a class="tocxref" href="#topologische-elementen"><bdi class="secno">4.3.8 </bdi>Topologische elementen</a></li><li class="tocline"><a class="tocxref" href="#materie"><bdi class="secno">4.3.9 </bdi>Materie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#imbor-distributie"><bdi class="secno">5. </bdi>IMBOR distributie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-in-ms-access"><bdi class="secno">5.1 </bdi>IMBOR in MS Access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#tabelindeling"><bdi class="secno">5.1.1 </bdi>Tabelindeling</a></li><li class="tocline"><a class="tocxref" href="#begrippenkader"><bdi class="secno">5.1.2 </bdi>Begrippenkader</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imborvoc_termen"><bdi class="secno">5.1.2.1 </bdi>imborVoc_Termen</a></li><li class="tocline"><a class="tocxref" href="#imborvoc_collecties"><bdi class="secno">5.1.2.2 </bdi>imborVoc_Collecties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kernmodel"><bdi class="secno">5.1.3 </bdi>Kernmodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imborkern_klassen"><bdi class="secno">5.1.3.1 </bdi>imborKern_Klassen</a></li><li class="tocline"><a class="tocxref" href="#imborkern_klassenindeling"><bdi class="secno">5.1.3.2 </bdi>imborKern_Klassenindeling</a></li><li class="tocline"><a class="tocxref" href="#imborkern_klassenchildparent"><bdi class="secno">5.1.3.3 </bdi>imborKern_KlassenChildParent</a></li><li class="tocline"><a class="tocxref" href="#imborkern_attributen"><bdi class="secno">5.1.3.4 </bdi>imborKern_Attributen</a></li><li class="tocline"><a class="tocxref" href="#imborkern_enumeratiesdomeinwaarden"><bdi class="secno">5.1.3.5 </bdi>imborKern_EnumeratiesDomeinwaarden</a></li><li class="tocline"><a class="tocxref" href="#imborkern_k_klasseattributen"><bdi class="secno">5.1.3.6 </bdi>imborKern_K_KlasseAttributen</a></li><li class="tocline"><a class="tocxref" href="#imborkern_k_vakdisciplinesobjecttypen"><bdi class="secno">5.1.3.7 </bdi>imborKern_K_VakdisciplinesObjecttypen</a></li><li class="tocline"><a class="tocxref" href="#imborkern_k_objecttypensemantischerelaties"><bdi class="secno">5.1.3.8 </bdi>imborKern_K_ObjecttypenSemantischeRelaties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#referentiemodellen"><bdi class="secno">5.1.4 </bdi>Referentiemodellen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#imbor-in-linkeddata"><bdi class="secno">5.2 </bdi>IMBOR in LinkedData</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ontologie-indeling-in-grafen"><bdi class="secno">5.2.1 </bdi>Ontologie indeling (in grafen)</a></li><li class="tocline"><a class="tocxref" href="#begrippenkader-0"><bdi class="secno">5.2.2 </bdi>Begrippenkader</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-term-term"><bdi class="secno">5.2.2.1 </bdi>imbor-term:Term</a></li><li class="tocline"><a class="tocxref" href="#imbor-term-collectie"><bdi class="secno">5.2.2.2 </bdi>imbor-term:Collectie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nen2660"><bdi class="secno">5.2.3 </bdi>NEN2660</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#nen2660-discreteobject"><bdi class="secno">5.2.3.1 </bdi>nen2660:DiscreteObject</a></li><li class="tocline"><a class="tocxref" href="#nen2660-spatialregion"><bdi class="secno">5.2.3.2 </bdi>nen2660:SpatialRegion</a></li><li class="tocline"><a class="tocxref" href="#nen2660-informationobject"><bdi class="secno">5.2.3.3 </bdi>nen2660:InformationObject</a></li><li class="tocline"><a class="tocxref" href="#nen2660-geometricentity"><bdi class="secno">5.2.3.4 </bdi>nen2660:GeometricEntity</a></li><li class="tocline"><a class="tocxref" href="#nen2660-enumerationtype"><bdi class="secno">5.2.3.5 </bdi>nen2660:EnumerationType</a></li><li class="tocline"><a class="tocxref" href="#nen2660-activity"><bdi class="secno">5.2.3.6 </bdi>nen2660:Activity</a></li><li class="tocline"><a class="tocxref" href="#nen2660-matter"><bdi class="secno">5.2.3.7 </bdi>nen2660:Matter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kernmodel-0"><bdi class="secno">5.2.4 </bdi>Kernmodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-klasse"><bdi class="secno">5.2.4.1 </bdi>imbor:Klasse</a></li><li class="tocline"><a class="tocxref" href="#imbor-klasseattribuut"><bdi class="secno">5.2.4.2 </bdi>imbor:KlasseAttribuut</a></li><li class="tocline"><a class="tocxref" href="#imbor-attribuut"><bdi class="secno">5.2.4.3 </bdi>imbor:Attribuut</a></li><li class="tocline"><a class="tocxref" href="#imbor-enumeratietype"><bdi class="secno">5.2.4.4 </bdi>imbor:EnumeratieType</a></li><li class="tocline"><a class="tocxref" href="#imbor-domeinwaarde-domeinwaarde"><bdi class="secno">5.2.4.5 </bdi>imbor-domeinwaarde:Domeinwaarde</a></li><li class="tocline"><a class="tocxref" href="#imbor-vakdiscipline"><bdi class="secno">5.2.4.6 </bdi>imbor:Vakdiscipline</a></li></ol></li><li class="tocline"><a class="tocxref" href="#referentiemodellen-0"><bdi class="secno">5.2.5 </bdi>Referentiemodellen</a></li><li class="tocline"><a class="tocxref" href="#aanvullend-metamodel"><bdi class="secno">5.2.6 </bdi>Aanvullend 'metamodel'</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#referentiemodellen-1"><bdi class="secno">6. </bdi>Referentiemodellen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#toelichting-per-referentiemodel"><bdi class="secno">6.1 </bdi>Toelichting per referentiemodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#nen2660-2"><bdi class="secno">6.1.1 </bdi>NEN2660-2</a></li><li class="tocline"><a class="tocxref" href="#nen3610"><bdi class="secno">6.1.2 </bdi>NEN3610</a></li><li class="tocline"><a class="tocxref" href="#mim"><bdi class="secno">6.1.3 </bdi>MIM</a></li><li class="tocline"><a class="tocxref" href="#gwsw"><bdi class="secno">6.1.4 </bdi>GWSW</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gwsw-als-referentiemodel"><bdi class="secno">6.1.4.1 </bdi>GWSW als referentiemodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nen2767-4"><bdi class="secno">6.1.5 </bdi>NEN2767-4</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#nen2767-als-referentiemodel"><bdi class="secno">6.1.5.1 </bdi>NEN2767 als referentiemodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bgt-imgeo"><bdi class="secno">6.1.6 </bdi>BGT/IMGeo</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imgeo-als-referentiemodel"><bdi class="secno">6.1.6.1 </bdi>IMGeo als referentiemodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sor"><bdi class="secno">6.1.7 </bdi>SOR</a></li><li class="tocline"><a class="tocxref" href="#imkl"><bdi class="secno">6.1.8 </bdi>IMKL</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imkl-als-referentiemodel"><bdi class="secno">6.1.8.1 </bdi>IMKL als referentiemodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#imwv"><bdi class="secno">6.1.9 </bdi>IMWV</a></li><li class="tocline"><a class="tocxref" href="#kor"><bdi class="secno">6.1.10 </bdi>KOR</a></li><li class="tocline"><a class="tocxref" href="#bor-meld"><bdi class="secno">6.1.11 </bdi>BOR-MELD</a></li><li class="tocline"><a class="tocxref" href="#qudt"><bdi class="secno">6.1.12 </bdi>QUDT</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#qudt-als-referentiemodel"><bdi class="secno">6.1.12.1 </bdi>QUDT als referentiemodel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gwsl"><bdi class="secno">6.1.13 </bdi>GWSL</a></li><li class="tocline"><a class="tocxref" href="#aquo-imwa"><bdi class="secno">6.1.14 </bdi>Aquo/IMWA</a></li><li class="tocline"><a class="tocxref" href="#bag"><bdi class="secno">6.1.15 </bdi>BAG</a></li><li class="tocline"><a class="tocxref" href="#brk-imkad"><bdi class="secno">6.1.16 </bdi>BRK/IMKAD</a></li><li class="tocline"><a class="tocxref" href="#bro"><bdi class="secno">6.1.17 </bdi>BRO</a></li><li class="tocline"><a class="tocxref" href="#cb-nl"><bdi class="secno">6.1.18 </bdi>CB-NL</a></li><li class="tocline"><a class="tocxref" href="#imgeluid"><bdi class="secno">6.1.19 </bdi>IMGeluid</a></li><li class="tocline"><a class="tocxref" href="#imna"><bdi class="secno">6.1.20 </bdi>IMNa</a></li><li class="tocline"><a class="tocxref" href="#nlcs"><bdi class="secno">6.1.21 </bdi>NLCS</a></li><li class="tocline"><a class="tocxref" href="#nwb"><bdi class="secno">6.1.22 </bdi>NWB</a></li><li class="tocline"><a class="tocxref" href="#pim"><bdi class="secno">6.1.23 </bdi>PIM</a></li><li class="tocline"><a class="tocxref" href="#wegbeheersystematiek"><bdi class="secno">6.1.24 </bdi>Wegbeheersystematiek</a></li><li class="tocline"><a class="tocxref" href="#wibon"><bdi class="secno">6.1.25 </bdi>WIBON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#referentiemodellen-in-ms-access"><bdi class="secno">6.2 </bdi>Referentiemodellen in MS Access</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#tabelindeling-0"><bdi class="secno">6.2.1 </bdi>Tabelindeling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#refmodel_informatiemodellen"><bdi class="secno">6.2.1.1 </bdi>refModel_Informatiemodellen</a></li><li class="tocline"><a class="tocxref" href="#refmodel_objecttypen"><bdi class="secno">6.2.1.2 </bdi>refModel_Objecttypen</a></li><li class="tocline"><a class="tocxref" href="#refmodel_attributen"><bdi class="secno">6.2.1.3 </bdi>refModel_Attributen</a></li><li class="tocline"><a class="tocxref" href="#refmodel_domeinwaarden"><bdi class="secno">6.2.1.4 </bdi>refModel_Domeinwaarden</a></li><li class="tocline"><a class="tocxref" href="#refmodel_mapping"><bdi class="secno">6.2.1.5 </bdi>refModel_Mapping</a></li><li class="tocline"><a class="tocxref" href="#refmodel_minimaledatasets"><bdi class="secno">6.2.1.6 </bdi>refModel_MinimaleDatasets</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#referentiemodellen-in-linkeddata"><bdi class="secno">6.3 </bdi>Referentiemodellen in LinkedData</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#class-indeling"><bdi class="secno">6.3.1 </bdi>Class indeling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ref-informatiemodel"><bdi class="secno">6.3.1.1 </bdi>ref:Informatiemodel</a></li><li class="tocline"><a class="tocxref" href="#ref-refmapping"><bdi class="secno">6.3.1.2 </bdi>ref:RefMapping</a></li><li class="tocline"><a class="tocxref" href="#ref-refobjecttype"><bdi class="secno">6.3.1.3 </bdi>ref:RefObjecttype</a></li><li class="tocline"><a class="tocxref" href="#ref-refattribuut"><bdi class="secno">6.3.1.4 </bdi>ref:RefAttribuut</a></li><li class="tocline"><a class="tocxref" href="#ref-refdomeinwaarde"><bdi class="secno">6.3.1.5 </bdi>ref:RefDomeinwaarde</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#mim-addendum"><bdi class="secno">7. </bdi>MIM addendum</a></li><li class="tocline"><a class="tocxref" href="#geometrie"><bdi class="secno">8. </bdi>Geometrie</a></li><li class="tocline"><a class="tocxref" href="#minimale-datasets"><bdi class="secno">9. </bdi>Minimale datasets</a></li><li class="tocline"><a class="tocxref" href="#oagbd"><bdi class="secno">10. </bdi>OAGBD</a></li><li class="tocline"><a class="tocxref" href="#licenties"><bdi class="secno">11. </bdi>Licenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imbor-gegevens"><bdi class="secno">11.1 </bdi>IMBOR gegevens</a></li><li class="tocline"><a class="tocxref" href="#imbor-producten"><bdi class="secno">11.2 </bdi>IMBOR Producten</a></li><li class="tocline"><a class="tocxref" href="#imbor-documentatie"><bdi class="secno">11.3 </bdi>IMBOR Documentatie</a></li><li class="tocline"><a class="tocxref" href="#imbor-query-s"><bdi class="secno">11.4 </bdi>IMBOR Query's</a></li><li class="tocline"><a class="tocxref" href="#imbor-randsoftware"><bdi class="secno">11.5 </bdi>IMBOR Randsoftware</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gwsw-relatie-toevoeging"><bdi class="secno">A. </bdi>GWSW relatie toevoeging</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">B.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  
+  
+  <section data-format="markdown" class="informative" id="versie-historie"><div class="header-wrapper"><h2 id="x1-versie-historie"><bdi class="secno">1. </bdi>Versie historie</h2><a class="self-link" href="#versie-historie" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<div class="overlarge"><table class="data">
+<thead>
+<tr>
+<th align="center">Datum</th>
+<th>Versie</th>
+<th>Toelichting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">16-04-2021</td>
+<td>0.1</td>
+<td>Initiële versie Respec publicatie n.a.v. major release 'Herstructurering IMBOR 2022'</td>
+</tr>
+<tr>
+<td align="center">30-06-2021</td>
+<td>0.2</td>
+<td>Update van diagrammen en LD informatie</td>
+</tr>
+<tr>
+<td align="center">23-07-2021</td>
+<td>0.3</td>
+<td>Toevoeging Top hiërarchie + release concept AccessDB</td>
+</tr>
+<tr>
+<td align="center">20-08-2021</td>
+<td>0.4</td>
+<td>Uitleg over referentiemodellen</td>
+</tr>
+<tr>
+<td align="center">01-09-2021</td>
+<td>0.5</td>
+<td>Aanpassingen tbv laatste versie AccessDB + onderscheid informatieve delen</td>
+</tr>
+<tr>
+<td align="center">15-10-2021</td>
+<td>0.6</td>
+<td>Laatste aanpassingen t.b.v. consultatie versie IMBOR2022.c02</td>
+</tr>
+<tr>
+<td align="center">26-10-2021</td>
+<td>0.7</td>
+<td>Consultatie versie (typo's)</td>
+</tr>
+<tr>
+<td align="center">08-11-2021</td>
+<td>0.8</td>
+<td>Aanpassing van IMBOR2021 naar IMBOR2022</td>
+</tr>
+<tr>
+<td align="center">24-12-2021</td>
+<td>0.9</td>
+<td>Eerste aanpassingen na consultatie ronde</td>
+</tr>
+<tr>
+<td align="center">22-02-2022</td>
+<td>0.91</td>
+<td>Transfer naar /imbor/techdoc/</td>
+</tr>
+<tr>
+<td align="center">10-03-2022</td>
+<td>1.0</td>
+<td>IMBOR 2022 release</td>
+</tr>
+<tr>
+<td align="center">25-03-2022</td>
+<td>1.1</td>
+<td>IMBOR 2022.01 release en licentie informatie</td>
+</tr>
+<tr>
+<td align="center">13-05-2022</td>
+<td>1.11</td>
+<td>Update naar nieuwe ReSpec template CROW</td>
+</tr>
+<tr>
+<td align="center">22-03-2023</td>
+<td>1.12</td>
+<td>Update OAGDB en redacteurs</td>
+</tr>
+
+</tbody></table></div>
+</section>     
+  <section data-format="markdown" id="inleiding"><div class="header-wrapper"><h2 id="x2-inleiding"><bdi class="secno">2. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 2."></a></div>
+<p>Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’. Het IMBOR heeft relaties met Basisregistratie Grootschalige Topografie (BGT) en op het Informatiemodel Geografie (IMGeo). Zie ook <a href="https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/over-imbor">over IMBOR</a>.</p>
+<p>In 2021 is besloten om IMBOR te herzien n.a.v. een aantal ontwikkelingen:</p>
+<ul>
+<li>IMBOR wordt in beheer genomen, i.p.v. in ontwikkeling te zijn</li>
+<li>Het beschikbaar komen van de <a href="https://www.nen.nl/nieuws/normontwerp-informatiemodellering-van-gebouwde-omgeving-ter-commentaar/">NEN2660-2</a></li>
+<li>Het beschikbaar komen van de herziende <a href="https://www.nen.nl/nen-3610-2022-nl-296137">NEN3610</a></li>
+<li>De vraag om LinkedData versies van sectorstandaarden</li>
+<li>De bredere adoptie van het <a href="https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim">MIM</a></li>
+<li>De adaptatie van het werken met ontologieën (vaak onder de noemer 'OTL's)</li>
+<li>De vraag om afstemming tussen standaarden (<a href="https://docs.geostandaarden.nl/disgeo/hiso/">SOR</a>, <a href="https://www.nen.nl/nieuws/conditiemeting/eerste-stap-eenduidige-aansluiting-tussen-imbor-en-nen-2767-gezet/">IMBOR-NEN2767-4</a>, <a href="https://www.crow.nl/thema-s/management-openbare-ruimte/imbor/de-relatie-tussen-imbor-en-gwsw">GWSW</a>, <a href="https://www.linkedin.com/pulse/start-ontwikkeling-gegevenswoordenboek-stedelijk-licht-verhoeven?trk=read_related_article-card_title">GWSL</a> en <a href="https://www.bimloket.nl/p/98/CB-NL">CB-NL2.0</a>)</li>
+<li>De wens om de beheeromgeving en beheerprocedures rondom IMBOR te concretiseren</li>
+</ul>
+<p>Met werkgroepen is de inhoud medio 2020 voorlopig vastgesteld. Mede daarom is besloten om in 2021 een nieuwe release te doen die (minder) aanpassingen aan de inhoud heeft, maar vooral in modellering en structuur meer aansluiting vind bij de nieuwe standaarden en daardoor robuuster is.</p>
+<p>Tot en met IMBOR2020-08 is zowel de publicatie van IMBOR en het beheer van de inhoud in Microsoft Access gedaan. Vanaf IMBOR2022 is een transitietraject ingegaan om IMBOR los te weken van de implementatie in Access. Hiermee zal IMBOR2022 beschikbaar komen in zowel Access als in LinkedData. Het beheer van IMBOR wordt vooralsnog in Access gedaan, maar dit zal in de loop van 2021/2022 nader bekeken worden.</p>
+<section id="normatief-informatief"><div class="header-wrapper"><h3 id="x2-1-normatief-informatief"><bdi class="secno">2.1 </bdi>Normatief &amp; informatief</h3><a class="self-link" href="#normatief-informatief" aria-label="Permalink for Section 2.1"></a></div>
+<p>Deze ReSpec is ingedeeld in secties. Alle secties zijn 'normatief' tenzij dit anders vermeld is door de zin: <i>"Dit onderdeel is niet normatief"</i>.</p>
+<div class="advisement">
+ Normatief wil in deze context zeggen dat de informatie onderdeel is van IMBOR en wanneer men zich 'committeert aan IMBOR' zich aan deze secties dient te houden. Sommige secties zijn zodoende informatief en mogen gezien worden als 'suggesties', 'aanvullingen' of 'best practices' vanuit IMBOR. Een organisatie kiest zelf dan ook of zij zich <i>ook</i> aan die sectie committeert.  
+</div>
+
+<figure id="fig-imbor-normatief-informatieve-onderdelen">
+
+<p><img src="img/IMBOR_info&amp;normatief.drawio.png?raw=true" alt="IMBOR Normatief &amp; Informatief"></p>
+<figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">IMBOR Normatief &amp; Informatieve onderdelen</span></figcaption>
+</figure>
+
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span></div><div class="">
+ In de sectie "Referenties" onder aan deze ReSpec pagina worden W3C referenties genoemd. Deze staan daar als 'informatieve referenties'. Dit is een ReSpec 'bug'. Alles wat daar vermeld staat is onderdeel van het <i>normatieve</i> gedeelte van IMBOR.  
+</div></div>
+
+</section><section id="toepassingsgebied"><div class="header-wrapper"><h3 id="x2-2-toepassingsgebied"><bdi class="secno">2.2 </bdi>Toepassingsgebied</h3><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 2.2"></a></div>
+<p>In het IMBOR zijn landelijke afspraken gemaakt over de objectgegevens voor het beheer van de openbare ruimte. Het is daarmee een belangrijk hulpmiddel dat beheerders ondersteunt bij de opzet en vulling van hun beheersystemen, bijvoorbeeld voor wegbeheer en groenbeheer. Hierdoor wordt integraal beheer van de openbare ruimte gemakkelijker en kunnen beheerder beter gegevens delen en hun data op orde houden.</p>
+<ul>
+<li>In het IMBOR is alle informatie die nodig is voor het beheer vastgelegd bij objecttypen, hun onderlinge relaties en in hun attributen en bijbehorende domeinwaarden. Door gebruik van deze benamingen ontstaat uniformiteit in het vakgebied ‘beheer openbare ruimte’; dit bevordert de communicatie en uitwisseling van gegevens/</li>
+<li>De benamingen en indelingen zijn zoveel mogelijk afgestemd op de meest gebruikte standaarden, richtlijnen en normen voor het vakgebied openbare ruimte; het IMBOR zorgt er dus voordat deze eenvoudiger kunnen worden toegepast.</li>
+</ul>
+<p>Met de IMBOR Vocabulaire is een 'taal' beschikbaar die gesproken kan worden in de BOR-(beheer openbare ruimte) sector. Deze kan in samenhang gebruikt worden met andere vocabulaires. Met de IMBOR Ontologie is een meer complete beschrijving van het model voor het beheer van de openbare ruimte beschikbaar. Hierin worden de informatiebehoeften beschreven, inclusief standaardisatie en de vastlegging daarvan. </p>
+<section id="imbor-door-ontwikkeling-in-software"><div class="header-wrapper"><h4 id="x2-2-1-imbor-door-ontwikkeling-in-software"><bdi class="secno">2.2.1 </bdi>IMBOR (door)ontwikkeling in software</h4><a class="self-link" href="#imbor-door-ontwikkeling-in-software" aria-label="Permalink for Section 2.2.1"></a></div>
+<p>IMBOR is begonnen als verrijking van het BGT|IMGeo, als specifiek informatiemodel voor het BOR domein. Inmiddels is het geëvolueerd naar een op zich zelf staande vocabulaire en ontologie. De titel 'informatiemodel' begint dan ook steeds minder te passen. Met de vernieuwde <a href="https://www.nen.nl/elasticsearch/?search=2660-2&amp;sortmode=asc&amp;viewmode=list">NEN2660-2</a> is er een duidelijke lijn hoe informatie rondom de gebouwde omgeving kan worden vastgelegd en gedeeld.  In het kader van de NEN2660-2 is IMBOR dan ook 'gewoon' een ontologie. Vanuit CROW wordt dit ook zo benaderd. De keuze voor LinkedData heeft hier dan ook mee te maken. BGT|IMGeo (en zodoende ook het begin van IMBOR) zijn gemaakt om software op te bouwen. Het zijn modellen die beschrijven hoe de data moet worden vastgelegd om deze zonder informatieverlies te kunnen delen. Met de komst van LinkedData is deze vastlegging gestandaardiseerd op internationaal niveau. Er wordt met IMBOR dan ook een toekomst voorzien dat men geen software meer maakt voor het vastleggen van 'Boom' of 'Wegas', maar software maakt voor het vastleggen van klassen uit de NEN2660-2, zoals 'DiscreetObject' en 'RuimtelijkObject'. Zodoende kan er veel dynamische omgesprongen worden met de ontologie en hoeft software niet zo vaak aangepast te worden, maar is de gebruiker van de software (de kennishouder) in staat om zijn assets op de juiste manier te 'classificeren'. </p>
+<p>Dit zegt ook iets over de beoogde implementatie van IMBOR in software pakketten. Vanuit IMBOR en CROW worden software leveranciers dan ook geadviseerd om zich in te stellen op de principes van de NEN2660-2. Zodat zij hun software kunnen gaan 'vullen' met ontologiën zoals IMBOR en <a href="#referentiemodellen-1">andere modellen</a> die op de NEN2660-2 gebaseerd zijn of gaan worden. Het toepassen van IMBOR betekent dan dat de klassen in softwarepakket worden 'gevuld' met de IMBOR-ontologie. Dit betekent ook dat toekomstige wijzigingen in nieuwe versies van het IMBOR relatief eenvoudig kunnen worden 'geconfigureerd' en dat geen herprogrammaring nodig is. </p>
+</section><section id="regie-op-standaarden"><div class="header-wrapper"><h4 id="x2-2-2-regie-op-standaarden"><bdi class="secno">2.2.2 </bdi>Regie op standaarden</h4><a class="self-link" href="#regie-op-standaarden" aria-label="Permalink for Section 2.2.2"></a></div>
+<p>Met de modellering van IMBOR op basis van de NEN2660-2 wordt het voor organisaties die standaarden proberen te ontwikkelen zoals Stichting CROW, Stichting RIONED en Geonovum ook gemakkelijker om hun standaarden op elkaar af te stemmen en aan elkaar te relateren zodat dit dan niet meer bij de software leveranciers of opdrachtgevers komt te liggen. Deze kunnen de standaarden dan beter in samenhang gebruiken. Om dit te laten werken moeten deze organisaties onderling afspreken om:</p>
+<ul>
+<li>hun ontologie te baseren op de NEN2660-2 en de NEN3610,</li>
+<li>de modellering waar mogelijk te beschrijven volgens het MIM,</li>
+<li>de relaties met andere standaarden wederzijds te beschrijven en continue te bewaken,</li>
+<li>de ontologie (ook) als LinkedData te publiceren, en</li>
+<li>zo veel mogelijk via dezelfde technieken te ontsluiten.
+Dit vraagt zodoende niet alleen technische inspanning, maar zeker ook proces en organisatie afstemming.</li>
+</ul>
+</section></section><section id="doelgroep"><div class="header-wrapper"><h3 id="x2-3-doelgroep"><bdi class="secno">2.3 </bdi>Doelgroep</h3><a class="self-link" href="#doelgroep" aria-label="Permalink for Section 2.3"></a></div>
+<p>Dit document is bedoeld als 'technische documentatie' rondom IMBOR. Het is dan ook primair bestemd voor informatiearchitecten, gegevensbeheerders of softwareleveranciers die IMBOR willen toepassen en er implementaties van maken. Enige kennis van informatiemodellering is daarom benodigd. IMBOR richt zich in het bijzonder op de informatievoorziening binnen het (overheidsdomein) beheer van de openbare ruimte.</p>
+<blockquote>
+<p>Er worden door de IMBOR modelleurs ook modelleerregels gehanteerd. Deze kunnen ook handig zijn voor diegene die IMBOR gebruiken en/of implementeren. Dit levende document is te vinden bij de IMBOR documentatie onder de noemer: <a href="https://docs.crow.nl/imbor/modelleerregels">IMBOR Modelleerregels</a>.</p>
+</blockquote>
+</section></section>
+  <section data-format="markdown" id="imbor-in-modellen"><div class="header-wrapper"><h2 id="x3-imbor-in-modellen"><bdi class="secno">3. </bdi>IMBOR in modellen</h2><a class="self-link" href="#imbor-in-modellen" aria-label="Permalink for Section 3."></a></div>
+<p>Tot en met IMBOR2020-08 zat het metamodel van IMBOR in de content verwerkt. Vanaf 2021 wordt er expliciet gemaakt hoe IMBOR gemodelleerd is. Hierbij wordt gebruik gemaakt van de principes die het metamodel voor informatiemodellering (<a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#typen-informatiemodellen">MIM</a>) definieert. Hier worden vier 'lagen' van modellen gedefinieerd:</p>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#niveau-1-model-van-begrippen">Niveau 1</a>: Model van begrippen</li>
+<li><a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#niveau-2-conceptueel-informatiemodel">Niveau 2</a>: Conceptueel informatiemodel</li>
+<li><a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#niveau-3-logisch-informatie-of-gegevensmodel">Niveau 3</a>: Logisch informatiemodel</li>
+<li><a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#niveau-4-fysiek-of-technisch-gegevens-of-datamodel">Niveau 4</a>: Fysiek datamodel</li>
+</ol>
+<p>IMBOR acteert in niveau 1 en niveau 3. Niveau 2 wordt voor IMBOR over geslagen en bestaat alleen impliciet. Niveau 4 beschrijft IMBOR in het kader van de distributie. Dit is dus geen uitleg <em>hoe</em> IMBOR geïmplementeerd moet worden in een database. Maar een uitleg hoe de onderdelen van IMBOR uitgedrukt worden in de MS Access distributie en de LinkedData distributie. </p>
+<section id="model-van-begrippen"><div class="header-wrapper"><h3 id="x3-1-model-van-begrippen"><bdi class="secno">3.1 </bdi>Model van begrippen</h3><a class="self-link" href="#model-van-begrippen" aria-label="Permalink for Section 3.1"></a></div>
+<p>Het model van begrippen is in deze context gelijk aan een 'vocabulaire'. Het definieert het begrippenkader van IMBOR. Begrippen mogen in verschillende informatiemodellen gebruikt worden, maar worden op één plek, één keer gedefinieerd. Onderstaande figuur betreft het 'metamodel' van de IMBOR Vocabulair. Dit is gebaseerd op een SKOS model (de content wordt later dan ook in SKOS uitgedrukt). Zowel het <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#typen-informatiemodellen">MIM</a> als de NEN2660-2 bevelen dit aan. 
+Onderstaande figuur is niet het model zelf, maar het (<a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#niveau-2-conceptueel-informatiemodel">conceptuele</a>) metamodel hiervan.</p>
+<div class="advisement">
+De IMBOR Vocabulaire is te verkennen op:
+
+<p> <a href="https://begrippen.crow.nl/IMBOR/" target="_blank">begrippen.crow.nl/IMBOR</a> </p>
+</div>
+
+<figure id="fig-imbor-vocabulair-metamodel-rechtermuisknop-openen-in-nieuw-tabblad-voor-leesbare-versie">
+
+<p><img src="img/Modulaire%20opzet%20IMBOR_Voc-Metamodel.drawio.png?raw=true" alt="IMBOR Vocabulair 'Metamodel'"></p>
+<figcaption>Figuur <bdi class="figno">2</bdi> <span class="fig-title">IMBOR Vocabulair 'Metamodel' -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</span></figcaption>
+</figure>
+
+</section><section id="logisch-informatiemodel"><div class="header-wrapper"><h3 id="x3-2-logisch-informatiemodel"><bdi class="secno">3.2 </bdi>Logisch informatiemodel</h3><a class="self-link" href="#logisch-informatiemodel" aria-label="Permalink for Section 3.2"></a></div>
+<p>Binnen IMBOR gaan we uit van bestaande vocabulaires, te weten de NEN2660-2, de NEN3610 en het MIM. Binnen het logische informatiemodel wordt een ontologie onderscheiden. In deze ontologie maken we voornamelijk gebruik van het "NEN2660-2 Praktisch toplevelmodel". Alle concepten binnen de IMBOR ontologie worden beschreven binnen de context van de NEN2660-2. Hiermee sluiten we aan bij de ordeningsregels en uiteindelijk ook de taalbinding die in de NEN2660-2 beschreven worden. Hiermee is het "NEN2660-2 praktisch toplevelmodel" ook de top van de IMBOR. Het logische informatiemodel beschrijft alle concepten, attributen en relaties binnen IMBOR. Onafhankelijk van de beheeromgeving waarin IMBOR beheert wordt zal deze leidend blijven. Waar mogelijk is dit in lijn met het <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#typen-informatiemodellen">MIM</a> en de NEN3610, echter de NEN2660-2 blijft het voornaamste uitgangspunt.</p>
+<p>Onderstaande figuur is niet het logische informatiemodel zelf, maar het metamodel hiervan. Dit metamodel is specifieke voor IMBOR en staat dus 'naast' het <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#typen-informatiemodellen">MIM</a>. De opzet hiervan wijkt af van de NEN2660-2 (en ook van MIM). In de LinkedData versie wordt er middels een ETL-pipeline gezorgd dat het er correct volgens de NEN2660-2 taalbinding uit komt. Het IMBOR 'Metamodel' is nodig om dat vanuit "legacy" zaken (zoals het onderscheidt tussen <code>Klasse</code> en <code>Objecttype</code> en het feit dat er bijvoorbeeld een <code>Eenheid</code> aan een combinatie van <code>Attribuut</code> en <code>Klasse</code> hangt) nu eenmaal zo IMBOR zaten/zitten. Kortom, de (LinkedData) eindgebruiker zal niks te maken hebben met dat metamodel, maar volgt volledig de NEN2660-2.</p>
+<figure id="fig-imbor-kern-metamodel-rechtermuisknop-openen-in-nieuw-tabblad-voor-leesbare-versie">
+
+<p><img src="img/Modulaire%20opzet%20IMBOR_Kern-Metamodel.drawio.png?raw=true" alt="IMBOR Kern 'Metamodel'"></p>
+<figcaption>Figuur <bdi class="figno">3</bdi> <span class="fig-title">IMBOR Kern 'Metamodel' -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</span></figcaption>
+</figure>
+
+
+<div class="advisement">
+
+<p> <strong>Semantiek t.o.v. MIM</strong></p>
+<p> Het MIM wordt op meerdere plekken aangehaald binnen IMBOR. Omdat IMBOR in eerste instantie de NEN2660-2 volgt is de semantiek tussen IMBOR en het MIM soms wat verwarrend. Hier een nadere toelichting.</p>
+<p> Het <code>Object</code> in MIM is de instantie van het <code>Objecttype</code> in MIM. Deze zijn allebei een UML <code>Class</code>. In IMBOR zijn er <code>Klassen</code> onderscheiden, sommige <code>Klassen</code> krijgen het synoniem <code>Objecttype</code>. Dit betreffen de concrete klassen en vaak de 'bladeren van de boom', ofwel de onderste in de hiërarchie. Deze concrete klassen (ofwel <code>Objectypen</code>) zijn degene waar instanties van te verwachten zijn in de beheerpakketten. Deze instanties worden weer <code>Object</code> genoemd (in lijn met MIM). De vergelijking is te maken met <code>Classes</code> en <code>Instances</code>.</p>
+<p> Het <code>Attribuut</code> en de <code>Attribuutsoort</code> in MIM zijn vergelijkbaar (conceptueel) met het <code>Object</code> en het <code>Objecttype</code> in MIM (de een is dus instantie van de ander. In IMBOR (en de NEN2660-2/OTL wereld) hebben zaken net een andere betekenis. Het <code>Attribuut</code> betreft de te registreren kenmerk of eigenschap van een <code>Klasse</code>. De <code>Attribuutsoort</code> werd in IMBOR2020-08 gebruikt om aan te geven 'wat voor een soort attribuut het betrof. Dit is in IMBOR2022 vervangen door <code>TypeAttribuut</code>.</p>
+<p> In MIM wordt met het <code>Datatype</code> aangegeven wat de structuur is waaraan een waarde, oftewel de data zelf, aan moet voldoen. In IMBOR2020-08 zat dit vermengd in de <code>Attribuutsoort</code> en het <code>Gegevenstype</code>. Dit is anders aangepakt in IMBOR2022. <code>Gegevenstype</code> is dan ook vervangen door <code>Datatype</code>.</p>
+<p> <code>Multipliciteit</code> en <code>Kardinaliteit</code> zijn onderwerp van discussie in verschillende gremia. Ook het MIM is hier niet eenduidige in. Binnen IMBOR2022 wordt de volgende werkwijze gehanteerd:</p>
+<p><em>Simply put: a multiplicity is made up of a lower and an upper cardinality. A cardinality is how many elements are in a set. Thus, a multiplicity tells you the minimum and maximum allowed members of the set. They are not synonymous.</em> <a href="https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality">Source</a></p>
+<p><code>Multipliciteit</code> is dus de algemene term om aan te geven hoe vaak iets voorkomt. De getallen die daar ingevuld staan, betreffen de <code>Kardinaliteit</code>. Een voorbeeld: De relatie tussen een fiets en wielen heeft een <code>Multipliciteit</code> met een minimale <code>Kardinaliteit</code> van 2 en een maximale <code>Kardinaliteit</code> van 2.</p>
+</div>
+
+</section><section id="fysiek-datamodel"><div class="header-wrapper"><h3 id="x3-3-fysiek-datamodel"><bdi class="secno">3.3 </bdi>Fysiek datamodel</h3><a class="self-link" href="#fysiek-datamodel" aria-label="Permalink for Section 3.3"></a></div>
+<p>Omdat IMBOR nu nog gedistribueerd wordt in een MS Access database en LinkedData is het fysieke datamodel een beschrijving van hoe de IMBOR onderdelen uitgedrukt worden. Dit betekent geenszins dat IMBOR ook dit fysieke datamodel voorschrijft bij implementatie. Het geeft wel een goed inzicht in hoe de relaties lopen en welke verschillende (normatieve) onderdelen IMBOR kent. Het model wordt nader beschreven in de volgende secties.</p>
+<p>Het fysieke datamodel in LinkedData kan gelijk worden gesteld aan de 'serialisatie'. In het geval van IMBOR is dit [<cite><a class="bibref" data-link-type="biblio" href="#bib-turtle" title="RDF 1.1 Turtle">turtle</a></cite>].</p>
+<div class="advisement">
+De IMBOR Ontologie is te verkennen in de 'CROW | Ontologie verkenner' op:
+
+<p> <a href="https://docs.crow.nl/onto-verkenner/imbor" target="_blank">docs.crow.nl/onto-verkenner/imbor</a> </p>
+</div>
+
+
+
+</section></section>
+  <section data-format="markdown" id="imbor-samenhang-en-hierarchie"><div class="header-wrapper"><h2 id="x4-imbor-samenhang-en-hierarchie"><bdi class="secno">4. </bdi>IMBOR samenhang en hiërarchie</h2><a class="self-link" href="#imbor-samenhang-en-hierarchie" aria-label="Permalink for Section 4."></a></div>
+<p>IMBOR wordt gepositioneerd als sectormodel. De focus ligt op de vaste gegevens van objecten die herkend worden voor het beheer van de openbare ruimte. Kijkend naar het landschap waarin IMBOR wordt gebruikt zijn er veel raakvlakken met landelijke, maar ook andere sectorale modellen. Om deze afstemming zo optimaal te laten verlopen is getracht om de top van de IMBOR hiërarchie (ofwel de klassenindeling) zo veel mogelijk aan te laten sluiten op andere modellen. Dit is gedaan om enerzijds niet zaken zelf te verzinnen, maar zaken aan te vullen. En anderzijds om uiteindelijk een semantisch sterke mapping tussen de sectorale modellen mogelijk te kunnen maken. Wanneer sectorale modellen allemaal gebaseerd zijn op dezelfde uitgangspunten is het makkelijkere om onderin de boom de vergelijking te kunnen maken. Vandaar dat voor IMBOR2022 gekozen is om gebruik te maken van een polyhiërarchie gebaseerd op respectievelijk de NEN2660-2, de NEN3610, de SOR, het IMGeo2.2, het IMKL2.0 en het IMWV. </p>
+<section id="imbor-top-hierarchie"><div class="header-wrapper"><h3 id="x4-1-imbor-top-hierarchie"><bdi class="secno">4.1 </bdi>IMBOR Top hiërarchie</h3><a class="self-link" href="#imbor-top-hierarchie" aria-label="Permalink for Section 4.1"></a></div>
+<p>In onderstaand diagram is de top van de hiërarchie te vinden, met in kleur aangegeven waar de concepten vandaan komen. De relaties tussen de NEN2660-2 en de NEN3610 komen uit de NEN2660-2 documentatie zelf. En de relaties tussen de NEN3610 en de SOR komen uit de documentatie van de SOR zelf. Deze indeling zorgt ervoor dat voor alle IMBOR Objecttypen (niet afgebeeld) er een logische hiërarchie is, waarmee duidelijk is hoe deze zich verhoudt tot de landelijke standaarden. Te zien is dat er zeer weinig IMBOR specifieke (hoofd)klassen geïntroduceerd hoeven te worden omdat bijna alles al voldoende gedefinieerd wordt. Alle (ongeveer 500) Objecttypen hebben worden aan één of meerdere van deze klassen gehangen en krijgen hiermee een landelijke semantische definitie. De hiërarchie wordt tevens gebruikt om de attributen mee te distribueren, maar deze hebben (nog) geen landelijk/sectoraal kader. Hiermee wordt bedoeld dat dit diagram meer gebruikt moet worden als 'begrippenkader'(lees: de semantische afstemming van de modellen) dan dat het daadwerkelijk als een volwaardige ontologie ingezet kan worden. Dit is niet per se mogelijk omdat er geen volledige afstemming is tussen de attributen en onderlinge relaties.</p>
+<figure id="fig-imbor-top-van-de-ontologie-rechtermuisknop-openen-in-nieuw-tabblad-voor-leesbare-versie">
+
+<p><img src="img/IMBOR2022-top.drawio.svg?raw=true" alt="IMBOR 2022 Top hiërarchie"></p>
+<figcaption>Figuur <bdi class="figno">4</bdi> <span class="fig-title"><figcaption>IMBOR Top van de ontologie -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</figcaption></span></figcaption>
+</figure>
+
+
+<section id="definities-in-hierarchie"><div class="header-wrapper"><h4 id="x4-1-1-definities-in-hierarchie"><bdi class="secno">4.1.1 </bdi>Definities in hiërarchie</h4><a class="self-link" href="#definities-in-hierarchie" aria-label="Permalink for Section 4.1.1"></a></div>
+<p>Al deze concepten kennen definities. Omdat er geen semantische discussies gevoerd kunnen worden zonder dat de definities van de concepten bekend zijn worden ze hieronder uiteengezet. <em>(Dit betreft een extract uit de SVG/XML)</em></p>
+<ul>
+<li><strong>Aanschaf-informatie</strong>: Verzameling van gegevens die te maken hebben met de monetaire waarde van een object.</li>
+<li><strong>Activiteit</strong>: Iets dat mogelijk of daadwerkelijke gebeurt in ruimte en tijd.</li>
+<li><strong>Apparaat</strong>: Een (vaak compact) mechanisch of elektronisch ding dat is gemaakt of toegepast voor een specifieke toepassing en doorgaans in één behuizing gevat is.</li>
+<li><strong>Bak</strong>: Object met een permanent karakter dat dient om iets in te bergen of te verzamelen.</li>
+<li><strong>Begroeiing</strong>: Planten die op natuurlijke wijze zijn ontstaan of door mensen zijn aangeplant.</li>
+<li><strong>Beheerd object</strong>: Object welke door een organisatie beheerd wordt in de beheerfase van zijn levenscyclus.</li>
+<li><strong>Bereikbaarheid-informatie</strong>: Registratie van gegevens die betrekking hebben op de bereikbaarheid van het object.</li>
+<li><strong>Bodem</strong>: Bovenste begrenzing van het aardoppervlak, exclusief oppervlaktewater</li>
+<li><strong>Bord</strong>: Een paneel waarop informatie wordt afgebeeld.</li>
+<li><strong>Bordopschrift</strong>: Informatieobject voor het vastleggen van de informatie op een bord.</li>
+<li><strong>Bouwwerk</strong>: Gegevens die specifiek zijn voor een met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk.</li>
+<li><strong>Certificering-informatie</strong>: De verzameling van gegevens die gebruikt kan worden voor de wijze waarop een object gecertificeerd is.</li>
+<li><strong>Complex</strong>: Functionele ruimte die een verzameling van één of meer gebouwen, constructies, verharding, water en begroeiing betreft die samen een eenheid vormen.</li>
+<li><strong>Constructie</strong>: Gebouwd object dat direct of indirect met de grond is verbonden en bedoeld is om ter plaatse te functioneren.</li>
+<li><strong>Constructielaag</strong>: Laagopbouw onder begroeiing of verharding.</li>
+<li><strong>Constructieonderdeel</strong>: Constructieonderdeel, onderdeel van een objecttype die als zelfstandig objecttype beheerd kan worden.</li>
+<li><strong>DiscreetObject</strong>: Reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)</li>
+<li><strong>Document</strong>: Informatieobject voor het registreren en koppelen van documenten aan objecttypes.</li>
+<li><strong>Ecologische zone</strong>: Functionele ruimte speciaal voor het registreren van functionele aandachts- en onderzoeksgebieden.</li>
+<li><strong>Flora en fauna-informatie</strong>: Verzameling van gegevens die te maken hebben met het beheer van Flora en Fauna.</li>
+<li><strong>Functie</strong>: Een activiteit die het externe gedrag beschrijft van het object die de activiteit uitvoert.</li>
+<li><strong>Functioneel gebouwobject</strong>: Een gebouw gerelateerde ruimte met een specifieke functie.</li>
+<li><strong>Functionele ruimte</strong>: Ruimte met een specifieke functie.</li>
+<li><strong>Functionele zonering</strong>: Een gebied met een specifieke functie.</li>
+<li><strong>FunctioneleEntiteit</strong>: Entiteit waarbij het gaat om het externe gedrag waarbij de uitvoer bijdraagt aan doelstellingen van belanghebbenden geïmplementeerd/gespeeld door een of meer technische entiteiten.</li>
+<li><strong>FysiekObject</strong>: Iets dat mogelijk of daadwerkelijk bestaat in ruimte en tijd, waarneembaar door de zintuigen.</li>
+<li><strong>GM*</strong>: GML features</li>
+<li><strong>Gebiedsindeling</strong>: Object welke gegevens kent betreffende de vastlegging binnen registratieve ruimten.</li>
+<li><strong>Gebouw</strong>: Overdekte en geheel of gedeeltelijk met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.</li>
+<li><strong>Gebouwcomponent</strong>: Component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt</li>
+<li><strong>Gebruikszone oppervlaktewater</strong>: Begrensd oppervlaktewatergebied dat een bepaald gebruik kent</li>
+<li><strong>Geo-object</strong>:  	Een fenomeen in de werkelijkheid, dat direct of indirect is geassocieerd met een locatie relatief ten opzichte van de aarde.</li>
+<li><strong>Geografische ruimte</strong>: Ruimte die bekend staat onder een vanuit de historie of in de volksmond bekende benaming of een fysisch-geografische samenhang kent.</li>
+<li><strong>GeometrischeRepresentatie</strong>: Een ruimtelijke representatie van een object.</li>
+<li><strong>Groenobject</strong>: Kleinste functioneel onafhankelijk stukje van een begroeid terrein dat er binnen het objecttype Begroeiing van NEN 3610 wordt onderscheiden, met aaneengesloten vegetatie.</li>
+<li><strong>Holle leiding</strong>: Holle leiding voor het doorstromen van gassen, vloeistoffen of capsules, bestemd om hetzij gas, een vloeistof of capsules te transporteren, hetzij een vloeistof als intermediair te gebruiken voor het transport van warmte of een opgeloste of verpulverde stof.</li>
+<li><strong>Hulplijn</strong>: Lijnvormig element wat vaak gebruik wordt in combinatie met andere objecttypen.</li>
+<li><strong>IMKLBasis object</strong>:  Abstract data object dat de basis attributen bevat van de IMKL extensie. </li>
+<li><strong>InformatieObject</strong>: Thing that is a whole of information on itself and has an own identit</li>
+<li><strong>Installatie-informatie</strong>: Gegevens die betrekking hebben op de installatie van een object.</li>
+<li><strong>Installatie</strong>: Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient</li>
+<li><strong>Inwinning-informatie</strong>: Informatieobject voor het vastleggen van informatie m.b.t. de inwinning van een objecttype.</li>
+<li><strong>Resultaat verkeerstelling</strong>: Het vastleggen van het resultaat van alle verkeerstellingen op een wegas per jaar.</li>
+<li><strong>Juridische ruimte</strong>: Ruimte waar een juridisch instrument beleid of regelgeving toepast.</li>
+<li><strong>Kabel</strong>: Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van energie of data.</li>
+<li><strong>Kabelgeul</strong>: Ruimtebeslag dat door een gemeenschappelijk tracé van één of meer kabels, buizen, HDPE- en/of mantelbuizen - die toebehoren aan één netwerkbeheerder - wordt gevormd.</li>
+<li><strong>Kast</strong>: Constructie met een permanent karakter dat dient om iets in te bergen en te beschermen</li>
+<li><strong>Kering</strong>: Voorziening met een kerende functie</li>
+<li><strong>Kunstwerk</strong>: Civieltechnisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen.</li>
+<li><strong>Kunstwerkdeel</strong>:   Onderdeel van een civieltechnisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen</li>
+<li><strong>Leiding</strong>: Een geheel van geleiders of ruimte welke voorzien zijn van één ommanteling en bestemd is voor transport van materie, data of energie.</li>
+<li><strong>Luchtvaartzone</strong>: Functionele ruimte die in gebruik is voor luchtvaart</li>
+<li><strong>Luchtvaartruimte</strong>: Verkeerruimte voor voertuigen die zich door de lucht verplaatsen.</li>
+<li><strong>Mast</strong>: Hoge draagconstructie voor een installatie of het transport van energie en elektromagnetische straling</li>
+<li><strong>Materie</strong>: Zuivere stof, chemische verbinding of mengsel</li>
+<li><strong>Memo</strong>: Informatieobject voor het gebruik en de registratie van memo's bij een objecttype.</li>
+<li><strong>Monument-informatie</strong>: Registratie van gegevens van monumentale objecten.</li>
+<li><strong>Object</strong>: Superklasse van het model. Ouder van de kinderen FysiekObject en Informatieobject. Enititeit die bestaat of kan bestaan binnen ruimte of tijd. Een object voert een activiteit uit en verandert door een activiteit.</li>
+<li><strong>Onbepaald terrein</strong>: Fysiek begrensd en zichtbaar terrein dat bij een gebouw hoort, dat niet verder wordt gedetailleerd in andere reële objecten en dat bestaat uit een mengvorm van verharding, water, begroeiing en/of constructies.</li>
+<li><strong>Onderhoud-informatie</strong>: Gegevens die nodig zijn voor het plannen en registreren van het onderhoud van objecten.</li>
+<li><strong>Ondertunneling</strong>: Ondergrondse of onder water gelegen verbinding tussen twee punten, aan beide einden voorzien van een open bakconstructie.</li>
+<li><strong>Open leiding</strong>: Een rioolleiding waarvan de bovenzijde niet is afgesloten.</li>
+<li><strong>Opening kunstwerk</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Oplever-informatie</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Overbrugging</strong>: Kunstwerk dat een beweegbare of vaste verbinding tussen twee punten betreft, die door water, een weg of anderszins gescheiden zijn, bestaande uit een brugdek/-bak met landhoofden en veelal gesteund door pijlers</li>
+<li><strong>Paalconstructie</strong>: Lage draagconstructie voor onder meer installaties of borden</li>
+<li><strong>Plaatsbepalingspunt</strong>: Een Plaatsbepalingspunt is een punt dat is ingemeten en vervolgens gebruikt is bij en onderdeel uitmaakt van de begrenzing (geometrie) van reële objecten.</li>
+<li><strong>Put</strong>: Gegraven of geboorde kokervormige diepte waarin zich (vloei)stoffen bevinden.</li>
+<li><strong>Randgroenobject</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Randverhardingsobject</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Recreatiezone</strong>:   Functionele ruimte die in gebruik is voor openlucht recreatie</li>
+<li><strong>Reëel object</strong>: Geo-object dat zich geheel materieel manifesteert</li>
+<li><strong>ReëelObject</strong>: Fysiek object (vormvast of niet-vormvast) dat in de werkelijkheid tastbaar en zichtbaar is (of kan zijn), door de mens gemaakt of natuurlijk ontstaan.</li>
+<li><strong>Registratie-informatie</strong>: Metagegevens voor het vastleggen van wijzigingen van de objectgegevens. Deze gegevens kunnen ook gebruikt worden voor het vastleggen van de historie.</li>
+<li><strong>Registratieve ruimte</strong>: Op basis van wet- of regelgeving afgebakende ruimte die als eenheid geldt van politiek/bestuurlijke verantwoordelijkheid of voor bedrijfsvoering.</li>
+<li><strong>RuimtelijkGebied</strong>: Fysiek object dat een bepaald gebied omsluit zoals een vertrek, rijbaan en rivier, die wordt begrensd door reële objecten of andere ruimtelijke gebieden (bijvoorbeeld op basis van gebruik of conventie) en dat voornamelijk vloeibare of gasvormige hoeveelheid materie bevat.</li>
+<li><strong>Rurale beheerzone</strong>: Een afgebakend gebied voor generieke beheerdoeleinden binnen het landelijk gebied.</li>
+<li><strong>Samengesteld rioleringsobject</strong>: Klasse van rioleringsobjecten waarbinnen meerdere reële objecten een samenhangend, functioneel, geheel vormen.</li>
+<li><strong>Scheepvaartruimte</strong>: Transportruimte voor voertuigen die zich over water verplaatsen .</li>
+<li><strong>Scheiding</strong>: Kunstmatig obstakel met een werende functie.</li>
+<li><strong>Sensor</strong>: Apparaat voor de meting van een fysieke grootheid (bijv. temperatuur, licht, druk, elektriciteit).</li>
+<li><strong>Sluisdoorvaart</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Software</strong>: Informatieobject voor de registratie van basisgegevens van het programma (software) die binnen of die in directe relatie met het objecttype gebruikt wordt.</li>
+<li><strong>Soortnaamgroenobject</strong>: Gegevens die betrekking hebben op de oplevering van een object.</li>
+<li><strong>Spoorverkeerruimte</strong>: Transportruimte voor voertuigen die zich over rails verplaatsen.</li>
+<li><strong>Spoorzone</strong>: Functionele ruimte die in gebruik is voor spoorwegen.</li>
+<li><strong>Stadsverwarming</strong>: Stadsverwarming of warmtedistributie is een verwarmingssysteem, waarbij de woningen worden verwarmd via een ondergronds netwerk van warmwaterleidingen.</li>
+<li><strong>Straatmeubilair</strong>: Een ruimtelijk object ter inrichting van de openbare ruimte.</li>
+<li><strong>TechnischEntiteit</strong>: Entiteit waarbij het gaat om de technische eigenschappen die nul of meerdere functionele entiteiten implementeert of speelt.</li>
+<li><strong>TopologischElement</strong>: Een topologisch element is een configuratie waarin vastgelegd wordt hoe objecten verbonden zijn of hoe ze relatief tot elkaar gepositioneerd zijn.</li>
+<li><strong>Transportruimte</strong>: Natuurlijke of aangelegde transportlijnen of verbindingen met knooppunten waarlangs stromen zich verplaatsen.</li>
+<li><strong>Tunneldeel</strong>: Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang dat essentieel is voor de constructie.</li>
+<li><strong>Urbane beheerzone</strong>: Een afgebakend gebied voor generieke beheerdoeleinden binnen het stedelijk gebied.</li>
+<li><strong>Utiliteitsnet</strong>: Een verzameling van netwerkelementen die tot één type nutsvoorzieningennet behoren.</li>
+<li><strong>Valruimte-informatie</strong>: Gegevens die de valruimte van een speel- of sporttoestel vastleggen.</li>
+<li><strong>Vegetatieobject</strong>:   Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang.</li>
+<li><strong>Verharding</strong>: Een door egaliseren, verstevigen en/of verruwen voor het beoogde gebruik geschikt gemaakte oppervlak, bestaande uit in één of meer lagen over een ondergrond of onderliggende constructie aangelegd materiaal</li>
+<li><strong>Verkeerruimte</strong>: Transportruimte voor verkeer via land, water of lucht.</li>
+<li><strong>Verkeersintensiteit</strong>: Het vastleggen van de verkeersintensiteit per prognosejaar bij een wegas.</li>
+<li><strong>Verkeerskundig functionele zone</strong>: Functionele ruimte die een verkeerskundige functie kent.</li>
+<li><strong>Verkeerstelling</strong>: Het registreren van verkeerstellingen bij een Wegas.</li>
+<li><strong>Virtuele ruimte</strong>:  	Geo-object dat zich geheel of gedeeltelijk niet-materieel manifesteert en dus slechts in abstracte en/of geregistreerde vorm bestaat.</li>
+<li><strong>Water</strong>: Massa van water dat de bodem bedekt of in normale omstandigheden kan bedekken</li>
+<li><strong>Waterbeheerzone</strong>: Een afgebakend gebied specifiek van belang voor waterbeheer.</li>
+<li><strong>Waterinrichtingsobject</strong>: Een ruimtelijk object ter inrichting van het water.</li>
+<li><strong>Waterverplaatsingruimte</strong>: Transportruimte waardoor water zich verplaatst.</li>
+<li><strong>Waterstaatkundig kunstwerk</strong>: Kunstwerk voor de beheersing van het oppervlaktewater en alles wat daarin voorkomt</li>
+<li><strong>Weginrichtingsobject</strong>: Een ruimtelijk object dat dient voor de inrichting van de openbare weg.</li>
+<li><strong>Wegverkeerruimte</strong>: Transportruimte voor voertuigen die zich over wegen verplaatsen .</li>
+<li><strong>Wegzone</strong>: Functionele ruimte die in gebruik is voor weginrichting</li>
+</ul>
+</section><section id="totstandkoming"><div class="header-wrapper"><h4 id="x4-1-2-totstandkoming"><bdi class="secno">4.1.2 </bdi>Totstandkoming</h4><a class="self-link" href="#totstandkoming" aria-label="Permalink for Section 4.1.2"></a></div>
+<p>De uitgangspunten voor de totstandkoming van deze hiërarchie waren:</p>
+<ol>
+<li>Hergebruiken wat er reeds is;</li>
+<li>Aansluiten bij de meest recente versie van de standaarden;</li>
+<li>NEN2660-2 gebruiken als uitgangspunt, inclusief de daarin vermelde relatie met de NEN3610;</li>
+<li>Aansluiting eerst op de SOR (dan pas IMGeo), inclusief de daar in vermelde relatie met de NEN3610;</li>
+<li>Alleen de concepten vermelden waar gebruik van gemaakt wordt;</li>
+<li>Meervoudige overerving is toegestaan;</li>
+<li>Alle ObjectTypen moeten een plek krijgen;</li>
+<li>Termen en definities uit te standaarden hergebruiken (boven eigen gemaakte);</li>
+<li>Type relaties alleen degene uit toegestaan uit NEN2660-2;</li>
+<li>Vooralsnog alleen <code>Object</code>, <code>FysiekObject</code>, <code>Activiteit</code>, <code>GeometrischeRepresentatie</code> en <code>InformatieObject</code> gebruiken uit de NEN2660-2 (en in IMBOR2022 daar verder op in gaan);</li>
+<li>Verdeling van attributen over <code>Objecttype</code>n moet zo veel mogelijk gelijk blijven t.o.v. IMBOR2020-08 (afgezien van waar de koppeling al niet goed was);</li>
+</ol>
+</section><section id="semantische-relaties"><div class="header-wrapper"><h4 id="x4-1-3-semantische-relaties"><bdi class="secno">4.1.3 </bdi>Semantische relaties</h4><a class="self-link" href="#semantische-relaties" aria-label="Permalink for Section 4.1.3"></a></div>
+<p>Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een grote verandering. Middels relaties geadopteerd uit de NEN2660-2 wordt het mogelijk gemaakt om tussen concepten binnen IMBOR betekenisvolle relaties te leggen. De relaties betreffen:</p>
+<ol>
+<li><code>isSubtypeVan</code> (NEN2660-2: Is een verbijzondering van)</li>
+<li><code>heeftDeel</code> (<a href="https://w3id.org/nen2660/def#hasPart">NEN2660-2:hasPart</a>)</li>
+<li><code>isVerbondenMet</code> (<a href="https://w3id.org/nen2660/def#isConnectedTo">NEN2660-2:isConnectedTo</a>)</li>
+<li><code>isBeschrevenDoor</code> (<a href="https://w3id.org/nen2660/def#isDescribedBy">NEN2660-2:isDescribedBy</a>)</li>
+<li><code>bevat</code>(<a href="https://w3id.org/nen2660/def#contains">NEN2660-2:contains</a>)</li>
+<li><code>heeftBegrenzing</code> (<a href="https://w3id.org/nen2660/def#hasBoundary">NEN2660-2:hasBoundary</a>)</li>
+<li><code>voertUit</code> (<a href="https://w3id.org/nen2660/def#executes">NEN2660-2:executes</a>)</li>
+<li><code>bestaatUit</code> (<a href="https://w3id.org/nen2660/def#consistsOf">NEN2660-2:consistsOf</a>)</li>
+</ol>
+<div class="advisement">
+In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per <code>Klasse</code> een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op <code>Objecttype</code> niveau te leggen. 
+</div>
+
+</section></section><section id="imbor-bouwstenen"><div class="header-wrapper"><h3 id="x4-2-imbor-bouwstenen"><bdi class="secno">4.2 </bdi>IMBOR Bouwstenen</h3><a class="self-link" href="#imbor-bouwstenen" aria-label="Permalink for Section 4.2"></a></div>
+<p>Binnen de IMBOR cursus wordt uitgelegd wat de bouwstenen van IMBOR zijn. Deze ReSpec betreft de technische documentatie, maar de afbeeldingen die in de cursus gebruikt worden maken vrij goed duidelijk hoe een "ingewikkeld" technisch model simpel uitgelegd kan worden aan een assetmanager die uiteindelijk ook de opbouw van IMBOR moet begrijpen. Vandaar dat onderstaande figuren opgenomen zijn. Het eerste figuur illustreert simpel hoe het metamodel van IMBOR in elkaar zit, het tweede figuur illustreert dit met behulp van voorbeelden verder.</p>
+<figure id="fig-imbor-bouwstenen-versimpeld">
+
+<p><img src="img/Bouwstenen_IMBOR_cursus_1.png" alt="IMBOR Bouwstenen"></p>
+<figcaption>Figuur <bdi class="figno">5</bdi> <span class="fig-title"><figcaption>IMBOR bouwstenen versimpeld</figcaption></span></figcaption>
+</figure>
+<figure id="fig-imbor-bouwstenen-versimpeld-met-voorbeelden">
+
+<p><img src="img/Bouwstenen_IMBOR_cursus_2.png" alt="IMBOR Bouwstenen voorbeelden"></p>
+<figcaption>Figuur <bdi class="figno">6</bdi> <span class="fig-title"><figcaption>IMBOR bouwstenen versimpeld met voorbeelden</figcaption></span></figcaption>
+</figure>
+
+</section><section id="speciale-modelleerconstructies"><div class="header-wrapper"><h3 id="x4-3-speciale-modelleerconstructies"><bdi class="secno">4.3 </bdi>Speciale modelleerconstructies</h3><a class="self-link" href="#speciale-modelleerconstructies" aria-label="Permalink for Section 4.3"></a></div>
+<p>Binnen IMBOR zijn er een aantal modelleerkeuzes gemaakt die extra uitleg verdienen. Deze kunnen geschaard worden onder de 'informele' modelleerregels</p>
+<section id="objecttypen"><div class="header-wrapper"><h4 id="x4-3-1-objecttypen"><bdi class="secno">4.3.1 </bdi>Objecttypen</h4><a class="self-link" href="#objecttypen" aria-label="Permalink for Section 4.3.1"></a></div>
+<p><code>Objecttype</code> is een speciaal soort <code>Klasse</code>. Het betreft hier namelijk het blad van de klasseboom. Ofwel de onderste laag. Binnen IMBOR worden deze onderscheiden omdat de term 'Objecttype' erg ingeburgerd is. Technische gezien zijn het de enige 'concrete' <code>Klasse</code> (tegenover de rest welke 'abstracte' <code>Klasse</code> zijn). Hiermee wil IMBOR aangeven dat deze abstracte klassen niet geïnstanteerd mogen worden en de 'concrete' <code>Objecttype</code> juist wel. <code>Objecttype</code> zijn als enige ook ingedeeld in <code>Vakdiscipline</code>s. </p>
+<div class="advisement">
+Klassen zijn een abstract concept. Ze staan daarmee tegenover bijvoorbeeld <code>Objecttype</code> en <code>InformatieObject</code> die wel 'concreet' zijn. Hiermee wil IMBOR aangeven dat deze klassen niet geïnstanteerd mogen worden.
+</div>
+
+</section><section id="informatieobjecten"><div class="header-wrapper"><h4 id="x4-3-2-informatieobjecten"><bdi class="secno">4.3.2 </bdi>InformatieObjecten</h4><a class="self-link" href="#informatieobjecten" aria-label="Permalink for Section 4.3.2"></a></div>
+<p>Speciale aandacht gaat uit naar de relaties tussen <code>Objecttype</code> en <code>InformatieObject</code>. Veel van de attributen die in IMBOR2020-08 aan een <code>Objecttype</code> hingen waren eigenlijk meer 'informatie over' dan een daadwerkelijk aspect van dat object. Vandaar dat in IMBOR2022 is besloten om veel attributen te verhuizen naar <code>InformatieObject</code>. Hiermee is het dus wel van belang dat deze daadwerkelijk geïnstantieërd worden in de beheersystemen om de beschrijvende attributen vast te leggen. Dit is ook vastgelegd middels de multipliciteit. </p>
+<p>Deze keuze is enerzijds gemaakt vanwege de interpretatie dat een <code>InformatieObject</code> een ‘object’ op zichzelf is, welke informatie bevat over een object (vandaar de <code>isBeschrevenDoor</code> relatie). Hiermee wordt de informatie <em>van</em> het 'object' gescheiden van de informatie <em>over</em> het 'object'. Anderzijds betreffen het ook vaak attributen die op termijn uit andere registraties zouden moeten komen. </p>
+</section><section id="gebiedsindeling"><div class="header-wrapper"><h4 id="x4-3-3-gebiedsindeling"><bdi class="secno">4.3.3 </bdi>Gebiedsindeling</h4><a class="self-link" href="#gebiedsindeling" aria-label="Permalink for Section 4.3.3"></a></div>
+<p>De <code>Klasse</code> 'Gebiedsindeling' is gemodelleerd vanwege een legacy behoefte binnen IMBOR. De klasse distribueert een set van attributen welke allemaal afgeleidt kunnen worden van de geografische locatie. De meeste zijn ook dubbel te leggen met de semantische relatie <code>bevat</code>. Bijna alle attributen hebben dan ook als waarde binnen <code>TypeAttribuut</code> de waarde 'Wordt automatisch bepaald'. Zie ook <a href="#automatische-waarden">Automatische waarden</a>.</p>
+<p>Op termijn zal gekeken moeten worden of de expliciete modelleering via de semantische relaties hier ook afdoende voor is. </p>
+</section><section id="automatische-waarden"><div class="header-wrapper"><h4 id="x4-3-4-automatische-waarden"><bdi class="secno">4.3.4 </bdi>Automatische waarden</h4><a class="self-link" href="#automatische-waarden" aria-label="Permalink for Section 4.3.4"></a></div>
+<p>Enkele attributen hebben als <code>TypeAttribuut</code> de waarde 'Wordt automatisch bepaald'. Hiermee wordt aangegeven dat bij de implementatie in een (GIS) systeem de daadwerkelijke waarde van het attribuut berekend wordt door het beheerpakket, maar expliciet opgeslagen wordt op dit attribuut. Elke organisatie of leverancier kan zelf kiezen hoe dit te implementeren, deze modellering binnen IMBOR geeft alleen maar aan dat het een 'afgeleid' attribuut betreft. Dit is (toentertijd) besloten omdat dit de query's binnen de systemen aanzienlijke sneller maakt en men zeker weet dat deze waarden expliciet bevraagbaar zijn. </p>
+<p>Op termijn zal gekeken moeten worden of de expliciete modelleering via de semantische relaties hier ook afdoende voor is. </p>
+</section><section id="classificerende-attributen"><div class="header-wrapper"><h4 id="x4-3-5-classificerende-attributen"><bdi class="secno">4.3.5 </bdi>Classificerende attributen</h4><a class="self-link" href="#classificerende-attributen" aria-label="Permalink for Section 4.3.5"></a></div>
+<p>Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een <code>Klasse</code> of <code>Objecttype</code> te introduceren zijn er de attributen <code>Type</code>, <code>TypeGedetailleerd</code> en <code>TypeExtraGedetailleerd</code> onderkent. Dit zijn attributen zoals beschreven in deze sectie van <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#metagegeven-indicatie-classificerend">MIM</a>. In de LinkedData theorie zouden dit subklassen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het <code>Objecttype</code> welke geen specifieke informatiebehoefte hebben. Ten opzichte van IMBOR2020-08 zijn in IMBOR2022 veel waarden die eerst van het attribuut <code>Type</code> waren opgeschoven en 'gepromoveerd' naar een echt <code>Objecttype</code>. Bijvoorbeeld 'Beweegbare brug' en 'Vaste brug' zijn nu <code>Objecttype</code> in IMBOR2022, terwijl in IMBOR2020-08 deze een waarde waren binnen het <code>Type</code> attribuut. Hiermee zijn de <code>TypeExtraGedetailleerd</code> gepromoveerd naar <code>TypeGedetailleerd</code> en <code>TypeGedetailleerd</code> gepromoveerd naar <code>Type</code>. Er zijn dus veel <code>Objecttype</code>n bijgekomen, dit maakt IMBOR meer expliciet. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De `indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden. </p>
+</section><section id="vakdisciplines"><div class="header-wrapper"><h4 id="x4-3-6-vakdisciplines"><bdi class="secno">4.3.6 </bdi>Vakdisciplines</h4><a class="self-link" href="#vakdisciplines" aria-label="Permalink for Section 4.3.6"></a></div>
+<p>Vakdisciplines betreffen een groepering die ook niets meer is dan dat is. Binnen IMBOR wordt deze voornamelijk gebruikt als zoekingang of als structurering om de hoeveelheid <code>Objecttype</code> makkelijker te kunnen inzien. </p>
+<div class="advisement">
+Ter verduidelijking: daadwerkelijke geregistreerde objecten (de instanties van <code>Objecttype</code>) kunnen in een beheersysteem zelf vervolgens ook tot meerdere <code>Vakdiscipline</code> tegelijk behoren. IMBOR dwingt hier niets over af. Vakdisciplines in IMBOR zijn een geste vanuit IMBOR om te zoeken. De indeling is daarmee niet per sé arbitrair te noemen, maar wel vanuit ons/één perspectief.
+</div>
+
+</section><section id="gekwalificeerde-waardeshapes"><div class="header-wrapper"><h4 id="x4-3-7-gekwalificeerde-waardeshapes"><bdi class="secno">4.3.7 </bdi>Gekwalificeerde waardeshapes</h4><a class="self-link" href="#gekwalificeerde-waardeshapes" aria-label="Permalink for Section 4.3.7"></a></div>
+<p>In de LinkedData versie van IMBOR wordt <code>sh:class</code> gebruikt om bij de <a href="#semantische-relaties">semantische relaties</a> en bij attributen die vaste waardelijst kennen aan te geven van welke klasse de waarde moet zijn (ofwel, waar de relatie naar toe loopt). Bijvoorbeeld bij een <em>Sluis heeftDeel Sluisdeur</em> wordt aangegeven dat een bepaalde sluis een bepaalde sluisdeur als onderdeel kan hebben. In de consultatieronde is <a href="https://github.com/Stichting-CROW/imbor/issues/626">gebleken</a> dat het directe gebruik van <code>sh:class</code> die beperkende factor ook inbrengt, maar tegelijk ook vereist dat als die relatie meerdere keren voorkomt per klasse, al die waarden aanwezig moeten zijn.
+In het voorbeeld van een sluis, bestaat ook <em>Sluis heeftDeel Schutkolk</em>.  Met een modellering sec <code>sh:class</code>, vereist de SHACL-controle dat de schutkolken tegelijk ook sluisdeuren moeten zijn.</p>
+<p>Dit is niet wat bedoelt wordt en dus onwenselijk. 
+Daarom worden in IMBOR2022 <code>sh:class</code> klassebeperkingen via <code>sh:qualifiedValueShape</code> ingeleid, zodat deze voorgenoemde combinatorische betekenis niet voorkomt.
+De klasse <em>Sluisdeur</em> of <em>Schutkolk</em> is namelijk één van de kwalificerende waardes voor <em>heeftDeel</em> bij een <em>Sluis</em>.</p>
+</section><section id="topologische-elementen"><div class="header-wrapper"><h4 id="x4-3-8-topologische-elementen"><bdi class="secno">4.3.8 </bdi>Topologische elementen</h4><a class="self-link" href="#topologische-elementen" aria-label="Permalink for Section 4.3.8"></a></div>
+<p>Binnen IMBOR2022 zijn topologische elementen (als <code>TopologischElement</code>) toegevoegd als speciaal soort <code>GeometrischeRepresentatie</code>. Het betreffen namelijk schematische representaties van een daadwerkelijke (<code>FysiekObject</code>), net zoals de geometrie. Middels de <code>heeftBegrenzing</code> relatie zijn meerdere geometrische representaties vast te leggen (bijvoorbeeld: 2D, 3D of schematisch). In IMBOR is er vooralsnog echter <em>geen</em> aandacht gegeven aan topologie. De enige topologie die momenteel onder <code>TopologischElement</code> in IMBOR zit betreft hetgeen GWSW specificeert. Dit is gedaan om de relatie tussen GWSW en IMBOR zo overzichtelijk en compleet mogelijk te maken. Zie ook <a href="#gwsw-als-referentiemodel">GWSW als referentiemodel</a>. Er wordt niet uitgesloten dat IMBOR in de toekomst zelf ook specificaties van topologie gaat maken. </p>
+</section><section id="materie"><div class="header-wrapper"><h4 id="x4-3-9-materie"><bdi class="secno">4.3.9 </bdi>Materie</h4><a class="self-link" href="#materie" aria-label="Permalink for Section 4.3.9"></a></div>
+<p>Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de NEN2660-2 is hiervoor een modelleerconstructie gegeven die IMBOR2022 toepast. Er kan een relatie <code>bestaatUit</code> gelegd worden tussen de klasse <code>ReeelObject</code> en de klasse <code>Materie</code>. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de NEN2660-2 en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt aangesloten bij een bestaand(e) lijst/initiatief. De gesprekken hiervoor worden in 2022 gepland. </p>
+<div class="advisement">
+Ter verduidelijkingL IMBOR limiteert niet welke relaties er tussen een <code>FysiekObject</code> en een <code>Materie</code> gelegd kunnen worden. We geven alleen 'voorstellen'.
+</div></section></section></section>
+  <section data-format="markdown" id="imbor-distributie"><div class="header-wrapper"><h2 id="x5-imbor-distributie"><bdi class="secno">5. </bdi>IMBOR distributie</h2><a class="self-link" href="#imbor-distributie" aria-label="Permalink for Section 5."></a></div>
+<p>Voor de gebruiker van IMBOR wordt een inkijkmogelijkheid (publicatie) van IMBOR op meerdere manieren gegeven:</p>
+<ul>
+<li>De gedistribueerde Access database biedt middels formulieren de mogelijkheid om direct IMBOR te raadplegen</li>
+<li>Middels voorgedefinieerde queries op de CROW SPARQL webapplicatie</li>
+<li>De vocabulair van IMBOR is te raadplegen via het thesaurus platform van CROW <a href="https://begrippen.crow.nl/">begrippen.crow.nl</a></li>
+<li>In de loop van 2022 wordt een ontologie viewer ter beschikking gestelt</li>
+</ul>
+<p>Al deze vormen van publicatie zijn zonder kosten te raadplegen. Voor de CROW SPARQL webapplicatie is wel een <a href="https://crowsso.b2clogin.com/crowsso.onmicrosoft.com/B2C_1A_signup_signin/oauth2/v2.0/authorize?client_id=e0b429f6-ef7f-4d0e-be5f-2711b5d4393f&amp;redirect_uri=https://crow.nl/Truelime/AzureADAuthenticationHandler.ashx&amp;response_type=code&amp;scope=openid&amp;response_mode=query&amp;state=eyJSZXR1cm5VcmwiOiIvTWlqbkNST1cvSG9tZSIsIlNob3BwaW5nQ2FydCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsIklkIjoiODQwYzBlYmMtZjBmOC00YmE5LTg3YzAtZGEwYThiZGUxYmMwIiwiU2lnbk91dCI6ZmFsc2V9">MijnCROW account</a> nodig. </p>
+<p>Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele content beschikbaar. Hiervoor zijn ook twee distributiekanalen:</p>
+<ul>
+<li>IMBOR tabellen in Access</li>
+<li>IMBOR in LinkedData (TTL file en SPARQL-Endpoint)</li>
+</ul>
+<p>Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Namelijk voor de SPARQL-Endpoint geldt dat we deze voorlopig onder de noemer van 'pilot' verstrekken. Bij veel gebruik/op termijn wordt gekeken hoe we hier met de kosten gaan omgaan. </p>
+<p>Wat betreft het gebruik van IMBOR, raadplegen de sectie over <a href="#licenties">licenties</a></p>
+<figure id="fig-overzicht-imbor-beheer-distributie-en-publicatie">
+
+<p><img src="img/IMBOR_Beheer_Distributie_Publicatie.drawio.png?raw=true" alt="IMBOR Beheer Distributie Publicatie"></p>
+<figcaption>Figuur <bdi class="figno">7</bdi> <span class="fig-title">Overzicht IMBOR Beheer, Distributie en Publicatie</span></figcaption>
+</figure>
+
+<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Noot</span></div><div class="">
+
+<p>De IMBOR Ontologie viewer is nog in ontwikkeling en zal in de loop van 2022 klaar zijn. </p>
+</div></div>
+
+
+<section id="imbor-in-ms-access"><div class="header-wrapper"><h3 id="x5-1-imbor-in-ms-access"><bdi class="secno">5.1 </bdi>IMBOR in MS Access</h3><a class="self-link" href="#imbor-in-ms-access" aria-label="Permalink for Section 5.1"></a></div>
+<p>Omdat IMBOR momenteel nog beheerd wordt in MS Access is het fysieke datamodel hier van toepassing. Middels het fysieke datamodel diagram wordt een uitleg gegeven hoe deze geïnterpreteerd moet worden. 
+Het betreft hier dus <em><strong>niet</strong></em> een voorgeschreven datamodel voor een beheerapplicatie.  </p>
+<figure id="fig-imbor-fysiek-datamodel-rechtermuisknop-openen-in-nieuw-tabblad-voor-leesbare-versie">
+
+<p><img src="img/Modulaire%20opzet%20IMBOR-Fysiek%20Datamodel%20Access.drawio.png?raw=true" alt="IMBOR fysiek datamodel Access"></p>
+<figcaption>Figuur <bdi class="figno">8</bdi> <span class="fig-title">IMBOR fysiek datamodel -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</span></figcaption>
+</figure>
+
+<section id="tabelindeling"><div class="header-wrapper"><h4 id="x5-1-1-tabelindeling"><bdi class="secno">5.1.1 </bdi>Tabelindeling</h4><a class="self-link" href="#tabelindeling" aria-label="Permalink for Section 5.1.1"></a></div>
+<p>IMBOR is modulair opgebouwd, in Access wordt dit met de tabel prefixen vastgelegd.</p>
+<ul>
+<li><code>imborVoc_*</code> zijn de tabellen die het begrippenkader (of vocabulaire) van IMBOR beschrijven</li>
+<li><code>imborKern_*</code> zijn de tabellen die de (normatieve) elementen binnen de IMBOR ontologie beschrijven</li>
+<li><code>imborKern_K_*</code> zijn koppeltabellen binnen de ontologie die eigenlijk predicaten beschrijven</li>
+<li><code>refModel_*</code> zijn tabellen waarin externe ontologieën aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.</li>
+</ul>
+<div class="advisement">
+
+<p>Er is gekozen om het fysieke datamodel van de MS Access database te versimpelen t.o.v. de theoretische uitwerking, dit is gedaan zodat in MS Access gemakkelijker query's opgezet kunnen worden. Een belangrijke keuze hier is om de IMBOR identifier (lees: <code>IMBORGUID</code>) te laten declareren in de <code>imborVoc_Termen</code> tabel. Zodoende wordt deze tabel de single-source-of-truth binnen de Access database. </p>
+<p>Dit geldt <em>niet</em> voor de koppeltabellen, daar wordt wel de <code>IMBORGUID</code> gedeclareerd.</p>
+</div>
+
+<p>Door de versimpeling in Access zouden er tabellen ontstaan die niets meer zouden bevatten (omdat GUID, Label, Definitie, Synoniem en Toelichting in <code>imborVoc_Termen</code> zijn opgenomen) zijn deze tabellen weggelaten. Het gaat om:</p>
+<ol>
+<li><code>imborKern_Multipliciteit</code></li>
+<li><code>imborKern_Eenheden</code></li>
+<li><code>imborKern_TypeAttributen</code></li>
+<li><code>imborKern_Datatypen</code></li>
+<li><code>imborKern_Vakdisciplines</code></li>
+<li><code>imborKern_SemantischeRelaties</code></li>
+<li><code>imborKern_Objecttypen</code></li>
+<li><code>imborKern_EnumeratieTypen</code></li>
+</ol>
+<p>In het diagram van het fysieke datamodel wordt dit ook aangegeven door de groene tekst van een datatype. Hier staat de theoretische tabel waar de waarde vandaan zou moeten komen. Echter in de Access database is dit versimpeld door deze op te halen uit <code>imborVoc_Termen</code>.</p>
+</section><section id="begrippenkader"><div class="header-wrapper"><h4 id="x5-1-2-begrippenkader"><bdi class="secno">5.1.2 </bdi>Begrippenkader</h4><a class="self-link" href="#begrippenkader" aria-label="Permalink for Section 5.1.2"></a></div>
+<p>Alle tabellen die invulling geven aan de vocabulaire.</p>
+<section id="imborvoc_termen"><div class="header-wrapper"><h5 id="x5-1-2-1-imborvoc_termen"><bdi class="secno">5.1.2.1 </bdi>imborVoc_Termen</h5><a class="self-link" href="#imborvoc_termen" aria-label="Permalink for Section 5.1.2.1"></a></div>
+<p>Deze tabel is onderdeel van het begrippenkader van IMBOR kan gezien worden als de vocabulaire. Zoals eerder vermeld heeft deze binnen Access een speciale status omdat hier de <code>IMBORGUID</code> ook gedeclareerd wordt voor de meeste elementen. Bijna alle tabellen halen hier informatie op. De tabel geeft inrichting aan het Niveau 1 van MIM (Model van begrippen) en aan de SKOS taalbindingen uit de NEN2660. 
+Speciaal geval is ook de kolom <code>KlasseType</code>. Deze is gekoppeld aan de <code>IMBORGUID</code>  zoals hiervoor vermeld. <code>KlasseType</code> geeft aan of een IMBOR concept geïnstanteerd kan worden (<code>Concreet</code>) of niet (<code>Abstract</code>). </p>
+</section><section id="imborvoc_collecties"><div class="header-wrapper"><h5 id="x5-1-2-2-imborvoc_collecties"><bdi class="secno">5.1.2.2 </bdi>imborVoc_Collecties</h5><a class="self-link" href="#imborvoc_collecties" aria-label="Permalink for Section 5.1.2.2"></a></div>
+<p>De enige andere tabel in het begrippenkader naast <code>imborVoc_Termen</code>. Dit betreft een overzicht van de collecties waarin de termen ingedeeld zijn. </p>
+</section></section><section id="kernmodel"><div class="header-wrapper"><h4 id="x5-1-3-kernmodel"><bdi class="secno">5.1.3 </bdi>Kernmodel</h4><a class="self-link" href="#kernmodel" aria-label="Permalink for Section 5.1.3"></a></div>
+<p>Alle tabellen die invulling geven aan het IMBOR kernmodel.</p>
+<section id="imborkern_klassen"><div class="header-wrapper"><h5 id="x5-1-3-1-imborkern_klassen"><bdi class="secno">5.1.3.1 </bdi>imborKern_Klassen</h5><a class="self-link" href="#imborkern_klassen" aria-label="Permalink for Section 5.1.3.1"></a></div>
+<p>Klasse is een nieuw begrip vanaf IMBOR2022. Het kan gelijkgesteld worden aan het NEN2660-2 "Concept". Het is hiermee ook een supertype van bijvoorbeeld <code>Objecttype</code> en <code>InformatieObject</code>. </p>
+<p>De klassenstructuur is een polyhiërarchie. Dit betekent dat een child, meerdere parents kan hebben. Of in IMBOR termen gezegd: Een <code>Objecttype</code> of <code>Klasse</code> erft van meerdere <code>Klasse</code> attributen over. Dit is gedaan zodat we flexibeler om kunnen gaan bij welke klassen een <code>Objecttype</code> hoort en daarmee een <code>Objecttype</code> geen onnodige attributen krijgt. Er zullen een aantal <code>Klasse</code> 'disjoint' zijn, maar dat is nog niet expliciet opgenomen.</p>
+<p>Er zijn <code>Klasse</code> die 1-op-1 overeenkomen met een <code>Objecttype</code>. Dit is intentioneel. Dit maakt verder geen verschil, want een <code>Objecttype</code> is technisch gezien ook een <code>Klasse</code>. Op deze manier is gerealiseerd dat er geen attributen aan een <code>Objecttype</code> hoefden worden gehangen. Omdat de naam <code>Objecttype</code> zo ingeburgerd is in de IMBOR terminologie moest deze vooralsnog wel gehandhaafd worden. </p>
+<p>In <code>imborKern_Klassen</code> komen o.a. "Objecttypen", "Klassen", "ObjecttypeOnderdelen" en "Informatieobjecten" voor. Dit lijkt vreemd, maar is correct omdat het technisch gezien allemaal <code>Klasse</code> zijn (ofwel: subtypen van <code>Klasse</code>)</p>
+<p>We nemen <code>InformatieObject</code> op als <code>Klasse</code>, daarmee kunnen we concrete 'klassen' introduceren zoals <code>document</code> en <code>memo</code>. Deze zijn dan te instantiëren en te relateren (doormiddel van de relatie <code>isBeschrevenDoor</code>) aan <code>Objecttype</code>n. Hiermee kan de klasse <code>InformatieObject</code> ook gerelateerd worden aan de NEN2660-2.</p>
+<div class="advisement">
+
+<p>De kolom "Volgorde" in <code>imborKern_Klassen</code> is een beheertechnische kolom voor de Access formulieren. Daarmee geen normatief onderdeel van IMBOR. Dit is in het diagram ook te zien door de grijze tekst. Er kan dus ook geconcludeerd worden dat de tabel in principe geen toegevoegd waarde heeft voor de IMBOR kern, deze tabel zou dan eigenlijk ook in het lijstje kunnen staan dat vermeld staat in <a href="#tabelindeling">Tabelindeling</a>. maar de kolom 'Volgorde' zorgt voor deze uitzondering. </p>
+</div>
+
+
+</section><section id="imborkern_klassenindeling"><div class="header-wrapper"><h5 id="x5-1-3-2-imborkern_klassenindeling"><bdi class="secno">5.1.3.2 </bdi>imborKern_Klassenindeling</h5><a class="self-link" href="#imborkern_klassenindeling" aria-label="Permalink for Section 5.1.3.2"></a></div>
+<p>In deze simpele tabel wordt de polyhiërarchie van de IMBOR top beschreven. Klassen kunnen meerdere parents hebben. Door middel van de parent-child relatie wordt overerving geregeld. Alle childs krijgen ook de attributen van hun parents. Daarmee geldt dat ook alle <code>Objecttype</code>en die onder de klassen hangen ook op dezelfde manier attributen overerven.  Deze tabel is eigenlijk de vastlegging van het predicaat <code>isSubType</code>. Hier staat dus ook tot welke klasse een <code>Klasse</code>  of <code>Objecttype</code> behoord en daarmee zijn eigenschappen (lees: attributen) overerft.</p>
+</section><section id="imborkern_klassenchildparent"><div class="header-wrapper"><h5 id="x5-1-3-3-imborkern_klassenchildparent"><bdi class="secno">5.1.3.3 </bdi>imborKern_KlassenChildParent</h5><a class="self-link" href="#imborkern_klassenchildparent" aria-label="Permalink for Section 5.1.3.3"></a></div>
+<p>Dit is een hulptabel Deze tabel wordt automatisch gegenereerd middels een AccessDB module die zich baseert op <code>imborKern_Klassenindeling</code>. Het betreft een hulptabel waarin voor ieder <code>Objecttype</code> apart wordt achterhaald van welke <code>Klasse</code>n hij de attributen moet overerven. De <code>ChildID</code> = <code>Objecttype</code>, de <code>ParentID</code> = de <code>Klasse</code>. De formulieren in de AccessDB baseren zich hierop. </p>
+</section><section id="imborkern_attributen"><div class="header-wrapper"><h5 id="x5-1-3-4-imborkern_attributen"><bdi class="secno">5.1.3.4 </bdi>imborKern_Attributen</h5><a class="self-link" href="#imborkern_attributen" aria-label="Permalink for Section 5.1.3.4"></a></div>
+<p>Deze tabel bevat alle attributen die in IMBOR voorkomen, inclusief hun <code>TypeAttribuut</code> en hun <code>Datatype</code>. De attribuutsoorten en datatypen zijn ook versimpeld t.o.v. IMBOR2020-08. De datatype volgens nu het [<cite><a class="bibref" data-link-type="biblio" href="#bib-xmlschema11-1" title="W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures">xmlschema11-1</a></cite>]. </p>
+<p>De kolom <code>BovenliggendAttribuut</code> wordt gebruikt om aan te geven hoe de attributen zich tot elkaar hiërarchisch verhouden. Dit betreft een kolom die nodig is om de formulieren op te bouwen en is niet normatief nodig (grijs in diagram). </p>
+</section><section id="imborkern_enumeratiesdomeinwaarden"><div class="header-wrapper"><h5 id="x5-1-3-5-imborkern_enumeratiesdomeinwaarden"><bdi class="secno">5.1.3.5 </bdi>imborKern_EnumeratiesDomeinwaarden</h5><a class="self-link" href="#imborkern_enumeratiesdomeinwaarden" aria-label="Permalink for Section 5.1.3.5"></a></div>
+<p>In deze tabel staan alle <code>EnumeratieType</code> binnen IMBOR, inclusief de relatie naar de <code>Domeinwaarde</code>. Het EnumeratieType en de Domeinwaarde worden één keer gedefinieerd in <code>imborVoc_Termen</code> en worden hier middels 1-op-N relaties aan elkaar gekoppeld. </p>
+<p>De kolom BovenliggendeWaarde wordt gebruikt om aan te geven hoe de domeinwaarden zich tot elkaar hiërarchisch verhouden. Dit betreft een hulpkolom die nodig is om de formulieren op te bouwen en is niet normatief nodig (grijs in diagram).</p>
+</section><section id="imborkern_k_klasseattributen"><div class="header-wrapper"><h5 id="x5-1-3-6-imborkern_k_klasseattributen"><bdi class="secno">5.1.3.6 </bdi>imborKern_K_KlasseAttributen</h5><a class="self-link" href="#imborkern_k_klasseattributen" aria-label="Permalink for Section 5.1.3.6"></a></div>
+<p>Dit betreft een koppeltabel waarin de attributen aan de klassen gekoppeld worden. Inclusief een indicatie in welke <code>Eenheid</code> dit attribuut vastgelegd kan worden.</p>
+<p>Er komen o.a. <code>Objecttype</code>n, <code>Klassen</code>, <code>ObjecttypeOnderdelen</code> en <code>Informatieobject</code>en voor in de kolom <code>Klasse</code>. Dit lijkt vreemd, maar is correct omdat het technisch gezien allemaal <code>Klasse</code> zijn (ofwel: subtypen van <code>Klasse</code>)</p>
+<p>Daarnaast wordt de kolom <code>Informatiemodel</code> gebruikt om aan te geven in welk extern model er voor heeft gezorgd dat het betreffende attribuut is opgenomen in IMBOR. Hier wordt op termijn als nodig een mapping voor gemaakt. Nu is het 'beheerinformatie'.</p>
+<p>De kolom OAGBD wordt gebruikt voor het informatieve deel dat beschreven wordt in het <a href="#oagbd">OAGBD addendum</a>.</p>
+<p>Als laatste staat hier ook welke waardelijst van toepassing is. Dit staat in <code>EnumeratieType</code>.</p>
+</section><section id="imborkern_k_vakdisciplinesobjecttypen"><div class="header-wrapper"><h5 id="x5-1-3-7-imborkern_k_vakdisciplinesobjecttypen"><bdi class="secno">5.1.3.7 </bdi>imborKern_K_VakdisciplinesObjecttypen</h5><a class="self-link" href="#imborkern_k_vakdisciplinesobjecttypen" aria-label="Permalink for Section 5.1.3.7"></a></div>
+<p>Met deze tabel wordt aangegeven binnen welke <code>Vakdiscipline</code> een <code>Objecttype</code> kan voorkomen. Het betreft hier groepering die ook niets meer dan dat is. Binnen IMBOR wordt deze voornamelijk gebruikt als zoekingang of als structurering om de hoeveelheid <code>Objecttype</code> makkelijker te kunnen inzien. </p>
+</section><section id="imborkern_k_objecttypensemantischerelaties"><div class="header-wrapper"><h5 id="x5-1-3-8-imborkern_k_objecttypensemantischerelaties"><bdi class="secno">5.1.3.8 </bdi>imborKern_K_ObjecttypenSemantischeRelaties</h5><a class="self-link" href="#imborkern_k_objecttypensemantischerelaties" aria-label="Permalink for Section 5.1.3.8"></a></div>
+<p>De introductie van semantische relaties (betekenisvolle relaties) is samen met de introductie van de klassen de grootste wijziging t.o.v. IMBOR2020-08. Met deze introductie is een generieke manier gecreëerd om relaties tussen <code>Klasse</code> te beschrijven. In deze tabel zijn de relaties opgenomen die normerend zijn binnen de IMBOR ontologie (inclusief hun multipliciteit). De relaties zelf ontlenen hun semantiek aan de NEN2660-2. </p>
+<div class="advisement">
+Deze lijst is voorschrijvend, maar niet limitatief. In de implementatie mag een gebruiker zelf kiezen welke relaties er tussen de verschillende klassen aangegeven mag worden. Als er een relatie ontbreekt kan deze in de eigen implementatie gewoon gelegd worden. Uiteraard wil de IMBOR beheercommissie graag op de hoogte gehouden worden van deze inzichten.
+</div>
+
+</section></section><section id="referentiemodellen"><div class="header-wrapper"><h4 id="x5-1-4-referentiemodellen"><bdi class="secno">5.1.4 </bdi>Referentiemodellen</h4><a class="self-link" href="#referentiemodellen" aria-label="Permalink for Section 5.1.4"></a></div>
+<p>Omdat de referentiemodellen een informatief onderdeel van IMBOR zijn, worden deze beschreven in een <a href="#referentiemodellen-in-ms-access">apart sectie</a>. </p>
+</section></section><section id="imbor-in-linkeddata"><div class="header-wrapper"><h3 id="x5-2-imbor-in-linkeddata"><bdi class="secno">5.2 </bdi>IMBOR in LinkedData</h3><a class="self-link" href="#imbor-in-linkeddata" aria-label="Permalink for Section 5.2"></a></div>
+<p>Naast de distributie in de relationele tabellen van Acces wordt ook een LinkedData variant aangeboden. Deze is gebaseerd op hetzelfde logische model als de Access versie. Omdat vooralsnog de Access database tevens als beheeromgeving voor IMBOR wordt gebruikt is de LinkedData versie een transformatie van de tabellen. De LinkedData versie wordt via een transformatie getrokken uit de beheeromgeving. In de transformatie wordt de data getransformeerd naar het onderstaande fysieke datamodel. </p>
+<figure id="fig-imbor-fysiek-datamodel-in-linkeddata-rechtermuisknop-openen-in-nieuw-tabblad-voor-leesbare-versie">
+
+<p><img src="img/Modulaire%20opzet%20IMBOR-Fysiek%20Datamodel%20LD.drawio.png?raw=true" alt="IMBOR fysiek datamodel LD"></p>
+<figcaption>Figuur <bdi class="figno">9</bdi> <span class="fig-title">IMBOR fysiek datamodel in LinkedData -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</span></figcaption>
+</figure>
+
+<section id="ontologie-indeling-in-grafen"><div class="header-wrapper"><h4 id="x5-2-1-ontologie-indeling-in-grafen"><bdi class="secno">5.2.1 </bdi>Ontologie indeling (in grafen)</h4><a class="self-link" href="#ontologie-indeling-in-grafen" aria-label="Permalink for Section 5.2.1"></a></div>
+<p>Ook de LinkedData versie van IMBOR (IMBOR-LD) is volgt de modulaire indeling. In IMBOR-LD wordt dit met verschillen grafen (gerepresenteerd via prefixen) vastgelegd.</p>
+<ul>
+<li><code>imbor-term:*</code> zijn de concepten die het begrippenkader (of vocabulaire) van IMBOR beschrijven.</li>
+<li><code>imbor:*</code> zijn de concepten die de (normatieve) elementen binnen de IMBOR ontologie beschrijven (dit staat gelijk aan de 'imborKern').</li>
+<li><code>imbor-domeinwaarde:*</code> zijn alle domeinwaarden binnen IMBOR (dit zijn instanties). Deze staan in een aparte graaf vanwege de overzichtelijkheid.</li>
+<li><code>imbor-refmodels:*</code> zijn de concepten waarin externe ontologien aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.</li>
+</ul>
+<p>Omdat IMBOR een extensie is van de NEN2660-2 is de IMBOR kern direct 'gesubclassed' aan de NEN2660-2 concepten. Vandaar dat de concepten die we gebruiken uit de NEN2660-2 afgebeeld zijn met de prefix <code>nen2660:*</code>. </p>
+<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Noot</span></div><div class="">
+In de NEN2660-2 zit een kleine inconsistentie met GeoSPARQL. Er wordt namelijk niet verteld hoe deze toegepast moet worden. Om dit praktisch op te lossen wordt in de IMBOR Kern gesteld dat: <code>nen2660:hasBoundary rdfs:subPropertyOf geo:hasGeometry</code>. Dit kan gezien worden als een verduidelijking van de NEN2660 voor de IMBOR context.
+</div></div>
+
+</section><section id="begrippenkader-0"><div class="header-wrapper"><h4 id="x5-2-2-begrippenkader"><bdi class="secno">5.2.2 </bdi>Begrippenkader</h4><a class="self-link" href="#begrippenkader-0" aria-label="Permalink for Section 5.2.2"></a></div>
+<p>Dit zijn alle classes (concepten) die tezamen het vocabulaire vormen (e.g. de thesaurus).</p>
+<section id="imbor-term-term"><div class="header-wrapper"><h5 id="x5-2-2-1-imbor-term-term"><bdi class="secno">5.2.2.1 </bdi>imbor-term:Term</h5><a class="self-link" href="#imbor-term-term" aria-label="Permalink for Section 5.2.2.1"></a></div>
+<p>Op deze class worden alle attributen vastgelegd die het concept (conceptueel) definiëren in tekstuele zin en vormt daarmee de basis voor het vocabulaire.</p>
+</section><section id="imbor-term-collectie"><div class="header-wrapper"><h5 id="x5-2-2-2-imbor-term-collectie"><bdi class="secno">5.2.2.2 </bdi>imbor-term:Collectie</h5><a class="self-link" href="#imbor-term-collectie" aria-label="Permalink for Section 5.2.2.2"></a></div>
+<p>Deze class bevat alle collecties waarin de termen kunnen worden ingedeeld.</p>
+</section></section><section id="nen2660"><div class="header-wrapper"><h4 id="x5-2-3-nen2660"><bdi class="secno">5.2.3 </bdi>NEN2660</h4><a class="self-link" href="#nen2660" aria-label="Permalink for Section 5.2.3"></a></div>
+<p>Dit zijn alle classes uit de NEN2660-2 waaraan wij ons committeren. De basis betreft het <code>nen2660:DiscreteObject</code> (buiten de NEN2660-2 wordt dit ook wel als een 'Fysieke Object' gezien) en de <code>nen2660:SpatialRegion</code> (ook wel het 'Ruimtelijk Gebied'). Daarnaast betrekken we het <code>nen2660:InformationObject</code> om beschrijvingen toe te voegen en <code>nen2660:Activity</code> om functies te kunnen definiëren. </p>
+<section id="nen2660-discreteobject"><div class="header-wrapper"><h5 id="x5-2-3-1-nen2660-discreteobject"><bdi class="secno">5.2.3.1 </bdi>nen2660:DiscreteObject</h5><a class="self-link" href="#nen2660-discreteobject" aria-label="Permalink for Section 5.2.3.1"></a></div>
+<p>Gedefinieerd als: "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"</p>
+</section><section id="nen2660-spatialregion"><div class="header-wrapper"><h5 id="x5-2-3-2-nen2660-spatialregion"><bdi class="secno">5.2.3.2 </bdi>nen2660:SpatialRegion</h5><a class="self-link" href="#nen2660-spatialregion" aria-label="Permalink for Section 5.2.3.2"></a></div>
+<p>Gedefinieerd als: "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spatial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"</p>
+</section><section id="nen2660-informationobject"><div class="header-wrapper"><h5 id="x5-2-3-3-nen2660-informationobject"><bdi class="secno">5.2.3.3 </bdi>nen2660:InformationObject</h5><a class="self-link" href="#nen2660-informationobject" aria-label="Permalink for Section 5.2.3.3"></a></div>
+<p>Gedefinieerd als: "Thing that is a whole of information on itself and has an own identity"</p>
+</section><section id="nen2660-geometricentity"><div class="header-wrapper"><h5 id="x5-2-3-4-nen2660-geometricentity"><bdi class="secno">5.2.3.4 </bdi>nen2660:GeometricEntity</h5><a class="self-link" href="#nen2660-geometricentity" aria-label="Permalink for Section 5.2.3.4"></a></div>
+<p>Gedefinieerd als:  "A spatial representation"</p>
+</section><section id="nen2660-enumerationtype"><div class="header-wrapper"><h5 id="x5-2-3-5-nen2660-enumerationtype"><bdi class="secno">5.2.3.5 </bdi>nen2660:EnumerationType</h5><a class="self-link" href="#nen2660-enumerationtype" aria-label="Permalink for Section 5.2.3.5"></a></div>
+<p>Gedefinieerd als: "A type having a fixed or extendable set of simple instances having no further attributes or relations"</p>
+</section><section id="nen2660-activity"><div class="header-wrapper"><h5 id="x5-2-3-6-nen2660-activity"><bdi class="secno">5.2.3.6 </bdi>nen2660:Activity</h5><a class="self-link" href="#nen2660-activity" aria-label="Permalink for Section 5.2.3.6"></a></div>
+<p>Gedefinieerd als: "An activity is something possibly or actually happening in space and time"</p>
+</section><section id="nen2660-matter"><div class="header-wrapper"><h5 id="x5-2-3-7-nen2660-matter"><bdi class="secno">5.2.3.7 </bdi>nen2660:Matter</h5><a class="self-link" href="#nen2660-matter" aria-label="Permalink for Section 5.2.3.7"></a></div>
+<p>Gedefinieerd als: "A pure chemical substance, chemical bonding or mixture from which real objects are made"</p>
+</section></section><section id="kernmodel-0"><div class="header-wrapper"><h4 id="x5-2-4-kernmodel"><bdi class="secno">5.2.4 </bdi>Kernmodel</h4><a class="self-link" href="#kernmodel-0" aria-label="Permalink for Section 5.2.4"></a></div>
+<p>Het IMBOR kernmodel bevat niet veel meer dan 'Objecten', 'Attributen' en 'Domeinwaarden'. Dit wordt nog aangevuld met de `Vakdisciplines'. Het kernmodel is uitgevoerd in [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-schema" title="RDF Schema 1.1">rdf-schema</a></cite>] en [<cite><a class="bibref" data-link-type="biblio" href="#bib-shacl" title="Shapes Constraint Language (SHACL)">shacl</a></cite>]. Dit is volgens de taalbinding van de NEN2660-2 gedaan. Hieronder worden de onderdelen beschreven. </p>
+<section id="imbor-klasse"><div class="header-wrapper"><h5 id="x5-2-4-1-imbor-klasse"><bdi class="secno">5.2.4.1 </bdi>imbor:Klasse</h5><a class="self-link" href="#imbor-klasse" aria-label="Permalink for Section 5.2.4.1"></a></div>
+<p>Deze class betreft alle Klassen, <code>InformatieObject</code>en en <code>Objecttyp</code>en die IMBOR bevat. Met het attribuut <code>dash:abstract</code> wordt aangegeven of iets abstract (<code>true</code>) of concreet (<code>false</code>) is. Waarbij met concreet bedoeld wordt dat er in een beheersysteem of bij uitwisseling ook daadwerkelijk instanties van gemaakt zullen worden. Abstracte classes zullen voor eindgebruik niet heel belangrijk zijn en voor de meeste eindgebruikers ook niet zichtbaar zijn. De class heeft verder twee belangrijke relaties naar NEN2660 concepten. Dit betreffen <code>nen2660:isDescribedBy</code> die naar het <code>nen2660:InformationObject</code> loopt en <code>nen2660:hasBoundary</code> die naar de <code>nen2660:GeometricEntity</code> loopt. Met de eerste wordt dus aangegeven dat 'meer informatie over het de <code>imbor:Klasse</code> te vinden is bij het het <code>InformatieObject</code>. Met de tweede wordt aangegeven dat de (concrete) <code>imbor:Klasse</code> gebonden is door een geometrie. Ofwel, er kan een geometrie van vastgelegd worden. </p>
+</section><section id="imbor-klasseattribuut"><div class="header-wrapper"><h5 id="x5-2-4-2-imbor-klasseattribuut"><bdi class="secno">5.2.4.2 </bdi>imbor:KlasseAttribuut</h5><a class="self-link" href="#imbor-klasseattribuut" aria-label="Permalink for Section 5.2.4.2"></a></div>
+<p>Deze class (die middels <code>sh:property</code> aan de <code>imbor:Klasse</code> hangt) is eigenlijk de koppeling tussen het 'Object' en het 'Attribuut'. Dit is een zogenaamde 'SHACL PropertyShape' en definieert dus welke attributen van toepassing zijn bij welk Objecttype en legt daar zaken over vast zoals: maximale kardinaliteit, in welke unit dit uitgedrukt moet worden van welke datatype het betreft. Er zijn in het schema twee beschrijvingen van <code>imbor:KlasseAttribuut</code> te zien. Dit komt omdat de property-shapes anders in elkaar zitten wanneer het een voorgedefinieerd datatype betreft (iets uit de [<cite><a class="bibref" data-link-type="biblio" href="#bib-xmlschema11-1" title="W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures">xmlschema11-1</a></cite>] lijn), dan wanneer het een waardelijst is.</p>
+</section><section id="imbor-attribuut"><div class="header-wrapper"><h5 id="x5-2-4-3-imbor-attribuut"><bdi class="secno">5.2.4.3 </bdi>imbor:Attribuut</h5><a class="self-link" href="#imbor-attribuut" aria-label="Permalink for Section 5.2.4.3"></a></div>
+<p>Middels <code>sh:path</code> wordt de <code>imbor:KlasseAttribuut</code> verbonden met de daadwerkelijke <code>imbor:Attribuut</code>. Dit kan gezien worden als de 'conventionele' declaratie van het IMBOR attribuut. </p>
+</section><section id="imbor-enumeratietype"><div class="header-wrapper"><h5 id="x5-2-4-4-imbor-enumeratietype"><bdi class="secno">5.2.4.4 </bdi>imbor:EnumeratieType</h5><a class="self-link" href="#imbor-enumeratietype" aria-label="Permalink for Section 5.2.4.4"></a></div>
+<p>De <code>imbor:KlasseAttribuut</code> wordt middels <code>sh:class</code> verbonden aan de <code>imbor:EnumeratieType</code>. Dit is een <code>nen2660:EnumerationType</code>. Deze lijst bevat eigenlijk 'instanties' van de daadwerkelijke domeinwaarden.</p>
+</section><section id="imbor-domeinwaarde-domeinwaarde"><div class="header-wrapper"><h5 id="x5-2-4-5-imbor-domeinwaarde-domeinwaarde"><bdi class="secno">5.2.4.5 </bdi>imbor-domeinwaarde:Domeinwaarde</h5><a class="self-link" href="#imbor-domeinwaarde-domeinwaarde" aria-label="Permalink for Section 5.2.4.5"></a></div>
+<p>Dit zijn de daadwerkelijke domeinwaarden die middels een <code>rdf:type</code> aan de `<code>imbor:EnumeratieType</code> gehangen worden. Deze worden (volgens MIM gebruik) in een aparte graaf geplaatst zodat de kern niet te groot wordt en omdat deze domeinwaarden vaker aan verandering onderhevig zijn.</p>
+</section><section id="imbor-vakdiscipline"><div class="header-wrapper"><h5 id="x5-2-4-6-imbor-vakdiscipline"><bdi class="secno">5.2.4.6 </bdi>imbor:Vakdiscipline</h5><a class="self-link" href="#imbor-vakdiscipline" aria-label="Permalink for Section 5.2.4.6"></a></div>
+<p>De instanties van deze class zijn de IMBOR Vakdisciplines. Deze declareren middels een <code>rdfs:member</code> welke ObjectTypen uit <code>imbor:Klasse</code> binnen een vakdiscipline vallen.</p>
+</section></section><section id="referentiemodellen-0"><div class="header-wrapper"><h4 id="x5-2-5-referentiemodellen"><bdi class="secno">5.2.5 </bdi>Referentiemodellen</h4><a class="self-link" href="#referentiemodellen-0" aria-label="Permalink for Section 5.2.5"></a></div>
+<p>Omdat de referentiemodellen een informatief onderdeel van IMBOR zijn, worden deze beschreven in een <a href="#referentiemodellen-in-linkeddata">apart sectie</a>. </p>
+</section><section id="aanvullend-metamodel"><div class="header-wrapper"><h4 id="x5-2-6-aanvullend-metamodel"><bdi class="secno">5.2.6 </bdi>Aanvullend 'metamodel'</h4><a class="self-link" href="#aanvullend-metamodel" aria-label="Permalink for Section 5.2.6"></a></div>
+<p>Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het 'IMBOR Aanvullend Metamodel'. Dit betreft een kleine ontologie van beschrijfende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn.</p>
+</section></section></section>
+  <section data-format="markdown" class="informative" id="referentiemodellen-1"><div class="header-wrapper"><h2 id="x6-referentiemodellen"><bdi class="secno">6. </bdi>Referentiemodellen</h2><a class="self-link" href="#referentiemodellen-1" aria-label="Permalink for Section 6."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<section id="toelichting-per-referentiemodel"><div class="header-wrapper"><h3 id="x6-1-toelichting-per-referentiemodel"><bdi class="secno">6.1 </bdi>Toelichting per referentiemodel</h3><a class="self-link" href="#toelichting-per-referentiemodel" aria-label="Permalink for Section 6.1"></a></div>
+<p>Binnen IMBOR zijn relaties opgenomen naar andere modellen. IMBOR bevindt zich in een speelveld waar veel raakvlakken zijn met andere sectorstandaarden en nationale registraties. Het betreft een onderdeel wat los staat van de 'normatieve' IMBOR onderdelen en mag gezien worden als een handreiking vanuit, en aan de IMBOR community. De exacte vorm van deze afhankelijkheden is nog niet formeel gemaakt. Ook binnen IMBOR2022 is nog geen formele 'mapping' gemaakt naar andere standaarden. Wel is getracht om de relatie die er vanuit IMBOR erkend wordt zo goed mogelijk aan te geven. Dit omdat de gebruiker van IMBOR dan zelf deze kennis kan beoordelen, eventueel gebruiken of verbeteren. Hieronder worden de relatie met andere standaarden beschreven. Van een aantal standaarden zijn ook binnen de IMBOR distributies gegevens overgenomen of zijn de relaties expliciet (met zwakke semantiek) aangegeven. Dit wordt dan ook vermeld. Hoe dit daadwerkelijk in de distributies zit is vermeld in deze sectie voor <a href="#referentiemodellen-in-ms-access">IMBOR in Access</a> en <a href="#referentiemodellen-0">IMBOR-LD</a>.</p>
+<div class="advisement">
+Vanwege de positie van IMBOR worden er veel relaties naar andere standaarden gelegd. Binnen IMBOR zijn gegevens (bijvoorbeeld van GWSW) overgenomen in IMBOR (gekopieerd) om de relatie tussen de twee te kunnen aangeven. Dit is wat CROW betreft een <i>tijdelijke</i> situatie. Wanneer meer standaarden in LinkedData uitgedrukt worden EN er standaarden zijn hoe modellen op elkaar 'gemapt' kunnen worden zullen we sterke semantische relaties gaan leggen. Dan worden de gekopieerde gegevens ook daadwerkelijk bij de bron onderhouden en refereert IMBOR er alleen maar naar. 
+</div>
+
+
+<section id="nen2660-2"><div class="header-wrapper"><h4 id="x6-1-1-nen2660-2"><bdi class="secno">6.1.1 </bdi>NEN2660-2</h4><a class="self-link" href="#nen2660-2" aria-label="Permalink for Section 6.1.1"></a></div>
+<p>De NEN2660-2 vormt de belangrijkste leidraad voor IMBOR2022 door twee belangrijke dingen te specificeren:</p>
+<ol>
+<li>Een praktisch toplevelmodel waarin genoeg semantiek aangegeven wordt om IMBOR in uit te drukken</li>
+<li>Een taalbinding (en daarmee de keuze voor) de LinkedData W3C standaarden. 
+IMBOR maakt gebruik van deze twee keuzes en probeert daarom zo goed mogelijk aan te sluiten. In onderstaande figuur is ook te zien waar de NEN2660-2 zich op focust. IMBOR neemt plaats in de "M1: Informatie model" laag.</li>
+</ol>
+<figure id="fig-nen2660-2-scope-in-grijs-grijze-vlakken-bron-tno">
+
+<p><img src="img/NEN2660-2_scope.png" alt="NEN2660-2 scope"></p>
+<figcaption>Figuur <bdi class="figno">10</bdi> <span class="fig-title"><figcaption>NEN2660-2 scope in grijs grijze vlakken (bron: TNO)</figcaption></span></figcaption>
+</figure>
+
+<p>In de sectie <a href="#imbor-samenhang-en-hierarchie">IMBOR samenhang en hiërarchie</a> wordt de keuze en de interpretatie van het praktisch toplevelmodel toegelicht in detail. In de sectie <a href="#imbor-in-linkeddata">IMBOR in LinkedData</a> wordt de toepassing van de LinkedData principes in detail toegelicht.</p>
+<div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="3"><span>Noot</span></div><div class="">
+In 2022 is de nieuwe versie van de <a href="https://www.w3schools.com](https://www.nen.nl/nen-2660-2-2022-nl-291667">NEN2660-2</a> vrijgegeven waaraan IMBOR zich committeert. 
+</div></div>
+
+</section><section id="nen3610"><div class="header-wrapper"><h4 id="x6-1-2-nen3610"><bdi class="secno">6.1.2 </bdi>NEN3610</h4><a class="self-link" href="#nen3610" aria-label="Permalink for Section 6.1.2"></a></div>
+<p>De NEN3610 is in 2022 herzien (t.o.v. 2011) en vormt de basis van de Samenhangende objecten registratie (SOR) die binnen het DiSGeo programma wordt opgetuigd. Binnen de NEN2660-2 is reeds een relatie tussen de NEN2660-2 en de NEN3610 aangegeven. Het gaat hier alleen om een afstemming tussen de begrippenkaders. IMBOR heeft deze afstemming overgenomen in de <a href="#imbor-top-hierarchie">tophiërarchie</a>. Binnen IMBOR wordt daarmee zo veel mogelijk aangesloten op de semantiek van de NEN3610 (en daarmee de NEN2660-2), maar wordt (nog) geen volledige sterke relatie met de rest van de norm NEN3610 beschreven. Er wordt zodoende ook niet beweerd dat er volledige compatibiliteit met de NEN3610 is (wel met de NEN2660-2), maar dat puur de begrippenkaders voor nu met elkaar afgestemd zijn. Dit is gedaan vanwege de te verwachten sterke relatie met de SOR die ongeveer hetzelfde doet. De NEN3610 hiërarchie wordt tevens gebruikt om de verdeling van attributen binnen IMBOR te regelen. 
+Wel worden de attributen <code>identificatie</code> en <code>domein</code> (als verplicht vanuit de NEN3610) volledige toegepast in IMBOR als identificerende attributen.</p>
+</section><section id="mim"><div class="header-wrapper"><h4 id="x6-1-3-mim"><bdi class="secno">6.1.3 </bdi>MIM</h4><a class="self-link" href="#mim" aria-label="Permalink for Section 6.1.3"></a></div>
+<p>Het Metamodel Informatie Modellering (<a href="https://docs.geostandaarden.nl/mim/mim/">MIM</a>) is een gemeenschappelijk vertrekpunt voor het maken van informatiemodellen. Het model bevat duidelijke afspraken over het vastleggen van gegevensspecificaties en biedt tegelijkertijd ruimte aan de verschillende niveaus van modellering. Het MIM is in 2020 uitgekomen en vormt een belangrijke leidraad voor IMBOR2022 ondanks dat er niet volledig aan alle facetten voldaan wordt. Twee belangrijke dingen passen we toe:</p>
+<ol>
+<li>Het scheiden van soort informatiemodellen in niveaus. In deze context dus het onderscheid tussen het Begrippenkader en het Kernmodel. </li>
+<li>De inhoudelijke modellering van modelconcepten en de metagegevens ervan. Door IMBOR uit te drukken in het MIM is een standaard manier van vastleggen en uitleg geborgd.</li>
+</ol>
+<p>Het MIM gaat uit van een begrippenkader en een explicietere modellering van een informatiemodel. Binnen IMBOR is dit toegepast door alles één keer te definiëren in het IMBOR vocabulaire (die ook los te gebruiken is) en vervolgens relaties tussen objecten, tussen objecten en attributen, etc. te modelleren in een meer gedetailleerd logisch informatiemodel (kernmodel). Het kernmodel en het begrippenkader worden vervolgens gelinkt. Dit onderscheid is ook te zien in de fysieke datamodellen voor <a href="#imbor-in-ms-access">Access</a> en <a href="#imbor-in-linkeddata">LinkedData</a>.</p>
+<p>Het tweede hoofdprincipe van het MIM betreft het modelleren van het IMBOR binnen het metamodel dat het MIM specificeert. Dit is in detail te zien in de sectie <a href="#imbor-in-modellen">IMBOR in modellen</a>. Iedereen die het MIM kent kan zodoende lezen hoe het IMBOR gemodelleerd is. Tevens kunnen informatiemodellen die volgens het MIM worden gemodelleerd (bijvoorbeeld de SOR) makkelijker met elkaar vergeleken worden. </p>
+<p>De <a href="https://docs.geostandaarden.nl/mim/mim/#metamodel-in-linked-data-ld">RDF vertaling</a> zoals gebruikt in het MIM wordt niet gebruikt. Mede omdat de MIM metaclasses binnen IMBOR de ontologie niet direct gebruikt worden, maar alleen in het metamodel. Er wordt bijvoorbeeld gesteld dat een <code>imbor:Objecttype</code> van de metaclass <code>mim:Objecttype</code> is, daardoor is de <code>imbor:Boom</code> (welke <code>rdf:type</code> is van <code>imbor:Objecttype</code>) wel (indirect) gerelateerd aan het MIM, maar geen voorkomen van. </p>
+<div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-3" aria-level="3"><span>Noot</span></div><div class="">
+In 2022/2023 zijn er gesprekken gaande tussen CROW, Geonovum en NEN om het in samenhang gebruiken van de NEN3610, NEN2660 en het MIM beter te faciliteren. IMBOR2022 vormt hierbij de eerste praktijkproef. Te verwachten valt dat IMBOR2023 zodoende nog meer principes uit het MIM toepast.
+</div></div>
+
+</section><section id="gwsw"><div class="header-wrapper"><h4 id="x6-1-4-gwsw"><bdi class="secno">6.1.4 </bdi>GWSW</h4><a class="self-link" href="#gwsw" aria-label="Permalink for Section 6.1.4"></a></div>
+<p>De relatie met GWSW is al lange tijd binnen IMBOR aanwezig. Riolering wordt als één van de belangrijke 'zuilen' binnen het beheer van de openbare ruimte gezien. Vandaar dat er ook al vele gesprekken tussen Stichting RIONED en CROW geweest zijn om deze twee sectorstandaarden zo nauw mogelijk op elkaar aan te laten sluiten. GWSW is vanaf het begin al gedistribueerd volgens de LinkedData principes. IMBOR is dit pas vanaf 2021, vandaar dat de relatie altijd relatief impliciet is geweest. Sinds 2021 is de NEN2660-2 beschikbaar, juist om de samenhang tussen zulke standaarden meer te stroomlijnen. Na de release van IMBOR2022 wordt verwacht dat ook GWSW de NEN2660-2 gaat toepassen (in navolging van IMBOR). Wanneer dit het geval is zullen Stichting RIONED en CROW trachten de standaarden op een zuivere manier exact op elkaar af te stemmen. Tot die tijd moet dit 'handmatig' gedaan worden. GWSW is dan ook één van de standaarden waar een relatie is opgenomen in de IMBOR distributies. </p>
+<section id="gwsw-als-referentiemodel"><div class="header-wrapper"><h5 id="x6-1-4-1-gwsw-als-referentiemodel"><bdi class="secno">6.1.4.1 </bdi>GWSW als referentiemodel</h5><a class="self-link" href="#gwsw-als-referentiemodel" aria-label="Permalink for Section 6.1.4.1"></a></div>
+<p>Binnen GWSW worden objecttypen, attributen en relaties beschreven die gaan over zowel statische als dynamische gegevens. Met statische gegevens worden gegevens bedoeld die relatief weinig veranderen en vaak voor meer doeleinden nodig zijn dan alleen beheer van de riolering. Onder dynamische gegevens worden dan ook meer de gegevens verstaan die regelmatig worden verzameld voor het assetmanagement (denk aan inspecties, metingen en uitgevoerde onderhoudsmaatregelen) en gegevens die daaruit worden berekend (denk aan planjaren, verwachte maatregelen en kostenramingen). Deze gegevens worden vaak in beheersystemen vastgelegd die voor rioolbeheer gemaakt zijn. IMBOR heeft een focus op alleen de vaste gegevens van objecten in de openbare ruimte. Vandaar dat er de relatie tussen IMBOR en GWSW zich alleen toelegt op de objecttypen, relaties en attributen die vaste gegevens beschrijven. Het deel van GWSW dat vaste gegevens beschrijft is <em>voor nu nog</em> overgenomen in IMBOR(gekopieerd), maar dit moet in de toekomst een semantische relatie worden. De verwachting is dat in de loop van 2022 bij zowel IMBOR, GWSW en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen GWSW en IMBOR gerealiseerd worden, waardoor veel objecten van GWSW niet meer overgenomen hoeven te worden in IMBOR, maar dat er naar gelinkt wordt. In de tussentijd is dat nog niet het geval en is er dus sprake een 'kopie' van een deel van GWSW in IMBOR. De relatie tussen de IMBOR concepten en de GWSW concepten is nu niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe GWSW is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. </p>
+<p>De opname van GWSW in IMBOR is zodoende niet 100%. De meeste objecttypen, attributen en relaties zijn aanwezig in IMBOR en er zijn 'mapping' regels gemaakt voor de objecttypen (zoals hierboven beschreven). Zie hiervoor ook nog <a href="#gwsw-relatie-toevoeging">appendix A</a></p>
+</section></section><section id="nen2767-4"><div class="header-wrapper"><h4 id="x6-1-5-nen2767-4"><bdi class="secno">6.1.5 </bdi>NEN2767-4</h4><a class="self-link" href="#nen2767-4" aria-label="Permalink for Section 6.1.5"></a></div>
+<p>De NEN2767 en IMBOR hebben ook een lange historie. Veel gebruikers van IMBOR gebruiken ook de NEN2767-4 Conditiemeting infrastructuur. Er is in 2020 ook besloten dat de afstemming tussen de twee duidelijker gemaakt moet worden. Hiervoor is een gezamenlijk project gestart <a href="https://www.nen.nl/nieuws/conditiemeting/eerste-stap-eenduidige-aansluiting-tussen-imbor-en-nen-2767-gezet/">door de NEN en CROW</a>. Dit project is gestart, maar de resultaten hiervan worden in 2022 pas verwacht. Tot nu toe is daarom in IMBOR een zwakke semantische relatie gelegd vanuit het IMBOR perspectief. Voor de IMBOR objecttypen waar een equivalent erkend wordt in de NEN2767-4 is dit aangegeven.</p>
+<section id="nen2767-als-referentiemodel"><div class="header-wrapper"><h5 id="x6-1-5-1-nen2767-als-referentiemodel"><bdi class="secno">6.1.5.1 </bdi>NEN2767 als referentiemodel</h5><a class="self-link" href="#nen2767-als-referentiemodel" aria-label="Permalink for Section 6.1.5.1"></a></div>
+<p>Voor IMBOR objecttypen waar een NEN equivalent gezien wordt (zowel Beheerobject, Element als Bouwdeel) is dit aangegeven in IMBOR. Hiermee staat het NEN concept dus ook 'in' IMBOR. De verwachting is dat in de loop van 2022 bij het IMBOR en in de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Als het ook lukt om de NEN2767-4 hierin door te ontwikkelen kan dan een sterke semantische relatie (mapping) tussen de NEN2767-4 en IMBOR gerealiseerd worden, waardoor veel objecten niet meer overgenomen hoeven te worden in IMBOR, maar dat er naar gelinkt wordt. In de tussentijd is dat nog niet het geval en is er dus sprake een 'kopie' van een deel van de NEN2767-4 in IMBOR. De relatie tussen de IMBOR concepten en de NEN concepten is niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe de NEN2767-4 is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. </p>
+</section></section><section id="bgt-imgeo"><div class="header-wrapper"><h4 id="x6-1-6-bgt-imgeo"><bdi class="secno">6.1.6 </bdi>BGT/IMGeo</h4><a class="self-link" href="#bgt-imgeo" aria-label="Permalink for Section 6.1.6"></a></div>
+<p>De relatie tussen BGT/<a href="https://docs.geostandaarden.nl/imgeo/catalogus/imgeo/">IMGeo</a> en IMBOR is altijd noodzakelijk geweest. IMBOR maakt gebruik van de IMGeo-objecten (en daarmee dus de 'verrijkte' BGT objecten). IMGeo levert de geometrie die in IMBOR wordt verrijkt met beheerinformatie. Er is echter wel sprake van een relatief gecompliceerde relatie. In 2020 is door CROW en Geonovum samen een <a href="https://docs.geostandaarden.nl/imgeo/def-pr-IMGeo-20200318/">praktijkrichtlijn</a> uitgebracht. IMBOR2020-08 sluit aan op versie van IMGeo, 2.1.1. In IMGeo 2.1.1 ontbreken bepaalde subclassificaties van objecten die wel in IMBOR voorkomen. Om IMBOR-classificaties zonder gegevensverlies te kunnen uitwisselen tussen Geo- en BOR-afdeling binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is deze werkafspraak/praktijkrichtlijn ‘Uitbreiding domeinwaarden en attributen’ ontwikkeld. De relatie tussen IMBOR en IMGeo is met deze praktijkrichtlijn helemaal uitgewerkt in een mapping tabel. In de praktijk wordt deze helaas niet of nauwelijks toegepast. Daarnaast is door de introductie van de SOR de toekomst van IMGeo helaas nog ongewis. Binnen IMBOR2022 is daarom op een iets hoger niveau een relatief sterke semantische relatie gelegd naar IMGeo2.2.</p>
+<section id="imgeo-als-referentiemodel"><div class="header-wrapper"><h5 id="x6-1-6-1-imgeo-als-referentiemodel"><bdi class="secno">6.1.6.1 </bdi>IMGeo als referentiemodel</h5><a class="self-link" href="#imgeo-als-referentiemodel" aria-label="Permalink for Section 6.1.6.1"></a></div>
+<p>Binnen IMBOR is een 'mapping' opgenomen naar IMGeo die de 'uitdrukking in' semantiek kent. Hiermee is het mogelijk om IMBOR objecttypen vast te leggen met een IMGeo geometrie. De verwachting is dat in de loop van de tijd richting de ontwikkeling van de SOR bij zowel IMBOR, DisGeo en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMGeo (of de SOR) en IMBOR gerealiseerd worden. In de tussentijd is dat nog niet het geval en is er dus sprake een uitdrukking van IMBOR objecttypen in IMGeo geometrie. Deze vastlegging is gedaan zodat bekeken kan worden hoe IMGeo zich verhoudt tot IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. </p>
+</section></section><section id="sor"><div class="header-wrapper"><h4 id="x6-1-7-sor"><bdi class="secno">6.1.7 </bdi>SOR</h4><a class="self-link" href="#sor" aria-label="Permalink for Section 6.1.7"></a></div>
+<p>De SOR is een relatief nieuwe ontwikkeling die het landschap van standaarden en basisregistraties waarschijnlijk redelijk op zijn kop gaat zetten, hoewel de echte implicaties nog ongewis zijn. Binnen IMBOR is de verwachting dat IMBOR een 'uitklapmodel' van de SOR gaat worden. In objecttypen hiërarchie is daarom getracht om waar mogelijk de SOR begrippen te hanteren. Ook hier gaat het weer om het gebruik maken van het begrippenkader en nog niet persé de overig modelleerconstructies. Omdat de SOR praktisch een extensie van de NEN3610 is, is IMBOR voor zover mogelijk in lijn met de consultatieversie van de SOR gemaakt. Er is geen expliciete relatie gelegd. </p>
+<div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="3"><span>Noot</span></div><div class="">
+Er is nog geen definitieve versie van de SOR verschenen. Er is begin 2021 een <a href="https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang/objectenregistratie">tweede consultatie</a> gedaan. De verwachting is dat de SOR nog wel een tijdje op zich laat wachten en dat de huidige registraties tot die tijd gewoon blijven gelden. IMBOR zal t.z.t. zich waar nodig aanpassen om aan te sluiten. Meer informatie over de  ontwikkeling van de SOR is ook de vinden bij de <a href="https://vng.nl/projecten/samenhangende-objectenregistratie-sor">VNG</a>.
+</div></div>
+
+</section><section id="imkl"><div class="header-wrapper"><h4 id="x6-1-8-imkl"><bdi class="secno">6.1.8 </bdi>IMKL</h4><a class="self-link" href="#imkl" aria-label="Permalink for Section 6.1.8"></a></div>
+<p>Het informatiemodel Kabels en Leidingen (<a href="https://www.geonovum.nl/geo-standaarden/informatiemodellen-nen3610-familie/informatiemodel-kabels-en-leidingen-imkl">IMKL</a>) vormt een gemeenschappelijk begrippenkader voor gegevensuitwisseling voor werkzaamheden aan Kabels en Leidingen en gerelateerd grondverzet. Het IMKL is gebaseerd op NEN3610 en daarmee onderdeel van de NEN3610 familie. De relatie tussen IMKL en IMBOR is eenvoudig, maar noodzakelijk. Binnen IMBOR wordt de <code>Klasse</code> 'IMKLBasisObject' onderscheiden. Een aantal <code>Klasse</code> en daarmee <code>Objecttype</code>n zijn specialisaties van deze IMKL klasse. Daarmee worden diverse attributen die binnen IMKL noodzakelijk zijn geregistreerd binnen IMBOR. De verwachting is dat in de loop van 2022 bij zowel IMBOR, Geonovum en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen het IMKL en IMBOR gerealiseerd worden. De huidige vastlegging is gedaan zodat bekeken kan worden hoe IMKL informatie is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. </p>
+<section id="imkl-als-referentiemodel"><div class="header-wrapper"><h5 id="x6-1-8-1-imkl-als-referentiemodel"><bdi class="secno">6.1.8.1 </bdi>IMKL als referentiemodel</h5><a class="self-link" href="#imkl-als-referentiemodel" aria-label="Permalink for Section 6.1.8.1"></a></div>
+<p>Binnen IMBOR is een 'mapping' opgenomen naar IMKL die de 'uitdrukking in' semantiek kent. Hiermee is het mogelijk om IMBOR objecttypen te vergelijken met de belangrijkste IMKL featuretypes. De verwachting is dat in de loop van de tijd  de ontwikkeling bij zowel IMBOR, IMKL en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMKL en IMBOR gerealiseerd worden. In de tussentijd is dat nog niet het geval en is er dus sprake van een zwakke semantische relaties. Deze vastlegging is gedaan zodat bekeken kan worden hoe IMKL zich verhoudt tot IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. </p>
+</section></section><section id="imwv"><div class="header-wrapper"><h4 id="x6-1-9-imwv"><bdi class="secno">6.1.9 </bdi>IMWV</h4><a class="self-link" href="#imwv" aria-label="Permalink for Section 6.1.9"></a></div>
+<p>Het <a href="https://www.crow.nl/thema-s/wegontwerp/imwv-informatiemodel-wegen-en-verkeer">IMWV</a> is een afsprakenstelsel dat beschrijft hoe naast objectgerichte gegevens ook verkeersgegevens voor verkeerskundige vraagstukken op uniforme wijze kunnen worden vastgelegd. Het bevat een beschrijving van de fysieke objecten en statische gegevens die aan de fysieke objecten gekoppeld kunnen worden. Inhoudelijk is er dan ook een sterke relatie met IMBOR en het is zelfs ontwikkeld binnen de beheeromgeving van het IMBOR. Het IMWV bevat net als in het IMBOR geen beschrijvingen/afspraken van dynamische gegevens (zoals realtime verkeersgegevens, wachttijden, openingstijden van bruggen, verkeersongevallen, etc.) of gegevensbehoefte van verkeerskundige vraagstukken ten aanzien van bijvoorbeeld parkeren en verkeersmanagement. In de praktijk komt het er op neer dat de <code>Vakdiscipline</code> 'Verkeer' binnen IMBOR 1-op-1 het IMWV is. De kritische lezer zal zien dat er toch een aantal dynamische gegevens (vanuit het IMWV) in IMBOR zitten (bijvoorbeeld over verkeersintensiteit). Dit is gedaan omdat er geen andere plaats van registratie is. De verwachting is dat in de loop van 2022 bij zowel IMBOR, IMWV en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMWV en IMBOR gerealiseerd worden waardoor er naar gelinkt wordt. In de tussentijd is dat nog niet het geval en is er dus sprake van een aantal attributen die formeel niet binnen de scope van IMBOR passen.  </p>
+</section><section id="kor"><div class="header-wrapper"><h4 id="x6-1-10-kor"><bdi class="secno">6.1.10 </bdi>KOR</h4><a class="self-link" href="#kor" aria-label="Permalink for Section 6.1.10"></a></div>
+<p>De KOR 2018 (Kwaliteitscatalogus Openbare Ruimte) bevat zo'n 200 beeldmeetlatten voor het meten van de kwaliteit van de buitenruimte. Dit is een apart product van CROW, maar heeft een sterkte relatie met IMBOR. Elke beeldmeetlat is gerelateerd aan één of meerdere IMBOR objecttypen. Ofwel, elk objecttype binnen de KOR kent een equivalent binnen IMBOR. IMBOR en de KOR kunnen zodoende samen met elkaar gebruikt worden. </p>
+<div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="3"><span>Noot</span></div><div class="">
+De KOR is in 2018 opnieuw uitgebracht. In 2021 wordt verkend of de KOR ook gedistribueerd kan worden als informatiemodel in LinkedData. Wanneer dit gebeurt zal de expliciete sterke semantische relatie onderdeel zijn van de publicatie.
+</div></div>
+
+</section><section id="bor-meld"><div class="header-wrapper"><h4 id="x6-1-11-bor-meld"><bdi class="secno">6.1.11 </bdi>BOR-MELD</h4><a class="self-link" href="#bor-meld" aria-label="Permalink for Section 6.1.11"></a></div>
+<p><a href="https://www.crow.nl/thema-s/management-openbare-ruimte/beeldkwaliteit/bor-meld">BOR-MELD</a> is een CROW-standaard voor het vastleggen van meldingen over de openbare ruimte. De systematiek beschrijft welke informatie van een melding wordt vastgelegd, zowel het door de burger of bedrijf gemelde probleem (de ‘voorkant’ van de melding) als de achterliggende oorzaak en genomen actie (de ‘achterkant’ van de melding). De relatie met IMBOR is nagenoeg gelijk aan die van <a href="#kor">KOR</a>. De uniforme categorisering van typen meldingen over de openbare ruimte is altijd gerelateerd aan één of meerdere IMBOR-objecttypen. Ofwel, elk objecttype binnen BOR-MELD kent een equivalent binnen IMBOR. IMBOR en BOR-MELD kunnen zodoende samen met elkaar gebruikt worden. </p>
+<div class="note" role="note" id="issue-container-generatedID-6"><div role="heading" class="note-title marker" id="h-note-6" aria-level="3"><span>Noot</span></div><div class="">
+In 2021 wordt verkend of de BOR-MELD ook gedistribueerd kan worden als informatiemodel in LinkedData. Wanneer dit gebeurt zal de expliciete sterke semantische relatie onderdeel zijn van de publicatie.
+</div></div>
+
+</section><section id="qudt"><div class="header-wrapper"><h4 id="x6-1-12-qudt"><bdi class="secno">6.1.12 </bdi>QUDT</h4><a class="self-link" href="#qudt" aria-label="Permalink for Section 6.1.12"></a></div>
+<p>Vanuit de NEN2660-2 wordt de [<cite><a class="bibref" data-link-type="biblio" href="#bib-qudt" title="QUDT - Quantities, Units, Dimensions and Data Types Ontologies">QUDT</a></cite>] ontologie aangewezen als de plek om alles rondom eenheden en grootheden vandaan te halen. Door hier naar te refereren i.p.v. iets nieuws te verzinnen wordt inspanning en verwarring bespaard. IMBOR tracht hier dan ook volledig bij aan te sluiten voor zover mogelijk. Omdat de QUDT in LinkedData vorm kent en IMBOR meerdere distributievormen kent, is er een tussenstap middels een referentiemodel. IMBOR houdt een eigen lijst van grootheden en eenheden bij, maar middels een referentiemodel wordt de semantisch sterke mapping vastgelegd. De LinkeData distributie van IMBOR is zodoende in lijn met hoe het gebruik van de QUDT ontologie in de NEN2660-2 bedoelt wordt. </p>
+<section id="qudt-als-referentiemodel"><div class="header-wrapper"><h5 id="x6-1-12-1-qudt-als-referentiemodel"><bdi class="secno">6.1.12.1 </bdi>QUDT als referentiemodel</h5><a class="self-link" href="#qudt-als-referentiemodel" aria-label="Permalink for Section 6.1.12.1"></a></div>
+<p>Binnen IMBOR wordt geregistreerd hoe de IMBOR <code>Eenheid</code> uitgedrukt worden in QUDT specificaties. Hiermee wordt de mogelijkheid geboden om, wanneer er in LinkedData gewerkt wordt, de QUDT ontologie te gebruiken.  </p>
+</section></section><section id="gwsl"><div class="header-wrapper"><h4 id="x6-1-13-gwsl"><bdi class="secno">6.1.13 </bdi>GWSL</h4><a class="self-link" href="#gwsl" aria-label="Permalink for Section 6.1.13"></a></div>
+<p>GWSL moet het GWSW voor openbare verlichting worden, gebaseerd op het IMBOR framework (en dus de NEN2660-2). GWSL bevat objecttypen, relaties en attributen die gaan over zowel statische als dynamische gegevens. Net zoals bij GWSW en IMWV bevat IMBOR zodoende alleen het deel betreffende de statische gegevens van GWSL. In de praktijk is de <code>Vakdiscipline</code> 'Verlichting' binnen IMBOR dus 1-op-1 gelijk aan het deel van GWSL dat over de vaste (statische) gegevens gaat (overigens is dat ook het enige GWSL wat tot en met 2021 gerealiseerd is). IMBOR en GWSL zijn beiden volledig op de NEN2660-2 gebaseerd en wanneer GWSL in een eerste versie gereed is zal het beheer ook door CROW gedaan worden. </p>
+<div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-7" aria-level="3"><span>Noot</span></div><div class="">
+Er is nog geen definitieve versie van GWSL verschenen. Er is <a href="https://www.crow.nl/over-crow/nieuws/2021/juni/voortgang-ontwikkeling-gegevenswoordenboek-stedeli">in 2021 hard gewerkt</a> aan een eerste versie.
+</div></div>
+
+</section><section id="aquo-imwa"><div class="header-wrapper"><h4 id="x6-1-14-aquo-imwa"><bdi class="secno">6.1.14 </bdi>Aquo/IMWA</h4><a class="self-link" href="#aquo-imwa" aria-label="Permalink for Section 6.1.14"></a></div>
+<p>De <a href="https://www.aquo.nl/index.php/Hoofdpagina">Aquo-standaard</a> (Aquo) is de Nederlandse standaard voor het uitwisselen van gegevens binnen de watersector, beheert door het Informatiehuis Water. Een onderdeel is het Informatiemodel Water (IMWA). IMBOR heeft geen directe relatie met Aquo (of het IMWA). Wel is de content van IMBOR geïnspireerd door de begrippenlijst (Aquo-lex) van Aquo. De metastructuur van IMBOR en Aquo zijn gelijk, want beiden zijn gebaseerd op het MIM. </p>
+</section><section id="bag"><div class="header-wrapper"><h4 id="x6-1-15-bag"><bdi class="secno">6.1.15 </bdi>BAG</h4><a class="self-link" href="#bag" aria-label="Permalink for Section 6.1.15"></a></div>
+<p>De Basisregistratie Adressen en Gebouwen (BAG) bevat gegevens van alle adressen en gebouwen in Nederland, zoals bouwjaar, oppervlakte, gebruiksdoel en locatie op de kaart. De BAG is onderdeel van het overheidsstelsel van basisregistraties. IMBOR heeft geen directe relatie met de BAG. Wel is het BAG onderdeel 'Pand', direct overgenomen als een in IMBOR te gebruiken <code>Objecttype</code>. Hiermee is binnen een organisatie eventueel een relatie te realiseren. De metastructuur van IMBOR en de BAG zijn gelijk, want beiden zijn gebaseerd op het MIM. </p>
+</section><section id="brk-imkad"><div class="header-wrapper"><h4 id="x6-1-16-brk-imkad"><bdi class="secno">6.1.16 </bdi>BRK/IMKAD</h4><a class="self-link" href="#brk-imkad" aria-label="Permalink for Section 6.1.16"></a></div>
+<p>Het Informatiemodel Kadaster (IMKAD) is de basis voor de uitwisseling van Kadaster-gegevens. Het geeft inzicht in de kenmerken van de gegevens uit de Basisregistratie Kadaster (BRK) en de onderlinge samenhang ervan. IMBOR heeft geen directe relatie met BRK/IMKAD. Er zijn relaties te herkennen tussen perceelinformatie en beheerinformatie. Deze zijn echter geen onderdeel van het IMBOR. De metastructuur van IMBOR en IMKAD zijn gelijk, want beiden zijn gebaseerd op het MIM. </p>
+</section><section id="bro"><div class="header-wrapper"><h4 id="x6-1-17-bro"><bdi class="secno">6.1.17 </bdi>BRO</h4><a class="self-link" href="#bro" aria-label="Permalink for Section 6.1.17"></a></div>
+<p>De Basisregistratie Ondergrond (BRO) is een centrale registratie met publieke gegevens over de Nederlandse ondergrond. Het is onderdeel van het overheidsstelsel van basisregistraties. IMBOR heeft geen directie relatie met de BRO. Er zijn relaties te herkennen tussen de BRO 'Grondwatermonintoringsput' en de IMBOR 'Peilbuis'. Deze zijn echter geen onderdeel van het IMBOR. De metastructuur van IMBOR en BRO zijn gelijk, want beiden zijn gebaseerd op het MIM.</p>
+</section><section id="cb-nl"><div class="header-wrapper"><h4 id="x6-1-18-cb-nl"><bdi class="secno">6.1.18 </bdi>CB-NL</h4><a class="self-link" href="#cb-nl" aria-label="Permalink for Section 6.1.18"></a></div>
+<p>In de huidige staat van de CB-NL is er nog geen relatie tussen IMBOR en de CB-NL. Er wordt in 2021 gewerkt aan een CB-NL2.0. Deze zal volledig gebaseerd zijn op de NEN2660-2 principes. Daarmee wordt het een stuk makkelijker om de relatie te leggen naar IMBOR. Deze zal echter pas op zijn vroegst in 2022 verkend worden.</p>
+</section><section id="imgeluid"><div class="header-wrapper"><h4 id="x6-1-19-imgeluid"><bdi class="secno">6.1.19 </bdi>IMGeluid</h4><a class="self-link" href="#imgeluid" aria-label="Permalink for Section 6.1.19"></a></div>
+<p>Het informatiemodel Geluid (IMGeluid) beschrijft de semantiek van digitale bestanden voor de Centrale Voorziening Geluidgegevens. IMBOR heeft geen directe relatie met het IMGeluid. Er zijn echter wel raakvlakken te benoemen die op termijn in lijn met elkaar gebracht moeten worden. Het gaat hierbij met name om de taxonomie van Asfaltverharding en de materie van het wegdek. De <a href="https://docs.geostandaarden.nl/cvgg/img/#detail_class_IMGeluidAlgemeen_Wegdektype">lijst zoals beschreven bij IMGeluid</a> zou kunnen worden afstemt op gebruik binnen IMBOR. De metastructuur van IMBOR en IMGeluid zijn gelijk, want beiden zijn gebaseerd op het MIM.</p>
+</section><section id="imna"><div class="header-wrapper"><h4 id="x6-1-20-imna"><bdi class="secno">6.1.20 </bdi>IMNa</h4><a class="self-link" href="#imna" aria-label="Permalink for Section 6.1.20"></a></div>
+<p>Het Informatiemodel Natuur (IMNa) is de standaard voor uniforme digitale uitwisseling van natuurgegevens. IMBOR heeft geen directie relatie met het IMNa. Er zijn relaties te herkennen tussen de indeling van de terreindelen in het buitengebied. Deze zijn echter geen onderdeel van het IMBOR. </p>
+</section><section id="nlcs"><div class="header-wrapper"><h4 id="x6-1-21-nlcs"><bdi class="secno">6.1.21 </bdi>NLCS</h4><a class="self-link" href="#nlcs" aria-label="Permalink for Section 6.1.21"></a></div>
+<p>De Nederlandse CAD standaard (NLCS) is de CAD-standaard van de Nederlandse GWW-sector. Deze open standaard bevat afspraken voor het omgaan met metadata, digitaal tekenen, het uiterlijk van de tekening en vooral de bestandsopbouw van tekenwerk. IMBOR heeft geen directe relatie met de NLCS. De IMBOR objecten bevatten doorgaans geometrie. Deze geometrie kan ook uitgedrukt worden in de NLCS. Dit is echter geen onderdeel van IMBOR.</p>
+</section><section id="nwb"><div class="header-wrapper"><h4 id="x6-1-22-nwb"><bdi class="secno">6.1.22 </bdi>NWB</h4><a class="self-link" href="#nwb" aria-label="Permalink for Section 6.1.22"></a></div>
+<p>Het Nationaal Wegenbestand (NWB) is een open databestand met alle openbare wegen in Nederland die een straatnaam of wegnummer hebben en in beheer zijn bij het Rijk, provincies, gemeenten en waterschappen. IMBOR heeft geen directe relatie met het NWB. Er zijn relaties te herkennen tussen de de NWB 'Wegas' en de IMBOR 'Wegas'. Deze zijn echter geen onderdeel van het IMBOR.</p>
+</section><section id="pim"><div class="header-wrapper"><h4 id="x6-1-23-pim"><bdi class="secno">6.1.23 </bdi>PIM</h4><a class="self-link" href="#pim" aria-label="Permalink for Section 6.1.23"></a></div>
+<p>PIM staat voor Pavement Information Modelling en wordt het centraal bedrijfsinformatiesysteem voor opdrachtnemers in de asfaltverhardingenbranche. PIM en IMBOR hebben nog geen directe (expliciete) relatie maar er zijn verregaande gesprekken bezig om de twee standaarden af te stemmen. De afstemming zal met name gedaan worden op de verschillende objecttypen binnen IMBOR. Uiteindelijk is de bedoeling dat IMBOR een vastlegging van asfaltconstructies en verhardingen nastreeft waar de gegevens die benodigd zijn voor PIM direct aan te relateren zijn. De verwachting is dat in de loop van 2022 bij zowel IMBOR, PIM en de sector voldoende inburgering van de LinkedData principes, de NEN2660-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen PIM en IMBOR gerealiseerd worden.</p>
+</section><section id="wegbeheersystematiek"><div class="header-wrapper"><h4 id="x6-1-24-wegbeheersystematiek"><bdi class="secno">6.1.24 </bdi>Wegbeheersystematiek</h4><a class="self-link" href="#wegbeheersystematiek" aria-label="Permalink for Section 6.1.24"></a></div>
+<p>De Wegbeheersystematiek 2019 is een CROW publicatie. De relatie tussen IMBOR2020-08 en de Wegbeheersystematiek 2019 is <a href="https://www.crow.nl/getattachment/Thema-s/Wegbeheer-en-wegonderhoud/Wegbeheersystematiek/Keurmerk-beheersoftware-voor-wegbeheer/Afstemming-IMBOR-en-Wegbeheersystematiek-2019.pdf.aspx?lang=nl-NL">uitvoerig beschreven</a>. Uiteindelijk is de bedoeling dat de terminologie van IMBOR volledig wordt overgenomen in de Wegbeheersystematiek. In 2022 wordt verkend of de Wegbeheersystematiek ook gedistribueerd kan worden als informatiemodel in LinkedData. Wanneer dit gebeurt zal de expliciete sterke semantische relatie onderdeel zijn van de publicatie.</p>
+</section><section id="wibon"><div class="header-wrapper"><h4 id="x6-1-25-wibon"><bdi class="secno">6.1.25 </bdi>WIBON</h4><a class="self-link" href="#wibon" aria-label="Permalink for Section 6.1.25"></a></div>
+<p>De Wet informatie-uitwisseling bovengrondse en ondergrondse netten en netwerken (WIBON). Deze wet schrijft de wijze van informatie-uitwisseling tussen netbeheerders en grondroerders voor. IMBOR heeft geen directe relatie met Wibon. Gegevens uit IMBOR kunnen echter wel gebruikt worden om te voorzien in de wettelijke eisen voor bijvoorbeeld het aanleveren van netinformatie. Tevens leunt WIBON sterk op het <a href="#imkl">IMKL</a>. </p>
+</section></section><section id="referentiemodellen-in-ms-access"><div class="header-wrapper"><h3 id="x6-2-referentiemodellen-in-ms-access"><bdi class="secno">6.2 </bdi>Referentiemodellen in MS Access</h3><a class="self-link" href="#referentiemodellen-in-ms-access" aria-label="Permalink for Section 6.2"></a></div>
+<p>In de Access distributie staan de informatieve tabellen die de relaties naar andere modellen bevatten. </p>
+<div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-8" aria-level="3"><span>Noot</span></div><div class="">
+De manier waarop er nu relaties gelegd worden naar externe modellen wordt nog onder de loep genomen. Dit geldt zowel voor de manier waarop dat nu vastligt (met de refModel tabellen), maar ook voor de semantiek van deze relatie. De huidige mapping wordt omgeschreven in de kolom <code>RelatieInformatie</code>. Dit verschilt per model, maar er is nergens sprake van een sterke semantiek. 
+
+<p>Het is de bedoeling om later in 2022 te kijken of er semantisch sterkere relaties gelegd kunnen worden naar de verschillende referentiemodellen. En daarmee ook een 'volwaardige' mapping te maken. Hier loopt de techniek vooralsnog voor op de governance. Zie voor meer informatie ook <a href="#toelichting-per-referentiemodel">Toelichting per referentiemodel</a></p>
+</div></div>
+
+<section id="tabelindeling-0"><div class="header-wrapper"><h4 id="x6-2-1-tabelindeling"><bdi class="secno">6.2.1 </bdi>Tabelindeling</h4><a class="self-link" href="#tabelindeling-0" aria-label="Permalink for Section 6.2.1"></a></div>
+<p>Dit betreffen alle tabellen die externe modellen representeren. We nemen niet de onderlinge relaties tussen Objecttypen, Attributen en Domeinwaarden over zoals deze vastgelegd zijn in de referentiemodellen. We zorgen dat we alleen de concepten opnemen in onze registratie zodat we een verwijzing kunnen maken.</p>
+<section id="refmodel_informatiemodellen"><div class="header-wrapper"><h5 id="x6-2-1-1-refmodel_informatiemodellen"><bdi class="secno">6.2.1.1 </bdi>refModel_Informatiemodellen</h5><a class="self-link" href="#refmodel_informatiemodellen" aria-label="Permalink for Section 6.2.1.1"></a></div>
+<p>Hier wordt de meta-informatie opgenomen van de informatiemodellen die we aanhalen in IMBOR.</p>
+</section><section id="refmodel_objecttypen"><div class="header-wrapper"><h5 id="x6-2-1-2-refmodel_objecttypen"><bdi class="secno">6.2.1.2 </bdi>refModel_Objecttypen</h5><a class="self-link" href="#refmodel_objecttypen" aria-label="Permalink for Section 6.2.1.2"></a></div>
+<p>In deze tabel worden de 'objecttypen' uit de referentiemodellen opgenomen zodat er aan gerelateerd kan worden.</p>
+</section><section id="refmodel_attributen"><div class="header-wrapper"><h5 id="x6-2-1-3-refmodel_attributen"><bdi class="secno">6.2.1.3 </bdi>refModel_Attributen</h5><a class="self-link" href="#refmodel_attributen" aria-label="Permalink for Section 6.2.1.3"></a></div>
+<p>In deze tabel worden de 'attributen' uit de referentiemodellen opgenomen zodat er aan gerelateerd kan worden.</p>
+</section><section id="refmodel_domeinwaarden"><div class="header-wrapper"><h5 id="x6-2-1-4-refmodel_domeinwaarden"><bdi class="secno">6.2.1.4 </bdi>refModel_Domeinwaarden</h5><a class="self-link" href="#refmodel_domeinwaarden" aria-label="Permalink for Section 6.2.1.4"></a></div>
+<p>In deze tabel worden de 'domeinwaarden' uit de referentiemodellen opgenomen zodat er aan gerelateerd kan worden.</p>
+</section><section id="refmodel_mapping"><div class="header-wrapper"><h5 id="x6-2-1-5-refmodel_mapping"><bdi class="secno">6.2.1.5 </bdi>refModel_Mapping</h5><a class="self-link" href="#refmodel_mapping" aria-label="Permalink for Section 6.2.1.5"></a></div>
+<p>In deze tabel wordt de daadwerkelijk relatie gelegd tussen dus combinaties van Objecttypen, Attributen en Domeinwaarden in IMBOR en de Objecttypen, Attributen en Domeinwaarden uit een referentiemodel.</p>
+</section><section id="refmodel_minimaledatasets"><div class="header-wrapper"><h5 id="x6-2-1-6-refmodel_minimaledatasets"><bdi class="secno">6.2.1.6 </bdi>refModel_MinimaleDatasets</h5><a class="self-link" href="#refmodel_minimaledatasets" aria-label="Permalink for Section 6.2.1.6"></a></div>
+<p>Dit is een nieuwe toevoeging vanaf IMBOR2022 en is nog in bèta. Met een minimale datasets wordt aangegeven welke <code>objecttype - attribuut</code> combinaties relevant zijn voor een bepaald informatiemodel (doorgaans een 'Methodiek')</p>
+</section></section></section><section id="referentiemodellen-in-linkeddata"><div class="header-wrapper"><h3 id="x6-3-referentiemodellen-in-linkeddata"><bdi class="secno">6.3 </bdi>Referentiemodellen in LinkedData</h3><a class="self-link" href="#referentiemodellen-in-linkeddata" aria-label="Permalink for Section 6.3"></a></div>
+<p>In de LinkedData distributie staan de informatieve concepten die de relaties naar andere modellen bevatten. Deze staan in een aparte graaf en zodoende dus apart van de Vocabulaire en Kern (ontologie)</p>
+<div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-9" aria-level="3"><span>Noot</span></div><div class="">
+De manier waarop er nu relaties gelegd worden naar externe modellen wordt nog onder de loep genomen. Dit geldt zowel voor de manier waarop dat nu vastligt (met de 'mapping' classes), maar ook voor de semantiek van deze relatie. De huidige mapping wordt omgeschreven in de property <code>skos:scopeNote</code>. Dit verschilt per model, maar er is nergens sprake van een sterke semantiek. 
+
+<p>Het is de bedoeling om later in 2022 te kijken of er semantisch sterkere relaties gelegd kunnen worden naar de verschillende referentiemodellen. En daarmee ook een 'volwaardige' mapping te maken. Hier loopt de techniek vooralsnog voor op de governance. Zie voor meer informatie ook <a href="#toelichting-per-referentiemodel">Toelichting per referentiemodel</a></p>
+</div></div>
+
+<section id="class-indeling"><div class="header-wrapper"><h4 id="x6-3-1-class-indeling"><bdi class="secno">6.3.1 </bdi>Class indeling</h4><a class="self-link" href="#class-indeling" aria-label="Permalink for Section 6.3.1"></a></div>
+<p>Dit betreffen alle Classes in het de graaf 'Addendum Referentiemodellen'. We nemen niet de onderlinge relaties tussen Objecttypen, Attributen en Domeinwaarden over zoals deze vastgelegd zijn in de referentiemodellen. We zorgen dat we alleen de concepten opnemen in onze registratie zodat we een verwijzing kunnen maken.</p>
+<section id="ref-informatiemodel"><div class="header-wrapper"><h5 id="x6-3-1-1-ref-informatiemodel"><bdi class="secno">6.3.1.1 </bdi>ref:Informatiemodel</h5><a class="self-link" href="#ref-informatiemodel" aria-label="Permalink for Section 6.3.1.1"></a></div>
+<p>Hier wordt de meta-informatie opgenomen van de informatiemodellen die we aanhalen in IMBOR. Elk model heeft een eigen <code>GUID</code>, <code>skos:prefLabel</code> en <code>skos:definition</code>. Daarnaast wordt op de <code>rdfs:seeAlso</code> property de URL vastgelegd naar de website van het informatiemodel, op <code>dct:publiser</code> de beheerder van het informatiemodel en op <code>schema:version</code> een tekstuele vastlegging van de versie van het informatiemodel. </p>
+<p>Het informatiemodel wordt door zowel IMBOR kern concepten als door concepten uit de addenda als bron gerefereert middels <code>dct:source</code>.</p>
+</section><section id="ref-refmapping"><div class="header-wrapper"><h5 id="x6-3-1-2-ref-refmapping"><bdi class="secno">6.3.1.2 </bdi>ref:RefMapping</h5><a class="self-link" href="#ref-refmapping" aria-label="Permalink for Section 6.3.1.2"></a></div>
+<p>Dit betreft de Class die de link is tussen de IMBOR ontologie en de referentiemodellen (ofwel het normatieve en informatieve deel). De class heeft ook een <code>GUID</code>. Daarnaast is er ruimte voor een toelichting op de mapping in <code>skos:note</code> en wordt de relatie informatie op de <code>skos:scopeNote</code> beschreven. </p>
+<p>Middels de property <code>imborObjectype</code> wordt de relatie naar het IMBOR Objecttype gelegd en middels de property <code>refObjecttype</code> wordt de relatie naar het Objecttype uit het referentiemodel gelegd. </p>
+<p>Omdat in dit geval het attribuut en de domeinwaarde altijd samen voorkomen worden deze gegroepeerd in een <code>blanknode</code>. Middels de properties <code>imborAttribuutDomeinwaarde</code> en <code>refAttribuutDomeinwaarde</code> wordt de relatie gelegd tussen de <code>Mapping</code> en de <code>blanknode</code>. Vanuit de <code>blanknode</code> wordt middels een <code>rdf:List</code> constructie naar de verschillende attributen en domeinwaarden verwezen. </p>
+</section><section id="ref-refobjecttype"><div class="header-wrapper"><h5 id="x6-3-1-3-ref-refobjecttype"><bdi class="secno">6.3.1.3 </bdi>ref:RefObjecttype</h5><a class="self-link" href="#ref-refobjecttype" aria-label="Permalink for Section 6.3.1.3"></a></div>
+<p>Dit betreffen de 'ObjectTypen' die in de referentiemodellen onderscheiden worden. </p>
+</section><section id="ref-refattribuut"><div class="header-wrapper"><h5 id="x6-3-1-4-ref-refattribuut"><bdi class="secno">6.3.1.4 </bdi>ref:RefAttribuut</h5><a class="self-link" href="#ref-refattribuut" aria-label="Permalink for Section 6.3.1.4"></a></div>
+<p>Dit betreffen de 'Attributen' die in de referentiemodellen onderscheiden worden. </p>
+</section><section id="ref-refdomeinwaarde"><div class="header-wrapper"><h5 id="x6-3-1-5-ref-refdomeinwaarde"><bdi class="secno">6.3.1.5 </bdi>ref:RefDomeinwaarde</h5><a class="self-link" href="#ref-refdomeinwaarde" aria-label="Permalink for Section 6.3.1.5"></a></div>
+<p>Dit betreffen de 'Domeinwaarden' die in de referentiemodellen onderscheiden worden. </p>
+</section></section></section></section>
+  <section data-format="markdown" class="informative" id="mim-addendum"><div class="header-wrapper"><h2 id="x7-mim-addendum"><bdi class="secno">7. </bdi>MIM addendum</h2><a class="self-link" href="#mim-addendum" aria-label="Permalink for Section 7."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>Het MIM biedt een optie aan om een model in LinkedData uit te drukken. Het MIM uitgedrukt in LD houdt onder ander een ontologisch metamodel in. Dit betekent dat er voor elk van de modelelementen van het MIM een klasse en/of eigenschap gedefinieerd is in termen van [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf11-primer" title="RDF 1.1 Primer">rdf11-primer</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-schema" title="RDF Schema 1.1">rdf-schema</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">owl2-overview</a></cite>] en [<cite><a class="bibref" data-link-type="biblio" href="#bib-shacl" title="Shapes Constraint Language (SHACL)">shacl</a></cite>]. De manier om dit te doen wordt beschreven in <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#metamodel-in-linked-data-ld">MIM - Metamodel in LinkedData</a>. Middels deze specificatie is IMBOR zo ver mogelijk in MIM uitgedrukt. </p>
+<p>Dit is gedaan voor <code>imbor:Klasse</code>, <code>imbor:Attribuut</code>, <code>imbor:SemantischeRelatie</code>, <code>imbor:EnumeratieType</code> en <code>imbor:Domeinwaarde</code>. De onderlinge samenhang wordt niet in dit addendum genoemd omdat deze uit de IMBOR ontologie gehaald kan worden. De SHACL taalbinding van de NEN2660-2 lijkt op dezelfde manier als MIM dit doet. De enige toevoeging daarom is een verwijzing vanuit de <code>sh:PropertyShape</code> naar de <code>rdf:Property</code>, middels <code>mim:equivalent</code>. Dit is dubbel met <code>sh:path</code>, maar hierdoor wordt wel expliciet aangegeven dat MIM de relatie tussen het Objecttype en de Attribuutsoort toekent aan het Attribuutsoort. Verder zijn zo veel mogelijk (verplichte) MIM metagegevens ingevuld. </p>
+<p>De dataset is beschikbaar in een aparte graaf die, wanneer gewenst, bij de IMBOR ontologie kan worden ingeladen.</p>
+</section>
+  <section data-format="markdown" class="informative" id="geometrie"><div class="header-wrapper"><h2 id="x8-geometrie"><bdi class="secno">8. </bdi>Geometrie</h2><a class="self-link" href="#geometrie" aria-label="Permalink for Section 8."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>IMBOR is primair bedoeld om te standaardiseren in type objecten en hun attributen (informatiebehoefte) betreffende vaste gegevens. De geometrische representatie wordt vaak ook als een vast gegeven gezien. De representatie van een object is echter <em>één</em> van de gegevens die geregistreerd wordt. Vanuit de GIS systemen wordt het echter herkend als <em>het</em> gegeven van het object. Er zijn echter meerdere (geometrische)representaties mogelijk. Per toepassing zal de meest geschikte representatie worden gekozen en dus gaat IMBOR daar geen bindende uitspraken over doen. Temeer omdat IMBOR vaak in combinatie met de landelijke registratie BGT/IMGeo gebruikt wordt en die al uitweidt over de geometrische vastlegging. </p>
+<p>Er is wel een addendum beschikbaar binnen IMBOR  waarin suggesties worden gegeven voor geometrische vastlegging. Het Geometrie addendum geeft aan welke soort geometrische vastlegging de voorkeur heeft en welke er meer mogelijk zijn. Indien een organisatie zich committeert aan het Geometrie addendum, dan betekent dit dat de geometrische vastlegging zoals voorgesteld wordt toegepast in die context. In Access is het addendum verwerkt middels de Klasse <code>GeometrischeEntiteit</code> (en zijn subklassen) en de relatie <code>heeft begrenzing</code>. Hetzelfde geldt voor de LinkedData versie, echter staat de informatie daar in een aparte graaf. </p>
+<p>In het addendum wordt per <code>Objecttype</code> minimaal één relatie naar een GM_* klasse met de multipliciteit 1-1 meegegeven. Dit kan op <code>Objecttype</code> niveau geregistreerd worden of op de <code>Klasse</code> erboven (wanneer het voor allemaal geldt). Vervolgens worden eventueel meerdere relaties naar andere GM_* klassen meegegeven met een multipliciteit 0-1. Dit moet geïnterpreteerd worden als: "Wanneer het geometrie addendum van IMBOR van toepassing verklaard wordt, dan moet er minimaal één 
+geometrie vastgelegd worden middels van het type dat de 1-1 multipliciteit heeft. Er <em>mag</em> vervolgens ook geometrie aangeleverd worden volgens de andere gespecificeerde vormen van geometrie."</p>
+</section>
+  <section data-format="markdown" class="informative" id="minimale-datasets"><div class="header-wrapper"><h2 id="x9-minimale-datasets"><bdi class="secno">9. </bdi>Minimale datasets</h2><a class="self-link" href="#minimale-datasets" aria-label="Permalink for Section 9."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>Minimale datasets zijn een nieuwe toevoeging vanaf IMBOR2022 en zijn nog in bèta. Het betreft een onderdeel dat los staat van de 'normatieve' IMBOR onderdelen en mag gezien worden als een handreiking vanuit, en aan de IMBOR community. Met minimale datasets wordt aangegeven welke <code>Objecttype - Attribuut</code> combinaties relevant zijn voor een ander informatiemodel (doorgaans een 'Methodiek'). Deze zijn beschikbaar binnen de Access database (zie hiervoor ook <a href="#refmodel_minimaledatasets">refModel_MinimaleDatasets</a>) en binnen de LinkedData versie in een aparte graaf.  </p>
+<p>De doorsnedes die hier gemaakt zijn, zijn nog niet gevalideerd. In IMBOR2022 worden eerste tests gedaan of deze manier van aanbieden bevalt.</p>
+</section>
+  <section data-format="markdown" class="informative" id="oagbd"><div class="header-wrapper"><h2 id="x10-oagbd"><bdi class="secno">10. </bdi>OAGBD</h2><a class="self-link" href="#oagbd" aria-label="Permalink for Section 10."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<p>OAGBD is een addendum wat nieuw is in 2021. De eerste versie is de resultante van een onderzoek wat de gemeenten Almelo en Utrecht hebben gedaan. Het onderzoek heeft gekeken naar informatieverlies tijdens de&nbsp;'levensfases' van een object. In dit geval is de opeenvolging van&nbsp;objectlevensfases:
+<strong>&gt;&gt; Ontwerp &gt;&gt; Aanleg &gt;&gt; Geo &gt;&gt; Beheer</strong></p>
+<p>De letters staan dan ook voor:</p>
+<ul>
+<li>O = Ontwerp</li>
+<li>A = Aanleg</li>
+<li>G = Geovoorziening</li>
+<li>B = Beheer</li>
+<li>D = Dynamisch gegeven</li>
+</ul>
+<p>Binnen het onderzoek is bij elke combinatie van klasse en attribuut in IMBOR2022 aangegeven in welke&nbsp;levensfase&nbsp;van het object de informatie doorgaans bekend is. Zo is inzichtelijk gemaakt dat veel informatie reeds beschikbaar is in vroege fasen van het object en dat er getracht kan worden deze informatie mee te nemen naar volgende fasen. </p>
+<p>Binnen IMBOR in Access is de tabel met klassen en attributen hiervoor uitgebreid met een extra veld: OAGBD. Binnen de LinkedData versie is de beschikbaar als een aparte graaf.</p>
+<p>De bovenstaande conceptualisering van objectlevensfases is ontwikkeld voor de onderverdeling van IMBOR-attributen. Binnen de <a href="https://www.nen.nl/nieuws/normontwerp-informatiemodellering-van-gebouwde-omgeving-ter-commentaar/">NEN2660-2</a> wordt door het begrip ‘levenscyclus’ onderscheid gemaakt tussen geplande&nbsp;en gerealiseerde&nbsp;entiteiten. De wisselwerking tussen gepland en gerealiseerd heeft de volgende relatie met OAGBD. In het lineaire doorlopen van OAGBD komt het object in <code>O</code> overeen met een geplande entiteit. Vanaf <code>A</code> bestaat het object in de werkelijkheid en is het als zodanig een gerealiseerde entiteit. Echter, mocht de opeenvolging van levensfases cyclisch worden, dat wil zeggen, <code>B</code> gaat over naar <code>D</code>, bijvoorbeeld wanneer een object wordt herzien, wordt aangepast, wordt verplaatst etc., dan gaat een gerealiseerde entiteit over naar een geplande entiteit, om in <code>A</code> wederom een gerealiseerde entiteit te worden.</p>
+<p>OAGBD kan dus gezien worden als een situatiespecifieke verbijzondering van de algemene wisselwerking tussen geplande en gerealiseerde entiteiten uit <a href="https://www.nen.nl/nieuws/normontwerp-informatiemodellering-van-gebouwde-omgeving-ter-commentaar/">NEN2660-2</a>.</p>
+</section>
+  <section data-format="markdown" id="licenties"><div class="header-wrapper"><h2 id="x11-licenties"><bdi class="secno">11. </bdi>Licenties</h2><a class="self-link" href="#licenties" aria-label="Permalink for Section 11."></a></div>
+<p>IMBOR is sinds 2022 een open standaard die door CROW kosteloos beschikbaar wordt gesteld. De vorige versies van het IMBOR waren alleen toegankelijk met een betaald abonnement op de CROW-kennismodule IMBOR en IMWV. CROW beheert het IMBOR volgens de richtlijnen van het Forum voor Standaardisatie (BOMOS). Voorwaarde om het IMBOR ook in de toekomst kosteloos te kunnen publiceren is dat CROW voldoende structurele financiering krijgt voor een zorgvuldig beheer van het IMBOR.</p>
+<p>Meer informatie over de voorwaarden waaronder het IMBOR als open standaard wordt gepubliceerd is te vinden in de specifieke secties hieronder en in het <a href="https://docs.crow.nl/imbor/beheerplan/">Beheerplan IMBOR</a>. </p>
+<section id="imbor-gegevens"><div class="header-wrapper"><h3 id="x11-1-imbor-gegevens"><bdi class="secno">11.1 </bdi>IMBOR gegevens</h3><a class="self-link" href="#imbor-gegevens" aria-label="Permalink for Section 11.1"></a></div>
+<p>Alle data in de gehele IMBOR Ontologie (IMBOR Vocabulaire, IMBOR Kern, IMBOR Domeinwaarde, etc.) wordt uitgegeven onder de <a href="https://creativecommons.org/licenses/by/4.0/deed.nl">CC BY 4.0</a> licentie.</p>
+</section><section id="imbor-producten"><div class="header-wrapper"><h3 id="x11-2-imbor-producten"><bdi class="secno">11.2 </bdi>IMBOR Producten</h3><a class="self-link" href="#imbor-producten" aria-label="Permalink for Section 11.2"></a></div>
+<p>De AccessDatabase en de LinkedData wordt uitgegeven onder de <a href="https://opendatacommons.org/licenses/by/summary/">ODC BY</a> licentie.</p>
+</section><section id="imbor-documentatie"><div class="header-wrapper"><h3 id="x11-3-imbor-documentatie"><bdi class="secno">11.3 </bdi>IMBOR Documentatie</h3><a class="self-link" href="#imbor-documentatie" aria-label="Permalink for Section 11.3"></a></div>
+<p>Alle documentatie wordt uitgegeven onder de <a href="https://creativecommons.org/licenses/by/4.0/deed.nl">CC BY 4.0</a> licentie.</p>
+</section><section id="imbor-query-s"><div class="header-wrapper"><h3 id="x11-4-imbor-query-s"><bdi class="secno">11.4 </bdi>IMBOR Query's</h3><a class="self-link" href="#imbor-query-s" aria-label="Permalink for Section 11.4"></a></div>
+<p>De (voorbeeld) query's worden uitgegeven onder de <a href="https://opensource.org/licenses/MIT">MIT</a> licentie.</p>
+</section><section id="imbor-randsoftware"><div class="header-wrapper"><h3 id="x11-5-imbor-randsoftware"><bdi class="secno">11.5 </bdi>IMBOR Randsoftware</h3><a class="self-link" href="#imbor-randsoftware" aria-label="Permalink for Section 11.5"></a></div>
+<p>De randsoftware (zoals de viewer en REST-API) wordt uitgegeven onder de <a href="https://opensource.org/licenses/MIT">MIT</a> licentie.</p>
+</section></section> 
+  <section data-format="markdown" class="appendix" id="gwsw-relatie-toevoeging"><div class="header-wrapper"><h2 id="a-gwsw-relatie-toevoeging"><bdi class="secno">A. </bdi>GWSW relatie toevoeging</h2><a class="self-link" href="#gwsw-relatie-toevoeging" aria-label="Permalink for Appendix A."></a></div>
+<p>In de 'mapping' naar het GWSW zijn een aantal <code>ObjectType</code>n niet opgenomen. Dit is met name omdat er in de GWSW hiërarchie nog een lager niveau is, welke wel een relatie naar een IMBOR <code>ObjectType</code> heeft. Voor de volledigheid is dit het overzicht van <code>ObjectType</code>n uit GWSW die <em>geen</em> relatie hebben naar IMBOR.  </p>
+<ul>
+<li>Fysiek object-Apparatuur</li>
+<li>Fysiek object-Apparatuur-Meetinstrument</li>
+<li>Fysiek object-Bouwwerk</li>
+<li>Fysiek object-Bouwwerk-Kunstwerk</li>
+<li>Fysiek object-Bouwwerk-Reservoir</li>
+<li>Fysiek object-Bouwwerk-Reservoir-Infiltratiereservoir</li>
+<li>Fysiek object-Bouwwerk-Reservoir-Infiltratiereservoir-Infiltratieveld</li>
+<li>Fysiek object-Constructieonderdeel</li>
+<li>Fysiek object-Constructieonderdeel-Afdekking</li>
+<li>Fysiek object-Constructieonderdeel-Doorlaat</li>
+<li>Fysiek object-Constructieonderdeel-Hulpstuk</li>
+<li>Fysiek object-Constructieonderdeel-Wand</li>
+<li>Fysiek object-Kabel</li>
+<li>Fysiek object-Leiding</li>
+<li>Fysiek object-Leiding-Kunststof leiding</li>
+<li>Fysiek object-Leiding-Open leiding</li>
+<li>Fysiek object-Leiding-Open leiding-Goot</li>
+<li>Fysiek object-Leiding-Rioolleiding</li>
+<li>Fysiek object-Leiding-Stalen leiding</li>
+<li>Fysiek object-Leiding-Transportleiding</li>
+<li>Fysiek object-Put</li>
+<li>Fysiek object-Stelsel</li>
+<li>Fysiek object-Water</li>
+<li>Fysiek object-Water-Afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Afvloeiend hemelwater</li>
+<li>Fysiek object-Water-Afvalwater-Bedrijfsafvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Bruin afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Droogweerafvoer</li>
+<li>Fysiek object-Water-Afvalwater-Geel afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Gemengd afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Grijs afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Groen afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Grondwater</li>
+<li>Fysiek object-Water-Afvalwater-Grondwater-Bronneringswater</li>
+<li>Fysiek object-Water-Afvalwater-Huishoudelijk Afvalwater</li>
+<li>Fysiek object-Water-Afvalwater-Zwart afvalwater</li>
+<li>Fysiek object-Water-Drinkwater</li>
+<li>Fysiek object-Water-Grondwater</li>
+<li>Fysiek object-Water-Grondwater-Bronneringswater</li>
+<li>Fysiek object-Water-Hemelwater</li>
+<li>Fysiek object-Water-Oppervlaktewater</li>
+<li>Fysiek object-Water-Oppervlaktewater-Waterdeel</li>
+<li>Fysiek object-Water-Stedelijk water</li>
+<li>Kunststof leiding</li>
+<li>Ruimte-Bovengrond</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak hellend</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak hellend-Dakoppervlak hellend</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak hellend-Gesloten verhard oppervlak hellend</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak hellend-Onverhard oppervlak hellend</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak hellend-Open verhard oppervlak hellend</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak uitgestrekt</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak uitgestrekt-Dakoppervlak vlak uitgestrekt</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak uitgestrekt-Gesloten verhard oppervlak vlak uitgestrekt</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak uitgestrekt-Onverhard oppervlak vlak uitgestrekt</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak uitgestrekt-Open verhard oppervlak vlak uitgestrekt</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak-Dakoppervlak vlak</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak-Gesloten verhard oppervlak vlak</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak-Onverhard oppervlak vlak</li>
+<li>Ruimte-Bovengrond-Afvoerend oppervlak-Afvoerend oppervlak vlak-Open verhard oppervlak vlak</li>
+<li>Ruimte-Bovengrond-Lateraal afvoerend oppervlak</li>
+<li>Ruimte-Gebied</li>
+<li>Ruimte-Gebied-Registratief gebied</li>
+<li>Ruimte-Gebied-Registratief gebied-District</li>
+<li>Ruimte-Ondergrond</li>
+<li>Ruimte-Perceel</li>
+<li>Ruimte-Perceel-Bedrijfslocatie</li>
+<li>Ruimte-Perceel-Bedrijfslocatie-Recreatiebedrijf</li>
+<li>Ruimte-Perceel-Woninglocatie</li>
+</ul>
+</section>
+  
+  
+
+
+
+<script id="annotation-service-runtime">(() => {
+// @ts-check
+const SETTING_KEY = "annotation-service-hypothesis";
+const SETTING_VALUE_ALLOWED = "allowed";
+const hClientDefault = {
+  openSidebar: false,
+  showHighlights: true,
+  theme: "classic",
+  branding: {
+    accentColor: "rgb(0, 157, 224)",
+    appBackgroundColor: "white",
+    ctaBackgroundColor: "rgb(255, 110, 26)",
+    ctaTextColor: "white",
+    selectionFontFamily: "'Museo Sans', Museo, Helvetica, Arial, sans serif",
+    annotationFontFamily: "'Museo Sans', Museo, Helvetica, Arial, sans serif",
+  },
+};
+
+if (document.respec) {
+  document.respec.ready.then(render);
+} else {
+  render();
+}
+
+/** Render the placeholder (Load Service Button) or annotation info (# annotations, Show Annotation Button). */
+function render() {
+  if (localStorage.getItem(SETTING_KEY) == SETTING_VALUE_ALLOWED) {
+    renderAnnotationServiceInfo();
+  } else {
+    renderPlaceholder();
+  }
+}
+
+/** Render Load Service Button, with privacy info. */
+function renderPlaceholder() {
+  localStorage.removeItem(SETTING_KEY);
+
+  /** @type {HTMLElement} */
+  const placeholder = document.querySelector("#annotation-service-placeholder");
+  placeholder.hidden = false;
+
+  const listener = loadButtonListener();
+  document
+    .querySelector("[data-load-annotation-service]")
+    .addEventListener("keydown", listener);
+  document
+    .querySelector("[data-load-annotation-service]")
+    .addEventListener("click", listener);
+
+  /** @type {HTMLElement} */
+  const serviceInfo = document.querySelector("#annotation-service-loaded");
+  serviceInfo.hidden = true;
+}
+
+function loadButtonListener() {
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLButtonElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    target.disabled = true;
+    localStorage.setItem(SETTING_KEY, SETTING_VALUE_ALLOWED);
+    renderAnnotationServiceInfo();
+  };
+}
+
+function unloadButtonListener() {
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLButtonElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    target.disabled = true;
+    localStorage.removeItem(SETTING_KEY);
+    removeHScript();
+  };
+}
+
+function renderAnnotationServiceInfo() {
+  addHConfig(document);
+  addHScript(document);
+}
+
+/**
+ *
+ * @param {Document} doc
+ * @param {*} conf
+ */
+function addHScript(doc, conf) {
+  const script = doc.createElement("script");
+  script.src = "https://hypothes.is/embed.js";
+  script.async = true;
+  doc.body.appendChild(script);
+
+  script.addEventListener("load", event => {
+    /** @type {HTMLElement} */
+    const placeholder = document.querySelector(
+      "#annotation-service-placeholder"
+    );
+    placeholder.hidden = true;
+
+    /** @type {HTMLElement} */
+    const serviceInfo = document.querySelector("#annotation-service-loaded");
+    serviceInfo.hidden = false;
+
+    const unloadListener = unloadButtonListener();
+    document
+      .querySelector("[data-unload-annotation-service]")
+      .addEventListener("keydown", unloadListener);
+    document
+      .querySelector("[data-unload-annotation-service]")
+      .addEventListener("click", unloadListener);
+  });
+}
+
+/**
+ * Retract Hypothesis permission.
+ */
+function removeHScript() {
+  // Deleting the hypothesis-script, does not undo its changes, listeners etc.
+  // Instead, reload the frame.
+  window.location.reload();
+}
+
+/**
+ *
+ * @param {Document} doc
+ * @param {*} conf
+ */
+function addHConfig(doc, conf) {
+  const script = doc.createElement("script");
+  script.className = "js-hypothesis-config";
+  script.type = "application/json";
+  script.innerText = JSON.stringify(hClientDefault);
+  doc.body.appendChild(script);
+}
+})()</script><section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="informatieve-referenties"><div class="header-wrapper"><h3 id="b-1-informatieve-referenties"><bdi class="secno">B.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-owl2-overview">[owl2-overview]</dt><dd>
+      <a href="https://www.w3.org/TR/owl2-overview/"><cite>OWL 2 Web Ontology Language Document Overview (Second Edition)</cite></a>. W3C OWL Working Group.  W3C. 11 December 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a>
+    </dd><dt id="bib-qudt">[QUDT]</dt><dd>
+      <a href="http://www.qudt.org/"><cite>QUDT - Quantities, Units, Dimensions and Data Types Ontologies</cite></a>. Ralph Hodgson; Paul J. Keller; Jack Hodges; Jack Spivak. 18 March 2014. URL: <a href="http://www.qudt.org/">http://www.qudt.org/</a>
+    </dd><dt id="bib-rdf-schema">[rdf-schema]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
+    </dd><dt id="bib-rdf11-primer">[rdf11-primer]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf11-primer/"><cite>RDF 1.1 Primer</cite></a>. Guus Schreiber; Yves Raimond.  W3C. 24 June 2014. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/rdf11-primer/">https://www.w3.org/TR/rdf11-primer/</a>
+    </dd><dt id="bib-shacl">[shacl]</dt><dd>
+      <a href="https://www.w3.org/TR/shacl/"><cite>Shapes Constraint Language (SHACL)</cite></a>. Holger Knublauch; Dimitris Kontokostas.  W3C. 20 July 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>
+    </dd><dt id="bib-skos-primer">[skos-primer]</dt><dd>
+      <a href="https://www.w3.org/TR/skos-primer/"><cite>SKOS Simple Knowledge Organization System Primer</cite></a>. Antoine Isaac; Ed Summers.  W3C. 18 August 2009. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/skos-primer/">https://www.w3.org/TR/skos-primer/</a>
+    </dd><dt id="bib-turtle">[turtle]</dt><dd>
+      <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
+    </dd><dt id="bib-xmlschema11-1">[xmlschema11-1]</dt><dd>
+      <a href="https://www.w3.org/TR/xmlschema11-1/"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures</cite></a>. Sandy Gao; Michael Sperberg-McQueen; Henry Thompson; Noah Mendelsohn; David Beech; Murray Maloney.  W3C. 5 April 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlschema11-1/">https://www.w3.org/TR/xmlschema11-1/</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://docs.crow.nl/respec-design/fixup.js"></script></body></html>
