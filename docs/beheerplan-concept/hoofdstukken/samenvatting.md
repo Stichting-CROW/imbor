@@ -9,7 +9,8 @@ IMBOR is ontwikkeld door het CROW in samenwerking met gemeenten, provincies, sof
 | 0.3   |	 9-2-2021   |	    Visienotitie omgezet naar Concept Beheerplan IMBOR	| Harro Verhoeven |
 | 0.4	|  15-6-2021     |	    Definitief concept Beheerplan IMBOR | Harro Verhoeven
 | 0.5    |	11-10-2021  | 	    Prioritering issues en verwijzigingen ReSpec en GitHub toegevoegd | Harro Verhoeven |
-| 0.6   |	19-07-2023  | 	    Uitwerken beheerplan naar inrichting concreet beheerorganisatie	| John Joosten |
-| 0.7    |	10-10-2023   |  	Verwerken reviews en  aanvullen hoofdstuk 4 t/m 7 | John Joosten |
+| 0.6   |	19-07-2023  | 	    Uitwerken beheerplan met inrichting concrete beheerorganisatie	| John Joosten |
+| 0.7    |	10-10-2023   |  	Verwerken reviews en aanvullen hoofdstuk 4 t/m 7 | John Joosten |
+| 0.8   |   31-10-2023  |       Aanpassingen aan structuur en verwerken reviews | John Joosten  | 
 
 <div class="issue" data-number="939"></div>
