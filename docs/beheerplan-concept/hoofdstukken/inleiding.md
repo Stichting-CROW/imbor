@@ -1,8 +1,5 @@
 # Inleiding
 
-<aside class="note" title="Ik weet niet waar ik dit in het document  hoofdstuk 1 moet aanpasen aanpassen. Maar wat willen we hier mee zeggen eigenlijk? De tekst hierboven is voor mij ook niet aan te passen.">
-</aside>
-
 ## IMBOR
 Het Informatie Model Openbare Ruimte (IMBOR) is ontstaan vanuit de behoefte van beheerders bij gemeenten en provincies om uniforme benamingen te gebruiken voor beheergegevens van de objecten in de openbare ruimte. Met het IMBOR wil CROW het werkveld beheer openbare ruimte een standaard ontologie bieden om de dataregistratie van gegevens voor het beheer van de openbare ruimte te uniformeren en verbeteren als basis voor een beter assetmanagement. 
 
