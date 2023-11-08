@@ -31,7 +31,7 @@ Om ervoor te zorgen dat IMBOR een open standaard blijft gelden de 10 criteria va
 ## Procedure vaststelling beheerplan
 Dit beheerplan is opgesteld met medewerking van alle betrokkenen en wordt ter goedkeuring voorgelegd aan de beheercommissie van IMBOR. Waar het gaat om kleine niet fundamentele wijzigingen worden deze doorgevoerd en het versienummer opgehoogd. Daar waar op basis van inzichten processen en verantwoordelijkheden veranderen loopt dit beheerplan een vergelijkbare wijzigingsroute als die van IMBOR zelf. Bij het opnieuw vaststellen van het Beheerplan IMBOR worden op hoofdlijnen de volgende stappen doorlopen:
 * Opstellen van het plan door de uitvoeringsorganisatie (het IMBOR-team van CROW);
-* Bespreken met de adviesraad Softwareleveranciers;
+* Bespreken met de adviesraad;
 * Vaststelling beheercommissie IMBOR (de vertegenwoordigde stakeholders);
 * Afronding en publicatie door CROW.
 
