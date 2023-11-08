@@ -25,9 +25,6 @@ Beheer volgens BOMOS heeft de volgende belangrijke voordelen:
 
 ![Activiteitendiagram van BOMOS van Forum voor standaardisatie](./media/BOMOS.png "Activiteitendiagram van Beheermodel voor Open Standaarden van Forum voor standaardisatie")
 
-<aside class="note" title="Hoe kan ik de afbeelding schalen?">
-</aside>
-
 ### Criteria Ken Krechmer
 Om ervoor te zorgen dat IMBOR een open standaard blijft gelden de 10 criteria van [Ken Krechmer](https://www.csrstds.com/OpnStdsCallforAction.pdf). Dit beheerplan sluit aan bij die kenmerken.
 
