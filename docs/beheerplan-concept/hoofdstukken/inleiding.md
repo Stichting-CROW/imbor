@@ -1,7 +1,6 @@
 # Inleiding
 
-<aside class="note" title="Ik weet niet waar ik dit in het document  hoofdstuk 1 moet aanpasen aanpassen. Maar wat willen we hier mee zeggen eigenlijk? De tekst hierboven is voor mij ook niet aan te passen.">
-</aside>
+<div class="issue" data-number="1213"></div>
 
 ## IMBOR
 Het Informatie Model Openbare Ruimte (IMBOR) is ontstaan vanuit de behoefte van beheerders bij gemeenten en provincies om uniforme benamingen te gebruiken voor beheergegevens van de objecten in de openbare ruimte. Met het IMBOR wil CROW het werkveld beheer openbare ruimte een standaard ontologie bieden om de dataregistratie van gegevens voor het beheer van de openbare ruimte te uniformeren en verbeteren als basis voor een beter assetmanagement. 
@@ -26,16 +25,13 @@ Beheer volgens BOMOS heeft de volgende belangrijke voordelen:
 
 ![Activiteitendiagram van BOMOS van Forum voor standaardisatie](hoofdstukken/media/BOMOS.png "Activiteitendiagram van Beheermodel voor Open Standaarden van Forum voor standaardisatie")
 
-<aside class="note" title="Hoe kan ik de afbeelding schalen?">
-</aside>
-
 ### Criteria Ken Krechmer
 Om ervoor te zorgen dat IMBOR een open standaard blijft gelden de 10 criteria van [Ken Krechmer](https://www.csrstds.com/OpnStdsCallforAction.pdf). Dit beheerplan sluit aan bij die kenmerken.
 
 ## Procedure vaststelling beheerplan
 Dit beheerplan is opgesteld met medewerking van alle betrokkenen en wordt ter goedkeuring voorgelegd aan de beheercommissie van IMBOR. Waar het gaat om kleine niet fundamentele wijzigingen worden deze doorgevoerd en het versienummer opgehoogd. Daar waar op basis van inzichten processen en verantwoordelijkheden veranderen loopt dit beheerplan een vergelijkbare wijzigingsroute als die van IMBOR zelf. Bij het opnieuw vaststellen van het Beheerplan IMBOR worden op hoofdlijnen de volgende stappen doorlopen:
 * Opstellen van het plan door de uitvoeringsorganisatie (het IMBOR-team van CROW);
-* Bespreken met de adviesraad Softwareleveranciers;
+* Bespreken met de adviesraad;
 * Vaststelling beheercommissie IMBOR (de vertegenwoordigde stakeholders);
 * Afronding en publicatie door CROW.
 
