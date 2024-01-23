@@ -14,7 +14,7 @@ Onderstaande figuur is niet het model zelf, maar het ([conceptuele][n2]) metamod
 <div class='advisement'>
 De IMBOR Vocabulaire is te verkennen op:
 
- <a href="https://begrippen.crow.nl/IMBOR/" target="_blank">begrippen.crow.nl/IMBOR</a> 
+ <a href="https://begrippen.crow.nl/imbor/nl/" target="_blank">begrippen.crow.nl/IMBOR</a> 
 </div>
 
 <figure>
