@@ -1,6 +1,6 @@
 var respecConfig = {
     specType: "Document",
-    specStatus: "DOC",
+    specStatus: "RESC",
     format: "markdown",
     github: "https://github.com/Stichting-CROW/imbor",
     shortName: "imbor/imbor-ld",
