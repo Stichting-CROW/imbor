@@ -1,3 +1,6 @@
+![image](https://github.com/Stichting-CROW/imbor/assets/56293445/5e00e5cf-2ba7-459f-9fb4-f433b346920a)
+
+
 # IMBOR (Informatiemodel Beheer Openbare Ruimte)
 
 > Het IMBOR uniformeert begrippen voor het vakgebied ‘beheer openbare ruimte’. 
