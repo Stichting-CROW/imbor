@@ -5,7 +5,7 @@ var respecConfig = {
   imprint: "crow", // Kies uit http://docs.crow.nl/respec-design/stichting-crow/#logos
   shortName: "imbor/best-practices",
   license: "CC-BY", 
-  hypothesisComments: false ,
+  hypothesisComments: true ,
   editors: [
     {
       name: "Rik | CROW", // verplicht, de rest is optioneel
