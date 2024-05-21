@@ -7,7 +7,7 @@ In 2022 is de meest recente versie van de [[NEN3610]] uitgekomen. [[IMBOR]] gebr
 - Duidelijkheid ten behoeve van de implementatie in software;
 - Consistentie in gebruik van attributen om temporele aspecten vast te leggen.
 
-De [[NEN3610]] is binnen de norm duidelijk over de toepassing van het temporele aspecten in een relationele database. Deze best practice beschrijft zodoende een aanvulling: hoe dit toe te passen in een graph. Deze best practice gaat er vanuit dat de lezer bekend is met hoofstuk 8.3 uit de [[NEN3610]]. Passages daaruit worden hier dan ook niet herhaald. 
+De [[NEN3610]] is binnen de norm duidelijk over de conceptuele beschrijving van het temporele model en geeft een toepassing daarvan in een registratie. Deze best practice beschrijft als aanvulling een toepassing van het temporele model in een graph. Deze best practice gaat er vanuit dat de lezer bekend is met hoofstuk 8.3 uit de [[NEN3610]]. Passages daaruit worden hier dan ook niet herhaald. 
 
 ### Toepassing temporele aspecten uit NEN3610 in graphs
 
@@ -76,7 +76,7 @@ gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarOb
         prov:invalidated gemX-history:id1_1 .
 
 gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1-1" ;
+            nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
             nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
             nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
@@ -91,7 +91,7 @@ gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarOb
         prov:invalidated gemX-history:id1_2 .
 
 gemX-history:id1_2    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1_2" ;
+            nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
             nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
             nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
@@ -158,7 +158,7 @@ gemX-regX:id1_3 a nen3610:Registratie ;
 
 ### Toepassing van opties
 
-De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met name aan de toepassing. Er is namelijk een onderscheidt te maken in een toepassing waar data gedeeld wordt tussen systemen en een toepassing welke alleen binnen één systeem geldt. Er is wat voor te zeggen dat [optie A](#optie-a-cloning) zou kunnen gelden wanneer data gedeeld moet worden en dat [optie B](#optie-b-3-d-met-rdf-star) vooral geldt binnen de registratie van een asset beheer pakket. Overigens is [optie B](#optie-b-3-d-met-rdf-star) ook prima toepasbaar om data mee te delen. 
+De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met name aan de toepassing. Er is namelijk een onderscheid te maken in een toepassing waar data gedeeld wordt tussen systemen en een toepassing welke alleen binnen één systeem geldt. Er is wat voor te zeggen dat [optie A](#optie-a-cloning) zou kunnen gelden wanneer data gedeeld moet worden en dat [optie B](#optie-b-3-d-met-rdf-star) vooral geldt binnen de registratie van een asset beheer pakket. Overigens is [optie B](#optie-b-3-d-met-rdf-star) ook prima toepasbaar om data mee te delen. 
 
 |         | Data delen | Database implementatie in één systeem |
 |---------|------------|---------------------------------------|
@@ -168,6 +168,6 @@ De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met
 
 ### A-synchrone mutatie
 
-In het geval van het 'versturen' van een mutatie tussen twee systemen, is het dan logisch om ook de `dateTime` van het registratieobject mee te sturen, of _is_ dat dit de `dateTime` waarop de mutatie daadwerkelijk wordt ontvangen en verwerkt? In het geval van de [[NEN3610]] zijn mutaties (de TijdlijnRegistratie) de momenten waarop een 'service' op de hoogte wordt gesteld van veranderingen, waardoor de registratie wordt bijgewerkt en toegankelijk wordt voor vragen. Er zal dus besloten moeten worden welk systeem de gegevens 'serveert' en wat dus gezien mag worden als single-point-of-truth voor dat setje gegevens. 
+In het geval van het 'versturen' van een mutatie tussen twee systemen, is het dan logisch om ook de `dateTime` van het registratieobject mee te sturen, of _is_ dat dit de `dateTime` waarop de mutatie daadwerkelijk wordt ontvangen en verwerkt? In het geval van de [[NEN3610]] zijn mutaties (de TijdlijnRegistratie) de momenten waarop gegevens in een registratie worden bijgewerkt en de service als het ware op de hoogte is van het tijdstip van de verandering in de registratie en daarop te bevragen is. De vraag 'wat weet de registratie', en een mogelijke afnemer op welk moment is van belang. Het is daarbij van belang om te definiëren welk systeem gezien moet worden als single-point-of-truth voor dat setje gegevens. Denk daarbij aan een scheiding tussen één front-office die gegevens van een registratie serveert en een back-office met verschillende beheersystemen.
 
 Bijvoorbeeld in het geval dat er een 'centrale asset registratiesysteem' is en applicaties daarom heen die gegevens muteren is de mutatie in het centrale asset register leidend. Als er namelijk een centrale database is  waarin de gegevens worden opgeslagen en een beheerpakket synchroniseert met deze gegevens, dan kan er tijd zitten tussen het moment van mutatie in de beheerapplicatie en de verwerking ervan in het centrale asset register. Hier mag er vanuit gegaan worden dat het moment van verwerking in het centrale register het belangrijkste is om te delen, omdat dit het moment is waarop de verwerking operationeel wordt. In de [[NEN3610]] wordt namelijk gesteld `TijdstipRegistratie`: Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie. En `Registratie`: Geïdentificeerde en erkende gegevensverzameling. De TijdlijnRegistratie is bedoeld om aan te geven op welk moment een gegeven in de registratie is opgenomen en dus ook operationeel bevraagbaar, kenbaar gemaakt kan worden.

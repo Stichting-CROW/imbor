@@ -9,6 +9,9 @@ var respecConfig = {
   editors: [
     {
       name: "Rik | CROW", // verplicht, de rest is optioneel
+    },
+    {
+      name: "Paul Janssen | Geonovum", // verplicht, de rest is optioneel
     }
   ],
   github: "https://github.com/Stichting-CROW/imbor",
