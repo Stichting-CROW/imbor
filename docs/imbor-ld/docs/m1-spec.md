@@ -88,7 +88,7 @@ grootheden.
 Ook wel enumeraties genoemd, hebben Vastewaardelijsten in IMBOR een wisselende status.
 Voor sommige eigenschappen is de vastewaardelijst een sluitende en complete lijst van mogelijke waarden.
 Voor andere eigenschappen is het eerder een suggestielijst. In de LinkedData IMBOR wordt hier vooralsnog geen
-onderscheidt in gemaakt:
+onderscheid in gemaakt:
 
 <div class="issue" data-number="42"></div>
 
