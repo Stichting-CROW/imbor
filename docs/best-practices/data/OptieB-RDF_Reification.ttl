@@ -1,0 +1,43 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix gemX: <http://voorbeeld.org/gemX#>.
+
+nen3610:Registratie             a           rdfs:Class .
+nen3610:IdentificeerbaarObject  a           rdfs:Class .
+imbor:Gebouw                    a           rdfs:Class .
+imbor:GebruiksdoelAspect        a           rdfs:Class .
+imbor:AdresAspect               a           rdfs:Class .
+
+gemX:id1        a                           imbor:Gebouw, nen3610:IdentificeerbaarObject ;
+                nen3610:identificatie       "id1" ;
+                nen3610:domein              gemX: ;
+                imbor:gebruiksdoel          gemX-reg:id1_1 ;
+                imbor:gebruiksdoel          gemX-reg:id1_2 ;            
+                imbor:gebruiksdoel          gemX-reg:id1_3 ;
+                imbor:adres                 gemX-reg:id1_0 .
+
+gemX-reg:id1_1  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "kantoorfunctie" ;
+                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
+                nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
+                                
+gemX-reg:id1_2  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "woonfunctie" ;
+                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
+                nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
+                                
+gemX-reg:id1_3  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "logiesfunctie" ;
+                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
+  
+gemX-reg:id1_0  a                           imbor:AdresAspect ;
+                rdf:value                   "Peperstraat" ;
+                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
