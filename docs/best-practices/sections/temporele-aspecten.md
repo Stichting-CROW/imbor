@@ -158,7 +158,7 @@ gemX-regX:id1_3 a nen3610:Registratie ;
 
 #### Optie B: 3½-D met RDF Reïficatie
 
-Er is nog een variant van optie B zonder het gebruik van (het relatief nieuwe) RDF-star. In deze optie worden historische wijzigingen gemodelleerd door alle eigenschappen te reïficeren (in plaats van de triple-reïficatie zoals in de andere variant van optie B). Op deze manier (met of zonder blank nodes) wordt in de modellering expliciet gemaakt wat de semantiek is van deze statements. Bij deze variant kan worden volstaan met reguliere SPARQL. Verder geldt voor deze variant hetzelfde als de voorgaande.
+Er is nog een variant van optie B zonder het gebruik van (het relatief nieuwe) RDF-star. In deze optie worden historische wijzigingen gemodelleerd door alle eigenschappen te reïficeren (in plaats van de triple-reïficatie zoals in de andere variant van optie B). Op deze manier wordt in de modellering expliciet gemaakt wat de semantiek is van deze statements (dit kan met of zonder blank nodes) . Bij deze variant kan worden volstaan met reguliere SPARQL. Verder geldt voor deze variant hetzelfde als de voorgaande.
 
 <figure>
 
