@@ -1,4 +1,4 @@
-IMBOR is ontwikkeld door het CROW in samenwerking met gemeenten, provincies, softwareleveranciers en experts op het gebied van gegevensbeheer openbare ruimte. Dit document beschrijft alle aspecten rondom het beheer van IMBOR conform het [BOMOS model](https://www.logius.nl/diensten/bomos), het Beheer- en OntwikkelModel voor Open Standaarden van Logius.
+IMBOR is ontwikkeld door het CROW in samenwerking met gemeenten, provincies, softwareleveranciers en experts op het gebied van gegevensbeheer openbare ruimte. Het CROW commiteert zich aan het beheer van IMBOR. Dit document beschrijft alle aspecten rondom het beheer van IMBOR conform het [BOMOS model](https://www.logius.nl/diensten/bomos), het Beheer- en OntwikkelModel voor Open Standaarden van Logius. 
 
 # Revisie historie 
 
