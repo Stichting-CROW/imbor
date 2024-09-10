@@ -7,7 +7,7 @@ In 2022 is de meest recente versie van de [[NEN3610]] uitgekomen. [[IMBOR]] gebr
 - Duidelijkheid ten behoeve van de implementatie in software;
 - Consistentie in gebruik van attributen om temporele aspecten vast te leggen.
 
-De [[NEN3610]] is binnen de norm duidelijk over de toepassing van het temporele aspecten in een relationele database. Deze best practice beschrijft zodoende een aanvulling: hoe dit toe te passen in een graph. Deze best practice gaat er vanuit dat de lezer bekend is met hoofstuk 8.3 uit de [[NEN3610]]. Passages daaruit worden hier dan ook niet herhaald. 
+De [[NEN3610]] is binnen de norm duidelijk over de conceptuele beschrijving van het temporele model en geeft een toepassing daarvan in een registratie. Deze best practice beschrijft als aanvulling een toepassing van het temporele model in een graph. Deze best practice gaat er vanuit dat de lezer bekend is met hoofstuk 8.3 uit de [[NEN3610]]. Passages daaruit worden hier dan ook niet herhaald. 
 
 ### Toepassing temporele aspecten uit NEN3610 in graphs
 
@@ -43,7 +43,7 @@ Klonen is een methode om tijdlijn informatie te modelleren door kopieën van inf
 
 <figure>
 
-![Temporele aspecten in graph | Optie A](img/NEN3610-TempAspects-Optie1.drawio.png?raw=true)
+![Temporele aspecten in graph | Optie A](img/NEN3610-TempAspects-OptieA.drawio.png?raw=true)
     
 <figcaption>Temporele aspecten in graph | Optie A: Cloning</figcaption>
 </figure>
@@ -76,7 +76,7 @@ gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarOb
         prov:invalidated gemX-history:id1_1 .
 
 gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1-1" ;
+            nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
             nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
             nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
@@ -91,7 +91,7 @@ gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarOb
         prov:invalidated gemX-history:id1_2 .
 
 gemX-history:id1_2    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1_2" ;
+            nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
             nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
             nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
@@ -110,7 +110,7 @@ Optie B is de 3½-D-aanpak. In deze optie worden historische wijzigingen gemodel
 
 <figure>
 
-![Temporele aspecten in graph | Optie B](img/NEN3610-TempAspects-Optie4.drawio.png?raw=true)
+![Temporele aspecten in graph | Optie B](img/NEN3610-TempAspects-OptieB-RDF-Star.drawio.png?raw=true)
     
 <figcaption>Temporele aspecten in graph | Optie B: 3½-D met RDF-star</figcaption>
 </figure>
@@ -156,9 +156,71 @@ gemX-regX:id1_3 a nen3610:Registratie ;
 ```
 
 
+#### Optie B: 3½-D met RDF Reïficatie
+
+Er is nog een variant van optie B zonder het gebruik van (het relatief nieuwe) RDF-star. In deze optie worden historische wijzigingen gemodelleerd door alle eigenschappen te reïficeren (in plaats van de triple-reïficatie zoals in de andere variant van optie B). Op deze manier wordt in de modellering expliciet gemaakt wat de semantiek is van deze statements (dit kan met of zonder blank nodes) . Bij deze variant kan worden volstaan met reguliere SPARQL. Verder geldt voor deze variant hetzelfde als de voorgaande.
+
+<figure>
+
+![Temporele aspecten in graph | Optie B](img/NEN3610-TempAspects-OptieB-Reification.drawio.png?raw=true)
+    
+<figcaption>Temporele aspecten in graph | Optie B: 3½-D met RDF Reïficatie</figcaption>
+</figure>
+
+Dit is de uitwerking in [[Turtle]]:
+
+```turtle
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix gemX: <http://voorbeeld.org/gemX#>.
+
+nen3610:Registratie             a           rdfs:Class .
+nen3610:IdentificeerbaarObject  a           rdfs:Class .
+imbor:Gebouw                    a           rdfs:Class .
+imbor:GebruiksdoelAspect        a           rdfs:Class .
+imbor:AdresAspect               a           rdfs:Class .
+
+gemX:id1        a                           imbor:Gebouw, nen3610:IdentificeerbaarObject ;
+                nen3610:identificatie       "id1" ;
+                nen3610:domein              gemX: ;
+                imbor:gebruiksdoel          gemX-reg:id1_1 ;
+                imbor:gebruiksdoel          gemX-reg:id1_2 ;            
+                imbor:gebruiksdoel          gemX-reg:id1_3 ;
+                imbor:adres                 gemX-reg:id1_0 .
+
+gemX-reg:id1_1  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "kantoorfunctie" ;
+                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
+                nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
+                                
+gemX-reg:id1_2  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "woonfunctie" ;
+                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
+                nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
+                                
+gemX-reg:id1_3  a                           imbor:GebruiksdoelAspect ;
+                rdf:value                   "logiesfunctie" ;
+                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
+  
+gemX-reg:id1_0  a                           imbor:AdresAspect ;
+                rdf:value                   "Peperstraat" ;
+                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
+```
+
+
 ### Toepassing van opties
 
-De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met name aan de toepassing. Er is namelijk een onderscheidt te maken in een toepassing waar data gedeeld wordt tussen systemen en een toepassing welke alleen binnen één systeem geldt. Er is wat voor te zeggen dat [optie A](#optie-a-cloning) zou kunnen gelden wanneer data gedeeld moet worden en dat [optie B](#optie-b-3-d-met-rdf-star) vooral geldt binnen de registratie van een asset beheer pakket. Overigens is [optie B](#optie-b-3-d-met-rdf-star) ook prima toepasbaar om data mee te delen. 
+De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met name aan de toepassing. Er is namelijk een onderscheid te maken in een toepassing waar data gedeeld wordt tussen systemen en een toepassing welke alleen binnen één systeem geldt. Er is wat voor te zeggen dat [optie A](#optie-a-cloning) zou kunnen gelden wanneer data gedeeld moet worden en dat [optie B](#optie-b-3-d-met-rdf-star) vooral geldt binnen de registratie van een asset beheer pakket. Overigens is [optie B](#optie-b-3-d-met-rdf-star) ook prima toepasbaar om data mee te delen. 
+
+Het verschil tussen de varianten in optie B heeft vooral te maken met of de gebruikte ontologie voldoende ver gemodelleerd is (in het voorbeeld: de gebruikte aspecten onderscheidt). En/of in de complimenterende systemen RDF-star ondersteund wordt.
 
 |         | Data delen | Database implementatie in één systeem |
 |---------|------------|---------------------------------------|
@@ -168,6 +230,6 @@ De vraag rijst uiteraard wanneer welke optie toegepast moet worden. Dit ligt met
 
 ### A-synchrone mutatie
 
-In het geval van het 'versturen' van een mutatie tussen twee systemen, is het dan logisch om ook de `dateTime` van het registratieobject mee te sturen, of _is_ dat dit de `dateTime` waarop de mutatie daadwerkelijk wordt ontvangen en verwerkt? In het geval van de [[NEN3610]] zijn mutaties (de TijdlijnRegistratie) de momenten waarop een 'service' op de hoogte wordt gesteld van veranderingen, waardoor de registratie wordt bijgewerkt en toegankelijk wordt voor vragen. Er zal dus besloten moeten worden welk systeem de gegevens 'serveert' en wat dus gezien mag worden als single-point-of-truth voor dat setje gegevens. 
+In het geval van het 'versturen' van een mutatie tussen twee systemen, is het dan logisch om ook de `dateTime` van het registratieobject mee te sturen, of _is_ dat dit de `dateTime` waarop de mutatie daadwerkelijk wordt ontvangen en verwerkt? In het geval van de [[NEN3610]] zijn mutaties (de TijdlijnRegistratie) de momenten waarop gegevens in een registratie worden bijgewerkt en de service als het ware op de hoogte is van het tijdstip van de verandering in de registratie en daarop te bevragen is. De vraag 'wat weet de registratie', en een mogelijke afnemer op welk moment is van belang. Het is daarbij van belang om te definiëren welk systeem gezien moet worden als single-point-of-truth voor dat setje gegevens. Denk daarbij aan een scheiding tussen één front-office die gegevens van een registratie serveert en een back-office met verschillende beheersystemen.
 
 Bijvoorbeeld in het geval dat er een 'centrale asset registratiesysteem' is en applicaties daarom heen die gegevens muteren is de mutatie in het centrale asset register leidend. Als er namelijk een centrale database is  waarin de gegevens worden opgeslagen en een beheerpakket synchroniseert met deze gegevens, dan kan er tijd zitten tussen het moment van mutatie in de beheerapplicatie en de verwerking ervan in het centrale asset register. Hier mag er vanuit gegaan worden dat het moment van verwerking in het centrale register het belangrijkste is om te delen, omdat dit het moment is waarop de verwerking operationeel wordt. In de [[NEN3610]] wordt namelijk gesteld `TijdstipRegistratie`: Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie. En `Registratie`: Geïdentificeerde en erkende gegevensverzameling. De TijdlijnRegistratie is bedoeld om aan te geven op welk moment een gegeven in de registratie is opgenomen en dus ook operationeel bevraagbaar, kenbaar gemaakt kan worden.

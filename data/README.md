@@ -1,6 +1,9 @@
 # IMBOR 'data (Producten)
 In deze folder staan alle data bestanden van IMBOR.
-Er is voor gekozen om de AccessDB en de TTL files in een ZIP file te distribueren en niet als losse files (middels .gitignore worden deze gefilterd).
+Er is voor gekozen om de AccessDB en de TTL files in een ZIP file te distribueren en niet als losse files.
+
+## IMBOR-development
+Voor de ontwikkeling en werkversies van IMBOR wordt een andere repository gebruikt: [imbor-development](https://github.com/Stichting-CROW/imbor-development)
 
 ## SPARQL-Endpoints
 Alle relevante IMBOR SPARQL-Endpoints worden benoemd in deze file
