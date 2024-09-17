@@ -3,15 +3,16 @@
 <aside class="note" title="groepen aanpassen naar wat we weten">
 </aside>
 
-Leden beheercommissie - (op 23-03-2022)
-* J.M. Zijlstra (Gemeente Amsterdam)
-* A. de Boer (Geonovum)
-* F. Westenberg (Ingenieursbureau Westenberg B.V.)
-* N. Reyngoud (Provincie Gelderland) 
-* N.O. Hoffmann (Provincie Noord-Holland)
-* G.E. Oosterom (Stichting Rioned)
-* E.W.J. van Zuilen (Sweco Nederland B.V.) 
-* M. Rietdijk (VNG Realisatie) 
+Leden beheercommissie - (op 20-09-2024)
+* A. Tolmeijer (Provincie Noord-Holland)
+* F. Seijben (Waterschap Limburg)
+* W. Peters (Gemeente Maasdriel)
+* I. Vromen (Het Gegevenshuis) 
+* S. van Gerwen (Provincie Noord-Brabant)
+* W. Sosef (Gemeente Utrecht)
+* E. Otte (gemeente Utrecht)
+* N. Reyngoud (Provincie Gelderland)
+* J.P. Eelants (CROW)
 
 Leden adviescommissie sofwareleveranciers - (op 23-03-2022) 
 * F.A. Zwiers (Antea Group)
