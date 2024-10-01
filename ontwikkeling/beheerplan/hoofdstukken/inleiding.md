@@ -6,12 +6,9 @@ Het IMBOR beschrijft een uniforme naamgeving van objecttypen en hun onderlinge r
 
 Door gebruik te maken van IMBOR wordt objectgericht werken in de hele levenscyclus van de assets in de openbare ruimte mogelijk. Dit zorgt er voor dat er een bodem is gelegd om informatieverlies van gegevens in de verschillende levensfases van een object te minimaliseren. IMBOR sluit aan bij de verschillende andere informatiestandaarden die worden gebruikt zodat uitwisselbaarheid van informatie optimaal gefaciliteerd kan worden. Deze belofte is integraal onderdeel van het beheerproces van IMBOR. IMBOR is daarom ook breed toepasbaar.
 
-<aside class="note" title="we hebben de positionering IMBOR binnen CROW uitgewerkt. Dit moet nog resulteren in een goede landingspagina op de CROW site. Ik laat deze noot even staan omdat dit nog niet is gebeurd en we moeten nadenken of we uberhaupt verwijzen naar de website van het CROW.">
-</aside>
-
 CROW is de ontwikkelaar en beheerder van IMBOR. Het IMBOR is ontwikkeld onder begeleiding van een Projectgroep IMBOR, een IMBOR Klankbordgroep softwareleveranciers en een groot aantal inhoudelijke werkgroepen per vakgebied. 
 
-Dit beheerplan is opgesteld om de kaders vast te leggen voor een zorgvuldig en transparant beheerproces van het IMBOR zodat het als een volwaardige open standaard kan worden beheerd en aansluit bij de veranderende behoeften uit de makrt en de andere standaarden in het werkveld.
+Dit beheerplan is opgesteld om de kaders vast te leggen voor een zorgvuldig en transparant beheerproces van het IMBOR zodat het als een volwaardige open standaard kan worden beheerd en aansluit bij de veranderende behoeften uit de markt en de andere standaarden in het werkveld.
 
 ## Uitgangspunten beheer IMBOR
 Om te zorgen voor een zorgvuldig en transparant beheer, met oog voor de belangen van alle gebruikers, wordt het IMBOR beheerd volgens het Beheer- en Ontwikkelmodelmodel Open Standaarden ([BOMOS](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/)) van Forum voor Standaardisatie. Dit beheerplan gebruikt BOMOS als handleiding, structuur en toetsingskader om het beheer van IMBOR in te richten volgens de besluitvormingsstructuur en procedures die hierin worden beschreven.
@@ -40,4 +37,4 @@ Dit beheerplan is opgesteld met medewerking van alle betrokkenen en is ter goedk
 * Afronding en publicatie door CROW.
 
 ## Leeswijzer
-Hoofdstuk twee tot en met Zes beschrijft het beheer van IMBOR volgens de BOMOS structuur. De hoofdstukken zijn ingedeeld analoog aan de beschrijving van de in BOMOS genoemde activiteiten. We beginnen met de strategie waarin vooral de structuur van de besluitvorming is vastgelegd, gevolgd door Tactiek, Operationeel, Communicatie en Implementatie. Voor sommige onderdelen wordt verwezen naar andere bronnen om meer diepgang te geven of ter verbetering van de leesbaarheid.
+Hoofdstuk twee tot en met zes beschrijft het beheer van IMBOR volgens de BOMOS structuur. De hoofdstukken zijn ingedeeld analoog aan de beschrijving van de in BOMOS genoemde activiteiten. We beginnen met de strategie waarin vooral de structuur van de besluitvorming is vastgelegd, gevolgd door Tactiek, Operationeel, Communicatie en Implementatie. Voor sommige onderdelen wordt verwezen naar andere bronnen om meer diepgang te geven of ter verbetering van de leesbaarheid.
