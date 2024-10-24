@@ -235,7 +235,6 @@ Het gebruik van de klasse 'Registratie' is dat een configuratie van een object d
 Het gebruik hiervan wordt gepropageerd vanuit de [NEN3610:2022][nen3610:2022] en IMBOR adopteert dit volledig. Hoe de implementatie dan precies werkt wordt toegelicht in de [NEN3610:2022][nen3610:2022], maar specifiek voor graphs en IMBOR is een uitwerking te vinden in: [IMBOR best practice temporele aspecten](https://docs.crow.nl/imbor/best-practices/#nen3610-temporele-aspecten).
 
 
-
 #### Materie
 
 Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de [NEN2660-2:2022][nen2660:2022] is hiervoor een modelleerconstructie gegeven die IMBOR nu toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de [NEN2660-2:2022][nen2660:2022] en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt in de toekomst aangesloten bij een bestaand(e) lijst/initiatief. 
@@ -244,6 +243,47 @@ Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Bi
 Ter verduidelijking IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden. We geven alleen 'voorstellen'.
 </div>
 
+#### Actoren en rollen
+
+Vanaf IMBOR2025 is er een nieuw modelleerpatroon geïntroduceerd om relaties tussen klassen en actoren te modelleren, middels rollen. Deze constructie is ontleend uit de [NEN2660-1:2022](nen2660-1:2022). Omdat de [NEN2660-2:2022][nen2660:2022] hier geen standaard oplossing voor biedt, is er een in IMBOR een modelleerconstructie die conform de [NEN2660-1:2022](nen2660-1:2022) gemaakt is. Het gaat hier om de introductie van `imbor:Actor` (als subklasse van `nen2660:PhysicalObject`) en `imbor:Rol`. `imbor:Actor` wordt met de relatie `imbor:speelt` verbonden met een `imbor:Rol`. Welke op zijn beurt met een `imbor:heeftBetrekkingOp` relatie verbonden is met een `nen3610:GeoObject` of `nen2660:InformatieObject`. 
+
+IMBOR definieert subklassen van `imbor:Actor`, te weten: `imbor:PublieksrechtelijkRechtspersoon` en `imbor:PrivaatrechtelijkRechtspersoon`. Voor de eerste worden TOOI subklassen gebruikt, welke toegelicht worden in [TOOI](#tooi). De laatste kan geïnstantieerd worden om organisaties zoals 'ProRail' of 'TenneT' aan te maken. 
+
+De klasse `imbor:Rol` kent een aantal subklassen die herkenbaar zullen zijn voor de gemiddelde IMBOR gebruiker. Deze werden voorheen als attributen behandeld, maar zijn nu klassen. Voorbeelden hiervan zijn 'Beheerder', 'Eigenaar' en 'Fabrikant'. Deze klassen kunnen geïnstantieerd worden om de expliciete rol aan te geven. In onderstaande voorbeeld is in dikgedrukte letters de IMBOR modelleerconstructie te zien, daaronder een voorbeeld in de data.
+
+
+| imbor:Actor | imbor:speelt | imbor:Rol       | imbor:heeftBetrekkingOp | imbor:GeoObject   |
+|-------------|--------------|-----------------|-------------------------|-------------------|
+| ex:ProRail  | imbor:speelt | ex:Beheerder123 | imbor:heeftBetrekkingOp | ex:Railsegment456 |
+| { .data }   |              |                 |                         |                   |
+
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1258"><span></span></div>
+  <div class="issue" data-number="1192"><span></span></div>
+</details>
+
+#### Hiërarchie van attributen
+
+Vanaf IMBOR2025 is er een hiërarchie geïntroduceerd binnen de attributen. Dit is niet alleen overzichtelijker voor 'navigatie', maar het stelt gebruikers ook in staat algemenere bevragingen te doen op het gebied van de attributen. Inhoudelijk verandert dit niets, maar het betreft de introductie van een attribuut dat abstract is, en een parent is van een ander attribuut.
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1266"><span></span></div>
+</details>
+
 [viewer]: https://imbor-viewer.apps.crow.nl/
 [nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
 [nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
+[nen2660-1:2022]: (https://www.nen.nl/nen-2660-1-2022-nl-291666)
