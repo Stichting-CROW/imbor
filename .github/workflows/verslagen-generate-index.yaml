@@ -20,14 +20,17 @@ jobs:
         echo "" >> index.md
 
         for dir in */; do
-          dir=${dir%*/}
+          dir=$(echo "$dir" | sed 's/ /\\ /g')
           if [ -d "$dir" ]; then
             echo "## $dir" >> index.md
-            find "$dir" -type f -printf "- [%f](%.)\n" | sort >> index.md
+            for file in "$dir"*; do
+              file=$(echo "$file" | sed 's/ /\\ /g')
+              filename=$(basename "$file")
+              echo "- [$filename]($file)" >> index.md
+            done
             echo "" >> index.md
           fi
         done
-
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
