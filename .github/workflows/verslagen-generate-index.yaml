@@ -23,7 +23,7 @@ jobs:
           dir=${dir%*/}
           if [ -d "$dir" ]; then
             echo "## $dir" >> index.md
-            find "$dir" -type f -printf "- [%f](%q)\n" | sort >> index.md
+            find "$dir" -type f -printf "- [%f](%.)\n" | sort >> index.md
             echo "" >> index.md
           fi
         done
