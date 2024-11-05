@@ -1,6 +1,7 @@
 name: Generate Verslagen Index
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'docs/verslagen/**'
@@ -28,8 +29,6 @@ jobs:
         done
 
     - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add docs/verslagen/index.md
-        git commit -m "Update index.md" || echo "No changes to commit"
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update verslagen-index na upload
