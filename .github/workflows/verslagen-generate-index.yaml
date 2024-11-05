@@ -1,0 +1,35 @@
+name: Generate Verslagen Index
+
+on:
+  push:
+    paths:
+      - 'docs/verslagen/**'
+
+jobs:
+  generate_index:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Generate Index
+      run: |
+        cd docs/verslagen
+        echo "# Verslagen" > index.md
+        echo "" >> index.md
+
+        for dir in */; do
+          dir=${dir%*/}
+          if [ -d "$dir" ]; then
+            echo "## $dir" >> index.md
+            find "$dir" -type f -printf "- [%f](%p)\n" | sort >> index.md
+            echo "" >> index.md
+          fi
+        done
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/index.md
+        git commit -m "Update index.md" || echo "No changes to commit"
