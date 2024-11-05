@@ -31,5 +31,5 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/index.md
+        git add docs/verslagen/index.md
         git commit -m "Update index.md" || echo "No changes to commit"
