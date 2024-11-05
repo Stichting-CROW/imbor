@@ -1,10 +1,12 @@
 ## IMBOR samenhang en hiërarchie
 
-IMBOR wordt gepositioneerd als sectormodel. De focus ligt op de vaste gegevens van objecten die herkend worden voor het beheer van de openbare ruimte. Kijkend naar het landschap waarin IMBOR wordt gebruikt zijn er veel raakvlakken met landelijke, maar ook andere sectorale modellen. Om deze afstemming zo optimaal te laten verlopen is getracht om de top van de IMBOR hiërarchie (ofwel de klassenindeling) zo veel mogelijk aan te laten sluiten op andere modellen. Dit is gedaan om enerzijds niet zaken zelf te verzinnen, maar zaken aan te vullen. En anderzijds om uiteindelijk een semantisch sterke mapping tussen de sectorale modellen mogelijk te kunnen maken. Wanneer sectorale modellen allemaal gebaseerd zijn op dezelfde uitgangspunten is het makkelijkere om onderin de boom de vergelijking te kunnen maken. Vandaar dat voor IMBOR2022 gekozen is om gebruik te maken van een polyhiërarchie gebaseerd op respectievelijk de NEN2660-2, de NEN3610, de SOR, het IMGeo2.2, het IMKL2.0 en het IMWV. 
+IMBOR wordt gepositioneerd als sectormodel. De focus ligt op de vaste gegevens van objecten die herkend worden voor het beheer van de openbare ruimte. Kijkend naar het landschap waarin IMBOR wordt gebruikt zijn er veel raakvlakken met landelijke, maar ook andere sectorale modellen. Om deze afstemming zo optimaal te laten verlopen is getracht om de top van de IMBOR hiërarchie (ofwel de klassenindeling) zo veel mogelijk aan te laten sluiten op andere modellen. Dit is gedaan om enerzijds niet zaken zelf te verzinnen, maar zaken aan te vullen. En anderzijds om uiteindelijk een semantisch sterke mapping tussen de sectorale modellen mogelijk te kunnen maken. Wanneer sectorale modellen allemaal gebaseerd zijn op dezelfde uitgangspunten is het makkelijkere om onderin de boom de vergelijking te kunnen maken. Vandaar dat voor IMBOR gekozen is om gebruik te maken van een polyhiërarchie gebaseerd op respectievelijk de [NEN2660-2:2022][nen2660:2022] en de [NEN3610:2022][nen3610:2022]. 
 
 ### IMBOR Top hiërarchie
 
-In onderstaand diagram is de top van de hiërarchie te vinden, met in kleur aangegeven waar de concepten vandaan komen. De relaties tussen de NEN2660-2 en de NEN3610 komen uit de NEN2660-2 documentatie zelf. En de relaties tussen de NEN3610 en de SOR komen uit de documentatie van de SOR zelf. Deze indeling zorgt ervoor dat voor alle IMBOR Objecttypen (niet afgebeeld) er een logische hiërarchie is, waarmee duidelijk is hoe deze zich verhoudt tot de landelijke standaarden. Te zien is dat er zeer weinig IMBOR specifieke (hoofd)klassen geïntroduceerd hoeven te worden omdat bijna alles al voldoende gedefinieerd wordt. Alle (ongeveer 500) Objecttypen hebben worden aan één of meerdere van deze klassen gehangen en krijgen hiermee een landelijke semantische definitie. De hiërarchie wordt tevens gebruikt om de attributen mee te distribueren, maar deze hebben (nog) geen landelijk/sectoraal kader. Hiermee wordt bedoeld dat dit diagram meer gebruikt moet worden als 'begrippenkader'(lees: de semantische afstemming van de modellen) dan dat het daadwerkelijk als een volwaardige ontologie ingezet kan worden. Dit is niet per se mogelijk omdat er geen volledige afstemming is tussen de attributen en onderlinge relaties.
+In onderstaand diagram is de top van de hiërarchie te vinden, met in kleur aangegeven waar de concepten vandaan komen. De relaties tussen de [NEN2660-2:2022][nen2660:2022] en de [NEN3610:2022][nen3610:2022] komen uit de [NEN2660-2:2022][nen2660:2022] documentatie zelf. Deze indeling zorgt ervoor dat voor alle IMBOR `Objecttype`n (niet afgebeeld) er een logische hiërarchie is, waarmee duidelijk is hoe deze zich verhoudt tot de landelijke standaarden. Te zien is dat er weinig IMBOR specifieke (hoofd)klassen geïntroduceerd hoeven te worden omdat bijna alles al voldoende gedefinieerd wordt. Alle `Objecttype`n` hebben worden aan één of meerdere van deze klassen gehangen en krijgen hiermee een landelijke semantische definitie. De hiërarchie wordt tevens gebruikt om de attributen mee te distribueren, maar deze hebben (nog) geen landelijk/sectoraal kader. Hiermee wordt bedoeld dat dit diagram meer gebruikt moet worden als 'begrippenkader'(lees: de semantische afstemming van de modellen) dan dat het daadwerkelijk als een volwaardige ontologie ingezet kan worden. Dit is niet per se mogelijk omdat er geen volledige afstemming is tussen de attributen en onderlinge relaties.
+
+Al deze concepten kennen definities, omdat er anders geen semantische discussies gevoerd kunnen worden zonder dat de definities van de concepten bekend zijn. Alle definities kunnen ingezien worden in de [IMBOR viewer](viewer).
 
 <figure>
 
@@ -14,140 +16,23 @@ In onderstaand diagram is de top van de hiërarchie te vinden, met in kleur aang
 </figure>
 
 
-#### Definities in hiërarchie
-
-Al deze concepten kennen definities. Omdat er geen semantische discussies gevoerd kunnen worden zonder dat de definities van de concepten bekend zijn worden ze hieronder uiteengezet. _(Dit betreft een extract uit de SVG/XML)_
-
-* __Aanschaf-informatie__: Verzameling van gegevens die te maken hebben met de monetaire waarde van een object.
-* __Activiteit__: Iets dat mogelijk of daadwerkelijke gebeurt in ruimte en tijd.
-* __Apparaat__: Een (vaak compact) mechanisch of elektronisch ding dat is gemaakt of toegepast voor een specifieke toepassing en doorgaans in één behuizing gevat is.
-* __Bak__: Object met een permanent karakter dat dient om iets in te bergen of te verzamelen.
-* __Begroeiing__: Planten die op natuurlijke wijze zijn ontstaan of door mensen zijn aangeplant.
-* __Beheerd object__: Object welke door een organisatie beheerd wordt in de beheerfase van zijn levenscyclus.
-* __Bereikbaarheid-informatie__: Registratie van gegevens die betrekking hebben op de bereikbaarheid van het object.
-* __Bodem__: Bovenste begrenzing van het aardoppervlak, exclusief oppervlaktewater
-* __Bord__: Een paneel waarop informatie wordt afgebeeld.
-* __Bordopschrift__: Informatieobject voor het vastleggen van de informatie op een bord.
-* __Bouwwerk__: Gegevens die specifiek zijn voor een met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk.
-* __Certificering-informatie__: De verzameling van gegevens die gebruikt kan worden voor de wijze waarop een object gecertificeerd is.
-* __Complex__: Functionele ruimte die een verzameling van één of meer gebouwen, constructies, verharding, water en begroeiing betreft die samen een eenheid vormen.
-* __Constructie__: Gebouwd object dat direct of indirect met de grond is verbonden en bedoeld is om ter plaatse te functioneren.
-* __Constructielaag__: Laagopbouw onder begroeiing of verharding.
-* __Constructieonderdeel__: Constructieonderdeel, onderdeel van een objecttype die als zelfstandig objecttype beheerd kan worden.
-* __DiscreetObject__: Reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)
-* __Document__: Informatieobject voor het registreren en koppelen van documenten aan objecttypes.
-* __Ecologische zone__: Functionele ruimte speciaal voor het registreren van functionele aandachts- en onderzoeksgebieden.
-* __Flora en fauna-informatie__: Verzameling van gegevens die te maken hebben met het beheer van Flora en Fauna.
-* __Functie__: Een activiteit die het externe gedrag beschrijft van het object die de activiteit uitvoert.
-* __Functioneel gebouwobject__: Een gebouw gerelateerde ruimte met een specifieke functie.
-* __Functionele ruimte__: Ruimte met een specifieke functie.
-* __Functionele zonering__: Een gebied met een specifieke functie.
-* __FunctioneleEntiteit__: Entiteit waarbij het gaat om het externe gedrag waarbij de uitvoer bijdraagt aan doelstellingen van belanghebbenden geïmplementeerd/gespeeld door een of meer technische entiteiten.
-* __FysiekObject__: Iets dat mogelijk of daadwerkelijk bestaat in ruimte en tijd, waarneembaar door de zintuigen.
-* __GM*__: GML features
-* __Gebiedsindeling__: Object welke gegevens kent betreffende de vastlegging binnen registratieve ruimten.
-* __Gebouw__: Overdekte en geheel of gedeeltelijk met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.
-* __Gebouwcomponent__: Component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt
-* __Gebruikszone oppervlaktewater__: Begrensd oppervlaktewatergebied dat een bepaald gebruik kent
-* __Geo-object__:  &#9;Een fenomeen in de werkelijkheid, dat direct of indirect is geassocieerd met een locatie relatief ten opzichte van de aarde.
-* __Geografische ruimte__: Ruimte die bekend staat onder een vanuit de historie of in de volksmond bekende benaming of een fysisch-geografische samenhang kent.
-* __GeometrischeRepresentatie__: Een ruimtelijke representatie van een object.
-* __Groenobject__: Kleinste functioneel onafhankelijk stukje van een begroeid terrein dat er binnen het objecttype Begroeiing van NEN 3610 wordt onderscheiden, met aaneengesloten vegetatie.
-* __Holle leiding__: Holle leiding voor het doorstromen van gassen, vloeistoffen of capsules, bestemd om hetzij gas, een vloeistof of capsules te transporteren, hetzij een vloeistof als intermediair te gebruiken voor het transport van warmte of een opgeloste of verpulverde stof.
-* __Hulplijn__: Lijnvormig element wat vaak gebruik wordt in combinatie met andere objecttypen.
-* __IMKLBasis object__:  Abstract data object dat de basis attributen bevat van de IMKL extensie. 
-* __InformatieObject__: Thing that is a whole of information on itself and has an own identit
-* __Installatie-informatie__: Gegevens die betrekking hebben op de installatie van een object.
-* __Installatie__: Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient
-* __Inwinning-informatie__: Informatieobject voor het vastleggen van informatie m.b.t. de inwinning van een objecttype.
-* __Resultaat verkeerstelling__: Het vastleggen van het resultaat van alle verkeerstellingen op een wegas per jaar.
-* __Juridische ruimte__: Ruimte waar een juridisch instrument beleid of regelgeving toepast.
-* __Kabel__: Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van energie of data.
-* __Kabelgeul__: Ruimtebeslag dat door een gemeenschappelijk tracé van één of meer kabels, buizen, HDPE- en/of mantelbuizen - die toebehoren aan één netwerkbeheerder - wordt gevormd.
-* __Kast__: Constructie met een permanent karakter dat dient om iets in te bergen en te beschermen
-* __Kering__: Voorziening met een kerende functie
-* __Kunstwerk__: Civieltechnisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen.
-* __Kunstwerkdeel__:   Onderdeel van een civieltechnisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen
-* __Leiding__: Een geheel van geleiders of ruimte welke voorzien zijn van één ommanteling en bestemd is voor transport van materie, data of energie.
-* __Luchtvaartzone__: Functionele ruimte die in gebruik is voor luchtvaart
-* __Luchtvaartruimte__: Verkeerruimte voor voertuigen die zich door de lucht verplaatsen.
-* __Mast__: Hoge draagconstructie voor een installatie of het transport van energie en elektromagnetische straling
-* __Materie__: Zuivere stof, chemische verbinding of mengsel
-* __Memo__: Informatieobject voor het gebruik en de registratie van memo's bij een objecttype.
-* __Monument-informatie__: Registratie van gegevens van monumentale objecten.
-* __Object__: Superklasse van het model. Ouder van de kinderen FysiekObject en Informatieobject. Enititeit die bestaat of kan bestaan binnen ruimte of tijd. Een object voert een activiteit uit en verandert door een activiteit.
-* __Onbepaald terrein__: Fysiek begrensd en zichtbaar terrein dat bij een gebouw hoort, dat niet verder wordt gedetailleerd in andere reële objecten en dat bestaat uit een mengvorm van verharding, water, begroeiing en/of constructies.
-* __Onderhoud-informatie__: Gegevens die nodig zijn voor het plannen en registreren van het onderhoud van objecten.
-* __Ondertunneling__: Ondergrondse of onder water gelegen verbinding tussen twee punten, aan beide einden voorzien van een open bakconstructie.
-* __Open leiding__: Een rioolleiding waarvan de bovenzijde niet is afgesloten.
-* __Opening kunstwerk__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Oplever-informatie__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Overbrugging__: Kunstwerk dat een beweegbare of vaste verbinding tussen twee punten betreft, die door water, een weg of anderszins gescheiden zijn, bestaande uit een brugdek/-bak met landhoofden en veelal gesteund door pijlers
-* __Paalconstructie__: Lage draagconstructie voor onder meer installaties of borden
-* __Plaatsbepalingspunt__: Een Plaatsbepalingspunt is een punt dat is ingemeten en vervolgens gebruikt is bij en onderdeel uitmaakt van de begrenzing (geometrie) van reële objecten.
-* __Put__: Gegraven of geboorde kokervormige diepte waarin zich (vloei)stoffen bevinden.
-* __Randgroenobject__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Randverhardingsobject__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Recreatiezone__:   Functionele ruimte die in gebruik is voor openlucht recreatie
-* __Reëel object__: Geo-object dat zich geheel materieel manifesteert
-* __ReëelObject__: Fysiek object (vormvast of niet-vormvast) dat in de werkelijkheid tastbaar en zichtbaar is (of kan zijn), door de mens gemaakt of natuurlijk ontstaan.
-* __Registratie-informatie__: Metagegevens voor het vastleggen van wijzigingen van de objectgegevens. Deze gegevens kunnen ook gebruikt worden voor het vastleggen van de historie.
-* __Registratieve ruimte__: Op basis van wet- of regelgeving afgebakende ruimte die als eenheid geldt van politiek/bestuurlijke verantwoordelijkheid of voor bedrijfsvoering.
-* __RuimtelijkGebied__: Fysiek object dat een bepaald gebied omsluit zoals een vertrek, rijbaan en rivier, die wordt begrensd door reële objecten of andere ruimtelijke gebieden (bijvoorbeeld op basis van gebruik of conventie) en dat voornamelijk vloeibare of gasvormige hoeveelheid materie bevat.
-* __Rurale beheerzone__: Een afgebakend gebied voor generieke beheerdoeleinden binnen het landelijk gebied.
-* __Samengesteld rioleringsobject__: Klasse van rioleringsobjecten waarbinnen meerdere reële objecten een samenhangend, functioneel, geheel vormen.
-* __Scheepvaartruimte__: Transportruimte voor voertuigen die zich over water verplaatsen .
-* __Scheiding__: Kunstmatig obstakel met een werende functie.
-* __Sensor__: Apparaat voor de meting van een fysieke grootheid (bijv. temperatuur, licht, druk, elektriciteit).
-* __Sluisdoorvaart__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Software__: Informatieobject voor de registratie van basisgegevens van het programma (software) die binnen of die in directe relatie met het objecttype gebruikt wordt.
-* __Soortnaamgroenobject__: Gegevens die betrekking hebben op de oplevering van een object.
-* __Spoorverkeerruimte__: Transportruimte voor voertuigen die zich over rails verplaatsen.
-* __Spoorzone__: Functionele ruimte die in gebruik is voor spoorwegen.
-* __Stadsverwarming__: Stadsverwarming of warmtedistributie is een verwarmingssysteem, waarbij de woningen worden verwarmd via een ondergronds netwerk van warmwaterleidingen.
-* __Straatmeubilair__: Een ruimtelijk object ter inrichting van de openbare ruimte.
-* __TechnischEntiteit__: Entiteit waarbij het gaat om de technische eigenschappen die nul of meerdere functionele entiteiten implementeert of speelt.
-* __TopologischElement__: Een topologisch element is een configuratie waarin vastgelegd wordt hoe objecten verbonden zijn of hoe ze relatief tot elkaar gepositioneerd zijn.
-* __Transportruimte__: Natuurlijke of aangelegde transportlijnen of verbindingen met knooppunten waarlangs stromen zich verplaatsen.
-* __Tunneldeel__: Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang dat essentieel is voor de constructie.
-* __Urbane beheerzone__: Een afgebakend gebied voor generieke beheerdoeleinden binnen het stedelijk gebied.
-* __Utiliteitsnet__: Een verzameling van netwerkelementen die tot één type nutsvoorzieningennet behoren.
-* __Valruimte-informatie__: Gegevens die de valruimte van een speel- of sporttoestel vastleggen.
-* __Vegetatieobject__:   Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang.
-* __Verharding__: Een door egaliseren, verstevigen en/of verruwen voor het beoogde gebruik geschikt gemaakte oppervlak, bestaande uit in één of meer lagen over een ondergrond of onderliggende constructie aangelegd materiaal
-* __Verkeerruimte__: Transportruimte voor verkeer via land, water of lucht.
-* __Verkeersintensiteit__: Het vastleggen van de verkeersintensiteit per prognosejaar bij een wegas.
-* __Verkeerskundig functionele zone__: Functionele ruimte die een verkeerskundige functie kent.
-* __Verkeerstelling__: Het registreren van verkeerstellingen bij een Wegas.
-* __Virtuele ruimte__:  &#9;Geo-object dat zich geheel of gedeeltelijk niet-materieel manifesteert en dus slechts in abstracte en/of geregistreerde vorm bestaat.
-* __Water__: Massa van water dat de bodem bedekt of in normale omstandigheden kan bedekken
-* __Waterbeheerzone__: Een afgebakend gebied specifiek van belang voor waterbeheer.
-* __Waterinrichtingsobject__: Een ruimtelijk object ter inrichting van het water.
-* __Waterverplaatsingruimte__: Transportruimte waardoor water zich verplaatst.
-* __Waterstaatkundig kunstwerk__: Kunstwerk voor de beheersing van het oppervlaktewater en alles wat daarin voorkomt
-* __Weginrichtingsobject__: Een ruimtelijk object dat dient voor de inrichting van de openbare weg.
-* __Wegverkeerruimte__: Transportruimte voor voertuigen die zich over wegen verplaatsen .
-* __Wegzone__: Functionele ruimte die in gebruik is voor weginrichting
-
-
 #### Totstandkoming
 
 De uitgangspunten voor de totstandkoming van deze hiërarchie waren:
 1. Hergebruiken wat er reeds is;
 1. Aansluiten bij de meest recente versie van de standaarden;
-1. NEN2660-2 gebruiken als uitgangspunt, inclusief de daarin vermelde relatie met de NEN3610;
-1. Aansluiting eerst op de SOR (dan pas IMGeo), inclusief de daar in vermelde relatie met de NEN3610;
+1. [NEN2660-2:2022][nen2660:2022]gebruiken als uitgangspunt, inclusief de daarin vermelde relatie met de [NEN3610:2022][nen3610:2022];
 1. Alleen de concepten vermelden waar gebruik van gemaakt wordt;
 1. Meervoudige overerving is toegestaan;
-1. Alle ObjectTypen moeten een plek krijgen;
+1. Alle `Objecttype`n moeten een plek krijgen;
 1. Termen en definities uit te standaarden hergebruiken (boven eigen gemaakte);
-1. Type relaties alleen degene uit toegestaan uit NEN2660-2;
-1. Vooralsnog alleen `Object`, `FysiekObject`, `Activiteit`, `GeometrischeRepresentatie` en `InformatieObject` gebruiken uit de NEN2660-2 (en in IMBOR2022 daar verder op in gaan);
-1. Verdeling van attributen over `Objecttype`n moet zo veel mogelijk gelijk blijven t.o.v. IMBOR2020-08 (afgezien van waar de koppeling al niet goed was);
+1. De gebruikte relaties alleen komen alleen uit de [NEN2660-2:2022][nen2660:2022], tenzij die niet in de behoefte voorzien;
+1. Dan geniet het gebruiken van bestaande relaties de voorkeur boven eigen relaties;
+1. Verdeling van attributen over `Objecttype`n moet zo veel mogelijk gelijk blijven t.o.v. vorige versies van IMBOR (afgezien van waar de koppeling al niet goed was);
 
 #### Semantische relaties
 
-Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een grote verandering. Middels relaties geadopteerd uit de NEN2660-2 wordt het mogelijk gemaakt om tussen concepten binnen IMBOR betekenisvolle relaties te leggen. De relaties betreffen:
+Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een grote verandering. Middels relaties geadopteerd uit de [NEN2660-2:2022][nen2660:2022] wordt het mogelijk gemaakt om tussen concepten binnen IMBOR betekenisvolle relaties te leggen. De relaties betreffen:
 1. `isSubtypeVan` (NEN2660-2: Is een verbijzondering van)
 1. `heeftDeel` ([NEN2660-2:hasPart](https://w3id.org/nen2660/def#hasPart))
 1. `isVerbondenMet` ([NEN2660-2:isConnectedTo](https://w3id.org/nen2660/def#isConnectedTo))
@@ -157,12 +42,47 @@ Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een gro
 1. `voertUit` ([NEN2660-2:executes](https://w3id.org/nen2660/def#executes))
 1. `bestaatUit` ([NEN2660-2:consistsOf](https://w3id.org/nen2660/def#consistsOf))
 
+In IMBOR2025 zijn daar de volgende relaties bijgekomen:
+1. `heeftBetrekkingOp` (uit de NEN2660-1)
+1. `speelt` (uit de NEN2660-1)
+1. `isGeregistreerdMet` ([registratiegegevens](https://modellen.geostandaarden.nl/def/nen3610-2022/index.html#registratiegegevens) uit de [NEN3610:2022][nen3610:2022])
+1. `startNode` ([net:startNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L286) uit INSPIRE via [NEN3610:2022][nen3610:2022])
+1. `endNode` ([net:endNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L66) uit INSPIRE via [NEN3610:2022][nen3610:2022])
+
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="997"><span></span></div>
+  <div class="issue" data-number="1258"><span></span></div>
+  <div class="issue" data-number="1075"><span></span></div>
+</details>
+
 <div class='advisement'>
-In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype` niveau te leggen. 
+In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype`n niveau te leggen. 
 </div>
 
-### IMBOR Bouwstenen
+##### Inverse van 'heeftDeel' relatie
 
+In de [NEN2660-2:2022][nen2660:2022] is de `nen2660:hasPart` (heeftDeel) relatie niet-transitief. De 'isDeelVan'-relatie wordt niet expliciet gemodelleerd. In IMBOR is hier wel vraag naar, vandaar dat vanaf 2024 deze er binnen IMBOR een expliciete relatie `nen2660:isPartOf` relatie is gedefinieerd in het IMBOR meta-model. Deze is de inverse van `nen2660:hasPart` en mag ook gebruikt worden op dezelfde manier, maar dan in de andere richting.
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1255"><span></span></div>
+
+</details>
+
+### IMBOR Bouwstenen
+<!-- TODO: versie 2025 -->
 Binnen de IMBOR cursus wordt uitgelegd wat de bouwstenen van IMBOR zijn. Deze ReSpec betreft de technische documentatie, maar de afbeeldingen die in de cursus gebruikt worden maken vrij goed duidelijk hoe een "ingewikkeld" technisch model simpel uitgelegd kan worden aan een assetmanager die uiteindelijk ook de opbouw van IMBOR moet begrijpen. Vandaar dat onderstaande figuren opgenomen zijn. Het eerste figuur illustreert simpel hoe het metamodel van IMBOR in elkaar zit, het tweede figuur illustreert dit met behulp van voorbeelden verder.
 
 <figure>
@@ -183,33 +103,48 @@ Binnen de IMBOR cursus wordt uitgelegd wat de bouwstenen van IMBOR zijn. Deze Re
 Binnen IMBOR zijn er een aantal modelleerkeuzes gemaakt die extra uitleg verdienen. Deze kunnen geschaard worden onder de 'informele' modelleerregels
 #### Objecttypen
 
-`Objecttype` is een speciaal soort `Klasse`. Het betreft hier namelijk het blad van de klasseboom. Ofwel de onderste laag. Binnen IMBOR worden deze onderscheiden omdat de term 'Objecttype' erg ingeburgerd is. Technische gezien zijn het de enige 'concrete' `Klasse` (tegenover de rest welke 'abstracte' `Klasse` zijn). Hiermee wil IMBOR aangeven dat deze abstracte klassen niet geïnstanteerd mogen worden en de 'concrete' `Objecttype` juist wel. `Objecttype` zijn als enige ook ingedeeld in `Vakdiscipline`s. 
+`Objecttype` is een speciaal soort `Klasse`. Het betreft hier namelijk het blad van de klasseboom. Ofwel de onderste laag. Binnen IMBOR worden deze onderscheiden omdat de term 'Objecttype' erg ingeburgerd is. Technische gezien zijn het de enige 'concrete' `Klasse` (tegenover de rest welke 'abstracte' `Klasse` zijn). Hiermee wil IMBOR aangeven dat deze abstracte klassen niet geïnstanteerd kunnen worden en de 'concrete' `Objecttype` juist wel. `Objecttype` zijn als enige ook ingedeeld in `Vakdiscipline`s. 
 
 <div class='advisement'>
-Klassen zijn een abstract concept. Ze staan daarmee tegenover bijvoorbeeld `Objecttype` en `InformatieObject` die wel 'concreet' zijn. Hiermee wil IMBOR aangeven dat deze klassen niet geïnstanteerd mogen worden.
+Klassen zijn een abstract concept. Ze staan daarmee tegenover bijvoorbeeld `Objecttype` en `InformatieObject` die wel 'concreet' zijn. Hiermee wil IMBOR aangeven dat deze klassen niet geïnstanteerd kunnen worden.
 </div>
 
 #### InformatieObjecten
 
-Speciale aandacht gaat uit naar de relaties tussen `Objecttype` en `InformatieObject`. Veel van de attributen die in IMBOR2020-08 aan een `Objecttype` hingen waren eigenlijk meer 'informatie over' dan een daadwerkelijk aspect van dat object. Vandaar dat in IMBOR2022 is besloten om veel attributen te verhuizen naar `InformatieObject`. Hiermee is het dus wel van belang dat deze daadwerkelijk geïnstantieërd worden in de beheersystemen om de beschrijvende attributen vast te leggen. Dit is ook vastgelegd middels de multipliciteit. 
+Speciale aandacht gaat uit naar de relaties tussen `Objecttype` en `InformatieObject`. Veel van de attributen die in IMBOR2020-08 aan een `Objecttype` hingen waren eigenlijk meer 'informatie over' dan een daadwerkelijk aspect van dat object. Vandaar dat vanaf IMBOR2022 is besloten om veel attributen te verhuizen naar `InformatieObject`. Hiermee is het dus wel van belang dat deze daadwerkelijk geïnstantieërd worden om de beschrijvende attributen vast te leggen. Dit is ook vastgelegd middels de multipliciteit. 
 
 Deze keuze is enerzijds gemaakt vanwege de interpretatie dat een `InformatieObject` een ‘object’ op zichzelf is, welke informatie bevat over een object (vandaar de `isBeschrevenDoor` relatie). Hiermee wordt de informatie _van_ het 'object' gescheiden van de informatie _over_ het 'object'. Anderzijds betreffen het ook vaak attributen die op termijn uit andere registraties zouden moeten komen. 
 
-#### Gebiedsindeling
+#### Gebiedsindeling & andere afleidbare attributen
 
-De `Klasse` 'Gebiedsindeling' is gemodelleerd vanwege een legacy behoefte binnen IMBOR. De klasse distribueert een set van attributen welke allemaal afgeleidt kunnen worden van de geografische locatie. De meeste zijn ook dubbel te leggen met de semantische relatie `bevat`. Bijna alle attributen hebben dan ook als waarde binnen `TypeAttribuut` de waarde 'Wordt automatisch bepaald'. Zie ook [Automatische waarden](#automatische-waarden).
+De `Klasse` 'Gebiedsindeling' was gemodelleerd vanwege een legacy behoefte binnen IMBOR. De klasse distribueerde een set van attributen welke allemaal afgeleid kunnen worden van de geografische locatie. De meeste waren ook dubbel te leggen met de semantische relatie `bevat`. Om deze reden is de klasse `Gebiedsindeling` dus komen te vervallen en wordt aangemoedigd om gebieden expliciet te modelleren als klassen.
 
-Op termijn zal gekeken moeten worden of de expliciete modelleering via de semantische relaties hier ook afdoende voor is. 
+In IMBOR2025 zijn alle afleidbare attributen (waar de waarden 'automatisch bepaald' konden worden) vervangen door semantische relaties. Dit is gedaan vanwege het feit dat in IMBOR2022 de modellering nog onvoldoende geconformeerd was aan de [NEN2660-2:2022][nen2660:2022]. Vele IMBOR-attributen behelzen namelijk (ruimtelijke) relaties tussen verschillende objecten (bijvoorbeeld tussen Ruimtelijke gebieden en Reële objecten). 
 
-#### Automatische waarden
-
-Enkele attributen hebben als `TypeAttribuut` de waarde 'Wordt automatisch bepaald'. Hiermee wordt aangegeven dat bij de implementatie in een (GIS) systeem de daadwerkelijke waarde van het attribuut berekend wordt door het beheerpakket, maar expliciet opgeslagen wordt op dit attribuut. Elke organisatie of leverancier kan zelf kiezen hoe dit te implementeren, deze modellering binnen IMBOR geeft alleen maar aan dat het een 'afgeleid' attribuut betreft. Dit is (toentertijd) besloten omdat dit de query's binnen de systemen aanzienlijke sneller maakt en men zeker weet dat deze waarden expliciet bevraagbaar zijn. 
-
-Op termijn zal gekeken moeten worden of de expliciete modelleering via de semantische relaties hier ook afdoende voor is. 
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1101"><span></span></div>
+</details>
 
 #### Classificerende attributen
 
 Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse` of `Objecttype` te introduceren zijn er de attributen `Type`, `TypeGedetailleerd` en `TypeExtraGedetailleerd` onderkent. Dit zijn attributen zoals beschreven in deze sectie van [MIM][1]. In de LinkedData theorie zouden dit subklassen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het `Objecttype` welke geen specifieke informatiebehoefte hebben. Ten opzichte van IMBOR2020-08 zijn in IMBOR2022 veel waarden die eerst van het attribuut `Type` waren opgeschoven en 'gepromoveerd' naar een echt `Objecttype`. Bijvoorbeeld 'Beweegbare brug' en 'Vaste brug' zijn nu `Objecttype` in IMBOR2022, terwijl in IMBOR2020-08 deze een waarde waren binnen het `Type` attribuut. Hiermee zijn de `TypeExtraGedetailleerd` gepromoveerd naar `TypeGedetailleerd` en `TypeGedetailleerd` gepromoveerd naar `Type`. Er zijn dus veel `Objecttype`n bijgekomen, dit maakt IMBOR meer expliciet. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De `indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden. 
+<!-- TODO: Herzien na uitspraak beheercommissie -->
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1267"><span></span></div>
+</details>
 
 #### Vakdisciplines
 
@@ -223,25 +158,132 @@ Ter verduidelijking: daadwerkelijke geregistreerde objecten (de instanties van `
 
 #### Gekwalificeerde waardeshapes
 
-In de LinkedData versie van IMBOR wordt `sh:class` gebruikt om bij de [semantische relaties](#semantische-relaties) en bij attributen die vaste waardelijst kennen aan te geven van welke klasse de waarde moet zijn (ofwel, waar de relatie naar toe loopt). Bijvoorbeeld bij een _Sluis heeftDeel Sluisdeur_ wordt aangegeven dat een bepaalde sluis een bepaalde sluisdeur als onderdeel kan hebben. In de consultatieronde is [gebleken][626] dat het directe gebruik van `sh:class` die beperkende factor ook inbrengt, maar tegelijk ook vereist dat als die relatie meerdere keren voorkomt per klasse, al die waarden aanwezig moeten zijn.
+In de LinkedData versie van IMBOR wordt `sh:class` gebruikt om bij de [semantische relaties](#semantische-relaties) en bij attributen die vaste waardelijst kennen aan te geven van welke klasse de waarde moet zijn (ofwel, waar de relatie naar toe loopt). Bijvoorbeeld bij een _Sluis heeftDeel Sluisdeur_ wordt aangegeven dat een bepaalde sluis een bepaalde sluisdeur als onderdeel kan hebben. In de consultatieronde is gebleken dat het directe gebruik van `sh:class` die beperkende factor ook inbrengt, maar tegelijk ook vereist dat als die relatie meerdere keren voorkomt per klasse, al die waarden aanwezig moeten zijn.
 In het voorbeeld van een sluis, bestaat ook _Sluis heeftDeel Schutkolk_.  Met een modellering sec `sh:class`, vereist de SHACL-controle dat de schutkolken tegelijk ook sluisdeuren moeten zijn.
 
 Dit is niet wat bedoelt wordt en dus onwenselijk. 
 Daarom worden in IMBOR2022 `sh:class` klassebeperkingen via `sh:qualifiedValueShape` ingeleid, zodat deze voorgenoemde combinatorische betekenis niet voorkomt.
 De klasse _Sluisdeur_ of _Schutkolk_ is namelijk één van de kwalificerende waardes voor _heeftDeel_ bij een _Sluis_.
 
-[626]: https://github.com/Stichting-CROW/imbor/issues/626
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="626"><span></span></div>
+</details>
 
-#### Topologische elementen
+#### Topologie & netwerkmodel
 
-Binnen IMBOR2022 zijn topologische elementen (als `TopologischElement`) toegevoegd als speciaal soort `GeometrischeRepresentatie`. Het betreffen namelijk schematische representaties van een daadwerkelijke (`FysiekObject`), net zoals de geometrie. Middels de `heeftBegrenzing` relatie zijn meerdere geometrische representaties vast te leggen (bijvoorbeeld: 2D, 3D of schematisch). In IMBOR is er vooralsnog echter _geen_ aandacht gegeven aan topologie. De enige topologie die momenteel onder `TopologischElement` in IMBOR zit betreft hetgeen GWSW specificeert. Dit is gedaan om de relatie tussen GWSW en IMBOR zo overzichtelijk en compleet mogelijk te maken. Zie ook [GWSW als referentiemodel](#gwsw-als-referentiemodel). Er wordt niet uitgesloten dat IMBOR in de toekomst zelf ook specificaties van topologie gaat maken. 
+Binnen IMBOR zijn topologische elementen (als `TopologischElement`) toegevoegd als speciaal soort `GeometrischeRepresentatie`. Het betreffen namelijk schematische representaties van een daadwerkelijke (`FysiekObject`), net zoals de geometrie. Middels de `heeftBegrenzing` relatie zijn meerdere geometrische representaties vast te leggen (bijvoorbeeld: 2D, 3D of schematisch).
+
+IMBOR voorziet vanaf versie 2025 tevens in een elementaire modellering van netwerken ten behoeve van de vakdisciplines Riolering, Water en Wegen. Het gaat hierbij om een topologische uitdrukking van de geografische gegevens van de beheerobjecten uit IMBOR, dat wil zeggen: in termen van knooppunten en verbindingen die de eigenschappen van de plaatsen van IMBOR-objecten voorstellen. Deze modellering is gebaseerd op implementatie van de basisstructuren van het netwerkmodel uit de Europese standaard [INSPIRE][INSPIRE] die de [NEN3610:2022][nen3610:2022] voorschrijft. De [NEN3610:2022][nen3610:2022] adviseert INSPIRE toe te passen voor het modelleren van topologische dimensie parallel aan een geografische dimensie. 
+ 
+Op hoofdlijnen heeft dit geleid tot de toevoeging van de klassen `Netwerk`, `NetwerkLink` en `NetwerkNode`. Deze klassen zijn subklassen gemaakt van `nen2660:GeometrischeRepresentatie`. Voor `NetwerkLink` en `NetwerkNode` geldt dat ze middels `nen2660:hasPart` gerelateert kunnen worden aan `Netwerk`. Tussen `NetwerkLink` en `NetwerkNode` lopen twee semantische relaties, namelijk `endNode` en `startNode`. Kortweg betekent dit dat een `NetwerkLink` een `NetwerkNode` als beginpunt of als eindpunt kan hebben. In de ontwikkeling van IMBOR2025 is ervoor gekozen om deze als `rdfs:subPropertOf` van `nen2660:hasPart` te declareren. 
+
+<div class='example'>
+Een voorbeeld gebruik van het netwerkmodel:
+
+Voor een topologische representatie van een netwerk van waterwegen worden `imbor:Waternode` en `imbor:Waterlink` geïnstantieerd, met als onderlinge relaties `endNode` en `startNode`. Deze objecten maken deel uit van een bovenliggend `imbor:Netwerk`. De `imbor:Waternode` en `imbor:Waterlink` hebben `nen2660:isDescribedBy` met instanties van `nen2660:PhysicalObject`, zoals `imbor:Watergang` (bij een topologische representatie van reële objecten) of `imbor:Waterweg` (bij een topologische representatie van ruimtelijke gebieden). Dit standaardiseert dus de kern van de statische modellering van netwerken binnen het domein van de openbare ruimte. Gebruikers kunnen dit als kernmodellering gebruiken om hun specifieke netwerktoepassingen mee te realiseren. De uitwerking van `imbor:RioleringNode` en `imbor:RioleringLink` in domeinspecifieke voorbeelden van netwerkelementen wordt ontleend aan IMBOR Stedelijk Water. In vorige versies van IMBOR waren dit de `imbor:TopologischeElement`en.
+</div>
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="997"><span></span></div>
+</details>
+
+
+[INSPIRE]: https://www.geonovum.nl/geo-standaarden/inspire
+
+#### Temporele aspecten
+IMBOR implementeert vanaf versie 2025, in samenhang met de implementatie van [NEN2660-2:2022][nen2660:2022], de mogelijkheid uit [NEN3610:2022][nen3610:2022] om tijdlijnen voor de registratie van historische wijzigingen van objecten. 
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1075"><span></span></div>
+</details>
+
+##### Modellering 
+[NEN3610:2022][nen3610:2022] faciliteert versionering van objecten door de tijd heen door twee tijdlijnen te introduceren: de **'TijdlijnRegistratie'** en de **'TijdlijnGeldigheid'**. Daarnaast is er de **'Levensduur'** van een object. Al deze zaken zijn binnen de [NEN3610:2022][nen3610:2022] eigenschappen van de klasse `nen3610:Registratie`. De IMBOR-implementatie van deze temporele aspecten schippert tussen de [NEN2660-2:2022][nen2660:2022] en de [NEN3610:2022][nen3610:2022]. IMBOR heeft namelijk niet alleen met `nen3610:GeoObject` te maken, maar ook met het onderscheid tussen `nen2660:InformationObject` en `nen2660:PhysicalObject`. Op `nen2660:PhysicalObject` past `nen3610:Registratie` in haar geheel en dit leidt tot een implementatie gelijk aan hoe [NEN3610:2022][nen3610:2022] dit voor `nen3610:GeoObject` voorschrijft, namelijk m.b.v. van de relatie `nen3610:registratiegegevens`, zodanig dat geldt dat: _`nen3610:GeoObject > nen3610:registratiegegevens > nen3610:Registratie`_. Echter is deze implementatie voor `nen2660:InformationObject` niet altijd nodig, omdat TijdlijnGeldigheid en Levensduur betrekking heeft op toestandswijzigingen van het beschreven object in de niet-virtuele werkelijkheid. `nen2660:InformationObject` is een object dat niet bestaat buiten de virtuele werkelijkheid van het computersysteem. Daarom is voor `nen2660:InformationObject` alleen gekozen voor het implementeren van **TijdlijnRegistratie** – er zijn immers wel tijdstippen aan te wijzen waarop een informatieobject wijzigt en vervalt.
+ 
+De implementatie heeft geleid tot de introductie van de klasse `nen3610:Registratie`, die zelf een subklasse is van `nen2660:InformationObject`. Dit is dus een speciaal informatieobject voor het beschrijven van `nen2660:InformationObject` en `nen2660:PhysicalObject`. `nen3610:Registratie` heeft de volgende subklassen:
+* `imbor:TijdlijnRegistratie` dient het vastleggen van wijzigingen door de tijd heen binnen de virtuele omgeving. 
+* `imbor:TijdlijnGeldigheid` biedt de mogelijkheid tijdstippen vast te leggen waarop het virtuele object in representatie (d.w.z.: invulling van eigenschappen) overeenkomt met de werkelijkheid. 
+* `imbor:Levensduur` is een afgeleide van `imbor:TijdlijnGeldigheid` die het vastleggen van de begin- en eindtijden van een object dient. 
+* `imbor:Versie` legt vast op welke versie van het object in het computersysteem een toestand van een van de tijdlijnen betrekking heeft. 
+
+Instanties van `nen2660:InformationObject` of `nen2660:PhysicalObject` zijn gerelateerd aan de voorgenoemde klassen m.b.v. de relatie `nen3610:registratiegegevens`, die in overleg met zowel de [NEN2660-2:2022][nen2660:2022] als de [NEN3610:2022][nen3610:2022] als subproperty van `nen2660:isDescribedBy` wordt beschouwd.
+ 
+##### Gebruik
+
+Deze temporele aspecten zijn een toevoeging aan IMBOR 2025, maar hebben ook een betere scheiding wat betreft temporele eigenschappen in het model mogelijk gemaakt. De klasse `imbor:Registratie-informatie` is komen te vervallen en de rol van deze klasse wordt overgenomen door `imbor:TijdlijnRegistratie`. Daarnaast hebben op diverse plaatsen in het model verwijderingen plaatsgevonden van temporele eigenschappen die overeenkomen met een van de eigenschappen van de tijdlijnen. Overige attributen die een tijdstip registeren kunnen door gebruikers naar wens gekoppeld worden aan attributen van een van de tijdlijnen, maar er is, vanwege de specifieke betekenis van zo’n attribuut of vanwege de manier van presenteren van informatie die zo’n attribuut verzorgt, geen sprake van equivalentie met een van de eigenschappen van de tijdlijnen.
+ 
+Het gebruik van de klasse 'Registratie' is dat een configuratie van een object dat gelabeld is met `imbor:versie` (attribuut van `imbor:Versie`) als een momentopname van dat object kan worden beschouwd. Als zodanig wordt het voor gebruikers gestandaardiseerd hoe en via welke tijdlijnen momentopnamen die gelabeld zijn met `imbor:versie` elkaar opvolgen. Er kan als zodanig een parallelle progressie zijn van `imbor:TijdlijnRegistratie` en `imbor:TijdlijnGeldigheid`. Als voorbeeld: een object 'X' kan, in de voor IMBOR relevante opzichten, sinds de initiële `nen3610:beginGeldigheid` van 'X' in werkelijkheid ongewijzigd zijn, maar in de virtuele registratie van dit object wel wijzigingen hebben ondergaan. `imbor:tijdstipRegistratie` krijgt daarom een nieuwe waarde, `imbor:versie` wordt opgehoogd en er is sprake van een nieuwe momentopname van object 'X'.
+
+Het gebruik hiervan wordt gepropageerd vanuit de [NEN3610:2022][nen3610:2022] en IMBOR adopteert dit volledig. Hoe de implementatie dan precies werkt wordt toegelicht in de [NEN3610:2022][nen3610:2022], maar specifiek voor graphs en IMBOR is een uitwerking te vinden in: [IMBOR best practice temporele aspecten](https://docs.crow.nl/imbor/best-practices/#nen3610-temporele-aspecten).
+
 
 #### Materie
 
-Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de NEN2660-2 is hiervoor een modelleerconstructie gegeven die IMBOR2022 toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de NEN2660-2 en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt aangesloten bij een bestaand(e) lijst/initiatief. De gesprekken hiervoor worden in 2022 gepland. 
+Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de [NEN2660-2:2022][nen2660:2022] is hiervoor een modelleerconstructie gegeven die IMBOR nu toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de [NEN2660-2:2022][nen2660:2022] en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt in de toekomst aangesloten bij een bestaand(e) lijst/initiatief. 
 
 <div class='advisement'>
-Ter verduidelijkingL IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden. We geven alleen 'voorstellen'.
+Ter verduidelijking IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden. We geven alleen 'voorstellen'.
 </div>
 
+#### Actoren en rollen
 
+Vanaf IMBOR2025 is er een nieuw modelleerpatroon geïntroduceerd om relaties tussen klassen en actoren te modelleren, middels rollen. Deze constructie is ontleend uit de [NEN2660-1:2022](nen2660-1:2022). Omdat de [NEN2660-2:2022][nen2660:2022] hier geen standaard oplossing voor biedt, is er een in IMBOR een modelleerconstructie die conform de [NEN2660-1:2022](nen2660-1:2022) gemaakt is. Het gaat hier om de introductie van `imbor:Actor` (als subklasse van `nen2660:PhysicalObject`) en `imbor:Rol`. `imbor:Actor` wordt met de relatie `imbor:speelt` verbonden met een `imbor:Rol`. Welke op zijn beurt met een `imbor:heeftBetrekkingOp` relatie verbonden is met een `nen3610:GeoObject` of `nen2660:InformatieObject`. 
+
+IMBOR definieert subklassen van `imbor:Actor`, te weten: `imbor:PublieksrechtelijkRechtspersoon` en `imbor:PrivaatrechtelijkRechtspersoon`. Voor de eerste worden TOOI subklassen gebruikt, welke toegelicht worden in [TOOI](#tooi). De laatste kan geïnstantieerd worden om organisaties zoals 'ProRail' of 'TenneT' aan te maken. 
+
+De klasse `imbor:Rol` kent een aantal subklassen die herkenbaar zullen zijn voor de gemiddelde IMBOR gebruiker. Deze werden voorheen als attributen behandeld, maar zijn nu klassen. Voorbeelden hiervan zijn 'Beheerder', 'Eigenaar' en 'Fabrikant'. Deze klassen kunnen geïnstantieerd worden om de expliciete rol aan te geven. In onderstaande voorbeeld is in dikgedrukte letters de IMBOR modelleerconstructie te zien, daaronder een voorbeeld in de data.
+
+
+| imbor:Actor | imbor:speelt | imbor:Rol       | imbor:heeftBetrekkingOp | imbor:GeoObject   |
+|-------------|--------------|-----------------|-------------------------|-------------------|
+| ex:ProRail  | imbor:speelt | ex:Beheerder123 | imbor:heeftBetrekkingOp | ex:Railsegment456 |
+| { .data }   |              |                 |                         |                   |
+
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1258"><span></span></div>
+  <div class="issue" data-number="1192"><span></span></div>
+</details>
+
+#### Hiërarchie van attributen
+
+Vanaf IMBOR2025 is er een hiërarchie geïntroduceerd binnen de attributen. Dit is niet alleen overzichtelijker voor 'navigatie', maar het stelt gebruikers ook in staat algemenere bevragingen te doen op het gebied van de attributen. Inhoudelijk verandert dit niets, maar het betreft de introductie van een attribuut dat abstract is, en een parent is van een ander attribuut.
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1266"><span></span></div>
+</details>
+
+[viewer]: https://imbor-viewer.apps.crow.nl/
+[nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
+[nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
+[nen2660-1:2022]: (https://www.nen.nl/nen-2660-1-2022-nl-291666)

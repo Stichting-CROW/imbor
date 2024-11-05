@@ -1,0 +1,46 @@
+name: Generate Verslagen Index
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'docs/verslagen/**'
+
+jobs:
+  generate_index:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Generate Index
+      run: |
+        cd docs/verslagen
+        echo "# Verslagen" > index.md
+        echo "" >> index.md
+
+        for dir in */; do
+          dir=${dir%/} 
+          if [ -d "$dir" ]; then
+            echo "## $dir" >> index.md
+            find "$dir" -type f | while read -r file; do
+              file_link=$(echo "$file" | sed 's/ /%20/g')
+              file_name=$(basename "$file")
+              echo "- [$file_name]($file_link)" >> index.md
+            done
+            echo "" >> index.md
+          fi
+        done
+
+        # for dir in /; do
+        #   dir=${dir%/}
+        #   if [ -d "$dir" ]; then
+        #     echo "## $dir" >> index.md
+        #     find "$dir" -type f -printf "- [%f](%p)\n" | sort >> index.md
+        #     echo "" >> index.md
+        #   fi
+        # done
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update verslagen-index na upload
