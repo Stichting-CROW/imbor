@@ -1,8 +1,8 @@
 # Verslagen
 
 ## Beheercommissie
-- [RDF & SPARQL Uitleg.pdf](%q)
+- [fluisterspelletje2.png](%.)
 
 ## Softwareleveranciers overleg
-- [fluisterspelletje2.png](%q)
+- [RDF & SPARQL Uitleg.pdf](%.)
 
