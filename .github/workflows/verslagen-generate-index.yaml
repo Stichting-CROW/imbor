@@ -16,6 +16,7 @@ jobs:
     - name: Generate Index
       run: |
         cd docs/verslagen
+        echo "![image](https://github.com/Stichting-CROW/imbor/assets/56293445/5e00e5cf-2ba7-459f-9fb4-f433b346920a)" > index.md
         echo "# Verslagen" > index.md
         echo "" >> index.md
 
