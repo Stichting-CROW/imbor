@@ -31,3 +31,5 @@ De randsoftware (zoals de viewer en REST-API) wordt uitgegeven onder de [MIT][MI
 [MIT]: https://opensource.org/licenses/MIT
 [CC4]: https://creativecommons.org/licenses/by/4.0/deed.nl
 [ODC]: https://opendatacommons.org/licenses/by/summary/
+[nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
+[nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
