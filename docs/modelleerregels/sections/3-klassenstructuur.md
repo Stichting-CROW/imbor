@@ -76,7 +76,7 @@ Van toepassing op de `Klassenstructuur`, en valt binnen de categorie: `Semantiek
 
 | | |
 | ----- | ---- | 
-| *Regel* | Elke klasse behalve de NEN 2660-2 klassen Object, FunctioneleEntiteit, TechnischeEntiteit, Activiteit en Geometrische representatie; de IMKL 2.0 klasse IMKLBasis object; en de IMBOR-klassen Beheerd object en Gebiedsindeling heeft een ouderklasse. Oftewel elke klasse (de bovenstaand benoemde klassen uitgezonderd) moeten ook een ouder klasse hebben. | 
+| *Regel* | Elke klasse behalve de NEN 2660-2 klassen Object, FunctioneleEntiteit, TechnischeEntiteit, Activiteit en Geometrische representatie en de IMBOR-klassen Beheerd object en Gebiedsindeling heeft een ouderklasse. Oftewel elke klasse (de bovenstaand benoemde klassen uitgezonderd) moeten ook een ouder klasse hebben. | 
 | *ID* | R0006 *(78f3dcb5-0ed5-1e83-00b3-bd97a8f4675f)* |
 | *Categorie* | Semantiek
  |*Gerelateerd issue* |  |
