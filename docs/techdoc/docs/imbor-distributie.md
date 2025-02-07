@@ -1,22 +1,20 @@
 ## IMBOR distributie 
 
 Voor de gebruiker van IMBOR wordt een inkijkmogelijkheid (publicatie) van IMBOR op meerdere manieren gegeven:
-* Via een online viewer: [imbor-viewer.apps.crow.nl](https://imbor-viewer.apps.crow.nl)
-* Via formulieren in een MS Access database
-* Via voor gedefinieerde query’s op de [CROW SPARQL webapplicatie](https://sparql.crow.nl/ldp)
-* Via het [begrippen platform](https://begrippen.crow.nl/imbor/nl/) van CROW is het begrippenkader (vocabulaire) van IMBOR te raadplegen
+* De gedistribueerde Access database biedt middels formulieren de mogelijkheid om direct IMBOR te raadplegen
+* Middels voorgedefinieerde queries op de CROW SPARQL webapplicatie
+* De vocabulair van IMBOR is te raadplegen via het thesaurus platform van CROW [begrippen.crow.nl](https://begrippen.crow.nl/)
+* In de loop van 2022 wordt een ontologie viewer ter beschikking gestelt
 
-Al deze vormen van publicatie zijn _zonder kosten_ te raadplegen. Voor de [CROW SPARQL webapplicatie](https://sparql.crow.nl/ldp) is wel een [MijnCROW account][mijncrow]nodig.
+Al deze vormen van publicatie zijn zonder kosten te raadplegen. Voor de CROW SPARQL webapplicatie is wel een [MijnCROW account][mijncrow] nodig. 
 
-Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele content beschikbaar. Hiervoor zijn ook twee distributiekanalen beschikbaar:
+Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele content beschikbaar. Hiervoor zijn ook twee distributiekanalen:
+* IMBOR tabellen in Access
 * IMBOR in LinkedData (TTL file en SPARQL-Endpoint)
-* IMBOR tabellen in MS Access database
 
-Alle informatie hierover en versies hiervan is/zijn via [GitHub releases](https://github.com/Stichting-CROW/imbor/releases) te raadplegen. Wat betreft het gebruik van IMBOR, raadplegen de sectie over [licenties](#licenties)
-
-<div class='advisement'>
 Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Namelijk voor de SPARQL-Endpoint geldt dat we deze voorlopig onder de noemer van 'pilot' verstrekken. Bij veel gebruik/op termijn wordt gekeken hoe we hier met de kosten gaan omgaan. 
-</div>
+
+Wat betreft het gebruik van IMBOR, raadplegen de sectie over [licenties](#licenties)
 
 <figure>
 
@@ -24,6 +22,13 @@ Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Nam
     
 <figcaption>Overzicht IMBOR Beheer, Distributie en Publicatie</figcaption>
 </figure>
+
+<div class='note'>
+
+De IMBOR Ontologie viewer is nog in ontwikkeling en zal in de loop van 2022 klaar zijn. 
+
+</div>
+
 
 ### IMBOR in MS Access
 
@@ -70,7 +75,7 @@ In het diagram van het fysieke datamodel wordt dit ook aangegeven door de groene
 Alle tabellen die invulling geven aan de vocabulaire.
 ##### imborVoc_Termen
 
-Deze tabel is onderdeel van het begrippenkader van IMBOR kan gezien worden als de vocabulaire. Zoals eerder vermeld heeft deze binnen Access een speciale status omdat hier de `IMBORGUID` ook gedeclareerd wordt voor de meeste elementen. Bijna alle tabellen halen hier informatie op. De tabel geeft inrichting aan het Niveau 1 van MIM (Model van begrippen) en aan de SKOS taalbindingen uit de [NEN2660-2:2022][nen2660:2022]. 
+Deze tabel is onderdeel van het begrippenkader van IMBOR kan gezien worden als de vocabulaire. Zoals eerder vermeld heeft deze binnen Access een speciale status omdat hier de `IMBORGUID` ook gedeclareerd wordt voor de meeste elementen. Bijna alle tabellen halen hier informatie op. De tabel geeft inrichting aan het Niveau 1 van MIM (Model van begrippen) en aan de SKOS taalbindingen uit de NEN2660. 
 Speciaal geval is ook de kolom `KlasseType`. Deze is gekoppeld aan de `IMBORGUID`  zoals hiervoor vermeld. `KlasseType` geeft aan of een IMBOR concept geïnstanteerd kan worden (`Concreet`) of niet (`Abstract`). 
 
 ##### imborVoc_Collecties
@@ -82,7 +87,7 @@ De enige andere tabel in het begrippenkader naast `imborVoc_Termen`. Dit betreft
 Alle tabellen die invulling geven aan het IMBOR kernmodel.
 ##### imborKern_Klassen
 
-Klasse is een nieuw begrip vanaf IMBOR2022. Het kan gelijkgesteld worden aan het [NEN2660-2:2022][nen2660:2022] "Concept". Het is hiermee ook een supertype van bijvoorbeeld `Objecttype` en `InformatieObject`. 
+Klasse is een nieuw begrip vanaf IMBOR2022. Het kan gelijkgesteld worden aan het NEN2660-2 "Concept". Het is hiermee ook een supertype van bijvoorbeeld `Objecttype` en `InformatieObject`. 
 
 De klassenstructuur is een polyhiërarchie. Dit betekent dat een child, meerdere parents kan hebben. Of in IMBOR termen gezegd: Een `Objecttype` of `Klasse` erft van meerdere `Klasse` attributen over. Dit is gedaan zodat we flexibeler om kunnen gaan bij welke klassen een `Objecttype` hoort en daarmee een `Objecttype` geen onnodige attributen krijgt. Er zullen een aantal `Klasse` 'disjoint' zijn, maar dat is nog niet expliciet opgenomen.
 
@@ -90,7 +95,7 @@ Er zijn `Klasse` die 1-op-1 overeenkomen met een `Objecttype`. Dit is intentione
 
 In `imborKern_Klassen` komen o.a. "Objecttypen", "Klassen", "ObjecttypeOnderdelen" en "Informatieobjecten" voor. Dit lijkt vreemd, maar is correct omdat het technisch gezien allemaal `Klasse` zijn (ofwel: subtypen van `Klasse`)
 
-We nemen `InformatieObject` op als `Klasse`, daarmee kunnen we concrete 'klassen' introduceren zoals `document` en `memo`. Deze zijn dan te instantiëren en te relateren (doormiddel van de relatie `isBeschrevenDoor`) aan `Objecttype`n. Hiermee kan de klasse `InformatieObject` ook gerelateerd worden aan de [NEN2660-2:2022][nen2660:2022].
+We nemen `InformatieObject` op als `Klasse`, daarmee kunnen we concrete 'klassen' introduceren zoals `document` en `memo`. Deze zijn dan te instantiëren en te relateren (doormiddel van de relatie `isBeschrevenDoor`) aan `Objecttype`n. Hiermee kan de klasse `InformatieObject` ook gerelateerd worden aan de NEN2660-2.
 
 <div class='advisement'>
 
@@ -132,7 +137,7 @@ Met deze tabel wordt aangegeven binnen welke `Vakdiscipline` een `Objecttype` ka
 
 ##### imborKern_K_ObjecttypenSemantischeRelaties
 
-De introductie van semantische relaties (betekenisvolle relaties) is samen met de introductie van de klassen de grootste wijziging t.o.v. IMBOR2020-08. Met deze introductie is een generieke manier gecreëerd om relaties tussen `Klasse` te beschrijven. In deze tabel zijn de relaties opgenomen die normerend zijn binnen de IMBOR ontologie (inclusief hun multipliciteit). De relaties zelf ontlenen hun semantiek aan de [NEN2660-2:2022][nen2660:2022]. 
+De introductie van semantische relaties (betekenisvolle relaties) is samen met de introductie van de klassen de grootste wijziging t.o.v. IMBOR2020-08. Met deze introductie is een generieke manier gecreëerd om relaties tussen `Klasse` te beschrijven. In deze tabel zijn de relaties opgenomen die normerend zijn binnen de IMBOR ontologie (inclusief hun multipliciteit). De relaties zelf ontlenen hun semantiek aan de NEN2660-2. 
 
 <div class='advisement'>
 Deze lijst is voorschrijvend, maar niet limitatief. In de implementatie mag een gebruiker zelf kiezen welke relaties er tussen de verschillende klassen aangegeven mag worden. Als er een relatie ontbreekt kan deze in de eigen implementatie gewoon gelegd worden. Uiteraard wil de IMBOR beheercommissie graag op de hoogte gehouden worden van deze inzichten.
@@ -161,10 +166,10 @@ Ook de LinkedData versie van IMBOR (IMBOR-LD) is volgt de modulaire indeling. In
 - `imbor-domeinwaarde:*` zijn alle domeinwaarden binnen IMBOR (dit zijn instanties). Deze staan in een aparte graaf vanwege de overzichtelijkheid.
 - `imbor-refmodels:*` zijn de concepten waarin externe ontologien aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.
 
-Omdat IMBOR een extensie is van de [NEN2660-2:2022][nen2660:2022] is de IMBOR kern direct 'gesubclassed' aan de [NEN2660-2:2022][nen2660:2022] concepten. Vandaar dat de concepten die we gebruiken uit de [NEN2660-2:2022][nen2660:2022] afgebeeld zijn met de prefix `nen2660:*`. 
+Omdat IMBOR een extensie is van de NEN2660-2 is de IMBOR kern direct 'gesubclassed' aan de NEN2660-2 concepten. Vandaar dat de concepten die we gebruiken uit de NEN2660-2 afgebeeld zijn met de prefix `nen2660:*`. 
 
 <div class='note'>
-In de [NEN2660-2:2022][nen2660:2022] zit een kleine inconsistentie met GeoSPARQL. Er wordt namelijk niet verteld hoe deze toegepast moet worden. Om dit praktisch op te lossen wordt in de IMBOR Kern gesteld dat: `nen2660:hasBoundary rdfs:subPropertyOf geo:hasGeometry`. Dit kan gezien worden als een verduidelijking van de [NEN2660-2:2022][nen2660:2022] voor de IMBOR context.
+In de NEN2660-2 zit een kleine inconsistentie met GeoSPARQL. Er wordt namelijk niet verteld hoe deze toegepast moet worden. Om dit praktisch op te lossen wordt in de IMBOR Kern gesteld dat: `nen2660:hasBoundary rdfs:subPropertyOf geo:hasGeometry`. Dit kan gezien worden als een verduidelijking van de NEN2660 voor de IMBOR context.
 </div>
 
 #### Begrippenkader
@@ -178,7 +183,7 @@ Op deze class worden alle attributen vastgelegd die het concept (conceptueel) de
 Deze class bevat alle collecties waarin de termen kunnen worden ingedeeld.
 #### NEN2660
 
-Dit zijn alle classes uit de [NEN2660-2:2022][nen2660:2022]2 waaraan wij ons committeren. De basis betreft het `nen2660:DiscreteObject` (buiten de [NEN2660-2:2022][nen2660:2022] wordt dit ook wel als een 'Fysieke Object' gezien) en de `nen2660:SpatialRegion` (ook wel het 'Ruimtelijk Gebied'). Daarnaast betrekken we het `nen2660:InformationObject` om beschrijvingen toe te voegen en `nen2660:Activity` om functies te kunnen definiëren. 
+Dit zijn alle classes uit de NEN2660-2 waaraan wij ons committeren. De basis betreft het `nen2660:DiscreteObject` (buiten de NEN2660-2 wordt dit ook wel als een 'Fysieke Object' gezien) en de `nen2660:SpatialRegion` (ook wel het 'Ruimtelijk Gebied'). Daarnaast betrekken we het `nen2660:InformationObject` om beschrijvingen toe te voegen en `nen2660:Activity` om functies te kunnen definiëren. 
 ##### nen2660:DiscreteObject
 
 Gedefinieerd als: "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"
@@ -206,7 +211,7 @@ Het IMBOR kernmodel bevat niet veel meer dan 'Objecten', 'Attributen' en 'Domein
 
 ##### imbor:Klasse
 
-Deze class betreft alle Klassen, `InformatieObject`en en `Objecttype`en die IMBOR bevat. Met het attribuut `dash:abstract` wordt aangegeven of iets abstract (`true`) of concreet (`false`) is. Waarbij met concreet bedoeld wordt dat er in een beheersysteem of bij uitwisseling ook daadwerkelijk instanties van gemaakt zullen worden. Abstracte classes zullen voor eindgebruik niet heel belangrijk zijn en voor de meeste eindgebruikers ook niet zichtbaar zijn. De class heeft verder twee belangrijke relaties naar [NEN2660-2:2022][nen2660:2022] concepten. Dit betreffen `nen2660:isDescribedBy` die naar het `nen2660:InformationObject` loopt en `nen2660:hasBoundary` die naar de `nen2660:GeometricEntity` loopt. Met de eerste wordt dus aangegeven dat 'meer informatie over het de `imbor:Klasse` te vinden is bij het het `InformatieObject`. Met de tweede wordt aangegeven dat de (concrete) `imbor:Klasse` gebonden is door een geometrie. Ofwel, er kan een geometrie van vastgelegd worden. 
+Deze class betreft alle Klassen, `InformatieObject`en en `Objecttype`en die IMBOR bevat. Met het attribuut `dash:abstract` wordt aangegeven of iets abstract (`true`) of concreet (`false`) is. Waarbij met concreet bedoeld wordt dat er in een beheersysteem of bij uitwisseling ook daadwerkelijk instanties van gemaakt zullen worden. Abstracte classes zullen voor eindgebruik niet heel belangrijk zijn en voor de meeste eindgebruikers ook niet zichtbaar zijn. De class heeft verder twee belangrijke relaties naar NEN2660 concepten. Dit betreffen `nen2660:isDescribedBy` die naar het `nen2660:InformationObject` loopt en `nen2660:hasBoundary` die naar de `nen2660:GeometricEntity` loopt. Met de eerste wordt dus aangegeven dat 'meer informatie over het de `imbor:Klasse` te vinden is bij het het `InformatieObject`. Met de tweede wordt aangegeven dat de (concrete) `imbor:Klasse` gebonden is door een geometrie. Ofwel, er kan een geometrie van vastgelegd worden. 
 ##### imbor:KlasseAttribuut
 
 Deze class (die middels `sh:property` aan de `imbor:Klasse` hangt) is eigenlijk de koppeling tussen het 'Object' en het 'Attribuut'. Dit is een zogenaamde 'SHACL PropertyShape' en definieert dus welke attributen van toepassing zijn bij welk Objecttype en legt daar zaken over vast zoals: maximale kardinaliteit, in welke unit dit uitgedrukt moet worden van welke datatype het betreft. Er zijn in het schema twee beschrijvingen van `imbor:KlasseAttribuut` te zien. Dit komt omdat de property-shapes anders in elkaar zitten wanneer het een voorgedefinieerd datatype betreft (iets uit de [[xmlschema11-1]] lijn), dan wanneer het een waardelijst is.
@@ -231,5 +236,3 @@ Omdat de referentiemodellen een informatief onderdeel van IMBOR zijn, worden dez
 Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het 'IMBOR Aanvullend Metamodel'. Dit betreft een kleine ontologie van beschrijfende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn.
 
 [mijncrow]: https://crowsso.b2clogin.com/crowsso.onmicrosoft.com/B2C_1A_signup_signin/oauth2/v2.0/authorize?client_id=e0b429f6-ef7f-4d0e-be5f-2711b5d4393f&redirect_uri=https://crow.nl/Truelime/AzureADAuthenticationHandler.ashx&response_type=code&scope=openid&response_mode=query&state=eyJSZXR1cm5VcmwiOiIvTWlqbkNST1cvSG9tZSIsIlNob3BwaW5nQ2FydCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsIklkIjoiODQwYzBlYmMtZjBmOC00YmE5LTg3YzAtZGEwYThiZGUxYmMwIiwiU2lnbk91dCI6ZmFsc2V9
-[nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
-[nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
