@@ -2,7 +2,12 @@
 
 ***Gebaseerd op GitHub issue: [1389](https://github.com/Stichting-CROW/imbor/issues/1389).***
 
-`Inwinning-informatie` is een `InformatieObject` voor het vastleggen van informatie m.b.t. de inwinning van een objecttype. Een vergelijkbare entiteit is `Registratie-informatie`, omdat dit ook 'meta' informatie bevat. `Inwinning-informatie` is echter speciaal omdat hier een speciale afspraak gemaakt moet worden met betrekking tot twee attributen van deze klasse. De attributen `attribuut` en `domeinwaarde` zijn nu van het datatype `xsd:string`. Maar eigenlijk mogen hier alleen respectievelijk de IMBOR attributen en bijbehorende IMBOR domeinwaarden voorkomen. 
+`Inwinning-informatie` is een `InformatieObject` voor het vastleggen van informatie m.b.t. de inwinning van (de eigenschappen van) een objecttype. 
+Een vergelijkbare entiteit is `Registratie-informatie`, omdat dit ook 'meta' informatie bevat. 
+`Inwinning-informatie` is echter speciaal omdat hier een speciale afspraak gemaakt moet worden met betrekking tot twee attributen van deze klasse. 
+De attributen `attribuut` en `domeinwaarde` zijn nu van het datatype `xsd:string`.
+<!-- Worden deze eigenschappen dan ook van een owl:DatatypeProperty nu ook een owl:ObjecttypeProperty? Want anders krijg je validatiefouten met onderstaande. -->
+Maar eigenlijk mogen hier alleen respectievelijk de IMBOR-attributen en bijbehorende IMBOR-domeinwaarden voorkomen. 
 
 Dit betreft een speciale modelleerconstructie en daarom wordt dit als best practice uitgewerkt. 
 
@@ -29,7 +34,7 @@ gemX:Groeiplaats1   a   imbor:9d932904-c4b1-44e0-b151-b6df78f44a92 ;            
                     nen3610:identificatie   "Groeiplaats1" ;
                     imbor:29ec4228-7a32-41db-ac73-b80db66ea743  "3.1"^^xsd:decimal ;                                        # oppervlakte
                     imbor:5b876aa9-3dc0-4aed-a843-6ce05ed9226a  imbor-domeinwaarde:0eeaaa8b-b6a7-40bb-9597-4e18fcf0c868 ;   # inhoudsklasse / "tot 5 m3"
-                    nen2660:isDescribedBy   gemX:GP1Inwininfo ;                                                             # isBeschrevenDoor
+                    nen2660:isDescribedBy   gemX:GP1Inwininfo , gemX:GP2Inwininfo ;                                         # isBeschrevenDoor
                     .
 
 gemX:GP1Inwininfo   a   imbor:8ab0ac02-ee94-4086-9b14-d53ede3c4101 ;                                                        # Inwinning-informatie
