@@ -1,5 +1,7 @@
 ## Inwinning-informatie
 
+***Gebaseerd op GitHub issue: [1389](https://github.com/Stichting-CROW/imbor/issues/1389).***
+
 `Inwinning-informatie` is een `InformatieObject` voor het vastleggen van informatie m.b.t. de inwinning van een objecttype. Een vergelijkbare entiteit is `Registratie-informatie`, omdat dit ook 'meta' informatie bevat. `Inwinning-informatie` is echter speciaal omdat hier een speciale afspraak gemaakt moet worden met betrekking tot twee attributen van deze klasse. De attributen `attribuut` en `domeinwaarde` zijn nu van het datatype `xsd:string`. Maar eigenlijk mogen hier alleen respectievelijk de IMBOR attributen en bijbehorende IMBOR domeinwaarden voorkomen. 
 
 Dit betreft een speciale modelleerconstructie en daarom wordt dit als best practice uitgewerkt. 
