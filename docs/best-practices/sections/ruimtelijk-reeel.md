@@ -29,6 +29,7 @@ Dit is een voorbeeld uitwerking in [[Turtle]]:
 @prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
 @prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
 gemX:Heseveld   a   imbor:b5947439-11e6-423e-b67b-671905610154 ;            # Wijkgrens

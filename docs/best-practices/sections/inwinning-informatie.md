@@ -21,6 +21,7 @@ Dit is een voorbeeld uitwerking in [[Turtle]]:
 @prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
 @prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
 gemX:Groeiplaats1   a   imbor:9d932904-c4b1-44e0-b151-b6df78f44a92 ;                                                        # Groeiplaats

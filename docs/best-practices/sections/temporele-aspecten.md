@@ -56,8 +56,10 @@ Dit is de uitwerking in [[Turtle]]:
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
+@prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 @prefix gemX-history: <http://voorbeeld.org/gemX-history#>.
 
