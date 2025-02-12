@@ -1,6 +1,6 @@
 ## OAGBD
 
-OAGBD is een addendum wat nieuw is in 2021. De eerste versie is de resultante van een onderzoek wat de gemeenten Almelo en Utrecht hebben gedaan. Het onderzoek heeft gekeken naar informatieverlies tijdens de 'levensfases' van een object. In dit geval is de opeenvolging van objectlevensfases:
+OAGBD is een addendum welke in IMBOR zit vanaf 2021. De eerste versie is de resultante van een onderzoek wat de gemeenten Almelo en Utrecht hebben gedaan. Het onderzoek heeft gekeken naar informatieverlies tijdens de 'levensfases' van een object. In dit geval is de opeenvolging van objectlevensfases:
 __>> Ontwerp >> Aanleg >> Geo >> Beheer__
 
 De letters staan dan ook voor:

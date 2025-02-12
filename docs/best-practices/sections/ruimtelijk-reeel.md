@@ -15,7 +15,7 @@ abstracte mentale concepten, zoals bijvoorbeeld functie en regelgeving. Virtuele
 
 Het NEN3610 reëel object komt overeen met het NEN2660 technisch reëel object. Dat betekent dat het hierbij gaat om de fysieke eigenschappen van het object. De NEN3610 virtuele ruimte komt overeen met de NEN2660 functionele ruimte. Onderling kennen reële objecten en virtuele ruimten diverse typen relaties. Die relaties kunnen heel sterk zijn, waardoor het reële object en het virtuele object op elkaar kunnen lijken. Bijvoorbeeld een verblijfsobject (virtueel) dat dezelfde afbakening heeft als het gebouw (reëel) dat het verblijfsobject vormt (realiseert). Relaties tussen andere reële en virtuele objecten kunnen veel zwakker zijn. Zo kan bijvoorbeeld een gemeentegrens ooit zijn bepaald aan de hand van de reële objecten in de werkelijkheid, maar wordt het vervolgens niet meer noodzakelijkerwijs beïnvloed door wat er met de reële objecten gebeurt.
 
-### Toepassing binnen IMBOR
+### Toepassing ruimtelijk en reëel in IMBOR
 In IMBOR zijn ruimtelijke gebieden opgenomen zoals `WijkGrens`, `Buurtgrens` en `Recreatiegebied`. Deze ruimtelijke gebieden zijn in principe geometrische vlakken en kunnen ook in die hoedanigheid geïnstanteerd worden. Zodra deze entiteiten beschikbaar zijn is geometrisch af te leiden of er reële objecten binnen de grenzen van deze entiteiten liggen. Er is dan in principe sprake van een `bevat` relatie. Een ruimtelijk gebied bevat dan een `reëel object`. Deze relatie kan expliciet worden gelegd. Dit kan handig zijn voor (geometrische) query's of voor de situatie waar nog geen geometrie bekend is van een entiteit. 
 
 >EXAMPLE

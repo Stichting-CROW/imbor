@@ -4,26 +4,14 @@ IMBOR is sinds 2022 een open standaard die door CROW kosteloos beschikbaar wordt
 
 Meer informatie over de voorwaarden waaronder het IMBOR als open standaard wordt gepubliceerd is te vinden in de specifieke secties hieronder en in het [Beheerplan IMBOR][1]. 
 
-### IMBOR gegevens
-
-Alle data in de gehele IMBOR Ontologie (IMBOR Vocabulaire, IMBOR Kern, IMBOR Domeinwaarde, etc.) wordt uitgegeven onder de [CC BY 4.0][CC4] licentie.
-
-### IMBOR Producten
-
-De AccessDatabase en de LinkedData wordt uitgegeven onder de [ODC BY][ODC] licentie.
-
-### IMBOR Documentatie
-
-Alle documentatie wordt uitgegeven onder de [CC BY 4.0][CC4] licentie.
-
-### IMBOR Query's
-
-De (voorbeeld) query's worden uitgegeven onder de [MIT][MIT] licentie.
-
-### IMBOR Randsoftware
-
-De randsoftware (zoals de viewer en REST-API) wordt uitgegeven onder de [MIT][MIT] licentie.
-
+| Component          | Licentie  | Onderdelen                                                                                       |
+|--------------------|-----------|--------------------------------------------------------------------------------------------------|
+| IMBOR gegevens     | CC BY 4.0 | Alle data in de gehele IMBOR Ontologie (IMBOR Vocabulaire, IMBOR Kern, IMBOR Domeinwaarde, etc.) |
+| IMBOR Producten    | ODC BY    | AccessDatabase en de LinkedData                                                                  |
+| IMBOR Documentatie | CC BY 4.0 | Alle documentatie                                                                                |
+| IMBOR Query's      | MIT       | De (voorbeeld) query's                                                                           |
+| IMBOR Randsoftware | MIT       | Viewers en (REST-API's)                                                                          |
+| { .data }   |    
 
 
 

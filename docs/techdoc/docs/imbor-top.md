@@ -115,11 +115,29 @@ Speciale aandacht gaat uit naar de relaties tussen `Objecttype` en `InformatieOb
 
 Deze keuze is enerzijds gemaakt vanwege de interpretatie dat een `InformatieObject` een ‘object’ op zichzelf is, welke informatie bevat over een object (vandaar de `isBeschrevenDoor` relatie). Hiermee wordt de informatie _van_ het 'object' gescheiden van de informatie _over_ het 'object'. Anderzijds betreffen het ook vaak attributen die op termijn uit andere registraties zouden moeten komen. 
 
+##### Inwinning-informatie
+
+`Inwinning-informatie` is een `InformatieObject` voor het vastleggen van informatie m.b.t. de inwinning van een objecttype. Een vergelijkbare entiteit is `Registratie-informatie`, omdat dit ook 'meta' informatie bevat. `Inwinning-informatie` is echter speciaal omdat hier een speciale afspraak gemaakt moet worden met betrekking tot twee attributen van deze klasse. De attributen `attribuut` en `domeinwaarde` zijn nu van het datatype `xsd:string`. Maar eigenlijk mogen hier alleen respectievelijk de IMBOR attributen en bijbehorende IMBOR domeinwaarden voorkomen. 
+
+Een best practice hiervoor is te vinden in: [IMBOR best practices](https://docs.crow.nl/imbor/best-practices/).
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1389"><span></span></div>
+</details>
+
 #### Gebiedsindeling & andere afleidbare attributen
 
 De `Klasse` 'Gebiedsindeling' was gemodelleerd vanwege een legacy behoefte binnen IMBOR. De klasse distribueerde een set van attributen welke allemaal afgeleid kunnen worden van de geografische locatie. De meeste waren ook dubbel te leggen met de semantische relatie `bevat`. Om deze reden is de klasse `Gebiedsindeling` dus komen te vervallen en wordt aangemoedigd om gebieden expliciet te modelleren als klassen.
 
 In IMBOR2025 zijn alle afleidbare attributen (waar de waarden 'automatisch bepaald' konden worden) vervangen door semantische relaties. Dit is gedaan vanwege het feit dat in IMBOR2022 de modellering nog onvoldoende geconformeerd was aan de [NEN2660-2:2022][nen2660:2022]. Vele IMBOR-attributen behelzen namelijk (ruimtelijke) relaties tussen verschillende objecten (bijvoorbeeld tussen Ruimtelijke gebieden en Reële objecten). 
+
+Het gebruik hiervan wordt gepropageerd vanuit de [NEN2660][nen2660:2022] en IMBOR adopteert dit volledig. Een best practice hiervoor (met het voorbeeld 'Ruimtelijk vs. Reëel')  is te vinden in: [IMBOR best practices](https://docs.crow.nl/imbor/best-practices/).
 
 <details>
   <summary>
@@ -129,12 +147,17 @@ In IMBOR2025 zijn alle afleidbare attributen (waar de waarden 'automatisch bepaa
     </i>
   </summary>
   <div class="issue" data-number="1101"><span></span></div>
+  <div class="issue" data-number="1290"><span></span></div>
+  <div class="issue" data-number="1306"><span></span></div>
 </details>
 
 #### Classificerende attributen
 
-Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse` of `Objecttype` te introduceren zijn er de attributen `Type`, `TypeGedetailleerd` en `TypeExtraGedetailleerd` onderkent. Dit zijn attributen zoals beschreven in deze sectie van [MIM][1]. In de LinkedData theorie zouden dit subklassen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het `Objecttype` welke geen specifieke informatiebehoefte hebben. Ten opzichte van IMBOR2020-08 zijn in IMBOR2022 veel waarden die eerst van het attribuut `Type` waren opgeschoven en 'gepromoveerd' naar een echt `Objecttype`. Bijvoorbeeld 'Beweegbare brug' en 'Vaste brug' zijn nu `Objecttype` in IMBOR2022, terwijl in IMBOR2020-08 deze een waarde waren binnen het `Type` attribuut. Hiermee zijn de `TypeExtraGedetailleerd` gepromoveerd naar `TypeGedetailleerd` en `TypeGedetailleerd` gepromoveerd naar `Type`. Er zijn dus veel `Objecttype`n bijgekomen, dit maakt IMBOR meer expliciet. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De `indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden. 
-<!-- TODO: Herzien na uitspraak beheercommissie -->
+Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse` of `Objecttype` te introduceren is het attribuut `Verschijningsvorm` onderkent. Dit is een attribuut zoals beschreven in deze sectie van [MIM][1].  In de LinkedData theorie zouden dit subklassen kunnen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het `Objecttype` welke geen specifieke informatiebehoefte hebben. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De `indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden.  
+
+<div class='advisement'>
+`Verschijningsvorm` is de vervanging van wat in vorige versie van IMBOR de attributen `Type`, `TypeGedetailleerd` en `TypeExtraGedetailleerd` waren. De hiërarchie die hier in zat is vervallen vanaf IMBOR2025. De waarden die `Verschijningsvorm` kan hebben zijn hiermee samengevoegd/opgeschoond tot één enkele lijst. 
+</div>
 
 <details>
   <summary>

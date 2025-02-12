@@ -31,9 +31,6 @@ Deze ReSpec is ingedeeld in secties. Alle secties zijn 'normatief' tenzij dit an
 <figcaption>IMBOR Normatief & Informatieve onderdelen</figcaption>
 </figure>
 
->NOTE
->In de sectie "Referenties" onder aan deze ReSpec pagina worden W3C referenties genoemd. Deze staan daar als 'informatieve referenties'. Dit is een ReSpec 'bug'. Alles wat daar vermeld staat is onderdeel van het <i>normatieve</i> gedeelte van IMBOR.  
-
 ### Toepassingsgebied
 
 In het IMBOR zijn landelijke afspraken gemaakt over de objectgegevens voor het beheer van de openbare ruimte. Het is daarmee een belangrijk hulpmiddel dat beheerders ondersteunt bij de opzet en vulling van hun beheersystemen, bijvoorbeeld voor wegbeheer en groenbeheer. Hierdoor wordt integraal beheer van de openbare ruimte gemakkelijker en kunnen beheerder beter gegevens delen en hun data op orde houden.

@@ -1,5 +1,7 @@
 ## NEN3610 Temporele Aspecten
 
+***Gebaseerd op GitHub issue: [1075](https://github.com/Stichting-CROW/imbor/issues/1075).***
+
 In 2022 is de meest recente versie van de [[NEN3610]] uitgekomen. [[IMBOR]] gebruikt deze standaard [al sinds 2022](https://docs.crow.nl/imbor/techdoc/#nen3610) als één van de bepalende standaarden waarop [[IMBOR]] gebouwd is. In de 2024 versie van [[IMBOR]] zullen er nog veel meer aspecten uit de [[NEN3610]] toegepast worden. Eén van die aspecten is het 'Temporele aspecten model'. Dit betreft hoofdstuk 8.3 uit de [[NEN3610]]. De belangrijkste redenen dat [[IMBOR]] volledig het temporele aspecten model van de [[NEN3610]] adopteert en toepast zijn:
 
 - [[NEN3610]] staat op de ['pas-toe-of-leg-uit' lijst](https://www.forumstandaardisatie.nl/open-standaarden/geo-standaarden) van het Forum Standaardisatie en is daarmee een verplichte voor Nederlandse overheden (Rijk, provincies, gemeenten en waterschappen) en instellingen uit de (semi-) publieke sector;
@@ -66,7 +68,7 @@ imbor:Gebouw                    a  rdfs:Class .
 gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX: ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
             nen3610:versie              "3" ;
             imbor:adres                 "Peperstraat" ;
@@ -78,8 +80,8 @@ gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarOb
 gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
+            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:versie              "1" ;
@@ -93,8 +95,8 @@ gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarOb
 gemX-history:id1_2    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
+            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
             nen3610:versie              "2" ;
@@ -138,20 +140,20 @@ gemX:id1  a                       imbor:Gebouw, nen3610:IdentificeerbaarObject ;
 <<gemX:id1  imbor:adres         "Peperstraat"     >>  nen3610:registratiegegevens  gemX-regX:id1_0 .
 
 gemX-regX:id1_0 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
 gemX-regX:id1_1 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
+            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
 gemX-regX:id1_2 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
+            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
 gemX-regX:id1_3 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
 ```
 
@@ -192,26 +194,26 @@ gemX:id1        a                           imbor:Gebouw, nen3610:Identificeerba
 
 gemX-reg:id1_1  a                           imbor:GebruiksdoelAspect ;
                 rdf:value                   "kantoorfunctie" ;
-                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
-                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
+                nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
                 nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
                 nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
                                 
 gemX-reg:id1_2  a                           imbor:GebruiksdoelAspect ;
                 rdf:value                   "woonfunctie" ;
-                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
-                nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+                nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
+                nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
                 nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
                 nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
                                 
 gemX-reg:id1_3  a                           imbor:GebruiksdoelAspect ;
                 rdf:value                   "logiesfunctie" ;
-                nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+                nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
                 nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
   
 gemX-reg:id1_0  a                           imbor:AdresAspect ;
                 rdf:value                   "Peperstraat" ;
-                nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+                nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
                 nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
 ```
 

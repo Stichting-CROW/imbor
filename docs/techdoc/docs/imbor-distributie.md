@@ -56,12 +56,11 @@ Dit geldt _niet_ voor de koppeltabellen, daar wordt wel de `IMBORGUID` gedeclare
 Door de versimpeling in Access zouden er tabellen ontstaan die niets meer zouden bevatten (omdat GUID, Label, Definitie, Synoniem en Toelichting in `imborVoc_Termen` zijn opgenomen) zijn deze tabellen weggelaten. Het gaat om:
 1. `imborKern_Multipliciteit`
 2. `imborKern_Eenheden`
-3. `imborKern_TypeAttributen`
-4. `imborKern_Datatypen`
-5. `imborKern_Vakdisciplines`
-6. `imborKern_SemantischeRelaties`
-7. `imborKern_Objecttypen`
-8. `imborKern_EnumeratieTypen`
+3. `imborKern_Datatypen`
+4. `imborKern_Vakdisciplines`
+5. `imborKern_SemantischeRelaties`
+6. `imborKern_Objecttypen`
+7. `imborKern_EnumeratieTypen`
 
 In het diagram van het fysieke datamodel wordt dit ook aangegeven door de groene tekst van een datatype. Hier staat de theoretische tabel waar de waarde vandaan zou moeten komen. Echter in de Access database is dit versimpeld door deze op te halen uit `imborVoc_Termen`.
 
@@ -107,9 +106,8 @@ In deze simpele tabel wordt de polyhiërarchie van de IMBOR top beschreven. Klas
 Dit is een hulptabel Deze tabel wordt automatisch gegenereerd middels een AccessDB module die zich baseert op `imborKern_Klassenindeling`. Het betreft een hulptabel waarin voor ieder `Objecttype` apart wordt achterhaald van welke `Klasse`n hij de attributen moet overerven. De `ChildID` = `Objecttype`, de `ParentID` = de `Klasse`. De formulieren in de AccessDB baseren zich hierop. 
 ##### imborKern_Attributen
 
-Deze tabel bevat alle attributen die in IMBOR voorkomen, inclusief hun `TypeAttribuut` en hun `Datatype`. De attribuutsoorten en datatypen zijn ook versimpeld t.o.v. IMBOR2020-08. De datatype volgens nu het [[xmlschema11-1]]. 
+Deze tabel bevat alle attributen die in IMBOR voorkomen, inclusief hun `Datatype`. De datatype volgen het [[xmlschema11-1]] en waar van toepassing wordt aangegeven of het een `Enumeratie-` of `Referentie`lijst betreft. 
 
-De kolom `BovenliggendAttribuut` wordt gebruikt om aan te geven hoe de attributen zich tot elkaar hiërarchisch verhouden. Dit betreft een kolom die nodig is om de formulieren op te bouwen en is niet normatief nodig (grijs in diagram). 
 ##### imborKern_EnumeratiesDomeinwaarden
 
 In deze tabel staan alle `EnumeratieType` binnen IMBOR, inclusief de relatie naar de `Domeinwaarde`. Het EnumeratieType en de Domeinwaarde worden één keer gedefinieerd in `imborVoc_Termen` en worden hier middels 1-op-N relaties aan elkaar gekoppeld. 
