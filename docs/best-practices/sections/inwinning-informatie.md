@@ -6,7 +6,6 @@
 Een vergelijkbare entiteit is `Registratie-informatie`, omdat dit ook 'meta' informatie bevat. 
 `Inwinning-informatie` is echter speciaal omdat hier een speciale afspraak gemaakt moet worden met betrekking tot twee attributen van deze klasse. 
 De attributen `attribuut` en `domeinwaarde` zijn nu van het datatype `xsd:string`.
-<!-- Worden deze eigenschappen dan ook van een owl:DatatypeProperty nu ook een owl:ObjecttypeProperty? Want anders krijg je validatiefouten met onderstaande. -->
 Maar eigenlijk mogen hier alleen respectievelijk de IMBOR-attributen en bijbehorende IMBOR-domeinwaarden voorkomen. 
 
 Dit betreft een speciale modelleerconstructie en daarom wordt dit als best practice uitgewerkt. 
