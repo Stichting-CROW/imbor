@@ -6,8 +6,6 @@ Vanaf IMBOR2025 is er een nieuw modelleerpatroon geïntroduceerd om relaties tus
 Omdat de [NEN2660-2:2022][nen2660:2022] hier geen standaardoplossing voor biedt, is er een in IMBOR een modelleerconstructie die conform de [NEN2660-1:2022](nen2660-1:2022) gemaakt is.
 Het gaat hier om de introductie van `imbor:Actor` (als subklasse van `nen2660:PhysicalObject`) en `imbor:Rol`. `imbor:Actor` wordt met de relatie `imbor:speelt` verbonden met een `imbor:Rol`. Welke op zijn beurt met een `imbor:heeftBetrekkingOp` relatie verbonden is met een `nen3610:GeoObject` of `nen2660:InformatieObject`. 
 
-<!-- Is het wel handig om dit in de imbor:guid namespace te doen? --->
-
 Voor meer toelichting zie: [Techdoc | Actoren en rollen](https://docs.crow.nl/imbor/techdoc/#actoren-en-rollen)
 
 ### Toepassing actor en rol in IMBOR
