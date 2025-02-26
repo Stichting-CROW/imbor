@@ -10,7 +10,7 @@ Al deze concepten kennen definities, omdat er anders geen semantische discussies
 
 <figure>
 
-![IMBOR 2022 Top hiërarchie](img/IMBOR2022-top.drawio.svg?raw=true)
+![IMBOR Top hiërarchie](img/IMBOR-top.drawio.svg?raw=true)
     
 <figcaption><figcaption>IMBOR Top van de ontologie -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</figcaption></figcaption>
 </figure>

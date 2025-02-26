@@ -136,10 +136,6 @@ De introductie van semantische relaties (betekenisvolle relaties) is samen met d
 Deze lijst is voorschrijvend, maar niet limitatief. In de implementatie mag een gebruiker zelf kiezen welke relaties er tussen de verschillende klassen aangegeven mag worden. Als er een relatie ontbreekt kan deze in de eigen implementatie gewoon gelegd worden. Uiteraard wil de IMBOR beheercommissie graag op de hoogte gehouden worden van deze inzichten.
 </div>
 
-#### Referentiemodellen
-
-Omdat de referentiemodellen een informatief onderdeel van IMBOR zijn, worden deze beschreven in een [apart sectie](#referentiemodellen-in-ms-access). 
-
 ### IMBOR in LinkedData
 
 Naast de distributie in de relationele tabellen van Acces wordt ook een LinkedData variant aangeboden. Deze is gebaseerd op hetzelfde logische model als de Access versie. Omdat vooralsnog de Access database tevens als beheeromgeving voor IMBOR wordt gebruikt is de LinkedData versie een transformatie van de tabellen. De LinkedData versie wordt via een transformatie getrokken uit de beheeromgeving. In de transformatie wordt de data getransformeerd naar het onderstaande fysieke datamodel. 
@@ -220,9 +216,6 @@ Dit zijn de daadwerkelijke domeinwaarden die middels een `rdf:type` aan de ``imb
 ##### imbor:Vakdiscipline
 
 De instanties van deze class zijn de IMBOR Vakdisciplines. Deze declareren middels een `rdfs:member` welke ObjectTypen uit `imbor:Klasse` binnen een vakdiscipline vallen.
-#### Referentiemodellen
-
-Omdat de referentiemodellen een informatief onderdeel van IMBOR zijn, worden deze beschreven in een [apart sectie](#referentiemodellen-in-linkeddata). 
 
 #### Aanvullend 'metamodel'
 
