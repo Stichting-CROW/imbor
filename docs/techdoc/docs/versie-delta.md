@@ -13,8 +13,20 @@ Vanaf IMBOR2025 wordt er uitgebreid bijgehouden wat de wijzigingen zijn ten opzi
 * GitHub Diff: Binnen de imbor-development repository worden voor *elke* commit bijgehouden wat de wijzigingen zijn. Bij een commit wordt de AccesDB omgezet naar aparte [[IANA-TSV]] bestanden. Deze worden op regel niveau vergeleken door GitHub.
 * Delta rapportages: Spreadsheets die op basis van de NEN2660-2 structuur rapporteren wat de wijzigingen zijn tussen twee versies van releases.
 
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1401"><span></span></div>
+</details>
+
 ### GitHub issues
 Op de GitHub pagina van IMBOR kunnen issues worden ingediend welke kunnen leiden tot wijzigingen. Deze kunnen door iedereen worden ingediend, inclusief de IMBOR teamleden zelf. Deze issues dienen als startpunt voor een wijziging. Voor IMBOR2025 is een ['milestone'](https://github.com/Stichting-CROW/imbor/milestone/3) gemaakt. Alle issues die aan deze milestone hangen zijn verwerkt in de 2025 versie. Hiermee is dus meteen inzichtelijke wat er allemaal verwerkt en veranderd is. Deze kan gezien worden als _zeer uitgebreide_ releasenotes, waarbij ook duidelijk is waarom, hoe en door wie iets gewijzigd is.
+
+Locatie: [GitHub issues](https://github.com/Stichting-CROW/imbor/milestone/3)
 
 ### Logging tabel
 IMBOR gebruikt vooralsnog een Access database als de beheeromgeving. Binnen deze beheeromgeving is een uitgebreide logging aanwezig. In principe worden alle wijzigingen die doorgevoerd worden in IMBOR hier gelogd. Deze tabel bestaat uit de volgende onderdelen. 
@@ -39,6 +51,8 @@ Deze tabel vormt ook de bron voor de changelog in RDF.
 
 ### Changelog (RDF)
 IMBOR (en CROW) willen eenduidiger zijn in hoe kennis naar de markt gedistribueerd wordt. Er is gekozen om alle producten in (NEN2660) RDF te verstrekken. Op deze manier hoeft de markt maar één manier te programmeren om CROW kennis in hun systemen en processen te verwerken. In 2025 is dit uitgebreid met het eenduidig verstrekken van de changelogs. Hiervoor is het [[activitystreams-core]] standaard geadopteerd. [[activitystreams-core]] is een protocol voor het beschrijven van activiteiten en interacties op het web in een gestandaardiseerd formaat. Het wordt o.a. gebruikt voor activiteitenlogboeken. 
+
+Locatie: [Changelog in RDF](...TODO...) 
 
 Elke `Log-item` wordt geclassificeerd als een `crow_change:ChangeItem` en als een van de klassen: `as:Delete`, `as:Create` of `as:Update`. Hiermee is snel inzichtelijk welke soort wijzigingen er zijn. Elk item heeft vervolgens de volgende eigenschappen:
 
@@ -72,6 +86,8 @@ De vorm van deze changelog wordt voor alle CROW producten geadopteerd in de kome
 ### Diff (RDF)
 IMBOR (en CROW) willen eenduidiger zijn in hoe kennis naar de markt gedistribueerd wordt. Er is gekozen om alle producten in (NEN2660) RDF te verstrekken. Op deze manier hoeft de markt maar één manier te programmeren om CROW kennis in hun systemen en processen te verwerken. In 2025 is dit uitgebreid met het eenduidig verstrekken van de diff's (verschil bestanden) in RDF. Omdat bij CROW de standaard voor kennisverstrekking RDF wordt, geldt dit ook voor de diff's. Hiervoor is het [[activitystreams-core]] standaard geadopteerd. [[activitystreams-core]] is een protocol voor het beschrijven van activiteiten en interacties op het web in een gestandaardiseerd formaat. Het wordt o.a. gebruikt voor activiteitenlogboeken. 
 
+Locatie: [Diff in RDF](...TODO...) 
+
 In deze diff bestanden worden de verschillen uiteengezet per IMBOR graph (of: IMBOR bestand). In de diff zitten `rdf:Statement`'s. Deze statement zijn geclassificeerd als een `as:Delete` of `as:Create`. Deze bevatten drie eigenschappen die samen de triple vormen die gewijzigd is: `rdf:subject`, `rdf:predicate`, `rdf:object`. Zo is precies op triple niveau te zijn wat er weg is, of erbij is gekomen. 
 
 <figure>
@@ -88,11 +104,17 @@ De vorm van deze diff wordt voor alle CROW producten geadopteerd in de komende j
 #### Diff (TSV)
 Voor diegene die RDF ingewikkeld vinden worden dezelfde wijzigingen als in de sectie hiervoor beschreven in een [[IANA-TSV]] bestand. Voor elke regel staat een `+` voor *Create* en een `-` voor *Delete*. Deze stijl is afkomstig van GitHub.
 
+Locatie: [Diff in TSV](...TODO...) 
+
 ### GitHub Diff
 CROW gebruikt GitHub voor de ontwikkeling van IMBOR. Binnen de [`imbor-development`](https://github.com/Stichting-CROW/imbor-development) repository worden voor *elke* commit bijgehouden wat de wijzigingen zijn. De folder [tsv](https://github.com/Stichting-CROW/imbor-development/tree/main/data/tsv) bevat automatisch gegenereerde [[IANA-TSV]] bestanden door 'GitHub actions'. Bij elke nieuwe commit van de AccessDB worden automatische de tabellen uit de database omgezet naar [[IANA-TSV]]. Daardoor kan op regel niveau bekeken worden wat er gewijzigd is omdat GitHub dit nu bijhoudt.
 
-### Delta rapportages
+Locatie: [GitHub diff](https://github.com/Stichting-CROW/imbor-development/tree/main/data/tsv)
+
+### Delta rapportage
 IMBOR (en CROW) willen eenduidiger zijn in hoe kennis naar de markt gedistribueerd wordt. Er is gekozen om alle producten in (NEN2660) RDF te verstrekken. Op deze manier hoeft de markt maar één manier te programmeren om CROW kennis in hun systemen en processen te verwerken. In 2025 is dit uitgebreid met het eenduidig verstrekken van de delta rapportages. Deze delta rapportages zijn (grotendeels) gebaseerd op de topstructuur van de NEN2660-2. In principe kan dus iedere ontologie die gebaseerd is op de NEN2660-2 vergeleken worden en in deze rapportages worden gepresenteerd. 
+
+Locatie: [Delta rapportage](...TODO...)
 
 De delta rapportage heeft de volgende structuur:
 

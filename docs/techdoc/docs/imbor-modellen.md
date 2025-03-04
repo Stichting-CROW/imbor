@@ -1,22 +1,13 @@
 ## IMBOR in modellen
 
-Tot en met IMBOR2020-08 zat het metamodel van IMBOR in de content verwerkt. Vanaf 2021 is er expliciet gemaakt hoe IMBOR gemodelleerd is. Hierbij wordt gebruik gemaakt van de principes die het metamodel voor informatiemodellering ([MIM][MIM]) definieert. Hier worden vier 'lagen' van modellen gedefinieerd:
-1. [Niveau 1][n1]: Model van begrippen
-1. [Niveau 2][n2]: Conceptueel informatiemodel
-1. [Niveau 3][n3]: Logisch informatiemodel
-1. [Niveau 4][n4]: Fysiek datamodel
-
-IMBOR acteert met name in niveau 1 en niveau 3. Niveau 2 wordt voor IMBOR over geslagen en bestaat alleen impliciet. Niveau 4 beschrijft IMBOR in het kader van de distributie. Dit is dus geen uitleg _hoe_ IMBOR geïmplementeerd moet worden in een database. Maar een uitleg hoe de onderdelen van IMBOR uitgedrukt worden in de MS Access distributie en de LinkedData distributie. 
+Tot en met IMBOR2020-08 zat het metamodel van IMBOR in de content verwerkt. Vanaf 2021 is er expliciet gemaakt hoe IMBOR gemodelleerd is. Hierbij wordt gebruik gemaakt van de principes die het metamodel voor informatiemodellering ([MIM][MIM]) definieert. 
 
 ### Begrippenkader
 
 Het model van begrippen is in deze context gelijk aan een 'vocabulaire'. Het definieert het begrippenkader van IMBOR. Begrippen mogen in verschillende informatiemodellen gebruikt worden, maar worden op één plek, één keer gedefinieerd. Onderstaande figuur toont wat de begrippen structuur is. De begrippen zijn beschikbaar in [[skos-primer]]. Zowel het [MIM][MIM] als de [NEN2660-2:2022][nen2660:2022] bevelen dit aan. 
 
-<div class='advisement'>
 De IMBOR Vocabulaire is te verkennen op:
-
- <a href="https://begrippen.crow.nl/imbor/nl/" target="_blank">begrippen.crow.nl/IMBOR</a> 
-</div>
+ <a href="https://begrippen.crow.nl/imbor/nl/" target="_blank">begrippen.crow.nl/IMBOR</a>
 
 <figure>
 
@@ -31,6 +22,8 @@ Binnen IMBOR gaan we uit van bestaande standaarden, te weten de [NEN2660-2:2022]
 
 Onderstaande figuur toont de structuur hoe IMBOR is opgebouwd. In de LinkedData versie wordt er middels een ETL-pipeline gezorgd dat het er correct volgens de [NEN2660-2:2022][nen2660:2022] en [MIM][MIM] taalbinding uit komt. Deze IMBOR structuur is door de jaren heen zo gevormd en herkenbaar geworden door met name het onderscheidt tussen `Klasse` en `Objecttype` en het feit dat er bijvoorbeeld een `Eenheid` aan een combinatie van `Attribuut` en `Klasse` hangt. Voor de (LinkedData) eindgebruiker is vooral de [NEN2660-2:2022][nen2660:2022] structuur van belang.
 
+IMBOR wordt gedistribueerd in een MS Access database en LinkedData. IMBOR schrijft _geenszins_ een fysiek datamodel voor bij implementatie. 
+
 <figure>
 
 ![IMBOR structuur](img/IMBOR-structuur.drawio.png?raw=true)
@@ -38,14 +31,10 @@ Onderstaande figuur toont de structuur hoe IMBOR is opgebouwd. In de LinkedData 
 <figcaption>IMBOR structuur' -- rechtermuisknop "Openen in nieuw tabblad" voor leesbare versie</figcaption>
 </figure>
 
-<div class='note'>
 De IMBOR Ontologie is te verkennen in de IMBOR viewer op:
  <a href="https://docs.crow.nl/onto-verkenner/imbor" target="_blank">https://imbor-viewer.apps.crow.nl/</a> 
-</div>
 
-<div class='advisement'>
-
- __Semantiek t.o.v. MIM__
+#### Semantiek t.o.v. MIM
  
  Het [MIM][MIM] wordt op meerdere plekken aangehaald binnen IMBOR. Omdat IMBOR in eerste instantie de [NEN2660-2:2022][nen2660:2022] volgt is de semantiek tussen IMBOR en het MIM soms wat verwarrend. Daarom volgt hier een nadere toelichting:
  
@@ -60,15 +49,6 @@ De IMBOR Ontologie is te verkennen in de IMBOR viewer op:
 _Simply put: a multiplicity is made up of a lower and an upper cardinality. A cardinality is how many elements are in a set. Thus, a multiplicity tells you the minimum and maximum allowed members of the set. They are not synonymous._ [Source](https://stackoverflow.com/questions/17877582/multiplicity-vs-cardinality)
 
 `Multipliciteit` is dus de algemene term om aan te geven hoe vaak iets voorkomt. De getallen die daar ingevuld staan, betreffen de `Kardinaliteit`. Een voorbeeld: De relatie tussen een fiets en wielen heeft een `Multipliciteit` met een minimale `Kardinaliteit` van 2 en een maximale `Kardinaliteit` van 2.
-
-</div>
-
-### Fysiek datamodel
-
-Omdat IMBOR nu nog gedistribueerd wordt in een MS Access database en LinkedData is het fysieke datamodel een beschrijving van hoe de IMBOR onderdelen uitgedrukt worden. Dit betekent geenszins dat IMBOR ook dit fysieke datamodel voorschrijft bij implementatie. Het geeft wel een goed inzicht in hoe de relaties lopen en welke verschillende (normatieve) onderdelen IMBOR kent. Het model wordt nader beschreven in de volgende secties.
-
-Het fysieke datamodel in LinkedData kan gelijk worden gesteld aan de 'serialisatie'. In het geval van IMBOR is dit [[turtle]].
-
 
 
 

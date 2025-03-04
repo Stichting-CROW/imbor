@@ -101,19 +101,43 @@ Binnen de IMBOR cursus wordt uitgelegd wat de bouwstenen van IMBOR zijn. Deze Re
 ### Speciale modelleerconstructies
 
 Binnen IMBOR zijn er een aantal modelleerkeuzes gemaakt die extra uitleg verdienen. Deze kunnen geschaard worden onder de 'informele' modelleerregels
+
 #### Objecttypen
 
-`Objecttype` is een speciaal soort `Klasse`. Het betreft hier namelijk het blad van de klasseboom. Ofwel de onderste laag. Binnen IMBOR worden deze onderscheiden omdat de term 'Objecttype' erg ingeburgerd is. Technische gezien zijn het de enige 'concrete' `Klasse` (tegenover de rest welke 'abstracte' `Klasse` zijn). Hiermee wil IMBOR aangeven dat deze abstracte klassen niet geïnstanteerd kunnen worden en de 'concrete' `Objecttype` juist wel. `Objecttype` zijn als enige ook ingedeeld in `Vakdiscipline`s. 
+Klasse is een begrip geïntroduceerd in IMBOR2022. Het kan gelijkgesteld worden aan het [NEN2660-2:2022][nen2660:2022] "Concept". Het is hiermee ook een supertype van bijvoorbeeld `Objecttype` en `InformatieObject`. 
+
+`Objecttype` is een speciaal soort `Klasse`. Binnen IMBOR worden deze onderscheiden omdat de term 'Objecttype' erg ingeburgerd is. Technische gezien zijn het de enige 'concrete' `Klasse` (tegenover de rest welke 'abstracte' `Klasse` zijn). Hiermee wil IMBOR aangeven dat deze abstracte klassen niet geïnstanteerd kunnen worden en de 'concrete' `Objecttype` juist wel. `Objecttype` zijn als enige ook ingedeeld in `Zoekingangen`. 
+
+De klassenstructuur is een polyhiërarchie. Dit betekent dat een child, meerdere parents kan hebben. Of in IMBOR termen gezegd: Een `Objecttype` of `Klasse` erft van meerdere `Klasse` attributen over. Dit is gedaan zodat we flexibeler om kunnen gaan bij welke klassen een `Objecttype` hoort en daarmee een `Objecttype` geen onnodige attributen krijgt. Er zullen een aantal `Klasse` 'disjoint' zijn, maar dat is nog niet expliciet opgenomen.
+
+Tot IMBOR2022 was altijd het laagste niveau in de klasse hiërarchie een `Objecttype`. Vanaf IMBOR2025 is dit veranderd vanwege het feit dat dit alignments met externe modellen eenvoudiger en completer kunnen worden en het verdwijnen van de classificerende attributen `type`, `typeGedetailleerd` en `TypeExtraGedetailleerd`. Tevens ligt deze wijze van modelleren meer in lijn met de praktijk van modellen maken. Hierdoor kan het ook voorkomen dat subklassen (onder objecttypen) bestaan, die _niet_ `Objectentype`n zijn (dus niet instantiërbaar). Voor elke `Klasse` wordt nu apart bekeken of deze `concreet` (instantiërbaar) of `abstract` (niet instantiërbaar) is.
 
 <div class='advisement'>
-Klassen zijn een abstract concept. Ze staan daarmee tegenover bijvoorbeeld `Objecttype` en `InformatieObject` die wel 'concreet' zijn. Hiermee wil IMBOR aangeven dat deze klassen niet geïnstanteerd kunnen worden.
+Klassen zijn een abstract concept. Ze staan daarmee tegenover bijvoorbeeld `Objecttype` en `InformatieObject` die wel 'concreet' zijn. Hiermee wil IMBOR aangeven dat deze klassen _niet geïnstanteerd_ kunnen worden.
 </div>
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1432"><span></span></div>
+</details>
 
 #### InformatieObjecten
 
 Speciale aandacht gaat uit naar de relaties tussen `Objecttype` en `InformatieObject`. Veel van de attributen die in IMBOR2020-08 aan een `Objecttype` hingen waren eigenlijk meer 'informatie over' dan een daadwerkelijk aspect van dat object. Vandaar dat vanaf IMBOR2022 is besloten om veel attributen te verhuizen naar `InformatieObject`. Hiermee is het dus wel van belang dat deze daadwerkelijk geïnstantieërd worden om de beschrijvende attributen vast te leggen. Dit is ook vastgelegd middels de multipliciteit. 
 
 Deze keuze is enerzijds gemaakt vanwege de interpretatie dat een `InformatieObject` een ‘object’ op zichzelf is, welke informatie bevat over een object (vandaar de `isBeschrevenDoor` relatie). Hiermee wordt de informatie _van_ het 'object' gescheiden van de informatie _over_ het 'object'. Anderzijds betreffen het ook vaak attributen die op termijn uit andere registraties zouden moeten komen. 
+
+<figure>
+
+![Voorbeeld Informatieobject](img/vb-informatieobject.png?raw=true)
+    
+<figcaption>Voorbeeld InformatieObject</figcaption>
+</figure>
 
 ##### Inwinning-informatie
 
@@ -138,6 +162,13 @@ De `Klasse` 'Gebiedsindeling' was gemodelleerd vanwege een legacy behoefte binne
 In IMBOR2025 zijn alle afleidbare attributen (waar de waarden 'automatisch bepaald' konden worden) vervangen door semantische relaties. Dit is gedaan vanwege het feit dat in IMBOR2022 de modellering nog onvoldoende geconformeerd was aan de [NEN2660-2:2022][nen2660:2022]. Vele IMBOR-attributen behelzen namelijk (ruimtelijke) relaties tussen verschillende objecten (bijvoorbeeld tussen Ruimtelijke gebieden en Reële objecten). 
 
 Het gebruik hiervan wordt gepropageerd vanuit de [NEN2660][nen2660:2022] en IMBOR adopteert dit volledig. Een best practice hiervoor (met het voorbeeld 'Ruimtelijk vs. Reëel')  is te vinden in: [IMBOR best practices](https://docs.crow.nl/imbor/best-practices/).
+
+<figure>
+
+![Voorbeeld Gebiedsindeling](img/vb-gebied.png?raw=true)
+    
+<figcaption>Voorbeeld gebiedsindeling</figcaption>
+</figure>
 
 <details>
   <summary>
@@ -275,10 +306,18 @@ IMBOR definieert subklassen van `imbor:Actor`, te weten: `imbor:Publieksrechteli
 De klasse `imbor:Rol` kent een aantal subklassen die herkenbaar zullen zijn voor de gemiddelde IMBOR gebruiker. Deze werden voorheen als attributen behandeld, maar zijn nu klassen. Voorbeelden hiervan zijn 'Beheerder', 'Eigenaar' en 'Fabrikant'. Deze klassen kunnen geïnstantieerd worden om de expliciete rol aan te geven. In onderstaande voorbeeld is in dikgedrukte letters de IMBOR modelleerconstructie te zien, daaronder een voorbeeld in de data.
 
 
-| imbor:Actor | imbor:speelt | imbor:Rol       | imbor:heeftBetrekkingOp | imbor:GeoObject   |
-|-------------|--------------|-----------------|-------------------------|-------------------|
-| ex:ProRail  | imbor:speelt | ex:Beheerder123 | imbor:heeftBetrekkingOp | ex:Railsegment456 |
-| { .data }   |              |                 |                         |                   |
+| imbor:Actor  | imbor:speelt | imbor:Rol       | imbor:heeftBetrekkingOp | imbor:GeoObject |
+|--------------|--------------|-----------------|-------------------------|-----------------|
+| ex:GemeenteX | imbor:speelt | ex:Beheerder123 | imbor:heeftBetrekkingOp | ex:BoomX        |
+| ex:GemeenteX | imbor:speelt | ex:Eigenaar321  | imbor:heeftBetrekkingOp | ex:BoomX        |
+| { .data }    |              |                 |                         |                 |
+
+<figure>
+
+![Voorbeeld Actor en Rol](img/vb-actor-rol.png?raw=true)
+    
+<figcaption>Voorbeeld actor en rollen</figcaption>
+</figure>
 
 
 <details>

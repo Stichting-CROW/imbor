@@ -1,0 +1,77 @@
+<mxfile host="65bd71144e">
+    <diagram name="BoomWijk" id="nL8aa56l0DugsrmY4gjJ">
+        <mxGraphModel dx="3499" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="31" value="&lt;font&gt;NIEUW&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1E767B;fontColor=#000000;fontSize=18;horizontal=0;align=center;verticalAlign=top;strokeWidth=5;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="140" width="650" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font&gt;OUD&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#BFA763;fontColor=#000000;strokeWidth=5;align=center;verticalAlign=top;horizontal=0;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="10" width="650" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;Informatiepaneel&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="type = Matrixbord" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="7" vertex="1">
+                    <mxGeometry y="30" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="typeGedetailleerd = ES01" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="7" vertex="1">
+                    <mxGeometry y="50" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;b&gt;Informatiepaneel&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="150" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="verschijningsvorm = Matrixbord" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="9" vertex="1">
+                    <mxGeometry y="30" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="bordcode = ES01&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="9" vertex="1">
+                    <mxGeometry y="50" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;HWA perceelaansluitleiding&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="275" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="wanddikte = 110" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="13" vertex="1">
+                    <mxGeometry y="30" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;Aansluitleiding&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="20" width="287" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="type = Perceelaansluitleiding" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="16" vertex="1">
+                    <mxGeometry y="30" width="287" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="typeGedetailleerd = HWA perceelaansluitleiding" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="16" vertex="1">
+                    <mxGeometry y="50" width="287" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="wanddikte = 110" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="16" vertex="1">
+                    <mxGeometry y="70" width="287" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;b&gt;Perceelaansluiting&lt;/b&gt;" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="215" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;b&gt;Aansluitleiding&lt;/b&gt;" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="155" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=block;endSize=16;endFill=0;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="21" target="25" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="230" y="165" as="sourcePoint"/>
+                        <mxPoint x="390" y="165" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=block;endSize=16;endFill=0;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="13" target="21" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="440" y="250" as="sourcePoint"/>
+                        <mxPoint x="400" y="215" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="460" y="300"/>
+                            <mxPoint x="440" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
