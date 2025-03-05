@@ -8,7 +8,7 @@ Dit onderscheid is te herleiden naar zowel de [NEN2660][nen2660:2022] (2022, p. 
 ### NEN2660 & NEN3610
 
 **NEN2660**:
-In de [NEN2660][nen2660:2022] worden fysieke objecten optioneel, disjunct opgedeeld in niet-direct tastbare `ruimtelijke gebieden` (bijvoorbeeld rijbaan, tankinhoud, corridor en gebied) en tastbare `reële objecten` (bijvoorbeeld brug, brugdek, verharding en vloer). De 'bevat'-relatie bij een ruimtelijk gebied kan worden gebruikt voor reële objecten die zich in dat gebied bevinden en voor de, typisch gasvormige, hoeveelheid bulkmaterie die zich in dat gebied bevindt.
+In de [NEN2660][nen2660:2022] worden fysieke objecten optioneel, niet-samenvallend opgedeeld in niet-direct tastbare `ruimtelijke gebieden` (bijvoorbeeld Rijbaan, Centrumgebied en Putschat) en tastbare `reële objecten` (bijvoorbeeld Beweegbare brug, Boom en Laagspanningskabel). De 'bevat'-relatie bij een ruimtelijk gebied kan worden gebruikt voor reële objecten die zich in dat gebied bevinden en voor de, typisch gasvormige, hoeveelheid bulkmaterie die zich in dat gebied bevindt.
 
 **NEN3610**:
 Reële objecten en virtuele ruimten kunnen onafhankelijk van elkaar geclassificeerd worden. Reële objecten zijn in de fysieke werkelijkheid aanwezig en kunnen geclassificeerd worden aan de hand van hun totstandkomingsproces, de samenstelling (fysiek voorkomen) en het eventuele beoogde gebruik. Een synoniem voor reële objecten is fysieke objecten. Virtuele ruimten zijn alleen in een registratie aanwezig en niet fysiek in de werkelijkheid. Ze kunnen worden geclassificeerd aan de hand van
