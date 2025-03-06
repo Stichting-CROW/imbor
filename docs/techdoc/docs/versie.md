@@ -17,5 +17,5 @@
 | 13-05-2022 | 1.11   | Update naar nieuwe ReSpec template CROW                                              |
 | 22-03-2023 | 1.12   | Update OAGDB en redacteurs                                                           |
 | 01-01-2024 | 2.0    | Appendix 2024 toegevoegd                                                             |
-| 01-01-2024 | 2.1    | Consultatie 2025                                                                     |
+| 11-03-2025 | 3.0    | Ter visielegging 2025                                                                |
 | { .data }  |        |                                                                                      |

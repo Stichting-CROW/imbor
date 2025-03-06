@@ -12,7 +12,7 @@ Wanneer IMBOR geïmplementeerd moet worden in software is uiteraard de gehele co
 * IMBOR in LinkedData (TTL file en SPARQL-Endpoint)
 * IMBOR tabellen in MS Access database
 
-Alle informatie hierover en versies hiervan is/zijn via [GitHub releases](https://github.com/Stichting-CROW/imbor/releases) te raadplegen. Wat betreft het gebruik van IMBOR, raadplegen de sectie over [licenties](#licenties)
+Alle informatie hierover en versies hiervan is/zijn via [GitHub releases](https://github.com/Stichting-CROW/imbor/releases) te raadplegen. Een specifiek overzicht van de beschikbare SPARQL-Endpoints is [hier op GitHub](https://github.com/Stichting-CROW/imbor/blob/abd7529ed9c5b5ac5a59f5f1cfc92695eafa8c78/data/SPARQL-Endpoints.md) te raadplegen. Wat betreft het gebruik van IMBOR, raadpleeg de sectie over [licenties](#licenties).
 
 <div class='advisement'>
 Al deze vormen van distributie zijn (voorlopig) zonder kosten te raadplegen; Namelijk voor de SPARQL-Endpoint geldt dat we deze voorlopig onder de noemer van 'pilot' verstrekken. Bij veel gebruik/op termijn wordt gekeken hoe we hier met de kosten gaan omgaan. 
@@ -179,6 +179,15 @@ De instanties van deze class zijn de IMBOR Zoekingangen. Deze declareren middels
 
 Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het ['IMBOR Aanvullend Metamodel'](https://github.com/Stichting-CROW/imbor-development/blob/main/data/rdf/imbor-aanvullend-metamodel.ttl). Dit betreft een kleine ontologie van beschrijvende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn.
 >ToDO juist link
+
+#### SPARQL-Endpoints
+
+CROW stelt haar kennis in basis als SPARQL-Endpoints ter beschikking. Alle andere vormen van distributie zijn in principe afgeleide daarvan. Dit geldt dus ook voor IMBOR. Het overzicht van de beschikbare SPARQL-Endpoints voor IMBOR is [hier op GitHub](https://github.com/Stichting-CROW/imbor/blob/abd7529ed9c5b5ac5a59f5f1cfc92695eafa8c78/data/SPARQL-Endpoints.md) te vinden.
+
+Wat betreft versionering zijn er *major* (aangeduid per jaar) releases en *minor* releases (patches):
+* `https://hub.laces.tech/crow/imbor/*YEAR*/*PUBLICATIE*/sparql` is altijd de laatste versie
+* `https://hub.laces.tech/crow/imbor/*YEAR*/*PUBLICATIE*/versions/*SUFFIX*/sparql` is een specifieke versie (e.g. “00” is de initiële release, “01” is de eerste patch)
+
 
 [mijncrow]: https://crowsso.b2clogin.com/crowsso.onmicrosoft.com/B2C_1A_signup_signin/oauth2/v2.0/authorize?client_id=e0b429f6-ef7f-4d0e-be5f-2711b5d4393f&redirect_uri=https://crow.nl/Truelime/AzureADAuthenticationHandler.ashx&response_type=code&scope=openid&response_mode=query&state=eyJSZXR1cm5VcmwiOiIvTWlqbkNST1cvSG9tZSIsIlNob3BwaW5nQ2FydCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMCIsIklkIjoiODQwYzBlYmMtZjBmOC00YmE5LTg3YzAtZGEwYThiZGUxYmMwIiwiU2lnbk91dCI6ZmFsc2V9
 [nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
