@@ -1,13 +1,18 @@
-## Referentiemodellen
+## Relaties met andere modellen
 
-### Toelichting per referentiemodel
+IMBOR heeft relaties met andere modellen. IMBOR bevindt zich in een speelveld waar veel raakvlakken zijn met andere sectorstandaarden en nationale registraties. Deze relaties kunnen grofweg onderverdeeld worden in 'sterke' relaties en 'zwakke' relaties. 
 
-Binnen IMBOR zijn er relaties naar andere modellen. IMBOR bevindt zich in een speelveld waar veel raakvlakken zijn met andere sectorstandaarden en nationale registraties. Het betreft een onderdeel wat los staat van de 'normatieve' IMBOR onderdelen en mag gezien worden als een handreiking vanuit, en aan de IMBOR community. Er is getracht om de relatie die er vanuit IMBOR erkend wordt zo goed mogelijk aan te geven. Dit omdat de gebruiker van IMBOR dan zelf deze kennis kan beoordelen, eventueel gebruiken of verbeteren. Hieronder worden de relatie met andere standaarden beschreven. Van een aantal standaarden zijn ook binnen de IMBOR distributies gegevens overgenomen of zijn de relaties expliciet (met zwakke semantiek) aangegeven. Dit wordt dan ook vermeld. 
+### Modellen met sterke relatie
 
-<div class='advisement'>
-Vanwege de positie van IMBOR worden er veel relaties naar andere standaarden gelegd. Binnen IMBOR zijn gegevens soms 'van toepassing verklaard' in IMBOR (gekopieerd) om de relatie tussen de twee te kunnen aangeven. Dit is wat CROW betreft een <i>tijdelijke</i> situatie. Wanneer meer standaarden in LinkedData uitgedrukt worden EN er standaarden zijn hoe modellen op elkaar 'gemapt' kunnen worden zullen we sterke semantische relaties gaan leggen. Dan worden de gekopieerde gegevens ook daadwerkelijk bij de bron onderhouden en refereert IMBOR er alleen maar naar. 
-</div>
+IMBOR heeft eigenlijk twee soorten sterke relaties met andere standaarden. Voor de [NEN2660-2:2022][nen2660:2022], [NEN3610:2022][nen3610:2022], het [MIM][11], [TOOI][15] en [[QUDT]] geldt dat IMBOR daadwerkelijk _gebruik maakt_ van deze standaarden om het eigen model op te bouwen. De andere soort sterke relatie betreffen _['alignments'](https://begrippen.crow.nl/ombk/nl/page/?uri=https%3A%2F%2Fdata.crow.nl%2Ftech-term%2Fterm%2FTT008)_. Deze alignments worden ontwikkeld volgens de principes beschreven in de whitepaper [Ontology Matching trough alignment and extension: a Best Practice](https://docs.crow.nl/ontology-alignment/whitepaper/). In de figuur hieronder wordt het huidige landschap betreffende alignements weergegeven. 
 
+<figure>
+
+![IMBOR_surroundings](img/IMBOR_surroundings.drawio.png)
+<figcaption><figcaption>Het landschap van alignments vanuit IMBOR perspectief</figcaption></figcaption>
+</figure>
+
+Hieronder wordt per model de sterke relatie met IMBOR beschreven.
 
 #### NEN2660-2
 
@@ -53,6 +58,13 @@ Het tweede hoofdprincipe van het MIM betreft het modelleren van het IMBOR binnen
 
 De [RDF vertaling](https://docs.geostandaarden.nl/mim/mim/#metamodel-in-linked-data-ld) zoals gebruikt in het MIM wordt niet gebruikt. Mede omdat de MIM metaclasses binnen IMBOR de ontologie niet direct gebruikt worden, maar alleen in het metamodel. Er wordt bijvoorbeeld gesteld dat een `imbor:Objecttype` van de metaclass `mim:Objecttype` is, daardoor is de `imbor:Boom` (welke `rdf:type` is van `imbor:Objecttype`) wel (indirect) gerelateerd aan het MIM, maar geen voorkomen van. 
 
+#### TOOI
+
+[TOOI][15] staat voor "Thesauri en Ontologieën voor Overheidsinformatie". TOOI is een kennismodel. Het doel van dit kennismodel is het definiëren van een gemeenschappelijke taal waarmee data en metadata uitgedrukt kunnen worden, zodat overheidsinformatie beter vindbaar, toegankelijk, interoperabel en herbruikbaar (FAIR) wordt. IMBOR adopteert TOOI volledig waar dit kan. IMBOR zal de TOOI gaan gebruiken voor het standaardiseren van de klassen `Ministerie`, `Gemeente`, `Waterschap`, `Samenwerkingsorganisatie`, `Provincie` en `OverigeOverheidsorganisaties`. De URI's voor deze klassen worden overgenomen, (bijvoorbeeld `https://identifier.overheid.nl/tooi/def/ont/Gemeente` voor `Gemeente`) maar niet de registers voor gemeenten, provincies, etc. IMBOR-gebruikers kunnen instanties van de voorgenoemde klassen instantiëren en hiervoor de registers aanspreken, binnen het ['Register gemeenten'](https://standaarden.overheid.nl/tooi/waardelijsten/work?work_uri=https%3A%2F%2Fidentifier.overheid.nl%2Ftooi%2Fset%2Frwc_gemeenten_compleet) staat bijvoorbeeld: `https://identifier.overheid.nl/tooi/id/gemeente/gm0228` voor 'gemeente Ede' of `https://identifier.overheid.nl/tooi/id/oorg/oorg10004` voor Rijkswaterstaat. Deze bijbehorende URIs spelen dus een identificerende rol in de IMBOR-modellering, maar moet een IMBOR-toepassing zelf ophalen.
+
+#### QUDT
+
+Vanuit de NEN2660-2 wordt de [[QUDT]] ontologie aangewezen als de plek om alles rondom eenheden en grootheden vandaan te halen. Door hier naar te refereren i.p.v. iets nieuws te verzinnen wordt inspanning en verwarring bespaard. IMBOR tracht hier dan ook volledig bij aan te sluiten voor zover mogelijk. Tot IMBOR2022 werd een eigen lijst van grootheden en eenheden bijgehouden, maar sinds IMBOR2025 wordt [[QUDT]] gebruikt.
 
 #### GWSW
 
@@ -72,17 +84,72 @@ De opname van GWSW in IMBOR is voor de vaste gegevens dus 100%. Voor het dynamis
   <div class="issue" data-number="1210"><span></span></div>
 </details>
 
-#### NEN2767-4
-
-De NEN2767 en IMBOR hebben een lange historie. Veel gebruikers van IMBOR gebruiken ook de NEN2767-4 Conditiemeting infrastructuur. Er is in 2020 ook besloten dat de afstemming tussen de twee duidelijker gemaakt moet worden. Hiervoor is een gezamenlijk project gestart [door de NEN en CROW][3]. Hier zijn nog geen tastbare resultaten van. Tot nu toe is daarom in IMBOR een zwakke semantische relatie gelegd vanuit het IMBOR perspectief. Voor de IMBOR objecttypen waar een equivalent erkend wordt in de NEN2767-4 is dit aangegeven. De relatie tussen de IMBOR concepten en de NEN concepten is niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe de NEN2767-4 is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. 
-
 #### BGT/IMGeo
 
 De relatie tussen BGT/[IMGeo][9] en IMBOR is altijd noodzakelijk geweest. IMBOR maakt gebruik van de IMGeo-objecten (en daarmee dus de 'verrijkte' BGT objecten). IMGeo levert in veel gevallen de geometrie die in IMBOR wordt verrijkt met beheerinformatie. Er is echter wel sprake van een relatief gecompliceerde relatie. In 2020 is door CROW en Geonovum samen een [praktijkrichtlijn][10] uitgebracht. IMBOR2020-08 sluit aan op versie van IMGeo, 2.1.1. In IMGeo 2.1.1 ontbreken bepaalde subclassificaties van objecten die wel in IMBOR voorkomen. Om IMBOR-classificaties zonder gegevensverlies te kunnen uitwisselen tussen Geo- en BOR-afdeling binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is deze werkafspraak/praktijkrichtlijn ‘Uitbreiding domeinwaarden en attributen’ ontwikkeld. De relatie tussen IMBOR en IMGeo is met deze praktijkrichtlijn helemaal uitgewerkt in een mapping tabel. In de praktijk wordt deze helaas niet of nauwelijks toegepast. Binnen IMBOR2022 is daarom op een iets hoger niveau een relatief sterke semantische relatie gelegd naar IMGeo2.2.
 
 ##### IMGeo als referentiemodel 
 
-Binnen IMBOR is een 'mapping' opgenomen naar IMGeo die de 'uitdrukking in' semantiek kent. Hiermee is het mogelijk om IMBOR objecttypen vast te leggen met een IMGeo geometrie. De verwachting is dat in de loop van de tijd richting de ontwikkeling van de SOR bij zowel IMBOR, DisGeo en de sector voldoende inburgering van de LinkedData principes, de [NEN2660-2:2022][nen2660:2022]-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMGeo (of de SOR) en IMBOR gerealiseerd worden. In de tussentijd is dat nog niet het geval en is er dus sprake een uitdrukking van IMBOR objecttypen in IMGeo geometrie. Deze vastlegging is gedaan zodat bekeken kan worden hoe IMGeo zich verhoudt tot IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. 
+Binnen IMBOR is een 'mapping' opgenomen naar IMGeo die de 'uitdrukking in' semantiek kent. Hiermee is het mogelijk om IMBOR objecttypen vast te leggen met een IMGeo geometrie. De verwachting is dat in de loop van de tijd richting de ontwikkeling van de SOR bij zowel IMBOR, DisGeo en de sector voldoende inburgering van de LinkedData principes, de [NEN2660-2:2022][nen2660:2022]-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMGeo (of de SOR) en IMBOR gerealiseerd worden. In de tussentijd is dat nog niet het geval en is er dus sprake een uitdrukking van IMBOR objecttypen in IMGeo geometrie. Deze vastlegging is gedaan zodat bekeken kan worden hoe IMGeo zich verhoudt tot IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt.
+
+#### KOR 
+
+De [KOR 2023][16] (Kwaliteitscatalogus Openbare Ruimte) bevat zo'n 200 beeldmeetlatten voor het meten van de kwaliteit van de buitenruimte. Dit is een apart product van CROW, maar heeft een sterkte relatie met IMBOR. De KOR2023 heeft een officiële alignment met IMBOR. IMBOR en de KOR kunnen, met gebruikmaking van deze alignment, zodoende samen met elkaar gebruikt worden. De KOR wordt tevens als LinkedData gedistribueerd. 
+
+#### BOR-MELD
+
+[BOR-MELD][7] is een CROW-standaard voor het vastleggen van meldingen over de openbare ruimte. De systematiek beschrijft welke informatie van een melding wordt vastgelegd, zowel het door de burger of bedrijf gemelde probleem (de ‘voorkant’ van de melding) als de achterliggende oorzaak en genomen actie (de ‘achterkant’ van de melding). De relatie met IMBOR is nagenoeg gelijk aan die van [KOR](#kor). De uniforme categorisering van typen meldingen over de openbare ruimte is altijd gerelateerd aan één of meerdere IMBOR-objecttypen. Ofwel, elk objecttype binnen BOR-MELD kent een alignment naar een objecttype van IMBOR. IMBOR en BOR-MELD kunnen zodoende samen met elkaar gebruikt worden. 
+
+<div class='note'>
+De BOR-MELD en IMBOR alignment moet nog officieel worden uitgebracht. 
+</div>
+
+#### Wegbeheersystematiek
+
+De Wegbeheersystematiek 2019 is een CROW publicatie. De relatie tussen IMBOR2020-08 en de Wegbeheersystematiek 2019 is [uitvoerig beschreven][13]. Uiteindelijk is de bedoeling dat de terminologie van IMBOR volledig wordt overgenomen in de Wegbeheersystematiek middels een alignment. In 2025 wordt verkend of de Wegbeheersystematiek ook gedistribueerd kan worden als informatiemodel in LinkedData. Wanneer dit gebeurt zal de expliciete sterke semantische relatie onderdeel zijn van de publicatie.
+
+<div class='note'>
+De Wegbeheersystematiek en IMBOR alignment moet nog officieel worden uitgebracht. 
+</div>
+
+#### GWSL
+
+GWSL moet het GWSW voor openbare verlichting worden, gebaseerd op het IMBOR framework (en dus de [NEN2660-2:2022][nen2660:2022]). GWSL bevat objecttypen, relaties en attributen die gaan over zowel statische als dynamische gegevens. Net zoals bij GWSW en IMWV bevat IMBOR zodoende alleen het deel betreffende de statische gegevens van GWSL. In de praktijk is de `Zoekingang` 'Verlichting' binnen IMBOR dus 1-op-1 gelijk aan het deel van GWSL dat over de vaste (statische) gegevens gaat (overigens is dat ook het enige GWSL wat tot en met 2021 gerealiseerd is). IMBOR en GWSL zijn beiden volledig op de [NEN2660-2:2022][nen2660:2022] gebaseerd en wanneer GWSL in een eerste versie gereed is zal het beheer ook door CROW gedaan worden.
+
+### Andere gerelateerde modellen
+
+Naast deze sterke relaties heeft IMBOR raakvlakken/relaties met veel meer modellen. Er is getracht om de relatie die er vanuit IMBOR erkend wordt zo goed mogelijk aan te geven. Dit omdat de gebruiker van IMBOR dan zelf deze kennis kan beoordelen, eventueel gebruiken of verbeteren. Hieronder worden de relatie met andere standaarden beschreven. Van een aantal standaarden zijn ook binnen de IMBOR distributies gegevens overgenomen of zijn de relaties expliciet (met zwakke semantiek) aangegeven als ['externe link lijsten'](#externe-link-lijsten). Dit wordt dan ook vermeld. 
+
+<div class='advisement'>
+Vanwege de positie van IMBOR worden er veel relaties naar andere standaarden gelegd. Binnen IMBOR zijn gegevens soms 'van toepassing verklaard' in IMBOR (gekopieerd) om de relatie tussen de twee te kunnen aangeven. Dit is wat CROW betreft een <i>tijdelijke</i> situatie. Wanneer meer standaarden in LinkedData uitgedrukt worden EN er standaarden zijn hoe modellen op elkaar 'gemapt' kunnen worden zullen we sterke semantische relaties gaan leggen. Dan worden de gekopieerde gegevens ook daadwerkelijk bij de bron onderhouden en refereert IMBOR er alleen maar naar. 
+</div>
+
+#### NEN2767-4
+
+De NEN2767 en IMBOR hebben een lange historie. Veel gebruikers van IMBOR gebruiken ook de NEN2767-4 Conditiemeting infrastructuur. Er is in 2020 ook besloten dat de afstemming tussen de twee duidelijker gemaakt moet worden. Hiervoor is een gezamenlijk project gestart [door de NEN en CROW][3]. Hier zijn nog geen tastbare resultaten van. Tot nu toe is daarom in IMBOR een zwakke semantische relatie gelegd vanuit het IMBOR perspectief. Voor de IMBOR objecttypen waar een equivalent erkend wordt in de NEN2767-4 is dit aangegeven. De relatie tussen de IMBOR concepten en de NEN concepten is niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe de NEN2767-4 is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. 
+
+<div class='note'>
+De NEN2767-4 en IMBOR alignment moet nog officieel worden uitgebracht. 
+</div>
+
+#### NLCS
+
+De Nederlandse CAD standaard (NLCS) is de CAD-standaard van de Nederlandse GWW-sector. Deze open standaard bevat afspraken voor het omgaan met metadata, digitaal tekenen, het uiterlijk van de tekening en vooral de bestandsopbouw van tekenwerk. IMBOR heeft vooralsnog geen directe relatie met de NLCS. De IMBOR objecten bevatten doorgaans geometrie. Deze geometrie kan ook uitgedrukt worden in de NLCS. Dit is echter geen onderdeel van IMBOR. 
+In 2025 wordt binnen het DOOR-programma een verkenning gedaan om de relatie tussen IMBOR en NLCS sterker te maken.
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1361"><span></span></div>
+  <div class="issue" data-number="1287"><span></span></div>
+  <div class="issue" data-number="1286"><span></span></div>
+  <div class="issue" data-number="1284"><span></span></div>
+  <div class="issue" data-number="1283"><span></span></div>
+</details>
 
 #### SOR
 
@@ -95,6 +162,7 @@ Het informatiemodel Kabels en Leidingen ([IMKL][8]) vormt een gemeenschappelijk 
 #### IMWV
 
 Het [IMWV][4] is een afsprakenstelsel dat beschrijft hoe naast objectgerichte gegevens ook verkeersgegevens voor verkeerskundige vraagstukken op uniforme wijze kunnen worden vastgelegd. Het bevat een beschrijving van de fysieke objecten en statische gegevens die aan de fysieke objecten gekoppeld kunnen worden. Inhoudelijk is er dan ook een sterke relatie met IMBOR en het is zelfs ontwikkeld binnen de beheeromgeving van het IMBOR. Het IMWV bevat net als in het IMBOR geen beschrijvingen/afspraken van dynamische gegevens (zoals realtime verkeersgegevens, wachttijden, openingstijden van bruggen, verkeersongevallen, etc.) of gegevensbehoefte van verkeerskundige vraagstukken ten aanzien van bijvoorbeeld parkeren en verkeersmanagement. 
+
 Vanaf IMBOR2025 is het IMWV buiten IMBOR geplaatst. Op termijn wordt bekeken wat er met IMWV en de relatie tot IMBOR gedaan moet worden.
 
 <details>
@@ -106,29 +174,6 @@ Vanaf IMBOR2025 is het IMWV buiten IMBOR geplaatst. Op termijn wordt bekeken wat
   </summary>
   <div class="issue" data-number="1357"><span></span></div>
 </details>
-
-#### KOR 
-
-De KOR 2023 (Kwaliteitscatalogus Openbare Ruimte) bevat zo'n 200 beeldmeetlatten voor het meten van de kwaliteit van de buitenruimte. Dit is een apart product van CROW, maar heeft een sterkte relatie met IMBOR. De KOR2023 heeft een officiële alignment met IMBOR. IMBOR en de KOR kunnen, met gebruikmaking van deze alignment, zodoende samen met elkaar gebruikt worden. De KOR wordt tevens als LinkedData gedistribueerd. 
-
-#### BOR-MELD
-
-[BOR-MELD][7] is een CROW-standaard voor het vastleggen van meldingen over de openbare ruimte. De systematiek beschrijft welke informatie van een melding wordt vastgelegd, zowel het door de burger of bedrijf gemelde probleem (de ‘voorkant’ van de melding) als de achterliggende oorzaak en genomen actie (de ‘achterkant’ van de melding). De relatie met IMBOR is nagenoeg gelijk aan die van [KOR](#kor). De uniforme categorisering van typen meldingen over de openbare ruimte is altijd gerelateerd aan één of meerdere IMBOR-objecttypen. Ofwel, elk objecttype binnen BOR-MELD kent een alignment naar een objecttype van IMBOR. IMBOR en BOR-MELD kunnen zodoende samen met elkaar gebruikt worden. 
-
-<div class='note'>
-De BOR-MELD en IMBOR alignment moet nog officieel worden uitgebracht. 
-</div>
-
-#### TOOI
-[TOOI][15] staat voor "Thesauri en Ontologieën voor Overheidsinformatie". TOOI is een kennismodel. Het doel van dit kennismodel is het definiëren van een gemeenschappelijke taal waarmee data en metadata uitgedrukt kunnen worden, zodat overheidsinformatie beter vindbaar, toegankelijk, interoperabel en herbruikbaar (FAIR) wordt. IMBOR adopteert TOOI volledig waar dit kan. IMBOR zal de TOOI gaan gebruiken voor het standaardiseren van de klassen `Ministerie`, `Gemeente`, `Waterschap`, `Samenwerkingsorganisatie`, `Provincie` en `OverigeOverheidsorganisaties`. De URI's voor deze klassen worden overgenomen, (bijvoorbeeld `https://identifier.overheid.nl/tooi/def/ont/Gemeente` voor `Gemeente`) maar niet de registers voor gemeenten, provincies, etc. IMBOR-gebruikers kunnen instanties van de voorgenoemde klassen instantiëren en hiervoor de registers aanspreken, binnen het ['Register gemeenten'](https://standaarden.overheid.nl/tooi/waardelijsten/work?work_uri=https%3A%2F%2Fidentifier.overheid.nl%2Ftooi%2Fset%2Frwc_gemeenten_compleet) staat bijvoorbeeld: `https://identifier.overheid.nl/tooi/id/gemeente/gm0228` voor 'gemeente Ede' of `https://identifier.overheid.nl/tooi/id/oorg/oorg10004` voor Rijkswaterstaat. Deze bijbehorende URIs spelen dus een identificerende rol in de IMBOR-modellering, maar moet een IMBOR-toepassing zelf ophalen.
-
-#### QUDT
-
-Vanuit de NEN2660-2 wordt de [[QUDT]] ontologie aangewezen als de plek om alles rondom eenheden en grootheden vandaan te halen. Door hier naar te refereren i.p.v. iets nieuws te verzinnen wordt inspanning en verwarring bespaard. IMBOR tracht hier dan ook volledig bij aan te sluiten voor zover mogelijk. Tot IMBOR2022 werd een eigen lijst van grootheden en eenheden bijgehouden, maar sinds IMBOR2025 wordt [[QUDT]] gebruikt.
-
-#### GWSL
-
-GWSL moet het GWSW voor openbare verlichting worden, gebaseerd op het IMBOR framework (en dus de [NEN2660-2:2022][nen2660:2022]). GWSL bevat objecttypen, relaties en attributen die gaan over zowel statische als dynamische gegevens. Net zoals bij GWSW en IMWV bevat IMBOR zodoende alleen het deel betreffende de statische gegevens van GWSL. In de praktijk is de `Vakdiscipline` 'Verlichting' binnen IMBOR dus 1-op-1 gelijk aan het deel van GWSL dat over de vaste (statische) gegevens gaat (overigens is dat ook het enige GWSL wat tot en met 2021 gerealiseerd is). IMBOR en GWSL zijn beiden volledig op de [NEN2660-2:2022][nen2660:2022] gebaseerd en wanneer GWSL in een eerste versie gereed is zal het beheer ook door CROW gedaan worden. 
 
 #### Aquo/IMWA
 
@@ -154,25 +199,6 @@ Het informatiemodel Geluid (IMGeluid) beschrijft de semantiek van digitale besta
 
 Het Informatiemodel Natuur (IMNa) is de standaard voor uniforme digitale uitwisseling van natuurgegevens. IMBOR heeft geen directie relatie met het IMNa. Er zijn relaties te herkennen tussen de indeling van de terreindelen in het buitengebied. Deze zijn echter geen onderdeel van het IMBOR. 
 
-#### NLCS
-
-De Nederlandse CAD standaard (NLCS) is de CAD-standaard van de Nederlandse GWW-sector. Deze open standaard bevat afspraken voor het omgaan met metadata, digitaal tekenen, het uiterlijk van de tekening en vooral de bestandsopbouw van tekenwerk. IMBOR heeft vooralsnog geen directe relatie met de NLCS. De IMBOR objecten bevatten doorgaans geometrie. Deze geometrie kan ook uitgedrukt worden in de NLCS. Dit is echter geen onderdeel van IMBOR. 
-In 2025 wordt binnen het DOOR-programma een verkenning gedaan om de relatie tussen IMBOR en NLCS sterker te maken.
-
-<details>
-  <summary>
-    <i>
-    Zie ook gerelateerde issue(s) op GitHub:
-    <span class="icon">👇</span>
-    </i>
-  </summary>
-  <div class="issue" data-number="1361"><span></span></div>
-  <div class="issue" data-number="1287"><span></span></div>
-  <div class="issue" data-number="1286"><span></span></div>
-  <div class="issue" data-number="1284"><span></span></div>
-  <div class="issue" data-number="1283"><span></span></div>
-</details>
-
 #### NWB
 
 Het Nationaal Wegenbestand (NWB) is een open databestand met alle openbare wegen in Nederland die een straatnaam of wegnummer hebben en in beheer zijn bij het Rijk, provincies, gemeenten en waterschappen. IMBOR heeft geen directe relatie met het NWB. Er zijn relaties te herkennen tussen de de NWB 'Wegas' en de IMBOR 'Wegas'. Deze zijn echter geen onderdeel van het IMBOR.
@@ -182,20 +208,16 @@ Het Nationaal Wegenbestand (NWB) is een open databestand met alle openbare wegen
 WeginfraNL is een voortvloeisel uit o.a. de PIM-OTL (Pavement Information Modelling). Het uiteindelijke doel was om PIM-OTL door te ontwikkelen tot een nationale referentieontologie voor het domein weginfrastructuur, nu aangeduid als de ontologie
 voor WeginfraNL. Dit is in opdracht gedaan van het 'Transitiepad Duurzame Wegverharding'. De eerste fase van de ontologie voor WeginfraNL omvat concepten, relaties en attributen voor het registreren, structureren en delen van bouw- en assetmanagementgegevens (As Built-fase) tussen stakeholders (opdrachtgevers en aannemers) in de weginfrastructuur en wegenbouw. WeginfraNL en IMBOR hebben nog geen directe relatie. Maar voor 2025 wordt verwacht dat een officiële alignment tussen de twee wordt uitgebracht. 
 
-#### Wegbeheersystematiek
-
-De Wegbeheersystematiek 2019 is een CROW publicatie. De relatie tussen IMBOR2020-08 en de Wegbeheersystematiek 2019 is [uitvoerig beschreven][13]. Uiteindelijk is de bedoeling dat de terminologie van IMBOR volledig wordt overgenomen in de Wegbeheersystematiek. In 2025 wordt verkend of de Wegbeheersystematiek ook gedistribueerd kan worden als informatiemodel in LinkedData. Wanneer dit gebeurt zal de expliciete sterke semantische relatie onderdeel zijn van de publicatie.
-
 #### WIBON
 
 De Wet informatie-uitwisseling bovengrondse en ondergrondse netten en netwerken (WIBON). Deze wet schrijft de wijze van informatie-uitwisseling tussen netbeheerders en grondroerders voor. IMBOR heeft geen directe relatie met WIBON. Gegevens uit IMBOR kunnen echter wel gebruikt worden om te voorzien in de wettelijke eisen voor bijvoorbeeld het aanleveren van netinformatie. Tevens leunt WIBON sterk op het [IMKL](#imkl). 
 
-## Externe link lijst 
+## Externe link lijsten
 
 >NOTE
 >TODO, plaatsing links.
 
-Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betreffen lijsten met linkjes naar concepten uit andere ontologieën. Dit zijn informele handreikingen vanuit IMBOR die geen status hebben. Deze lijsten kunnen gebruikt worden als startpunt om per project of implementatie een mapping te maken vanuit IMBOR naar de andere ontologie. Tegenover deze informele handreikingen staan officiële alignments. Dit betreffen sterke semantische mappingen die beheert worden en waaruit automatische kennis kan worden afgeleid. Deze worden anders gedistribueerd. 
+Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betreffen lijsten met linkjes naar concepten uit andere ontologieën. Dit zijn informele handreikingen vanuit IMBOR die geen status hebben. Deze lijsten kunnen gebruikt worden als startpunt om per project of implementatie een mapping te maken vanuit IMBOR naar de andere ontologie. Tegenover deze informele handreikingen staan officiële alignments. Dit betreffen [sterke semantische relaties](#modellen-met-sterke-relatie) die beheert worden en waaruit automatische kennis kan worden afgeleid. Deze worden anders gedistribueerd. 
 
 <details>
   <summary>
@@ -206,7 +228,6 @@ Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betre
   </summary>
   <div class="issue" data-number="1350"><span></span></div>
 </details>
-
 
 [2]: https://www.geobasisregistraties.nl/basisregistraties/doorontwikkeling-in-samenhang/objectenregistratie
 [3]: https://www.nen.nl/nieuws/conditiemeting/eerste-stap-eenduidige-aansluiting-tussen-imbor-en-nen-2767-gezet/
@@ -224,3 +245,4 @@ Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betre
 [15]: https://standaarden.overheid.nl/tooi
 [nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
 [nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
+[16]: https://www.crow.nl/kennisproducten/kwaliteitscatalogus-openbare-ruimte-2023/

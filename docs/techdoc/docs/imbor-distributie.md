@@ -173,7 +173,7 @@ De `imbor:KlasseAttribuut` wordt middels `sh:class` verbonden aan de `imbor:Enum
 Dit zijn de daadwerkelijke domeinwaarden die middels een `rdf:type` aan de ``imbor:EnumeratieType` gehangen worden. Deze worden (volgens MIM gebruik) in een aparte graaf geplaatst zodat de kern niet te groot wordt en omdat deze domeinwaarden vaker aan verandering onderhevig zijn.
 ##### imbor:Zoekingang
 
-De instanties van deze class zijn de IMBOR Vakdisciplines. Deze declareren middels een `rdfs:member` welke ObjectTypen uit `imbor:Klasse` binnen een vakdiscipline vallen.
+De instanties van deze class zijn de IMBOR Zoekingangen. Deze declareren middels een `rdfs:member` welke ObjectTypen uit `imbor:Klasse` binnen een zoekingang vallen.
 
 #### Aanvullend 'metamodel'
 

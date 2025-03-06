@@ -6,7 +6,7 @@ IMBOR wordt gepositioneerd als sectormodel. De focus ligt op de vaste gegevens v
 
 In onderstaand diagram is de top van de hiërarchie te vinden, met in kleur aangegeven waar de concepten vandaan komen. De relaties tussen de [NEN2660-2:2022][nen2660:2022] en de [NEN3610:2022][nen3610:2022] komen uit de [NEN2660-2:2022][nen2660:2022] documentatie zelf. Deze indeling zorgt ervoor dat voor alle IMBOR `Objecttype`n (niet afgebeeld) er een logische hiërarchie is, waarmee duidelijk is hoe deze zich verhoudt tot de landelijke standaarden. Te zien is dat er weinig IMBOR specifieke (hoofd)klassen geïntroduceerd hoeven te worden omdat bijna alles al voldoende gedefinieerd wordt. Alle `Objecttype`n` hebben worden aan één of meerdere van deze klassen gehangen en krijgen hiermee een landelijke semantische definitie. De hiërarchie wordt tevens gebruikt om de attributen mee te distribueren, maar deze hebben (nog) geen landelijk/sectoraal kader. Hiermee wordt bedoeld dat dit diagram meer gebruikt moet worden als 'begrippenkader'(lees: de semantische afstemming van de modellen) dan dat het daadwerkelijk als een volwaardige ontologie ingezet kan worden. Dit is niet per se mogelijk omdat er geen volledige afstemming is tussen de attributen en onderlinge relaties.
 
-Al deze concepten kennen definities, omdat er anders geen semantische discussies gevoerd kunnen worden zonder dat de definities van de concepten bekend zijn. Alle definities kunnen ingezien worden in de [IMBOR viewer](viewer).
+Al deze concepten kennen definities, omdat er anders geen semantische discussies gevoerd kunnen worden zonder dat de definities van de concepten bekend zijn. Alle definities kunnen ingezien worden in de [IMBOR viewer](https://imbor-viewer.apps.crow.nl//).
 
 <figure>
 
@@ -28,7 +28,6 @@ De uitgangspunten voor de totstandkoming van deze hiërarchie waren:
 1. Termen en definities uit te standaarden hergebruiken (boven eigen gemaakte);
 1. De gebruikte relaties alleen komen alleen uit de [NEN2660-2:2022][nen2660:2022], tenzij die niet in de behoefte voorzien;
 1. Dan geniet het gebruiken van bestaande relaties de voorkeur boven eigen relaties;
-1. Verdeling van attributen over `Objecttype`n moet zo veel mogelijk gelijk blijven t.o.v. vorige versies van IMBOR (afgezien van waar de koppeling al niet goed was);
 
 #### Semantische relaties
 
@@ -42,7 +41,7 @@ Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een gro
 1. `voertUit` ([NEN2660-2:executes](https://w3id.org/nen2660/def#executes))
 1. `bestaatUit` ([NEN2660-2:consistsOf](https://w3id.org/nen2660/def#consistsOf))
 
-In IMBOR2025 zijn daar de volgende relaties bijgekomen:
+Vanaf IMBOR2025 zijn daar de volgende relaties bijgekomen:
 1. `heeftBetrekkingOp` (uit de NEN2660-1)
 1. `speelt` (uit de NEN2660-1)
 1. `isGeregistreerdMet` ([registratiegegevens](https://modellen.geostandaarden.nl/def/nen3610-2022/index.html#registratiegegevens) uit de [NEN3610:2022][nen3610:2022])
@@ -66,10 +65,11 @@ In IMBOR2025 zijn daar de volgende relaties bijgekomen:
 In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype`n niveau te leggen. 
 </div>
 
-##### Inverse van 'heeftDeel' relatie
+##### Inverse van relaties
 
-In de [NEN2660-2:2022][nen2660:2022] is de `nen2660:hasPart` (heeftDeel) relatie niet-transitief. De 'isDeelVan'-relatie wordt niet expliciet gemodelleerd. In IMBOR is hier wel vraag naar, vandaar dat vanaf 2024 deze er binnen IMBOR een expliciete relatie `nen2660:isPartOf` relatie is gedefinieerd in het IMBOR meta-model. Deze is de inverse van `nen2660:hasPart` en mag ook gebruikt worden op dezelfde manier, maar dan in de andere richting.
+In de [NEN2660-2:2022][nen2660:2022] is de `nen2660:hasPart` (heeftDeel) relatie niet-transitief. De 'isDeelVan'-relatie wordt niet expliciet gemodelleerd. In IMBOR is hier wel vraag naar, vandaar dat vanaf 2024 deze er binnen IMBOR een expliciete relatie `nen2660:isPartOf` relatie is gedefinieerd in het IMBOR aanvullend meta-model. Deze is de inverse van `nen2660:hasPart` en mag ook gebruikt worden op dezelfde manier, maar dan in de andere richting.
 
+Eenzelfde constructie geldt voor `nen2660:contains` (bevat). Ook hier is in IMBOR vraag naar een expliciete modellering. Vandaar dat de `nen2660:isContainedBy` (bevindtZichIn) is toegevoegd in het IMBOR aanvullend meta-model. 
 <details>
   <summary>
     <i>
@@ -78,6 +78,7 @@ In de [NEN2660-2:2022][nen2660:2022] is de `nen2660:hasPart` (heeftDeel) relatie
     </i>
   </summary>
   <div class="issue" data-number="1255"><span></span></div>
+  <div class="issue" data-number="1394"><span></span></div>
 
 </details>
 
@@ -200,12 +201,12 @@ Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse`
   <div class="issue" data-number="1267"><span></span></div>
 </details>
 
-#### Vakdisciplines
+#### Zoekingangen
 
-Vakdisciplines betreffen een groepering die ook niets meer is dan dat is. Binnen IMBOR wordt deze voornamelijk gebruikt als zoekingang of als structurering om de hoeveelheid `Objecttype` makkelijker te kunnen inzien. 
+Zoekingangen (voorheen 'Vakdisciplines) betreffen een groepering die ook niets meer is dan dat is. Binnen IMBOR wordt deze voornamelijk gebruikt als zoekingang of als structurering om de hoeveelheid `Objecttype` makkelijker te kunnen inzien. 
 
 <div class='advisement'>
-Ter verduidelijking: daadwerkelijke geregistreerde objecten (de instanties van `Objecttype`) kunnen in een beheersysteem zelf vervolgens ook tot meerdere `Vakdiscipline` tegelijk behoren. IMBOR dwingt hier niets over af. Vakdisciplines in IMBOR zijn een geste vanuit IMBOR om te zoeken. De indeling is daarmee niet per sé arbitrair te noemen, maar wel vanuit ons/één perspectief.
+Ter verduidelijking: daadwerkelijke geregistreerde objecten (de instanties van `Objecttype`) kunnen in een beheersysteem zelf vervolgens ook tot meerdere `Zoekingangen` tegelijk behoren. IMBOR dwingt hier niets over af. Zoekingangen in IMBOR zijn een geste vanuit IMBOR om te zoeken. De indeling is daarmee niet per sé arbitrair te noemen, maar wel vanuit ons/één perspectief.
 </div>
 
 [1]: https://docs.geostandaarden.nl/mim/def-st-mim-20201023/#metagegeven-indicatie-classificerend
@@ -233,14 +234,14 @@ De klasse _Sluisdeur_ of _Schutkolk_ is namelijk één van de kwalificerende waa
 
 Binnen IMBOR zijn topologische elementen (als `TopologischElement`) toegevoegd als speciaal soort `GeometrischeRepresentatie`. Het betreffen namelijk schematische representaties van een daadwerkelijke (`FysiekObject`), net zoals de geometrie. Middels de `heeftBegrenzing` relatie zijn meerdere geometrische representaties vast te leggen (bijvoorbeeld: 2D, 3D of schematisch).
 
-IMBOR voorziet vanaf versie 2025 tevens in een elementaire modellering van netwerken ten behoeve van de vakdisciplines Riolering, Water en Wegen. Het gaat hierbij om een topologische uitdrukking van de geografische gegevens van de beheerobjecten uit IMBOR, dat wil zeggen: in termen van knooppunten en verbindingen die de eigenschappen van de plaatsen van IMBOR-objecten voorstellen. Deze modellering is gebaseerd op implementatie van de basisstructuren van het netwerkmodel uit de Europese standaard [INSPIRE][INSPIRE] die de [NEN3610:2022][nen3610:2022] voorschrijft. De [NEN3610:2022][nen3610:2022] adviseert INSPIRE toe te passen voor het modelleren van topologische dimensie parallel aan een geografische dimensie. 
+IMBOR voorziet vanaf versie 2025 tevens in een elementaire modellering van netwerken. Het gaat hierbij om een topologische uitdrukking van de geografische gegevens van de beheerobjecten uit IMBOR, dat wil zeggen: in termen van knooppunten en verbindingen die de eigenschappen van de plaatsen van IMBOR-objecten voorstellen. Deze modellering is gebaseerd op implementatie van de basisstructuren van het netwerkmodel uit de Europese standaard [INSPIRE][INSPIRE] die de [NEN3610:2022][nen3610:2022] voorschrijft. De [NEN3610:2022][nen3610:2022] adviseert INSPIRE toe te passen voor het modelleren van topologische dimensie parallel aan een geografische dimensie. 
  
 Op hoofdlijnen heeft dit geleid tot de toevoeging van de klassen `Netwerk`, `NetwerkLink` en `NetwerkNode`. Deze klassen zijn subklassen gemaakt van `nen2660:GeometrischeRepresentatie`. Voor `NetwerkLink` en `NetwerkNode` geldt dat ze middels `nen2660:hasPart` gerelateert kunnen worden aan `Netwerk`. Tussen `NetwerkLink` en `NetwerkNode` lopen twee semantische relaties, namelijk `endNode` en `startNode`. Kortweg betekent dit dat een `NetwerkLink` een `NetwerkNode` als beginpunt of als eindpunt kan hebben. In de ontwikkeling van IMBOR2025 is ervoor gekozen om deze als `rdfs:subPropertOf` van `nen2660:hasPart` te declareren. 
 
 <div class='example'>
 Een voorbeeld gebruik van het netwerkmodel:
 
-Voor een topologische representatie van een netwerk van waterwegen worden `imbor:Waternode` en `imbor:Waterlink` geïnstantieerd, met als onderlinge relaties `endNode` en `startNode`. Deze objecten maken deel uit van een bovenliggend `imbor:Netwerk`. De `imbor:Waternode` en `imbor:Waterlink` hebben `nen2660:isDescribedBy` met instanties van `nen2660:PhysicalObject`, zoals `imbor:Watergang` (bij een topologische representatie van reële objecten) of `imbor:Waterweg` (bij een topologische representatie van ruimtelijke gebieden). Dit standaardiseert dus de kern van de statische modellering van netwerken binnen het domein van de openbare ruimte. Gebruikers kunnen dit als kernmodellering gebruiken om hun specifieke netwerktoepassingen mee te realiseren. De uitwerking van `imbor:RioleringNode` en `imbor:RioleringLink` in domeinspecifieke voorbeelden van netwerkelementen wordt ontleend aan IMBOR Stedelijk Water. In vorige versies van IMBOR waren dit de `imbor:TopologischeElement`en.
+Voor een topologische representatie van een netwerk van waterwegen worden `imbor:Waternode` en `imbor:Waterlink` geïnstantieerd, met als onderlinge relaties `endNode` en `startNode`. Deze objecten maken deel uit van een bovenliggend `imbor:Netwerk`. De `imbor:Waternode` en `imbor:Waterlink` hebben `nen2660:isDescribedBy` met instanties van `nen2660:PhysicalObject`, zoals `imbor:Watergang` (bij een topologische representatie van reële objecten) of `imbor:Waterweg` (bij een topologische representatie van ruimtelijke gebieden). Dit standaardiseert dus de kern van de statische modellering van netwerken binnen het domein van de openbare ruimte. Gebruikers kunnen dit als kernmodellering gebruiken om hun specifieke netwerktoepassingen mee te realiseren. 
 </div>
 
 <details>
