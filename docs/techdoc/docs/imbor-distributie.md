@@ -177,8 +177,7 @@ De instanties van deze class zijn de IMBOR Zoekingangen. Deze declareren middels
 
 #### Aanvullend 'metamodel'
 
-Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het ['IMBOR Aanvullend Metamodel'](https://github.com/Stichting-CROW/imbor-development/blob/main/data/rdf/imbor-aanvullend-metamodel.ttl). Dit betreft een kleine ontologie van beschrijvende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn.
->ToDO juist link
+Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het 'IMBOR Aanvullend Metamodel'. Dit betreft een kleine ontologie van beschrijvende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn. De locatie van dit model is op de [GitHub](https://github.com/Stichting-CROW/imbor/blob/abd7529ed9c5b5ac5a59f5f1cfc92695eafa8c78/data/SPARQL-Endpoints.md) te vinden.
 
 #### SPARQL-Endpoints
 

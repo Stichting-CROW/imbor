@@ -86,15 +86,35 @@ De opname van GWSW in IMBOR is voor de vaste gegevens dus 100%. Voor het dynamis
 
 #### BGT/IMGeo
 
-De relatie tussen BGT/[IMGeo][9] en IMBOR is altijd noodzakelijk geweest. IMBOR maakt gebruik van de IMGeo-objecten (en daarmee dus de 'verrijkte' BGT objecten). IMGeo levert in veel gevallen de geometrie die in IMBOR wordt verrijkt met beheerinformatie. Er is echter wel sprake van een relatief gecompliceerde relatie. In 2020 is door CROW en Geonovum samen een [praktijkrichtlijn][10] uitgebracht. IMBOR2020-08 sluit aan op versie van IMGeo, 2.1.1. In IMGeo 2.1.1 ontbreken bepaalde subclassificaties van objecten die wel in IMBOR voorkomen. Om IMBOR-classificaties zonder gegevensverlies te kunnen uitwisselen tussen Geo- en BOR-afdeling binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is deze werkafspraak/praktijkrichtlijn ‘Uitbreiding domeinwaarden en attributen’ ontwikkeld. De relatie tussen IMBOR en IMGeo is met deze praktijkrichtlijn helemaal uitgewerkt in een mapping tabel. In de praktijk wordt deze helaas niet of nauwelijks toegepast. Binnen IMBOR2022 is daarom op een iets hoger niveau een relatief sterke semantische relatie gelegd naar IMGeo2.2.
+De relatie tussen [BGT/IMGeo][9] en IMBOR is altijd noodzakelijk geweest. IMBOR maakt gebruik van de IMGeo-objecten (en daarmee dus de 'verrijkte' BGT objecten). Binnen veel organisaties levert de BGT in veel gevallen de geometrie die in IMBOR wordt verrijkt met beheerinformatie. Er is echter wel sprake van een relatief gecompliceerde relatie. IMBOR is door de jaren heen meer als eigen ontologie ontwikkeld en BGT/IMGeo is niet doorontwikkeld. Momenteel bevat IMBOR dan ook veel meer informatie over het beheer van de openbare ruimte dan BGT/IMGeo rijk is. Omdat de uitwisseling tussen Geo en BOR applicaties binnen veel organisaties nodig blijft is besloten om tussen IMBOR en IMGeo een sterke alignment uit te brengen. Deze zal dan uiteraard BGT/IMGeo volledig dekken in IMBOR, maar andersom is dit dan niet haalbaar.
 
-##### IMGeo als referentiemodel 
+<div class='note'>
+De BGT/IMGeo en IMBOR alignment moet nog officieel worden uitgebracht. 
+</div>
 
-Binnen IMBOR is een 'mapping' opgenomen naar IMGeo die de 'uitdrukking in' semantiek kent. Hiermee is het mogelijk om IMBOR objecttypen vast te leggen met een IMGeo geometrie. De verwachting is dat in de loop van de tijd richting de ontwikkeling van de SOR bij zowel IMBOR, DisGeo en de sector voldoende inburgering van de LinkedData principes, de [NEN2660-2:2022][nen2660:2022]-2 en de gedistribueerde vastlegging van informatiemodellen een feit is. Zodoende kan dan een sterke semantische relatie (mapping) tussen IMGeo (of de SOR) en IMBOR gerealiseerd worden. In de tussentijd is dat nog niet het geval en is er dus sprake een uitdrukking van IMBOR objecttypen in IMGeo geometrie. Deze vastlegging is gedaan zodat bekeken kan worden hoe IMGeo zich verhoudt tot IMBOR en geeft een aanzet voor een vertaling tussen de twee. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt.
+<div class='note' title="Praktijkrichtlijn 2020">
+In 2020 is door CROW en Geonovum samen een <a href="https://docs.geostandaarden.nl/imgeo/def-pr-IMGeo-20200318/" target=_blank>praktijkrichtlijn</a> uitgebracht. IMBOR2020-08 sluit aan op versie van IMGeo, 2.1.1. In IMGeo 2.1.1 ontbreken bepaalde subclassificaties van objecten die wel in IMBOR voorkomen. Om IMBOR-classificaties zonder gegevensverlies te kunnen uitwisselen tussen Geo- en BOR-afdeling binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is deze werkafspraak/praktijkrichtlijn ‘Uitbreiding domeinwaarden en attributen’ ontwikkeld. De relatie tussen IMBOR en IMGeo is met deze praktijkrichtlijn helemaal uitgewerkt in een mapping tabel. In de praktijk wordt deze helaas niet of nauwelijks toegepast. Binnen IMBOR2022 is daarom op een iets hoger niveau een relatief sterke semantische relatie gelegd naar IMGeo2.2. Vanaf IMBOR2025 geldt deze praktijkrichtlijn niet meer.
+</div>
+
+<details>
+  <summary>
+    <i>
+    Zie ook gerelateerde issue(s) op GitHub:
+    <span class="icon">👇</span>
+    </i>
+  </summary>
+  <div class="issue" data-number="1241"><span></span></div>
+  <div class="issue" data-number="1359"><span></span></div>
+  <div class="issue" data-number="1169"><span></span></div>
+</details>
 
 #### KOR 
 
 De [KOR 2023][16] (Kwaliteitscatalogus Openbare Ruimte) bevat zo'n 200 beeldmeetlatten voor het meten van de kwaliteit van de buitenruimte. Dit is een apart product van CROW, maar heeft een sterkte relatie met IMBOR. De KOR2023 heeft een officiële alignment met IMBOR. IMBOR en de KOR kunnen, met gebruikmaking van deze alignment, zodoende samen met elkaar gebruikt worden. De KOR wordt tevens als LinkedData gedistribueerd. 
+
+<div class='note'>
+De KOR en IMBOR alignment moet nog officieel worden uitgebracht. 
+</div>
 
 #### BOR-MELD
 
@@ -214,10 +234,9 @@ De Wet informatie-uitwisseling bovengrondse en ondergrondse netten en netwerken 
 
 ## Externe link lijsten
 
->NOTE
->TODO, plaatsing links.
+Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betreffen lijsten met linkjes naar concepten uit andere ontologieën ([zie definitie](https://begrippen.crow.nl/ombk/nl/page/?uri=https%3A%2F%2Fdata.crow.nl%2Ftech-term%2Fterm%2FTT002)). Dit zijn informele handreikingen vanuit IMBOR die geen status hebben. Deze lijsten kunnen gebruikt worden als startpunt om per project of implementatie een mapping te maken vanuit IMBOR naar de andere ontologie. Tegenover deze informele handreikingen staan officiële alignments. Dit betreffen [sterke semantische relaties](#modellen-met-sterke-relatie) die beheert worden en waaruit automatische kennis kan worden afgeleid. Deze worden anders gedistribueerd. 
 
-Op de GitHub pagina van IMBOR worden 'externe link lijsten` geplaatst. Dit betreffen lijsten met linkjes naar concepten uit andere ontologieën. Dit zijn informele handreikingen vanuit IMBOR die geen status hebben. Deze lijsten kunnen gebruikt worden als startpunt om per project of implementatie een mapping te maken vanuit IMBOR naar de andere ontologie. Tegenover deze informele handreikingen staan officiële alignments. Dit betreffen [sterke semantische relaties](#modellen-met-sterke-relatie) die beheert worden en waaruit automatische kennis kan worden afgeleid. Deze worden anders gedistribueerd. 
+De lijsten zijn op deze [GitHub pagina](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking/externe%20link%20lijst) te downloaden.
 
 <details>
   <summary>

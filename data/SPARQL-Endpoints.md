@@ -15,6 +15,8 @@
   * https://hub.laces.tech/crow/imbor/2025/c/ad-refmodels/sparql
 * IMBOR Addendum MIM
   * https://hub.laces.tech/crow/imbor/2025/c/ad-mim/sparql
+* IMBOR Volledig-CombiGraph
+  * https://hub.laces.tech/crow/imbor/2025/c/volledig-combigraph/sparq  
 * IMBOR Changelog
   * https://hub.laces.tech/crow/imbor/2025/c/changelog/sparql
 
