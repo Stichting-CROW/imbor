@@ -4,5 +4,8 @@
 *.trig
 *.ttl
 
-# TTL ten behoeve van de REST-API is een uitzondering.
-!imbor-rest-api-linkset.ttl
+# Uitzonderingen
+!*changelogging/*
+!*informele handreiking/*
+!*-rest-api-linkset.ttl
+

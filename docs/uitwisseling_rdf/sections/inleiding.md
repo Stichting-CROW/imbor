@@ -11,11 +11,12 @@ De best practice beschrijft hoe men middels RDF IMBOR-gegevens kan delen, maar z
 * Hoe om te gaan met revisies op data;
 * Welke metadata er verstrekt moet worden.
 
->NOTE "Geschikt voor meerdere (NEN2660-2) ontologieën"
->
->De manier van data delen, welke geclassificeerd is aan een ontologie, zoals in dit artikel beschreven wordt is niet nieuw en niet specifiek voor IMBOR. In de best practice worden alleen maar bestaande technieken gebruikt en IMBOR is een NEN2660-2 ontologie. Vandaar dat deze manier van data delen nu voor IMBOR is geschreven maar voor in principe elke LinkedData gebaseerde ontologie van toepassing is. Dit levert uiteraard schaal- en investeringsvoordelen op.
->
->Het OroX is het generieke opslagvorm ten behoeve van de uitwisseling volgens het Gegevenswoordenboek Stedelijk Water (GWSW). Het OroX is een ook specificatie gebaseerd op semantisch web standaarden. Het is daarmee als _een_ (andere) invulling van deze best practice te zien.
+
+<div class='note' title='Geschikt voor meerdere (NEN2660-2) ontologieën'>
+De manier van data delen, welke geclassificeerd is aan een ontologie, zoals in dit artikel beschreven wordt is niet nieuw en niet specifiek voor IMBOR. In de best practice worden alleen maar bestaande technieken gebruikt en IMBOR is een NEN2660-2 ontologie. Vandaar dat deze manier van data delen nu voor IMBOR is geschreven maar voor in principe elke LinkedData gebaseerde ontologie van toepassing is. Dit levert uiteraard schaal- en investeringsvoordelen op.
+
+Het OroX is het generieke opslagvorm ten behoeve van de uitwisseling volgens het Gegevenswoordenboek Stedelijk Water (GWSW). Het OroX is een ook specificatie gebaseerd op semantisch web standaarden. Het is daarmee als _een_ (andere) invulling van deze best practice te zien.
+</div>
 
 ### Achtergrond
 IMBOR 2020 sloot aan op de bestaande versie van IMGeo. In IMGeo 2.1.1 ontbraken bepaalde subclassificaties van objecten die wel in IMBOR voorkwamen. Om IMBOR-classificaties zonder gegevensverlies te kunnen delen tussen Geo- en BOR-afdelingen binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is in 2020 de praktijkrichtlijn ["Uitbreiding domeinwaarden en attributen" uitgewerkt][1]. 
