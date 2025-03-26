@@ -31,23 +31,31 @@ De uitgangspunten voor de totstandkoming van deze hiërarchie waren:
 
 #### Semantische relaties
 
-Ten opzichte van IMBOR2020-08 is de introductie van semantische relaties een grote verandering. Middels relaties geadopteerd uit de [NEN2660-2:2022][nen2660:2022] wordt het mogelijk gemaakt om tussen concepten binnen IMBOR betekenisvolle relaties te leggen. De relaties betreffen:
-1. `isSubtypeVan` (NEN2660-2: Is een verbijzondering van)
-1. `heeftDeel` ([NEN2660-2:hasPart](https://w3id.org/nen2660/def#hasPart))
-1. `isVerbondenMet` ([NEN2660-2:isConnectedTo](https://w3id.org/nen2660/def#isConnectedTo))
-1. `isBeschrevenDoor` ([NEN2660-2:isDescribedBy](https://w3id.org/nen2660/def#isDescribedBy))
-1. `bevat`([NEN2660-2:contains](https://w3id.org/nen2660/def#contains))
-1. `heeftBegrenzing` ([NEN2660-2:hasBoundary](https://w3id.org/nen2660/def#hasBoundary))
-1. `voertUit` ([NEN2660-2:executes](https://w3id.org/nen2660/def#executes))
-1. `bestaatUit` ([NEN2660-2:consistsOf](https://w3id.org/nen2660/def#consistsOf))
+Vanaf IMBOR2022 bestaan er semantische relaties. Middels relaties geadopteerd (inter)nationale standaarden zoals de [NEN2660-2:2022][nen2660:2022] wordt het mogelijk gemaakt om tussen concepten binnen IMBOR betekenisvolle relaties te leggen. De relaties betreffen:
 
-Vanaf IMBOR2025 zijn daar de volgende relaties bijgekomen:
-1. `heeftBetrekkingOp` (uit de NEN2660-1)
-1. `speelt` (uit de NEN2660-1)
-1. `isGeregistreerdMet` ([registratiegegevens](https://modellen.geostandaarden.nl/def/nen3610-2022/index.html#registratiegegevens) uit de [NEN3610:2022][nen3610:2022])
-1. `startNode` ([net:startNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L286) uit INSPIRE via [NEN3610:2022][nen3610:2022])
-1. `endNode` ([net:endNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L66) uit INSPIRE via [NEN3610:2022][nen3610:2022])
+| Relatie              | Bron                                                                                                                                                                                    | Van               | Naar                         |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------|
+| `isSubtypeVan`       | [rdfs:subClassOf](http://www.w3.org/2000/01/rdf-schema#)                                                                                                                                |                   |                              |
+| `heeftDeel`          | [nen2660:hasPart](https://w3id.org/nen2660/def#hasPart)                                                                                                                                 | Object            | Object                       |
+| `isVerbondenMet`     | [nen2660:isConnectedTo](https://w3id.org/nen2660/def#isConnectedTo)                                                                                                                     | FysiekObject      | FysiekObject                 |
+| `isBeschrevenDoor`   | [nen2660:isDescribedBy](https://w3id.org/nen2660/def#isDescribedBy)                                                                                                                     | Object            | InformatieObject             |
+| `bevat`              | [nen2660:contains](https://w3id.org/nen2660/def#contains)                                                                                                                               | RuimtelijkeGebied | ReeelObject                  |
+| `heeftBegrenzing`    | [nen2660:hasBoundary](https://w3id.org/nen2660/def#hasBoundary)                                                                                                                         | FysiekObject      | GeometrischeRepresentatie    |
+| `voertUit`           | [nen2660:executes](https://w3id.org/nen2660/def#executes)                                                                                                                               | FysiekObject      | Functie                      |
+| `bestaatUit`         | [nen2660:consistsOf](https://w3id.org/nen2660/def#consistsOf)                                                                                                                           | ReeelObject       | Materie                      |
+| `heeftBetrekkingOp`  | NEN2660-1                                                                                                                                                                               | Rol               | Geo-Object; InformatieObject |
+| `speelt`             | NEN2660-1                                                                                                                                                                               | Actor             | Rol                          |
+| `isGeregistreerdMet` | [registratiegegevens](https://modellen.geostandaarden.nl/def/nen3610-2022/index.html#registratiegegevens) uit de [NEN3610:2022][nen3610:2022]                                           |                   |                              |
+| `startNode`          | [net:startNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L286) uit INSPIRE via [NEN3610:2022][nen3610:2022] | NetwerkLink       | NetwerkNode                  |
+| `endNode`            | [net:endNode](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/blob/7dde22fde631409957a445f97af5868299f2330e/net/net.ttl#L66) uit INSPIRE via [NEN3610:2022][nen3610:2022]    | NetwerkLink       | NetwerkNode                  |
 
+_Voor de relatie `isGeregistreerdMet` geldt dat deze eigenlijk alleen gebruikt wordt voor registratiegegevens. Hiervoor wordt verwezen naar 'temporele aspecten' [techdoc](https://docs.crow.nl/imbor/techdoc/#temporele-aspecten) en in deze [best practice](https://docs.crow.nl/imbor/best-practices/#nen3610-temporele-aspecten)_
+
+<div class='advisement'>
+In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype`n te leggen. De gezette kaders betreffen de relaties zoals vastgelegd in de ontologie (zie voorgaande tabel).
+</div>
+
+Het gebruik van semantische relaties wordt beschreven in deze best practice: [Best practice - Semantische relaties](https://docs.crow.nl/imbor/best-practices/#semantische-relaties).
 
 <details>
   <summary>
@@ -61,9 +69,18 @@ Vanaf IMBOR2025 zijn daar de volgende relaties bijgekomen:
   <div class="issue" data-number="1075"><span></span></div>
 </details>
 
-<div class='advisement'>
-In het schema is te zien tussen welke (top)concepten de relaties kunnen lopen. In de IMBOR ontologie (in Access en LinkedData) is vanuit IMBOR per `Klasse` een aanzet gegeven van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype`n niveau te leggen. 
-</div>
+##### Overerving
+
+De relatie `isSubtypeVan` is de allerbelangrijkste relatie hier, omdat deze tussen alles kan gelden (indien van hetzelfde type). Het principe van 'overervering' geldt hier. Doordat `FysiekObject` en subtype is van (of: hoort bij de klasse van) `Object` gelden alle relaties van `Object` ook voor `FysiekObject`. Deze hiërarchie (ofwel: taxonomie) is daarmee leidend voor de relaties die mogen voorkomen. Hier gelden deze hele belangrijke regels (aan de hand van een voorbeeld): 
+
+* __Vanuit IMBOR wordt gesteld dat _alle_ dingen die direct of indirect een subtype zijn van een `Object` een `hasPart` relatie _mogen_ hebben naar _alle_ dingen die direct of indirect een subtype zijn van `Object`, maar dan ook _alleen_ van `Object`.__
+* __IMBOR is dus _niet_ voorschrijvend welke tussen welke subtypen van `Object` deze `hasPart` relatie mag voorkomen.__
+
+Dezelfde regels gelden overigens ook voor het overerven van attributen.
+
+##### Multipliciteit
+
+Bij de relaties die in IMBOR worden aangegeven wordt altijd een multipliciteit (of: kardinaliteit) aangegeven. Hiermee worden soms dus _wel_ bepaalde beperkingen opgelegd. Bijvoorbeeld: 'Kolk' en 'Deksel' zijn allebei `FysiekObject`. Dus is het mogelijk om een relatie `hasPart` tussen deze twee te leggen. In IMBOR wordt echter voorgeschreven dat deze relatie een multipliciteit van '1 op 1' heeft. Als er dus een instantie van een 'Kolk' bestaat _moet_ er ook een `hasPart` relatie zijn naar een instantie van een `Deksel`. 
 
 ##### Inverse van relaties
 
@@ -83,7 +100,6 @@ Eenzelfde constructie geldt voor `nen2660:contains` (bevat). Ook hier is in IMBO
 </details>
 
 ### IMBOR Bouwstenen
-<!-- TODO: versie 2025 -->
 Binnen de IMBOR cursus wordt uitgelegd wat de bouwstenen van IMBOR zijn. Deze ReSpec betreft de technische documentatie, maar de afbeeldingen die in de cursus gebruikt worden maken vrij goed duidelijk hoe een "ingewikkeld" technisch model simpel uitgelegd kan worden aan een assetmanager die uiteindelijk ook de opbouw van IMBOR moet begrijpen. Vandaar dat onderstaande figuren opgenomen zijn. Het eerste figuur illustreert simpel hoe het metamodel van IMBOR in elkaar zit, het tweede figuur illustreert dit met behulp van voorbeelden verder.
 
 <figure>
@@ -185,7 +201,7 @@ Het gebruik hiervan wordt gepropageerd vanuit de [NEN2660][nen2660:2022] en IMBO
 
 #### Classificerende attributen
 
-Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse` of `Objecttype` te introduceren is het attribuut `Verschijningsvorm` onderkent. Dit is een attribuut zoals beschreven in deze sectie van [MIM][1].  In de LinkedData theorie zouden dit subklassen kunnen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het `Objecttype` welke geen specifieke informatiebehoefte hebben. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De `indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden.  
+Omdat IMBOR uitgaat van onderscheidende kenmerken als vuistregel om een `Klasse` of `Objecttype` te introduceren is het attribuut `Verschijningsvorm` onderkent. Dit is een attribuut zoals beschreven in deze sectie van [MIM][1].  In de LinkedData theorie zouden dit subklassen kunnen zijn van de objecttypen waaraan ze hangen. Echter om geen exponentiële groei van objecttypen te veroorzaken wordt gebruik gemaakt van deze 'indicatie classificerend'. Dit zijn detailleringen van het `Objecttype` welke geen specifieke informatiebehoefte hebben. In theorie staat het de softwareleverancier of opdrachtgever vrij om van de attribuut waarden wel expliciete subklassen te maken indien nodig. Bij eventuele uitwisseling zal dan weer een conversie nodig zijn. De 'indicatie classificerend' wordt in de MIM graaf aan de attributen (ofwel mim:Attribuutsoort) gehangen en kan vanuit daar ook geraadpleegd worden.  
 
 <div class='advisement'>
 `Verschijningsvorm` is de vervanging van wat in vorige versie van IMBOR de attributen `Type`, `TypeGedetailleerd` en `TypeExtraGedetailleerd` waren. De hiërarchie die hier in zat is vervallen vanaf IMBOR2025. De waarden die `Verschijningsvorm` kan hebben zijn hiermee samengevoegd/opgeschoond tot één enkele lijst. 

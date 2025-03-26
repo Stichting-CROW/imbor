@@ -16,13 +16,13 @@ var respecConfig = {
   ],
   github: "https://github.com/Stichting-CROW/imbor",
   localBiblio: {
-    NEN2660_2: {
+    'NEN2660-2': {
       title: "Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1",
       href: "https://www.nen.nl/nen-2660-2-2022-nl-291667",
       status: "Norm",
       publisher: "NEN",
     },
-    NEN2660_1: {
+    'NEN2660-1': {
       title: "Regels voor informatiemodellering van de gebouwde omgeving - Deel 1: Conceptuele modellen",
       href: "https://www.nen.nl/nen-2660-1-2022-nl-291666",
       status: "Norm",
@@ -40,7 +40,7 @@ var respecConfig = {
       status: "Published standard",
       publisher: "Stichting CROW",
     },
-    History_TOOI_KG: {
+    'History-TOOI-KG': {
       title: "History in the TOOI knowledge graph",
       href: "https://www.linkedin.com/pulse/history-tooi-knowledge-graph-jan-voskuil/",
       status: "Published best practice",

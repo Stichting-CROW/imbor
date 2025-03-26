@@ -16,7 +16,7 @@ De [[NEN3610]] is binnen de norm duidelijk over de conceptuele beschrijving van 
 Er worden twee opties uitgewerkt om het [[NEN3610]] temporele aspecten model toe te passen in een graph. Deze opties zijn generiek voor al het gebruik in LinkedData, RDF en/of Knowledge Graphs. 
 - Het voorbeeld gaat echter uit van een toepassing in [[IMBOR]]
 - De uitwerkingen zijn gebaseerd op werk dat gedaan is bij [TOOI](https://standaarden.overheid.nl/tooi)
-    - Een gedetailleerde beschrijving is gedaan door [Jan Voskuil](https://www.linkedin.com/in/jan-voskuil/) in de blogpost: [[History_TOOI_KG]]
+    - Een gedetailleerde beschrijving is gedaan door [Jan Voskuil](https://www.linkedin.com/in/jan-voskuil/) in de blogpost: [[History-TOOI-KG]]
 - Tevens wordt gebruik gemaakt van de [NEN3610-2022 Ontologie](https://modellen.geostandaarden.nl/def/nen3610-2022/index.html)
 - Het [voorbeeld](#example-voorbeeldtoepassing-van-het-temporele-model) waarmee gewerkt wordt komt uit de [[NEN3610]]-Bijlage C: 'Voorbeeldtoepassing van het temporele model'
 

@@ -34,7 +34,7 @@ Dit is een voorbeeld-uitwerking in [[Turtle]]:
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
 gemX:Heseveld   a   imbor:b5947439-11e6-423e-b67b-671905610154 ;            # Wijkgrens
-                imbor:ee97b257-d3b8-4d0c-9a42-c07d88b36d9f "Heseveld"@nl ;  # Objectnaam
+                imbor:ee97b257-d3b8-4d0c-9a42-c07d88b36d9f "Heseveld"@nl ;  # naam
                 nen3610:domein  "http://voorbeeld.org/gemX#" ;              
                 nen3610:identificatie   "Heseveld" ;
                 nen2660:contains   gemX:Abri1, gemX:Abri2 ;                 # bevat 
@@ -43,13 +43,13 @@ gemX:Heseveld   a   imbor:b5947439-11e6-423e-b67b-671905610154 ;            # Wi
 gemX:Abri1      a   imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31 ;            # Abri
                 nen3610:domein  "http://voorbeeld.org/gemX#" ;
                 nen3610:identificatie "Abri1" ;
-                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "1" ;            # Objectnummer
+                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "1" ;            # nummer
                 .
 
 gemX:Abri2      a   imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31 ;            # Abri
                 nen3610:domein  "http://voorbeeld.org/gemX#" ;
                 nen3610:identificatie "Abri2" ;
-                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "2" ;            # Objectnummer
+                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "2" ;            # nummer
                 .
 
 ```

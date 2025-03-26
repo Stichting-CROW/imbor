@@ -2,8 +2,8 @@
 
 ***Gebaseerd op GitHub issue: [1258](https://github.com/Stichting-CROW/imbor/issues/1258) en [1276](https://github.com/Stichting-CROW/imbor/issues/1276)***
 
-Vanaf IMBOR2025 is er een nieuw modelleerpatroon geïntroduceerd om relaties tussen klassen en actoren te modelleren, middels rollen. Deze constructie is ontleend uit de [NEN2660-1:2022](nen2660-1:2022). 
-Omdat de [NEN2660-2:2022][nen2660:2022] hier geen standaardoplossing voor biedt, is er een in IMBOR een modelleerconstructie die conform de [NEN2660-1:2022](nen2660-1:2022) gemaakt is.
+Vanaf IMBOR2025 is er een nieuw modelleerpatroon geïntroduceerd om relaties tussen klassen en actoren te modelleren, middels rollen. Deze constructie is ontleend uit de [[NEN2660-1]]. 
+Omdat de [[NEN2660-2]] hier geen standaardoplossing voor biedt, is er een in IMBOR een modelleerconstructie die conform de [[NEN2660-1]] gemaakt is.
 Het gaat hier om de introductie van `imbor:Actor` (als subklasse van `nen2660:PhysicalObject`) en `imbor:Rol`. `imbor:Actor` wordt met de relatie `imbor:speelt` verbonden met een `imbor:Rol`. Welke op zijn beurt met een `imbor:heeftBetrekkingOp` relatie verbonden is met een `nen3610:GeoObject` of `nen2660:InformatieObject`. 
 
 Voor meer toelichting zie: [Techdoc | Actoren en rollen](https://docs.crow.nl/imbor/techdoc/#actoren-en-rollen)
