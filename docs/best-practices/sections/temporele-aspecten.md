@@ -128,36 +128,41 @@ Dit is de uitwerking in [[Turtle]]:
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
-nen3610:Registratie             a  rdfs:Class .
-nen3610:IdentificeerbaarObject  a  rdfs:Class .
-imbor:Gebouw                    a  rdfs:Class .
+nen3610:Registratie a rdfs:Class .
+nen3610:IdentificeerbaarObject a rdfs:Class .
+imbor:Gebouw a rdfs:Class .
 
-gemX:id1  a                       imbor:Gebouw, nen3610:IdentificeerbaarObject ;
-          nen3610:identificatie   "id1" ;
-          nen3610:domein          gemX: .
+gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarObject ;
+            nen3610:identificatie       "id1" ;
+            nen3610:domein              gemX: ;
+            .
 
-<<gemX:id1  imbor:gebruiksdoel  "kantoorfunctie"  >>  nen3610:registratiegegevens  gemX-regX:id1_1 .
-<<gemX:id1  imbor:gebruiksdoel  "woonfunctie"     >>  nen3610:registratiegegevens  gemX-regX:id1_2 .
-<<gemX:id1  imbor:gebruiksdoel  "logiesfunctie"   >>  nen3610:registratiegegevens  gemX-regX:id1_3 .
-<<gemX:id1  imbor:adres         "Peperstraat"     >>  nen3610:registratiegegevens  gemX-regX:id1_0 .
+gemX:id1    imbor:gebruiksdoel    "kantoorfunctie"    {|  nen3610:registratiegegevens     gemX-regX:id1_1       |} .
+gemX:id1    imbor:gebruiksdoel    "woonfunctie"       {|  nen3610:registratiegegevens     gemX-regX:id1_2       |} .
+gemX:id1    imbor:gebruiksdoel    "logiesfunctie"     {|  nen3610:registratiegegevens     gemX-regX:id1_3       |} .
+gemX:id1    imbor:adres           "Peperstraat"       {|  nen3610:registratiegegevens     gemX-regX:id1_0       |} .
 
 gemX-regX:id1_0 a nen3610:Registratie ;
-            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
+            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
+    .
 gemX-regX:id1_1 a nen3610:Registratie ;
-            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
+            nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
+    .
 gemX-regX:id1_2 a nen3610:Registratie ;
-            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
+            nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
+    .
 gemX-regX:id1_3 a nen3610:Registratie ;
-            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
-```
+            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
+    .
+```    
 
 
 #### Optie B: 3½-D met RDF Reïficatie

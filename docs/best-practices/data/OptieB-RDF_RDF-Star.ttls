@@ -13,10 +13,10 @@ gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarOb
             nen3610:domein              gemX: ;
             .
 
-<<gemX:id1    imbor:gebruiksdoel    "kantoorfunctie"    >>  nen3610:registratiegegevens     gemX-regX:id1_1 .
-<<gemX:id1    imbor:gebruiksdoel    "woonfunctie"       >>     nen3610:registratiegegevens     gemX-regX:id1_2 .
-<<gemX:id1    imbor:gebruiksdoel    "logiesfunctie"     >>   nen3610:registratiegegevens     gemX-regX:id1_3 .
-<<gemX:id1    imbor:adres           "Peperstraat"       >>     nen3610:registratiegegevens     gemX-regX:id1_0 .
+gemX:id1    imbor:gebruiksdoel    "kantoorfunctie"    {|  nen3610:registratiegegevens     gemX-regX:id1_1       |} .
+gemX:id1    imbor:gebruiksdoel    "woonfunctie"       {|     nen3610:registratiegegevens     gemX-regX:id1_2    |} .
+gemX:id1    imbor:gebruiksdoel    "logiesfunctie"     {|   nen3610:registratiegegevens     gemX-regX:id1_3      |} .
+gemX:id1    imbor:adres           "Peperstraat"       {|     nen3610:registratiegegevens     gemX-regX:id1_0    |} .
 
 gemX-regX:id1_0 a nen3610:Registratie ;
             nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
