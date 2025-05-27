@@ -1,4 +1,4 @@
-## Materie
+## Geometrie
 
 ***Gebaseerd op GitHub issue: [888](https://github.com/Stichting-CROW/imbor/issues/888), [1607](https://github.com/Stichting-CROW/imbor/issues/1607) en [1240](https://github.com/Stichting-CROW/imbor/issues/1240)***
 
