@@ -1,0 +1,33 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
+@prefix nen2660: <https://w3id.org/nen2660/def#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
+@prefix gemX: <http://voorbeeld.org/gemX#>.
+@prefix tooiGem: <https://identifier.overheid.nl/tooi/id/gemeente/>.
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/>.
+
+gemX:LM123 a imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ; # Paal
+    nen3610:domein "http://voorbeeld.org/gemX#" ;
+    nen3610:identificatie "LM123"^^xsd:string ;
+    imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1  imbor-domeinwaarde:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e ; # verschijningsvorm / Lichtmast
+    nen2660:consistsOf gemX:Paal123_hardhout, gemX:Paal123_staal ;
+    .
+
+gemX:Paal123_hardhout a imbor:dfe3117e-acb1-4d65-ba55-80b75f86c3c0 ; # Hardhout
+    nen3610:domein "http://voorbeeld.org/gemX#" ;
+    nen3610:identificatie "Paal123_hardhout"^^xsd:string ;
+    imbor:400fc25d-575d-43dc-a7ae-217b42375a85 "60"^^xsd:decimal ; # percentage / 60% hardhout
+    imbor:1e36586b-e235-4d11-9430-abeee4a70821 "70,12"^^xsd:decimal ; # gewicht / 70,12 kg
+    imbor:034dd69a-cba8-4552-ad9f-b743aa30bc8a imbor-domeinwaarde:b0ec993d-b6ed-437f-87e8-65e415f19592 ; # materiefase / Fase 1
+    .
+
+gemX:Paal123_staal a imbor:ce8aa2ed-1ec2-4ba9-adda-2fdb57dd39d9 ; # Staal
+    nen3610:domein "http://voorbeeld.org/gemX#" ;
+    nen3610:identificatie "Paal123_hardhout"^^xsd:string ;
+    imbor:400fc25d-575d-43dc-a7ae-217b42375a85 "40"^^xsd:decimal ; # percentage / 40% staal
+    imbor:1e36586b-e235-4d11-9430-abeee4a70821 "120,55"^^xsd:decimal ; # gewicht / 120,55 kg
+    imbor:034dd69a-cba8-4552-ad9f-b743aa30bc8a imbor-domeinwaarde:64085404-a5ee-438a-b0bf-9bff70dd401f ; # materiefase / Fase 0
+    .
+
