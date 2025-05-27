@@ -5,8 +5,6 @@
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
 @prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
-@prefix tooiGem: <https://identifier.overheid.nl/tooi/id/gemeente/>.
-@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/>.
 
 gemX:LM123 a imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ; # Paal
     nen3610:domein "http://voorbeeld.org/gemX#" ;

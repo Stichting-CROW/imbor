@@ -40,14 +40,14 @@ IMBOR-gegevens gaan nagenoeg altijd over overheidsdata. Hierbij wordt geadviseer
 In deze best practice is er voor gekozen om (nog) geen invulling te geven aan metadata. Deze overweging is gemaakt omdat deze best practice dan minder toegankelijk zou zijn, er gefocust is op de essentie en omdat de verschillende manieren van vastlegging nog niet goed genoeg onderzocht zijn. 
 
 Mocht er toch dringende behoefte zijn, wordt er aanbevolen om deze minimale metadata op te nemen:
-| Attribuut | URI | Datatype | 
-| -------- | --- |------- | 
-| identifier | dct:identifier | xsd:anyURI | 
-| title | dct:title | xsd:string |
-| description | dct:description | xsd:string | 
-| modify | dct:modified | xsd:date | 
-| publisher | dct:publisher | xsd:string |
-| {.data} | | |
+| Attribuut   | URI             | Datatype   |
+|-------------|-----------------|------------|
+| identifier  | dct:identifier  | xsd:anyURI |
+| title       | dct:title       | xsd:string |
+| description | dct:description | xsd:string |
+| modify      | dct:modified    | xsd:date   |
+| publisher   | dct:publisher   | xsd:string |
+| {.data}     |                 |            |
 
 #### Revisies
 
@@ -64,7 +64,7 @@ In deze best practice wordt het IMBOR als voorbeeld van ontologie gebruikt. IMBO
 [4]: https://docs.crow.nl/onto-verkenner/imbor/
 [5]: https://docs.crow.nl/imbor/techdoc/#objecttypen
 [6]: https://w3c.github.io/data-shapes/shacl/#validation-definition
-[7]: https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_well_known_text
+[7]: https://opengeospatial.github.io/ogc-geosparql/geosparql11/document.html#rdfse_wkt
 [8]: https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html#_geography_markup_language
 [9]: https://docs.geostandaarden.nl/g4w/geox/#geometrie-encodings
 [10]: https://www.ogc.org/standards/sfa
