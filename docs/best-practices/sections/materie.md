@@ -11,7 +11,7 @@ Dit modelleerpatroon gaat er vanuit de materialen dus *ook* geïnstanteerd worde
 
 Zie ook: [Techdoc | Materie](https://docs.crow.nl/imbor/techdoc/#materie)
 
-### Toepassing materie IMBOR
+### Toepassing materie in IMBOR
 
 >EXAMPLE
 >Gemeente X wil vastleggen dat een bepaalde lichtmast uit een stalen en hardhouten gedeelte bestaat. Om dit te doen dient de gemeente in hun systeem een lichtmast (`LM123`) vast te leggen van het type IMBOR Lichtmast. Vervolgens moeten aangegeven worden middels de `nen2660:hasPart` dat deze deels hardhout en deels staal is. Dit kan gedaan worden door instantaties van de IMBOR klassen 'Hardhout' en 'Staal te maken (`gemX:Paal123_hardhout` en `gemX:Paal123_staal`) en deze middels de `nen2660:hasPart` aan de `LM123` te linken. De gemeente wil ten behoeve van het materialenpaspoort aangegeven of het hergebruikte materialen betreft, wat het gewicht van het materiaal is en wat het hoofdmateriaal van de lichtmast is. Per materie worden zodoende de attributen `percentage` en `gewicht` aangegeven. Uit de percentages kan afgeleid worden dat het hoofdmateriaal 'hardhout' is. Als laatste wordt middels het attribuut `materiefase` aangegeven dat het hardhout één keer eerder gebruikt is (`Fase 1`) en het staal nieuw is (`Fase 0`).   
