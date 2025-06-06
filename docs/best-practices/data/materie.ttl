@@ -6,11 +6,10 @@
 @prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
-gemX:LM123 a imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ; # Paal
+gemX:lm123 a imbor:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e ; # Lichtmast
     nen3610:domein "http://voorbeeld.org/gemX#" ;
     nen3610:identificatie "LM123"^^xsd:string ;
-    imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1  imbor-domeinwaarde:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e ; # verschijningsvorm / Lichtmast
-    nen2660:consistsOf gemX:Paal123_hardhout, gemX:Paal123_staal ;
+    nen2660:consistsof gemX:paal123_hardhout, gemX:paal123_staal ;
     .
 
 gemX:Paal123_hardhout a imbor:dfe3117e-acb1-4d65-ba55-80b75f86c3c0 ; # Hardhout

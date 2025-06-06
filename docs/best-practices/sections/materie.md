@@ -15,6 +15,8 @@ Zie ook: [Techdoc | Materie](https://docs.crow.nl/imbor/techdoc/#materie)
 
 >EXAMPLE
 >Gemeente X wil vastleggen dat een bepaalde lichtmast uit een stalen en hardhouten gedeelte bestaat. Om dit te doen dient de gemeente in hun systeem een lichtmast (`LM123`) vast te leggen van het type IMBOR Lichtmast. Vervolgens moeten aangegeven worden middels de `nen2660:hasPart` dat deze deels hardhout en deels staal is. Dit kan gedaan worden door instantaties van de IMBOR klassen 'Hardhout' en 'Staal te maken (`gemX:Paal123_hardhout` en `gemX:Paal123_staal`) en deze middels de `nen2660:hasPart` aan de `LM123` te linken. De gemeente wil ten behoeve van het materialenpaspoort aangegeven of het hergebruikte materialen betreft, wat het gewicht van het materiaal is en wat het hoofdmateriaal van de lichtmast is. Per materie worden zodoende de attributen `percentage` en `gewicht` aangegeven. Uit de percentages kan afgeleid worden dat het hoofdmateriaal 'hardhout' is. Als laatste wordt middels het attribuut `materiefase` aangegeven dat het hardhout één keer eerder gebruikt is (`Fase 1`) en het staal nieuw is (`Fase 0`).   
+>
+>Er zijn nu gegevens vastgelegd bij de instanties van de twee materialen. Deze zijn gelinkt aan de instantie van Lichtmast. Hierdoor kan er nu een materialenpaspoort gegenereerd / gepresenteerd worden van 'LM123'.
 
 Dit is een voorbeelduitwerking in [[Turtle]]:
 
@@ -25,15 +27,12 @@ Dit is een voorbeelduitwerking in [[Turtle]]:
 @prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
 @prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
-@prefix tooiGem: <https://identifier.overheid.nl/tooi/id/gemeente/>.
-@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/>.
+@prefix gemX: <http://voorbeeld.org/gemX#>
 
-gemX:LM123 a imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ; # Paal
+gemX:LM123 a imbor:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e ; # Lichtmast
     nen3610:domein "http://voorbeeld.org/gemX#" ;
     nen3610:identificatie "LM123"^^xsd:string ;
-    imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1  imbor-domeinwaarde:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e ; # verschijningsvorm / Lichtmast
-    nen2660:consistsOf gemX:Paal123_hardhout, gemX:Paal123_staal ;
+    nen2660:consistsof gemX:paal123_hardhout, gemX:paal123_staal ;
     .
 
 gemX:Paal123_hardhout a imbor:dfe3117e-acb1-4d65-ba55-80b75f86c3c0 ; # Hardhout

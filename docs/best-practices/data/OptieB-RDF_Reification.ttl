@@ -1,8 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
+@prefix gemX-reg: <http://voorbeeld.org/gemX-reg#> . 
 
 nen3610:Registratie             a           rdfs:Class .
 nen3610:IdentificeerbaarObject  a           rdfs:Class .
