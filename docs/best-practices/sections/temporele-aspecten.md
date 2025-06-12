@@ -143,23 +143,23 @@ gemX:id1    imbor:gebruiksdoel    "logiesfunctie"     {|  nen3610:registratiegeg
 gemX:id1    imbor:adres           "Peperstraat"       {|  nen3610:registratiegegevens     gemX-regX:id1_0       |} .
 
 gemX-regX:id1_0 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
+            nen3610:beginGeldigheid   "2006-06-02"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
     .
 gemX-regX:id1_1 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2006-06-02"^^xsd:date ;
+            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
     .
 gemX-regX:id1_2 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
+            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
     .
 gemX-regX:id1_3 a nen3610:Registratie ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
     .
 ```    

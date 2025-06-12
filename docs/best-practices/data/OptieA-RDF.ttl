@@ -13,7 +13,7 @@ imbor:Gebouw a rdfs:Class .
 gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX: ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
             nen3610:versie              "3" ;
             imbor:adres                 "Peperstraat" ;
@@ -26,8 +26,8 @@ gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarOb
 gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigbeheid   "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2006-06-02"^^xsd:date ;
+            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:versie              "1" ;
@@ -42,8 +42,8 @@ gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarOb
 gemX-history:id1_2    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
             nen3610:identificatie       "id1" ;
             nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigbeheid   "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigbeheid    "2009-11-12"^^xsd:date ;
+            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
+            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
             nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
             nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
             nen3610:versie              "2" ;
