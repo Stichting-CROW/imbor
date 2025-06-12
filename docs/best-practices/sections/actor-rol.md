@@ -66,7 +66,7 @@ De reden dat rollen klassen zijn die geïnstanteerd kunnen worden is onder ander
 
 Dit is een voorbeelduitwerking in [[Turtle]]:
 
-```turte
+```turtle
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
