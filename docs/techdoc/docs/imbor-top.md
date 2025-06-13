@@ -308,10 +308,12 @@ Het gebruik hiervan wordt gepropageerd vanuit de [NEN3610:2022][nen3610:2022] en
 
 #### Materie
 
-Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de [NEN2660-2:2022][nen2660:2022] is hiervoor een modelleerconstructie gegeven die IMBOR nu toepast. Er kan een relatie `bestaatUit` gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allemaal soorten materialen opgenomen en met relaties verbonden aan de juiste ObjectTypen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Nu IMBOR zich committeert aan de [NEN2660-2:2022][nen2660:2022] en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt in de toekomst aangesloten bij een bestaand(e) lijst/initiatief. 
+Vóór IMBOR2022 werden materialen als attributen van Objecttypen vastgelegd. Binnen de [NEN2660-2:2022][nen2660:2022] is hiervoor een modelleerconstructie gegeven die IMBOR nu toepast. Er kan een relatie `bestaatUit` (`nen2660:consistOf`) gelegd worden tussen de klasse `ReeelObject` en de klasse `Materie`. Dit betekent dat materialen dus ook een klasse zijn en ook als zodanig gemodelleerd zijn. Binnen IMBOR2022 zijn allerlei soorten materialen opgenomen. Deze lijst is op basis van 'expert judgement' samengesteld door de jaren heen. Elke soort relatie tussen een Object en een Materiaal kan gelegd worden.
+
+Nu IMBOR zich committeert aan de [NEN2660-2:2022][nen2660:2022] en daarmee LinkedData wordt er gekeken of de materialen apart van IMBOR beheert kunnen gaan worden. Het liefst wordt in de toekomst aangesloten bij een bestaand(e) lijst/initiatief. Voorsorterend daarop zijn daarom vanaf IMBOR2025 de materialen opgenomen in een aparte graaf (maar wel nog binnen de IMBOR namespace).
 
 <div class='advisement'>
-Ter verduidelijking IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden. We geven alleen 'voorstellen'.
+Ter verduidelijking IMBOR limiteert niet welke relaties er tussen een `FysiekObject` en een `Materie` gelegd kunnen worden.
 </div>
 
 #### Actoren en rollen

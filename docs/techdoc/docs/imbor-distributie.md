@@ -115,11 +115,23 @@ Naast de distributie in de relationele tabellen van Acces wordt ook een LinkedDa
 
 #### Ontologie indeling (in grafen)
 
-Ook de LinkedData versie van IMBOR (IMBOR-LD) is volgt de modulaire indeling. In IMBOR-LD wordt dit met verschillen grafen (gerepresenteerd via prefixen) vastgelegd.
+Ook de LinkedData versie van IMBOR (IMBOR-LD) is volgt de modulaire indeling. In IMBOR-LD wordt dit met verschillende namespaces vastgelegd.
 - `imbor-term:*` zijn de concepten die het begrippenkader (of vocabulaire) van IMBOR beschrijven.
 - `imbor:*` zijn de concepten die de (normatieve) elementen binnen de IMBOR ontologie beschrijven (dit staat gelijk aan de 'imborKern').
 - `imbor-domeinwaarde:*` zijn alle domeinwaarden binnen IMBOR (dit zijn instanties). Deze staan in een aparte graaf vanwege de overzichtelijkheid.
-- `imbor-refmodels:*` zijn de concepten waarin externe ontologien aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.
+- `imbor-refmodels:*` zijn de concepten waarin externe ontologiën aangehaald worden. Hier staan de benodigde gegevens om relaties naar toe te kunnen leggen.
+
+Qua indeling in grafen worden de volgende grafen onderscheiden:
+- `https://data.crow.nl/imbor/term/` voor de vocabulaire.
+- `https://data.crow.nl/imbor/def/` voor de kern (exclusief de domeinwaarden).
+- `https://data.crow.nl/imbor/id/domeinwaarden/` voor de domeinwaarden.
+- `https://data.crow.nl/imbor/aanvullend-metamodel/` voor de aanvullende meta concepten.
+- `https://data.crow.nl/imbor/addendum/referentiemodellen/` voor de modellen waaraan gerefereerd wordt.
+- `https://data.crow.nl/imbor/addendum/oagbd/` voor het OAGBD addendum.
+- `https://data.crow.nl/imbor/addendum/geometrie/` voor het geometrie addendum.
+- `https://data.crow.nl/imbor/addendum/materie/` voor het materie addendum.
+- `https://data.crow.nl/imbor/mim/` voor het MIM addendum.
+- `https://data.crow.nl/change/log/imbor/` voor de logging.
 
 Omdat IMBOR een extensie is van de [NEN2660-2:2022][nen2660:2022] is de IMBOR kern direct 'gesubclassed' aan de [NEN2660-2:2022][nen2660:2022] concepten. Vandaar dat de concepten die we gebruiken uit de [NEN2660-2:2022][nen2660:2022] afgebeeld zijn met de prefix `nen2660:*`. 
 
