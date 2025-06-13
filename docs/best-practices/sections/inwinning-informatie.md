@@ -1,4 +1,4 @@
-## InformatieObjecten (a.d.h.v. Inwinning-informatie)
+## InformatieObjecten (en Inwinning-informatie)
 
 ***Gebaseerd op GitHub issue: [1389](https://github.com/Stichting-CROW/imbor/issues/1389).***
 
