@@ -39,6 +39,9 @@ Vanuit de [[NEN3610]] wordt de klasse `nen3610:Registratie` gezien als de 'metad
 
 Bij [optie B](#optie-b-3-d-met-rdf-star) is op attribuutniveau de tijdlijn opgenomen. Deze optie kan wat [optie A](#optie-a-cloning) kan en meer. [Optie A](#optie-a-cloning) is ook uit [optie B](#optie-b-3-d-met-rdf-star) af te leiden. Hiermee is [optie B](#optie-b-3-d-met-rdf-star) dan ook [[NEN3610]] compliant. Deze optie is toepasbaar in graphs en zal niet snel in een UML model, XML of regulier JSON toepassing terechtkomen.
 
+>ADVISEMENT
+>In de voorbeelden worden géén gebruik gemaakt van daadwerkelijke IMBOR URI's vanwege de leesbaarheid.
+
 #### Optie A: Cloning
 
 Klonen is een methode om tijdlijn informatie te modelleren door kopieën van informatieobject te maken op verschillende tijdstippen, met behulp van een ontologie zoals PROV-O. Telkens wanneer een eigenschap of een informatieobject verandert, wordt er een kloon gemaakt met een andere URI om de vorige staat te behouden. Elke kloon vertegenwoordigt een (historische) versie of een tijdsinterval van de informatieobject. Deze aanpak zorgt ervoor dat het modelleren additief blijft, wat betekent dat het toevoegen van historische informatie het oorspronkelijke gegevensmodel niet ingewikkelder maakt. Met klonen is het relatief eenvoudig om historische toestanden te reconstrueren en individuele toestandsveranderingen in de loop van de tijd bij te houden. Een nadeel is echter de potentie voor een aanzienlijke hoeveelheid dubbele gegevens, wat misschien niet geschikt is voor scenario's met frequente wijzigingen of grote datasets.
