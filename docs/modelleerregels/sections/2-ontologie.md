@@ -2,20 +2,6 @@
 
 De modelleerregels in deze sectie betreffen **interne regels**. Dit wil zeggen dat ze van toepassing zijn op het IMBOR zelf. In dit specifieke geval hebben ze betrekking op het maken en onderhouden van de `IMBOR Ontologie` (ook wel `IMBOR Kernmodel` genoemd).
 
-### Consistentie in gebruik van 'Bovenliggende waarde' (R0013)
-
-Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
-
-|         |                                                                                              |
-|---------|----------------------------------------------------------------------------------------------|
-| *Regel* | Elke domeinwaarde van Type moet het bijbehorende ObjectType als bovenliggende waarde hebben. |
-| *ID*    | R0013 *(2db3fe37-17c6-3ddc-9587-650197016e14)*                                               |
-| *Categorie* | Model consistentie
- |*Gerelateerd issue* |  |
- |*Controle query* | checkTypesZonderBovenliggendeWaarde |
-| {.index} | | 
-
-
 ### Discriminator semantiek gaat voor attributen indeling (R0043)
 
 Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
@@ -86,20 +72,6 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | {.index} | | 
 
 
-### Relatie tussen een Attribuut en een TypeAttribuut is 1:1 (R0016)
-
-Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
-
-|         |                                                                              |
-|---------|------------------------------------------------------------------------------|
-| *Regel* | Elk attribuut moet één en slechts één relatie naar een TypeAttribuut hebben. |
-| *ID*    | R0016 *(a4128a71-9200-5eec-40de-39281e8b47bc)*                               |
-| *Categorie* | Model consistentie
- |*Gerelateerd issue* |  |
- |*Controle query* | checkAttributenZonderTypeAttribuut |
-| {.index} | | 
-
-
 ### Relatie tussen een Domeinwaarde en een Enumeratietype is 1:n (R0017)
 
 Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
@@ -125,20 +97,6 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
  |*Controle query* | checkDubbeleEnumeratieDomeinwaarden;  |
-| {.index} | | 
-
-
-### Relatie tussen een Enumeratietype en een Klasse is 1:1 (R0019)
-
-Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
-
-|         |                                                                     |
-|---------|---------------------------------------------------------------------|
-| *Regel* | Elk Enumeratietype is per klasse uniek. (Dit is misgegaan bij Boom) |
-| *ID*    | R0019 *(83c851f2-3edb-8f7a-2732-d99253296ec4)*                      |
-| *Categorie* | Model consistentie
- |*Gerelateerd issue* |  |
- |*Controle query* | checkDubbeleEnumeratietypes |
 | {.index} | | 
 
 
@@ -240,14 +198,14 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistent
 | {.index} | | 
 
 
-### Wanneer het Attribuut 'Verschijningsvorm' gebruikt wordt, moet er een 1:1 zijn naar een corresponderend Enumeratietype (R0028)
+### Wanneer het Attribuut 'Verschijningsvorm' gebruikt wordt, moet er een 1;1 zijn naar een corresponderend Enumeratietype (R0028)
 
 Van toepassing op de `Ontologie`, en valt binnen de categorie: `Model consistentie`
 
-|         |                                                                                                                                                                                                                                                          |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Regel* | Voor alle ObjectTypen met het attribuut Verschijningsvorm geldt dat er een Enumeratietype van de vorm [Objecttype]Type moet bestaan en aan de combinatie van KlasseAttribuut is gekoppeld waarvoor geldt dat: Klasse = [Objecttype] en Attribuut = Type. |
-| *ID*    | R0028 *(74296337-106b-2d1e-61a2-2fe747b03f6a)*                                                                                                                                                                                                           |
+|         |                                                                                                                                                                                                                                                                       |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Regel* | Voor alle ObjectTypen met het attribuut Verschijningsvorm geldt dat er een Enumeratietype van de vorm [Objecttype]Verschijningsvorm moet bestaan en aan de combinatie van KlasseAttribuut is gekoppeld waarvoor geldt dat: Klasse = [Objecttype] en Attribuut = Type. |
+| *ID*    | R0028 *(74296337-106b-2d1e-61a2-2fe747b03f6a)*                                                                                                                                                                                                                        |
 | *Categorie* | Model consistentie
  |*Gerelateerd issue* |  |
  |*Controle query* | checkObjecttypenMetType |
@@ -268,7 +226,7 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
 | {.index} | | 
 
 
-### Semantische relaties genieten de voorkeur boven Attributen (R0031)
+### Semantische relaties genieten de voorkeur boven Attributen 1 (R0031)
 
 Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
 
@@ -306,6 +264,48 @@ Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
 | *ID*    | R0033 *(df512f1d-8d42-87a0-419f-50ff71163421)*                                                                                                                                                                                                                                                              |
 | *Categorie* | Semantiek
  |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/152  |
+ |*Controle query* |  |
+| {.index} | | 
+
+
+### Semantische relaties genieten de voorkeur boven Attributen 2 (R0043)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
+
+|         |                                                                                                                                                                              |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Regel* | Wanneer gegevens afgeleidt kunnen worden van de geometrie (bv. Gemeente, Gebiedsindeling e.d.) wordt dit niet in een Attribuut gedaan, maar middels een semantische relatie. |
+| *ID*    | R0043 *(f944afcf-5783-3ff5-9da2-3d9a89de0bd2)*                                                                                                                               |
+| *Categorie* | Semantiek
+ |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/1101 |
+ |*Controle query* |  |
+| {.index} | | 
+
+
+### ObjectTypen hoeven niet persé de bladeren van de hierarchie te zijn (R0044)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
+
+|         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Regel* | Binnen IMBOR laten wij het principe los dat alleen bladeren van de hiërarchie Objecttypen (lees: instantiërbaar) zijn.  Daar staat tegenover dat wij zelf gaan bepalen welke niveau in de hiërarchie wij Objecttypen (Concrete klassen) vinden.  Hierdoor kan het dan voorkomen dat wij subklassen introduceren (onder objecttypen), die niet Objectentypen zijn (dus niet instantiërbare abstracte klassen). En dat er ObjectTypen onder ObjectTypen hangen Dit houdt onder andere in dat wij de externe soorten boom (zoals die van GWSW) 1-op-1 overnemen; Maar wij vervolgens aangeven welke volgens de IMBOR context Objecttypen zijn |
+| *ID*    | R0044 *(1e2f7efb-66e3-3b88-3b44-e539fb234c04)*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| *Categorie* | Semantiek
+ |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/1432 |
+ |*Controle query* |  |
+| {.index} | | 
+
+
+### Afleidbare attributen worden niet in IMBOR opgenomen.  (R0045)
+
+Van toepassing op de `Ontologie`, en valt binnen de categorie: `Semantiek`
+
+|         |                                                                                                                                                                                                                                                                 |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Regel* | Attributen die afleidbaar zijn door GIS acties of afleidingen op basis van externe datasets worden niet in IMBOR opgenomen. Om IMBOR klein en zuiver te houden worden deze niet toegestaan. Het gaat bijvoorbeeld om gebiedstype, grondsoort, wijk, buurt, etc. |
+| *ID*    | R0045 *(1c6ed2da-9fce-4080-985b-502bf0298712)*                                                                                                                                                                                                                  |
+| *Categorie* | Semantiek
+ |*Gerelateerd issue* | https://github.com/Stichting-CROW/imbor/issues/1101 |
  |*Controle query* |  |
 | {.index} | | 
 
