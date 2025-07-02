@@ -18,7 +18,7 @@
 * IMBOR Addendum MIM
   * https://hub.laces.tech/crow/imbor/2025/p/ad-mim/sparql
 * IMBOR Volledig-CombiGraph
-  * https://hub.laces.tech/crow/imbor/2025/p/volledig-combigraph/sparq  
+  * https://hub.laces.tech/crow/imbor/2025/p/volledig-combigraph/sparql  
 * IMBOR Changelog
   * https://hub.laces.tech/crow/imbor/2025/p/changelog/sparql
 
