@@ -13,7 +13,7 @@ var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
             company: "CROW",
         },
         {
-            name: "Elisabeth Klören",
+            name: "Elisabeth de Vries",
             company: "CROW",
         }
     ],

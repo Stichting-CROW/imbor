@@ -1,24 +1,26 @@
-### IMBOR2025c (ter visielegging)
+### IMBOR2025
 * IMBOR Vocabulaire
-  * https://hub.laces.tech/crow/imbor/2025/c/vocabulaire/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/vocabulaire/sparql
 * IMBOR Kern
-  * https://hub.laces.tech/crow/imbor/2025/c/kern/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/kern/sparql
 * IMBOR Domeinwaarden
-  * https://hub.laces.tech/crow/imbor/2025/c/domeinwaarden/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/domeinwaarden/sparql
 * IMBOR Aanvullend metamodel
-  * https://hub.laces.tech/crow/imbor/2025/c/aanvullend-metamodel/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/aanvullend-metamodel/sparql
 * IMBOR Addendum Geometrie
-  * https://hub.laces.tech/crow/imbor/2025/c/ad-geometrie/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/ad-geometrie/sparql
+* IMBOR Addendum Materie
+  * https://hub.laces.tech/crow/imbor/2025/p/ad-materie/sparql
 * IMBOR Addendum OAGBD
-  * https://hub.laces.tech/crow/imbor/2025/c/ad-oagbd/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/ad-oagbd/sparql
 * IMBOR Addendum Referentiemodellen
-  * https://hub.laces.tech/crow/imbor/2025/c/ad-refmodels/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/ad-refmodels/sparql
 * IMBOR Addendum MIM
-  * https://hub.laces.tech/crow/imbor/2025/c/ad-mim/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/ad-mim/sparql
 * IMBOR Volledig-CombiGraph
-  * https://hub.laces.tech/crow/imbor/2025/c/volledig-combigraph/sparq  
+  * https://hub.laces.tech/crow/imbor/2025/p/volledig-combigraph/sparq  
 * IMBOR Changelog
-  * https://hub.laces.tech/crow/imbor/2025/c/changelog/sparql
+  * https://hub.laces.tech/crow/imbor/2025/p/changelog/sparql
 
 
 ### IMBOR2022

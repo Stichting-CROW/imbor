@@ -5,7 +5,7 @@ var respecConfig = { // => https://github.com/stichting-crow/respec/wiki
     license: "CC-BY",
     // emailComments: "rik",
     hypothesisComments: "false",
-    prevVersion: "https://docs.crow.nl/imbor/techdoc/versies/Publicatie-IMBOR2022-20231017/",
+    prevVersion: "https://docs.crow.nl/imbor/techdoc/versies/Ter-visielegging-IMBOR2025-20250430/",
     editors: [
         {
             name: "Rik",

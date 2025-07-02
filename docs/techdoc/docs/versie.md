@@ -18,4 +18,5 @@
 | 22-03-2023 | 1.12   | Update OAGDB en redacteurs                                                           |
 | 01-01-2024 | 2.0    | Appendix 2024 toegevoegd                                                             |
 | 11-03-2025 | 3.0    | Ter visielegging 2025                                                                |
+| 01-07-2025 | 3.1    | IMBOR 2025 release                                                                   |
 | { .data }  |        |                                                                                      |

@@ -1,0 +1,95 @@
++ <https://data.crow.nl/imbor-ref/def/levensfaseTyperingShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
++ <https://data.crow.nl/imbor-ref/def/levensfaseTyperingShape> <http://www.w3.org/ns/shacl#property> _:cb20bc28cd7c34818d11908d729aa45eafb035d46d74653467721c22becaadf8c54 .
++ <https://data.crow.nl/imbor-ref/def/levensfaseTyperingShape> <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://data.crow.nl/imbor-ref/def/levensfaseTypering> .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2000/01/rdf-schema#comment> "Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het 'IMBOR Aanvullend Metamodel'. Dit betreft een kleine ontologie van beschrijfende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn."@nl .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2000/01/rdf-schema#label> "IMBOR Aanvullend metamodel"@nl .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2000/01/rdf-schema#> .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2002/07/owl#> .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/nen2660/data/concat/nen2660.ttl> .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2002/07/owl#priorVersion> "IMBOR2022" .
++ <https://data.crow.nl/imbor/aanvullend-metamodel/> <http://www.w3.org/2002/07/owl#versionInfo> "IMBOR2025" .
++ <https://data.crow.nl/imbor/def/Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
++ <https://data.crow.nl/imbor/def/Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/nen2660/def#PhysicalObject> .
++ <https://data.crow.nl/imbor/def/Actor> <http://www.w3.org/2004/02/skos/core#definition> "Een entiteit die in staat is om handelingen uit te voeren en een specifieke functie of positie te vervullen in een bepaalde context."@nl .
++ <https://data.crow.nl/imbor/def/Actor> <http://www.w3.org/2004/02/skos/core#prefLabel> "Actor"@nl .
++ <https://data.crow.nl/imbor/def/Rol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
++ <https://data.crow.nl/imbor/def/Rol> <http://www.w3.org/2004/02/skos/core#definition> "Een samenhangende verzameling van verwachtingen, verantwoordelijkheden, bevoegdheden en gedragingen die een Actor kan aannemen in relatie tot iets."@nl .
++ <https://data.crow.nl/imbor/def/Rol> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rol"@nl .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOp> <http://www.w3.org/2004/02/skos/core#definition> "Een relatie die aangeeft dat een Rol alleen geldt in de context van een iets specifieks."@nl .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOp> <http://www.w3.org/2004/02/skos/core#prefLabel> "heeftBetrekkingOp"@nl .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOpShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOpShape> <http://www.w3.org/ns/shacl#property> _:cb0 .
++ <https://data.crow.nl/imbor/def/heeftBetrekkingOpShape> <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://data.crow.nl/imbor/def/heeftBetrekkingOp> .
++ <https://data.crow.nl/imbor/def/speelt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
++ <https://data.crow.nl/imbor/def/speelt> <http://www.w3.org/2004/02/skos/core#definition> "Een relatie die aangeeft dat een Actor een bepaalde Rol op zich neemt of uitvoert."@nl .
++ <https://data.crow.nl/imbor/def/speelt> <http://www.w3.org/2004/02/skos/core#prefLabel> "speelt"@nl .
++ <https://data.crow.nl/imbor/def/speeltShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
++ <https://data.crow.nl/imbor/def/speeltShape> <http://www.w3.org/ns/shacl#property> _:cb9ab77062c67de49c4fa5ea9b8da36fef6b1a7b9bb20f57eb03afd43c3d4a8ac2 .
++ <https://data.crow.nl/imbor/def/speeltShape> <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://data.crow.nl/imbor/def/speelt> .
++ <https://data.crow.nl/imbor/def/typeLijstShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
++ <https://data.crow.nl/imbor/def/typeLijstShape> <http://www.w3.org/ns/shacl#property> _:cbd244d5238a709add25f16281085fbca5b0413226032019e5be5d06a4590bd77a .
++ <https://data.crow.nl/imbor/def/typeLijstShape> <http://www.w3.org/ns/shacl#targetSubjectsOf> <https://data.crow.nl/imbor/def/typeLijst> .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/nen2660/term#contains> .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/nen2660/def#contains> .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2004/02/skos/core#definition> "De reële objecten die zich in een ruimtelijk gebied bevinden, meestal de gasvormige hoeveelheid bulkmaterie die in dat gebied aanwezig isn"@nl .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2004/02/skos/core#definition> "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "bevindt zich in"@nl .
++ <https://w3id.org/nen2660/def#isContainedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "is contained by"@en .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/nen2660/term#hasPart> .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/nen2660/def#hasPart> .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2004/02/skos/core#definition> "A decomposition (isPartOf) relation between concrete concepts"@en .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2004/02/skos/core#definition> "Een decompositie (isPartOf) relatie tussen concrete concepten"@nl .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2004/02/skos/core#prefLabel> "is deel van"@nl .
++ <https://w3id.org/nen2660/def#isPartOf> <http://www.w3.org/2004/02/skos/core#prefLabel> "is part of"@en .
++ _:cb0 <http://www.w3.org/ns/shacl#class> <https://w3id.org/nen2660/def#InformationObject> .
++ _:cb0 <http://www.w3.org/ns/shacl#path> <https://data.crow.nl/imbor/def/heeftBetrekkingOp> .
++ _:cb20bc28cd7c34818d11908d729aa45eafb035d46d74653467721c22becaadf8c54 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
++ _:cb20bc28cd7c34818d11908d729aa45eafb035d46d74653467721c22becaadf8c54 <http://www.w3.org/ns/shacl#path> <https://data.crow.nl/imbor-ref/def/levensfaseTypering> .
++ _:cb9ab77062c67de49c4fa5ea9b8da36fef6b1a7b9bb20f57eb03afd43c3d4a8ac2 <http://www.w3.org/ns/shacl#class> <https://data.crow.nl/imbor/def/Rol> .
++ _:cb9ab77062c67de49c4fa5ea9b8da36fef6b1a7b9bb20f57eb03afd43c3d4a8ac2 <http://www.w3.org/ns/shacl#path> <https://data.crow.nl/imbor/def/speelt> .
++ _:cbd244d5238a709add25f16281085fbca5b0413226032019e5be5d06a4590bd77a <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
++ _:cbd244d5238a709add25f16281085fbca5b0413226032019e5be5d06a4590bd77a <http://www.w3.org/ns/shacl#path> <https://data.crow.nl/imbor/def/typeLijst> .
+- <https://data.crow.nl/imbor-ref/def/RefAttribuut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+- <https://data.crow.nl/imbor-ref/def/RefAttribuut> <http://www.w3.org/2004/02/skos/core#definition> "Representatie in de IMBOR-context van wat extern een attribuut is."@nl .
+- <https://data.crow.nl/imbor-ref/def/RefAttribuut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Extern attribuut"@nl .
+- <https://data.crow.nl/imbor-ref/def/RefDomeinwaarde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+- <https://data.crow.nl/imbor-ref/def/RefDomeinwaarde> <http://www.w3.org/2004/02/skos/core#definition> "Representatie in de IMBOR-context van wat extern een domeinwaarde is."@nl .
+- <https://data.crow.nl/imbor-ref/def/RefDomeinwaarde> <http://www.w3.org/2004/02/skos/core#prefLabel> "Externe domeinwaarde"@nl .
+- <https://data.crow.nl/imbor-ref/def/RefMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+- <https://data.crow.nl/imbor-ref/def/RefMapping> <http://www.w3.org/2004/02/skos/core#definition> "Mapping van een extern informatiemodel van of naar IMBOR."@nl .
+- <https://data.crow.nl/imbor-ref/def/RefMapping> <http://www.w3.org/2004/02/skos/core#prefLabel> "Externe mapping"@nl .
+- <https://data.crow.nl/imbor-ref/def/RefObjecttype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+- <https://data.crow.nl/imbor-ref/def/RefObjecttype> <http://www.w3.org/2004/02/skos/core#definition> "Representatie in de IMBOR-context van wat extern een objecttype is."@nl .
+- <https://data.crow.nl/imbor-ref/def/RefObjecttype> <http://www.w3.org/2004/02/skos/core#prefLabel> "Extern objecttype"@nl .
+- <https://data.crow.nl/imbor-ref/def/imborAttribuutDomeinwaarde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor-ref/def/imborAttribuutDomeinwaarde> <http://www.w3.org/2004/02/skos/core#definition> "Relateert van een mapping naar een attribuut-domeinwaarde-combinatie."@nl .
+- <https://data.crow.nl/imbor-ref/def/imborAttribuutDomeinwaarde> <http://www.w3.org/2004/02/skos/core#prefLabel> "mapt naar IMBOR-attribuut-domeinwaarde"@nl .
+- <https://data.crow.nl/imbor-ref/def/imborObjecttype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor-ref/def/imborObjecttype> <http://www.w3.org/2004/02/skos/core#definition> "Relateert van een mapping naar naar dit IMBOR-objecttype."@nl .
+- <https://data.crow.nl/imbor-ref/def/imborObjecttype> <http://www.w3.org/2004/02/skos/core#prefLabel> "mapt naar IMBOR-objecttype"@nl .
+- <https://data.crow.nl/imbor-ref/def/levensfaseTypering> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+- <https://data.crow.nl/imbor-ref/def/refAttribuutDomeinwaarde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor-ref/def/refAttribuutDomeinwaarde> <http://www.w3.org/2004/02/skos/core#definition> "Relateert van een mapping naar dit externe attribuut-domeinwaarde-combinatie."@nl .
+- <https://data.crow.nl/imbor-ref/def/refAttribuutDomeinwaarde> <http://www.w3.org/2004/02/skos/core#prefLabel> "mapt naar extern attribuut-domeinwaarde"@nl .
+- <https://data.crow.nl/imbor-ref/def/refObjecttype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor-ref/def/refObjecttype> <http://www.w3.org/2004/02/skos/core#definition> "Relateert van een mapping naar dit externe objecttype."@nl .
+- <https://data.crow.nl/imbor-ref/def/refObjecttype> <http://www.w3.org/2004/02/skos/core#prefLabel> "mapt naar extern objecttype"@nl .
+- <https://data.crow.nl/imbor/aanvullend-metamodel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+- <https://data.crow.nl/imbor/aanvullend-metamodel> <http://www.w3.org/2000/01/rdf-schema#comment> "Een aantal metaconcepten worden specifiek voor IMBOR gedefinieerd. Dit wordt gedaan middels het 'IMBOR Aanvullend Metamodel'. Dit betreft een kleine ontologie van beschrijfende concepten die er voor zorgen dat alle IMBOR specifieke properties netjes en navolgbaar gedefinieerd zijn."@nl .
+- <https://data.crow.nl/imbor/aanvullend-metamodel> <http://www.w3.org/2000/01/rdf-schema#label> "IMBOR Aanvullend metamodel"@nl .
+- <https://data.crow.nl/imbor/aanvullend-metamodel> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+- <https://data.crow.nl/imbor/def/imborEenheid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor/def/imborEenheid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+- <https://data.crow.nl/imbor/def/imborEenheid> <http://www.w3.org/2004/02/skos/core#definition> "De klasse van de IMBOR-specifieke eenheid waarin dit attribuut gemeten wordt."@nl .
+- <https://data.crow.nl/imbor/def/imborEenheid> <http://www.w3.org/2004/02/skos/core#prefLabel> "eenheid (IMBOR)"@nl .
+- <https://data.crow.nl/imbor/def/typeLijst> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+- <https://data.crow.nl/imbor/id/domeinwaarden/bovenliggendeWaarde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+- <https://data.crow.nl/imbor/id/domeinwaarden/bovenliggendeWaarde> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+- <https://data.crow.nl/imbor/id/domeinwaarden/bovenliggendeWaarde> <http://www.w3.org/2004/02/skos/core#definition> "Domeinwaarden die in picklists van elkaar afhankelijk zijn."@nl .
+- <https://data.crow.nl/imbor/id/domeinwaarden/bovenliggendeWaarde> <http://www.w3.org/2004/02/skos/core#prefLabel> "categorie domeinwaarde"@nl .
