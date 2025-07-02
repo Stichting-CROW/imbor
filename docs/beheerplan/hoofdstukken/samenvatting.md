@@ -13,7 +13,7 @@ IMBOR is ontwikkeld door het CROW in samenwerking met gemeenten, provincies, sof
 | 0.7    |	10-10-2023   |  	Verwerken reviews en aanvullen hoofdstuk 4 t/m 7 | John Joosten |
 | 0.8   |   31-10-2023  |       Aanpassingen aan structuur en verwerken reviews | John Joosten  | 
 | 0.9   |   01-10-2024  |       Versie t.b.v voorleggen aan beheercommissie | John Joosten  | 
-| 1.0  |   01-07-2025  |       Goedgekeurd door Beheercommissie IMBOR | Harro Verhoeven   | 
+| 1.0  |   02-07-2025  |       Goedgekeurd door Beheercommissie IMBOR | Harro Verhoeven   | 
 
 <aside class="advisement" title=Beheerplan status>
 Beheerorganisatie nog niet compleet. Alhoewel nog niet alle commissies in dit beheerplan zijn geïnstalleerd, wordt het beheer vanaf versie IMBOR 2025 wel conform dit beheerplan uitgevoerd.
