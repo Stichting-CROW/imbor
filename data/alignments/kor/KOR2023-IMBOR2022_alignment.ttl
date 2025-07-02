@@ -1,0 +1,897 @@
+@prefix imbor: <https://data.crow.nl/imbor/def/> .
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> .
+@prefix kor: <https://data.crow.nl/kor/def/> .
+@prefix kor-imbor: <https://data.crow.nl/alignment/kor-imbor/def/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dsa: <http://w3id.org/dsa/> .
+@prefix void: <http://www.w3.org/TR/void/> .
+
+kor: a owl:Ontology;
+  rdfs:comment "De ontologie van KOR"@nl;
+  owl:versionInfo "2023@nl";
+  owl:imports <https://w3id.org/nen2660/def#>, <http://www.w3.org/2004/02/skos/core#>,
+    <https://data.crow.nl/kor/aanvullend-metamodel>;
+  rdfs:label "Kwaliteitscatalogus Openbare Ruimte (KOR) ontologie"@nl ;
+  rdfs:seeAlso "https://www.crow.nl/kennisproducten/kwaliteitscatalogus-openbare-ruimte-2023/" .
+
+imbor: a owl:Ontology ;
+    rdfs:comment    "Dit normatieve gedeelte betreft de kern (de ontologie) van IMBOR"@nl ;
+    rdfs:label      "IMBOR Kernmodel (ontologie)"@nl ; 
+    rdfs:seeAlso "https://www.crow.nl/Onderwerpen/Assetmanagement-en-beheer-openbare-ruimte/Data-en-informatie/imbor/" ;
+    owl:versionInfo         "2022" ;
+    owl:imports <http://www.w3.org/ns/shacl#>, <https://w3id.org/nen2660/def#>, <http://www.w3.org/2004/02/skos/core#>,
+    <https://w3id.org/nen2660/term#>, <https://data.crow.nl/imbor/term/>, <http://qudt.org/vocab/quantitykind/>,
+    <https://data.crow.nl/imbor/aanvullend-metamodel>, <http://qudt.org/vocab/unit/> .
+
+
+kor-imbor: a    owl:Ontology, void:Linkset ;
+    rdfs:label  "KOR en IMBOR ontologie mapping"@nl ;
+    rdfs:comment "Handmatige alignment van de twee kernmodellen o.b.v. expert judgement"@nl ;
+    dct:publisher   "Stichting CROW"@nl ;
+    dct:issued  "2024-12-01"^^xsd:date;   
+    dct:conformsTo  <http://www.w3.org/2002/07/owl#> ;
+    dct:instructionalMethod "Deze linkset kan gebruikt worden om via Beeldmeetlat groepen de KOR beeldmeetlatten aan IMBOR Objecttypen (met eventuele attribuut beperkingen) te linken. "@nl ;      
+    owl:versionInfo "1" ;
+    owl:imports imbor:, kor: ;
+.
+
+kor-imbor:00e6facc-db2c-41a0-95d3-9fc1ad741fda owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:cbfc49a6-eb35-4fc5-a19d-a87f5399b8f8 ) .
+
+kor-imbor:0170ef7a-5a85-444f-a49f-30f9e4460653 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:e4c1e5e3-5895-40d9-96ea-3cb840057592 ) .
+
+kor-imbor:019b10d8-8c2a-448f-9044-f893a119abd6 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:5a8827a5-75fd-419e-b103-3803893e6f27 ) .
+
+kor-imbor:01df1099-c282-41ef-ad6f-317cad3543e6 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:22c76a86-d969-464e-87cd-53466bd75fc4 ) .
+
+kor-imbor:02127905-a263-422f-8ddd-7abad464355e owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:a1b84712-3a73-420d-b3be-22bacae949bc [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:02188aab-6ae8-4fbd-9226-f9212164092a owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:6156ad75-a23c-4b5f-8095-c773cd6ebffe ) .
+
+kor-imbor:027b0205-5cbf-4086-8980-e38582482c2f owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:be9b4f6c-d72c-4cbb-9a22-9eb74c7edd03 ) .
+
+kor-imbor:02d5e823-ba7d-456d-801a-a4b726f828c0 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:fb26a375-695e-4ab0-9403-59c00cdc9d04 ) .
+
+kor-imbor:02d70201-8312-4787-a3fe-db47af1adf2e owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:12050dbb-8925-4802-ac14-2bf23aea98cb ) .
+
+kor-imbor:04447cf6-f749-4fa3-9fb7-88cabd8c432a owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:057a9309-f1fb-4d7a-a05c-3f6041f39cfc owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:b572dae1-fc8c-43e9-b31c-7123abd151d8 ) .
+
+kor-imbor:06734d18-dc15-41ba-9482-d7304ef1c657 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:06787c44-2255-4577-bb77-bfb623e73498 owl:equivalentClass kor:40710e69-c048-3377-a3fc-cfacaabff213 ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:07b99fce-40f9-4324-a1f2-a46729ec98fb owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:09b678a0-265e-44ee-a6db-8ece66ff7490 ) .
+
+kor-imbor:0a1d1f90-62a9-4203-b996-7ec58b305011 owl:equivalentClass kor:b582033a-76c4-3c36-9a8d-8608407db1e3 ;
+    owl:intersectionOf ( imbor:4efb3a19-e491-469f-aa96-debed9c1be4d ) .
+
+kor-imbor:0a66e8fa-cc96-423f-a798-20a9770b9571 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:29393373-00f5-4a7c-831a-fe20a6a8bfd2 ) .
+
+kor-imbor:0b1b4b86-5830-4acb-9b80-f4d0e9d306c4 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:eadcb28a-2436-40d0-b5a3-2358642d0575 ) .
+
+kor-imbor:0c66296a-e679-4a9e-83d1-b5a95061154e owl:equivalentClass kor:dc778d76-67c3-3902-bcf3-bb3d26445e64 ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 ) .
+
+kor-imbor:0d0e66e4-10a3-4e6b-909f-a0d6271dbc2e owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:6c7965b7-d0d3-4d53-b64a-8d4004094c7b ) .
+
+kor-imbor:0f445d05-9289-4bcf-b3c3-3234b1e06ade owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:4bce51e8-3402-46b9-8bb3-b649626be9ca ) .
+
+kor-imbor:0f90b106-758b-4596-be4a-08939cdf6741 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:5e39dabb-0772-45ad-82d9-94265ef69c3b ) .
+
+kor-imbor:0fc2033a-556a-4abf-8b7c-3b3bbafb52fa owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:69d56930-9d78-473d-9c02-9b0a7e346a5c ) .
+
+kor-imbor:1064ac5a-4afe-45bd-af2a-300a95676344 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:24002dfe-aa27-47f7-9e12-bd2678677c2b ) .
+
+kor-imbor:10b0d922-173e-495c-b06c-b7ceda5666cf owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:119b8769-0191-433a-9baa-cc6c2ab7013f owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:b193d52e-0243-4e0e-9f90-236edb35c624 ) .
+
+kor-imbor:12bd285d-d985-43f0-9f23-17f59d86ca96 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:ddfdbfc8-30bd-4a80-9f22-79e77deba7c1 ) .
+
+kor-imbor:171ed299-22b8-46a2-9553-864a297da790 owl:equivalentClass kor:42d55e4d-fd8c-3c52-ae38-91d6a5784575 ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:33417e89-79e0-4278-ae02-85836e3bf9d7 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:1796f93c-7551-4222-82e8-fbbb93df70b7 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:0e3fcbd8-e7b2-4800-a965-2de44833b1f1 ) .
+
+kor-imbor:17bcf2d3-63c5-4cbf-b97c-28330b61fa72 owl:equivalentClass kor:ab6aaa42-8ab5-36c3-ac80-b541a89b230c ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:1abfd566-b368-460a-b821-43ba54f66a8b ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:1950cd0c-78ae-4fd5-b196-70b6aaf5fea6 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:987d86c2-bde5-4e5c-8cc7-53aceb8603bd ) .
+
+kor-imbor:19d96de9-5ec9-4ee7-8111-9fadaf2c2f15 owl:equivalentClass kor:a7503d30-cfc1-3a1a-a65b-2477f0e2f4fc ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:1eac74fa-6f2e-4d5e-a8e2-47c8f2f38b42 ;
+                owl:onProperty imbor:1190ca0f-6485-476d-bd0b-8b6c1ba06cdd ] ) .
+
+kor-imbor:1b7468a8-e6a8-4725-adc8-f335d3a37c46 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:f11a7883-e5fe-40c2-92a7-c63372e4a962 ) .
+
+kor-imbor:1c63601b-8f06-4f02-938d-6faa5072da27 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:a3aaec95-5131-4128-acd8-85ab714c6aec ) .
+
+kor-imbor:1c76bc7b-ba51-4d56-acf1-4a3e6471b8fd owl:equivalentClass kor:b582033a-76c4-3c36-9a8d-8608407db1e3 ;
+    owl:intersectionOf ( imbor:e7f7062b-5233-4534-a184-bf672e92b699 ) .
+
+kor-imbor:1c7a59ce-4686-43a8-94a7-4bad6c22eb08 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:0e3fcbd8-e7b2-4800-a965-2de44833b1f1 ) .
+
+kor-imbor:1d104097-2c55-4bb2-8fc4-fd9865345669 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:79b51472-2686-4468-a17c-d7ceb4276387 ) .
+
+kor-imbor:1d7ea7c6-5f78-430c-a00c-3be579884588 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:b2b0b46e-cc1f-45ae-a22a-f6d0b8b04ae9 ) .
+
+kor-imbor:1eb79c2f-9403-4c41-8362-e06d069626a4 owl:equivalentClass kor:0d63d3c2-25ce-3edd-a258-9d64af787122 ;
+    owl:intersectionOf ( imbor:d61e45b1-3651-4c01-9c63-b9bfadf25a16 ) .
+
+kor-imbor:1fcf94ab-6922-4eb9-a444-86c76ecd7b8b owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:a5eedfa7-48ff-4e7f-b5bf-4a809130a3dc ) .
+
+kor-imbor:20e931fd-2d3a-4232-ae28-0c4f2888fd5b owl:equivalentClass kor:1014c904-0dd6-35c4-aa41-beb445617f2a ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:493f482e-fdaa-44b1-b883-1b488c26d442 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:21dc128b-65b6-4f70-8743-af12269f42ee owl:equivalentClass kor:a992b434-dfc2-3087-a400-17eabaf0cdda ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:4728e0e3-433a-4045-b062-6d620569c7dc ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:238407df-da2f-4e48-bc1f-89e5526eeebb owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:2d40b48e-7271-450a-986c-690fe372e708 ) .
+
+kor-imbor:25c702ab-ceca-4f61-90c7-8af9fefead17 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:d1938335-8882-4d14-8db9-477e1734aaf2 ) .
+
+kor-imbor:2659c350-9280-485e-9c8b-4dc8fded70de owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:379e3f9d-964f-4d4e-8f0c-140e3fa669b2 ) .
+
+kor-imbor:26f4c2de-90a0-40b8-a00d-c6e9ac17dc4b owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:a3a10c80-4b70-42ef-a81f-786c3ac2245f ) .
+
+kor-imbor:27212272-3515-407b-bbfc-60c06add93cc owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:a1b84712-3a73-420d-b3be-22bacae949bc [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:28e16a24-3fac-4be2-aafa-062ffc720f30 owl:equivalentClass kor:7c76af2e-157e-3b86-8989-995888bc99ca ;
+    owl:intersectionOf ( imbor:999c662a-cdcc-4feb-8ec6-8818a2ca44e4 ) .
+
+kor-imbor:29468cdb-24d0-45c9-bc71-f313fbbe10c1 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:eadcb28a-2436-40d0-b5a3-2358642d0575 ) .
+
+kor-imbor:2abdfcc2-048c-4fbe-8277-58f16bca2501 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:4da9735b-97fe-488e-892e-d0729a29afec ) .
+
+kor-imbor:2adae45c-c881-4e14-b40d-4bcdb1f69ead owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:21e19973-ba96-4711-a92f-32c57989aa37 ) .
+
+kor-imbor:2b2b48ac-da6f-4c12-a469-d8ea79b909c1 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:22c76a86-d969-464e-87cd-53466bd75fc4 ) .
+
+kor-imbor:2b8d80b2-bafb-4b33-9020-c08055801a93 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:ab90731d-e8c8-43cc-a465-bf9094c5a921 ) .
+
+kor-imbor:2d7edd47-e2a1-4b46-8911-584dca54dadf owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:23b83e52-ee57-4846-9757-4420933ae935 ) .
+
+kor-imbor:2f5843a2-7c20-4bf5-a3e9-18af0fb63bf5 owl:equivalentClass kor:326a5aca-0cd1-3403-8688-d584cb938e7a ;
+    owl:intersectionOf ( imbor:2328d9b8-0aed-453a-864b-df830407ca34 ) .
+
+kor-imbor:3052bab1-3e6d-4f17-b6f1-f185fd6f6b3d owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:516d7924-8850-44e7-9b47-5027381f075e ) .
+
+kor-imbor:3114bb17-fb78-4b41-a6a9-055b2dbf6c9f owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:2d40b48e-7271-450a-986c-690fe372e708 ) .
+
+kor-imbor:3118d98c-7311-42e9-b974-f2a360437137 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:c356473a-d05e-495b-b19f-13455de72ef1 ) .
+
+kor-imbor:32e5875d-4ec6-4e0c-9ab2-75df1c31a8b0 owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:21e19973-ba96-4711-a92f-32c57989aa37 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:332f3ea5-4217-4fde-8a52-3a5e5a977cd7 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:207777f2-c8e1-4852-82b3-339ba4cd1402 ) .
+
+kor-imbor:33cf2aa0-991e-45a9-a89b-191f303b4340 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:366207df-0b72-46a6-8e10-000085d60151 ) .
+
+kor-imbor:34b1dd92-f585-4373-a3e1-cc02cfbab3ee owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:22c76a86-d969-464e-87cd-53466bd75fc4 ) .
+
+kor-imbor:35bc1b83-2c17-4111-98a3-22aaa9b6fc2d owl:equivalentClass kor:1d0722dd-6a3e-39c1-9e3d-f876ee0d019e ;
+    owl:intersectionOf ( imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ) .
+
+kor-imbor:368ef22d-6f50-46a4-9bda-158b1ffc814a owl:equivalentClass kor:3f78369f-03e6-350a-b88d-f71f312bf2a8 ;
+    owl:intersectionOf ( imbor:8192a171-415b-4e01-aaff-c01d0ba62543 ) .
+
+kor-imbor:36c30efa-db24-47af-ab02-ea6c1b8ce4ca owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:ef27a254-c550-4aad-9a64-5e4d47b509f5 ) .
+
+kor-imbor:3844915b-f0b0-409a-889c-c6fe3f2d9b7b owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ) .
+
+kor-imbor:390d1eb9-9017-4ed6-8382-be28701c52ce owl:equivalentClass kor:519bc399-d3d6-3aac-8789-bb03c2b5b0b6 ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:46561e8b-a904-4d2f-b366-588c31c66478 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:39587fff-521e-42e4-882f-5cc65751877c owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:516d7924-8850-44e7-9b47-5027381f075e ) .
+
+kor-imbor:3984a663-3b27-4a0d-8dfb-a90bd82c2fe0 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:79b51472-2686-4468-a17c-d7ceb4276387 ) .
+
+kor-imbor:39c86338-6946-4966-8ffe-4855484a92b7 owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 ) .
+
+kor-imbor:3f416917-862f-408e-9a02-de62f1de3af9 owl:equivalentClass kor:73388936-f2a2-3181-9469-798cefba5d5b ;
+    owl:intersectionOf ( imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb ) .
+
+kor-imbor:407ce2e4-a600-4a46-9191-dae6372032b6 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:eadcb28a-2436-40d0-b5a3-2358642d0575 ) .
+
+kor-imbor:42a4e6e9-0d23-43af-b829-ce3972bed0de owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:afcf6548-b47d-4570-bd45-cd3cd3fda512 ) .
+
+kor-imbor:4389a635-54be-4dbd-ad9c-5a2e09bf1be9 owl:equivalentClass kor:1d0722dd-6a3e-39c1-9e3d-f876ee0d019e ;
+    owl:intersectionOf ( imbor:07d5ee08-67aa-4dd5-a411-0d3bb248e911 ) .
+
+kor-imbor:43aa29ea-1cb2-4a64-a5b5-da9d74bea79f owl:equivalentClass kor:4b0e8385-1d09-3d64-8830-886ad748d576 ;
+    owl:intersectionOf ( imbor:10d3883e-b5e4-4a1a-b0b4-471de5e55133 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:4672281a-959b-476c-a631-f11085ea520f owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:2328d9b8-0aed-453a-864b-df830407ca34 ) .
+
+kor-imbor:4a7e6a49-4690-46bf-8a17-d9bac331270a owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:c20a97e2-ba6d-4955-b470-e43f19659c4c ) .
+
+kor-imbor:4c366240-6729-4d46-8dab-7922f08ad4df owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:a13b6696-dd50-4fcf-bab5-0d9e3d5f40b7 ) .
+
+kor-imbor:4e8d72b2-2d80-4d98-9bf0-756120535418 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:afcf6548-b47d-4570-bd45-cd3cd3fda512 ) .
+
+kor-imbor:503b611e-10c5-42b3-aae3-1cb0f2cb415d owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:b572dae1-fc8c-43e9-b31c-7123abd151d8 ) .
+
+kor-imbor:5104a57f-1b58-45eb-9cca-10126793a151 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:ab90731d-e8c8-43cc-a465-bf9094c5a921 ) .
+
+kor-imbor:5358a1d2-4dbb-497e-a766-79e5bcea70a9 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:5a8827a5-75fd-419e-b103-3803893e6f27 ) .
+
+kor-imbor:5518c199-44a1-4593-8265-1a4f5fb14ac0 owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:26dc09f6-c4aa-4b7e-8d0f-1a8fd4fec85d ) .
+
+kor-imbor:558df680-d7e4-4976-8110-604728943e68 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:ef27a254-c550-4aad-9a64-5e4d47b509f5 ) .
+
+kor-imbor:55b836b2-0646-4e52-bcfd-b3c1f99fad31 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:e18b7770-7d26-4259-992c-9ab4c588e4c8 ) .
+
+kor-imbor:55d32b96-653b-455e-99a9-935037722745 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:5e39dabb-0772-45ad-82d9-94265ef69c3b ) .
+
+kor-imbor:5662a325-c0a1-4c15-8ba1-6854a336d6c5 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:be9b4f6c-d72c-4cbb-9a22-9eb74c7edd03 ) .
+
+kor-imbor:57622ade-ef2e-4e1e-8882-08cc15bfa42c owl:equivalentClass kor:17ec9868-3672-3b90-a16f-20d3fc1b9dbe ;
+    owl:intersectionOf ( imbor:443ac52a-c9fc-4bf3-8546-bb8e160da9a2 ) .
+
+kor-imbor:57bfcd72-bccf-4fd9-8fb0-27c85dd17e70 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:8fb333fc-e296-4619-a84b-fac4e8f704e8 ) .
+
+kor-imbor:5835f97f-353f-4cff-973e-3e7b0aaf61c4 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:f11a7883-e5fe-40c2-92a7-c63372e4a962 ) .
+
+kor-imbor:584a1ee1-fbf4-4666-9a35-ab9e341c95fd owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:b2b0b46e-cc1f-45ae-a22a-f6d0b8b04ae9 ) .
+
+kor-imbor:58c91af8-1c18-4dde-ac2f-8e58aa6d14c9 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:5b465144-4b9d-4b60-8878-75145297b503 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:be9b4f6c-d72c-4cbb-9a22-9eb74c7edd03 ) .
+
+kor-imbor:5c7eee46-c7c7-4d85-a077-a9491bfb1e5b owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:ab90731d-e8c8-43cc-a465-bf9094c5a921 ) .
+
+kor-imbor:5d043f02-2e91-4f23-9dd6-2b3427440825 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:d92e6993-5546-4b29-8cc5-25414e83c042 ) .
+
+kor-imbor:5f4b6d49-2466-433e-9ae2-ccf841455e74 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:987d86c2-bde5-4e5c-8cc7-53aceb8603bd ) .
+
+kor-imbor:61c5c678-9305-4fb3-bd06-dc9f5e5715e0 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:d1938335-8882-4d14-8db9-477e1734aaf2 ) .
+
+kor-imbor:62756224-9086-430f-995e-cfc9a5baba70 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:4bce51e8-3402-46b9-8bb3-b649626be9ca ) .
+
+kor-imbor:629c7987-cd0e-4413-afa5-b1f55c6a6650 owl:equivalentClass kor:4073bf3f-3857-32ba-98fe-a4589b791b24 ;
+    owl:intersectionOf ( imbor:e6afe8f7-95a7-4a0c-a6e8-f6d2091fb8b9 ) .
+
+kor-imbor:63ede7be-b83a-4a43-bba0-6430c8619adf owl:equivalentClass kor:540e61bb-a68e-328c-ad06-9e96c07c93a8 ;
+    owl:intersectionOf ( imbor:21e19973-ba96-4711-a92f-32c57989aa37 ) .
+
+kor-imbor:65ef0a91-59a1-499a-8d09-3fb9adae8575 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:fb26a375-695e-4ab0-9403-59c00cdc9d04 ) .
+
+kor-imbor:6612b5f5-7abc-420f-bbac-ffcd34cabf9f owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:a3aaec95-5131-4128-acd8-85ab714c6aec ) .
+
+kor-imbor:661bacdc-6436-4e26-98ce-4c9db1cd4ed1 owl:equivalentClass kor:3be55551-cb0a-3459-9fbd-b27de01fea38 ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 ) .
+
+kor-imbor:67265f85-9ac2-42f9-b687-7cafeba7e3cc owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:e13e2867-bc61-462a-bcba-a8570c863a75 ) .
+
+kor-imbor:690f6a02-ada6-4a2e-a012-ae6a414d7dc8 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:691066dc-be3d-49d0-b140-c9f1ad9c31bb owl:equivalentClass kor:0ebd913d-1ff3-324a-a2e7-2c6e3b88beac ;
+    owl:intersectionOf ( imbor:ce738f23-2622-45f9-82fd-259e62bf4daf ) .
+
+kor-imbor:69c2b03a-bdd4-4fc9-907c-1ee29017ed56 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:987d86c2-bde5-4e5c-8cc7-53aceb8603bd ) .
+
+kor-imbor:6b5e0ab2-65da-4759-8bca-c49ac2c642e5 owl:equivalentClass kor:8d4beea8-0062-3d98-b2ee-c7df817b57f8 ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:86d56773-f1cd-4b4f-9f7e-a3df9a162466 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:6ecb33a3-3b33-4130-9127-adf4129e0049 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:6d1f5670-c343-44bd-87c5-f73ec695fe8f owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:aced9569-a6af-4b12-a92d-29b2bf833ac5 ) .
+
+kor-imbor:6d6aa58e-08fc-48cd-8a74-87753acd701e owl:equivalentClass kor:7c76af2e-157e-3b86-8989-995888bc99ca ;
+    owl:intersectionOf ( imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ) .
+
+kor-imbor:6e92a7d8-f17f-44d5-bf68-fd68fbefeea3 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:366207df-0b72-46a6-8e10-000085d60151 ) .
+
+kor-imbor:6eea596f-987b-4229-8527-14718f6175d2 owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:7048bb33-d747-49ce-8dcd-f7e418a71864 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:ae2f44f5-7b52-48d9-8f87-28b5c957e26f ) .
+
+kor-imbor:72cd83b1-55d4-48ae-9f89-4e77889bc2ba owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:a3aaec95-5131-4128-acd8-85ab714c6aec ) .
+
+kor-imbor:732e40fc-765b-4006-9625-f55d8776ef10 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:0e3fcbd8-e7b2-4800-a965-2de44833b1f1 ) .
+
+kor-imbor:76c62704-c183-4338-bdbc-6daba69b27dd owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:2d40b48e-7271-450a-986c-690fe372e708 ) .
+
+kor-imbor:771bd822-6e5c-4a64-a09d-beed15338104 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:8298e24e-2d79-48c5-a80c-74503dfdc588 ) .
+
+kor-imbor:77314acd-6d79-49ef-a6a9-b96fb4e87b77 owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:668ebe59-1e36-4b84-a83c-c72a7a6633c6 ) .
+
+kor-imbor:77b4a454-4323-4fd0-b8d6-84adcfd6acea owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:207777f2-c8e1-4852-82b3-339ba4cd1402 ) .
+
+kor-imbor:77ddeab7-8f58-4df9-9505-2fc98828089d owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:8298e24e-2d79-48c5-a80c-74503dfdc588 ) .
+
+kor-imbor:77ee25e3-af13-4130-bab0-d95bdae8bfe6 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:c20a97e2-ba6d-4955-b470-e43f19659c4c ) .
+
+kor-imbor:7877f705-964e-4716-be70-93d001c0c933 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:7e4bd993-5e52-4e61-87bc-6e51ba944168 ) .
+
+kor-imbor:78d5048d-982c-4642-9607-2b880e4c621d owl:equivalentClass kor:a7503d30-cfc1-3a1a-a65b-2477f0e2f4fc ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ) .
+
+kor-imbor:7a7010b8-6863-4d53-8453-46ab09b98a35 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:b2b0b46e-cc1f-45ae-a22a-f6d0b8b04ae9 ) .
+
+kor-imbor:7bdc33f3-9655-47b1-9bf2-9d911eeda9d4 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:63b63591-a437-4f1e-b977-cb8dff2d224c ) .
+
+kor-imbor:7eab9a76-06df-4f0f-8c04-debe3c7b165d owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:7eaf8f87-9543-4b90-8d09-0b3e3ae6fd57 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:afcf6548-b47d-4570-bd45-cd3cd3fda512 ) .
+
+kor-imbor:7f53cbe0-486d-47f2-9fa9-69733a9404ba owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:4da9735b-97fe-488e-892e-d0729a29afec ) .
+
+kor-imbor:7fd8ee5c-d4cd-44e9-9d89-5718c0d273cd owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:914127ef-670f-44ff-b64f-883596e3244b ) .
+
+kor-imbor:8109de68-1b0d-4e45-9ac1-58f0ba80e44b owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:63b63591-a437-4f1e-b977-cb8dff2d224c ) .
+
+kor-imbor:81942a61-44b8-4aa1-b5d8-d834e5609857 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:ddfdbfc8-30bd-4a80-9f22-79e77deba7c1 ) .
+
+kor-imbor:81c7b1b3-1869-4989-bbf7-01ff870faaa2 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:63b63591-a437-4f1e-b977-cb8dff2d224c ) .
+
+kor-imbor:825e6561-42b3-4a08-bf3d-743c3bf9f840 owl:equivalentClass kor:6a4864f3-648b-3810-b9e9-32326ed29b8a ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:86d56773-f1cd-4b4f-9f7e-a3df9a162466 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:82a13e55-f3a5-42b8-9280-17b0646178cb owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:d1938335-8882-4d14-8db9-477e1734aaf2 ) .
+
+kor-imbor:8332b8a3-20f4-4c95-9bc7-5e61c848296d owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:8fb333fc-e296-4619-a84b-fac4e8f704e8 ) .
+
+kor-imbor:85ab6ddb-2082-4b1e-8de9-006edcd12225 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:f3202a49-5227-45e2-92d0-826ce6cf5974 ) .
+
+kor-imbor:85b2fd69-e5fe-4247-9e63-0d9f31587aad owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:a13b6696-dd50-4fcf-bab5-0d9e3d5f40b7 ) .
+
+kor-imbor:86f7b174-38c9-4502-aa35-083aaf154458 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:6c7965b7-d0d3-4d53-b64a-8d4004094c7b ) .
+
+kor-imbor:875b99b3-9633-4315-b080-faa8c47bba87 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:e13e2867-bc61-462a-bcba-a8570c863a75 ) .
+
+kor-imbor:87c0160e-0d25-4e92-b3a6-90b19b522417 owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:21e19973-ba96-4711-a92f-32c57989aa37 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:8867109f-2cfa-48e6-95d6-b9011b862c81 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:ec922444-b8fa-4a5e-9a05-12702b9b37c3 ) .
+
+kor-imbor:8951b280-4fd8-4221-853b-229c495b3b59 owl:equivalentClass kor:326a5aca-0cd1-3403-8688-d584cb938e7a ;
+    owl:intersectionOf ( imbor:06ecc047-725e-466f-869f-8edc0ae33b86 ) .
+
+kor-imbor:89a472b2-d59d-4f14-8b78-2cad19b72267 owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:06ecc047-725e-466f-869f-8edc0ae33b86 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:8abf6157-b404-47ce-a4c5-1cd8143c906c owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:6156ad75-a23c-4b5f-8095-c773cd6ebffe ) .
+
+kor-imbor:8d088807-248f-4183-a811-16c54ed1864e owl:equivalentClass kor:17ec9868-3672-3b90-a16f-20d3fc1b9dbe ;
+    owl:intersectionOf ( imbor:83f95133-4d59-4b1f-b5dd-6055da2c007f ) .
+
+kor-imbor:90efa859-0efc-427e-9080-6229e76cc69b owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:366207df-0b72-46a6-8e10-000085d60151 ) .
+
+kor-imbor:926a8523-e18d-47a0-b994-ce5d4aa372c3 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:937a582e-4f56-47ef-9705-fc81a110a735 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:24002dfe-aa27-47f7-9e12-bd2678677c2b ) .
+
+kor-imbor:949106df-b39c-4bd0-8923-875d2120f61f owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:2328d9b8-0aed-453a-864b-df830407ca34 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:94a5d0bc-3468-474c-9892-97a03ec9c7ae owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:24002dfe-aa27-47f7-9e12-bd2678677c2b ) .
+
+kor-imbor:97bdc60a-dc2d-4955-8cb2-723c052d95bb owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:ae2f44f5-7b52-48d9-8f87-28b5c957e26f ) .
+
+kor-imbor:984ddb58-dc56-4e46-9a01-f4acfd1f291e owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:2328d9b8-0aed-453a-864b-df830407ca34 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:98ad126a-4cc7-43e5-9186-f13fac747873 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:e4c1e5e3-5895-40d9-96ea-3cb840057592 ) .
+
+kor-imbor:9b15edb9-3898-47e3-87d1-54aef4b224fc owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ) .
+
+kor-imbor:9e93bae1-6f4e-4f27-bc6d-43b1cc294fcd owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:c356473a-d05e-495b-b19f-13455de72ef1 ) .
+
+kor-imbor:9f3035d0-d73d-4c2c-b9c5-17b5d199e0e2 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:c356473a-d05e-495b-b19f-13455de72ef1 ) .
+
+kor-imbor:a01d0dc0-0e30-43b7-8fb0-0c5ae08f7f7e owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:5e39dabb-0772-45ad-82d9-94265ef69c3b ) .
+
+kor-imbor:a0a327b1-287c-4e2e-aad2-4e93f7ce4ba8 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:8298e24e-2d79-48c5-a80c-74503dfdc588 ) .
+
+kor-imbor:a0e2d38a-6751-4bbf-9ae2-69549ba3e2a1 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:d92e6993-5546-4b29-8cc5-25414e83c042 ) .
+
+kor-imbor:a107c7ff-92d8-4594-b318-b99c479c2a64 owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:a1b84712-3a73-420d-b3be-22bacae949bc [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:a122ebbb-43c8-4c0e-a984-d7cda53eb133 owl:equivalentClass kor:be2ae841-abd3-374a-ab9e-7d9cd64e2c9a ;
+    owl:intersectionOf ( imbor:58ef1415-6acb-412b-9c3e-e390bb2ae3b3 ) .
+
+kor-imbor:a2b38d6f-2df8-407c-a559-ee48572dbb07 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:6c7965b7-d0d3-4d53-b64a-8d4004094c7b ) .
+
+kor-imbor:a2e4c52b-b83e-4de1-98b6-6d132cddbcac owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:914127ef-670f-44ff-b64f-883596e3244b ) .
+
+kor-imbor:a402efc2-b1c2-4e84-9d7a-32018836d350 owl:equivalentClass kor:8425aff2-9f49-30de-b559-2f5e0e6c6b9c ;
+    owl:intersectionOf ( imbor:df3a7cac-4653-49b9-be3a-7fece9bf7a69 ) .
+
+kor-imbor:a6b43c95-b5a7-4216-93ce-966c134a47ca owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:4bce51e8-3402-46b9-8bb3-b649626be9ca ) .
+
+kor-imbor:a7f82e65-0fb6-4a40-bce1-e6ff2033d3a1 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:12050dbb-8925-4802-ac14-2bf23aea98cb ) .
+
+kor-imbor:a86cd577-8866-43e5-8a3f-d89e1439d45e owl:equivalentClass kor:fabf42ed-bbaa-35af-a54f-6d1527585685 ;
+    owl:intersectionOf ( imbor:17036cd0-5b49-4923-a3f7-856ce8275dc2 ) .
+
+kor-imbor:a9d77a4d-c131-472a-89cc-21de73424d88 owl:equivalentClass kor:4a692cbb-a47a-370f-b8ca-30f5d8a973c6 ;
+    owl:intersectionOf ( imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09 ) .
+
+kor-imbor:aca41bdc-d25f-4416-a23a-0a36b5bab6d3 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:ad7bddab-d4f8-4e5c-81a0-64364aef727b owl:equivalentClass kor:d00fd94e-5783-3dbc-acee-3c84775d724c ;
+    owl:intersectionOf ( imbor:a15450e3-dcbb-4471-8211-443117a85964 ) .
+
+kor-imbor:ad8bc92b-9028-4adb-8fb3-3166b5fbb57c owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:4da9735b-97fe-488e-892e-d0729a29afec ) .
+
+kor-imbor:aee7c791-6ff8-4ea6-98bd-e26d028ab261 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:22c76a86-d969-464e-87cd-53466bd75fc4 ) .
+
+kor-imbor:af6a5c14-84a5-4ee3-8671-519e0a980ea5 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:b193d52e-0243-4e0e-9f90-236edb35c624 ) .
+
+kor-imbor:b109c471-2fd9-4aa5-a079-a88af10374ae owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:1190ca0f-6485-476d-bd0b-8b6c1ba06cdd ] ) .
+
+kor-imbor:b13567fd-076c-4701-9f39-6d41b1e6a480 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:8a10e8b9-f3c5-42e3-b08d-ae5b4d16b9e8 ) .
+
+kor-imbor:b16c3c75-9278-4aeb-8bde-e0f860facd5f owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:0cd022c3-d556-4de9-845b-2b8d07fc247a ) .
+
+kor-imbor:b1a6a3d3-2a81-4ffd-904c-ff01e0e14c13 owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb ) .
+
+kor-imbor:b1dbf889-6a99-4a6b-919a-3bdffce821f7 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:2328d9b8-0aed-453a-864b-df830407ca34 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:b2794857-b43b-4692-91c1-6956e2397965 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:207777f2-c8e1-4852-82b3-339ba4cd1402 ) .
+
+kor-imbor:b36b768f-aa0b-4781-8dd6-00ad253192c9 owl:equivalentClass kor:7c76af2e-157e-3b86-8989-995888bc99ca ;
+    owl:intersectionOf ( imbor:aaad83eb-d568-4cf3-8f76-a26e51cc0714 ) .
+
+kor-imbor:b40b5d4f-3e0f-4626-b356-93d9e76f2c9b owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:8fb333fc-e296-4619-a84b-fac4e8f704e8 ) .
+
+kor-imbor:b4dd356f-01fa-4dd1-ae27-6b118548f53a owl:equivalentClass kor:184d182f-0b17-3909-a7b2-80ce6b77fc9b ;
+    owl:intersectionOf ( imbor:1ec08d0a-a4c9-4589-969c-40d5dee3e464 ) .
+
+kor-imbor:b5159de5-fb94-425d-8b6d-1a4789a254b1 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:8a10e8b9-f3c5-42e3-b08d-ae5b4d16b9e8 ) .
+
+kor-imbor:b6e8c727-e67d-4f47-a3d9-b725a79d8dac owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:29393373-00f5-4a7c-831a-fe20a6a8bfd2 ) .
+
+kor-imbor:b6f49907-cad7-4955-8921-e293ec84cffc owl:equivalentClass kor:794a6414-168c-3986-8e90-95eaf8b428b6 ;
+    owl:intersectionOf ( imbor:10d3883e-b5e4-4a1a-b0b4-471de5e55133 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:b95696e1-4b25-45ec-be6d-e4b1e280c637 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:a85b5c4d-e905-4c65-8e3b-a72083daadf2 ;
+                owl:onProperty imbor:703dcaf1-98c7-4511-bf73-1a081538179c ] ) .
+
+kor-imbor:b9259a05-c4c7-4b65-8593-e2016cd17ee3 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:a5eedfa7-48ff-4e7f-b5bf-4a809130a3dc ) .
+
+kor-imbor:b96910c7-fde9-4c7d-af72-3b1d88a83fe0 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:f3202a49-5227-45e2-92d0-826ce6cf5974 ) .
+
+kor-imbor:bb83f7f3-201c-4332-bb19-36a2265f11d6 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:7e4bd993-5e52-4e61-87bc-6e51ba944168 ) .
+
+kor-imbor:be68f8bc-d2b5-4d20-a215-53c708c3133e owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:bf50e864-4d1b-4e82-bf12-3a5f1e2cab1e owl:equivalentClass kor:ebcf166a-6b1a-308d-a407-4ca60b619ed9 ;
+    owl:intersectionOf ( imbor:b264f7d7-12fe-4d04-8e19-ef902f4a67dc ) .
+
+kor-imbor:c06a65b8-479a-44f5-a745-d5b8318caa34 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:424e3b6a-5c0a-43bf-b9ac-1f6b4184816d [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:c06c8f2d-5d5a-4f7a-8737-caad2450b595 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:aced9569-a6af-4b12-a92d-29b2bf833ac5 ) .
+
+kor-imbor:c19ca3fa-3a98-4c38-bbc2-94b77284335a owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:06ecc047-725e-466f-869f-8edc0ae33b86 ) .
+
+kor-imbor:c1c59ee6-aead-490c-b799-45d9936fc1e3 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:0cd022c3-d556-4de9-845b-2b8d07fc247a ) .
+
+kor-imbor:c3740d00-15f2-468c-b054-958df947cd57 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:c6b9e6c3-65ca-4017-98a2-ae1e0411a1e2 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:ddfdbfc8-30bd-4a80-9f22-79e77deba7c1 ) .
+
+kor-imbor:c6ec2c4d-faea-44f8-9524-efe6bc92edea owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:fb26a375-695e-4ab0-9403-59c00cdc9d04 ) .
+
+kor-imbor:c7af2d37-aa9a-4e38-aa09-5f30122a6417 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:b572dae1-fc8c-43e9-b31c-7123abd151d8 ) .
+
+kor-imbor:c8a26763-30a2-457b-ac26-1a7c8a04d9a4 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:c20a97e2-ba6d-4955-b470-e43f19659c4c ) .
+
+kor-imbor:c8bf295e-094a-4da5-9ba6-3d3f3c4c7a02 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:a13b6696-dd50-4fcf-bab5-0d9e3d5f40b7 ) .
+
+kor-imbor:c8d20e30-83b8-42a5-b70c-d29bd7d36631 owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:d8c45d1a-08e0-454a-942f-aa374ce030a3 ) .
+
+kor-imbor:caf142de-77c0-4922-90f0-93c7f6529256 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:beddb3f0-8dbf-487f-a469-d36802497468 ) .
+
+kor-imbor:cc04673d-9e8a-47b6-b554-bfdba9aa3e80 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:a5eedfa7-48ff-4e7f-b5bf-4a809130a3dc ) .
+
+kor-imbor:cc8395a7-917d-4d5d-a9d7-f3ec2d84b549 owl:equivalentClass kor:a022169c-b79e-36b4-b530-a93f6a4b76c9 ;
+    owl:intersectionOf ( imbor:06ecc047-725e-466f-869f-8edc0ae33b86 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:d857c019-c4fe-4783-a71c-a6b08f7e48cd ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:cd7c6be1-f944-4cd0-a058-d7474679527f owl:equivalentClass kor:8701038a-eaad-37ed-a3cb-cac6054b62a5 ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb ) .
+
+kor-imbor:ce0781a4-eb5b-4711-922e-a38a8e72dd70 owl:equivalentClass kor:ed518d8e-02a3-3eb5-9a5b-f9da5d301532 ;
+    owl:intersectionOf ( imbor:10d3883e-b5e4-4a1a-b0b4-471de5e55133 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:b95696e1-4b25-45ec-be6d-e4b1e280c637 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:a85b5c4d-e905-4c65-8e3b-a72083daadf2 ;
+                owl:onProperty imbor:703dcaf1-98c7-4511-bf73-1a081538179c ] ) .
+
+kor-imbor:cf6e59b8-1d14-4fda-978e-e9345093f8a4 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:cbfc49a6-eb35-4fc5-a19d-a87f5399b8f8 ) .
+
+kor-imbor:d04dc1bf-cee7-4264-aa2f-33d9661dc91b owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:914127ef-670f-44ff-b64f-883596e3244b ) .
+
+kor-imbor:d0947b1a-67ba-48a9-8a3d-3341243c84a5 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:ec922444-b8fa-4a5e-9a05-12702b9b37c3 ) .
+
+kor-imbor:d1866d0a-852e-41cb-b38a-fdcb69e5c594 owl:equivalentClass kor:1d0722dd-6a3e-39c1-9e3d-f876ee0d019e ;
+    owl:intersectionOf ( imbor:08ccd303-ba44-4258-ac6d-4f201b2bce8c ) .
+
+kor-imbor:d1e39d20-5942-43e7-9cda-6cadd3a2e352 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:f3202a49-5227-45e2-92d0-826ce6cf5974 ) .
+
+kor-imbor:d2f7b052-936a-4c72-9345-7ca5028abba7 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:ae2f44f5-7b52-48d9-8f87-28b5c957e26f ) .
+
+kor-imbor:d40a0974-fd35-4452-8e41-c52239a52b54 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:21e19973-ba96-4711-a92f-32c57989aa37 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:d59ddf69-8c81-4a55-8212-1eb0e86c1f9c owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:beddb3f0-8dbf-487f-a469-d36802497468 ) .
+
+kor-imbor:d5f430c7-819b-4523-8181-e82eccf9ebb8 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:b193d52e-0243-4e0e-9f90-236edb35c624 ) .
+
+kor-imbor:d678e76e-b14d-4055-9d41-1a655b4b5573 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:beddb3f0-8dbf-487f-a469-d36802497468 ) .
+
+kor-imbor:d6b9795a-b6a9-43d0-8437-fa130dbc123c owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ) .
+
+kor-imbor:d76b8bde-4900-4489-b7d1-048b658b0002 owl:equivalentClass kor:7c76af2e-157e-3b86-8989-995888bc99ca ;
+    owl:intersectionOf ( imbor:22c76a86-d969-464e-87cd-53466bd75fc4 ) .
+
+kor-imbor:d997ac12-d9ca-4aa7-a5f3-e3a09e76517e owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:dba132f1-593d-45e6-83be-8a15f8371b71 ) .
+
+kor-imbor:dbef611d-c558-4346-afba-9ee9ce105afb owl:equivalentClass kor:a52e9a3a-66b6-314a-8647-6a737cf3c8fc ;
+    owl:intersectionOf ( imbor:10d3883e-b5e4-4a1a-b0b4-471de5e55133 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:a5274576-cbad-4ada-ad8c-bd0e9b88205e ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:dce04970-dfb3-4622-a39e-516698d9f394 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:06ecc047-725e-466f-869f-8edc0ae33b86 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:dd0b648e-1ccc-4b3d-ab9d-4dabbf949823 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:e18b7770-7d26-4259-992c-9ab4c588e4c8 ) .
+
+kor-imbor:de2f6933-153c-4cc7-ad5d-115d29493981 owl:equivalentClass kor:74bee7fd-d72a-3fd1-98ed-0be71f3d356f ;
+    owl:intersectionOf ( imbor:06bde609-b3d3-4e07-a047-1114223ef263 ) .
+
+kor-imbor:dea81203-08d9-4690-aba0-7cfd5da53cee owl:equivalentClass kor:b715e7a3-3051-3a4f-be4b-8c47ba4d112a ;
+    owl:intersectionOf ( imbor:a1b84712-3a73-420d-b3be-22bacae949bc ) .
+
+kor-imbor:df436e34-22d1-4419-adaf-55d027a40eee owl:equivalentClass kor:a5f19b9b-d941-3162-aa9a-8f2a43ef5491 ;
+    owl:intersectionOf ( imbor:ff65feb0-5166-4ed7-a353-54b4199be96f [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:e3ff938e-96d1-453b-9906-21335cdfdb87 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:dfeb2d91-be94-40dc-a9d7-71a1880e7067 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:d92e6993-5546-4b29-8cc5-25414e83c042 ) .
+
+kor-imbor:e02e88b1-5c3e-4922-bb20-3fea6529f22a owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:f11a7883-e5fe-40c2-92a7-c63372e4a962 ) .
+
+kor-imbor:e454e748-58ba-4331-a513-48655375c119 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:516d7924-8850-44e7-9b47-5027381f075e ) .
+
+kor-imbor:e49800f1-9c1f-45db-9cfe-2d080ed7fd27 owl:equivalentClass kor:bae0d229-1a40-3265-b37c-658984f61334 ;
+    owl:intersectionOf ( imbor:350a05bd-f83b-49ae-bb19-d158a54d7838 ) .
+
+kor-imbor:e5a810da-171d-4efc-8657-ac3501c60473 owl:equivalentClass kor:f3d5979a-3a70-380d-95e1-4b518d81f0bf ;
+    owl:intersectionOf ( imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:6794637f-2958-4565-8576-661f19ab3131 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:e61fe8e4-514c-4f42-8038-430fc6425c28 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:aced9569-a6af-4b12-a92d-29b2bf833ac5 ) .
+
+kor-imbor:e673f3f2-e1b2-40b3-92ba-220b0804ff45 owl:equivalentClass kor:1fec2d2d-cbe7-32c3-a2c9-d92ac2d2bf0a ;
+    owl:intersectionOf ( imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:216b0a65-72d1-45f7-8e77-331ba941a704 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:e9457108-0b97-4fb3-becc-d29c33c2c1c0 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:379e3f9d-964f-4d4e-8f0c-140e3fa669b2 ) .
+
+kor-imbor:e9b133cd-3664-42fc-946c-13ccdbad3565 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:ef27a254-c550-4aad-9a64-5e4d47b509f5 ) .
+
+kor-imbor:ea7b4699-9315-4715-a0f6-212969d9e0fc owl:equivalentClass kor:a15b96aa-c565-30e3-a291-93ba900b441f ;
+    owl:intersectionOf ( imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:bd71aff6-1799-413e-ab4d-586ff6dc40fc ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:ec0e59ab-81ae-4fd1-9036-e759a4eba23e owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:8a10e8b9-f3c5-42e3-b08d-ae5b4d16b9e8 ) .
+
+kor-imbor:edb8aeaa-e286-491c-8ffa-1348a3c84fbc owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:cbfc49a6-eb35-4fc5-a19d-a87f5399b8f8 ) .
+
+kor-imbor:eddff402-bcd0-456e-bea0-09abc37867fa owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:8298e24e-2d79-48c5-a80c-74503dfdc588 ) .
+
+kor-imbor:f16cdbfb-2f8c-42cc-b9f1-32017a79628e owl:equivalentClass kor:608d3d00-0138-3012-a97a-cdc9bc0fbd2e ;
+    owl:intersectionOf ( imbor:bfdac6fa-90a2-4c43-8d28-744164cb7a97 ) .
+
+kor-imbor:f2547067-a9c8-4ab5-9684-c4c0dac50d6d owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:e18b7770-7d26-4259-992c-9ab4c588e4c8 ) .
+
+kor-imbor:f27c0baa-c244-4b02-803a-ae795925cc76 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:e4c1e5e3-5895-40d9-96ea-3cb840057592 ) .
+
+kor-imbor:f2e45a8e-b9f2-42f0-a18d-03e77e3d2294 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:79b51472-2686-4468-a17c-d7ceb4276387 ) .
+
+kor-imbor:f318299b-8770-40e8-93b0-266114bf44f0 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:ec922444-b8fa-4a5e-9a05-12702b9b37c3 ) .
+
+kor-imbor:f3856f2e-9fcc-42aa-a986-939dee19f579 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:0cd022c3-d556-4de9-845b-2b8d07fc247a ) .
+
+kor-imbor:f39f950b-65ac-44e4-b756-8e73b63e2b92 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:7e4bd993-5e52-4e61-87bc-6e51ba944168 ) .
+
+kor-imbor:f5c0929c-3c15-4db4-bc50-ec546be7657c owl:equivalentClass kor:0ebd913d-1ff3-324a-a2e7-2c6e3b88beac ;
+    owl:intersectionOf ( <http://definities.geostandaarden.nl/def/nen3610#Gebouw> [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:c1cd81cc-7053-4b25-9e03-0ad880d864c8 ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:5c5ce323-d61a-4c3a-8388-954283dd8559 ;
+                owl:onProperty imbor:703dcaf1-98c7-4511-bf73-1a081538179c ] ) .
+
+kor-imbor:f6087365-73f1-46ab-ab05-c18eb2d97fbe owl:equivalentClass kor:48e32e16-ef66-3bd3-9a0c-56387a725abb ;
+    owl:intersectionOf ( imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:a4f5f594-3db2-46e6-88c6-303c3cceb75e ;
+                owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ] ) .
+
+kor-imbor:f7596994-027e-4886-a710-a90de0f631c0 owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:12050dbb-8925-4802-ac14-2bf23aea98cb ) .
+
+kor-imbor:f7bbee42-d3f2-4889-bd07-c5294c5f0dbc owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:6156ad75-a23c-4b5f-8095-c773cd6ebffe ) .
+
+kor-imbor:f832be09-6c66-4130-a7ec-3b165d0d1188 owl:equivalentClass kor:61f87698-60fc-3eba-ad47-e46f2d04613e ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 [ a owl:Restriction ;
+                owl:hasValue imbor-domeinwaarde:3f265f2d-c1b1-4512-8dbe-45f99b20b6b3 ;
+                owl:onProperty imbor:fb5a0684-83f2-4be6-83cf-e94b07f9212f ] ) .
+
+kor-imbor:f9c478ba-6393-4b64-b5be-b7484ca74d9c owl:equivalentClass kor:6544f12f-eec3-3623-bf2f-d494c8b68d38 ;
+    owl:intersectionOf ( imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e ) .
+
+kor-imbor:fc913a58-1e21-49f6-a8d9-29906cd12a48 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:29393373-00f5-4a7c-831a-fe20a6a8bfd2 ) .
+
+kor-imbor:fd161d20-2255-467b-bd71-00f571993101 owl:equivalentClass kor:8701038a-eaad-37ed-a3cb-cac6054b62a5 ;
+    owl:intersectionOf ( imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6 ) .
+
+kor-imbor:fd81ad83-5fc7-42bb-913b-2c78e1c34578 owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:e13e2867-bc61-462a-bcba-a8570c863a75 ) .
+
+kor-imbor:ff3eb91d-cd9d-48fb-927c-3d85653d4d54 owl:equivalentClass kor:ef74dcad-b1ac-3102-ae38-a0983a641570 ;
+    owl:intersectionOf ( imbor:379e3f9d-964f-4d4e-8f0c-140e3fa669b2 ) .
+
+kor-imbor:ff98e208-3605-4bf1-9b50-82b69fed956b owl:equivalentClass kor:2409a4a3-2b5d-3d06-a6f9-94d373e9c3a5 ;
+    owl:intersectionOf ( imbor:5a8827a5-75fd-419e-b103-3803893e6f27 ) .
+

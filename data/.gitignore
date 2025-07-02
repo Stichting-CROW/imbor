@@ -1,11 +1,13 @@
 # Aparte bestanden worden niet los geupload. De twee ZIPs bevatten de te distriburen bestanden
 *.laccdb
 *.accdb
-*.trig
-*.ttl
 
 # Uitzonderingen
+!*alignments/*
 !*changelogging/*
 !*informele handreiking/*
 !*-rest-api-linkset.ttl
+
+
+
 
