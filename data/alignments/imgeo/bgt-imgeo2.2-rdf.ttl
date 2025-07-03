@@ -1,0 +1,1281 @@
+@prefix bgt-imgeo: <//bgt-imgeo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+
+# Ontology declarations with conformance information
+bgt-imgeo: rdf:type owl:Ontology ;
+    owl:versionInfo "0.1" ;
+    rdfs:label "NIET OFFICIEEL - BGT-IMGeo Ontologie t.b.v. de IMBOR-BGT/IMGEO mapping"@nl ;
+    rdfs:comment "Deze ontologie is NIET OFFICIEEL en kan ook niet in die hoedanigheid gebruikt worden. De ontologie bevat de BGT/IMGeo concepten die gebruikt worden in de BGT/IMGEO en IMBOR mapping. Deze dienen dus alleen ter referentie en niet ter instantiëring. Deze is automatisch gegenereerd en kan dus fouten bevatten."@nl ;
+    dct:conformsTo <https://w3id.org/nen2660/def> ;
+    rdfs:seeAlso <https://docs.geostandaarden.nl/imgeo/catalogus/bgt/>, <https://docs.geostandaarden.nl/imgeo/catalogus/imgeo/> .
+
+# Classes
+bgt-imgeo:Bak a rdfs:Class ;
+    skos:prefLabel "Bak"@nl .
+
+bgt-imgeo:BegroeidTerreindeel a rdfs:Class ;
+    skos:prefLabel "BegroeidTerreindeel"@nl .
+
+bgt-imgeo:Bord a rdfs:Class ;
+    skos:prefLabel "Bord"@nl .
+
+bgt-imgeo:FunctioneelGebied a rdfs:Class ;
+    skos:prefLabel "FunctioneelGebied"@nl .
+
+bgt-imgeo:Gebouwinstallatie a rdfs:Class ;
+    skos:prefLabel "Gebouwinstallatie"@nl .
+
+bgt-imgeo:Installatie a rdfs:Class ;
+    skos:prefLabel "Installatie"@nl .
+
+bgt-imgeo:Kast a rdfs:Class ;
+    skos:prefLabel "Kast"@nl .
+
+bgt-imgeo:Kunstwerkdeel a rdfs:Class ;
+    skos:prefLabel "Kunstwerkdeel"@nl .
+
+bgt-imgeo:Mast a rdfs:Class ;
+    skos:prefLabel "Mast"@nl .
+
+bgt-imgeo:OnbegroeidTerreindeel a rdfs:Class ;
+    skos:prefLabel "OnbegroeidTerreindeel"@nl .
+
+bgt-imgeo:OndersteunendWegdeel a rdfs:Class ;
+    skos:prefLabel "OndersteunendWegdeel"@nl .
+
+bgt-imgeo:OndersteunendWaterdeel a rdfs:Class ;
+    skos:prefLabel "OndersteunendWaterdeel"@nl .
+
+bgt-imgeo:OpenbareRuimteLabel a rdfs:Class ;
+    skos:prefLabel "OpenbareRuimteLabel"@nl .
+
+bgt-imgeo:Overbrugging a rdfs:Class ;
+    skos:prefLabel "Overbrugging"@nl .
+
+bgt-imgeo:Overbruggingsdeel a rdfs:Class ;
+    skos:prefLabel "Overbruggingsdeel"@nl .
+
+bgt-imgeo:OverigBouwwerk a rdfs:Class ;
+    skos:prefLabel "OverigBouwwerk"@nl .
+
+bgt-imgeo:OverigeConstructie a rdfs:Class ;
+    skos:prefLabel "OverigeConstructie"@nl .
+
+bgt-imgeo:Paal a rdfs:Class ;
+    skos:prefLabel "Paal"@nl .
+
+bgt-imgeo:Pand a rdfs:Class ;
+    skos:prefLabel "Pand"@nl .
+
+bgt-imgeo:Plaatsbepalingspunt a rdfs:Class ;
+    skos:prefLabel "Plaatsbepalingspunt"@nl .
+
+bgt-imgeo:Put a rdfs:Class ;
+    skos:prefLabel "Put"@nl .
+
+bgt-imgeo:Scheiding a rdfs:Class ;
+    skos:prefLabel "Scheiding"@nl .
+
+bgt-imgeo:Sensor a rdfs:Class ;
+    skos:prefLabel "Sensor"@nl .
+
+bgt-imgeo:Spoor a rdfs:Class ;
+    skos:prefLabel "Spoor"@nl .
+
+bgt-imgeo:Straatmeubilair a rdfs:Class ;
+    skos:prefLabel "Straatmeubilair"@nl .
+
+bgt-imgeo:VegetatieObject a rdfs:Class ;
+    skos:prefLabel "VegetatieObject"@nl .
+
+bgt-imgeo:Waterdeel a rdfs:Class ;
+    skos:prefLabel "Waterdeel"@nl .
+
+bgt-imgeo:Waterinrichtingselement a rdfs:Class ;
+    skos:prefLabel "Waterinrichtingselement"@nl .
+
+bgt-imgeo:Wegdeel a rdfs:Class ;
+    skos:prefLabel "Wegdeel"@nl .
+
+bgt-imgeo:Weginrichtingselement a rdfs:Class ;
+    skos:prefLabel "Weginrichtingselement"@nl .
+
+# Properties
+
+# Bak properties
+bgt-imgeo:plus-typeBak a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeBak ;
+    skos:prefLabel "plus-typeBak"@nl .
+
+# BegroeidTerreindeel properties
+bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "bgt-fysiekVoorkomenBegroeidTerreindeel"@nl .
+
+bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "plus-fysiekVoorkomenBegroeidTerreindeel"@nl .
+
+# Bord properties
+bgt-imgeo:plus-typeBord a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeBord ;
+    skos:prefLabel "plus-typeBord"@nl .
+
+# FunctioneelGebied properties
+bgt-imgeo:bgt-typeFunctioneelGebied a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "bgt-typeFunctioneelGebied"@nl .
+
+bgt-imgeo:plus-typeFunctioneelGebied a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "plus-typeFunctioneelGebied"@nl .
+
+# Gebouwinstallatie properties
+bgt-imgeo:plus-typeGebouwInstallatie a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeGebouwInstallatie ;
+    skos:prefLabel "plus-typeGebouwInstallatie"@nl .
+
+# Installatie properties
+bgt-imgeo:plus-typeInstallatie a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeInstallatie ;
+    skos:prefLabel "plus-typeInstallatie"@nl .
+
+# Kast properties
+bgt-imgeo:plus-typeKast a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeKast ;
+    skos:prefLabel "plus-typeKast"@nl .
+
+# Kunstwerkdeel properties
+bgt-imgeo:bgt-typeKunstwerkdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "bgt-typeKunstwerkdeel"@nl .
+
+# Mast properties
+bgt-imgeo:plus-typeMast a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeMast ;
+    skos:prefLabel "plus-typeMast"@nl .
+
+# OnbegroeidTerreindeel properties
+bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "bgt-fysiekVoorkomenOnbegroeidTerreindeel"@nl .
+
+bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "plus-fysiekVoorkomenOnbegroeidTerreindeel"@nl .
+
+# OndersteunendWegdeel properties
+bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "bgt-fysiekVoorkomenOndersteunendWegdeel"@nl .
+
+bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "plus-fysiekVoorkomenOndersteunendWegdeel"@nl .
+
+bgt-imgeo:bgt-functieOndersteunendWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FunctieOndersteunendWegdeel ;
+    skos:prefLabel "bgt-functieOndersteunendWegdeel"@nl .
+
+# OndersteunendWaterdeel properties
+bgt-imgeo:bgt-typeOndersteunendWaterdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOndersteunendWaterdeel ;
+    skos:prefLabel "bgt-typeOndersteunendWaterdeel"@nl .
+
+# OpenbareRuimteLabel properties
+bgt-imgeo:openbareRuimteType a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "openbareRuimteType"@nl .
+
+# Overbrugging properties
+bgt-imgeo:typeOverbrugging a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "typeOverbrugging"@nl .
+
+bgt-imgeo:overbruggingIsBeweegbaar a rdf:Property ;
+    rdfs:range xsd:boolean ;
+    skos:prefLabel "overbruggingIsBeweegbaar"@nl .
+
+# Overbruggingsdeel properties
+bgt-imgeo:typeOverbruggingsdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "typeOverbruggingsdeel"@nl .
+
+# OverigBouwwerk properties
+bgt-imgeo:bgt-typeOverigBouwwerk a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "bgt-typeOverigBouwwerk"@nl .
+
+bgt-imgeo:plus-typeOverigBouwwerk a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "plus-typeOverigBouwwerk"@nl .
+
+# Paal properties
+bgt-imgeo:plus-typePaal a rdf:Property ;
+    rdfs:range bgt-imgeo:TypePaal ;
+    skos:prefLabel "plus-typePaal"@nl .
+
+# Plaatsbepalingspunt properties
+bgt-imgeo:inwinningsmethode a rdf:Property ;
+    rdfs:range bgt-imgeo:Inwinningsmethode ;
+    skos:prefLabel "inwinningsmethode"@nl .
+
+# Put properties
+bgt-imgeo:plus-typePut a rdf:Property ;
+    rdfs:range bgt-imgeo:TypePut ;
+    skos:prefLabel "plus-typePut"@nl .
+
+# Scheiding properties
+bgt-imgeo:bgt-typeScheiding a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "bgt-typeScheiding"@nl .
+
+bgt-imgeo:plus-typeScheiding a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "plus-typeScheiding"@nl .
+
+# Sensor properties
+bgt-imgeo:plus-typeSensor a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeSensor ;
+    skos:prefLabel "plus-typeSensor"@nl .
+
+# Spoor properties
+bgt-imgeo:bgt-functieSpoor a rdf:Property ;
+    rdfs:range bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "bgt-functieSpoor"@nl .
+
+bgt-imgeo:plus-functieSpoor a rdf:Property ;
+    rdfs:range bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "plus-functieSpoor"@nl .
+
+# Straatmeubilair properties
+bgt-imgeo:plus-typeStraatmeubilair a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "plus-typeStraatmeubilair"@nl .
+
+# VegetatieObject properties
+bgt-imgeo:plus-typeVegetatieObject a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeVegetatieObject ;
+    skos:prefLabel "plus-typeVegetatieObject"@nl .
+
+# Waterdeel properties
+bgt-imgeo:bgt-typeWaterdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "bgt-typeWaterdeel"@nl .
+
+bgt-imgeo:plus-typeWaterdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "plus-typeWaterdeel"@nl .
+
+# Waterinrichtingselement properties
+bgt-imgeo:plus-typeWaterinrichtingselement a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "plus-typeWaterinrichtingselement"@nl .
+
+# Wegdeel properties
+bgt-imgeo:bgt-functieWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "bgt-functieWegdeel"@nl .
+
+bgt-imgeo:plus-functieWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "plus-functieWegdeel"@nl .
+
+bgt-imgeo:bgt-fysiekVoorkomenWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "bgt-fysiekVoorkomenWegdeel"@nl .
+
+bgt-imgeo:plus-fysiekVoorkomenWegdeel a rdf:Property ;
+    rdfs:range bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "plus-fysiekVoorkomenWegdeel"@nl .
+
+# Weginrichtingselement properties
+bgt-imgeo:plus-typeWeginrichtingselement a rdf:Property ;
+    rdfs:range bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "plus-typeWeginrichtingselement"@nl .
+
+# Domain values
+
+# Bak domain values
+bgt-imgeo:AfvalApartPlaats a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Afval apart plaats"@nl .
+
+bgt-imgeo:Afvalbak a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Afvalbak"@nl .
+
+bgt-imgeo:Bloembak a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Bloembak"@nl .
+
+bgt-imgeo:Container a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Container"@nl .
+
+bgt-imgeo:Drinkbak a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Drinkbak"@nl .
+
+bgt-imgeo:ZandZoutbak a bgt-imgeo:TypeBak ;
+    skos:prefLabel "Zand- / zoutbak"@nl .
+
+# BegroeidTerreindeel domain values
+bgt-imgeo:Boomteelt a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Boomteelt"@nl .
+
+bgt-imgeo:Bouwland a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Bouwland"@nl .
+
+bgt-imgeo:Duin a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Duin"@nl .
+
+bgt-imgeo:Fruitteelt a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Fruitteelt"@nl .
+
+bgt-imgeo:GraslandAgrarisch a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Grasland agrarisch"@nl .
+
+bgt-imgeo:GraslandOverig a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Grasland overig"@nl .
+
+bgt-imgeo:Heide a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Heide"@nl .
+
+bgt-imgeo:Houtwal a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Houtwal"@nl .
+
+bgt-imgeo:Moeras a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Moeras"@nl .
+
+bgt-imgeo:Rietland a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Rietland"@nl .
+
+bgt-imgeo:GemengdBos a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Gemengd bos"@nl .
+
+bgt-imgeo:Kwelder a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Kwelder"@nl .
+
+bgt-imgeo:Loofbos a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Loofbos"@nl .
+
+bgt-imgeo:Naaldbos a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Naaldbos"@nl .
+
+bgt-imgeo:Struiken a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Struiken"@nl .
+
+bgt-imgeo:Groenvoorziening a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Groenvoorziening"@nl .
+
+bgt-imgeo:Akkerbouw a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Akkerbouw"@nl .
+
+bgt-imgeo:Braakliggend a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Braakliggend"@nl .
+
+bgt-imgeo:Vollegrondsteelt a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Vollegrondsteelt"@nl .
+
+bgt-imgeo:Bollenteelt a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Bollenteelt"@nl .
+
+bgt-imgeo:Bosplantsoen a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Bosplantsoen"@nl .
+
+bgt-imgeo:GrasEnKruidachtigen a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Gras- en kruidachtigen"@nl .
+
+bgt-imgeo:Planten a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Planten"@nl .
+
+bgt-imgeo:Struikrozen a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Struikrozen"@nl .
+
+bgt-imgeo:Heesters a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Heesters"@nl .
+
+bgt-imgeo:Bodembedekkers a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Bodembedekkers"@nl .
+
+bgt-imgeo:HoogstamBoomgaarden a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Hoogstam boomgaarden"@nl .
+
+bgt-imgeo:Wijngaarden a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Wijngaarden"@nl .
+
+bgt-imgeo:KleinFruit a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Klein fruit"@nl .
+
+bgt-imgeo:GriendEnHakhout a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Griend en hakhout"@nl .
+
+bgt-imgeo:OpenDuinvegetatie a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Open duinvegetatie"@nl .
+
+bgt-imgeo:GeslotenDuinvegetatie a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Gesloten duinvegetatie"@nl .
+
+bgt-imgeo:LaagstamBoomgaarden a bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel ;
+    skos:prefLabel "Laagstam boomgaarden"@nl .
+
+# Bord domain values
+bgt-imgeo:Informatiebord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Informatiebord"@nl .
+
+bgt-imgeo:Plaatsnaambord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Plaatsnaambord"@nl .
+
+bgt-imgeo:Reclamebord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Reclamebord"@nl .
+
+bgt-imgeo:Scheepvaartbord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Scheepvaartbord"@nl .
+
+bgt-imgeo:Straatnaambord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Straatnaambord"@nl .
+
+bgt-imgeo:Verkeersbord a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Verkeersbord"@nl .
+
+bgt-imgeo:VerklikkerTransportleiding a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Verklikker transportleiding"@nl .
+
+bgt-imgeo:Waarschuwingshek a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Waarschuwingshek"@nl .
+
+bgt-imgeo:Wegwijzer a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Wegwijzer"@nl .
+
+bgt-imgeo:DynamischeSnelheidsindicator a bgt-imgeo:TypeBord ;
+    skos:prefLabel "Dynamische snelheidsindicator"@nl .
+
+# FunctioneelGebied domain values
+bgt-imgeo:Kering a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Kering"@nl .
+
+bgt-imgeo:Bedrijvigheid a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Bedrijvigheid"@nl .
+
+bgt-imgeo:Begraafplaats a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Begraafplaats"@nl .
+
+bgt-imgeo:Benzinestation a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Benzinestation"@nl .
+
+bgt-imgeo:Bewoning a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Bewoning"@nl .
+
+bgt-imgeo:Bushalte a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Bushalte"@nl .
+
+bgt-imgeo:Carpoolplaats a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Carpoolplaats"@nl .
+
+bgt-imgeo:FunctioneelBeheer a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Functioneel beheer"@nl .
+
+bgt-imgeo:FunctioneelBeheerHondenuitlaatplaats a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Functioneel beheer: hondenuitlaatplaats"@nl .
+
+bgt-imgeo:InfrastructuurVerkeerEnVervoer a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Infrastructuur verkeer en vervoer"@nl .
+
+bgt-imgeo:InfrastructuurWaterstaatswerken a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Infrastructuur waterstaatswerken"@nl .
+
+bgt-imgeo:Landbouw a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Landbouw"@nl .
+
+bgt-imgeo:MaatschappelijkeEnOfPublieksvoorziening a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Maatschappelijke en/of publieksvoorziening"@nl .
+
+bgt-imgeo:NatuurEnLandschap a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Natuur en landschap"@nl .
+
+bgt-imgeo:RecreatieGebied a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie (gebied)"@nl .
+
+bgt-imgeo:RecreatieBungalowpark a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: bungalowpark"@nl .
+
+bgt-imgeo:RecreatieCamping a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: camping"@nl .
+
+bgt-imgeo:RecreatiePark a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: park"@nl .
+
+bgt-imgeo:RecreatieSpeeltuin a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: speeltuin"@nl .
+
+bgt-imgeo:RecreatieSportterrein a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: sportterrein"@nl .
+
+bgt-imgeo:RecreatieVolkstuin a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Recreatie: volkstuin"@nl .
+
+bgt-imgeo:Verzorgingsplaats a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Verzorgingsplaats"@nl .
+
+bgt-imgeo:Waterbergingsgebied a bgt-imgeo:TypeFunctioneelGebied ;
+    skos:prefLabel "Waterbergingsgebied"@nl .
+
+# Gebouwinstallatie domain values
+bgt-imgeo:Bordes a bgt-imgeo:TypeGebouwInstallatie ;
+    skos:prefLabel "Bordes"@nl .
+
+bgt-imgeo:Luifel a bgt-imgeo:TypeGebouwInstallatie ;
+    skos:prefLabel "Luifel"@nl .
+
+bgt-imgeo:Toegangstrap a bgt-imgeo:TypeGebouwInstallatie ;
+    skos:prefLabel "Toegangstrap"@nl .
+
+# Installatie domain values
+bgt-imgeo:Pomp a bgt-imgeo:TypeInstallatie ;
+    skos:prefLabel "Pomp"@nl .
+
+bgt-imgeo:Zonnepaneel a bgt-imgeo:TypeInstallatie ;
+    skos:prefLabel "Zonnepaneel"@nl .
+
+# Kast domain values
+bgt-imgeo:CAIKast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "CAI-kast"@nl .
+
+bgt-imgeo:Elektrakast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Elektrakast"@nl .
+
+bgt-imgeo:Gaskast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Gaskast"@nl .
+
+bgt-imgeo:GMSKast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "GMS kast"@nl .
+
+bgt-imgeo:OpenbareVerlichtingkast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Openbare verlichtingkast"@nl .
+
+bgt-imgeo:Rioolkast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Rioolkast"@nl .
+
+bgt-imgeo:TelecomKast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Telecom kast"@nl .
+
+bgt-imgeo:Telkast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Telkast"@nl .
+
+bgt-imgeo:Verkeersregelinstallatiekast a bgt-imgeo:TypeKast ;
+    skos:prefLabel "Verkeersregelinstallatiekast"@nl .
+
+# Kunstwerkdeel domain values
+bgt-imgeo:Gemaal a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Gemaal"@nl .
+
+bgt-imgeo:Hoogspanningsmast a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Hoogspanningsmast"@nl .
+
+bgt-imgeo:Perron a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Perron"@nl .
+
+bgt-imgeo:Steiger a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Steiger"@nl .
+
+bgt-imgeo:Strekdam a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Strekdam"@nl .
+
+bgt-imgeo:Stuw a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Stuw"@nl .
+
+bgt-imgeo:Sluisdeur a bgt-imgeo:TypeKunstwerkdeel ;
+    skos:prefLabel "Sluisdeur"@nl .
+
+# Mast domain values
+bgt-imgeo:Bovenleidingmast a bgt-imgeo:TypeMast ;
+    skos:prefLabel "Bovenleidingmast"@nl .
+
+bgt-imgeo:Laagspanningsmast a bgt-imgeo:TypeMast ;
+    skos:prefLabel "Laagspanningsmast"@nl .
+
+bgt-imgeo:Radarmast a bgt-imgeo:TypeMast ;
+    skos:prefLabel "Radarmast"@nl .
+
+bgt-imgeo:Straalzender a bgt-imgeo:TypeMast ;
+    skos:prefLabel "Straalzender"@nl .
+
+bgt-imgeo:Zendmast a bgt-imgeo:TypeMast ;
+    skos:prefLabel "Zendmast"@nl .
+
+# OnbegroeidTerreindeel domain values
+bgt-imgeo:Erf a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Erf"@nl .
+
+bgt-imgeo:HalfVerhard a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Half verhard"@nl .
+
+bgt-imgeo:Onverhard a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Onverhard"@nl .
+
+bgt-imgeo:OpenVerharding a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Open verharding"@nl .
+
+bgt-imgeo:Zand a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Zand"@nl .
+
+bgt-imgeo:StrandEnStrandwal a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Strand en strandwal"@nl .
+
+bgt-imgeo:Zandverstuiving a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Zandverstuiving"@nl .
+
+bgt-imgeo:GeslotenVerharding a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Gesloten verharding"@nl .
+
+bgt-imgeo:Asfalt a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Asfalt"@nl .
+
+bgt-imgeo:Cementbeton a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Cementbeton"@nl .
+
+bgt-imgeo:Kunststof a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Kunststof"@nl .
+
+bgt-imgeo:Gravel a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Gravel"@nl .
+
+bgt-imgeo:Grind a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Grind"@nl .
+
+bgt-imgeo:Puin a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Puin"@nl .
+
+bgt-imgeo:Schelpen a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Schelpen"@nl .
+
+bgt-imgeo:Boomschors a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Boomschors"@nl .
+
+bgt-imgeo:BetonElement a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Beton element"@nl .
+
+bgt-imgeo:Betonstraatstenen a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Betonstraatstenen"@nl .
+
+bgt-imgeo:GebakkenKlinkers a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Gebakken klinkers"@nl .
+
+bgt-imgeo:Grasklinkers a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Grasklinkers"@nl .
+
+bgt-imgeo:Sierbestrating a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Sierbestrating"@nl .
+
+bgt-imgeo:Tegels a bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel ;
+    skos:prefLabel "Tegels"@nl .
+
+# OndersteunendWegdeel domain values
+bgt-imgeo:HalfVerhard a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Half verhard"@nl .
+
+bgt-imgeo:Onverhard a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Onverhard"@nl .
+
+bgt-imgeo:OpenVerharding a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Open verharding"@nl .
+
+bgt-imgeo:GeslotenVerharding a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Gesloten verharding"@nl .
+
+bgt-imgeo:Asfalt a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Asfalt"@nl .
+
+bgt-imgeo:BetonElement a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Beton element"@nl .
+
+bgt-imgeo:Betonstraatstenen a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Betonstraatstenen"@nl .
+
+bgt-imgeo:Groenvoorziening a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Groenvoorziening"@nl .
+
+bgt-imgeo:Bodembedekkers a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Bodembedekkers"@nl .
+
+bgt-imgeo:Boomschors a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Boomschors"@nl .
+
+bgt-imgeo:Bosplantsoen a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Bosplantsoen"@nl .
+
+bgt-imgeo:Cementbeton a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Cementbeton"@nl .
+
+bgt-imgeo:GebakkenKlinkers a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Gebakken klinkers"@nl .
+
+bgt-imgeo:GrasEnKruidachtigen a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Gras- en kruidachtigen"@nl .
+
+bgt-imgeo:Grasklinkers a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Grasklinkers"@nl .
+
+bgt-imgeo:Gravel a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Gravel"@nl .
+
+bgt-imgeo:Grind a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Grind"@nl .
+
+bgt-imgeo:Heesters a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Heesters"@nl .
+
+bgt-imgeo:Planten a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Planten"@nl .
+
+bgt-imgeo:Puin a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Puin"@nl .
+
+bgt-imgeo:Schelpen a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Schelpen"@nl .
+
+bgt-imgeo:Sierbestrating a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Sierbestrating"@nl .
+
+bgt-imgeo:Struikrozen a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Struikrozen"@nl .
+
+bgt-imgeo:Tegels a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Tegels"@nl .
+
+bgt-imgeo:Zand a bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel ;
+    skos:prefLabel "Zand"@nl .
+
+bgt-imgeo:Verkeerseiland a bgt-imgeo:FunctieOndersteunendWegdeel ;
+    skos:prefLabel "Verkeerseiland"@nl .
+
+bgt-imgeo:Berm a bgt-imgeo:FunctieOndersteunendWegdeel ;
+    skos:prefLabel "Berm"@nl .
+
+# OndersteunendWaterdeel domain values
+bgt-imgeo:Slik a bgt-imgeo:TypeOndersteunendWaterdeel ;
+    skos:prefLabel "Slik"@nl .
+
+bgt-imgeo:OeverSlootkant a bgt-imgeo:TypeOndersteunendWaterdeel ;
+    skos:prefLabel "Oever, slootkant"@nl .
+
+# OpenbareRuimteLabel domain values
+bgt-imgeo:LandschappelijkGebied a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Landschappelijk gebied"@nl .
+
+bgt-imgeo:Water a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Water"@nl .
+
+bgt-imgeo:Weg a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Weg"@nl .
+
+bgt-imgeo:Spoorbaan a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Spoorbaan"@nl .
+
+bgt-imgeo:Terrein a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Terrein"@nl .
+
+bgt-imgeo:AdministratiefGebied a bgt-imgeo:TypeOpenbareRuimte ;
+    skos:prefLabel "Administratief gebied"@nl .
+
+# Overbrugging domain values
+bgt-imgeo:Aquaduct a bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "Aquaduct"@nl .
+
+bgt-imgeo:Brug a bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "Brug"@nl .
+
+bgt-imgeo:Ecoduct a bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "Ecoduct"@nl .
+
+bgt-imgeo:Flyover a bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "Flyover"@nl .
+
+bgt-imgeo:Viaduct a bgt-imgeo:TypeOverbrugging ;
+    skos:prefLabel "Viaduct"@nl .
+
+# Overbruggingsdeel domain values
+bgt-imgeo:Dek a bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "Dek"@nl .
+
+bgt-imgeo:Landhoofd a bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "Landhoofd"@nl .
+
+bgt-imgeo:Pijler a bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "Pijler"@nl .
+
+bgt-imgeo:Pyloon a bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "Pyloon"@nl .
+
+bgt-imgeo:Sloof a bgt-imgeo:TypeOverbruggingsdeel ;
+    skos:prefLabel "Sloof"@nl .
+
+# OverigBouwwerk domain values
+bgt-imgeo:Bassin a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Bassin"@nl .
+
+bgt-imgeo:Bezinkbak a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Bezinkbak"@nl .
+
+bgt-imgeo:LageTrafo a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Lage trafo"@nl .
+
+bgt-imgeo:OpenLoods a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Open loods"@nl .
+
+bgt-imgeo:Opslagtank a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Opslagtank"@nl .
+
+bgt-imgeo:Overkapping a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Overkapping"@nl .
+
+bgt-imgeo:Windturbine a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Windturbine"@nl .
+
+bgt-imgeo:Voedersilo a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Voedersilo"@nl .
+
+bgt-imgeo:Schuur a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Schuur"@nl .
+
+bgt-imgeo:Bunker a bgt-imgeo:TypeOverigBouwwerk ;
+    skos:prefLabel "Bunker"@nl .
+
+# Paal domain values
+bgt-imgeo:Afsluitpaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Afsluitpaal"@nl .
+
+bgt-imgeo:Dijkpaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Dijkpaal"@nl .
+
+bgt-imgeo:Drukknoppaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Drukknoppaal"@nl .
+
+bgt-imgeo:Grensmarkering a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Grensmarkering"@nl .
+
+bgt-imgeo:Haltepaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Haltepaal"@nl .
+
+bgt-imgeo:Hectometerpaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Hectometerpaal"@nl .
+
+bgt-imgeo:Lichtmast a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Lichtmast"@nl .
+
+bgt-imgeo:Poller a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Poller"@nl .
+
+bgt-imgeo:Portaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Portaal"@nl .
+
+bgt-imgeo:Sirene a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Sirene"@nl .
+
+bgt-imgeo:Telpaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Telpaal"@nl .
+
+bgt-imgeo:Verkeersbordpaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Verkeersbordpaal"@nl .
+
+bgt-imgeo:Verkeersregelinstallatiepaal a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Verkeersregelinstallatiepaal"@nl .
+
+bgt-imgeo:Vlaggenmast a bgt-imgeo:TypePaal ;
+    skos:prefLabel "Vlaggenmast"@nl .
+
+# Plaatsbepalingspunt domain values
+bgt-imgeo:Terrestrisch a bgt-imgeo:Inwinningsmethode ;
+    skos:prefLabel "Terrestrisch"@nl .
+
+bgt-imgeo:Laser a bgt-imgeo:Inwinningsmethode ;
+    skos:prefLabel "Laser"@nl .
+
+bgt-imgeo:Fotogrammetrisch a bgt-imgeo:Inwinningsmethode ;
+    skos:prefLabel "Fotogrammetrisch"@nl .
+
+bgt-imgeo:Panoramabeelden a bgt-imgeo:Inwinningsmethode ;
+    skos:prefLabel "Panoramabeelden"@nl .
+
+# Put domain values
+bgt-imgeo:BenzineOlieput a bgt-imgeo:TypePut ;
+    skos:prefLabel "Benzine- / olieput"@nl .
+
+bgt-imgeo:BrandkraanPut a bgt-imgeo:TypePut ;
+    skos:prefLabel "Brandkraan / -put"@nl .
+
+bgt-imgeo:Drainageput a bgt-imgeo:TypePut ;
+    skos:prefLabel "Drainageput"@nl .
+
+bgt-imgeo:Gasput a bgt-imgeo:TypePut ;
+    skos:prefLabel "Gasput"@nl .
+
+bgt-imgeo:InspectieRioolput a bgt-imgeo:TypePut ;
+    skos:prefLabel "Inspectie- / rioolput"@nl .
+
+bgt-imgeo:Kolk a bgt-imgeo:TypePut ;
+    skos:prefLabel "Kolk"@nl .
+
+bgt-imgeo:Waterleidingput a bgt-imgeo:TypePut ;
+    skos:prefLabel "Waterleidingput"@nl .
+
+# Scheiding domain values
+bgt-imgeo:Damwand a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Damwand"@nl .
+
+bgt-imgeo:Geluidsscherm a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Geluidsscherm"@nl .
+
+bgt-imgeo:Hek a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Hek"@nl .
+
+bgt-imgeo:Kademuur a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Kademuur"@nl .
+
+bgt-imgeo:Muur a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Muur"@nl .
+
+bgt-imgeo:Walbescherming a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Walbescherming"@nl .
+
+bgt-imgeo:Draadraster a bgt-imgeo:TypeScheiding ;
+    skos:prefLabel "Draadraster"@nl .
+
+# Sensor domain values
+bgt-imgeo:Camera a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Camera"@nl .
+
+bgt-imgeo:Debietmeting a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Debietmeting"@nl .
+
+bgt-imgeo:Detectielus a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Detectielus"@nl .
+
+bgt-imgeo:Flitser a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Flitser"@nl .
+
+bgt-imgeo:GMSSensor a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "GMS sensor"@nl .
+
+bgt-imgeo:Lichtcel a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Lichtcel"@nl .
+
+bgt-imgeo:RadarDetector a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Radar detector"@nl .
+
+bgt-imgeo:Waterstandmeter a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Waterstandmeter"@nl .
+
+bgt-imgeo:Weerstation a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Weerstation"@nl .
+
+bgt-imgeo:Windmeter a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Windmeter"@nl .
+
+bgt-imgeo:Hoogtedetectieapparaat a bgt-imgeo:TypeSensor ;
+    skos:prefLabel "Hoogtedetectieapparaat"@nl .
+
+# Spoor domain values
+bgt-imgeo:Sneltram a bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "Sneltram"@nl .
+
+bgt-imgeo:Tram a bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "Tram"@nl .
+
+bgt-imgeo:Trein a bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "Trein"@nl .
+
+bgt-imgeo:HavenKraan a bgt-imgeo:FunctieSpoor ;
+    skos:prefLabel "(haven)kraan"@nl .
+
+# Straatmeubilair domain values
+bgt-imgeo:Abri a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Abri"@nl .
+
+bgt-imgeo:Betaalautomaat a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Betaalautomaat"@nl .
+
+bgt-imgeo:Bolder a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Bolder"@nl .
+
+bgt-imgeo:Brievenbus a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Brievenbus"@nl .
+
+bgt-imgeo:Fontein a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Fontein"@nl .
+
+bgt-imgeo:Herdenkingsmonument a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Herdenkingsmonument"@nl .
+
+bgt-imgeo:Kunstobject a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Kunstobject"@nl .
+
+bgt-imgeo:Lichtpunt a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Lichtpunt"@nl .
+
+bgt-imgeo:Slagboom a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Slagboom"@nl .
+
+bgt-imgeo:Speelvoorziening a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Speelvoorziening"@nl .
+
+bgt-imgeo:Telefooncel a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Telefooncel"@nl .
+
+bgt-imgeo:Fietsenrek a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Fietsenrek"@nl .
+
+bgt-imgeo:OpenbaarToilet a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Openbaar toilet"@nl .
+
+bgt-imgeo:Bank a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Bank"@nl .
+
+bgt-imgeo:Picknicktafel a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Picknicktafel"@nl .
+
+bgt-imgeo:Parkeerbeugel a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Parkeerbeugel"@nl .
+
+bgt-imgeo:Reclamezuil a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Reclamezuil"@nl .
+
+bgt-imgeo:Fietsenkluis a bgt-imgeo:TypeStraatmeubilair ;
+    skos:prefLabel "Fietsenkluis"@nl .
+
+# VegetatieObject domain values
+bgt-imgeo:Boom a bgt-imgeo:TypeVegetatieObject ;
+    skos:prefLabel "Boom"@nl .
+
+bgt-imgeo:Haag a bgt-imgeo:TypeVegetatieObject ;
+    skos:prefLabel "Haag"@nl .
+
+# Waterdeel domain values
+bgt-imgeo:Waterloop a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Waterloop"@nl .
+
+bgt-imgeo:Watervlakte a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Watervlakte"@nl .
+
+bgt-imgeo:Zee a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Zee"@nl .
+
+bgt-imgeo:GreppelDrogeSloot a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Greppel, droge sloot"@nl .
+
+bgt-imgeo:Bron a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Bron"@nl .
+
+bgt-imgeo:MeerPlasVenVijver a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Meer, plas, ven, vijver"@nl .
+
+bgt-imgeo:Rivier a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Rivier"@nl .
+
+bgt-imgeo:Sloot a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Sloot"@nl .
+
+bgt-imgeo:Kanaal a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Kanaal"@nl .
+
+bgt-imgeo:Beek a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Beek"@nl .
+
+bgt-imgeo:Gracht a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Gracht"@nl .
+
+bgt-imgeo:Haven a bgt-imgeo:TypeWaterdeel ;
+    skos:prefLabel "Haven"@nl .
+
+# Waterinrichtingselement domain values
+bgt-imgeo:Betonning a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Betonning"@nl .
+
+bgt-imgeo:Geleidewerk a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Geleidewerk"@nl .
+
+bgt-imgeo:Hoogtemerk a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Hoogtemerk"@nl .
+
+bgt-imgeo:Meerpaal a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Meerpaal"@nl .
+
+bgt-imgeo:Remmingswerk a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Remmingswerk"@nl .
+
+bgt-imgeo:Vuilvang a bgt-imgeo:TypeWaterinrichtingselement ;
+    skos:prefLabel "Vuilvang"@nl .
+
+# Wegdeel domain values
+bgt-imgeo:Parkeervlak a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Parkeervlak"@nl .
+
+bgt-imgeo:RijbaanAutosnelweg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Rijbaan autosnelweg"@nl .
+
+bgt-imgeo:RijbaanAutoweg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Rijbaan autoweg"@nl .
+
+bgt-imgeo:RijbaanLokaleWeg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Rijbaan lokale weg"@nl .
+
+bgt-imgeo:RijbaanRegionaleWeg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Rijbaan regionale weg"@nl .
+
+bgt-imgeo:HalfVerhard a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Half verhard"@nl .
+
+bgt-imgeo:Onverhard a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Onverhard"@nl .
+
+bgt-imgeo:OpenVerharding a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Open verharding"@nl .
+
+bgt-imgeo:Verkeersdrempel a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Verkeersdrempel"@nl .
+
+bgt-imgeo:OVBaan a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "OV-baan"@nl .
+
+bgt-imgeo:Overweg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Overweg"@nl .
+
+bgt-imgeo:Spoorbaan a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Spoorbaan"@nl .
+
+bgt-imgeo:BaanVoorVliegverkeer a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Baan voor vliegverkeer"@nl .
+
+bgt-imgeo:Fietspad a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Fietspad"@nl .
+
+bgt-imgeo:Voetpad a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Voetpad"@nl .
+
+bgt-imgeo:VoetpadOpTrap a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Voetpad op trap"@nl .
+
+bgt-imgeo:Ruiterpad a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Ruiterpad"@nl .
+
+bgt-imgeo:Voetgangersgebied a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Voetgangersgebied"@nl .
+
+bgt-imgeo:Inrit a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Inrit"@nl .
+
+bgt-imgeo:Woonerf a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Woonerf"@nl .
+
+bgt-imgeo:Verbindingsweg a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Verbindingsweg"@nl .
+
+bgt-imgeo:Calamiteitendoorsteek a bgt-imgeo:FunctieWegdeel ;
+    skos:prefLabel "Calamiteitendoorsteek"@nl .
+
+bgt-imgeo:GeslotenVerharding a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Gesloten verharding"@nl .
+
+bgt-imgeo:Asfalt a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Asfalt"@nl .
+
+bgt-imgeo:BetonElement a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Beton element"@nl .
+
+bgt-imgeo:Betonstraatstenen a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Betonstraatstenen"@nl .
+
+bgt-imgeo:Boomschors a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Boomschors"@nl .
+
+bgt-imgeo:Cementbeton a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Cementbeton"@nl .
+
+bgt-imgeo:GebakkenKlinkers a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Gebakken klinkers"@nl .
+
+bgt-imgeo:Grasklinkers a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Grasklinkers"@nl .
+
+bgt-imgeo:Gravel a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Gravel"@nl .
+
+bgt-imgeo:Grind a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Grind"@nl .
+
+bgt-imgeo:Puin a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Puin"@nl .
+
+bgt-imgeo:Schelpen a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Schelpen"@nl .
+
+bgt-imgeo:Sierbestrating a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Sierbestrating"@nl .
+
+bgt-imgeo:Tegels a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Tegels"@nl .
+
+bgt-imgeo:Zand a bgt-imgeo:FysiekVoorkomenWegdeel ;
+    skos:prefLabel "Zand"@nl .
+
+# Weginrichtingselement domain values
+bgt-imgeo:Balustrade a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Balustrade"@nl .
+
+bgt-imgeo:Geleideconstructie a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Geleideconstructie"@nl .
+
+bgt-imgeo:Verblindingswering a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Verblindingswering"@nl .
+
+bgt-imgeo:Wegmarkering a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Wegmarkering"@nl .
+
+bgt-imgeo:Molgoot a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Molgoot"@nl .
+
+bgt-imgeo:Lijnafwatering a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Lijnafwatering"@nl .
+
+bgt-imgeo:Wildrooster a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Wildrooster"@nl .
+
+bgt-imgeo:Rooster a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Rooster"@nl .
+
+bgt-imgeo:Boomspiegel a bgt-imgeo:TypeWeginrichtingselement ;
+    skos:prefLabel "Boomspiegel"@nl .
+
+# Enumeration type declarations
+bgt-imgeo:TypeBak a nen2660:EnumerationType .
+bgt-imgeo:FysiekVoorkomenBegroeidTerreindeel a nen2660:EnumerationType .
+bgt-imgeo:TypeBord a nen2660:EnumerationType .
+bgt-imgeo:TypeFunctioneelGebied a nen2660:EnumerationType .
+bgt-imgeo:TypeGebouwInstallatie a nen2660:EnumerationType .
+bgt-imgeo:TypeInstallatie a nen2660:EnumerationType .
+bgt-imgeo:TypeKast a nen2660:EnumerationType .
+bgt-imgeo:TypeKunstwerkdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeMast a nen2660:EnumerationType .
+bgt-imgeo:FysiekVoorkomenOnbegroeidTerreindeel a nen2660:EnumerationType .
+bgt-imgeo:FysiekVoorkomenOndersteunendWegdeel a nen2660:EnumerationType .
+bgt-imgeo:FunctieOndersteunendWegdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeOndersteunendWaterdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeOpenbareRuimte a nen2660:EnumerationType .
+bgt-imgeo:TypeOverbrugging a nen2660:EnumerationType .
+bgt-imgeo:TypeOverbruggingsdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeOverigBouwwerk a nen2660:EnumerationType .
+bgt-imgeo:TypePaal a nen2660:EnumerationType .
+bgt-imgeo:Inwinningsmethode a nen2660:EnumerationType .
+bgt-imgeo:TypePut a nen2660:EnumerationType .
+bgt-imgeo:TypeScheiding a nen2660:EnumerationType .
+bgt-imgeo:TypeSensor a nen2660:EnumerationType .
+bgt-imgeo:FunctieSpoor a nen2660:EnumerationType .
+bgt-imgeo:TypeStraatmeubilair a nen2660:EnumerationType .
+bgt-imgeo:TypeVegetatieObject a nen2660:EnumerationType .
+bgt-imgeo:TypeWaterdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeWaterinrichtingselement a nen2660:EnumerationType .
+bgt-imgeo:FunctieWegdeel a nen2660:EnumerationType .
+bgt-imgeo:FysiekVoorkomenWegdeel a nen2660:EnumerationType .
+bgt-imgeo:TypeWeginrichtingselement a nen2660:EnumerationType .

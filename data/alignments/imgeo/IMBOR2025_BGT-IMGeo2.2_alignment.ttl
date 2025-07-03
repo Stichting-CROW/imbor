@@ -1,0 +1,5106 @@
+@prefix : <https://data.crow.nl/alignment/imbor-bgtimgeo/def/> .
+@prefix bgt-imgeo: <//bgt-imgeo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix imbor: <https://data.crow.nl/imbor/def/> .
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+imbor:
+        a               owl:Ontology ;
+        rdfs:comment    "Het normatieve gedeelte van de IMBOR2025 ontology"@nl ;
+        rdfs:label      "IMBOR2025"@nl ;
+        owl:versionInfo "2025" ;
+        dct:conformsTo  rdfs: ;
+        .
+
+bgt-imgeo:
+        a               owl:Ontology ;
+        owl:versionInfo "v0.1" ;
+        dct:created     "2025-07-02"^^xsd:date ;
+        dct:publisher   "Stichting CROW" ;
+        rdfs:label      "NIET OFFICIEEL - BGT-IMGeo Ontologie t.b.v. de IMBOR-BGT/IMGEO mapping"@nl ;
+        rdfs:comment    "Deze ontologie is NIET OFFICIEEL en kan ook niet in die hoedanigheid gebruikt worden. De ontologie bevat de BGT/IMGeo concepten die gebruikt worden in de BGT/IMGEO en IMBOR mapping. Deze dienen dus alleen ter referentie en niet ter instantiëring. Deze is automatisch gegenereerd en kan dus fouten bevatten."@nl ;
+        dct:conformsTo  <https://w3id.org/nen2660/def> ;
+        rdfs:seeAlso    <https://docs.geostandaarden.nl/imgeo/catalogus/bgt/>, <https://docs.geostandaarden.nl/imgeo/catalogus/imgeo/> .
+
+:imbor-bgtimgeo                 rdf:type    owl:Ontology, void:Linkset ;
+        rdfs:label              "BGT-IMGEO en IMBOR2025"@nl ;
+        rdfs:comment            "Handmatige mapping van de twee o.b.v. expert judgement"@nl ;
+        dct:publisher           "Stichting CROW"@nl ;
+        dct:issued              "2025-07-02"^^xsd:date ;
+        dct:conformsTo          owl: ;  
+        dct:instructionalMethod "Deze linkset mag alleen gebruikt worden in de context van de Ontology Alignment whitepaper t.b.v. de mapping van de twee ontologieën"@nl ; 
+        owl:versionInfo         "0.1" ;
+        owl:imports             imbor:, imbor-domeinwaarde:, bgt-imgeo: ;
+        .
+
+## Meerdere opties mogelijk
+
+:2661-9663-9664-9665
+    owl:intersectionOf (
+        bgt-imgeo:Waterdeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:typeWaterdeel ;
+          owl:hasValue bgt-imgeo:Watervlakte
+        ]
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+          owl:hasValue bgt-imgeo:MeerPlasVenVijver
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            imbor:74b7451e-dc34-4b66-bee6-08ad654603db
+            imbor:9dec68ae-2367-46b6-91af-9452f86b96c4
+            imbor:207dd5da-13a2-4f03-b8e0-4162b163f3a7
+            imbor:e4c74202-06aa-4860-ae0d-9a1059cb5d03
+        )
+    ].
+
+:2472-9651
+    rdfs:comment "Zandkist en Zoutbak zijn twee objecttypen"@nl ;
+    owl:intersectionOf (
+        bgt-imgeo:Bak
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:plus-typeBak ;
+          owl:hasValue bgt-imgeo:ZandZoutbak
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            imbor:f1bc3be4-fe0b-4453-b0e3-4811485f6c7d
+            imbor:fdfcc3f1-49b3-49dc-bc91-b13b27c63a3a
+        )
+    ].
+
+:2595-9661
+    rdfs:comment "Meerdere bassins"@nl ;
+    owl:intersectionOf (
+        bgt-imgeo:BegroeidTerreindeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+          owl:hasValue bgt-imgeo:Groenvoorziening
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            imbor:fe1e7222-f48a-46ff-b643-c45873fe2bb8
+            imbor:175b8017-a54b-4473-bd71-51849997df13
+        )
+    ].
+
+:2479-9652-9653-9687-9688
+    owl:intersectionOf (
+        bgt-imgeo:Waterdeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:typeWaterdeel ;
+          owl:hasValue bgt-imgeo:Watervlakte
+        ]
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+          owl:hasValue bgt-imgeo:MeerPlasVenVijver
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            [ owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:a5274576-cbad-4ada-ad8c-bd0e9b88205e
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            ) ]
+        )
+    ].
+
+:2543-9654-9655
+    owl:intersectionOf (
+        bgt-imgeo:OnbegroeidTerreindeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel  ;
+          owl:hasValue bgt-imgeo:GeslotenVerharding
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            [ owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:a1b84712-3a73-420d-b3be-22bacae949bc
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            ) ]
+        )
+    ].
+
+:2552-9656-9657
+    owl:intersectionOf (
+        bgt-imgeo:OndersteunendWegdeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+          owl:hasValue bgt-imgeo:GeslotenVerharding
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            [ owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:a1b84712-3a73-420d-b3be-22bacae949bc
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+        )
+    ].
+
+:2533-9658-9659-9689-9690
+    owl:intersectionOf (
+        bgt-imgeo:OndersteunendWegdeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+          owl:hasValue bgt-imgeo:Groenvoorziening
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            [ owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:a5274576-cbad-4ada-ad8c-bd0e9b88205e
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            ) ]
+        )
+    ].
+
+:2673-9666-9667
+    owl:intersectionOf (
+        bgt-imgeo:Wegdeel
+        [ a owl:Restriction ;
+          owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel  ;
+          owl:hasValue bgt-imgeo:GeslotenVerharding
+        ]
+    ) ;
+    owl:equivalentClass [
+        owl:unionOf (
+            [ owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            ) ]
+            [ owl:intersectionOf (
+                imbor:a1b84712-3a73-420d-b3be-22bacae949bc
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            ) ]
+        )
+    ].
+
+
+## Matches via een 'relatie'
+
+:2606
+    rdfs:comment "Match via klasse Paal en drager van een haltebord."@nl ;
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Haltepaal 
+            ]
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8
+                [ a owl:Restriction ;
+                  owl:onProperty nen2660:isConnectedTo ;
+                  owl:hasValue imbor:570f9a74-a87d-41c8-bacc-aec0853ed7ba
+                ]
+            )
+        ].
+
+:2613
+    rdfs:comment "Match via klasse Paal en drager van een verkeersbord."@nl ;
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Verkeersbordpaal 
+            ]
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8
+                [ a owl:Restriction ;
+                  owl:onProperty nen2660:isConnectedTo ;
+                  owl:hasValue imbor:26dc09f6-c4aa-4b7e-8d0f-1a8fd4fec85d
+                ]
+            )
+        ].
+
+## 'Gewone' equivalent relaties
+
+:2467
+    owl:intersectionOf (
+            bgt-imgeo:Bak 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBak ;
+            owl:hasValue bgt-imgeo:AfvalApartPlaats 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:df3a7cac-4653-49b9-be3a-7fece9bf7a69.
+
+:2468
+    owl:intersectionOf (
+            bgt-imgeo:Bak 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBak ;
+            owl:hasValue bgt-imgeo:Afvalbak 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:58ef1415-6acb-412b-9c3e-e390bb2ae3b3.
+
+:2469
+    owl:intersectionOf (
+            bgt-imgeo:Bak 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBak ;
+            owl:hasValue bgt-imgeo:Bloembak 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ff65feb0-5166-4ed7-a353-54b4199be96f.
+
+:2470
+    owl:intersectionOf (
+            bgt-imgeo:Bak 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBak ;
+            owl:hasValue bgt-imgeo:Container 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:12b094e1-dbb9-4e18-8721-ea7534b5c06a.
+
+:2471
+    owl:intersectionOf (
+            bgt-imgeo:Bak 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBak ;
+            owl:hasValue bgt-imgeo:Drinkbak 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:bc3740db-4e1f-4742-8dac-f459b2a54113.
+
+:2473
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Boomteelt 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:47ca81f7-c001-4e9c-b8d3-d0bfa1f8fa5c.
+
+:2474
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bouwland 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f16f8ffe-4069-41ba-a8c0-3321dd85cabe.
+
+:2475
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Duin 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e67193cb-2051-4527-91c8-cc59bb0cebfb.
+
+:2476
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Fruitteelt 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:18e0be86-1fcf-446e-837a-6a7196914372.
+
+:2477
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GraslandAgrarisch 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:90d2b2ce-3dcd-4fee-a9ad-feac85f73ce6.
+
+:2478
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GraslandOverig 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:7289763b-7aa2-402c-ae67-3a3caf8bafaf.
+
+:2480
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Heide 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:17edbfed-deb2-45a9-bc19-9b22be980ce6.
+
+:2481
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Houtwal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e95c6640-75f1-4a8a-9c93-41ee8d620613.
+
+:2482
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Moeras 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:618ef498-efa9-4e02-b74c-09a266503937.
+
+:2483
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Rietland 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:424e3b6a-5c0a-43bf-b9ac-1f6b4184816d.
+
+:2485
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Informatiebord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:350a05bd-f83b-49ae-bb19-d158a54d7838.
+
+:2486
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Plaatsnaambord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c8f1cc9c-858b-430a-8b73-90ab1fbdc646.
+
+:2487
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Reclamebord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:668ebe59-1e36-4b84-a83c-c72a7a6633c6.
+
+:2488
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Scheepvaartbord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:23b83e52-ee57-4846-9757-4420933ae935.
+
+:2489
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Straatnaambord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:432fdebc-a500-47ca-b981-f53cb8e07084.
+
+:2490
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Verkeersbord 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:26dc09f6-c4aa-4b7e-8d0f-1a8fd4fec85d.
+
+:2491
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:VerklikkerTransportleiding 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:859f09f8-2a82-4a99-b5e1-9b9fc40e70fc.
+
+:2492
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Waarschuwingshek 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:3f23e8ad-054b-4961-8235-b15d5ea838e2.
+
+:2493
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Kering 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f9251d0c-31a3-4bc7-a6f2-b5470c26c2fd.
+
+:2494
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Bedrijvigheid 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c865f974-092b-4ca2-94a9-99cd4b30c915.
+
+:2495
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Begraafplaats 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:73c28dc5-a73a-47c8-8954-bac8ab61d375.
+
+:2496
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Benzinestation 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:1bde9b22-97d3-440b-a287-496c11748090.
+
+:2497
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Bewoning 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:bd2fd05d-9d00-4c84-b05c-12e3e22b79ae.
+
+:2498
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Bushalte 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5ed4ab8d-9f7d-4134-80b1-f4e9456b6672.
+
+:2499
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Carpoolplaats 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:9275add5-bb20-40d8-950d-e6ffe78f4ffc.
+
+:2500
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:FunctioneelBeheer 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ff44c7e9-2fa3-4314-b4a9-d251eb6eb7b6.
+
+:2501
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:FunctioneelBeheerHondenuitlaatplaats 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:36e78384-cc34-4e1f-bbc8-57f1abc9cac5.
+
+:2502
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:InfrastructuurVerkeerEnVervoer 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:24adb07a-8a5e-435b-852f-5c034eafcceb.
+
+:2503
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:InfrastructuurWaterstaatswerken 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:aa28383d-3f96-4688-ad5e-91c85cbc4221.
+
+:2504
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Landbouw 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f5dddf76-4234-427b-b497-8b2abcc98336.
+
+:2505
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:MaatschappelijkeEnOfPublieksvoorziening 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:34031da3-19f6-450d-9849-59b2a80b9bcf.
+
+:2506
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:NatuurEnLandschap 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:40e5bfd4-f071-466b-a8a7-c1a0ac092ba9.
+
+:2507
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieGebied 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:14571ed0-89fc-4d77-9e27-980698045183.
+
+:2508
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieBungalowpark 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:6b81f4af-ab63-4c1a-9ce6-bff2a1e34d80.
+
+:2509
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieCamping 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f97ef12f-167f-466f-b152-ab7633e82f27.
+
+:2510
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatiePark 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:374d6554-9b39-44fe-b92e-b54b2b45e83f.
+
+:2511
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieSpecltuin 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:941a17c1-a2b2-4cd1-8991-08b0ebcf0c2a.
+
+:2512
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieSportterrein 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ed3c635d-72f1-40e1-a019-7e92baee20b6.
+
+:2513
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:RecreatieVolkstuin 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:89c4790f-dc6e-4b19-933c-2d4565084b20.
+
+:2514
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Verzorgingsplaats 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:efcec4c3-01ea-4061-8479-f236c43a998b.
+
+:2515
+    owl:intersectionOf (
+            bgt-imgeo:Gebouwinstallatie 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeGebouwInstallatie ;
+            owl:hasValue bgt-imgeo:Bordes 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:37987d90-7799-41ec-866d-7915dfdbe7d6.
+
+:2516
+    owl:intersectionOf (
+            bgt-imgeo:Gebouwinstallatie 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeGebouwInstallatie ;
+            owl:hasValue bgt-imgeo:Luifel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d678aa8b-456a-4d8b-9b3a-30d0cf93933f.
+
+:2517
+    owl:intersectionOf (
+            bgt-imgeo:Gebouwinstallatie 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeGebouwInstallatie ;
+            owl:hasValue bgt-imgeo:Toegangstrap 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a2110f83-352b-444e-a2b8-b4a49aa1fcb3.
+
+:2518
+    owl:intersectionOf (
+            bgt-imgeo:Installatie 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeInstallatie ;
+            owl:hasValue bgt-imgeo:Pomp 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:01e06f2e-e561-4d6e-8625-2d0f284be884.
+
+:2519
+    owl:intersectionOf (
+            bgt-imgeo:Installatie 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeInstallatie ;
+            owl:hasValue bgt-imgeo:Zonnepaneel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d44358fa-2057-4a91-aab9-d99e8173d504.
+
+:2520
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:CaiKast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c0ee029d-3ed0-4243-80bf-60e11af1bc7c.
+
+:2521
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:Elektrakast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ce738f23-2622-45f9-82fd-259e62bf4daf.
+
+:2522
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:Gaskast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:38f29be5-7390-441b-b01a-65fe49180d5e.
+
+:2523
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:GmsKast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:9061698a-c413-4f68-a244-24832ba01635.
+
+:2524
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:OpenbareVerlichtingkast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:9b9ac6f1-a102-4db6-9dbe-089677d96b11.
+
+:2525
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:Rioolkast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:86c535d2-6a5f-48af-a3d7-1b21de0de6c5.
+
+:2526
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:TelecomKast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ca06fd0d-fd07-43f0-818b-c0e9353b0085.
+
+:2527
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:Telkast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:3154ed77-31ba-4855-8939-dc3c3edd2fcb.
+
+:2528
+    owl:intersectionOf (
+            bgt-imgeo:Kast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeKast ;
+            owl:hasValue bgt-imgeo:Verkeersregelinstallatiekast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:1e24b72e-21b0-4d1b-aa23-2d7eadb45bea.
+
+:2529
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Gemaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5d70e69a-2a35-4088-886e-32c0b07275c6.
+
+:2530
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Hoogspanningsmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:0746068e-2f43-40c0-86b0-c5f5baf64987.
+
+:2531
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Perron 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:76e7ffa9-6741-476f-8b58-73b3185cfe89.
+
+:2532
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Steiger 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4da9735b-97fe-488e-892e-d0729a29afec.
+
+:2533
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Strekdam 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4bce51e8-3402-46b9-8bb3-b649626be9ca.
+
+:2534
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Stuw 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c20a97e2-ba6d-4955-b470-e43f19659c4c.
+
+:2535
+    owl:intersectionOf (
+            bgt-imgeo:Mast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeMast ;
+            owl:hasValue bgt-imgeo:Bovenleidingmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:19b11372-765b-4e7f-9a19-b1998499e901.
+
+:2536
+    owl:intersectionOf (
+            bgt-imgeo:Mast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeMast ;
+            owl:hasValue bgt-imgeo:Laagspanningsmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f03f2fb1-9d9c-4d20-8b1e-b4046fee9236.
+
+:2537
+    owl:intersectionOf (
+            bgt-imgeo:Mast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeMast ;
+            owl:hasValue bgt-imgeo:Radarmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:2e02c0a8-27b2-496c-8b1c-eb428e6bc3c9.
+
+:2538
+    owl:intersectionOf (
+            bgt-imgeo:Mast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeMast ;
+            owl:hasValue bgt-imgeo:Straalzender 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5017b853-fb40-4526-b202-1b828551af09.
+
+:2539
+    owl:intersectionOf (
+            bgt-imgeo:Mast 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeMast ;
+            owl:hasValue bgt-imgeo:Zendmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:822c9092-52f2-4187-9fda-3f3a43499714.
+
+:2541
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Erf 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f2f5d7fc-8705-4352-869b-fe3971166fd9.
+
+:2545
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:2547
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:2549
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:2554
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2555
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2556
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2557
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Asfalt 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2558
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:BetonElement 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:8add24e4-736e-44d2-898a-9b7e9b150517
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2559
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Betonstraatstenen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:df448a52-bdab-4c50-9d61-da0e8fd3c480
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2560
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bodembedekkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2561
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Boomschors 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:040f07a7-04e3-493f-8168-34c00907fb6c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2562
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bosplantsoen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2563
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Cementbeton 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2564
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GebakkenKlinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:891367c2-b801-4ebf-9e78-fe4abde7fbf8
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2565
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GrasEnKruidachtigen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2566
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Grasklinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:aef69407-2dd7-4b9d-8aec-cbf2b7305f5c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2567
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Gravel 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:91dda046-af2b-4b12-9628-b1dfa79ba2c0
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2568
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Grind 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ca01d601-b936-4bcd-a0a0-ab86960ddd66
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2569
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Heesters 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2570
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Planten 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2571
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Puin 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ad0f0c08-38f6-44c4-822a-c8d21cbe98d6
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2572
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Schelpen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:494098f3-6b2f-48b0-b0a0-c233053f5c24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2573
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Sierbestrating 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a6975ddd-b461-4a8a-be9e-eebdb54ffd9c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2574
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Struikrozen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:a5274576-cbad-4ada-ad8c-bd0e9b88205e
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2575
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Tegels 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a5d7e6fb-edb7-465b-b0b7-46c02023bfc2
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2576
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:19f887bc-14b3-4855-a328-9d21ff404dcd
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2577
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:LandschappelijkGebied 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:65aa8523-c290-4d33-98cd-56a4e0f8b3a1
+                ]
+            )
+        ].
+
+:2578
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:Water 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:fc05d5bf-6908-49f3-bfcf-1c47183cd43e
+                ]
+            )
+        ].
+
+:2579
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:Weg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:fc8ac258-eea8-46be-9b52-231d71ffd476
+                ]
+            )
+        ].
+
+:2581
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Aquaduct 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:eadcb28a-2436-40d0-b5a3-2358642d0575.
+
+:2583
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Brug 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:overbruggingIsBeweegbaar;
+            owl:hasValue true
+            ] 
+        ) ;
+        owl:equivalentClass imbor:366207df-0b72-46a6-8e10-000085d60151.
+
+:2585
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Ecoduct 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a3aaec95-5131-4128-acd8-85ab714c6aec.
+
+:2587
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Flyover 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b2b0b46e-cc1f-45ae-a22a-f6d0b8b04ae9.
+
+:2589
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Viaduct 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e13e2867-bc61-462a-bcba-a8570c863a75.
+
+:2590
+    owl:intersectionOf (
+            bgt-imgeo:Overbruggingsdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbruggingsdeel ;
+            owl:hasValue bgt-imgeo:Dek 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f3202a49-5227-45e2-92d0-826ce6cf5974.
+
+:2591
+    owl:intersectionOf (
+            bgt-imgeo:Overbruggingsdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbruggingsdeel ;
+            owl:hasValue bgt-imgeo:Landhoofd 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b572dae1-fc8c-43e9-b31c-7123abd151d8.
+
+:2592
+    owl:intersectionOf (
+            bgt-imgeo:Overbruggingsdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbruggingsdeel ;
+            owl:hasValue bgt-imgeo:Pijler 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8fb333fc-e296-4619-a84b-fac4e8f704e8.
+
+:2593
+    owl:intersectionOf (
+            bgt-imgeo:Overbruggingsdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbruggingsdeel ;
+            owl:hasValue bgt-imgeo:Pyloon 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:379e3f9d-964f-4d4e-8f0c-140e3fa669b2.
+
+:2594
+    owl:intersectionOf (
+            bgt-imgeo:Overbruggingsdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbruggingsdeel ;
+            owl:hasValue bgt-imgeo:Sloof 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:0cd022c3-d556-4de9-845b-2b8d07fc247a.
+
+:2596
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Bezinkbak 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:22b48cdc-cef9-4850-ba00-554b6524034c.
+
+:2597
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:LageTrafo 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5c5ce323-d61a-4c3a-8388-954283dd8559.
+
+:2598
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:OpenLoods 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:050205ce-28c9-48c4-a05d-95d0b80138d5.
+
+:2599
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Opslagtank 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:27edba14-b463-4444-908b-467a0c5229e1.
+
+:2600
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Overkapping 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:356700eb-b03e-4b02-98c0-4aa8e829db8a.
+
+:2601
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Windturbine 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:7b932b5c-90dc-4e24-8818-da65eb5618f4.
+
+:2602
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Afsluitpaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d3bf7f42-b972-4aa3-ba33-732755e997db.
+
+:2603
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Dijkpaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:efc0fdb5-32de-4914-ab3b-c7e5a56630db.
+
+:2604
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Drukknoppaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:12d0355a-da09-46eb-8409-f31a68ed8898.
+
+:2605
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Grensmarkering 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ab1834a7-5fa1-4a0e-adba-f7f1df644838.
+
+:2607
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Hectometerpaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:83e027a5-b518-4753-b2bd-eb0185c66e2f.
+
+:2608
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Lichtmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e5d5a58c-bb19-4d49-8bf0-d1ea48a5487e.
+
+:2609
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Poller 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:eacea88d-dcb5-4b9e-bf5d-c5a0beee3fee.
+
+:2610
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Portaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:07d5ee08-67aa-4dd5-a411-0d3bb248e911.
+
+:2611
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Sirene 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:bee195e1-3557-4d82-a96a-446487085929.
+
+:2612
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Telpaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:cf32d0aa-d529-41e0-893a-fa56526ae1f7.
+
+:2614
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Verkeersregelinstallatiepaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d8c909d7-a9e2-4f42-9821-99b13abcece4.
+
+:2615
+    owl:intersectionOf (
+            bgt-imgeo:Paal 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePaal ;
+            owl:hasValue bgt-imgeo:Vlaggenmast 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d6806786-8c4e-4154-8680-b0bded5ac62d.
+
+:2616
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:BenzineOlieput 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:7efa4ba1-540b-43b4-b5e9-27c01bb3d7cf.
+
+:2617
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:BrandkraanPut 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f458950b-099a-42dd-99d8-1dcc6e76ec18.
+
+:2618
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:Drainageput 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:06e2b389-2bf9-46b8-b41c-103d2c96e8a8.
+
+:2619
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:Gasput 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5e68ac93-b75a-4acc-a04f-803db710e66a.
+
+:2620
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:InspectieRioolput 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:05cc36eb-984d-4168-9c86-80bfa01fbb8a.
+
+:2621
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:Kolk 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e6afe8f7-95a7-4a0c-a6e8-f6d2091fb8b9.
+
+:2622
+    owl:intersectionOf (
+            bgt-imgeo:Put 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typePut ;
+            owl:hasValue bgt-imgeo:Waterleidingput 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:493f2fad-051a-43f3-ba7d-2283c0c505c8.
+
+:2623
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Damwand 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8298e24e-2d79-48c5-a80c-74503dfdc588.
+
+:2624
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Geluidsscherm 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:dd64f32c-3273-4e23-9a61-fcc8ec93977f.
+
+:2625
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Hek 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d61e45b1-3651-4c01-9c63-b9bfadf25a16.
+
+:2626
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Kademuur 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:22c76a86-d969-464e-87cd-53466bd75fc4.
+
+:2627
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Muur 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:9cbafabd-ef5f-4121-a63a-57da752300e5.
+
+:2628
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeScheiding ;
+            owl:hasValue bgt-imgeo:Walbescherming 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:83dc8dbc-9b35-4c80-aad1-890d5972478e.
+
+:2629
+    owl:intersectionOf (
+            bgt-imgeo:Scheiding 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeScheiding ;
+            owl:hasValue bgt-imgeo:Draadraster 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:274429b1-45af-403e-8782-b8133d462da5.
+
+:2630
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Camera 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:21dee333-bee2-4003-a4b1-0aa9e4ae3eb6.
+
+:2631
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Debietmeting 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:75592c28-b3db-40f4-88cc-94fb8d5fcae1.
+
+:2632
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Detectielus 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d57334c7-987d-4b4e-a2e4-7274b37d622b.
+
+:2633
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Flitser 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b12176da-03aa-4151-91d0-d6df75138859.
+
+:2634
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:GmsSensor 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:ad60b1f6-9e91-4590-8e8a-b8675e61742d.
+
+:2635
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Lichtcel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:14cfc2d7-24b7-4de8-8304-04c561573eb8.
+
+:2636
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:RadarDetector 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:1cd7cdc3-2414-4cee-8224-7b829b233758.
+
+:2637
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Waterstandmeter 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4348baa2-244b-48f1-a5dc-76d623e5a652.
+
+:2638
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Weerstation 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:64da3f04-a073-4e60-b20b-a48da2e11d43.
+
+:2639
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Windmeter 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5e6edeb2-e561-416c-a3ea-57c72969fbaa.
+
+:2640
+    owl:intersectionOf (
+            bgt-imgeo:Spoor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieSpoor ;
+            owl:hasValue bgt-imgeo:Sneltram 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d88ce9cf-445f-4d5e-98b6-9cdbdf4281f7.
+
+:2641
+    owl:intersectionOf (
+            bgt-imgeo:Spoor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieSpoor ;
+            owl:hasValue bgt-imgeo:Tram 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:75706faf-5392-4287-a000-e98b730238ff.
+
+:2642
+    owl:intersectionOf (
+            bgt-imgeo:Spoor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieSpoor ;
+            owl:hasValue bgt-imgeo:Trein 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:49199b73-4b53-4db7-9f18-8bba44df54a1.
+
+:2643
+    owl:intersectionOf (
+            bgt-imgeo:Spoor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieSpoor ;
+            owl:hasValue bgt-imgeo:HavenKraan 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a9d2a123-f193-4003-9ebc-6091025ce411.
+
+:2644
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Abri 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31.
+
+:2645
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Betaalautomaat 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:13768641-088c-4520-9aa3-30e2cb5f1d34.
+
+:2646
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Bolder 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:5a7eb1dc-669a-4375-a616-6b3ef574bbaa.
+
+:2647
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Brievenbus 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8100d1e8-a91e-411f-8155-13038a224147.
+
+:2648
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Fontein 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8a10e8b9-f3c5-42e3-b08d-ae5b4d16b9e8.
+
+:2649
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Herdenkingsmonument 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:38509351-e65b-4b2f-8f40-fa9c47ffb094.
+
+:2650
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Kunstobject 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:31eb954f-cefd-4886-8b74-8a46f1eb7e52.
+
+:2651
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Lichtpunt 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:53929f41-9240-4a61-9abe-5ade04a679b8.
+
+:2652
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Slagboom 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d62f423b-292c-4b1d-bd02-ecb74f11d4fd.
+
+:2653
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Speelvoorziening 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4efb3a19-e491-469f-aa96-debed9c1be4d.
+
+:2654
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Telefooncel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:127c5f34-dbc0-46da-bf1d-8abc80a11957.
+
+:2655
+    owl:intersectionOf (
+            bgt-imgeo:VegetatieObject 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeVegetatieObject ;
+            owl:hasValue bgt-imgeo:Boom 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15.
+
+:2656
+    owl:intersectionOf (
+            bgt-imgeo:VegetatieObject 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeVegetatieObject ;
+            owl:hasValue bgt-imgeo:Haag 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a15450e3-dcbb-4471-8211-443117a85964.
+
+:2660
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Bron 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:79a89ac1-19b0-4756-9971-c40fade1a8fe.
+
+:2662
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Betonning 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:245f2f50-d734-4e41-8d46-bd69667cd07c.
+
+:2663
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Geleidewerk 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:da0bcf91-ada1-4bd4-81a0-c9213a8a1b3e.
+
+:2664
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Hoogtemerk 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e063bee1-3899-460d-9a4b-a0b7bf47395d.
+
+:2665
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Meerpaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:04240f09-c183-4a5f-abc8-163fc622ec9d.
+
+:2666
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Remmingswerk 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b3813cdb-2dbc-44cb-b715-bc5027a9b26b.
+
+:2667
+    owl:intersectionOf (
+            bgt-imgeo:Waterinrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterinrichtingselement ;
+            owl:hasValue bgt-imgeo:Vuilvang 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:afcf6548-b47d-4570-bd45-cd3cd3fda512.
+
+:2668
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Parkeervlak 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:066fdb45-d6ae-4cac-bc04-d7a2001c1a43
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2669
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutosnelweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:16b3888b-c11b-47bb-9384-5bc24a44c7bf
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2670
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutoweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:3c08f0f6-03b8-43d0-b650-54a847716b01
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2671
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanLokaleWeg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:a4c2e08a-8826-422e-b9ac-980dbcd702f8
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2672
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanRegionaleWeg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:28bd4f14-98cd-4943-9970-12ce6c92fb97
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2674
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2675
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2676
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2677
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanRegionaleWeg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeersdrempel 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:4e715ce5-b664-46e2-8cb1-aaaa464537e6
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2692
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Balustrade 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8b90cb61-b547-4ae7-ad3d-c6f98317f0d2.
+
+:2693
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Geleideconstructie 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:bfdac6fa-90a2-4c43-8d28-744164cb7a97.
+
+:2695
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Verblindingswering 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a870a1f0-59a1-4f42-8062-e6cff87bd73d.
+
+:2696
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Wegmarkering 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f70b7735-d56a-414b-92ab-a83f4a767757.
+
+:2698
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:OvBaan 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:57a25f08-3598-4061-ac38-94ee9eb7139e
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2699
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Overweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:853f3ddb-0598-46a0-bc5a-a5f5bbaee17a
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2700
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Spoorbaan 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:2ee9bafa-a127-459e-8b77-a29ac7b1053d
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2701
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:BaanVoorVliegverkeer 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:b328e006-3845-4e55-a07d-e46659522528
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2702
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Fietspad 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:ab4064d3-bed2-414a-b653-dbb9deeb9272
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2703
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Voetpad 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:985be75c-d1e3-41de-be99-5d7ae6566131
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2704
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:VoetpadOpTrap 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:92526042-3715-4491-b340-c9ef8db8e67f
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2705
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Ruiterpad 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:e98c1a83-dbc0-46d6-ae0e-560f73ca401a
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2706
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Voetgangersgebied 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:53f5dcf8-7757-4f5e-b166-390cfbba9491
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2707
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Inrit 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:def14dca-0696-41f1-adae-d97b91720216
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2708
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Woonerf 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:1eef583e-bf50-47e1-88ba-8343b20a771c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2709
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2710
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:2713
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:c2b9234a-769b-492b-b9b3-9003d181ed73.
+
+:2714
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GemengdBos 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:dc3731b1-d0c9-40b1-a0c8-58eb5175f760.
+
+:2715
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Kwelder 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:2918cc1c-fd8c-4b5a-a385-f2a6abe7387f.
+
+:2716
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Loofbos 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4f04c667-2190-44c5-8e4b-a4dc4f985ad8.
+
+:2717
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Naaldbos 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f0764fe5-bed9-4772-9ba8-72c8003b0957.
+
+:2718
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Struiken 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:10d3883e-b5e4-4a1a-b0b4-471de5e55133
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2719
+    owl:intersectionOf (
+            bgt-imgeo:Kunstwerkdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeKunstwerkdeel ;
+            owl:hasValue bgt-imgeo:Sluisdeur 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:f11a7883-e5fe-40c2-92a7-c63372e4a962.
+
+:2720
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:Spoorbaan 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:f3a40daa-b48b-4ce9-a4b3-b9a16fc2e939
+                ]
+            )
+        ].
+
+:2721
+    owl:intersectionOf (
+            bgt-imgeo:Plaatsbepalingspunt 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:inwinningsmethode ;
+            owl:hasValue bgt-imgeo:Terrestrisch 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:ca2ab7bd-d01e-44d3-8570-3677042f6afd
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:203344f2-1f6f-4730-bb1f-7b81025cecfc ;
+                  owl:hasValue imbor-domeinwaarde:9204d3a6-29f9-409b-b98b-ed1cc693f66f
+                ]
+            )
+        ].
+
+:2722
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:Terrein 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:d9c1fcb6-9e8b-4e2d-995c-43c57f65f0b6
+                ]
+            )
+        ].
+
+:2724
+    owl:intersectionOf (
+            bgt-imgeo:OpenbareRuimteLabel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:openbareRuimteType ;
+            owl:hasValue bgt-imgeo:AdministratiefGebied 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5666a1c0-be70-4b4a-a466-990bd39b491b
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:cda99bd9-2a0e-4930-b485-106228147dc7
+                ]
+            )
+        ].
+
+:2726
+    owl:intersectionOf (
+            bgt-imgeo:Plaatsbepalingspunt 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:inwinningsmethode ;
+            owl:hasValue bgt-imgeo:Laser 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:ca2ab7bd-d01e-44d3-8570-3677042f6afd
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:203344f2-1f6f-4730-bb1f-7b81025cecfc ;
+                  owl:hasValue imbor-domeinwaarde:dfbdb6c7-58b8-4e44-a903-635da2a33662
+                ]
+            )
+        ].
+
+:2727
+    owl:intersectionOf (
+            bgt-imgeo:Plaatsbepalingspunt 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:inwinningsmethode ;
+            owl:hasValue bgt-imgeo:Fotogrammetrisch 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:ca2ab7bd-d01e-44d3-8570-3677042f6afd
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:203344f2-1f6f-4730-bb1f-7b81025cecfc ;
+                  owl:hasValue imbor-domeinwaarde:3315b7fd-cedb-47b7-aa86-b103de122d64
+                ]
+            )
+        ].
+
+:2728
+    owl:intersectionOf (
+            bgt-imgeo:Plaatsbepalingspunt 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:inwinningsmethode ;
+            owl:hasValue bgt-imgeo:Panoramabeelden 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:ca2ab7bd-d01e-44d3-8570-3677042f6afd
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:203344f2-1f6f-4730-bb1f-7b81025cecfc ;
+                  owl:hasValue imbor-domeinwaarde:8e9bf753-922d-4cba-941a-123acdd262a8
+                ]
+            )
+        ].
+
+:2731
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutosnelweg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Verbindingsweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:3e2726c1-566c-463f-8096-6c18b9d63cda
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2732
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutosnelweg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Calamiteitendoorsteek 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:18b580e9-6038-4e27-b73a-946ca492aaa4
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2733
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bouwland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Akkerbouw 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f16f8ffe-4069-41ba-a8c0-3321dd85cabe
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:e5720fe3-3431-471e-90c6-300292775b91
+                ]
+            )
+        ].
+
+:2734
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bouwland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Braakliggend 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f16f8ffe-4069-41ba-a8c0-3321dd85cabe
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e70e113-b947-4ed9-9aee-0c44158e69e1 ;
+                  owl:hasValue xsd:true
+                ]
+            )
+        ].
+
+:2735
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bouwland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Vollegrondsteelt 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f16f8ffe-4069-41ba-a8c0-3321dd85cabe
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:2f99d921-bc3c-4d1c-83d4-36d03ab8898d
+                ]
+            )
+        ].
+
+:2736
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bouwland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bollenteelt 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:f16f8ffe-4069-41ba-a8c0-3321dd85cabe
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:e4ace1b7-309f-40a7-97b8-002df564b103
+                ]
+            )
+        ].
+
+:2737
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bosplantsoen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2738
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GrasEnKruidachtigen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2739
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Planten 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2740
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Struikrozen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:a5274576-cbad-4ada-ad8c-bd0e9b88205e
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2741
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Heesters 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2742
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Groenvoorziening 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Bodembedekkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:533136fd-661c-4410-b008-fa178227e336
+                ]
+            )
+        ].
+
+:2743
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Fruitteelt 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HoogstamBoomgaarden 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:18e0be86-1fcf-446e-837a-6a7196914372
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:729f5c0d-0885-490a-90af-b7b13ac6be82
+                ]
+            )
+        ].
+
+:2744
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Fruitteelt 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Wijngaarden 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:18e0be86-1fcf-446e-837a-6a7196914372
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:cd4572e4-6830-4fa0-a66f-6907e21c67b6
+                ]
+            )
+        ].
+
+:2745
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Fruitteelt 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:KleinFruit 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:18e0be86-1fcf-446e-837a-6a7196914372
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:788da789-9174-4788-8c86-3da20a705ec0
+                ]
+            )
+        ].
+
+:2746
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Loofbos 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GriendEnHakhout 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:4f04c667-2190-44c5-8e4b-a4dc4f985ad8
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:3cb5f4b6-61c5-4680-9db1-f597599bf7f6
+                ]
+            )
+        ].
+
+:2747
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Duin 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenDuinvegetatie 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:e67193cb-2051-4527-91c8-cc59bb0cebfb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:19ebac2c-f338-445c-8957-74d59e49c278
+                ]
+            )
+        ].
+
+:2748
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Duin 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GeslotenDuinvegetatie 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:e67193cb-2051-4527-91c8-cc59bb0cebfb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:3717e71a-71a8-49c8-b0ea-85626105a122
+                ]
+            )
+        ].
+
+:2749
+    owl:intersectionOf (
+            bgt-imgeo:BegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Fruitteelt 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenBegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:LaagstamBoomgaarden 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:18e0be86-1fcf-446e-837a-6a7196914372
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:701ea3b1-783f-40fc-92b0-28b276afc015
+                ]
+            )
+        ].
+
+:2750
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Rivier 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:fd8d046b-fcc4-4deb-8d82-8206fdd14f06.
+
+:2751
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Sloot 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d5fdbb37-c2aa-48da-aef3-429628007780.
+
+:2752
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Kanaal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:dd5362cf-c655-4c66-9b23-4309d28e24ad.
+
+:2753
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Beek 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:eae66037-bdda-4a0f-ab2e-e41d9cd9ec96.
+
+:2754
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Gracht 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d4dc61b3-fe9e-4400-8588-8dab2f58820a.
+
+:2755
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Watervlakte 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Haven 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d7c3d32d-63ad-4ae3-b7d3-b8e9ac10db72.
+
+:2756
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Voedersilo 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:6984e156-05e9-4041-a5ab-7b757cd67219.
+
+:2757
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Schuur 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:94a7bfda-29f6-4a72-987b-03d6cf651b27.
+
+:2758
+    owl:intersectionOf (
+            bgt-imgeo:OverigBouwwerk 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeOverigBouwwerk ;
+            owl:hasValue bgt-imgeo:Bunker 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:bf133d86-7847-4ea4-8ee5-9cb7758865e7.
+
+:2759
+    owl:intersectionOf (
+            bgt-imgeo:FunctioneelGebied 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeFunctioneelGebied ;
+            owl:hasValue bgt-imgeo:Waterbergingsgebied 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:76a45494-1f85-406c-aee5-c9a64867c37b.
+
+:2760
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:Wegwijzer 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:aabc0d14-0365-4b7e-9330-fcc4a907b707.
+
+:2761
+    owl:intersectionOf (
+            bgt-imgeo:Bord 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeBord ;
+            owl:hasValue bgt-imgeo:DynamischeSnelheidsindicator 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:6af617be-ffe1-488b-b222-6947a552c35c.
+
+:2762
+    owl:intersectionOf (
+            bgt-imgeo:Sensor 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeSensor ;
+            owl:hasValue bgt-imgeo:Hoogtedetectieapparaat 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a26750f4-d460-4223-ac5c-28db3a60d2b4.
+
+:2763
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Fietsenrek 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:0f127a0d-8a6b-40ae-9525-03d936d34cf3.
+
+:2764
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:OpenbaarToilet 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:7e27194a-5933-4de9-83ca-bce42a875452.
+
+:2765
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Bank 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b472a288-49f0-4c25-8895-ca6928326ac4.
+
+:2766
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Picknicktafel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:9d1a9fd7-5c36-4467-b463-c31fd853fc2b.
+
+:2767
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Parkeerbeugel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:618390b3-61b4-411c-ace2-c61fe8ee9c83.
+
+:2769
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Reclamezuil 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:fdd8a10c-7e79-43e4-9d43-3f783c4a619a.
+
+:2770
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Fietsenkluis 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:31caf659-6cc9-4335-897f-d430ce794523.
+
+:2771
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Molgoot 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:96910a78-5c26-4a5c-b20d-c5a3f25d4669.
+
+:2772
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Lijnafwatering 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:8192a171-415b-4e01-aaff-c01d0ba62543.
+
+:2773
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Wildrooster 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:3dc55131-721b-4e75-9f69-4fa04d8a2054.
+
+:2774
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Rooster 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:4e8d3195-7824-4559-8d6b-1b92062d1a34.
+
+:2775
+    owl:intersectionOf (
+            bgt-imgeo:Weginrichtingselement 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeWeginrichtingselement ;
+            owl:hasValue bgt-imgeo:Boomspiegel 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:d857c019-c4fe-4783-a71c-a6b08f7e48cd.
+
+:2776
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Asfalt 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2777
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:BetonElement 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:8add24e4-736e-44d2-898a-9b7e9b150517
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2778
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Betonstraatstenen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:df448a52-bdab-4c50-9d61-da0e8fd3c480
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2779
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Boomschors 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:040f07a7-04e3-493f-8168-34c00907fb6c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2780
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Cementbeton 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2781
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:GebakkenKlinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:891367c2-b801-4ebf-9e78-fe4abde7fbf8
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2782
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Grasklinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:aef69407-2dd7-4b9d-8aec-cbf2b7305f5c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2783
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Gravel 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:91dda046-af2b-4b12-9628-b1dfa79ba2c0
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2784
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Grind 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ca01d601-b936-4bcd-a0a0-ab86960ddd66
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2785
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Puin 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ad0f0c08-38f6-44c4-822a-c8d21cbe98d6
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2786
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Schelpen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:494098f3-6b2f-48b0-b0a0-c233053f5c24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2787
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Sierbestrating 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a6975ddd-b461-4a8a-be9e-eebdb54ffd9c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2788
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Tegels 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a5d7e6fb-edb7-465b-b0b7-46c02023bfc2
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:2789
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenWegdeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:19f887bc-14b3-4855-a328-9d21ff404dcd
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:9005
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:StrandEnStrandwal 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a468a904-0b8f-4d03-8fca-17a92014b185.
+
+:9022
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zandverstuiving 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:2f87d71b-a7b6-409f-818e-be556cb55dbd.
+
+:9023
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Asfalt 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:5e38db74-2c1b-4caa-bd62-c7008cb022c6
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9024
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Cementbeton 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:6b1aba20-c8b4-4fcb-b1b8-4b8428da30cb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9025
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GeslotenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Kunststof 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:a1b84712-3a73-420d-b3be-22bacae949bc
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9026
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Gravel 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:91dda046-af2b-4b12-9628-b1dfa79ba2c0
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9027
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Grind 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ca01d601-b936-4bcd-a0a0-ab86960ddd66
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9028
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Puin 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:ad0f0c08-38f6-44c4-822a-c8d21cbe98d6
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9029
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Schelpen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:494098f3-6b2f-48b0-b0a0-c233053f5c24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9030
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Onverhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Boomschors 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:06ecc047-725e-466f-869f-8edc0ae33b86
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:040f07a7-04e3-493f-8168-34c00907fb6c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9031
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Zand 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:2328d9b8-0aed-453a-864b-df830407ca34
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:19f887bc-14b3-4855-a328-9d21ff404dcd
+                ]
+            )
+        ].
+
+:9032
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:BetonElement 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:8add24e4-736e-44d2-898a-9b7e9b150517
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9033
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Betonstraatstenen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:df448a52-bdab-4c50-9d61-da0e8fd3c480
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9034
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:GebakkenKlinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:891367c2-b801-4ebf-9e78-fe4abde7fbf8
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9035
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:HalfVerhard 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Grasklinkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:aef69407-2dd7-4b9d-8aec-cbf2b7305f5c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9036
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Sierbestrating 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a6975ddd-b461-4a8a-be9e-eebdb54ffd9c
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9037
+    owl:intersectionOf (
+            bgt-imgeo:OnbegroeidTerreindeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:OpenVerharding 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOnbegroeidTerreindeel ;
+            owl:hasValue bgt-imgeo:Tegels 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:21e19973-ba96-4711-a92f-32c57989aa37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+                  owl:hasValue imbor-domeinwaarde:a5d7e6fb-edb7-465b-b0b7-46c02023bfc2
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:3b3ac2e4-954b-426f-8c8b-16e51c348dcd
+                ]
+            )
+        ].
+
+:9660
+    owl:intersectionOf (
+            bgt-imgeo:Overbrugging 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:typeOverbrugging ;
+            owl:hasValue bgt-imgeo:Brug 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:overbruggingIsBeweegbaar;
+            owl:hasValue false
+            ] 
+        ) ;
+        owl:equivalentClass imbor:6156ad75-a23c-4b5f-8095-c773cd6ebffe.
+
+:9662
+    owl:intersectionOf (
+            bgt-imgeo:Straatmeubilair 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-typeStraatmeubilair ;
+            owl:hasValue bgt-imgeo:Speelvoorziening 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:e7f7062b-5233-4534-a184-bf672e92b699.
+
+:9668
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GrasEnKruidachtigen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9669
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:GrasEnKruidachtigen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b4c44e57-5f1d-4a81-a9dd-325763643bd0
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9670
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Heesters 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9671
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Heesters 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:b95696e1-4b25-45ec-be6d-e4b1e280c637
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9672
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Planten 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9673
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Planten 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:40d30de7-5f7e-4a16-8f2e-85f305be18fb
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9674
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Zee 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:a5041190-199a-414d-89c2-ce57b3c7eaf6.
+
+:9675
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Waterloop 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:aaad83eb-d568-4cf3-8f76-a26e51cc0714.
+
+:9676
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:Watervlakte 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:999c662a-cdcc-4feb-8ec6-8818a2ca44e4.
+
+:9677
+    owl:intersectionOf (
+            bgt-imgeo:Waterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeWaterdeel ;
+            owl:hasValue bgt-imgeo:GreppelDrogeSloot 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:acb230e4-46da-4cf1-806e-01d4753debf7.
+
+:9678
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWaterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOndersteunendWaterdeel ;
+            owl:hasValue bgt-imgeo:Slik 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:b9c77abc-1e08-45c2-83a5-54c60888684e.
+
+:9679
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWaterdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-typeOndersteunendWaterdeel ;
+            owl:hasValue bgt-imgeo:OeverSlootkant 
+            ] 
+        ) ;
+        owl:equivalentClass imbor:258baa0f-2e38-4f2e-8eb8-b73deb986784.
+
+:9680
+    owl:intersectionOf (
+            bgt-imgeo:Pand 
+        ) ;
+        owl:equivalentClass imbor:54ee3712-08ca-48ff-a9c8-5c37e05692fc.
+
+:9681
+    owl:intersectionOf (
+            bgt-imgeo:OverigeConstructie 
+        ) ;
+        owl:equivalentClass imbor:ffa16bb2-fa5a-49f1-b3e8-794499b02785.
+
+:9683
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutoweg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Calamiteitendoorsteek 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:1e77786a-b01e-4cc0-abaa-5404c718b331
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:9684
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanLokaleWeg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeersdrempel 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:8da001c7-8540-4c23-8ac1-c9ac4a2c3e8d
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:9685
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanAutoweg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Verbindingsweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:0f3351f0-0a71-42b5-89eb-95c860066581
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:9686
+    owl:intersectionOf (
+            bgt-imgeo:Wegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieWegdeel ;
+            owl:hasValue bgt-imgeo:RijbaanRegionaleWeg 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-functieWegdeel ;
+            owl:hasValue bgt-imgeo:Verbindingsweg 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:47f12418-c5f8-44e0-8ec6-3d0c59933726
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:daeac277-badc-4a53-b638-232687adee2a
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:43a3469a-2012-4347-a143-1416486ae662
+                ]
+            )
+        ].
+
+:9691
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bosplantsoen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9692
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Verkeerseiland 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bodembedekkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:79c92fba-f655-472d-83cb-fb09b2968e24
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9693
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bosplantsoen 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:74f35552-7109-4dc2-9afa-91f0d8ff1d09
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
+
+:9694
+    owl:intersectionOf (
+            bgt-imgeo:OndersteunendWegdeel 
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:bgt-functieOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Berm 
+            ]
+            [ a owl:Restriction ;
+            owl:onProperty bgt-imgeo:plus-fysiekVoorkomenOndersteunendWegdeel ;
+            owl:hasValue bgt-imgeo:Bodembedekkers 
+            ] 
+        ) ;
+        owl:equivalentClass [
+            owl:intersectionOf (
+                imbor:02aafb2a-b18a-495c-9c94-e245d15d4d37
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:1e6712c3-dac9-45dd-b43f-c3f678ea1ba3 ;
+                  owl:hasValue imbor-domeinwaarde:81d97411-da9c-473b-a373-78a4af8becf5
+                ]
+                [ a owl:Restriction ;
+                  owl:onProperty imbor:7cfc2204-4356-45c2-bf9c-22c14c6a38a7 ;
+                  owl:hasValue imbor-domeinwaarde:07ab7310-138d-403f-8fdd-83d8b0ceef8f
+                ]
+            )
+        ].
