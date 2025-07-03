@@ -72,7 +72,10 @@ De relatie met GWSW is al lange tijd binnen IMBOR aanwezig. Riolering wordt als 
 
 Binnen GWSW worden objecttypen, attributen en relaties beschreven die gaan over zowel statische als dynamische gegevens. Met statische gegevens worden gegevens bedoeld die relatief weinig veranderen en vaak voor meer doeleinden nodig zijn dan alleen beheer van de riolering. Onder dynamische gegevens worden dan ook meer de gegevens verstaan die regelmatig worden verzameld voor het assetmanagement (denk aan inspecties, metingen en uitgevoerde onderhoudsmaatregelen) en gegevens die daaruit worden berekend (denk aan planjaren, verwachte maatregelen en kostenramingen). Deze gegevens worden vaak in beheersystemen vastgelegd die voor rioolbeheer gemaakt zijn. IMBOR heeft een focus op alleen de vaste gegevens van objecten in de openbare ruimte. Vandaar dat er de relatie tussen IMBOR en GWSW zich alleen toelegt op de objecttypen, relaties en attributen die vaste gegevens beschrijven. Het deel van GWSW dat vaste gegevens beschrijft wordt nu door Rioned aangeleverd aan IMBOR onder de noemer IMBOR Stedelijk Water. Zodoende is er sterke semantische relatie (alignment) tussen GWSW en IMBOR gerealiseerd. 
 
+<div class='note' title='GWSW in IMBOR'>
 De opname van GWSW in IMBOR is voor de vaste gegevens dus 100%. Voor het dynamische deel van GWSW blijft de GWSW ontologie nodig.
+</div>
+
 
 <details>
   <summary>
@@ -92,8 +95,12 @@ Ondanks de verschillen moeten en willen GEO- en BOR-afdelingen binnen veel organ
 
 De principes voor het opstellen van alignments zijn gedocumenteerd in de whitepaper [Ontology Matching trough alignment and extension: a Best Practice](https://docs.crow.nl/ontology-alignment/whitepaper/). Alignments zijn eenvoudig als de modellen sterk op elkaar lijken. Naarmate de modellen verder uit elkaar liggen, worden alignments complexer. De IMBOR-IMGeo-alignment is momenteel het meest complexe alignment dat CROW beheert.
 
-<div class='note' title="Praktijkrichtlijn 2020">
+<div class='advisement' title="Praktijkrichtlijn 2020">
 In 2020 is door CROW en Geonovum samen een <a href="https://docs.geostandaarden.nl/imgeo/def-pr-IMGeo-20200318/" target=_blank>praktijkrichtlijn</a> uitgebracht. IMBOR2020-08 sluit aan op versie van IMGeo, 2.1.1. In IMGeo 2.1.1 ontbreken bepaalde subclassificaties van objecten die wel in IMBOR voorkomen. Om IMBOR-classificaties zonder gegevensverlies te kunnen uitwisselen tussen Geo- en BOR-afdeling binnen een organisatie middels het StUF-Geo BOR berichtenverkeer is deze werkafspraak/praktijkrichtlijn ‘Uitbreiding domeinwaarden en attributen’ ontwikkeld. De relatie tussen IMBOR en IMGeo is met deze praktijkrichtlijn helemaal uitgewerkt in een mapping tabel. In de praktijk wordt deze helaas niet of nauwelijks toegepast. Binnen IMBOR2022 is daarom op een iets hoger niveau een relatief sterke semantische relatie gelegd naar IMGeo2.2. Vanaf IMBOR2025 geldt deze praktijkrichtlijn niet meer.
+</div>
+
+<div class='note' title='BGT-IMGEO IMBOR Alignment'>
+Vanaf 2025 is er een officiële alignment beschikbaar. Zie hiervoor de <a href="https://github.com/Stichting-CROW/imbor/tree/master/data/alignments">alignments op GitHub</a>.
 </div>
 
 <details>
@@ -112,16 +119,16 @@ In 2020 is door CROW en Geonovum samen een <a href="https://docs.geostandaarden.
 
 De [KOR 2023][16] (Kwaliteitscatalogus Openbare Ruimte) bevat zo'n 200 beeldmeetlatten voor het meten van de kwaliteit van de buitenruimte. Dit is een apart product van CROW, maar heeft een sterkte relatie met IMBOR. De KOR2023 heeft een officiële alignment met IMBOR. IMBOR en de KOR kunnen, met gebruikmaking van deze alignment, zodoende samen met elkaar gebruikt worden. De KOR wordt tevens als LinkedData gedistribueerd. 
 
-<div class='note'>
-De KOR en IMBOR alignment moet nog officieel worden uitgebracht. 
+<div class='note' title='KOR-IMBOR Alignment'>
+Vanaf 2025 is er een officiële alignment beschikbaar. Zie hiervoor de <a href="https://github.com/Stichting-CROW/imbor/tree/master/data/alignments">alignments op GitHub</a>.
 </div>
 
 #### BOR-MELD
 
 [BOR-MELD][7] is een CROW-standaard voor het vastleggen van meldingen over de openbare ruimte. De systematiek beschrijft welke informatie van een melding wordt vastgelegd, zowel het door de burger of bedrijf gemelde probleem (de ‘voorkant’ van de melding) als de achterliggende oorzaak en genomen actie (de ‘achterkant’ van de melding). De relatie met IMBOR is nagenoeg gelijk aan die van [KOR](#kor). De uniforme categorisering van typen meldingen over de openbare ruimte is altijd gerelateerd aan één of meerdere IMBOR-objecttypen. Ofwel, elk objecttype binnen BOR-MELD kent een alignment naar een objecttype van IMBOR. IMBOR en BOR-MELD kunnen zodoende samen met elkaar gebruikt worden. 
 
-<div class='note'>
-De BOR-MELD en IMBOR alignment moet nog officieel worden uitgebracht. 
+<div class='note' title='BOR-MELD-IMBOR Alignment'>
+Vanaf 2025 is er een officiële alignment beschikbaar. Zie hiervoor de <a href="https://github.com/Stichting-CROW/imbor/tree/master/data/alignments">alignments op GitHub</a>.
 </div>
 
 #### Wegbeheersystematiek
