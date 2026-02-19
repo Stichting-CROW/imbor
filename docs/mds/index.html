@@ -1,33 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <meta charset='utf-8'>
-  <meta content="text/html; charset=utf-8"
-        http-equiv="content-type">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Pas hier de titel van het document aan -->
-  <title>IMBOR 'Minimale dataset documentatie'</title>
-  <script src="config.js" class="remove"></script>
-  <script src='https://cdn.jsdelivr.net/gh/stichting-crow/respec@latest/builds/respec-stichting-crow.js' async class='remove'></script>
-</head>
+    <!-- Pas hier de titel van het document aan -->
+    <title>IMBOR Minimale Dataset (MDS)</title>
 
-<body>
-  <!-- Op https://github.com/stichting-crow/respec/wiki staat een beknopte handleiding voor ReSpec. -->
-  <section id="abstract"       data-include-format="markdown" data-include="sections/0-samenvatting.md"></section>
-  <!-- <section id="sotd"></section> -->
-  <!-- <section  data-include-format="markdown" data-include="sections/0-inleiding.md"></section> -->
-  <section  data-include-format="markdown" data-include="sections/ruimtelijk-reeel.md"></section>
-  <section  data-include-format="markdown" data-include="sections/inwinning-informatie.md"></section>
-  <section  data-include-format="markdown" data-include="sections/actor-rol.md"></section>
-  <section  data-include-format="markdown" data-include="sections/semantische-relaties.md"></section>
-  <section  data-include-format="markdown" data-include="sections/materie.md"></section>
-  <section  data-include-format="markdown" data-include="sections/geometrie.md"></section>  
-  <section  data-include-format="markdown" data-include="sections/memo.md"></section>  
+    <script src="config.js" class="remove"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/stichting-crow/respec@latest/builds/respec-stichting-crow.js"
+      async
+      class="remove"
+    ></script>
+  </head>
 
-  <!-- <section id="conformance"></section> -->
-  <!-- <section id="index"></section> -->
-</body>
+  <body>
+    <!-- Inleiding -->
+    <section
+      data-include-format="markdown"
+      data-include="sections/0-inleiding.md"
+    ></section>
 
+    <!-- Uitleg MDS -->
+    <section
+      data-include-format="markdown"
+      data-include="sections/1-mds-uitleg.md"
+    ></section>
+
+    <!-- SHACL Shapes met voorbeelden -->
+    <section
+      data-include-format="markdown"
+      data-include="sections/2-shacl-shapes-met-vb.md"
+    ></section>
+
+    <!-- Documentatie van de Shapes -->
+    <section
+      data-include-format="markdown"
+      data-include="sections/3-documentatie-shapes.md"
+    ></section>
+  </body>
 </html>

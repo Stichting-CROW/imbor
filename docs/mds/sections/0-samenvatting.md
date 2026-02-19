@@ -1,1 +1,0 @@
-Dit is een levend document waar alle best practices die uitgewerkt zijn voor het IMBOR gepresenteerd worden.
