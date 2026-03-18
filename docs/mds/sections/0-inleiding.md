@@ -1,16 +1,12 @@
-## Inleiding
+# Inleiding
 
-Dit document dient als documentatie voor het maken van een Minimale Dataset.
+Dit document dient als documentatie voor het maken van een Minimale dataset. Het document is geschreven voor gebruikers van IMBOR, met name aan data modelleurs/architecten.
 
-### Doelgroep
+# Opbouw
 
-Het document is geschreven voor gebruikers van IMBOR, denk aan data modelleurs/architecten.
+Dit document is opgedeeld in de secties categorieën.
 
-### Opbouw
-
-Dit document is opgedeeld in de verschillende categorieën.
-
-1. Uitleg over wat een Minimale Dataset is.
-2. Wat SHACL is en hoe SHACL gebruikt kan worden om data te valideren met een Minimale Dataset
+1. Uitleg over wat de Minimale dataset is.
+2. Wat SHACL is en hoe SHACL gebruikt kan worden om data te valideren met een Minimale dataset
 3. Hoe SHACL shapes gemaakt kunnen worden voor een Mimimale dataset
 4. Hoe je valideert met Apache Jena.
