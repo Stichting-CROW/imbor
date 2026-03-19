@@ -16,7 +16,7 @@ Jena kan via de command-line-tool `shacl validate` worden aangeroepen met twee b
 
 Het Minimale dataset IMBOR [SHACL bestand in Turtle-formaat](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) bevat per objecttype een blok dat er conceptueel zo uitziet:
 
-* Een NodeShape die zegt: "Ik richt me op alle objecten van type X", gevolgd door verwijzingen naar één of meer PropertyShapes. Elke PropertyShape zegt: "Het attribuut Y moet minimaal één keer aanwezig zijn."
+- Een NodeShape die zegt: "Ik richt me op alle objecten van type X", gevolgd door verwijzingen naar één of meer PropertyShapes. Elke PropertyShape zegt: "Het attribuut Y moet minimaal één keer aanwezig zijn."
 
 Concreet betekent dit dat als een object van type "Boom" wordt aangeleverd zonder het attribuut "Hoogte", de SHACL-validatie een foutmelding genereert die exact aangeeft welk object het betreft en welk attribuut ontbreekt.
 
