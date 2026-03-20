@@ -1,6 +1,6 @@
 # Inleiding
 
-Dit document dient als documentatie voor het maken van een Minimale dataset. Het document is geschreven voor gebruikers van IMBOR, met name aan data modelleurs/architecten.
+Dit document dient als documentatie voor het maken van een Minimale dataset. Het document is geschreven voor gebruikers van IMBOR, met name aan data modelleurs/architecten. Het is een aanvulling/verdieping op [deze sectie](https://docs.crow.nl/imbor/techdoc/#minimale-dataset-imbor) uit de technische documentatie van IMBOR.
 
 # Opbouw
 
