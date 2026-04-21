@@ -39,6 +39,10 @@ Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben neg
 
 CROW beheert [IMBOR 'best practices'](https://docs.crow.nl/imbor/best-practices/). Dit zijn concrete uitwerkingen van hoe je IMBOR toepast in de praktijk. Onderwerpen zijn onder andere geometrie, temporele aspecten, materie en semantische relaties. 
 
+## Beheerplan
+
+Het [beheerplan](https://docs.crow.nl/imbor/beheerplan/) beschrijft alle aspecten rondom het beheer van IMBOR. 
+
 ## Actieve ontwikkeling 
 
 Voor de actieve ontwikkeling van IMBOR wordt de repository [imbor-development](https://github.com/Stichting-CROW/imbor-development) gebruikt.
