@@ -1,0 +1,5 @@
+## Minimale dataset IMBOR
+
+De [minimale dataset](https://begrippen.crow.nl/ombk/nl/page/?uri=https%3A%2F%2Fdata.crow.nl%2Ftech-term%2Fterm%2FTT004) IMBOR representeert een set van veelgebruikte IMBOR-gegevens die nodig zijn om goed beheer uit te voeren, opgesteld door een aantal gemeenten. Deze set is op eigen initiatief opgesteld buiten de beheerders van IMBOR om en is een marktinitiatief. Vanuit IMBOR wordt de waarde van de set herkent en vandaar dat deze als informatief onderdeel is opgenomen.
+
+De minimale dataset IMBOR wordt als spreadsheet via de website [Objectgericht.nl](https://www.objectgericht.nl/) gepubliceerd en kan daar opgevraagd worden. CROW heeft deze set vertaald naar [[shacl]] shapes als machineleesbaar formaat. Op deze manier kan deze set gebruikt worden in combinatie met de andere RDF sets van IMBOR. Informatie hierover kan gevonden in de [technische documentatie van de 'Minimale dataset IMBOR'](https://docs.crow.nl/imbor/mds). Het bestand kan gedownload worden op de [GitHub omgeving van IMBOR](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking).
