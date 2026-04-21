@@ -4,7 +4,7 @@
 
 > Het informatiemodel voor de vaste gegevens van de openbare ruimte voor assetbeheer, ontwikkeld door [CROW](https://www.crow.nl).
 
-Deze repository is de community omgeving voor IMBOR. Hier vind je de IMBOR releases en kun je aanbevelingen indienen.
+Dit is de community omgeving voor IMBOR. Hier vind je de IMBOR releases en kun je aanbevelingen indienen.
 
 ## Over IMBOR
 
@@ -31,9 +31,9 @@ Bugs, verbeterverzoeken en aanbevelingen kunnen worden ingediend via [GitHub Iss
 
 IMBOR is afgestemd op een aantal andere standaarden. Alignments met IMGeo, BOR-MELD en de KOR zijn te downloaden in Linked Data-formaat (RDF), via [alignments](https://github.com/Stichting-CROW/imbor/tree/master/data/alignments). 
 
-## Minimale dataset
+## Startset
 
-Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben negen gemeenten een minimale dataset opgesteld met de, naar hun mening, belangrijkste vaste gegevens voor het efficiënt beheren van de openbare ruimte. Deze [minimale dataset](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) is te downloaden in Linked Data-formaat (RDF).  
+Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben negen gemeenten een startset opgesteld met de, naar hun mening, belangrijkste vaste gegevens voor het efficiënt beheren van de openbare ruimte. Deze [minimale dataset](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) is te downloaden in Linked Data-formaat (RDF).  
 
 ## Best practices
 
