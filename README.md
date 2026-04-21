@@ -33,7 +33,7 @@ IMBOR is afgestemd op een aantal andere standaarden. Alignments met IMGeo, BOR-M
 
 ## Startset
 
-Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben negen gemeenten een startset opgesteld met de, naar hun mening, belangrijkste vaste gegevens voor het efficiënt beheren van de openbare ruimte. Deze [minimale dataset](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) is te downloaden in Linked Data-formaat (RDF).  
+Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben negen gemeenten een startset opgesteld met de, naar hun mening, belangrijkste vaste gegevens voor het efficiënt beheren van de openbare ruimte. Deze [startset](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) is te downloaden in Linked Data-formaat (RDF).  
 
 ## Best practices
 
