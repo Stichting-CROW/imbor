@@ -25,16 +25,27 @@ De opbouw van IMBOR is gebaseerd op internationale standaarden zoals NEN2660-2 e
 
 ## Issues 
 
-Middels de GitHub Issues kunnen bug/features/aanbevelingen worden gegeven op IMBOR en de documentatie. [Issues](https://github.com/Stichting-CROW/imbor/issues) kunnen vragen, bugs of verzoeken ingediend worden ten behoeve van de nieuwe versie van IMBOR.
+Bugs, verbeterverzoeken en aanbevelingen kunnen worden ingediend via [GitHub Issues](https://github.com/Stichting-CROW/imbor/issues). Deze bijdragen worden besproken met de werkgroepen van CROW.
 
-## Documentatie
+## Relaties tot andere standaarden
 
-Documentatie met betrekking tot IMBOR is te vinden op: [docs.crow.nl/IMBOR](https://docs.crow.nl/#sectie-imbor).
+IMBOR is afgestemd op een aantal andere standaarden. Alignments met IMGeo, BOR-MELD en de KOR zijn te downloaden in Linked Data-formaat (RDF), via [alignments](https://github.com/Stichting-CROW/imbor/tree/master/data/alignments). 
 
-## Versiebeheer
+## Startset
 
-CROW beraadt zich nog op een duurzame beheersstrategie ten aanzien van IMBOR in Linked data-formaat. 
-Daar hoort ook versiebeheer bij. Zie ook issue [#2](https://github.com/Stichting-CROW/imbor/issues/2).
+Binnen het programma DOOR (Dataharmonisatie Objecten Openbare Ruimte) hebben negen gemeenten een startset opgesteld met de, naar hun mening, belangrijkste vaste gegevens voor het efficiënt beheren van de openbare ruimte. Deze [startset](https://github.com/Stichting-CROW/imbor/tree/master/data/informele%20handreiking) is te downloaden in Linked Data-formaat (RDF).  
+
+## Best practices
+
+CROW beheert [IMBOR 'best practices'](https://docs.crow.nl/imbor/best-practices/). Dit zijn concrete uitwerkingen van hoe je IMBOR toepast in de praktijk. Onderwerpen zijn onder andere geometrie, temporele aspecten, materie en semantische relaties. 
+
+## Beheerplan
+
+Het [beheerplan](https://docs.crow.nl/imbor/beheerplan/) beschrijft alle aspecten rondom het beheer van IMBOR. 
+
+## Actieve ontwikkeling 
+
+Voor de actieve ontwikkeling van IMBOR wordt de repository [imbor-development](https://github.com/Stichting-CROW/imbor-development) gebruikt.
 
 ## Licentie
 
