@@ -20,9 +20,9 @@ OWL gaat uit van een Open World Assumption:
 “als een eigenschap niet is ingevuld, kan die informatie elders bestaan”.
 [[shacl]] doet geen logische afleidingen; dat is de taak van OWL.
 
-## SHACL gebruik bij de Minimale dataset IMBOR
+## SHACL gebruik bij de Startset IMBOR
 
-Voor de minimale dataset wordt één bepaalde functie van [[shacl]] vooral gebruikt, namelijk de `sh:minCount`. Met de minCount kan worden aangegeven hoeveel waarden er minimaal voor iets moeten zijn.
+Voor de Startset wordt één bepaalde functie van [[shacl]] vooral gebruikt, namelijk de `sh:minCount`. Met de minCount kan worden aangegeven hoeveel waarden er minimaal voor iets moeten zijn.
 
 >EXAMPLE
 >Om te laten zien hoe [[shacl]] ingezet kan worden om IMBOR-data te valideren gebruiken het voorbeeld van het objecttype 'Boom'. Het stuk voorbeeldata toont dat er een uniek object is data van de klasse 'boom' is, het heeft een aantal attributen met waarden:
@@ -85,7 +85,7 @@ Voor de minimale dataset wordt één bepaalde functie van [[shacl]] vooral gebru
 >                 sh:focusNode                  data:6fb4b2c7-69ec-4976-8489-6ad2d35d9e63;                           # Het object waar de fout is gevonden (deze specifieke boom), dit object voldoet dus niet aan een bepaalde regel
 >                 sh:resultMessage              "minCount[1]: Invalid cardinality: expected min 1: Got count = 0";   # De property moet minimaal één keer voorkomen, maar in de data is hij 0 keer aanwezig
 >                 sh:resultPath                 imbor:c3ab0c99-806c-4743-9e68-1b452ee94b73;                          # De property van het object waar de fout is gevonden
->                 sh:resultSeverity             sh:Violation;                                                        # De ernst van de fout, in dit geval voldoet de data niet aan de eisen van de minimale dataset
+>                 sh:resultSeverity             sh:Violation;                                                        # De ernst van de fout, in dit geval voldoet de data niet aan de eisen van de Startset
 >                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent;                                      # De overtreding komt door een regel over het minimumaantal.
 >                 sh:sourceShape                mds_imbor:prop-92ace226-90e5-40ff-a4b2-c5c247adc138                  # De URI van de exacte [[shacl]] PropertyShape die deze verplichting definieert
 >               ];
