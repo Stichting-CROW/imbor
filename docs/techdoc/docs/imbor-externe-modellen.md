@@ -153,10 +153,10 @@ Vanwege de positie van IMBOR worden er veel relaties naar andere standaarden gel
 
 #### NEN2767-4
 
-De NEN2767 en IMBOR hebben een lange historie. Veel gebruikers van IMBOR gebruiken ook de NEN2767-4 Conditiemeting infrastructuur. Er is in 2020 ook besloten dat de afstemming tussen de twee duidelijker gemaakt moet worden. Hiervoor is een gezamenlijk project gestart [door de NEN en CROW][3]. Hier zijn nog geen tastbare resultaten van. Tot nu toe is daarom in IMBOR een zwakke semantische relatie gelegd vanuit het IMBOR perspectief. Voor de IMBOR objecttypen waar een equivalent erkend wordt in de NEN2767-4 is dit aangegeven. De relatie tussen de IMBOR concepten en de NEN concepten is niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe de NEN2767-4 is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. Deze aanzet kan door een softwareleverancier of organisatie worden overgenomen of uitgewerkt. 
+De NEN2767 en IMBOR hebben een lange historie. Veel gebruikers van IMBOR gebruiken ook de NEN2767-4 Conditiemeting infrastructuur. Er is in 2020 ook besloten dat de afstemming tussen de twee duidelijker gemaakt moet worden. Hiervoor is een gezamenlijk project gestart [door de NEN en CROW][3]. Hier zijn nog geen tastbare resultaten van. In eerdere versie van IMBOR was er een zwakke semantische relatie gelegd vanuit het IMBOR perspectief. Voor de IMBOR objecttypen waar een equivalent erkend werd in de NEN2767-4 was dit aangegeven. De relatie tussen de IMBOR concepten en de NEN concepten is niet meer dan een 'bekijk ook' relatie die door CROW vanuit het IMBOR perspectief uitgewerkt is. Deze vastlegging is gedaan zodat bekeken kan worden hoe de NEN2767-4 is opgenomen in IMBOR en geeft een aanzet voor een vertaling tussen de twee standaarden. 
 
 <div class='note'>
-De NEN2767-4 en IMBOR alignment moet nog officieel worden uitgebracht. 
+De NEN2767-4 en IMBOR alignment moet nog officieel worden uitgebracht. Dit wordt in 2026 in gezamenlijk project van de NEN en CROW. 
 </div>
 
 #### NLCS
