@@ -1,25 +1,17 @@
-@prefix imbor: <https://data.crow.nl/imbor/def/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 
-imbor:StatusShape
-  a sh:PropertyShape ;
-  skos:prefLabel "status vastgezet op Viaduct"@nl ;
-  sh:path imbor:heeftStatus ;
-  sh:maxCount 1 ;  # Maximaal 1 status
-  sh:qualifiedValueShape [
-    sh:class imbor:StatusDomeinwaardelijst
-  ] ;
-  sh:qualifiedMaxCount 1 .  # Als het uit de lijst komt, ook max 1
+imbor:99810ec5-8a94-4eaf-9ba5-667402abd7a1 a sh:PropertyShape ;
+    skos:prefLabel "herbeoordeelde belastingklasse vastgezet op Viaduct"@nl ;
+    sh:path imbor:1e05f90d-8ab9-4501-b1b8-cb38314f3cf1 ; # herbeoordeelde belastingklasse
+    sh:maxCount 1 ; # hoogstens één waarde
+    sh:qualifiedMaxCount 1 ; # ... waarvan maximaal één uit de lijst
+    sh:qualifiedValueShape [ sh:class imbor:67cbf12e-0ae9-43f2-9908-0ff6420f1b2a ] ; # ConstructieBelastingklasse (suggestielijst)
+    .
 
-# Domeinwaardelijst met IMBOR waarden
-imbor:StatusDomeinwaardelijst a owl:Class ;
-  rdfs:label "Status domeinwaardelijst"@nl .
-
-imbor:WordtGebouwd a imbor:StatusDomeinwaardelijst ;
-  skos:prefLabel "wordt gebouwd"@nl .
-
-imbor:IsGebouwd a imbor:StatusDomeinwaardelijst ;
-  skos:prefLabel "is gebouwd"@nl .
+# Enkele domeinwaarden uit de suggestielijst
+imbor-domeinwaarde:cf67e15e-927d-4627-a63b-3993f203f324 a imbor:67cbf12e-0ae9-43f2-9908-0ff6420f1b2a ; skos:prefLabel "BK-300"@nl .
+imbor-domeinwaarde:e1d99870-d22f-4841-ab2b-501e8b4c5814 a imbor:67cbf12e-0ae9-43f2-9908-0ff6420f1b2a ; skos:prefLabel "BK-450"@nl .
+imbor-domeinwaarde:23367a62-1d13-4d49-a0d9-32393d348bf8 a imbor:67cbf12e-0ae9-43f2-9908-0ff6420f1b2a ; skos:prefLabel "BK-600"@nl .

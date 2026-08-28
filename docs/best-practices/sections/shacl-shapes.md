@@ -1,85 +1,67 @@
 ## SHACL Shapes
 
-[[shacl]] is een krachtige W3C standaard om data te valideren. Binnen IMBOR wordt deze gebruikt om enkele beperkingen op te leggen. Dit wordt zowel bij semantische relaties als bij klasse-attribuut combinaties gebruikt. De [[shacl]] constructies zijn wel net iets anders. Hieronder worden ze toegelicht:
+***Gebaseerd op GitHub issue: [1606](https://github.com/Stichting-CROW/imbor/issues/1606).***
 
-### Semantische relaties
+[[shacl]] (SHapes Constraint Language) is een W3C-standaard om te valideren of data aan bepaalde regels voldoet. IMBOR conformeert zich aan de NEN2660-2 en levert zodoende deze regels mee: elke IMBOR-`Klasse` is naast een `rdfs:Class` ook een `sh:NodeShape`, met daaraan gekoppelde `sh:PropertyShape`s die de beperkingen vastleggen. Zo kan een beheerder valideren of zijn geregistreerde data conform IMBOR is.
 
-De casus:
-1.	Een Auto minimaal 1 motor moet hebben
-2.	Een Auto minimaal 3 wielen moet hebben
-3.	Beide via dezelfde relatie (hasPart) gaan
-Gebruik `sh:qualifiedValueShape` met `sh:qualifiedMinCount`.
+De beperkingen vallen in twee soorten uiteen:
 
-Waarom?
-Met directe `sh:class` zou je aangeven dat ALLE hasPart relaties naar dezelfde klasse moeten wijzen, wat onmogelijk is als een auto zowel motoren als wielen heeft.
+* **Attribuut-beperkingen** (klasse-attribuut-combinaties): welk datatype een waarde heeft, hoe vaak een attribuut mag voorkomen (multipliciteit) en uit welke domeinwaardenlijst de waarde moet komen.
+* **Relatie-beperkingen** (zie [Semantische relaties](#semantische-relaties)): naar welke doelklasse(n) een relatie mag wijzen en hoe vaak.
 
-<pre><code class="turtle" data-include="data/shacl-semantische-relaties.ttl" data-include-format="text"></code></pre>
-
-Conclusie
-Voor decomposities en andere gevallen waar één property naar instanties van verschillende klassen kan wijzen, is sh:qualifiedValueShape de juiste keuze. Dit is fundamenteel anders dan wanneer bijvoorbeeld alle waarden uit dezelfde domeinwaardelijst moeten komen.
-Vuistregel:
-Eén property, één toegestane klasse → gebruik sh:class
-Eén property, meerdere toegestane klassen → gebruik sh:qualifiedValueShape
-
+Voor het correct opleggen van deze beperkingen kent IMBOR drie terugkerende [[shacl]]-patronen. Wélk patroon gekozen is hangt af van wat je wilt afdwingen; dat luistert nauw, want een verkeerd patroon valideert vaak *niet* wat je bedoelt. Deze best practice licht de drie patronen toe. Zie ook de [technische documentatie](https://docs.crow.nl/imbor/techdoc/#semantische-relaties).
 
 ### Enumeratielijst
 
-De casus:
-1.	Het kenmerk "verschijningsvorm" mag maar 1 keer voorkomen bij een viaduct
-2.	De waarde moet uit een specifieke domeinwaardelijst komen
+Het meest voorkomende geval bij attributen: een attribuut mag beperkt voorkomen en de waarde *moet* uit een vaste domeinwaardenlijst komen. Ofwel: een _verplichte domeinwaardenlijst_.
 
-Gebruik `sh:class` direct, niet `sh:qualifiedValueShape`.
+>EXAMPLE
+>Het attribuut `verschijningsvorm` mag bij een `Viaduct` maximaal één keer voorkomen, en de waarde moet uit de bijbehorende domeinwaardenlijst komen.
+
+Hiervoor gebruikt IMBOR `sh:class` in combinatie met `sh:maxCount`, maar dus *niet* `sh:qualifiedValueShape`:
 
 <pre><code class="turtle" data-include="data/shacl-enumeratie.ttl" data-include-format="text"></code></pre>
 
-Conclusie
-Voor attributen met vaste waardelijsten zoals "verschijningsvorm" is de directe `sh:class` benadering correct.
-`sh:qualifiedValueShape` moet je alleen gebruiken wanneer:
-Een property naar instanties van verschillende klassen kan wijzen (zoals hasPart dat zowel naar wielen als motoren kan wijzen)
-Je wilt specificeren hoeveel instanties van elke specifieke klasse er moeten/mogen zijn
-In jullie geval wil je juist dat ALLE waarden uit één specifieke domeinwaardelijst komen, dus gebruik sh:class.
+`sh:qualifiedValueShape` beperkt namelijk alleen de *gekwalificeerde* deelverzameling: het zegt "als er een waarde in de opgegeven klasse zit, dan maximaal één". Een waarde *buiten* de domeinwaardenlijst levert dan géén overtreding op en dat is precies niet de bedoeling bij een verplichte lijst. `sh:class` dwingt daarentegen af dat *elke* waarde van het attribuut uit die klasse (de domeinwaardenlijst) komt, en `sh:maxCount 1` dat het er hooguit één is.
 
 >ADVISEMENT
->In IMBOR2022 wordt een extra beperking gelegd die zei: "De waarde MOET exact één van deze URI's zijn.". Dit werd gedaan door de `sh:in` constructie. Dit is correcter, maar dit leverde ook veel meer triples en een ingewikkeldere constructie op. Vandaar dat deze geschrapt is. 
+>In IMBOR2022 werd een strengere beperking gelegd, namelijk: "de waarde MOET exact één van deze URI's zijn" via de `sh:in`-constructie. Dat is nóg preciezer, maar leverde veel meer triples en een ingewikkeldere constructie op. Daarom is van IMBOR2025 `sh:in` geschrapt ten gunste van `sh:class`.
 
+### Suggestielijst aanbevolen waarden, afwijken toegestaan
 
-### Suggestielijst
+Een tweede geval: een attribuut mag beperkt voorkomen en er is een *aanbevolen* domeinwaardenlijst, maar gebruikers mogen ook een eigen waarde opgeven. Ofwel een _referentielijst_.
 
-De casus:
-1.	Het kenmerk "status" mag maar 1 keer voorkomen
-2.	De waarde bij voorkeur uit een domeinwaardelijst komt
-3.	Gebruikers mogen eigen waarden toevoegen
+>EXAMPLE
+>Het attribuut `herbeoordeelde belastingklasse` mag maximaal één keer voorkomen. De waarde komt bij voorkeur uit de domeinwaardenlijst, maar een gebruiker mag een eigen waarde toevoegen.
 
-Gebruik `sh:qualifiedValueShape` met `sh:qualifiedMaxCount`.
-
-Dit is een belangrijk verschil met de enumeratielijst. Je wilt:
-* Suggereren welke waarden gewenst zijn
-* Toestaan dat gebruikers afwijken
-* Toch valideren dat er maximaal 1 waarde is
+Gebruik hiervoor `sh:maxCount` samen met `sh:qualifiedValueShape` en `sh:qualifiedMaxCount`:
 
 <pre><code class="turtle" data-include="data/shacl-suggestielijst.ttl" data-include-format="text"></code></pre>
 
-Hoe gebruikers waarden toevoegen
+`sh:maxCount 1` dwingt af dat er hoogstens één herbeoordeelde belastingklasse is. De `sh:qualifiedValueShape` naar de domeinwaardenlijst *documenteert* vervolgens welke waarden aanbevolen zijn, zónder ze te verplichten: een waarde buiten de lijst valt buiten de gekwalificeerde vorm en levert geen overtreding op. Ken zo'n eigen waarde daarom géén type uit de domeinwaardenlijst toe, maar wel een `skos:prefLabel`.
 
-Eigen instantie zonder typering (eenvoudig)
-ex:Viaduct1 a imbor:Viaduct ;
-  imbor:heeftStatus ex:IsGesloopt .
+### Decompositie: één relatie naar meerdere doelklassen
 
-ex:IsGesloopt 
-  skos:prefLabel "is gesloopt"@nl .
-  # Geen rdf:type declaratie!
+Soms wijst één en dezelfde relatie naar objecten van *verschillende* klassen, met per klasse een eigen multipliciteit. Dit speelt vooral bij decomposities via `heeftDeel`.
 
+>EXAMPLE
+>Een `Viaduct` heeft via de relatie `heeftDeel` minimaal één `Dek`, terwijl `Pijler`s optioneel zijn (0..n). Beide gaan via dezelfde relatie.
 
-Conclusie
-Voor suggestielijsten is `sh:qualifiedValueShape` de juiste keuze omdat het:
-Documenteert welke waarden aanbevolen zijn
-Toestaat dat gebruikers afwijken
-Valideert dat er niet teveel waarden zijn
-Dit is een derde patroon naast:
-1.	Verplichte enumeratie → sh:class
-2.	Decompositie → sh:qualifiedValueShape met sh:qualifiedMinCount
-3.	Suggestielijst → sh:qualifiedValueShape met sh:qualifiedMaxCount
+Gebruik hiervoor per doelklasse een `sh:qualifiedValueShape` met `sh:qualifiedMinCount`:
+
+<pre><code class="turtle" data-include="data/shacl-semantische-relaties.ttl" data-include-format="text"></code></pre>
+
+Met een directe `sh:class` zou je afdwingen dat *álle* `heeftDeel`-relaties naar dezelfde klasse wijzen. Dat is niet mogelijk als een viaduct zowel dekken als pijlers (en bijvoorbeeld landhoofden) kan hebben. `sh:qualifiedValueShape` maakt het juist mogelijk om per doelklasse een eigen aantal te eisen.
 
 
-### Datatypen
 
+### Keuzehulp
+
+De drie patronen samengevat:
+
+| Situatie                                                        | [[shacl]]-patroon                                    |
+|-----------------------------------------------------------------|------------------------------------------------------|
+| Verplichte domeinwaardenlijst — álle waarden uit één lijst      | `sh:class` (met `sh:maxCount`)                       |
+| Suggestielijst — aanbevolen waarden, afwijken toegestaan        | `sh:qualifiedValueShape` + `sh:qualifiedMaxCount`    |
+| Decompositie — één relatie naar meerdere doelklassen            | `sh:qualifiedValueShape` + `sh:qualifiedMinCount`    |
+| {.def} | |

@@ -1,6 +1,6 @@
 ## Semantische relaties
 
-***Gebaseerd op GitHub issues: [1541](https://github.com/Stichting-CROW/imbor/issues/1541), [1192](https://github.com/Stichting-CROW/imbor/issues/1192), [1101](https://github.com/Stichting-CROW/imbor/issues/1101) en [1546](https://github.com/Stichting-CROW/imbor/issues/1546)***
+***Gebaseerd op GitHub issues: [1541](https://github.com/Stichting-CROW/imbor/issues/1541), [1192](https://github.com/Stichting-CROW/imbor/issues/1192), [1101](https://github.com/Stichting-CROW/imbor/issues/1101), [1546](https://github.com/Stichting-CROW/imbor/issues/1546) en [1684](https://github.com/Stichting-CROW/imbor/issues/1684)***
 
 Vanaf IMBOR2022 is het concept 'Semantische relaties' geïntroduceerd. Dit wordt beschreven in de [technische documentatie](https://docs.crow.nl/imbor/techdoc/#semantische-relaties). Hierbij wordt de uitleg gegeven dat er in de IMBOR ontologie per `Klasse` een aanzet gegeven wordt van de belangrijkste relaties die voorkomen. Het staat de gebruiker van IMBOR vrij om binnen de gezette kaders meer relaties op `Objecttype`n te leggen. De gezette kaders betreffen de relaties zoals vastgelegd in de ontologie, beschreven in de technische documentatie en zoals ze afgebeeld zijn in de [top hiërarchie](https://docs.crow.nl/imbor/techdoc/#imbor-top-hierarchie). Onderstaande tabel zet deze op een rij.
 
@@ -29,6 +29,21 @@ De relatie `isSubtypeVan` is de allerbelangrijkste relatie hier, omdat deze tuss
 
 * __Vanuit IMBOR wordt gesteld dat _alle_ dingen die direct of indirect een subtype zijn van een `Object` een `hasPart` relatie _mogen_ hebben naar _alle_ dingen die direct of indirect een subtype zijn van `Object`, maar dan ook _alleen_ van `Object`.__
 * __IMBOR is dus _niet_ voorschrijvend welke tussen welke subtypen van `Object` deze `hasPart` relatie mag voorkomen.__
+
+### Abstracte klassen en concrete objecttypen
+
+Relaties liggen in IMBOR op het niveau van `Klasse`n. Daarbij is het onderscheid tussen *abstracte* en *concrete* entiteiten van belang (zie ook de [top hiërarchie](https://docs.crow.nl/imbor/techdoc/#imbor-top-hierarchie)):
+
+* Een `Klasse` (bijvoorbeeld `FysiekObject` of `Verharding`) is **abstract** en kan niet geïnstantieerd worden.
+* Een `Objecttype` (`Boom`, `Asfaltverharding`, `Elementenverharding`) of `InformatieObject` is **concreet** en wél instantieerbaar, bijvoorbeeld in een beheerpakket.
+
+Een relatie wijst daardoor vaak naar een abstracte `Klasse`. Via [overerving](#overerving) is die dan toegestaan naar *elk* concreet subtype. Bij het vastleggen leg je de relatie echter altijd tussen twee **concrete** instanties, nooit naar een abstracte `Klasse`.
+
+>EXAMPLE
+>In IMBOR staat `Boom` → `isVerbondenMet` → `Verharding`. `Verharding` is abstract en niet instantieerbaar; leg de relatie daarom naar een concreet subtype, bijvoorbeeld `Boom123` → `isVerbondenMet` → `Asfaltverharding456`.
+
+>ADVISEMENT
+>Lees een relatie naar een abstracte `Klasse` dus als: "toegestaan naar alle concrete subtypen". Kies bij registratie het passende concrete `Objecttype`.
 
 ### Multipliciteit
 

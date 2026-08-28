@@ -1,20 +1,17 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610-2022#>.
 @prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
 @prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
 @prefix gemX: <http://voorbeeld.org/gemX#>.
 
-gemX:Voetpad1   a   imbor:7ffcb522-277d-4a2a-aa2a-fbcc2a68f0a1 ;              # Voetpad (RuimtelijkeGebied)
-                nen3610:domein  "http://voorbeeld.org/gemX#" ;
-                nen3610:identificatie   "Voetpad1" ;
-                nen2660:isBoundBy   gemX:Elementenverharding1 ;              # isBegrensdDoor
-                .
+gemX:Voetpad1 a imbor:7ffcb522-277d-4a2a-aa2a-fbcc2a68f0a1 ; # Voetpad (RuimtelijkGebied)
+    nen3610:domein "http://voorbeeld.org/gemX#" ;
+    nen3610:identificatie "Voetpad1" ;
+    nen2660:isBoundBy gemX:Elementenverharding1 ; # isBegrensdDoor
+    .
 
-gemX:Elementenverharding1   a   imbor:21e19973-ba96-4711-a92f-32c57989aa37 ; # Elementenverharding (ReeelObject)
-                nen3610:domein  "http://voorbeeld.org/gemX#" ;
-                nen3610:identificatie   "Elementenverharding1" ;
-                imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1
-                imbor-domeinwaarde:c3c7306e-165a-4d34-a4a5-827b20a231d2 ; # verschijningsvorm / Betontegels
-                .
+gemX:Elementenverharding1 a imbor:21e19973-ba96-4711-a92f-32c57989aa37 ; # Elementenverharding (ReeelObject)
+    nen3610:domein "http://voorbeeld.org/gemX#" ;
+    nen3610:identificatie "Elementenverharding1" ;
+    imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 imbor-domeinwaarde:c3c7306e-165a-4d34-a4a5-827b20a231d2 ; # verschijningsvorm / Betontegels
+    .

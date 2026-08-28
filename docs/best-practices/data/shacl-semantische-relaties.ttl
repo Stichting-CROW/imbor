@@ -1,17 +1,26 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ex: <http://example.org/> .
-@prefix bs: <http://example.org/bouwsteen#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix nen2660: <https://w3id.org/nen2660/def#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
 
-ex:Auto
-  a owl:Class, sh:NodeShape ;
-  sh:property [
-    sh:path bs:hasPart ;
-    sh:qualifiedValueShape [ sh:class ex:Motor ] ;
-    sh:qualifiedMinCount 1 ;
-  ] ;
-  sh:property [
-    sh:path bs:hasPart ;
-    sh:qualifiedValueShape [ sh:class ex:Wiel ] ;
-    sh:qualifiedMinCount 3 ;
-  ] .
+# Uitsnede van de Viaduct-nodeshape: twee 'heeft deel'-relaties via dezelfde relatie
+# (heeftDeel / nen2660:hasPart), elk naar een andere doelklasse met een eigen minimum.
+imbor:e13e2867-bc61-462a-bcba-a8570c863a75 a rdfs:Class, sh:NodeShape ; # Viaduct
+    sh:property imbor:7ed9da68-a46a-487c-ae83-9be9c7651134 ; # heeft deel Dek
+    sh:property imbor:1f210835-87e5-42b9-b1b2-62a709acdbcf ; # heeft deel Pijler
+    .
+
+imbor:7ed9da68-a46a-487c-ae83-9be9c7651134 a sh:PropertyShape ;
+    skos:prefLabel "Viaduct heeft deel Dek"@nl ;
+    sh:path nen2660:hasPart ;
+    sh:qualifiedMinCount 1 ; # minimaal 1 Dek
+    sh:qualifiedValueShape [ sh:class imbor:f3202a49-5227-45e2-92d0-826ce6cf5974 ] ; # Dek
+    .
+
+imbor:1f210835-87e5-42b9-b1b2-62a709acdbcf a sh:PropertyShape ;
+    skos:prefLabel "Viaduct heeft deel Pijler"@nl ;
+    sh:path nen2660:hasPart ;
+    sh:qualifiedMinCount 0 ; # pijlers optioneel (0..n)
+    sh:qualifiedValueShape [ sh:class imbor:8fb333fc-e296-4619-a84b-fac4e8f704e8 ] ; # Pijler
+    .
