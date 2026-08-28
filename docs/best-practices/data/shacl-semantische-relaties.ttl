@@ -1,0 +1,17 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://example.org/> .
+@prefix bs: <http://example.org/bouwsteen#> .
+
+ex:Auto
+  a owl:Class, sh:NodeShape ;
+  sh:property [
+    sh:path bs:hasPart ;
+    sh:qualifiedValueShape [ sh:class ex:Motor ] ;
+    sh:qualifiedMinCount 1 ;
+  ] ;
+  sh:property [
+    sh:path bs:hasPart ;
+    sh:qualifiedValueShape [ sh:class ex:Wiel ] ;
+    sh:qualifiedMinCount 3 ;
+  ] .

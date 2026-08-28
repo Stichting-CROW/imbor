@@ -55,60 +55,7 @@ Klonen is een methode om tijdlijn informatie te modelleren door kopieën van inf
 
 Dit is de uitwerking in [[Turtle]]:
 
-```turtle
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
-@prefix nen2660: <https://w3id.org/nen2660/def#>.
-@prefix prov: <http://www.w3.org/ns/prov#>.
-@prefix imbor: <https://data.crow.nl/imbor/def/>.
-@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
-@prefix gemX-history: <http://voorbeeld.org/gemX-history#>.
-
-nen3610:Registratie             a  rdfs:Class .
-nen3610:IdentificeerbaarObject  a  rdfs:Class .
-imbor:Gebouw                    a  rdfs:Class .
-
-gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1" ;
-            nen3610:domein              gemX: ;
-            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
-            nen3610:versie              "3" ;
-            imbor:adres                 "Peperstraat" ;
-            imbor:gebruiksdoel          "logiesfunctie" .
-
-[] prov:used gemX:id1 ;
-        prov:invalidated gemX-history:id1_1 .
-
-gemX-history:id1_1    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1" ;
-            nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
-            nen3610:versie              "1" ;
-            imbor:adres                 "Peperstraat" ;
-            imbor:gebruiksdoel          "kantoorfunctie" ;
-            prov:specializationOf       gemX:id1 .
-
-[] prov:used gemX:id1 ;
-        prov:invalidated gemX-history:id1_2 .
-
-gemX-history:id1_2    a                 imbor:Gebouw, nen3610:IdentificeerbaarObject, nen3610:Registratie ;
-            nen3610:identificatie       "id1" ;
-            nen3610:domein              gemX-history: ;
-            nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
-            nen3610:versie              "2" ;
-            imbor:adres                 "Peperstraat" ;
-            imbor:gebruiksdoel          "woonfunctie" ;
-            prov:specializationOf       gemX:id1 .
-```
+<pre><code class="turtle" data-include="data/OptieA-RDF.ttl" data-include-format="text"></code></pre>
 
 
 #### Optie B: 3½-D met RDF-star
@@ -124,48 +71,7 @@ Optie B is de 3½-D-aanpak. In deze optie worden historische wijzigingen gemodel
 
 Dit is de uitwerking in [[Turtle]]:
 
-```turtle
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
-@prefix imbor: <https://data.crow.nl/imbor/def/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
-
-nen3610:Registratie a rdfs:Class .
-nen3610:IdentificeerbaarObject a rdfs:Class .
-imbor:Gebouw a rdfs:Class .
-
-gemX:id1    a                           imbor:Gebouw, nen3610:IdentificeerbaarObject ;
-            nen3610:identificatie       "id1" ;
-            nen3610:domein              gemX: ;
-            .
-
-gemX:id1    imbor:gebruiksdoel    "kantoorfunctie"    {|  nen3610:registratiegegevens     gemX-regX:id1_1       |} .
-gemX:id1    imbor:gebruiksdoel    "woonfunctie"       {|  nen3610:registratiegegevens     gemX-regX:id1_2       |} .
-gemX:id1    imbor:gebruiksdoel    "logiesfunctie"     {|  nen3610:registratiegegevens     gemX-regX:id1_3       |} .
-gemX:id1    imbor:adres           "Peperstraat"       {|  nen3610:registratiegegevens     gemX-regX:id1_0       |} .
-
-gemX-regX:id1_0 a nen3610:Registratie ;
-            nen3610:beginGeldigheid   "2006-06-02"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
-    .
-gemX-regX:id1_1 a nen3610:Registratie ;
-            nen3610:beginGeldigheid   "2006-06-02"^^xsd:date ;
-            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime ;
-    .
-gemX-regX:id1_2 a nen3610:Registratie ;
-            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
-            nen3610:eindGeldigheid    "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
-            nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime ;
-    .
-gemX-regX:id1_3 a nen3610:Registratie ;
-            nen3610:beginGeldigheid   "2009-11-12"^^xsd:date ;
-            nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime ;
-    .
-```    
+<pre><code class="turtle" data-include="data/OptieB-RDF_RDF-Star.ttls" data-include-format="text"></code></pre>
 
 
 #### Optie B: 3½-D met RDF Reïficatie
@@ -181,51 +87,7 @@ Er is nog een variant van optie B zonder het gebruik van (het relatief nieuwe) R
 
 Dit is de uitwerking in [[Turtle]]:
 
-```turtle
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
-@prefix imbor: <https://data.crow.nl/imbor/def/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
-
-nen3610:Registratie             a           rdfs:Class .
-nen3610:IdentificeerbaarObject  a           rdfs:Class .
-imbor:Gebouw                    a           rdfs:Class .
-imbor:GebruiksdoelAspect        a           rdfs:Class .
-imbor:AdresAspect               a           rdfs:Class .
-
-gemX:id1        a                           imbor:Gebouw, nen3610:IdentificeerbaarObject ;
-                nen3610:identificatie       "id1" ;
-                nen3610:domein              gemX: ;
-                imbor:gebruiksdoel          gemX-reg:id1_1 ;
-                imbor:gebruiksdoel          gemX-reg:id1_2 ;            
-                imbor:gebruiksdoel          gemX-reg:id1_3 ;
-                imbor:adres                 gemX-reg:id1_0 .
-
-gemX-reg:id1_1  a                           imbor:GebruiksdoelAspect ;
-                rdf:value                   "kantoorfunctie" ;
-                nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
-                nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
-                nen3610:tijdstipRegistratie "2006-06-04T08:00"^^xsd:dateTime ;
-                nen3610:eindRegistratie     "2009-11-12T10:00"^^xsd:dateTime .
-                                
-gemX-reg:id1_2  a                           imbor:GebruiksdoelAspect ;
-                rdf:value                   "woonfunctie" ;
-                nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-                nen3610:eindGeldigheid      "2009-11-12"^^xsd:date ;
-                nen3610:tijdstipRegistratie "2009-11-12T10:00"^^xsd:dateTime ;
-                nen3610:eindRegistratie     "2009-11-16T13:00"^^xsd:dateTime .
-                                
-gemX-reg:id1_3  a                           imbor:GebruiksdoelAspect ;
-                rdf:value                   "logiesfunctie" ;
-                nen3610:beginGeldigheid     "2009-11-12"^^xsd:date ;
-                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
-  
-gemX-reg:id1_0  a                           imbor:AdresAspect ;
-                rdf:value                   "Peperstraat" ;
-                nen3610:beginGeldigheid     "2006-06-02"^^xsd:date ;
-                nen3610:tijdstipRegistratie "2009-11-16T13:00"^^xsd:dateTime .
-```
+<pre><code class="turtle" data-include="data/OptieB-RDF_Reification.ttl" data-include-format="text"></code></pre>
 
 
 ### Toepassing van opties

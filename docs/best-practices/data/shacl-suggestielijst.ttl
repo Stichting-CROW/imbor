@@ -1,0 +1,25 @@
+@prefix imbor: <https://data.crow.nl/imbor/def/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+imbor:StatusShape
+  a sh:PropertyShape ;
+  skos:prefLabel "status vastgezet op Viaduct"@nl ;
+  sh:path imbor:heeftStatus ;
+  sh:maxCount 1 ;  # Maximaal 1 status
+  sh:qualifiedValueShape [
+    sh:class imbor:StatusDomeinwaardelijst
+  ] ;
+  sh:qualifiedMaxCount 1 .  # Als het uit de lijst komt, ook max 1
+
+# Domeinwaardelijst met IMBOR waarden
+imbor:StatusDomeinwaardelijst a owl:Class ;
+  rdfs:label "Status domeinwaardelijst"@nl .
+
+imbor:WordtGebouwd a imbor:StatusDomeinwaardelijst ;
+  skos:prefLabel "wordt gebouwd"@nl .
+
+imbor:IsGebouwd a imbor:StatusDomeinwaardelijst ;
+  skos:prefLabel "is gebouwd"@nl .

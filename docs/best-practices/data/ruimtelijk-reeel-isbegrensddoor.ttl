@@ -16,5 +16,5 @@ gemX:Elementenverharding1   a   imbor:21e19973-ba96-4711-a92f-32c57989aa37 ; # E
                 nen3610:domein  "http://voorbeeld.org/gemX#" ;
                 nen3610:identificatie   "Elementenverharding1" ;
                 imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1
-                    imbor-domeinwaarde:c3c7306e-165a-4d34-a4a5-827b20a231d2 ; # verschijningsvorm / Betontegels
+                imbor-domeinwaarde:c3c7306e-165a-4d34-a4a5-827b20a231d2 ; # verschijningsvorm / Betontegels
                 .

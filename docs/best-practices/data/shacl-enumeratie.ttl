@@ -1,0 +1,10 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix imbor: <https://data.crow.nl/imbor/def/>.
+
+imbor:1285b98d-1caa-4147-b033-5e1248a67b5a
+  a sh:PropertyShape ;
+  skos:prefLabel "verschijningsvorm vastgezet op Viaduct"@nl ;
+  sh:path imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
+  sh:maxCount 1 ;
+  sh:class imbor:06d5a7ff-e7d0-4c38-867a-a1749133048e .

@@ -13,20 +13,7 @@ Gebruik `sh:qualifiedValueShape` met `sh:qualifiedMinCount`.
 Waarom?
 Met directe `sh:class` zou je aangeven dat ALLE hasPart relaties naar dezelfde klasse moeten wijzen, wat onmogelijk is als een auto zowel motoren als wielen heeft.
 
-```turtle
-ex:Auto
-  a owl:Class, sh:NodeShape ;
-  sh:property [
-    sh:path bs:hasPart ;
-    sh:qualifiedValueShape [ sh:class ex:Motor ] ;
-    sh:qualifiedMinCount 1 ;
-  ] ;
-  sh:property [
-    sh:path bs:hasPart ;
-    sh:qualifiedValueShape [ sh:class ex:Wiel ] ;
-    sh:qualifiedMinCount 3 ;
-  ] .
-```
+<pre><code class="turtle" data-include="data/shacl-semantische-relaties.ttl" data-include-format="text"></code></pre>
 
 Conclusie
 Voor decomposities en andere gevallen waar één property naar instanties van verschillende klassen kan wijzen, is sh:qualifiedValueShape de juiste keuze. Dit is fundamenteel anders dan wanneer bijvoorbeeld alle waarden uit dezelfde domeinwaardelijst moeten komen.
@@ -43,14 +30,7 @@ De casus:
 
 Gebruik `sh:class` direct, niet `sh:qualifiedValueShape`.
 
-```turtle
-imbor:1285b98d-1caa-4147-b033-5e1248a67b5a
-  a sh:PropertyShape ;
-  skos:prefLabel "verschijningsvorm vastgezet op Viaduct"@nl ;
-  sh:path imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 ;
-  sh:maxCount 1 ;
-  sh:class imbor:06d5a7ff-e7d0-4c38-867a-a1749133048e .
-```
+<pre><code class="turtle" data-include="data/shacl-enumeratie.ttl" data-include-format="text"></code></pre>
 
 Conclusie
 Voor attributen met vaste waardelijsten zoals "verschijningsvorm" is de directe `sh:class` benadering correct.
@@ -77,27 +57,7 @@ Dit is een belangrijk verschil met de enumeratielijst. Je wilt:
 * Toestaan dat gebruikers afwijken
 * Toch valideren dat er maximaal 1 waarde is
 
-```turtle
-imbor:StatusShape
-  a sh:PropertyShape ;
-  skos:prefLabel "status vastgezet op Viaduct"@nl ;
-  sh:path imbor:heeftStatus ;
-  sh:maxCount 1 ;  # Maximaal 1 status
-  sh:qualifiedValueShape [
-    sh:class imbor:StatusDomeinwaardelijst
-  ] ;
-  sh:qualifiedMaxCount 1 .  # Als het uit de lijst komt, ook max 1
-
-# Domeinwaardelijst met IMBOR waarden
-imbor:StatusDomeinwaardelijst a owl:Class ;
-  rdfs:label "Status domeinwaardelijst"@nl .
-
-imbor:WordtGebouwd a imbor:StatusDomeinwaardelijst ;
-  skos:prefLabel "wordt gebouwd"@nl .
-
-imbor:IsGebouwd a imbor:StatusDomeinwaardelijst ;
-  skos:prefLabel "is gebouwd"@nl .
-```
+<pre><code class="turtle" data-include="data/shacl-suggestielijst.ttl" data-include-format="text"></code></pre>
 
 Hoe gebruikers waarden toevoegen
 

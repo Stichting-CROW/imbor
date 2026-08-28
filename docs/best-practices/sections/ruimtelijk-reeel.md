@@ -8,7 +8,7 @@ Dit onderscheid is te herleiden naar zowel de [NEN2660][nen2660:2022] (2022, p. 
 ### NEN2660 & NEN3610
 
 **NEN2660**:
-In de [NEN2660][nen2660:2022] worden fysieke objecten optioneel, niet-samenvallend opgedeeld in niet-direct tastbare `ruimtelijke gebieden` (bijvoorbeeld Rijbaan, Centrumgebied en Putschat) en tastbare `reële objecten` (bijvoorbeeld Beweegbare brug, Boom en Laagspanningskabel). De 'bevat'-relatie bij een ruimtelijk gebied kan worden gebruikt voor reële objecten die zich in dat gebied bevinden en voor de, typisch gasvormige, hoeveelheid bulkmaterie die zich in dat gebied bevindt.
+In de [NEN2660][nen2660:2022] worden fysieke objecten optioneel, niet-samenvallend opgedeeld in niet-direct tastbare `ruimtelijke gebieden` (bijvoorbeeld Rijbaan, Centrumgebied en Putschat) en tastbare `reële objecten` (bijvoorbeeld Beweegbare brug, Boom en Laagspanningskabel). 
 
 **NEN3610**:
 Reële objecten en virtuele ruimten kunnen onafhankelijk van elkaar geclassificeerd worden. Reële objecten zijn in de fysieke werkelijkheid aanwezig en kunnen geclassificeerd worden aan de hand van hun totstandkomingsproces, de samenstelling (fysiek voorkomen) en het eventuele beoogde gebruik. Een synoniem voor reële objecten is fysieke objecten. Virtuele ruimten zijn alleen in een registratie aanwezig en niet fysiek in de werkelijkheid. Ze kunnen worden geclassificeerd aan de hand van
@@ -17,7 +17,7 @@ abstracte mentale concepten, zoals bijvoorbeeld functie en regelgeving. Virtuele
 Het _NEN3610 reëel object_ komt overeen met het _NEN2660 technisch reëel object_. Dat betekent dat het hierbij gaat om de fysieke eigenschappen van het object. De _NEN3610 virtuele ruimte_ komt overeen met de _NEN2660 functionele ruimte_. Onderling kennen reële objecten en virtuele ruimten diverse typen relaties. Die relaties kunnen heel sterk zijn, waardoor het reële object en het virtuele object op elkaar kunnen lijken. Bijvoorbeeld een verblijfsobject (virtueel) dat dezelfde afbakening heeft als het gebouw (reëel) dat het verblijfsobject vormt (_realiseert_). Relaties tussen andere reële en virtuele objecten kunnen veel zwakker zijn. Zo kan bijvoorbeeld een gemeentegrens ooit zijn bepaald aan de hand van de reële objecten in de werkelijkheid, maar wordt het vervolgens niet meer noodzakelijkerwijs beïnvloed door wat er met de reële objecten gebeurt.
 
 **`bevat` versus `isBegrensdDoor`**:
-De [NEN2660][nen2660:2022] (2022, § 6.2) onderscheidt tussen een ruimtelijk gebied en de reële objecten eromheen twee verschillende relaties, die niet verward moeten worden. De relatie [`bevat`][bevat] drukt uit dat een [`ReeelObject`][ReeelObject] — of een, typisch gasvormige, [`HoeveelheidBulkmaterie`][HoeveelheidBulkmaterie] — zich ruimtelijk *in* het gebied bevindt (zie opmerking 3 bij § 6.2). De relatie [`isBegrensdDoor`][isBegrensdDoor] drukt daarentegen uit dat een reëel object het gebied *afbakent*. Een [`RuimtelijkeGebied`][RuimtelijkeGebied] heeft namelijk zelf geen vaste vorm; het zijn de tastbare, vormvaste reële objecten (in de [NEN2660][nen2660:2022] de specialisatie [`DiscreetObject`][DiscreetObject]) die de vorm ervan bepalen en zo als harde begrenzing dienen. Kortom: `bevat` gaat over wat er *ín* een gebied ligt, `isBegrensdDoor` over wat de *vorm* van dat gebied bepaalt.
+De [NEN2660][nen2660:2022] (2022, § 6.2) onderscheidt tussen een ruimtelijk gebied en de reële objecten eromheen twee verschillende relaties, die niet verward moeten worden. De relatie [`bevat`][bevat] drukt uit dat een [`ReeelObject`][ReeelObject] of een [`HoeveelheidBulkmaterie`][HoeveelheidBulkmaterie] zich ruimtelijk *in* het gebied of in de ruimte bevindt. De relatie [`isBegrensdDoor`][isBegrensdDoor] drukt daarentegen uit dat een reëel object het gebied *afbakent*. Een [`RuimtelijkGebied`][RuimtelijkGebied] heeft namelijk zelf geen vaste vorm; het zijn de tastbare, vormvaste reële objecten (in de [NEN2660][nen2660:2022] de specialisatie [`DiscreetObject`][DiscreetObject]) die de vorm ervan bepalen en zo als harde begrenzing dienen. Kortom: `bevat` gaat over wat er *ín* een ruimte/gebied ligt, `isBegrensdDoor` over wat de *vorm* van dat gebied bepaalt.
 
 ### Toepassing in IMBOR: de `bevat`-relatie
 In IMBOR zijn ruimtelijke gebieden opgenomen zoals `WijkGrens`, `Buurtgrens` en `Recreatiegebied`. Deze ruimtelijke gebieden zijn in principe geometrische vlakken en kunnen ook in die hoedanigheid geïnstantieerd worden. Zodra deze entiteiten beschikbaar zijn, is geometrisch af te leiden of er reële objecten binnen de grenzen van deze entiteiten liggen. Er is dan in principe sprake van een `bevat` relatie. Een ruimtelijk gebied bevat dan een `reëel object`. Deze relatie kan expliciet worden gelegd. Dit kan handig zijn voor (geometrische) query's of voor de situatie waar nog geen geometrie bekend is van een entiteit. 
@@ -27,71 +27,35 @@ In IMBOR zijn ruimtelijke gebieden opgenomen zoals `WijkGrens`, `Buurtgrens` en 
 
 Dit is een voorbeeld-uitwerking in [[Turtle]]:
 
-```turtle
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#>.
-@prefix nen2660: <https://w3id.org/nen2660/def#>.
-@prefix imbor: <https://data.crow.nl/imbor/def/>.
-@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
-
-gemX:Heseveld   a   imbor:b5947439-11e6-423e-b67b-671905610154 ;            # Wijkgrens
-                imbor:ee97b257-d3b8-4d0c-9a42-c07d88b36d9f "Heseveld"@nl ;  # naam
-                nen3610:domein  "http://voorbeeld.org/gemX#" ;              
-                nen3610:identificatie   "Heseveld" ;
-                nen2660:contains   gemX:Abri1, gemX:Abri2 ;                 # bevat 
-                .
-
-gemX:Abri1      a   imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31 ;            # Abri
-                nen3610:domein  "http://voorbeeld.org/gemX#" ;
-                nen3610:identificatie "Abri1" ;
-                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "1" ;            # nummer
-                .
-
-gemX:Abri2      a   imbor:c4522e75-7f0b-4bbe-a3c7-e93f34cc8b31 ;            # Abri
-                nen3610:domein  "http://voorbeeld.org/gemX#" ;
-                nen3610:identificatie "Abri2" ;
-                imbor:a6424f8a-080e-4f85-a160-6fa4f0848ed8 "2" ;            # nummer
-                .
-
-```
+<pre><code class="turtle" data-include="data/ruimtelijk-reeel-bevat.ttl" data-include-format="text"></code></pre>
 
 >ADVISEMENT
->IMBOR geeft voorbeelden van `bevat` relaties, maar het is uiteraard toegestaan om *elk* [`ReeelObject`][ReeelObject] te verbinden met een [`RuimtelijkeGebied`][RuimtelijkeGebied] volgens de [`bevat`][bevat]-relatie.
+>IMBOR geeft voorbeelden van `bevat` relaties, maar het is uiteraard toegestaan om *elk* [`ReeelObject`][ReeelObject] te verbinden met een [`RuimtelijkGebied`][RuimtelijkGebied] volgens de [`bevat`][bevat]-relatie.
 
 ### Toepassing in IMBOR: de `isBegrensdDoor`-relatie
 
 ***Gebaseerd op GitHub issue: [1718](https://github.com/Stichting-CROW/imbor/issues/1718).***
 
-Waar de `bevat`-relatie een ruimtelijk gebied koppelt aan de reële objecten die zich er *in* bevinden, beschrijft de [NEN2660][nen2660:2022] (2022, § 6.2) dat een ruimtelijk gebied ook *begrensd* wordt door reële objecten. Een ruimtelijk gebied heeft namelijk geen vaste vorm; die vorm wordt bepaald door de tastbare, reële objecten eromheen. Hiervoor bestaat de relatie [`isBegrensdDoor`][isBegrensdDoor]:
-
->[`RuimtelijkeGebied`][RuimtelijkeGebied] → [`isBegrensdDoor`][isBegrensdDoor] → [`ReeelObject`][ReeelObject]
+Waar de `bevat`-relatie een ruimtelijk gebied koppelt aan de reële objecten die zich er *in* bevinden, beschrijft de [NEN2660][nen2660:2022] (2022, § 6.2) dat een ruimtelijk gebied ook *begrensd* wordt door reële objecten. Een ruimtelijk gebied heeft namelijk geen vaste vorm; die vorm wordt bepaald door de tastbare, reële objecten eromheen. Hiervoor bestaat de relatie [`isBegrensdDoor`][isBegrensdDoor]. Het patroon is dan: [`RuimtelijkGebied`][RuimtelijkGebied] → [`isBegrensdDoor`][isBegrensdDoor] → [`ReeelObject`][ReeelObject].
 
 >ADVISEMENT
->De relatie [`isBegrensdDoor`][isBegrensdDoor] is bij de NEN2660-2 omzetting (2022) bewust nog niet in de IMBOR-shapes en -documentatie opgenomen, omdat deze NEN2660-constructie destijds als te vroeg werd beschouwd. Het betreft echter een geldig NEN2660-patroon. Deze best practice introduceert het alsnog, zodat de koppeling tussen functionele ruimten en hun fysieke uitvoering expliciet vastgelegd kan worden.
+>De relatie [`isBegrensdDoor`][isBegrensdDoor] is bij de NEN2660-2 omzetting van IMBOR in 2022 bewust nog niet in de IMBOR-shapes en -documentatie opgenomen, omdat deze NEN2660-constructie destijds als te vroeg werd beschouwd. Het betreft echter een geldig NEN2660-patroon. Deze best practice introduceert het alsnog, zodat de koppeling tussen functionele ruimten en hun fysieke uitvoering expliciet vastgelegd kan worden.
 
-Dit patroon lost een veelgestelde vraag op: *hoe leg ik vast welke verschijningsvorm (of welk materiaal) een voetpad heeft?* Een `Voetpad` is in IMBOR een [`RuimtelijkeGebied`][RuimtelijkeGebied] — een verkeerskundige/functionele zone — en heeft zelf géén verschijningsvorm. Die eigenschap hoort bij het [`ReeelObject`][ReeelObject] dat het voetpad fysiek begrenst — bijvoorbeeld een `Elementenverharding`:
-
->`Voetpad` (`RuimtelijkeGebied`) → `isBegrensdDoor` → `Elementenverharding` (`ReeelObject`) → `verschijningsvorm` → `Betontegels`
+Dit patroon lost een veelgestelde vraag op: *hoe leg ik vast welke verschijningsvorm (of soms: welk materiaal) een objecttype zoals 'voetpad' heeft?* Een `Voetpad` is in IMBOR een [`RuimtelijkGebied`][RuimtelijkGebied] een verkeerskundige/functionele zone en heeft zelf géén verschijningsvorm. Die eigenschap hoort bij het [`ReeelObject`][ReeelObject] dat het voetpad fysiek begrenst bijvoorbeeld een `Elementenverharding`. Dit resulteert in: `Voetpad` (`RuimtelijkGebied`) → `isBegrensdDoor` → `Elementenverharding` (`ReeelObject`) → `verschijningsvorm` → `Betontegels`
 
 >EXAMPLE
->Gemeente X registreert een voetpad (`Voetpad1`) dat fysiek is uitgevoerd als elementenverharding (`Elementenverharding1`) van betontegels. Het voetpad (een `RuimtelijkeGebied`) heeft zelf geen vaste vorm en wordt daarom middels de relatie `isBegrensdDoor` gekoppeld aan de elementenverharding (een `ReeelObject`). Bij die elementenverharding wordt vervolgens via het attribuut `verschijningsvorm` de domeinwaarde `Betontegels` vastgelegd.
+>Gemeente X registreert een voetpad (`Voetpad1`) dat fysiek is uitgevoerd als elementenverharding (`Elementenverharding1`) van betontegels. Het voetpad (een `RuimtelijkGebied`) heeft zelf geen vaste vorm omdat het een functionele ruimte betreft en wordt daarom middels de relatie `isBegrensdDoor` gekoppeld aan de elementenverharding (een `ReeelObject`). Bij die elementenverharding wordt vervolgens via het attribuut `verschijningsvorm` de domeinwaarde `Betontegels` vastgelegd.
 
 Dit is een voorbeeld-uitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/ruimtelijk-reeel-isbegrensddoor.ttl" data-include-format="text"></code></pre>
 
->ADVISEMENT
->Let op: de `verschijningsvorm` hoort bij het `ReeelObject` (de `Elementenverharding`), niet bij het `RuimtelijkeGebied` (het `Voetpad`). Een ruimtelijk gebied heeft immers geen vaste vorm.
-
 De [NEN2660][nen2660:2022] adviseert daarnaast om het fysieke materiaal als een aparte [`Materie`][Materie]-klasse vast te leggen via de relatie [`bestaatUit`][bestaatUit], bijvoorbeeld `Elementenverharding` → `bestaatUit` → `Betontegel` (`Materie`). Dit is een tweede manier om in de kern hetzelfde vast te leggen en is met name van belang voor materialenpaspoorten. Zie hiervoor de best practice [Materie](#materie).
-
 
 
 [nen3610:2022]: https://www.nen.nl/nen-3610-2022-nl-296137
 [nen2660:2022]: https://www.nen.nl/nen-2660-2-2022-nl-291667
-[RuimtelijkeGebied]: https://w3id.org/nen2660/def#SpatialRegion
+[RuimtelijkGebied]: https://w3id.org/nen2660/def#SpatialRegion
 [ReeelObject]: https://w3id.org/nen2660/def#RealObject
 [DiscreetObject]: https://w3id.org/nen2660/def#DiscreteObject
 [HoeveelheidBulkmaterie]: https://w3id.org/nen2660/def#AmountOfBulkMatter
