@@ -27,9 +27,4 @@ De beschikbare releases staan op [deze plek in GitHub](https://github.com/Sticht
 <tr><td>Augustus 2014</td><td>IMBOR</td><td>Eerste idee/concept</td></tr>
 </tbody>
 </table>
-| December 2018 | IMBOR 2018.2 | Toegevoegde vakdisciplines: Bevroren: riolering, spelen, borden, meubilair · Conceptversie: tunnels, faunavoorzieningen, sport |
-| Oktober 2018 | IMBOR 2018.1 | Toegevoegde vakdisciplines: Conceptversie: borden, meubilair, water |
-| April 2018 | IMBOR 1.2.1 | Patch release |
-| December 2017 | IMBOR 1.2 | Bevroren: wegen, groen, bomen en terreinen · Conceptversie: riolering, spelen en faunavoorzieningen |
-| Augustus 2014 | IMBOR | Eerste idee/concept |
 { .data }
