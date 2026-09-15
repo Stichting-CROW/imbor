@@ -27,4 +27,3 @@ De beschikbare releases staan op [deze plek in GitHub](https://github.com/Sticht
 <tr><td>Augustus 2014</td><td>IMBOR</td><td>Eerste idee/concept</td></tr>
 </tbody>
 </table>
-{ .data }
