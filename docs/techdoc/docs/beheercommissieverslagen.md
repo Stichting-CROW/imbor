@@ -1,8 +1,8 @@
-## Beheercommissie
+## Beheercommissie verslagen
 
-De beheercommissie IMBOR is het adviesorgaan dat CROW adviseert over de inhoudelijke en strategische doorontwikkeling van IMBOR. De commissie bestaat uit vertegenwoordigers van gemeenten, provincies, waterschappen, Rijksoverheid en andere partijen die IMBOR gebruiken of ontwikkelen. De samenstelling is terug te vinden in de verslagen hieronder.
+De beheercommissie IMBOR is het adviesorgaan dat CROW adviseert over de inhoudelijke en strategische doorontwikkeling van IMBOR. De commissie bestaat uit vertegenwoordigers van gemeenten, provincies, Rijksoverheid, CROW en andere partijen die IMBOR gebruiken of ontwikkelen. De samenstelling is terug te vinden in de verslagen hieronder.
 
-De beheercommissie komt vier keer per jaar bijeen. De verslagen van de overleggen zijn hier beschikbaar:
+De beheercommissie komt met enige regelmaat bijeen. De verslagen van de overleggen zijn hier beschikbaar:
 
 - [Verslag beheercommissie IMBOR — 19 juni 2026](../verslagen/Beheercommissie/Verslag%20Beheercommissie%20IMBOR%20dd%2019-06-2026.pdf)
 - [Verslag beheercommissie IMBOR — 17 april 2026](../verslagen/Beheercommissie/Verslag%20Beheercommissie%20IMBOR%20dd%202026-04-17.pdf)
