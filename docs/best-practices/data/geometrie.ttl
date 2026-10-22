@@ -3,7 +3,7 @@
 @prefix nen2660: <https://w3id.org/nen2660/def#>.
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
 @prefix imbor: <https://data.crow.nl/imbor/def/>.
-@prefix gemX: <http://voorbeeld.org/gemX#>.
+@prefix gemX: <http://vb.org/gemX#>.
 
 gemX:4db2734b a imbor:ace1a672-5cd7-4bac-a318-1296f6dabafe ; # Natuurspeeltuin
     nen2660:hasBoundary [ # heeftBegrenzing (geo:hasGeometry)
@@ -11,7 +11,7 @@ gemX:4db2734b a imbor:ace1a672-5cd7-4bac-a318-1296f6dabafe ; # Natuurspeeltuin
         geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/28992>POLYGON((185698.1621669908 427934.5411449945,185671.55693354324 427905.91937796044,185698.81266169614 427880.8753318056,185705.9030539841 427888.4861198579,185709.7409727455 427892.909483854,185706.61859815996 427896.2920563217,185706.42344974837 427906.2446253131,185717.4818597388 427916.1971943045,185698.1621669908 427934.5411449945))"^^geo:wktLiteral ;
     ] ; # geometrie
     nen3610:identificatie "4db2734b" ; # identificatie
-    nen3610:domein "http://voorbeeld.org/gemX#"^^xsd:anyURI ; # domein
+    nen3610:domein "http://vb.org/gemX#"^^xsd:anyURI ; # domein
     nen2660:contains gemX:6fb4b2c7 ; # bevat (Natuurspeeltuin bevat Boom)
     .
 
@@ -21,5 +21,5 @@ gemX:6fb4b2c7 a imbor:83a942f7-5291-42f0-afb1-9a57d0fb2f15 ; # Boom
         geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/28992>POINT((185654.51397226387 427926.8653074717))"^^geo:wktLiteral ;
     ] ; # geometrie
     nen3610:identificatie "6fb4b2c7" ; # identificatie
-    nen3610:domein "http://voorbeeld.org/gemX#" ; # domein
+    nen3610:domein "http://vb.org/gemX#" ; # domein
     .

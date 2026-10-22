@@ -15,6 +15,13 @@ Voor meer toelichting zie: [Techdoc | Actoren en rollen](https://docs.crow.nl/im
 >EXAMPLE
 >De gemeente Rotterdam wil vastleggen dat de afdeling 'Vastgoed' de beheerder is van een specifiek gebouw. Om dit te doen dient de gemeente eerst in hun systeem aan te geven dat ze de klasse `Gemeente` uit de TOOI ontologie adopteren in hun systeem (als subklasse van IMBOR actor). Vervolgens wordt de URI van de gemeente Rotterdam zoals TOOI dat voorschrijft gebruikt. Hierna dient de gemeente Rotterdam de afdeling 'Vastgoed' aan het maken (`gemX:AfdelingVastgoed`) en onderdeel van de gemeente te maken door de `nen2660:hasPart` relatie te gebruiken. Middels de relatie `imbor:speelt` kan vervolgens aangegeven worden dat deze de rol van 'Beheerder' speelt door de beheerder klasse uit IMBOR te instantiëren (`gemX:Beheerder123`). Aan deze rol kan middels de `imbor:heeftBetrekkingOp` relatie een relatie gelegd worden naar het daadwerkelijke gebouw (`gemX:Gebouw1`). 
 
+<figure>
+
+![Actoren en rollen](img/actor-rol.drawio.svg?raw=true)
+
+<figcaption>Actoren en rollen | Afdeling Vastgoed is beheerder van een gebouw</figcaption>
+</figure>
+
 Dit is een voorbeelduitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/actor-rol.ttl" data-include-format="text"></code></pre>

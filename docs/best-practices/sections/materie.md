@@ -18,6 +18,13 @@ Zie ook: [Techdoc | Materie](https://docs.crow.nl/imbor/techdoc/#materie)
 >
 >Er zijn nu gegevens vastgelegd bij de instanties van de twee materialen. Deze zijn gelinkt aan de instantie van Lichtmast. Hierdoor kan er nu een materialenpaspoort gegenereerd / gepresenteerd worden van 'LM123'.
 
+<figure>
+
+![Materie](img/materie.drawio.svg?raw=true)
+
+<figcaption>Materie | Lichtmast bestaande uit hardhout en staal</figcaption>
+</figure>
+
 Dit is een voorbeelduitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/materie.ttl" data-include-format="text"></code></pre>

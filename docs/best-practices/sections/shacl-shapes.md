@@ -54,6 +54,13 @@ Soms wijst één en dezelfde relatie naar objecten van *verschillende* klassen, 
 >EXAMPLE
 >Een `Viaduct` heeft via de relatie `heeftDeel` minimaal één `Dek`, terwijl `Pijler`s optioneel zijn (0..n). Beide gaan via dezelfde relatie.
 
+<figure>
+
+![SHACL | Decompositie](img/shacl-semantische-relaties.drawio.svg?raw=true)
+
+<figcaption>SHACL | Decompositie met per doelklasse een sh:qualifiedValueShape</figcaption>
+</figure>
+
 Gebruik hiervoor per doelklasse een `sh:qualifiedValueShape` met `sh:qualifiedMinCount`:
 
 <pre><code class="turtle" data-include="data/shacl-semantische-relaties.ttl" data-include-format="text"></code></pre>

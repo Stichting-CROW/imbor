@@ -59,6 +59,13 @@ Een veel gebruikte relatie binnen assetbeheersystemen is de 'heeft deel' relatie
 >
 >Er bestaat in gemeente X een 'Viaduct' waar een 'Muur' op gebouwd wordt. Daarom wil gemeente X vastleggen dat dit bepaalde 'Viaduct 123' bestaat uit één dek, twee pijlers en één in aanleg zijnde muur. _Uiteraard is dit een gekunsteld voorbeeld. Om aan te tonen dat er vanuit IMBOR nooit alles voorspelt kan worden wat er in de praktijk nodig is_
 
+<figure>
+
+![Semantische relaties | Viaduct decompositie](img/semantische-relaties.drawio.svg?raw=true)
+
+<figcaption>Semantische relaties | Decompositie van een Viaduct</figcaption>
+</figure>
+
 Dit is een voorbeeld-uitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/semantische-relaties.ttl" data-include-format="text"></code></pre>

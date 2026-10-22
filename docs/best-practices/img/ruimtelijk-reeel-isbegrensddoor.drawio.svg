@@ -1,0 +1,168 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="821px" height="281px" viewBox="-0.5 -0.5 821 281" content="&lt;mxfile&gt;&lt;diagram id=&quot;RuimtelijkReeelIsBegrensdDoor&quot; name=&quot;RuimtelijkReeelIsBegrensdDoor&quot;&gt;7VhLb9s4EP41RreHFHo4inu0krg5pMACAXb3SoljiQklqiT96q/foURaTwcpHCQtWvgg8xs+Zr6ZIYechdfF/oskVf5VUOCzwKP7WXgzCwJ/HoX4McjBIn7gNUgmGbVYCzyw72BB123DKKheRy0E16zqg6koS0h1DyNSil2/21rw/qoVyWAEPKSEj9F/GdV5gy6Cqxa/A5blbmU/+txICuI6W0tUTqjYdaDwdhZeSyF086/YXwM37DlemnGrE9KjYhJK/ZIBKVf/CNAVoc3ILeEbayQrEiFn4bInV/rgSFA7VnBSYitei1I/WImH7TRnnN6Tg9gYJZQm6ZNrxbmQ7Dv2JxxFPgIoltr6OIjMbIzza8HN4rhOuF6vgzTtjXwwM9q1JCgc+7ez2B9AX8m+1/GeKO20FJyTSrHkqHdBZMbKWGgtCgspLcUTdNShURJdGjXHVFv2tyA17DuQpf4LiAK0PGCXXRs1/sKGQt6JmLnFiA3U7Di09SX+se487VqQOZGUldlJ795yKNAAKLeDvn88/SqettLQJfxbeJ6VSp/K6lkQceOcqufi6NvG7DiWFgwLr9ofmxdaVAjNawjt1ReEs8z0Sk3kSIdSSIUkmgkj2pQUJGd10LTz47/MfmstEgdkUPzX7jW+k6OlyXAMYtUQy+UQ+RH7OKxRuFzU2FhZPGtKzdYsRdsAp61n9IaqJkcVKHoMF3Edc60NfcZ7wWqbfBISM2xVGxyE00YN8s+EGa7Olw3tN7U/YuuEm0b7WGCvNa/PEpNWLlebbPMD216RgnFz7N4B34KZ1bCnC5eig4wEn17C1VRyfI6uQnJuctjzf/HC3DiWCWcnx+l98efOj4nd+hfIlWGCPGfFeWmUjGwbI79nqg3PofdIPbqLQSMzkAFXb5R5L8ituhS6aMJtRzAeoawDbRhAPeVfmnM/TXxhdC3ofCq+FkESRq8UX9G8H1/+W9Y94E0E1cABUNKluQFiK+HC1JYxJSoHallD+armvK4JsdWlvcsueqDD4Xxlfs9xqMRGpq74HhZoWBhnoKevZEB7l9Ex9RI47rbb/t30LB79X4nHwVk+pHIgfgc2gxGbJZRBFCExS6ZigaVAfBgTjIq6m5aQOheZKAm/bdFYmpE14Ybits+9MJtKze4jaH2wzJONFn3uJ3zYuu0554y3EM/8XiX8p3z6Dk4LR05zN2bcDBVeex9LVE9thSx+O9c9k3ETR/zbO68UGkbuu0MVEXBh5/0FYIpLuWGFBs4en8y7IiQM6EdzXAlJTf/1QTEwogQyJEaZkVQgd/gx9S1MPJ9MFZ8JezRD6pq4+9Li4cmv3WQTkeV96PD5obZI6U+jiDO1Tz9A+n4uRfN60ykJLDQoPYb1ScEorSN2lzMNDxWpA2EnSTWK4t72330ncgVL9wQ4p9SwpUUQjkuLRTBRWlz+eGmBzfYNtpZ1nrLD2/8B&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 0 26 L 0 0 L 180 0 L 180 26" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 26 L 0 40 L 180 40 L 180 26" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 26 L 180 26" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="89.5" y="17.5">
+                imbor:Voetpad
+            </text>
+        </g>
+        <path d="M 320 26 L 320 0 L 500 0 L 500 26" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 320 26 L 320 40 L 500 40 L 500 26" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 320 26 L 500 26" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="409.5" y="17.5">
+                imbor:Elementenverharding
+            </text>
+        </g>
+        <rect x="0" y="80" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 182px; height: 120px; padding-top: 80px; margin-left: 0px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 180px; height: 120px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin:0px;margin-top:4px;text-align:center;text-decoration:underline;">
+                                    <b>
+                                        gemX:Voetpad1
+                                    </b>
+                                </p>
+                                <hr/>
+                                <p style="margin:0px;margin-left:8px;">
+                                    identificatie = Voetpad1
+                                    <br/>
+                                    domein = http://vb.org/gemX#
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="0" y="92" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    gemX:Voetpad1...
+                </text>
+            </switch>
+        </g>
+        <rect x="320" y="80" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 182px; height: 120px; padding-top: 80px; margin-left: 320px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 180px; height: 120px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin:0px;margin-top:4px;text-align:center;text-decoration:underline;">
+                                    <b>
+                                        gemX:Elementenverharding1
+                                    </b>
+                                </p>
+                                <hr/>
+                                <p style="margin:0px;margin-left:8px;">
+                                    identificatie =
+                                    <br/>
+                                    Elementenverharding1
+                                    <br/>
+                                    domein = http://vb.org/gemX#
+                                    <br/>
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="320" y="92" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    gemX:Elementenverharding1...
+                </text>
+            </switch>
+        </g>
+        <rect x="640" y="120" width="180" height="40" fill="#d5e8d4" stroke="#82b366" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 182px; height: 40px; padding-top: 120px; margin-left: 640px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 180px; height: 40px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin:0px;margin-top:4px;text-align:center;">
+                                    <b>
+                                        imbor-domeinwaarden:
+                                        <br/>
+                                        Betontegels
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="640" y="132" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    imbor-domeinwaarden:...
+                </text>
+            </switch>
+        </g>
+        <path d="M 90 80 L 90 54.12" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="none"/>
+        <path d="M 90 41.12 L 96.5 54.12 L 83.5 54.12 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 410 80 L 410 54.12" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="none"/>
+        <path d="M 410 41.12 L 416.5 54.12 L 403.5 54.12 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 180 140 L 311.88 140" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 318.88 140 L 311.88 143.5 L 311.88 136.5 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 140px; margin-left: 250px;">
+                        <div data-drawio-colors="color: #4F4F4F; background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(79, 79, 79); line-height: 1.2; pointer-events: none; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                nen2660:isBoundBy
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="250" y="143" fill="#4F4F4F" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    nen2660:isBoundBy
+                </text>
+            </switch>
+        </g>
+        <path d="M 500 140 L 631.88 140" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 638.88 140 L 631.88 143.5 L 631.88 136.5 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 140px; margin-left: 570px;">
+                        <div data-drawio-colors="color: #4F4F4F; background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(79, 79, 79); line-height: 1.2; pointer-events: none; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                imbor:verschijningsvorm
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="570" y="143" fill="#4F4F4F" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    imbor:verschijningsvorm
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 818px; height: 1px; padding-top: 255px; margin-left: 2px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; font-style: italic; white-space: normal; overflow-wrap: normal;">
+                                Het voetpad (een ruimtelijk gebied) wordt fysiek begrensd door de elementenverharding;
+                                <br/>
+                                bij die verharding ligt de verschijningsvorm 'Betontegels' vast.
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="259" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" font-style="italic">
+                    Het voetpad (een ruimtelijk gebied) wordt fysiek begrensd door de elementenverharding;...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

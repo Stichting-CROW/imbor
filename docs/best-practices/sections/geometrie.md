@@ -17,6 +17,13 @@ Zie ook: [Techdoc | Geometrie](https://docs.crow.nl/imbor/techdoc/#geometrie)
 >EXAMPLE
 >Gemeente X wil vastleggen dat een bepaalde boom in een Natuurspeeltuin staat. Om dit te doen dient de gemeente in hun systeem een boom (`6fb4b2c7`) vast te leggen van het type IMBOR Boom, en een natuurspeeltuin (`4db2734b`) van het type IMBOR Natuurspeeltuin. Vervolgens wordt de geometrie van de natuurspeeltuin (een ruimte) vastgelegd als `polygone` (vlakgeometrie) en de geometrie van de boom als `point` (puntgeometrie). Hiervoor wordt de WKT serialisatie gebruikt. Deze geometrieën worden aan de objecten gekoppeld middels de `nen2660:hasBoundary` relatie. Deze gemeente wil tevens een expliciete relatie leggen tussen de natuurspeeltuin en de boom. Daarom wordt middels de `nen2660:contains` aangegeven dat deze boom in de natuurspeeltuin staat.
 
+<figure>
+
+![Geometrie](img/geometrie.drawio.svg?raw=true)
+
+<figcaption>Geometrie | Boom in een natuurspeeltuin met WKT-geometrieën</figcaption>
+</figure>
+
 Dit is een voorbeelduitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/geometrie.ttl" data-include-format="text"></code></pre>

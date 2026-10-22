@@ -25,6 +25,13 @@ In IMBOR zijn ruimtelijke gebieden opgenomen zoals `WijkGrens`, `Buurtgrens` en 
 >EXAMPLE
 >Binnen de gemeente X worden Abri's geregistreerd. Men wilt weten hoeveel Abri's er binnen een bepaalde wijk aanwezig zijn om de dichtheid te bekijken. Hiervoor kan een geometrische query gedaan worden en/of de relatie expliciet worden gelegd. In onderstaand geval zijn er twee Abri's (te weten: Abri1 en Abri2) die liggen binnen de wijk 'Heseveld'. 
 
+<figure>
+
+![Ruimtelijk vs Reëel | bevat](img/ruimtelijk-reeel-bevat.drawio.svg?raw=true)
+
+<figcaption>Ruimtelijk vs Reëel | De wijk 'Heseveld' bevat twee abri's</figcaption>
+</figure>
+
 Dit is een voorbeeld-uitwerking in [[Turtle]]:
 
 <pre><code class="turtle" data-include="data/ruimtelijk-reeel-bevat.ttl" data-include-format="text"></code></pre>
@@ -45,6 +52,13 @@ Dit patroon lost een veelgestelde vraag op: *hoe leg ik vast welke verschijnings
 
 >EXAMPLE
 >Gemeente X registreert een voetpad (`Voetpad1`) dat fysiek is uitgevoerd als elementenverharding (`Elementenverharding1`) van betontegels. Het voetpad (een `RuimtelijkGebied`) heeft zelf geen vaste vorm omdat het een functionele ruimte betreft en wordt daarom middels de relatie `isBegrensdDoor` gekoppeld aan de elementenverharding (een `ReeelObject`). Bij die elementenverharding wordt vervolgens via het attribuut `verschijningsvorm` de domeinwaarde `Betontegels` vastgelegd.
+
+<figure>
+
+![Ruimtelijk vs Reëel | isBegrensdDoor](img/ruimtelijk-reeel-isbegrensddoor.drawio.svg?raw=true)
+
+<figcaption>Ruimtelijk vs Reëel | Voetpad begrensd door elementenverharding</figcaption>
+</figure>
 
 Dit is een voorbeeld-uitwerking in [[Turtle]]:
 
