@@ -1,0 +1,91 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1144px" height="384px" viewBox="-0.5 -0.5 1144 384" content="&lt;mxfile&gt;&lt;diagram id=&quot;Overspanning&quot; name=&quot;Overspanning&quot;&gt;7VpLb9s4EP41BnYPLmTJVZyj7STtIQUCpNjdKyXSEluKVCn61V/foUS9KMlNt26iIIYPNodDcvh9M9SM6Im3Tg4fJErjTwITNnEdfJh4NxPXnTnONXxpybGQXF25hSCSFBulWvBIv5NypJFuKSZZS1EJwRRN28JQcE5C1ZIhKcW+rbYRrL1qiiLSETyGiHWl/1Ks4kK6cK9q+UdCo7hceeabDSeoVDY7yWKExb4h8m4n3loKoYpfyWFNmAavxKUYdzfQWxkmCVdPGRCy7AEhVgzbIbY1O6RJIOTEW9admTqW28/2NGGIQ2u1EVw9mh4H2mFMGb5HR7HVy2cKhV/L1ioWkn4HfZjRu5mBALqlMuy6vp6NMrYWTK8M63ibzcYNw9bIRz2jWUuSDMY+lHudWaJP6NBSvEeZKq0UjKE0o0Fld4JkRPlKKCUSI8qUFF9JwxzsB/57bWYXZIP7jkhFDg2RAf0DEQlR8ggqhxb9x1ZrX/vSbGFkccOP5kaGjPtG1bQ1w/DDkDxI+GOKOJYI4UHWLY0L9eek3ntR8pcSzqDtVg5y31a4UH9O6v35S1J/T8NYBVLwQe4tjQv55yT/2n8x8inPVO9jfuL6TPOUttj2v211/mEQAr9w0kPVnCqRgmiei2DraooYjbRWCNgQWUoxCYVEigrdteWYSEZz/6nnh1+R+c6tCEpBRJL/TPIxKzthj4E9AGSpLYulLfmVzTGygc7lIpd1LYW0kyu6oSFsjMC0+YxOy86gWh8DUbBCqRUrpYHTpLl3u+CdkBH8yLfqet3R0+m0K1THtF5WP6UT7eG9aFgBrP0UzGbLgqybnMWVoe6m2PZKgNaG5fmojssy2ItwnbmmfYcSyrQTfyRsR/SsGnaVlDFuhTSZ4ffkqi+6rv0rD/2RhGrxxOCauWeKruGcatwhVtn9GuKsa+zvBdubDhjvpUNmMBMdd8SUZr+GgOnYeomXs+Xuzx4vw+n7uAOmsvs1REzX2EvInK3iedaQwfs6P36WeHlCROR19rTwoz1CElww9yDb03oy+58EzGg8C/xqged9nrVwA8//I9m+6z9jLT1USFsMEI6X+qYBWgET+gXGCqMsJtjABv13Oej5iwdoNXFvwgsUNECc3+nPKRAzsZUh6av7FXgyUT3v/QluXXd0UZeEwSm5a99+9IFYI1iNfhqop+qnsSJr2WzBa/WOAOMTCfdYIW6bbCHc7hwBwKcytLEibNlsQWz1vjzG5B8iZx14OeGuDw8Bb0mzdXHnS/Bn0UUd7C9fXQupYhEJjthtLV1JoZNcbHCvde6FfoLmkH8hSh0NHWirRJuQHmJrLk8x1n1eOvrz+0d9z1E1Dh7dC4+//GDpHooj4PKGEHaCyxhBriHVW2Nx+NnVc+6OgMXP+d3CwM2gqjrf+nFq15VnZg52i44NhVRQrrLGzA9a0KixrVJo4VjFTDHh//UKLlTXKcx9l0MzvX+iX4lkFSbOX1DGZWFMv3DKo2wnZPK3VuPlAOgOBMe5ACHemqI49TRHDob6uOiOEY9UpYaqsFprrfzdTdHD6pByENNL6WWgyM7/fRYTqHrfdXxY1/Jtl2t7DhfFpXejyjUiq5q2S+6EYpzHwD6mioDP5K61lyjtxEUr82ter7s9NfnZq2dv3lM9z+bnKZ+hWf+ZrfC/+i+B3u0P&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 92 82 L 92 42" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 92.00 42.00 L 98.50 55.00 L 85.50 55.00 Z" fill="none" stroke="rgb(0,0,0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 412 82 L 412 42" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 412.00 42.00 L 418.50 55.00 L 405.50 55.00 Z" fill="none" stroke="rgb(0,0,0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 732 82 L 732 42" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 732.00 42.00 L 738.50 55.00 L 725.50 55.00 Z" fill="none" stroke="rgb(0,0,0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1052 82 L 1052 42" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 1052.00 42.00 L 1058.50 55.00 L 1045.50 55.00 Z" fill="none" stroke="rgb(0,0,0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 182 142 L 322 142" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 322.00 142.00 L 309.00 148.50 L 309.00 135.50 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="181.9" y="121" width="140" height="18" fill="#ffffff" stroke="none"/>
+        <g fill="#4F4F4F" font-family="Helvetica" text-anchor="middle" font-size="11px"><text x="252.0" y="134.0">nen2660:isConnectedTo</text></g>
+        <path d="M 502 142 L 642 142" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 642.00 142.00 L 629.00 148.50 L 629.00 135.50 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="501.9" y="121" width="140" height="18" fill="#ffffff" stroke="none"/>
+        <g fill="#4F4F4F" font-family="Helvetica" text-anchor="middle" font-size="11px"><text x="572.0" y="134.0">nen2660:isConnectedTo</text></g>
+        <path d="M 822 142 L 962 142" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 962.00 142.00 L 949.00 148.50 L 949.00 135.50 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="840.8" y="121" width="102" height="18" fill="#ffffff" stroke="none"/>
+        <g fill="#4F4F4F" font-family="Helvetica" text-anchor="middle" font-size="11px"><text x="892.0" y="134.0">nen2660:hasPart</text></g>
+        <path d="M 92 202 L 92 262" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 92.00 262.00 L 85.50 249.00 L 98.50 249.00 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="56.5" y="229" width="71" height="18" fill="#ffffff" stroke="none"/>
+        <g fill="#4F4F4F" font-family="Helvetica" text-anchor="middle" font-size="11px"><text x="92.0" y="242.0">imbor:type</text></g>
+        <path d="M 2 28 L 2 2 L 182 2 L 182 28" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 2 28 L 2 42 L 182 42 L 182 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 2 28 L 182 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="92" y="19.5">imbor:Paal</text>
+        </g>
+        <path d="M 322 28 L 322 2 L 502 2 L 502 28" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 322 28 L 322 42 L 502 42 L 502 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 322 28 L 502 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="412" y="19.5">imbor:Spandraad</text>
+        </g>
+        <path d="M 642 28 L 642 2 L 822 2 L 822 28" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 642 28 L 642 42 L 822 42 L 822 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 642 28 L 822 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="732" y="19.5">imbor:Armatuur</text>
+        </g>
+        <path d="M 962 28 L 962 2 L 1142 2 L 1142 28" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 962 28 L 962 42 L 1142 42 L 1142 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 962 28 L 1142 28" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1052" y="19.5">imbor:Lichtbron</text>
+        </g>
+        <rect x="2" y="82" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" pointer-events="none">
+            <text x="92" y="100" text-anchor="middle" font-weight="bold" text-decoration="underline">gemX:Paal1</text>
+            <line x1="2" y1="108" x2="182" y2="108" stroke="#9673a6" stroke-width="0.5"/>
+            <text x="10" y="122">identificatie = Paal1</text>
+            <text x="10" y="137">domein = http://vb.org/gemX#</text>
+            <text x="10" y="152">---</text>
+            <text x="10" y="167">type = Spanmast</text>
+        </g>
+        <rect x="322" y="82" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" pointer-events="none">
+            <text x="412" y="100" text-anchor="middle" font-weight="bold" text-decoration="underline">gemX:Spandraad1</text>
+            <line x1="322" y1="108" x2="502" y2="108" stroke="#9673a6" stroke-width="0.5"/>
+            <text x="330" y="122">identificatie = Spandraad1</text>
+            <text x="330" y="137">domein = http://vb.org/gemX#</text>
+        </g>
+        <rect x="642" y="82" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" pointer-events="none">
+            <text x="732" y="100" text-anchor="middle" font-weight="bold" text-decoration="underline">gemX:Armatuur1</text>
+            <line x1="642" y1="108" x2="822" y2="108" stroke="#9673a6" stroke-width="0.5"/>
+            <text x="650" y="122">identificatie = Armatuur1</text>
+            <text x="650" y="137">domein = http://vb.org/gemX#</text>
+        </g>
+        <rect x="962" y="82" width="180" height="120" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" pointer-events="none">
+            <text x="1052" y="100" text-anchor="middle" font-weight="bold" text-decoration="underline">gemX:Lichtbron1</text>
+            <line x1="962" y1="108" x2="1142" y2="108" stroke="#9673a6" stroke-width="0.5"/>
+            <text x="970" y="122">identificatie = Lichtbron1</text>
+            <text x="970" y="137">domein = http://vb.org/gemX#</text>
+        </g>
+        <rect x="2" y="262" width="180" height="40" fill="#d5e8d4" stroke="#82b366" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px" font-weight="bold">
+            <text x="92" y="279">imbor-domeinwaarden:</text>
+            <text x="92" y="294">Spanmast</text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" font-style="italic" pointer-events="none">
+            <text x="2" y="356">Paal1 is een spanmast (verschijningsvorm) en is verbonden aan een spandraad; daaraan hangt een armatuur, die een lichtbron als onderdeel heeft.</text>
+        </g>
+    </g>
+</svg>

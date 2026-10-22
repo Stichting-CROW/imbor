@@ -1,0 +1,31 @@
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610-2022#> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix imbor: <https://data.crow.nl/imbor/def/> .
+@prefix imbor-domeinwaarde: <https://data.crow.nl/imbor/id/domeinwaarden/> .
+@prefix gemX: <http://vb.org/gemX#> .
+
+# OVL-overspanning: spanmast met spandraad, armatuur en lichtbron (issue 1727)
+
+gemX:Paal1 a imbor:f6a897de-0abe-4fe0-95ed-96cf58c84ae8 ; # Paal
+    nen3610:domein "http://vb.org/gemX#" ;
+    nen3610:identificatie "Paal1" ;
+    imbor:e3e112b3-e46f-45c4-b2c9-b152e6f805a1 imbor-domeinwaarde:d2a745c2-d60f-43f0-aa7c-9e836585f6f2 ; # type / Spanmast
+    nen2660:isConnectedTo gemX:Spandraad1 ; # isVerbondenMet
+    .
+
+gemX:Spandraad1 a imbor:2b6b57f0-9ddf-4b5f-b8ce-cde1ef3640ae ; # Spandraad
+    nen3610:domein "http://vb.org/gemX#" ;
+    nen3610:identificatie "Spandraad1" ;
+    nen2660:isConnectedTo gemX:Armatuur1 ; # isVerbondenMet
+    .
+
+gemX:Armatuur1 a imbor:38a36b34-a593-499d-b210-0c48fb40ca3b ; # Armatuur
+    nen3610:domein "http://vb.org/gemX#" ;
+    nen3610:identificatie "Armatuur1" ;
+    nen2660:hasPart gemX:Lichtbron1 ; # heeftDeel
+    .
+
+gemX:Lichtbron1 a imbor:53929f41-9240-4a61-9abe-5ade04a679b8 ; # Lichtbron
+    nen3610:domein "http://vb.org/gemX#" ;
+    nen3610:identificatie "Lichtbron1" ;
+    .
